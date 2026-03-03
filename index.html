@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Little Lab Coats — Hands-On Science Curriculum for Homeschool Families</title>
-  <meta name="description" content="Real science experiments for homeschool families. Built by a PhD scientist who homeschools. K–5 multi-age, secular, no screens required." />
+  <meta name="description" content="Real science experiments for homeschool families. Designed and tested by a homeschooling PhD scientist. K–5 multi-age, hands-on, no screens required." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -280,11 +280,14 @@
     }
 
     .hero-badge-img {
-      width: 140px;
-      height: 140px;
+      width: 200px;
+      height: 200px;
       object-fit: contain;
       mix-blend-mode: multiply;
       margin: 0 auto 28px;
+      border: none;
+      box-shadow: none;
+      outline: none;
     }
 
     .hero-headline {
@@ -578,6 +581,8 @@
     .inside-card:nth-child(3)::after { background: var(--gold); }
     .inside-card:nth-child(4)::after { background: var(--navy); }
     .inside-card:nth-child(5)::after { background: var(--brown); }
+    .inside-card:nth-child(6)::after { background: var(--terracotta-light); }
+    .inside-card:nth-child(7)::after { background: var(--sage-light); }
 
     .inside-icon {
       font-size: 2.4rem;
@@ -1227,6 +1232,59 @@
       font-size: 0.85rem;
     }
 
+    /* ─── Brand Name Styling ─── */
+    .brand-name {
+      font-weight: 700;
+      color: var(--sage);
+      font-style: italic;
+    }
+
+    /* ─── Rotating Text Animation ─── */
+    .rotating-text-wrapper {
+      display: inline-block;
+      position: relative;
+      min-width: 140px;
+      text-align: center;
+    }
+
+    .rotating-text-wrapper .rotate-word {
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      animation: rotateWord 8s infinite;
+      white-space: nowrap;
+    }
+
+    .rotating-text-wrapper .rotate-word:nth-child(1) { animation-delay: 0s; }
+    .rotating-text-wrapper .rotate-word:nth-child(2) { animation-delay: 2s; }
+    .rotating-text-wrapper .rotate-word:nth-child(3) { animation-delay: 4s; }
+    .rotating-text-wrapper .rotate-word:nth-child(4) { animation-delay: 6s; }
+
+    @keyframes rotateWord {
+      0%   { opacity: 0; transform: translateX(-50%) translateY(8px); }
+      5%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+      20%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+      25%  { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+      100% { opacity: 0; }
+    }
+
+    /* ─── Special Unit Badge ─── */
+    .unit-special-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -1302,7 +1360,7 @@
       />
       <h1 class="hero-headline">Hands-On Science They Can't Wait to Try</h1>
       <p class="hero-sub">Real experiments for homeschool families — built by a scientist mom.</p>
-      <p class="hero-tagline">Built by a PhD scientist who homeschools.</p>
+      <p class="hero-tagline">Designed and tested by a homeschooling PhD scientist.</p>
       <div class="hero-cta-group">
         <a href="#sample-units" class="btn btn-primary btn-lg">Browse Curriculum</a>
         <a href="#how-it-works" class="btn btn-secondary btn-lg">See How It Works</a>
@@ -1330,8 +1388,8 @@
   <section id="proof-strip">
     <div class="proof-strip-inner">
       <div class="proof-item">
-        <span class="proof-icon">🎓</span>
-        Built by a PhD Scientist
+        <span class="proof-icon">📥</span>
+        Download &amp; Get Started
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
@@ -1345,13 +1403,8 @@
       </div>
       <div class="proof-divider"></div>
       <div class="proof-item">
-        <span class="proof-icon">🔬</span>
-        100% Secular
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <span class="proof-icon">🖨️</span>
-        Print &amp; Do
+        <span class="proof-icon">🏠</span>
+        Only Household Items Required*
       </div>
     </div>
   </section>
@@ -1359,36 +1412,45 @@
   <!-- ═══ THE PROBLEM ═══ -->
   <section id="problem">
     <div class="problem-inner">
-      <span class="section-label">Sound familiar?</span>
-      <h2 class="problem-headline">You want your kids to love science.<br />Most curriculum makes that really hard.</h2>
+      <h2 class="problem-headline">You love science. Teaching it shouldn't take all day.</h2>
       <p class="problem-lead">
-        You've tried things. You're still looking. Because the options out there keep falling short in the same frustrating ways.
+        For every topic you teach, you're piecing together materials from YouTube, Teachers Pay Teachers, books, and random websites. <em>It. Takes. Time.</em> And the options that exist? They keep falling short.
       </p>
 
       <div class="problem-grid">
         <div class="problem-card">
+          <span class="problem-emoji">⏰</span>
+          <h4>Hours of planning for one lesson</h4>
+          <p>You're pulling from five different sources just to teach one concept. There's no open-and-go option that actually works.</p>
+        </div>
+        <div class="problem-card">
           <span class="problem-emoji">📺</span>
-          <h4>Video-dependent curriculum</h4>
+          <h4>Screen-dependent curriculum</h4>
           <p>Your kids passively watch someone else do the experiment. That's not science — that's TV with better lighting.</p>
         </div>
         <div class="problem-card">
+          <span class="problem-emoji">🛒</span>
+          <h4>Specialty supplies you don't have</h4>
+          <p>Pre-order this kit, buy that chemical, find this specific brand. You just want to use what's already in your kitchen.</p>
+        </div>
+        <div class="problem-card">
           <span class="problem-emoji">🏫</span>
-          <h4>Designed for classrooms, not families</h4>
-          <p>30-student classroom content awkwardly adapted for home use. Different ages? Different grades? Good luck.</p>
+          <h4>Not built for homeschool</h4>
+          <p>Classroom content awkwardly adapted for home use. Different ages? Different grades? Good luck making it work.</p>
         </div>
         <div class="problem-card">
-          <span class="problem-emoji">📋</span>
-          <h4>Just worksheets and reading</h4>
-          <p>Fill in the blank, read the paragraph, move on. Kids can do that already. Where's the discovery?</p>
+          <span class="problem-emoji">😔</span>
+          <h4>Nothing to show for it</h4>
+          <p>No paper trail, nothing for audits or assessments, and nothing hands-on. Your kids understood it — but they didn't <em>feel</em> it.</p>
         </div>
         <div class="problem-card">
-          <span class="problem-emoji">😰</span>
-          <h4>Requires a science background to teach</h4>
-          <p>Dense teacher guides that assume you have a biology degree. You shouldn't need one to teach 2nd-grade science.</p>
+          <span class="problem-emoji">🕐</span>
+          <h4>Takes way too long</h4>
+          <p>You need something that fits in under an hour — not a half-day production. And afterward? You want kids asking for more.</p>
         </div>
       </div>
 
-      <p class="problem-transition">There's a better way. And it actually works in your living room. ✨</p>
+      <p class="problem-transition">There's a better way. And it actually works in your <span class="rotating-text-wrapper"><span class="rotate-word">living room</span><span class="rotate-word">kitchen</span><span class="rotate-word">dining table</span><span class="rotate-word">backyard</span></span>. ✨</p>
     </div>
   </section>
 
@@ -1429,23 +1491,28 @@
     <div class="inside-inner">
       <span class="section-label">What's included</span>
       <h2 class="section-title">Everything you need. Nothing you don't.</h2>
-      <p class="section-sub">Every Little Lab Coats lesson is a complete, self-contained experience. Open it up and you're ready to teach.</p>
+      <p class="section-sub">Every <span class="brand-name">Little Lab Coats</span> lesson is part of a structured unit — you're guided through the complete curriculum for your grade level. Not just standalone activities.</p>
 
       <div class="inside-grid">
         <div class="inside-card">
-          <span class="inside-icon">🎨</span>
-          <h3>Beautiful Illustrated Cover</h3>
-          <p>Colorful, engaging lesson covers designed to feel like educational posters. Kids actually want to pick them up.</p>
-        </div>
-        <div class="inside-card">
           <span class="inside-icon">🧪</span>
           <h3>Hands-On Experiment</h3>
-          <p>A real experiment kids do themselves — not a demonstration, not a video. Step-by-step, with clear setup instructions.</p>
+          <p>A real experiment kids do themselves — not a demonstration, not a video. Clear step-by-step guide with simple setup instructions.</p>
         </div>
         <div class="inside-card">
-          <span class="inside-icon">💬</span>
-          <h3>Discussion Questions + Guided Answers</h3>
-          <p>Thoughtful questions that deepen understanding, with guided answers built in so you always know what to say.</p>
+          <span class="inside-icon">🎯</span>
+          <h3>Clear Learning Objective</h3>
+          <p>Every lesson starts with a specific learning goal so you know exactly what your kids will understand by the end.</p>
+        </div>
+        <div class="inside-card">
+          <span class="inside-icon">🔬</span>
+          <h3>Background Science Info</h3>
+          <p>Sets the scene with the science behind the experiment — written for parents, not professors. You'll feel confident before you start.</p>
+        </div>
+        <div class="inside-card">
+          <span class="inside-icon">📋</span>
+          <h3>Easy-to-Follow Materials List</h3>
+          <p>Everything you need, clearly listed. Most experiments use everyday household items you already have on hand.</p>
         </div>
         <div class="inside-card">
           <span class="inside-icon">📝</span>
@@ -1453,8 +1520,13 @@
           <p>Grade-differentiated recording sheets so every child — from K to 5th — engages at the right level simultaneously.</p>
         </div>
         <div class="inside-card">
+          <span class="inside-icon">💬</span>
+          <h3>Discussion Questions + Suggested Answers</h3>
+          <p>Thoughtful questions that deepen understanding, with suggested answers built in so you always know what to say.</p>
+        </div>
+        <div class="inside-card">
           <span class="inside-icon">🗝️</span>
-          <h3>Parent Answer Key</h3>
+          <h3>Parent/Teacher Answer Key</h3>
           <p>A complete answer key so you can check work and facilitate confidently — even on topics you haven't thought about since school.</p>
         </div>
       </div>
@@ -1465,40 +1537,40 @@
   <section id="subjects">
     <div class="subjects-inner">
       <span class="section-label">What you'll explore</span>
-      <h2 class="section-title">Science that spans every corner of the natural world.</h2>
-      <p class="section-sub">Our curriculum covers all four major science domains — and we're always adding more units.</p>
+      <h2 class="section-title">Real topics. Real experiments. Real learning.</h2>
+      <p class="section-sub">Every topic has hands-on lessons ready to go — and we're always adding more.</p>
 
       <div class="subjects-grid">
         <div class="subject-card">
           <div class="subject-card-content">
             <span class="subject-emoji">⚙️</span>
-            <h3>Physical Science</h3>
-            <p>Forces, motion, energy, and matter. How and why things move the way they do.</p>
-            <span class="subject-tag">Now Available</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <div class="subject-card-content">
-            <span class="subject-emoji">🦋</span>
-            <h3>Life Science</h3>
-            <p>Living things, ecosystems, animals, plants, and the biology that connects it all.</p>
-            <span class="subject-tag">Coming Soon</span>
+            <h3>Forces &amp; Motion</h3>
+            <p>Pushes, pulls, gravity, and Newton's laws. From kindergarten basics to advanced concepts for older learners.</p>
+            <span class="subject-tag">K + 5th Grade Available</span>
           </div>
         </div>
         <div class="subject-card">
           <div class="subject-card-content">
             <span class="subject-emoji">🌊</span>
-            <h3>Earth &amp; Ocean Science</h3>
-            <p>Our planet's systems, weather, habitats, and the incredible world beneath the waves.</p>
+            <h3>Ocean Science</h3>
+            <p>Marine ecosystems, adaptations, water pressure, and the incredible world beneath the waves.</p>
             <span class="subject-tag">Ocean Explorers Available</span>
           </div>
         </div>
         <div class="subject-card">
           <div class="subject-card-content">
-            <span class="subject-emoji">🧬</span>
-            <h3>Chemistry</h3>
-            <p>Reactions, materials, properties, and the invisible forces that shape our world.</p>
-            <span class="subject-tag">Coming Soon</span>
+            <span class="subject-emoji">🦋</span>
+            <h3>Life Science &amp; Adaptations</h3>
+            <p>How animals adapt to survive — beaks, habitats, and the biology that connects it all.</p>
+            <span class="subject-tag">Bird Beak Buffet Available</span>
+          </div>
+        </div>
+        <div class="subject-card">
+          <div class="subject-card-content">
+            <span class="subject-emoji">🌡️</span>
+            <h3>Thermal Energy</h3>
+            <p>Heat transfer, insulation, and the science of temperature — explored through delicious experiments.</p>
+            <span class="subject-tag">Ice Cream Lesson Available</span>
           </div>
         </div>
       </div>
@@ -1513,32 +1585,28 @@
           <span>Family Homeschooling Together</span>
         </div>
         <div class="who-content">
-          <span class="section-label" style="display:block; margin-bottom:16px;">Is this you?</span>
-          <h2 class="section-title" style="text-align:left; margin-bottom:24px;">Little Lab Coats is for families who…</h2>
+          <span class="section-label" style="display:block; margin-bottom:16px;">Why families choose us</span>
+          <h2 class="section-title" style="text-align:left; margin-bottom:24px;"><span class="brand-name">Little Lab Coats</span> is for families who…</h2>
           <ul class="who-list">
+            <li>
+              <span class="who-check">✓</span>
+              Need a complete science curriculum with a heavy hands-on component that doesn't require planning from multiple sources. Just open and go — no guilt, no gaps.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Want curriculum that doesn't depend on screens, videos, or apps — real experiments their kids actually do.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Want to feel confident teaching science even if it's not their strongest subject — with built-in answers and guides.
+            </li>
             <li>
               <span class="who-check">✓</span>
               Have kids at multiple grade levels and want everyone working on science together — at the same time, at different depths.
             </li>
             <li>
               <span class="who-check">✓</span>
-              Believe screen time should be limited, and want curriculum that doesn't depend on videos or apps.
-            </li>
-            <li>
-              <span class="who-check">✓</span>
-              Value rigorous, inquiry-driven science — not simplified nonsense dressed up with cartoon characters.
-            </li>
-            <li>
-              <span class="who-check">✓</span>
-              Want to feel confident teaching science even if it's not their strongest subject.
-            </li>
-            <li>
-              <span class="who-check">✓</span>
-              Care about beautiful materials their kids are genuinely excited to use.
-            </li>
-            <li>
-              <span class="who-check">✓</span>
-              Prefer secular, science-first curriculum with no religious or ideological overlay.
+              Care about beautiful materials their kids are genuinely excited to pick up and use.
             </li>
           </ul>
         </div>
@@ -1570,55 +1638,79 @@
             <div class="unit-footer">
               <div>
                 <div class="unit-price">$18</div>
-                <div class="unit-price-sub">PDF · or $49 with kit</div>
+                <div class="unit-price-sub">That's just $3/lesson · PDF download</div>
               </div>
               <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
             </div>
           </div>
         </div>
 
-        <!-- Unit 2: Ocean Explorers -->
+        <!-- Unit 2: 3rd Grade Forces -->
         <div class="unit-card">
           <div class="unit-image">
-            <div class="image-placeholder"><span>Ocean Explorers Preview</span></div>
+            <div class="image-placeholder"><span>3rd Grade Forces Preview</span></div>
           </div>
           <div class="unit-body">
             <div class="unit-meta">
-              <span class="unit-tag tag-grade">Multi-Age K–5</span>
-              <span class="unit-tag tag-lessons">4 Lessons</span>
-              <span class="unit-tag tag-subject">Earth &amp; Ocean Science</span>
+              <span class="unit-tag tag-grade">3rd Grade</span>
+              <span class="unit-tag tag-lessons">Standalone Lesson</span>
+              <span class="unit-tag tag-subject">Physical Science</span>
             </div>
-            <h3>Ocean Explorers</h3>
-            <p>Dive deep into the world's oceans — ecosystems, marine adaptations, water pressure, and the creatures that thrive there. Perfect for the kid who wants to know everything about sharks.</p>
+            <h3>Forces &amp; Motion</h3>
+            <p>Balanced and unbalanced forces brought to life through hands-on experiments. Building on foundational concepts at the 3rd-grade level.</p>
             <div class="unit-footer">
               <div>
                 <div class="unit-price">$18</div>
-                <div class="unit-price-sub">PDF · or $49 with kit</div>
+                <div class="unit-price-sub">PDF download</div>
               </div>
-              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
+              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Lesson</a>
             </div>
           </div>
         </div>
 
-        <!-- Unit 3: 3rd–5th Forces -->
+        <!-- Unit 3: 5th Grade Forces -->
         <div class="unit-card">
           <div class="unit-image">
             <div class="image-placeholder"><span>5th Grade Forces Preview</span></div>
           </div>
           <div class="unit-body">
             <div class="unit-meta">
-              <span class="unit-tag tag-grade">3rd–5th Grade</span>
+              <span class="unit-tag tag-grade">5th Grade</span>
               <span class="unit-tag tag-lessons">Standalone Lesson</span>
               <span class="unit-tag tag-subject">Physical Science</span>
             </div>
             <h3>Forces &amp; Motion: Advanced</h3>
-            <p>A deeper dive into forces for older learners — balanced and unbalanced forces, Newton's laws, and the science behind everyday movement. Great companion to the kindergarten forces unit.</p>
+            <p>A deeper dive into forces — Newton's laws, friction, and the science behind everyday movement. Great companion to the kindergarten forces unit.</p>
             <div class="unit-footer">
               <div>
                 <div class="unit-price">$18</div>
-                <div class="unit-price-sub">PDF · or $49 with kit</div>
+                <div class="unit-price-sub">PDF download</div>
               </div>
               <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Lesson</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 4: Ocean Explorers (Special Unit) -->
+        <div class="unit-card" style="border-color: rgba(212,137,58,0.4);">
+          <div class="unit-image">
+            <div class="image-placeholder"><span>Ocean Explorers Preview</span></div>
+          </div>
+          <div class="unit-body">
+            <span class="unit-special-badge">✨ Special Premium Unit</span>
+            <div class="unit-meta">
+              <span class="unit-tag tag-grade">Multi-Age K–5</span>
+              <span class="unit-tag tag-lessons">4 Lessons</span>
+              <span class="unit-tag tag-subject">Ocean Science</span>
+            </div>
+            <h3>Ocean Explorers</h3>
+            <p>A multidisciplinary deep dive into the world's oceans — ecosystems, marine adaptations, water pressure, and more. This special unit goes beyond the core curriculum, with dedicated equipment and cross-grade projects designed for kids who want to go deep on their interests. Perfect for the kid who wants to know everything about sharks.</p>
+            <div class="unit-footer">
+              <div>
+                <div class="unit-price">$18</div>
+                <div class="unit-price-sub">PDF · requires some special equipment</div>
+              </div>
+              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
             </div>
           </div>
         </div>
@@ -1702,6 +1794,9 @@
       </div>
 
       <p style="margin-top: 32px; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text-muted);">
+        Each unit includes at least 6 lessons — that's just <strong>$3 per lesson</strong>. Less than Teachers Pay Teachers, and you don't have to piece it together yourself.
+      </p>
+      <p style="margin-top: 12px; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text-muted);">
         All purchases include a 30-day satisfaction guarantee. If it's not right for your family, just reach out.
       </p>
     </div>
@@ -1717,16 +1812,18 @@
         <div class="founder-content">
           <span class="section-label" style="display:block; margin-bottom:16px;">About the founder</span>
           <h2 class="founder-greeting">Hi, I'm Serena. 👋</h2>
-          <p>I'm a scientist. I have a first-class degree in Zoology, a Master's from Oxford in Integrative Bioscience, and a PhD in Microbiology. I've spent my career doing real science — asking questions, running experiments, testing ideas.</p>
-          <p>I'm also a homeschool mom of three. And when I went looking for science curriculum that was actually good — rigorous, hands-on, beautiful, and built for families with kids at different ages — I couldn't find it.</p>
-          <p>So I built it myself.</p>
-          <p>Little Lab Coats is everything I wished existed when I started homeschooling. Real experiments. Multi-age lessons. Beautiful materials my kids actually want to use. And nothing that requires a science degree to teach — because I've written the guides so any parent can feel confident in the material.</p>
+          <p>I'm a homeschool mom of three — and I love science! I look forward to teaching it. But it takes me <em>so much time</em>.</p>
+          <p>For every topic I teach, I piece together materials from multiple sources: YouTube, Generation Genius, Teachers Pay Teachers, books from Amazon, random websites. <strong>It. Takes. Time.</strong></p>
+          <p>And at the end of the lesson, my kids understand the concepts — but we have nothing to show for it. No paper trail, nothing for audits or assessments, and we did nothing hands-on. That made me sad.</p>
+          <p>Wasn't the point of science to get your hands dirty? To <em>feel</em> it? To <em>live</em> it? To <em>experience</em> it? Because that's how kids learn. They don't learn from long paragraphs of theory, and a video will only take them so far.</p>
+          <p>And so <span class="brand-name">Little Lab Coats</span> was born.</p>
+          <p>I happen to have a First Class Degree in Zoology, a Master's from Oxford in Integrative Bioscience, and a PhD in Microbiology. I've spent my career doing real science — asking questions, running experiments, testing ideas. I brought all of that into building curriculum that actually works for families like mine.</p>
           <p>Science changed how I see the world. I want to give that to your kids too.</p>
           <div class="founder-creds">
-            <span class="cred-pill">🎓 First Class Zoology</span>
+            <span class="cred-pill">🏡 Homeschool Mom of Three</span>
+            <span class="cred-pill">🎓 First Class Degree in Zoology</span>
             <span class="cred-pill">🏛️ MSc Oxford, Integrative Bioscience</span>
             <span class="cred-pill">🔬 PhD Microbiology</span>
-            <span class="cred-pill">🏡 Homeschool Mom of Three</span>
           </div>
         </div>
       </div>
@@ -1747,7 +1844,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes, completely. Little Lab Coats is 100% secular and science-based. There is no religious content — no creationism, no religious framing of any kind. The curriculum is grounded in inquiry-driven science aligned with modern scientific standards. It's designed to be accessible to all families, regardless of belief.</p>
+            <p>Yes, completely. <span class="brand-name">Little Lab Coats</span> is 100% secular and science-based. There is no religious content — no creationism, no religious framing of any kind. The curriculum is grounded in inquiry-driven science aligned with modern scientific standards. It's designed to be accessible to all families, regardless of belief.</p>
           </div>
         </div>
 
@@ -1757,7 +1854,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            <p>Little Lab Coats covers kindergarten through 5th grade. One of its core strengths is the multi-age design — siblings at different grade levels can work through the same lesson simultaneously, with differentiated student worksheets tailored to their level. You teach the concept once; everyone participates and gets age-appropriate work.</p>
+            <p><span class="brand-name">Little Lab Coats</span> covers kindergarten through 5th grade. One of its core strengths is the multi-age design — siblings at different grade levels can work through the same lesson simultaneously, with differentiated student worksheets tailored to their level. You teach the concept once; everyone participates and gets age-appropriate work.</p>
           </div>
         </div>
 
@@ -1797,7 +1894,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            <p>Mystery Science relies heavily on videos — kids watch someone else do science. Little Lab Coats is entirely hands-on: your kids run the experiments themselves. Real Science Odyssey is solid academically but visually dated and not designed with multi-age households in mind. Little Lab Coats was built from scratch for homeschool families — beautiful materials, built-in differentiation, and a format that actually works in your home.</p>
+            <p>Mystery Science relies heavily on videos — kids watch someone else do science. <span class="brand-name">Little Lab Coats</span> is entirely hands-on: your kids run the experiments themselves. Real Science Odyssey is solid academically but visually dated and not designed with multi-age households in mind. <span class="brand-name">Little Lab Coats</span> was built from scratch for homeschool families — beautiful materials, built-in differentiation, and a format that actually works in your home.</p>
           </div>
         </div>
       </div>
@@ -1827,7 +1924,7 @@
           <img src="images/site/llc-badge-transparent.webp" alt="LLC" style="height:32px; width:32px; object-fit:contain; mix-blend-mode:screen; opacity:0.85;">
           Little Lab Coats
         </div>
-        <p class="footer-tagline">Hands-on science curriculum built by a PhD scientist who homeschools. Real experiments. Beautiful materials. Zero screens.</p>
+        <p class="footer-tagline">Hands-on science curriculum designed and tested by a homeschooling PhD scientist. Real experiments. Beautiful materials. Zero screens.</p>
       </div>
 
       <div class="footer-col">
@@ -1852,7 +1949,7 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© 2025 Little Lab Coats. All rights reserved.</span>
+      <span>© 2025 Little Lab Coats. All rights reserved. All materials are for personal/family use only. Not for redistribution or resale.</span>
       <span style="display:flex; gap:24px;">
         <a href="#" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Privacy Policy</a>
         <a href="#" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Terms of Service</a>
