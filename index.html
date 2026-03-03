@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Lab Coats — Hands-On Science Curriculum for Homeschool Families</title>
+  <meta name="description" content="Real science experiments for homeschool families. Built by a PhD scientist who homeschools. K–5 multi-age, secular, no screens required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:             #FAF7F2;
+      --cream-dark:        #F0EAE0;
+      --sage:              #5C7A5E;
+      --sage-light:        #8AAF8C;
+      --sage-pale:         #EDF4EE;
+      --terracotta:        #C2580C;
+      --terracotta-light:  #E07840;
+      --terracotta-pale:   #FDF0E8;
+      --navy:              #1A2744;
+      --navy-light:        #2D3F6E;
+      --brown:             #5C3D2E;
+      --brown-light:       #7A5342;
+      --gold:              #D4893A;
+      --gold-light:        #E8A85C;
+      --gold-pale:         #FDF5E8;
+      --white:             #FFFFFF;
+      --border:            #E0D8CC;
+      --text-muted:        #7A6A5A;
+      --shadow-sm:  0 2px 8px rgba(26,39,68,0.07);
+      --shadow-md:  0 8px 32px rgba(26,39,68,0.10);
+      --shadow-lg:  0 20px 60px rgba(26,39,68,0.14);
+      --radius-sm:  8px;
+      --radius-md:  14px;
+      --radius-lg:  22px;
+      --radius-xl:  32px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', 'Segoe UI', sans-serif;
+      background-color: var(--cream);
+      color: var(--navy);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    p {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.75;
+      color: var(--brown);
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── Utility ─── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sage);
+      background: var(--sage-pale);
+      border: 1px solid rgba(92,122,94,0.22);
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      margin-bottom: 16px;
+      color: var(--navy);
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
+    }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(194,88,12,0.28);
+    }
+    .btn-primary:hover {
+      background: #A84A09;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(194,88,12,0.38);
+    }
+
+    .btn-secondary {
+      background: var(--cream);
+      color: var(--sage);
+      border: 2px solid var(--sage);
+    }
+    .btn-secondary:hover {
+      background: var(--sage-pale);
+      transform: translateY(-2px);
+    }
+
+    .btn-sage {
+      background: var(--sage);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(92,122,94,0.28);
+    }
+    .btn-sage:hover {
+      background: #4A6550;
+      transform: translateY(-2px);
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(26,39,68,0.28);
+    }
+    .btn-navy:hover {
+      background: var(--navy-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-lg {
+      font-size: 1.1rem;
+      padding: 17px 40px;
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.65);
+    }
+    .btn-ghost-light:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ─── Image Placeholder ─── */
+    .image-placeholder {
+      background: linear-gradient(135deg, var(--cream-dark) 0%, #DDD5C8 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #A0907E;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ─── SVG Wave Divider ─── */
+    .wave-divider {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+    }
+
+    /* ─── Navigation ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,247,242,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--sage);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--brown);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sage); }
+
+    .nav-cta { margin-left: 8px; }
+
+    /* ─── Hero ─── */
+    #hero {
+      background: var(--cream);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    /* subtle radial warm glow behind hero content */
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 100%;
+      background: radial-gradient(ellipse at 50% 40%, rgba(212,137,58,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-badge-img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      margin: 0 auto 28px;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: var(--navy);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero-sub {
+      font-family: 'Lato', sans-serif;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--brown);
+      max-width: 560px;
+      margin: 0 auto 14px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .hero-tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--sage);
+      margin-bottom: 36px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── Photo Banner ─── */
+    #photo-banner {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .banner-photo {
+      height: 280px;
+      overflow: hidden;
+      display: block;
+    }
+
+    .banner-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ─── Social Proof Strip ─── */
+    #proof-strip {
+      background: var(--navy);
+      padding: 22px 24px;
+    }
+
+    .proof-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 10px 28px;
+      white-space: nowrap;
+    }
+
+    .proof-item .proof-icon {
+      font-size: 1.2rem;
+    }
+
+    .proof-divider {
+      width: 1px;
+      height: 30px;
+      background: rgba(255,255,255,0.18);
+      flex-shrink: 0;
+    }
+
+    /* ─── The Problem ─── */
+    #problem {
+      padding: 96px 24px 80px;
+      background: var(--cream);
+    }
+
+    .problem-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .problem-headline {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .problem-lead {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      text-align: left;
+      margin-bottom: 56px;
+    }
+
+    .problem-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--terracotta);
+      border-radius: 3px 3px 0 0;
+    }
+
+    .problem-emoji {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .problem-card h4 {
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .problem-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .problem-transition {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--sage);
+    }
+
+    /* ─── How It Works ─── */
+    #how-it-works {
+      padding: 80px 24px;
+      background: var(--cream-dark);
+    }
+
+    .how-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .steps-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: start;
+      gap: 0;
+      margin-top: 52px;
+    }
+
+    .step-arrow {
+      font-size: 1.8rem;
+      color: var(--sage-light);
+      opacity: 0.6;
+      padding: 0 8px;
+      margin-top: 36px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 16px;
+    }
+
+    .step-number {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--white);
+      margin: 0 auto 18px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .step:nth-child(1) .step-number { background: var(--terracotta); }
+    .step:nth-child(3) .step-number { background: var(--sage); }
+    .step:nth-child(5) .step-number { background: var(--navy); }
+
+    .step h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    .step-emoji {
+      font-size: 2.2rem;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    /* ─── What's Inside ─── */
+    #whats-inside {
+      padding: 96px 24px;
+      background: var(--cream);
+    }
+
+    .inside-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 22px;
+      margin-top: 16px;
+    }
+
+    .inside-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px 22px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .inside-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .inside-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .inside-card:nth-child(1)::after { background: var(--terracotta); }
+    .inside-card:nth-child(2)::after { background: var(--sage); }
+    .inside-card:nth-child(3)::after { background: var(--gold); }
+    .inside-card:nth-child(4)::after { background: var(--navy); }
+    .inside-card:nth-child(5)::after { background: var(--brown); }
+
+    .inside-icon {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .inside-card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+
+    .inside-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ─── Subjects ─── */
+    #subjects {
+      padding: 96px 24px;
+      background: var(--cream-dark);
+    }
+
+    .subjects-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .subject-card {
+      border-radius: var(--radius-lg);
+      padding: 40px 28px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .subject-card-content { position: relative; z-index: 2; }
+
+    .subject-card:nth-child(1) { background: linear-gradient(145deg, #C2580C, #E07840); }
+    .subject-card:nth-child(2) { background: linear-gradient(145deg, #5C7A5E, #7A9E7C); }
+    .subject-card:nth-child(3) { background: linear-gradient(145deg, #1A2744, #2D3F6E); }
+    .subject-card:nth-child(4) { background: linear-gradient(145deg, #5C3D2E, #7A5342); }
+
+    .subject-emoji {
+      font-size: 3.2rem;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .subject-card h3 {
+      color: var(--white);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .subject-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.45;
+    }
+
+    .subject-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 99px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 3px 12px;
+      margin-top: 12px;
+      color: var(--white);
+    }
+
+    /* ─── Who It's For ─── */
+    #who-its-for {
+      padding: 96px 24px;
+      background: var(--cream);
+    }
+
+    .who-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .who-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .who-image {
+      height: 420px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .who-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      color: var(--brown);
+      line-height: 1.55;
+    }
+
+    .who-list li:last-child { border-bottom: none; }
+
+    .who-check {
+      width: 24px;
+      height: 24px;
+      background: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.72rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ─── Sample Units ─── */
+    #sample-units {
+      padding: 96px 24px;
+      background: var(--navy);
+    }
+
+    .units-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .units-inner .section-label {
+      background: rgba(212,137,58,0.18);
+      border-color: rgba(212,137,58,0.35);
+      color: var(--gold-light);
+    }
+
+    .units-inner .section-title { color: var(--white); }
+    .units-inner .section-sub { color: rgba(255,255,255,0.6); }
+
+    .units-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .unit-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      text-align: left;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .unit-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.09);
+    }
+
+    .unit-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .unit-image .image-placeholder {
+      height: 100%;
+      border-radius: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.03) 100%);
+      color: rgba(255,255,255,0.3);
+    }
+
+    .unit-body { padding: 28px; }
+
+    .unit-meta {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .unit-tag {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-grade    { background: rgba(194,88,12,0.22); color: var(--terracotta-light); border: 1px solid rgba(194,88,12,0.3); }
+    .tag-lessons  { background: rgba(92,122,94,0.22); color: var(--sage-light); border: 1px solid rgba(92,122,94,0.3); }
+    .tag-subject  { background: rgba(255,255,255,0.09); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.18); }
+
+    .unit-card h3 {
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .unit-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .unit-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .unit-price {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--white);
+    }
+
+    .unit-price-sub {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.42);
+      font-family: 'Lato', sans-serif;
+    }
+
+    /* ─── Pricing ─── */
+    #pricing {
+      padding: 96px 24px;
+      background: var(--cream);
+    }
+
+    .pricing-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+      align-items: start;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: left;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--sage);
+      box-shadow: 0 0 0 1px var(--sage), var(--shadow-lg);
+      transform: scale(1.04);
+    }
+
+    .pricing-card.featured:hover { transform: scale(1.04) translateY(-5px); }
+
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--sage);
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+
+    .pricing-icon {
+      font-size: 2.4rem;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .pricing-tier-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .pricing-tagline {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .price-main {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: var(--navy);
+    }
+
+    .price-alt {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .pricing-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      color: var(--brown);
+      padding: 8px 0;
+      line-height: 1.45;
+    }
+
+    .feature-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pricing-card:nth-child(1) .feature-check { background: var(--terracotta); color: white; }
+    .pricing-card.featured .feature-check     { background: var(--sage); color: white; }
+    .pricing-card:nth-child(3) .feature-check { background: var(--navy); color: white; }
+
+    /* ─── Founder ─── */
+    #founder {
+      padding: 96px 24px;
+      background: var(--cream-dark);
+    }
+
+    .founder-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .founder-image {
+      height: 360px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .founder-greeting {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .founder-content p {
+      font-size: 0.98rem;
+      color: var(--brown);
+      margin-bottom: 14px;
+    }
+
+    .founder-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .cred-pill {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 5px 14px;
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ─── FAQ ─── */
+    #faq {
+      padding: 96px 24px;
+      background: var(--cream);
+    }
+
+    .faq-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .faq-list {
+      text-align: left;
+      margin-top: 8px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 22px 0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover { color: var(--sage); }
+
+    .faq-toggle {
+      width: 28px;
+      height: 28px;
+      background: var(--cream-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--sage);
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.2s;
+      font-weight: 300;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+      background: var(--sage);
+      color: var(--white);
+    }
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer { max-height: 500px; }
+
+    .faq-answer p {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      padding-bottom: 22px;
+      line-height: 1.72;
+    }
+
+    /* ─── Final CTA ─── */
+    #final-cta {
+      padding: 120px 24px;
+      background: var(--cream-dark);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 100%;
+      background: radial-gradient(ellipse at 50% 30%, rgba(92,122,94,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .final-cta-eyebrow {
+      font-size: 2.5rem;
+      margin-bottom: 4px;
+    }
+
+    .final-cta-headline {
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+
+    .final-cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: #0F172A;
+      padding: 52px 24px 32px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-tagline {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-col h5 {
+      color: var(--white);
+      font-size: 0.8rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.85rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+
+      #photo-banner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .banner-photo { height: 200px; }
+
+      .proof-strip-inner { flex-direction: column; gap: 0; }
+      .proof-divider { width: 50px; height: 1px; margin: 4px auto; }
+      .proof-item { padding: 8px 16px; font-size: 0.9rem; }
+
+      .steps-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .step-arrow { display: none; }
+
+      .who-layout { grid-template-columns: 1fr; gap: 40px; }
+      .who-image { height: 280px; order: -1; }
+
+      .founder-layout { grid-template-columns: 1fr; gap: 40px; }
+      .founder-image { height: 280px; order: -1; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .pricing-card.featured { transform: none; }
+      .pricing-card.featured:hover { transform: translateY(-5px); }
+
+      #hero { padding: 72px 20px 48px; }
+      #problem, #how-it-works, #whats-inside, #subjects, #who-its-for,
+      #sample-units, #pricing, #founder, #faq, #final-cta { padding: 72px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-headline { font-size: 2.2rem; }
+      .hero-cta-group { flex-direction: column; align-items: center; }
+      .final-cta-group { flex-direction: column; align-items: center; }
+      #photo-banner { grid-template-columns: 1fr 1fr; }
+      .banner-photo { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/site/llc-badge-transparent.png" alt="Little Lab Coats" style="height:52px; width:52px; object-fit:contain; mix-blend-mode:multiply;">
+        Little Lab Coats
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sample-units">Products</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#founder">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary nav-cta">Buy Now</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-content">
+      <img
+        src="images/site/llc-badge-transparent.png"
+        alt="Little Lab Coats badge"
+        class="hero-badge-img"
+      />
+      <h1 class="hero-headline">Science They'll Actually Do.</h1>
+      <p class="hero-sub">Hands-on experiments for homeschool families.</p>
+      <p class="hero-tagline">Built by a PhD scientist who homeschools.</p>
+      <div class="hero-cta-group">
+        <a href="#sample-units" class="btn btn-primary btn-lg">Browse Curriculum</a>
+        <a href="#how-it-works" class="btn btn-secondary btn-lg">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PHOTO BANNER ═══ -->
+  <div id="photo-banner">
+    <div class="banner-photo">
+      <img src="images/site/banner-experiment-1.png" alt="Kids doing a science experiment at home" />
+    </div>
+    <div class="banner-photo">
+      <img src="images/site/banner-experiment-2.png" alt="Homeschool science experiment in action" />
+    </div>
+    <div class="banner-photo">
+      <img src="images/site/banner-experiment-3.png" alt="Children exploring science hands-on" />
+    </div>
+    <div class="banner-photo">
+      <img src="images/site/banner-experiment-4.png" alt="Family learning through science together" />
+    </div>
+  </div>
+
+  <!-- ═══ SOCIAL PROOF STRIP ═══ -->
+  <section id="proof-strip">
+    <div class="proof-strip-inner">
+      <div class="proof-item">
+        <span class="proof-icon">🎓</span>
+        Built by a PhD Scientist
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-icon">👨‍👩‍👧‍👦</span>
+        K–5 Multi-Age Friendly
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-icon">📵</span>
+        No Screens Required
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-icon">🔬</span>
+        100% Secular
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-icon">🖨️</span>
+        Print &amp; Do
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE PROBLEM ═══ -->
+  <section id="problem">
+    <div class="problem-inner">
+      <span class="section-label">Sound familiar?</span>
+      <h2 class="problem-headline">You want your kids to love science.<br />Most curriculum makes that really hard.</h2>
+      <p class="problem-lead">
+        You've tried things. You're still looking. Because the options out there keep falling short in the same frustrating ways.
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <span class="problem-emoji">📺</span>
+          <h4>Video-dependent curriculum</h4>
+          <p>Your kids passively watch someone else do the experiment. That's not science — that's TV with better lighting.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-emoji">🏫</span>
+          <h4>Designed for classrooms, not families</h4>
+          <p>30-student classroom content awkwardly adapted for home use. Different ages? Different grades? Good luck.</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-emoji">📋</span>
+          <h4>Just worksheets and reading</h4>
+          <p>Fill in the blank, read the paragraph, move on. Kids can do that already. Where's the discovery?</p>
+        </div>
+        <div class="problem-card">
+          <span class="problem-emoji">😰</span>
+          <h4>Requires a science background to teach</h4>
+          <p>Dense teacher guides that assume you have a biology degree. You shouldn't need one to teach 2nd-grade science.</p>
+        </div>
+      </div>
+
+      <p class="problem-transition">There's a better way. And it actually works in your living room. ✨</p>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section id="how-it-works">
+    <div class="how-inner">
+      <span class="section-label">Simple by design</span>
+      <h2 class="section-title">From your inbox to an experiment in minutes.</h2>
+      <p class="section-sub">No prep marathons. No missing materials. No PhD required. Just open, set up, and let curiosity take over.</p>
+
+      <div class="steps-row">
+        <div class="step">
+          <span class="step-emoji">🖨️</span>
+          <div class="step-number">1</div>
+          <h3>Print</h3>
+          <p>Download your lesson plan PDF and print it. Or pull it up on a tablet. Either works.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <span class="step-emoji">⚗️</span>
+          <div class="step-number">2</div>
+          <h3>Set Up</h3>
+          <p>Gather simple household materials. Everything's listed clearly. No specialty lab equipment needed.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <span class="step-emoji">💡</span>
+          <div class="step-number">3</div>
+          <h3>Discover</h3>
+          <p>Your kids do the experiment. They observe, predict, test, and figure it out themselves. Real science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT'S INSIDE ═══ -->
+  <section id="whats-inside">
+    <div class="inside-inner">
+      <span class="section-label">What's included</span>
+      <h2 class="section-title">Everything you need. Nothing you don't.</h2>
+      <p class="section-sub">Every Little Lab Coats lesson is a complete, self-contained experience. Open it up and you're ready to teach.</p>
+
+      <div class="inside-grid">
+        <div class="inside-card">
+          <span class="inside-icon">🎨</span>
+          <h3>Beautiful Illustrated Cover</h3>
+          <p>Colorful, engaging lesson covers designed to feel like educational posters. Kids actually want to pick them up.</p>
+        </div>
+        <div class="inside-card">
+          <span class="inside-icon">🧪</span>
+          <h3>Hands-On Experiment</h3>
+          <p>A real experiment kids do themselves — not a demonstration, not a video. Step-by-step, with clear setup instructions.</p>
+        </div>
+        <div class="inside-card">
+          <span class="inside-icon">💬</span>
+          <h3>Discussion Questions + Guided Answers</h3>
+          <p>Thoughtful questions that deepen understanding, with guided answers built in so you always know what to say.</p>
+        </div>
+        <div class="inside-card">
+          <span class="inside-icon">📝</span>
+          <h3>Student Worksheet</h3>
+          <p>Grade-differentiated recording sheets so every child — from K to 5th — engages at the right level simultaneously.</p>
+        </div>
+        <div class="inside-card">
+          <span class="inside-icon">🗝️</span>
+          <h3>Parent Answer Key</h3>
+          <p>A complete answer key so you can check work and facilitate confidently — even on topics you haven't thought about since school.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SUBJECTS COVERED ═══ -->
+  <section id="subjects">
+    <div class="subjects-inner">
+      <span class="section-label">What you'll explore</span>
+      <h2 class="section-title">Science that spans every corner of the natural world.</h2>
+      <p class="section-sub">Our curriculum covers all four major science domains — and we're always adding more units.</p>
+
+      <div class="subjects-grid">
+        <div class="subject-card">
+          <div class="subject-card-content">
+            <span class="subject-emoji">⚙️</span>
+            <h3>Physical Science</h3>
+            <p>Forces, motion, energy, and matter. How and why things move the way they do.</p>
+            <span class="subject-tag">Now Available</span>
+          </div>
+        </div>
+        <div class="subject-card">
+          <div class="subject-card-content">
+            <span class="subject-emoji">🦋</span>
+            <h3>Life Science</h3>
+            <p>Living things, ecosystems, animals, plants, and the biology that connects it all.</p>
+            <span class="subject-tag">Coming Soon</span>
+          </div>
+        </div>
+        <div class="subject-card">
+          <div class="subject-card-content">
+            <span class="subject-emoji">🌊</span>
+            <h3>Earth &amp; Ocean Science</h3>
+            <p>Our planet's systems, weather, habitats, and the incredible world beneath the waves.</p>
+            <span class="subject-tag">Ocean Explorers Available</span>
+          </div>
+        </div>
+        <div class="subject-card">
+          <div class="subject-card-content">
+            <span class="subject-emoji">🧬</span>
+            <h3>Chemistry</h3>
+            <p>Reactions, materials, properties, and the invisible forces that shape our world.</p>
+            <span class="subject-tag">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHO IT'S FOR ═══ -->
+  <section id="who-its-for">
+    <div class="who-inner">
+      <div class="who-layout">
+        <div class="who-image image-placeholder">
+          <span>Family Homeschooling Together</span>
+        </div>
+        <div class="who-content">
+          <span class="section-label" style="display:block; margin-bottom:16px;">Is this you?</span>
+          <h2 class="section-title" style="text-align:left; margin-bottom:24px;">Little Lab Coats is for families who…</h2>
+          <ul class="who-list">
+            <li>
+              <span class="who-check">✓</span>
+              Have kids at multiple grade levels and want everyone working on science together — at the same time, at different depths.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Believe screen time should be limited, and want curriculum that doesn't depend on videos or apps.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Value rigorous, inquiry-driven science — not simplified nonsense dressed up with cartoon characters.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Want to feel confident teaching science even if it's not their strongest subject.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Care about beautiful materials their kids are genuinely excited to use.
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              Prefer secular, science-first curriculum with no religious or ideological overlay.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SAMPLE UNITS ═══ -->
+  <section id="sample-units">
+    <div class="units-inner">
+      <span class="section-label">Available now</span>
+      <h2 class="section-title">Start exploring today.</h2>
+      <p class="section-sub">Each unit is a complete, standalone science experience. Buy what fits your kids — or get everything with a subscription.</p>
+
+      <div class="units-grid">
+        <!-- Unit 1: Kindergarten Forces -->
+        <div class="unit-card">
+          <div class="unit-image">
+            <div class="image-placeholder"><span>Kindergarten Forces Preview</span></div>
+          </div>
+          <div class="unit-body">
+            <div class="unit-meta">
+              <span class="unit-tag tag-grade">Kindergarten</span>
+              <span class="unit-tag tag-lessons">6 Lessons</span>
+              <span class="unit-tag tag-subject">Physical Science</span>
+            </div>
+            <h3>Forces: Push, Pull &amp; Motion</h3>
+            <p>Your youngest scientists explore the invisible forces all around them — pushing, pulling, gravity, and how things move. Every lesson is a hands-on discovery they'll talk about for days.</p>
+            <div class="unit-footer">
+              <div>
+                <div class="unit-price">$18</div>
+                <div class="unit-price-sub">PDF · or $49 with kit</div>
+              </div>
+              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 2: Ocean Explorers -->
+        <div class="unit-card">
+          <div class="unit-image">
+            <div class="image-placeholder"><span>Ocean Explorers Preview</span></div>
+          </div>
+          <div class="unit-body">
+            <div class="unit-meta">
+              <span class="unit-tag tag-grade">Multi-Age K–5</span>
+              <span class="unit-tag tag-lessons">4 Lessons</span>
+              <span class="unit-tag tag-subject">Earth &amp; Ocean Science</span>
+            </div>
+            <h3>Ocean Explorers</h3>
+            <p>Dive deep into the world's oceans — ecosystems, marine adaptations, water pressure, and the creatures that thrive there. Perfect for the kid who wants to know everything about sharks.</p>
+            <div class="unit-footer">
+              <div>
+                <div class="unit-price">$18</div>
+                <div class="unit-price-sub">PDF · or $49 with kit</div>
+              </div>
+              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 3: 3rd–5th Forces -->
+        <div class="unit-card">
+          <div class="unit-image">
+            <div class="image-placeholder"><span>5th Grade Forces Preview</span></div>
+          </div>
+          <div class="unit-body">
+            <div class="unit-meta">
+              <span class="unit-tag tag-grade">3rd–5th Grade</span>
+              <span class="unit-tag tag-lessons">Standalone Lesson</span>
+              <span class="unit-tag tag-subject">Physical Science</span>
+            </div>
+            <h3>Forces &amp; Motion: Advanced</h3>
+            <p>A deeper dive into forces for older learners — balanced and unbalanced forces, Newton's laws, and the science behind everyday movement. Great companion to the kindergarten forces unit.</p>
+            <div class="unit-footer">
+              <div>
+                <div class="unit-price">$18</div>
+                <div class="unit-price-sub">PDF · or $49 with kit</div>
+              </div>
+              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Lesson</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+  <section id="pricing">
+    <div class="pricing-inner">
+      <span class="section-label">Simple pricing</span>
+      <h2 class="section-title">Choose what works for your family.</h2>
+      <p class="section-sub">Buy individual units as you go, or save with a yearly subscription. All plans include the full lesson — nothing locked behind upgrades.</p>
+
+      <div class="pricing-grid">
+
+        <!-- Tier 1: Digital -->
+        <div class="pricing-card">
+          <span class="pricing-icon">📄</span>
+          <div class="pricing-tier-name">Digital</div>
+          <div class="pricing-tagline">Perfect for trying it out</div>
+          <div class="pricing-price">
+            <div class="price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/ unit</small></div>
+            <div class="price-alt">or $89/year for all units</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✓</span>Instant PDF download</li>
+            <li><span class="feature-check">✓</span>Full lesson plan with experiment</li>
+            <li><span class="feature-check">✓</span>Student worksheets (all grade levels)</li>
+            <li><span class="feature-check">✓</span>Parent answer key</li>
+            <li><span class="feature-check">✓</span>Discussion questions with guided answers</li>
+            <li><span class="feature-check">✓</span>Print as many times as you need</li>
+          </ul>
+          <a href="https://littlelabcoats.gumroad.com/" class="btn btn-secondary" style="width:100%; text-align:center;">Get Digital</a>
+        </div>
+
+        <!-- Tier 2: Digital + Kit (Featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <span class="pricing-icon">📦</span>
+          <div class="pricing-tier-name">Digital + Kit</div>
+          <div class="pricing-tagline">Everything included — just open and teach</div>
+          <div class="pricing-price">
+            <div class="price-main">$49 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/ unit</small></div>
+            <div class="price-alt">or $249/year for all units + kits</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✓</span>Everything in Digital</li>
+            <li><span class="feature-check">✓</span>Pre-assembled materials kit</li>
+            <li><span class="feature-check">✓</span>All experiment supplies included</li>
+            <li><span class="feature-check">✓</span>Shipped to your door</li>
+            <li><span class="feature-check">✓</span>Zero supply hunting required</li>
+            <li><span class="feature-check">✓</span>Open the box, start the lesson</li>
+          </ul>
+          <a href="https://littlelabcoats.gumroad.com/" class="btn btn-sage" style="width:100%; text-align:center;">Get Kit + Digital</a>
+        </div>
+
+        <!-- Tier 3: Subscription -->
+        <div class="pricing-card">
+          <span class="pricing-icon">✨</span>
+          <div class="pricing-tier-name">Subscription</div>
+          <div class="pricing-tagline">Full library access, best value</div>
+          <div class="pricing-price">
+            <div class="price-main">$119 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/ year</small></div>
+            <div class="price-alt">Unlock every current + future unit</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✓</span>Access to entire unit library</li>
+            <li><span class="feature-check">✓</span>All grade levels K–5</li>
+            <li><span class="feature-check">✓</span>New units added regularly</li>
+            <li><span class="feature-check">✓</span>Instant download for everything</li>
+            <li><span class="feature-check">✓</span>Priority access to new releases</li>
+            <li><span class="feature-check">✓</span>Best value for active homeschoolers</li>
+          </ul>
+          <a href="https://littlelabcoats.gumroad.com/" class="btn btn-navy" style="width:100%; text-align:center;">Subscribe &amp; Save</a>
+        </div>
+
+      </div>
+
+      <p style="margin-top: 32px; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text-muted);">
+        All purchases include a 30-day satisfaction guarantee. If it's not right for your family, just reach out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT THE FOUNDER ═══ -->
+  <section id="founder">
+    <div class="founder-inner">
+      <div class="founder-layout">
+        <div class="founder-image image-placeholder">
+          <span>Photo of Serena</span>
+        </div>
+        <div class="founder-content">
+          <span class="section-label" style="display:block; margin-bottom:16px;">About the founder</span>
+          <h2 class="founder-greeting">Hi, I'm Serena. 👋</h2>
+          <p>I'm a scientist. I have a first-class degree in Zoology, a Master's from Oxford in Integrative Bioscience, and a PhD in Microbiology. I've spent my career doing real science — asking questions, running experiments, testing ideas.</p>
+          <p>I'm also a homeschool mom of three. And when I went looking for science curriculum that was actually good — rigorous, hands-on, beautiful, and built for families with kids at different ages — I couldn't find it.</p>
+          <p>So I built it myself.</p>
+          <p>Little Lab Coats is everything I wished existed when I started homeschooling. Real experiments. Multi-age lessons. Beautiful materials my kids actually want to use. And nothing that requires a science degree to teach — because I've written the guides so any parent can feel confident in the material.</p>
+          <p>Science changed how I see the world. I want to give that to your kids too.</p>
+          <div class="founder-creds">
+            <span class="cred-pill">🎓 First Class Zoology</span>
+            <span class="cred-pill">🏛️ MSc Oxford, Integrative Bioscience</span>
+            <span class="cred-pill">🔬 PhD Microbiology</span>
+            <span class="cred-pill">🏡 Homeschool Mom of Three</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq">
+    <div class="faq-inner">
+      <span class="section-label">Common questions</span>
+      <h2 class="section-title">Everything you're probably wondering.</h2>
+      <p class="section-sub">Still have questions? Reach out anytime.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is Little Lab Coats secular?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, completely. Little Lab Coats is 100% secular and science-based. There is no religious content — no creationism, no religious framing of any kind. The curriculum is grounded in inquiry-driven science aligned with modern scientific standards. It's designed to be accessible to all families, regardless of belief.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What grades is this designed for?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Little Lab Coats covers kindergarten through 5th grade. One of its core strengths is the multi-age design — siblings at different grade levels can work through the same lesson simultaneously, with differentiated student worksheets tailored to their level. You teach the concept once; everyone participates and gets age-appropriate work.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need a science background to teach this?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely not. Every lesson is designed so that any parent — regardless of their science background — can teach confidently. Discussion questions come with guided answers. The parent guide walks you through the science clearly and accessibly. You don't need to know the answer before you start; the materials have it covered.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if I don't have the materials for an experiment?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most experiments use everyday household items — things you likely already have. Each lesson includes a clear materials list so you can check before you start. If you'd rather skip the supply hunt entirely, choose the Digital + Kit option and everything you need ships directly to your door, ready to open and use.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can siblings at different grade levels do this together?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>That's exactly what it's designed for. All your kids do the same experiment together — they observe, discover, and discuss as a family. The differentiation comes in the student worksheets, which are tailored to each grade level. Your kindergartner and your 4th grader explore the same concept; they just engage with it at the depth that's right for them.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How is this different from Mystery Science or Real Science Odyssey?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Mystery Science relies heavily on videos — kids watch someone else do science. Little Lab Coats is entirely hands-on: your kids run the experiments themselves. Real Science Odyssey is solid academically but visually dated and not designed with multi-age households in mind. Little Lab Coats was built from scratch for homeschool families — beautiful materials, built-in differentiation, and a format that actually works in your home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section id="final-cta">
+    <div class="final-cta-inner">
+      <div class="final-cta-eyebrow">🧪</div>
+      <h2 class="final-cta-headline">Ready to make science the highlight of your week?</h2>
+      <p class="final-cta-sub">
+        Join families who've ditched the boring worksheets and screen-time science — and replaced them with real experiments that kids actually remember.
+      </p>
+      <div class="final-cta-group">
+        <a href="#sample-units" class="btn btn-primary btn-lg">Browse Curriculum</a>
+        <a href="#pricing" class="btn btn-secondary btn-lg">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/site/llc-badge-transparent.png" alt="LLC" style="height:32px; width:32px; object-fit:contain; mix-blend-mode:screen; opacity:0.85;">
+          Little Lab Coats
+        </div>
+        <p class="footer-tagline">Hands-on science curriculum built by a PhD scientist who homeschools. Real experiments. Beautiful materials. Zero screens.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Curriculum</h5>
+        <ul class="footer-links">
+          <li><a href="#sample-units">Kindergarten Forces Unit</a></li>
+          <li><a href="#sample-units">Ocean Explorers</a></li>
+          <li><a href="#sample-units">5th Grade Forces</a></li>
+          <li><a href="#subjects">Subjects Covered</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul class="footer-links">
+          <li><a href="#founder">About Serena</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:hello@littlelabcoats.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Little Lab Coats. All rights reserved.</span>
+      <span style="display:flex; gap:24px;">
+        <a href="#" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Privacy Policy</a>
+        <a href="#" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- ═══ FAQ TOGGLE JS ═══ -->
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
