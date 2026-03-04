@@ -1288,6 +1288,182 @@
       margin-bottom: 12px;
     }
 
+    /* ─── Lesson Search ─── */
+    #lesson-search {
+      padding: 96px 24px;
+      background: var(--cream);
+    }
+
+    .search-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .search-bar-wrapper {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      position: relative;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 16px 48px 16px 20px;
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      color: var(--navy);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-bar:focus {
+      border-color: var(--sage);
+      box-shadow: 0 0 0 3px rgba(92,122,94,0.15);
+    }
+
+    .search-bar::placeholder { color: var(--text-muted); }
+
+    .search-clear {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--cream-dark);
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s;
+      line-height: 1;
+    }
+
+    .search-clear:hover {
+      background: var(--sage);
+      color: var(--white);
+    }
+
+    .search-count {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+
+    .lesson-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .lesson-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .lesson-grade-badge {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--white);
+    }
+
+    .grade-k { background: var(--terracotta); }
+    .grade-3rd { background: var(--sage); }
+    .grade-5th { background: var(--navy); }
+    .grade-3rd-5th { background: var(--gold); }
+    .grade-multi { background: var(--brown); }
+
+    .lesson-special-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    .lesson-card h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .lesson-subject {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .lesson-desc {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .lesson-unit {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--text-muted);
+      font-family: 'Lato', sans-serif;
+    }
+
+    .no-results-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -1321,7 +1497,7 @@
       .pricing-card.featured:hover { transform: translateY(-5px); }
 
       #hero { padding: 72px 20px 48px; }
-      #problem, #how-it-works, #whats-inside, #subjects, #who-its-for,
+      #problem, #how-it-works, #whats-inside, #subjects, #lesson-search, #who-its-for,
       #sample-units, #pricing, #founder, #faq, #final-cta { padding: 72px 20px; }
     }
 
@@ -1577,6 +1753,23 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ LESSON SEARCH ═══ -->
+  <section id="lesson-search">
+    <div class="search-inner">
+      <span class="section-label">Browse all lessons</span>
+      <h2 class="section-title">Find the perfect lesson.</h2>
+      <p class="section-sub">Search by topic, grade level, or keyword to explore our full library of hands-on science lessons.</p>
+
+      <div class="search-bar-wrapper">
+        <input type="text" class="search-bar" id="lessonSearchInput" placeholder="Search by topic, grade, or keyword..." autocomplete="off" />
+        <button class="search-clear" id="searchClear" title="Clear search">&times;</button>
+      </div>
+      <div class="search-count" id="searchCount">13 lessons available</div>
+
+      <div class="lessons-grid" id="lessonsGrid"></div>
     </div>
   </section>
 
@@ -1958,7 +2151,7 @@
       <span>© 2026 Little Lab Coats. All rights reserved. All materials are for personal/family use only. Not for redistribution or resale.</span>
       <span style="display:flex; gap:24px;">
         <a href="#" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Privacy Policy</a>
-        <a href="#" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Terms of Service</a>
+        <a href="terms.html" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Terms of Service</a>
       </span>
     </div>
   </footer>
@@ -1971,6 +2164,86 @@
       document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     }
+  </script>
+
+  <!-- ═══ LESSON SEARCH JS ═══ -->
+  <script>
+  (function() {
+    const lessons = [
+      { title: "Push & Pull Sort", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Sort everyday objects by push and pull. Hands-on sorting activity." },
+      { title: "Ramp Racers", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Explore how ramp height affects how far objects roll." },
+      { title: "Strong & Gentle Push", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Investigate how the strength of a push changes motion." },
+      { title: "Magnet Magic", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Discover which materials magnets attract and repel." },
+      { title: "Wind Wagon", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Build a wind-powered wagon and test different sail designs." },
+      { title: "Marble Run", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Design and build marble runs to explore forces and motion." },
+      { title: "Bird Beak Buffet", grade: "3rd & 5th", subject: "Life Science", unit: "Standalone", desc: "Model bird beak adaptations using household tools to pick up different 'foods'." },
+      { title: "Thermal Energy Ice Cream", grade: "3rd & 5th", subject: "Physical Science", unit: "Standalone", desc: "Make ice cream while learning about thermal energy transfer and states of matter." },
+      { title: "Balanced & Unbalanced Forces", grade: "5th", subject: "Forces & Motion", unit: "Standalone", desc: "Investigate Newton's Laws through friction experiments with household items." },
+      { title: "The Coral Kingdom", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Explore coral reef ecosystems, symbiosis, and ocean food webs." },
+      { title: "Sharks Built to Hunt", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Study shark anatomy, taxonomy, and adaptations for hunting." },
+      { title: "Into the Abyss", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Discover deep sea creatures, bioluminescence, and hydrothermal vents." },
+      { title: "Ocean in Motion", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Investigate waves, currents, tides, and thermohaline circulation." }
+    ];
+
+    const grid = document.getElementById('lessonsGrid');
+    const input = document.getElementById('lessonSearchInput');
+    const countEl = document.getElementById('searchCount');
+    const clearBtn = document.getElementById('searchClear');
+
+    function gradeClass(g) {
+      if (g === 'K') return 'grade-k';
+      if (g === '5th') return 'grade-5th';
+      if (g === '3rd & 5th') return 'grade-multi';
+      if (g.includes('3rd') || g.includes('5th')) return 'grade-3rd-5th';
+      return 'grade-3rd';
+    }
+
+    function render(list) {
+      if (!list.length) {
+        grid.innerHTML = '<div class="no-results"><span class="no-results-emoji">🔍</span><p>No lessons found. Try a different search term.</p></div>';
+      } else {
+        grid.innerHTML = list.map(function(l) {
+          var special = l.unit.indexOf('Special') !== -1;
+          return '<div class="lesson-card">' +
+            '<div class="lesson-card-header">' +
+              '<span class="lesson-grade-badge ' + gradeClass(l.grade) + '">' + l.grade + '</span>' +
+              (special ? '<span class="lesson-special-badge">✨ Special Unit</span>' : '') +
+            '</div>' +
+            '<h4>' + l.title + '</h4>' +
+            '<div class="lesson-subject">' + l.subject + '</div>' +
+            '<p class="lesson-desc">' + l.desc + '</p>' +
+            '<div class="lesson-unit">📁 ' + l.unit + '</div>' +
+          '</div>';
+        }).join('');
+      }
+      var q = input.value.trim();
+      countEl.textContent = q
+        ? list.length + ' lesson' + (list.length !== 1 ? 's' : '') + ' found'
+        : list.length + ' lessons available';
+    }
+
+    function filter() {
+      var q = input.value.trim().toLowerCase();
+      clearBtn.style.display = q ? 'flex' : 'none';
+      if (!q) { render(lessons); return; }
+      render(lessons.filter(function(l) {
+        return l.title.toLowerCase().indexOf(q) !== -1 ||
+          l.subject.toLowerCase().indexOf(q) !== -1 ||
+          l.grade.toLowerCase().indexOf(q) !== -1 ||
+          l.unit.toLowerCase().indexOf(q) !== -1 ||
+          l.desc.toLowerCase().indexOf(q) !== -1;
+      }));
+    }
+
+    input.addEventListener('input', filter);
+    clearBtn.addEventListener('click', function() {
+      input.value = '';
+      filter();
+      input.focus();
+    });
+
+    render(lessons);
+  })();
   </script>
 
 </body>
