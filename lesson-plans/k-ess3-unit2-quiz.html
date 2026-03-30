@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth & Human Activity Quiz — K-ESS3 Unit 2 | Kindergarten</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fff3e0;
+      margin: 0;
+      padding: 0;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    .quiz-header {
+      background: #e65100;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 22px;
+    }
+    .quiz-header h1 {
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+    }
+    .quiz-header .subtitle {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin: 0;
+    }
+    .quiz-note {
+      background: #fff9c4;
+      border: 2px solid #f9a825;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .score-bar {
+      background: white;
+      border-bottom: 2px solid #ffcc80;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #e65100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .quiz-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 10px 16px 60px;
+    }
+    .question-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 22px 0;
+      box-shadow: 0 2px 8px rgba(230,81,0,0.10);
+      border: 2px solid #ffcc80;
+    }
+    .question-card.answered-correct { border-color: #e65100; background: #fff8f0; }
+    .question-card.answered-wrong   { border-color: #c62828; background: #fff3f3; }
+
+    .q-emoji { font-size: 2.6rem; display: block; text-align: center; margin-bottom: 10px; }
+    .q-num   { font-size: 0.85rem; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .q-text  { font-size: 1.15rem; font-weight: bold; margin-bottom: 16px; color: #bf360c; }
+
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option-btn {
+      background: #fff8f0;
+      border: 2px solid #ffcc80;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.15s, border-color 0.15s;
+      font-family: Georgia, serif;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #ffe0b2;
+      border-color: #e65100;
+    }
+    .option-btn.correct {
+      background: #c8e6c9;
+      border-color: #2e7d32;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+    .option-btn.wrong {
+      background: #ffcdd2;
+      border-color: #c62828;
+      color: #b71c1c;
+    }
+    .option-btn:disabled { cursor: default; }
+
+    .feedback-box {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+    .feedback-box.correct {
+      display: block;
+      background: #e8f5e9;
+      border-left: 5px solid #2e7d32;
+      color: #1b5e20;
+    }
+    .feedback-box.wrong {
+      display: block;
+      background: #fff3e0;
+      border-left: 5px solid #ef6c00;
+      color: #333;
+    }
+    .feedback-box .fb-label {
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    #results-section {
+      display: none;
+      background: white;
+      border-radius: 14px;
+      padding: 30px 24px;
+      margin: 30px 0;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(230,81,0,0.14);
+      border: 3px solid #e65100;
+    }
+    #results-section .result-emoji  { font-size: 3rem; margin-bottom: 10px; display: block; }
+    #results-section .result-score  { font-size: 2rem; font-weight: bold; color: #e65100; margin-bottom: 8px; }
+    #results-section .result-message{ font-size: 1.2rem; color: #333; margin-bottom: 20px; }
+    .restart-btn {
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      margin-top: 10px;
+    }
+    .restart-btn:hover { background: #bf360c; }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #e65100;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 500px) {
+      .quiz-header h1 { font-size: 1.4rem; }
+      .q-text { font-size: 1.05rem; }
+      .option-btn { font-size: 0.98rem; padding: 10px 14px; }
+    }
+    @media print { body { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_lQ8iMZOXhNY">
+
+<div class="quiz-header">
+  <h1>🌍 Earth &amp; Human Activity Quiz</h1>
+  <p class="subtitle">Kindergarten &nbsp;·&nbsp; Earth Science &nbsp;·&nbsp; K-ESS3 Unit 2</p>
+</div>
+
+<div class="quiz-body">
+  <div class="quiz-note">
+    📖 <strong>Ask a grown-up to read the questions to you!</strong><br>
+    Pick the best answer for each question. Take your time — you've got this! 🌟
+  </div>
+
+  <div class="score-bar" id="scoreBar">Score: 0 / 0 answered</div>
+
+  <!-- Q1 -->
+  <div class="question-card" id="q1">
+    <span class="q-emoji">🌿</span>
+    <div class="q-num">Question 1 of 10</div>
+    <div class="q-text">What is a natural resource?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(1, this, false)">A) Something a factory makes</button>
+      <button class="option-btn" onclick="answer(1, this, true)">B) Something that comes from nature that living things need or use</button>
+      <button class="option-btn" onclick="answer(1, this, false)">C) A toy you get at a store</button>
+      <button class="option-btn" onclick="answer(1, this, false)">D) Something made of plastic</button>
+    </div>
+    <div class="feedback-box" id="fb1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" id="q2">
+    <span class="q-emoji">🪟</span>
+    <div class="q-num">Question 2 of 10</div>
+    <div class="q-text">Glass windows are made by people — but what natural resource does glass come from?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(2, this, false)">A) Wood from a tree</button>
+      <button class="option-btn" onclick="answer(2, this, false)">B) Oil from underground</button>
+      <button class="option-btn" onclick="answer(2, this, true)">C) Sand that has been melted</button>
+      <button class="option-btn" onclick="answer(2, this, false)">D) Rocks that are painted clear</button>
+    </div>
+    <div class="feedback-box" id="fb2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" id="q3">
+    <span class="q-emoji">💧</span>
+    <div class="q-num">Question 3 of 10</div>
+    <div class="q-text">Earth is 71% water — but only a tiny bit is drinkable. Why do we need to conserve water?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(3, this, false)">A) Water is easy to make in a factory</button>
+      <button class="option-btn" onclick="answer(3, this, false)">B) We have too much water already</button>
+      <button class="option-btn" onclick="answer(3, this, true)">C) Most water is salty ocean water — less than 1% is fresh water we can drink</button>
+      <button class="option-btn" onclick="answer(3, this, false)">D) Water comes from the clouds whenever we want</button>
+    </div>
+    <div class="feedback-box" id="fb3"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" id="q4">
+    <span class="q-emoji">🦷</span>
+    <div class="q-num">Question 4 of 10</div>
+    <div class="q-text">Which of these is a great way to save water when brushing your teeth?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(4, this, false)">A) Brush your teeth in the shower</button>
+      <button class="option-btn" onclick="answer(4, this, true)">B) Turn off the tap while brushing — it saves up to 4 gallons each time!</button>
+      <button class="option-btn" onclick="answer(4, this, false)">C) Use a bigger cup of water</button>
+      <button class="option-btn" onclick="answer(4, this, false)">D) Brush your teeth only once a week</button>
+    </div>
+    <div class="feedback-box" id="fb4"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" id="q5">
+    <span class="q-emoji">🪱</span>
+    <div class="q-num">Question 5 of 10</div>
+    <div class="q-text">Healthy soil has four main ingredients. Which of these is one of them?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(5, this, false)">A) Sugar and salt</button>
+      <button class="option-btn" onclick="answer(5, this, true)">B) Minerals, organic matter (humus), water, and air</button>
+      <button class="option-btn" onclick="answer(5, this, false)">C) Sand and plastic</button>
+      <button class="option-btn" onclick="answer(5, this, false)">D) Only rocks and clay</button>
+    </div>
+    <div class="feedback-box" id="fb5"></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" id="q6">
+    <span class="q-emoji">🌱</span>
+    <div class="q-num">Question 6 of 10</div>
+    <div class="q-text">You pour water on a cup of sand and a cup of soil. What happens?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(6, this, false)">A) Sand soaks up more water than soil</button>
+      <button class="option-btn" onclick="answer(6, this, false)">B) Both hold water exactly the same</button>
+      <button class="option-btn" onclick="answer(6, this, true)">C) Healthy soil soaks up and holds water much better — sand lets it drain right through</button>
+      <button class="option-btn" onclick="answer(6, this, false)">D) Water disappears in both the same way</button>
+    </div>
+    <div class="feedback-box" id="fb6"></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" id="q7">
+    <span class="q-emoji">🌲</span>
+    <div class="q-num">Question 7 of 10</div>
+    <div class="q-text">A forest is cut down to build a parking lot. What is one way this HURTS the environment?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(7, this, false)">A) Cars need more places to park</button>
+      <button class="option-btn" onclick="answer(7, this, true)">B) Animals lose their home, and rainwater can't soak into the ground anymore</button>
+      <button class="option-btn" onclick="answer(7, this, false)">C) Trees grow back right away</button>
+      <button class="option-btn" onclick="answer(7, this, false)">D) Nothing changes for the animals</button>
+    </div>
+    <div class="feedback-box" id="fb7"></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" id="q8">
+    <span class="q-emoji">🌪️</span>
+    <div class="q-num">Question 8 of 10</div>
+    <div class="q-text">A tornado is coming! Where is the SAFEST place to go?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(8, this, false)">A) Under a big tree outside</button>
+      <button class="option-btn" onclick="answer(8, this, false)">B) Under a bridge or overpass</button>
+      <button class="option-btn" onclick="answer(8, this, true)">C) The lowest floor of a sturdy building, in an interior room away from windows</button>
+      <button class="option-btn" onclick="answer(8, this, false)">D) On the roof so you can see it coming</button>
+    </div>
+    <div class="feedback-box" id="fb8"></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" id="q9">
+    <span class="q-emoji">🌊</span>
+    <div class="q-num">Question 9 of 10</div>
+    <div class="q-text">There's a flash flood warning! You see floodwater on the road. What should you do?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(9, this, false)">A) Walk through quickly — it doesn't look deep</button>
+      <button class="option-btn" onclick="answer(9, this, false)">B) Drive the car through the water</button>
+      <button class="option-btn" onclick="answer(9, this, true)">C) Turn Around, Don't Drown — move to higher ground right away</button>
+      <button class="option-btn" onclick="answer(9, this, false)">D) Wait and see if the water goes away</button>
+    </div>
+    <div class="feedback-box" id="fb9"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" id="q10">
+    <span class="q-emoji">🌻</span>
+    <div class="q-num">Question 10 of 10</div>
+    <div class="q-text">You want to be Earth's helper. Which action is the MOST specific and helpful?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(10, this, false)">A) "Be nice to the planet"</button>
+      <button class="option-btn" onclick="answer(10, this, false)">B) "Help the environment somehow"</button>
+      <button class="option-btn" onclick="answer(10, this, true)">C) "I will turn off the tap while brushing my teeth every day, saving up to 8 gallons"</button>
+      <button class="option-btn" onclick="answer(10, this, false)">D) "Try to recycle sometimes"</button>
+    </div>
+    <div class="feedback-box" id="fb10"></div>
+  </div>
+
+  <!-- Results -->
+  <div id="results-section">
+    <span class="result-emoji" id="resultEmoji"></span>
+    <div class="result-score" id="resultScore"></div>
+    <div class="result-message" id="resultMessage"></div>
+    <button class="restart-btn" onclick="restartQuiz()">🔄 Try Again!</button>
+  </div>
+
+  <a class="back-link" href="k-ess3-unit2-lesson1-what-earth-gives-us.html">← Back to Unit 2, Lesson 1</a>
+</div>
+
+<script>
+  const TOTAL = 10;
+  let answered = 0;
+  let correct = 0;
+
+  const feedbacks = {
+    1: {
+      right: "✅ That's right! Natural resources come from nature — things like water, air, soil, rocks, wood, and sunlight. We use them to make almost everything!",
+      wrong: "The correct answer is B. A natural resource is something from nature that living things need or use — like water, wood, and soil."
+    },
+    2: {
+      right: "✅ Excellent! Glass is made from melted sand — a natural resource from Earth. Even human-made objects trace back to something natural!",
+      wrong: "The correct answer is C. Glass is made by melting sand! Sand is a natural resource found on beaches, deserts, and riverbeds."
+    },
+    3: {
+      right: "✅ You got it! Even though Earth looks blue and watery, 97% is salty ocean water. Less than 1% of all Earth's water is fresh water we can actually drink!",
+      wrong: "The correct answer is C. Most of Earth's water is saltwater in the oceans — too salty to drink. Less than 1% is the fresh water that all people, animals, and plants share!"
+    },
+    4: {
+      right: "✅ Great job! Turning off the tap while brushing saves 2–4 gallons each time. That's up to 8 gallons a day for a family — what an easy way to help!",
+      wrong: "The correct answer is B. When you turn off the tap while brushing, you save up to 4 gallons of water per brush. That adds up fast!"
+    },
+    5: {
+      right: "✅ Wow, you remember! Healthy soil has four ingredients: tiny rock pieces called minerals, decomposed plants and animals (humus/organic matter), water, and air.",
+      wrong: "The correct answer is B. Healthy soil is made of minerals (tiny bits of rock), organic matter (humus), water, and air. All four are needed for plants to grow!"
+    },
+    6: {
+      right: "✅ That's right! Healthy soil soaks up water and holds it so plant roots can drink it. Sandy soil has big spaces so water drains away before plants can use it.",
+      wrong: "The correct answer is C. Healthy soil holds water much better than sand. This is why plants grow better in soil — their roots can actually reach the water!"
+    },
+    7: {
+      right: "✅ Exactly! When forests are cut down, animals lose their homes. Pavement also stops rainwater from soaking into the ground, which can cause flooding.",
+      wrong: "The correct answer is B. Cutting a forest hurts animals who lived there AND stops rainwater from soaking into the ground. Trees do a lot of important work!"
+    },
+    8: {
+      right: "✅ You're a safety expert! The lowest floor in a sturdy building, in an interior room away from windows, is the safest spot during a tornado. Bridges and trees are actually MORE dangerous!",
+      wrong: "The correct answer is C. Go to the lowest floor of a sturdy building and get into an interior room away from windows. NEVER shelter under a bridge — it's more dangerous there!"
+    },
+    9: {
+      right: "✅ Smart choice! \"Turn Around, Don't Drown\" is the rule. Even 6 inches of fast-moving floodwater can knock you down. Move to higher ground right away!",
+      wrong: "The correct answer is C. \"Turn Around, Don't Drown!\" Even shallow floodwater moves very fast and can sweep you away. Always move to higher ground."
+    },
+    10: {
+      right: "✅ Perfect Earth Helper thinking! Specific actions — with a clear what, when, and how much — are what make real change. Vague goals like 'be nice to the planet' are too fuzzy to actually do!",
+      wrong: "The correct answer is C. Specific actions are the key! \"Turn off the tap every day, saving 8 gallons\" is something you can actually DO and measure. Vague goals fade away — specific ones stick!"
+    }
+  };
+
+  const tiers = [
+    { min: 9, emoji: "🏆", message: "Earth Superstar! You know so much about our planet — Earth is lucky to have a helper like you!" },
+    { min: 7, emoji: "🌟", message: "Amazing work, Earth Scientist! You really understand how to take care of our world." },
+    { min: 5, emoji: "🌱", message: "Good job, Earth Helper! You're learning so much. Keep going — Earth needs you!" },
+    { min: 3, emoji: "💧", message: "Nice try! Review the lessons and give it another go — every scientist learns by trying again." },
+    { min: 0, emoji: "🌍", message: "Keep exploring! Go back and read the lessons — then come back and try again. You've got this!" }
+  ];
+
+  function answer(qNum, btn, isCorrect) {
+    const card = document.getElementById('q' + qNum);
+    const fb   = document.getElementById('fb' + qNum);
+    if (card.classList.contains('answered-correct') || card.classList.contains('answered-wrong')) return;
+
+    // Disable all buttons in this question
+    card.querySelectorAll('.option-btn').forEach(b => {
+      b.disabled = true;
+      if (b === btn && isCorrect)  { b.classList.add('correct'); }
+      if (b === btn && !isCorrect) { b.classList.add('wrong'); }
+    });
+
+    // If wrong, highlight the correct button
+    if (!isCorrect) {
+      card.querySelectorAll('.option-btn').forEach(b => {
+        if (b.getAttribute('onclick').includes(', true)')) b.classList.add('correct');
+      });
+    }
+
+    const data = feedbacks[qNum];
+    if (isCorrect) {
+      card.classList.add('answered-correct');
+      fb.classList.add('correct');
+      fb.innerHTML = '<div class="fb-label">🎉 Correct!</div>' + data.right;
+      correct++;
+    } else {
+      card.classList.add('answered-wrong');
+      fb.classList.add('wrong');
+      fb.innerHTML = '<div class="fb-label">Not quite…</div>' + data.wrong;
+    }
+
+    answered++;
+    document.getElementById('scoreBar').textContent = 'Score: ' + correct + ' / ' + answered + ' answered';
+
+    if (answered === TOTAL) showResults();
+  }
+
+  function showResults() {
+    const section = document.getElementById('results-section');
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    const tier = tiers.find(t => correct >= t.min);
+    document.getElementById('resultEmoji').textContent   = tier.emoji;
+    document.getElementById('resultScore').textContent   = correct + ' out of ' + TOTAL + ' correct!';
+    document.getElementById('resultMessage').textContent = tier.message;
+  }
+
+  function restartQuiz() {
+    answered = 0; correct = 0;
+    document.getElementById('scoreBar').textContent = 'Score: 0 / 0 answered';
+    document.getElementById('results-section').style.display = 'none';
+
+    for (let i = 1; i <= TOTAL; i++) {
+      const card = document.getElementById('q' + i);
+      const fb   = document.getElementById('fb' + i);
+      card.classList.remove('answered-correct', 'answered-wrong');
+      fb.classList.remove('correct', 'wrong');
+      fb.innerHTML = '';
+      card.querySelectorAll('.option-btn').forEach(b => {
+        b.disabled = false;
+        b.classList.remove('correct', 'wrong');
+      });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_lQ8iMZOXhNY" data-content-selector="body"></script>
+</body>
+</html>
