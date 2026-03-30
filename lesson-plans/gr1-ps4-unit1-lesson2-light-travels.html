@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Travels in Straight Lines — Unit 1, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #0288d1;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Light category cards */
+    .light-categories {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .light-card {
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      border: 2px solid;
+    }
+    .light-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .light-card .label { font-weight: bold; font-size: 13pt; display: block; margin-bottom: 4px; }
+    .light-card .desc { font-size: 9pt; }
+    .transparent-card { background: #e3f2fd; border-color: #1565c0; }
+    .transparent-card .label { color: #0d47a1; }
+    .translucent-card { background: #e0f2f1; border-color: #0288d1; }
+    .translucent-card .label { color: #00695c; }
+    .opaque-card { background: #f3e5f5; border-color: #7b1fa2; }
+    .opaque-card .label { color: #6a1b9a; }
+    /* Worksheet styles */
+    .worksheet-section {
+      margin: 20px 0;
+    }
+    .tube-diagram {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 14px 0;
+    }
+    .tube-box {
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      background: #fafafa;
+    }
+    .tube-box .tube-title {
+      font-weight: bold;
+      color: #0d47a1;
+      margin-bottom: 8px;
+      font-size: 11pt;
+    }
+    .tube-draw-area {
+      height: 120px;
+      border: 1px dashed #bbb;
+      border-radius: 6px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 9pt;
+    }
+    .sort-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    .sort-table th {
+      padding: 12px 8px;
+      font-size: 13pt;
+      border: 3px solid #333;
+    }
+    .sort-table .transparent-header { background: #1565c0; color: white; }
+    .sort-table .translucent-header { background: #0288d1; color: white; }
+    .sort-table .opaque-header { background: #6a1b9a; color: white; }
+    .sort-table td {
+      border: 3px solid #333;
+      padding: 10px;
+      height: 120px;
+      vertical-align: top;
+      font-size: 10pt;
+      color: #aaa;
+      width: 33.33%;
+    }
+    .fill-in {
+      font-size: 16pt;
+      text-align: center;
+      margin: 20px 0;
+      padding: 14px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      border: 2px solid #90caf9;
+    }
+    .fill-in span.blank {
+      display: inline-block;
+      border-bottom: 3px solid #0d47a1;
+      min-width: 120px;
+    }
+    .shadow-draw {
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 14px 0;
+      background: #fafafa;
+    }
+    .shadow-draw .draw-area {
+      height: 160px;
+      border: 1px dashed #bbb;
+      border-radius: 6px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 9pt;
+      margin-top: 8px;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .ak-col h3 { font-size: 11pt; text-align: center; }
+    .ak-transparent h3 { color: #0d47a1; border-color: #90caf9; }
+    .ak-translucent h3 { color: #00695c; border-color: #80cbc4; }
+    .ak-opaque h3 { color: #6a1b9a; border-color: #ce93d8; }
+    .ak-col ul { list-style: none; padding-left: 0; }
+    .ak-col li { padding: 3px 0; font-size: 10pt; }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .tube-diagram, .sort-table {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_xNXJZo7tisI">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🔦 Light Travels in Straight Lines 🔦</h1>
+  <p class="subtitle">Physical Science — Sound &amp; Light &nbsp;|&nbsp; Unit 1, Lesson 2 of 3</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Sound &amp; Light</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🔦 ➡️ 💡</div>
+    <div class="caption">Light always travels in a straight line — it can't bend around corners!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standards:</strong><br>
+    <strong>1-PS4-2</strong> — Make observations to construct an evidence-based account that objects in darkness can be seen only when illuminated.<br>
+    <strong>1-PS4-3</strong> — Plan and conduct an investigation to determine the effect of placing objects made with different materials in the path of a beam of light (transparent, translucent, opaque).
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>DEMONSTRATE</strong> that light travels in straight lines and <strong>SORT</strong> materials into <em>transparent</em>, <em>translucent</em>, and <em>opaque</em> categories by testing them with a flashlight.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Light travels in straight lines — always! It cannot bend around corners or curve through tubes. When something gets in the way of light, a shadow forms in the exact shape of the object. And not all materials treat light the same way: some let all the light through, some let a little through, and some block it completely.</p>
+
+  <div class="light-categories">
+    <div class="light-card transparent-card">
+      <span class="emoji">🪟</span>
+      <span class="label">Transparent</span>
+      <span class="desc">Lets ALL light through — you can see clearly. <em>Example: clear glass, plastic wrap</em></span>
+    </div>
+    <div class="light-card translucent-card">
+      <span class="emoji">🧻</span>
+      <span class="label">Translucent</span>
+      <span class="desc">Lets SOME light through — blurry, not clear. <em>Example: tissue paper, wax paper</em></span>
+    </div>
+    <div class="light-card opaque-card">
+      <span class="emoji">📦</span>
+      <span class="label">Opaque</span>
+      <span class="desc">Blocks ALL light — makes a dark shadow. <em>Example: cardboard, foil, your hand</em></span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> transparent, translucent, opaque, shadow, beam, reflect, straight
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Gather Before You Start</h3>
+    <ul>
+      <li>🔦 Flashlight</li>
+      <li>🧻 3 toilet paper rolls + tape (save these ahead of time!)</li>
+      <li>Clear plastic wrap or a clear plastic bag</li>
+      <li>Wax paper</li>
+      <li>Tissue paper</li>
+      <li>Aluminum foil</li>
+      <li>A piece of cardboard or a book</li>
+      <li>A scrap of thin fabric</li>
+      <li>White plastic bag (if available)</li>
+      <li>Clear glass or plastic cup</li>
+    </ul>
+
+    <h3>✏️ For the Worksheet</h3>
+    <ul>
+      <li>Printed Student Worksheet (last pages of this lesson)</li>
+      <li>Crayons or pencil</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <h3>Activity 1 — Does Light Travel Straight?</h3>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Flashlight Beam (3 min)</strong><br>
+    Dim or darken the room. Shine the flashlight across the room toward a wall.<br>
+    Ask: <em>"Do you see the beam of light bending or curving anywhere?"</em><br>
+    <ul>
+      <li>No! It goes straight, all the way to the wall — it never curves.</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — The Toilet Paper Roll Tunnel (10 min)</strong><br>
+    Line up 3 toilet paper rolls end to end. Use tape to hold them in a straight line.<br>
+    <ol>
+      <li>Shine the flashlight in one end — watch light come out the other side! ✅</li>
+      <li>Now gently <strong>bend the line</strong> slightly (so it's no longer straight). Shine the flashlight again.<br>
+        Ask: <em>"Does the light still come out the other end?"</em><br>
+        <strong>No!</strong> Light can't bend around corners, so it gets blocked inside the bent tube.</li>
+    </ol>
+    This is proof that light travels in <strong>straight lines only</strong>!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Shadow Puppets! (5 min)</strong><br>
+    Hold your hand between the flashlight and a wall in a dark room. Make a hand shadow!<br>
+    Ask: <em>"Why does the shadow look exactly like your hand?"</em><br>
+    <ul>
+      <li>Because light travels straight — your hand blocks the straight-moving light, so a dark patch the exact shape of your hand appears on the wall.</li>
+      <li>If light could bend around corners, there'd be no shadows at all!</li>
+    </ul>
+  </div>
+
+  <h3>Activity 2 — Light Sorting Station</h3>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Test Each Material (10–15 min)</strong><br>
+    In a dim room, hold each material up in front of the flashlight beam. Test them one at a time.<br>
+    <ul>
+      <li><strong>Can you see clearly through it?</strong> → <span style="color:#0d47a1; font-weight:bold;">Transparent</span></li>
+      <li><strong>Light comes through but it's blurry?</strong> → <span style="color:#00695c; font-weight:bold;">Translucent</span></li>
+      <li><strong>Blocks the light completely?</strong> → <span style="color:#6a1b9a; font-weight:bold;">Opaque</span></li>
+    </ul>
+    Sort the materials into three groups as you test them. Fill in the sorting table on the worksheet!
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Pro tip:</strong> Closing the blinds during the daytime works great — you don't need a fully dark room, just dim enough that you can clearly see the difference between materials.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "Why do windows need to be transparent rather than opaque? What would happen if all windows were made of cardboard?"
+    <p class="discussion-hint">💬 We need transparent windows so light can come in — without light during the day, rooms would be completely dark! Cardboard would block all light. We could use opaque walls, but we want windows to let daylight in while keeping weather out.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "When you make a shadow puppet, why does the shadow have the same shape as your hand?"
+    <p class="discussion-hint">💬 Because light travels in straight lines! Your hand blocks the light, and since light can't bend around it, a dark patch the exact shape of your hand appears on the wall. If light could bend around corners, there'd be no shadows.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🪞 <strong>Mirror Redirect:</strong> Hold a small mirror in the flashlight beam — can you redirect the light spot to a different spot on the wall? Mirrors <em>reflect</em> light, changing its direction (while still traveling straight after the bounce)!</li>
+      <li>🕶️ <strong>Real-World Connections:</strong> Sunglasses are tinted but still <em>transparent</em> — you can see clearly through them, though the tint reduces brightness. Sunblock reflects and absorbs UV light so it doesn't reach your skin.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"Light: Shadows, Mirrors, and Rainbows"</em> by Natalie Rosinsky or <em>"What Is Light?"</em> by Ann Coan</li>
+
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>All household materials:</strong> No purchases needed! Toilet paper rolls are the only "prep" — just save 3 of them ahead of time.</li>
+      <li><strong>Dim the room:</strong> Darkening helps a lot for the sorting activity — closing blinds during the day is enough. A darker room makes the difference between transparent, translucent, and opaque much more obvious.</li>
+      <li><strong>Why can't light bend around corners?</strong> Light is a wave of energy that travels in straight lines — obstacles that block it create shadows. Lenses and mirrors can redirect light, but that's a different mechanism (refraction and reflection). For 1st grade, just emphasize: light goes straight, can't bend around things.</li>
+      <li><strong>Vocabulary to reinforce:</strong> transparent, translucent, opaque, shadow, beam, reflect</li>
+      <li><strong>Tricky case — wax paper:</strong> Wax paper lets a lot of light through but diffuses it (blurry). It's a great example of translucent. Kids may debate transparent vs. translucent — that's great science talk!</li>
+      <li><strong>Assessment:</strong> Can each child correctly sort at least 5–6 materials? Can they say in their own words why the bent tube blocks light? That's success for 1st grade.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🔦 Student Worksheet — Light Travels in Straight Lines</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <!-- Part 1: Toilet Paper Roll Diagram -->
+    <div class="worksheet-section">
+      <h3>Part 1 — Draw the Light! 🔦</h3>
+      <p style="font-size:10pt; color:#555; margin-bottom:10px;">Draw arrows to show where the light goes in each tube. Does it come out the other end?</p>
+
+      <div class="tube-diagram">
+        <div class="tube-box">
+          <div class="tube-title">Straight Tube 📏</div>
+          <div style="font-size: 40pt; letter-spacing: -2px; margin: 8px 0;">⬛⬛⬛</div>
+          <div style="font-size: 9pt; color: #555; margin-bottom: 6px;">Three rolls in a straight line</div>
+          <div class="tube-draw-area">Draw arrows showing where the light goes →</div>
+          <p style="font-size:10pt; margin-top:8px;">Does light come out the end? &nbsp; <strong>Yes &nbsp;/&nbsp; No</strong></p>
+        </div>
+        <div class="tube-box">
+          <div class="tube-title">Bent Tube 📐</div>
+          <div style="font-size: 40pt; margin: 8px 0;">⬛↙⬛</div>
+          <div style="font-size: 9pt; color: #555; margin-bottom: 6px;">Three rolls with a bend in the middle</div>
+          <div class="tube-draw-area">Draw arrows showing where the light goes →</div>
+          <p style="font-size:10pt; margin-top:8px;">Does light come out the end? &nbsp; <strong>Yes &nbsp;/&nbsp; No</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 2: Fill in the blank -->
+    <div class="worksheet-section">
+      <h3>Part 2 — Fill In the Blank ✏️</h3>
+      <div class="fill-in">
+        Light travels in <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> lines.
+      </div>
+    </div>
+
+    <!-- Part 3: Sorting table -->
+    <div class="worksheet-section">
+      <h3>Part 3 — Light Sorting Table 🔬</h3>
+      <p style="font-size:10pt; color:#555; margin-bottom:8px;">Test materials with your flashlight. Write or draw 2 items in each column!</p>
+
+      <table class="sort-table">
+        <tr>
+          <th class="transparent-header">🪟 TRANSPARENT<br><span style="font-size:9pt; font-weight:normal;">Light passes through clearly</span></th>
+          <th class="translucent-header">🧻 TRANSLUCENT<br><span style="font-size:9pt; font-weight:normal;">Light comes through — but blurry</span></th>
+          <th class="opaque-header">📦 OPAQUE<br><span style="font-size:9pt; font-weight:normal;">Blocks all light</span></th>
+        </tr>
+        <tr>
+          <td>Write or draw 2 items:</td>
+          <td>Write or draw 2 items:</td>
+          <td>Write or draw 2 items:</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Part 4: Shadow drawing -->
+    <div class="worksheet-section">
+      <h3>Part 4 — Shadow Time! 🖐️</h3>
+      <p style="font-size:10pt; color:#555; margin-bottom:6px;">Trace your hand in the box below. Then draw where the shadow would appear on the wall to the right!</p>
+
+      <div class="shadow-draw">
+        <div style="display: grid; grid-template-columns: 1fr 40px 1fr; gap: 10px; align-items: center;">
+          <div>
+            <div style="font-size:10pt; font-weight:bold; color:#0d47a1; margin-bottom:6px;">Your hand (trace it here!):</div>
+            <div class="draw-area">Trace your hand here ✋</div>
+          </div>
+          <div style="text-align:center; font-size:24pt;">🔦<br><span style="font-size:14pt;">→</span></div>
+          <div>
+            <div style="font-size:10pt; font-weight:bold; color:#555; margin-bottom:6px;">The wall — draw the shadow:</div>
+            <div class="draw-area" style="background:#f0f0f0;">Draw the shadow here 👋</div>
+          </div>
+        </div>
+        <p style="font-size:10pt; margin-top:10px; color:#555;">Why does the shadow look like your hand? Because light travels in __________________ lines!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1 — Tube Diagram Answers</h3>
+      <ul>
+        <li><strong>Straight tube:</strong> Arrows go straight through all three rolls → light comes out the other end. Answer: <strong>Yes</strong></li>
+        <li><strong>Bent tube:</strong> Arrow enters the first roll, hits the side of the bent tube and stops (blocked). Answer: <strong>No</strong> — light can't bend around corners!</li>
+      </ul>
+
+      <h3>Part 2 — Fill in the Blank</h3>
+      <p>Light travels in <strong><em>straight</em></strong> lines.</p>
+
+      <h3>Part 3 — Light Sorting Table</h3>
+      <div class="ak-grid">
+        <div class="ak-col ak-transparent">
+          <h3>🪟 TRANSPARENT</h3>
+          <ul>
+            <li>✅ Clear plastic wrap</li>
+            <li>✅ Clear glass/plastic cup</li>
+            <li>✅ Clear plastic bag</li>
+            <li>✅ Clean window glass</li>
+          </ul>
+        </div>
+        <div class="ak-col ak-translucent">
+          <h3>🧻 TRANSLUCENT</h3>
+          <ul>
+            <li>✅ Tissue paper</li>
+            <li>✅ Wax paper</li>
+            <li>✅ White/frosted plastic bag</li>
+            <li>✅ Thin fabric</li>
+            <li>✅ Frosted tape</li>
+          </ul>
+        </div>
+        <div class="ak-col ak-opaque">
+          <h3>📦 OPAQUE</h3>
+          <ul>
+            <li>✅ Cardboard</li>
+            <li>✅ Aluminum foil</li>
+            <li>✅ A book</li>
+            <li>✅ Your hand</li>
+            <li>✅ Construction paper</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">Part 4 — Shadow Drawing</h3>
+      <ul>
+        <li>The shadow on the wall should be the <strong>same shape</strong> as the traced hand — possibly slightly larger (shadows get bigger as the object moves closer to the light source).</li>
+        <li>Fill-in answer: <strong>"straight"</strong></li>
+      </ul>
+
+      <h3>💡 Discussion Notes</h3>
+      <ul>
+        <li><strong>Question 1 (windows):</strong> Transparent windows let daylight in. Opaque cardboard would block all light — rooms would be completely dark during the day. Accept any answer that shows understanding that transparent materials allow light to pass through.</li>
+        <li><strong>Question 2 (shadow puppets):</strong> Light travels in straight lines, so the hand blocks the light and casts a shadow that matches the hand's exact shape. If light bent around objects, there would be no shadows. Accept any reasoning that connects straight-line travel to shadow shape.</li>
+        <li><strong>Tricky case — wax paper:</strong> Some kids may call it transparent because a lot of light comes through. The key distinction: can you see a clear image through it? No — it's blurry. That's translucent. Celebrate the discussion!</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can explain that light travels in a straight line and cannot bend around corners.</li>
+        <li>Child can correctly sort at least 5 out of 6+ tested materials into transparent / translucent / opaque.</li>
+        <li>Child can connect shadow shape to straight-line light travel.</li>
+      </ul>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_xNXJZo7tisI" data-content-selector="body"></script>
+</body>
+</html>

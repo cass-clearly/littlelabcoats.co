@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Moon — Earth's Natural Satellite | Grade 1 Earth Science Unit 1, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #e65100; }
+    .extension-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .moon-phase-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .moon-phase-card {
+      border: 2px solid #ffcc80;
+      border-radius: 10px;
+      padding: 12px 8px;
+      text-align: center;
+      background: white;
+    }
+    .moon-phase-card .moon-emoji { font-size: 32pt; display: block; }
+    .moon-phase-card .phase-name { font-weight: bold; color: #bf360c; font-size: 10pt; margin-top: 6px; }
+    .moon-phase-card .phase-desc { font-size: 9pt; color: #666; font-style: italic; margin-top: 4px; }
+    .journal-box {
+      border: 2px dashed #ffcc80;
+      border-radius: 8px;
+      background: white;
+      min-height: 100px;
+      margin: 6px 0;
+      padding: 8px;
+    }
+    .draw-box {
+      border: 2px solid #ffcc80;
+      background: white;
+      border-radius: 8px;
+      min-height: 100px;
+      margin: 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      font-style: italic;
+    }
+    .moon-journal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+      margin: 14px 0;
+    }
+    .moon-journal-day {
+      border: 2px solid #ffcc80;
+      border-radius: 6px;
+      padding: 6px 4px;
+      text-align: center;
+      min-height: 80px;
+    }
+    .moon-journal-day .day-label { font-size: 8pt; font-weight: bold; color: #bf360c; }
+    .moon-journal-day .date-line { border-bottom: 1px solid #ffcc80; margin: 4px 0; font-size: 8pt; color: #888; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_I-qDzpQ00bU">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌙 The Moon — Earth's Natural Satellite</h1>
+  <p class="subtitle">Earth Science — Sun, Moon &amp; Stars | Unit 1, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes + ongoing nightly observations</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Sun, Moon &amp; Stars</span>
+    <span>🏠 <strong>Materials:</strong> Household only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘</div>
+    <div class="caption">The moon moves through a full cycle of phases every 29.5 days</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>1-ESS1-1</strong> — Use observations of the sun, moon, and stars to describe patterns that can be predicted.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Observe</em> and <em>record</em> the moon's apparent shape over several days</li>
+    <li><em>Describe</em> the pattern of moon phases and predict what comes next</li>
+    <li><em>Explain</em> why the moon appears to change shape (we see different portions of the lit side)</li>
+  </ul>
+
+  <h2>🔬 The Big Science Idea</h2>
+  <p>The moon seems to change shape every night — but it doesn't actually change! The moon is always a sphere (a ball shape). What changes is <em>how much of the lit side we can see</em> from Earth.</p>
+  <p>The moon orbits (travels around) Earth once every 29.5 days. The sun always lights up one half of the moon — but as the moon moves around Earth, our viewing angle changes. Sometimes we see most of the lit half (full moon), sometimes we see just a sliver (crescent), and sometimes the lit side faces entirely away from us (new moon). All the shapes in between are the different phases.</p>
+  <p>This creates a predictable, repeating pattern — one of the most reliable patterns in all of nature!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> moon, phase, orbit, satellite, reflect, crescent, quarter, gibbous, full moon, new moon, cycle
+  </div>
+
+  <div class="moon-phase-grid">
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌑</span>
+      <div class="phase-name">New Moon</div>
+      <div class="phase-desc">Not visible — lit side faces away from Earth</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌒</span>
+      <div class="phase-name">Crescent</div>
+      <div class="phase-desc">A thin curved sliver of light</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌓</span>
+      <div class="phase-name">First Quarter</div>
+      <div class="phase-desc">Half of the moon lit up</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌔</span>
+      <div class="phase-name">Gibbous</div>
+      <div class="phase-desc">More than half lit up</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌕</span>
+      <div class="phase-name">Full Moon</div>
+      <div class="phase-desc">Whole lit side faces Earth — brightest!</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌖</span>
+      <div class="phase-name">Gibbous</div>
+      <div class="phase-desc">Still more than half lit, fading</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌗</span>
+      <div class="phase-name">Last Quarter</div>
+      <div class="phase-desc">Half lit again — other half this time</div>
+    </div>
+    <div class="moon-phase-card">
+      <span class="moon-emoji">🌘</span>
+      <div class="phase-name">Crescent</div>
+      <div class="phase-desc">Thin sliver before new moon returns</div>
+    </div>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You'll Need</h3>
+    <ul>
+      <li>This Moon Journal (printed — Student Worksheet page)</li>
+      <li>Crayons or pencil for drawing moon shapes</li>
+      <li>A clear night sky — or a moon phase calendar/chart (if sky is cloudy)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;"><em>Timing tip: Starting this journal on or just after a new moon gives students the most dramatic arc — they'll watch the moon grow from invisible to full over two weeks. Check a moon phase calendar at <strong>timeanddate.com</strong> to plan your start date.</em></p>
+  </div>
+
+  <h2>🔬 The Moon Journal Activity</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce the Moon (Day 1, in class)</strong><br>
+    Look at the moon phase diagram together. Ask: <em>"Has anyone ever noticed the moon looks different on different nights?"</em> Show the eight phases and introduce their names. Explain: the moon isn't actually changing shape — we're just seeing different amounts of the lit half.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Start the Journal (Nights 1–14)</strong><br>
+    Each night before bedtime, go outside (or look out a window) and find the moon. Draw what you see in that night's box on the Moon Journal. If the moon isn't visible yet, write "not up yet" or "cloudy." If there's a new moon, draw a blank circle and write "new moon."
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Name the Phase</strong><br>
+    After drawing, look at the moon phase chart and write the name of the phase next to your drawing. Does it match what you drew?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Mid-Point Check-In (Day 7)</strong><br>
+    After a week of observations, look at your journal so far. Ask: <em>"Is the moon getting bigger (waxing) or getting smaller (waning)?"</em> Make a prediction: what will it look like in 7 more days?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Final Reflection (Day 14+)</strong><br>
+    Review the complete journal. Fill in the reflection questions on the worksheet. Can you now predict what phase comes next?
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Can't see the moon?</strong> Cloudy nights happen! Keep a note ("cloudy" or "foggy") rather than skipping the entry. Comparing what you expected vs. what you actually saw is part of real scientific observation.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <p><strong>🗣️ Talk about these together:</strong></p>
+    <ul>
+      <li>What do you notice about the pattern? Does the moon follow a predictable order?</li>
+      <li>If the moon is a crescent tonight, what will it look like in about two weeks?</li>
+      <li>Why can we sometimes see the moon during the day?</li>
+      <li>Has anyone ever noticed the moon looks bigger near the horizon? (This is the "moon illusion" — a trick our brains play!)</li>
+    </ul>
+
+    <p><strong>🌟 Big Question: "Does the moon make its own light?"</strong></p>
+    <p class="discussion-hint">No — the moon has no light of its own. It reflects sunlight, like a mirror. That's why it's only visible when sunlight hits its surface and bounces toward Earth. The "dark side of the moon" isn't actually dark — it receives just as much sunlight as the near side. It's just always facing away from Earth. When we say "dark side" we mean the side we never see, not a permanently dark side.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔦 <strong>Moon Model:</strong> Take a flashlight and a tennis ball into a dark room. Shine the flashlight on the ball and slowly walk in a circle around it — watch how different amounts of the lit side face you. This is exactly how moon phases work!</li>
+      <li>📅 <strong>Full Cycle:</strong> If you started with a new moon, continue the journal for a full 29-day cycle and see the moon return to new.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Moon Book"</em> by Gail Gibbons or <em>"Papa, Please Get the Moon for Me"</em> by Eric Carle</li>
+      <li>🌍 <strong>Fun Fact:</strong> The moon is slowly moving away from Earth at about 3.8 centimeters per year — about the rate your fingernails grow!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is a long-form observation activity:</strong> The Moon Journal works best over 7–14 days. Build it into the bedtime routine — kids love having a reason to look at the sky each night.</li>
+      <li><strong>Moon visibility:</strong> The moon isn't always visible at bedtime. Around new moon, it sets soon after the sun and won't be visible in the evening sky. Check a moon phase app so you know what to expect.</li>
+      <li><strong>Common misconception:</strong> Many children think a lunar eclipse causes the phases. Clarify: phases happen every month because of the moon's orbit; eclipses are rare events when Earth's shadow falls on the moon.</li>
+      <li><strong>The "waxing/waning" vocabulary:</strong> Waxing = growing (getting more lit up). Waning = shrinking (getting less lit up). These are real astronomy terms and first-graders can absolutely learn them.</li>
+      <li><strong>If cloudy for most of the 2 weeks:</strong> Use a monthly moon phase chart or an app like "Moon" to show what the moon looks like — then have the child draw from the chart instead of direct observation.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌙 Student Worksheet — Moon Journal</h1>
+    <p class="subtitle">Unit 1, Lesson 2 — The Moon</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Start Date: ________________</p>
+
+    <p style="font-size: 10pt; color: #555; margin-bottom: 10px;"><em>Each night, go look at the moon and draw what you see in that day's box. Write the phase name below your drawing!</em></p>
+
+    <div class="moon-journal-grid">
+      <div class="moon-journal-day"><div class="day-label">Night 1</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 2</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 3</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 4</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 5</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 6</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 7</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 8</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 9</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 10</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 11</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 12</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 13</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+      <div class="moon-journal-day"><div class="day-label">Night 14</div><div class="date-line">Date: ______</div><div style="min-height:50px;"></div><div style="font-size:8pt; color:#888;">Phase: _____</div></div>
+    </div>
+
+    <h3>✏️ Reflection Questions</h3>
+    <ol>
+      <li style="margin-bottom:18px;">Did the moon follow a pattern? (circle) &nbsp;&nbsp; <strong>YES</strong> &nbsp;&nbsp; / &nbsp;&nbsp; <strong>NO</strong> &nbsp;&nbsp; — Describe what you noticed: ____________________________</li>
+      <li style="margin-bottom:18px;">The moon got (circle one): &nbsp; <strong>bigger then smaller</strong> &nbsp; / &nbsp; <strong>smaller then bigger</strong> &nbsp; / &nbsp; <strong>stayed the same</strong></li>
+      <li style="margin-bottom:18px;">Does the moon make its own light? (circle) &nbsp; <strong>YES</strong> &nbsp; / &nbsp; <strong>NO</strong> &nbsp; — Where does moonlight come from? ________________</li>
+      <li style="margin-bottom:18px;">Draw what you predict the moon will look like in 2 weeks:
+        <div class="draw-box" style="min-height:80px; width:80px; display:inline-flex; margin-left:12px; vertical-align:top;"></div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🌙 Moon Journal — What to Expect</h3>
+      <p>The specific phases your child observes will depend on when they start. The general cycle: new moon (not visible) → waxing crescent → first quarter (half lit) → waxing gibbous → full moon → waning gibbous → last quarter → waning crescent → new moon again. The full cycle takes 29.5 days.</p>
+
+      <h3>✏️ Reflection Answers</h3>
+      <ol>
+        <li>Yes, the moon does follow a pattern. It follows a predictable cycle of phases that repeats every 29.5 days.</li>
+        <li>The moon gets <em>bigger</em> (waxing — more lit each night) then <em>smaller</em> (waning — less lit each night). Then the cycle repeats.</li>
+        <li>No, the moon does not make its own light. Moonlight is sunlight reflecting off the moon's surface.</li>
+        <li>In 2 weeks: if starting from new moon → should be near full moon. If starting from full moon → should be near new moon (very thin or invisible).</li>
+      </ol>
+
+      <h3>💡 Moon Phase Quick Reference</h3>
+      <ul>
+        <li>🌑 <strong>New Moon</strong> — Moon is between Earth and Sun; lit side faces away. Not visible at night.</li>
+        <li>🌒🌘 <strong>Crescent</strong> — Less than half lit. Waxing crescent (right side lit) → growing. Waning crescent (left side lit) → shrinking.</li>
+        <li>🌓🌗 <strong>Quarter</strong> — Exactly half lit. First quarter is waxing; last quarter is waning.</li>
+        <li>🌔🌖 <strong>Gibbous</strong> — More than half lit. Waxing gibbous → growing toward full. Waning gibbous → shrinking from full.</li>
+        <li>🌕 <strong>Full Moon</strong> — Earth is between Sun and Moon; we see the fully lit side.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name at least 4 moon phases and put them in order</li>
+        <li>Child understands the moon follows a repeating pattern (~29.5 days)</li>
+        <li>Child can explain that the moon reflects sunlight rather than making its own light</li>
+        <li>Child can predict what phase will come next given a current phase</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

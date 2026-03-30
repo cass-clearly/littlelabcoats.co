@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirrors, Signals &amp; Sending Messages — Unit 1, Lesson 3 of 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .option-card {
+      border: 2px solid #0288d1;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      background: #f0f9ff;
+    }
+    .option-card h3 {
+      color: #0288d1;
+      border-color: #b3e5fc;
+      font-size: 13pt;
+      margin-top: 0;
+    }
+    .option-card ul li { margin-bottom: 6px; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 5px;
+      padding-left: 10px;
+      border-left: 3px solid #a5d6a7;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #0d47a1; }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .vocab-box {
+      background: #e3f2fd;
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .vocab-box strong { color: #0d47a1; }
+    /* Unit Wrap-Up */
+    .unit-wrapup {
+      background: linear-gradient(135deg, #0d47a1 0%, #0288d1 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .unit-wrapup h2 {
+      background: none;
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+      padding-bottom: 10px;
+      margin-top: 0;
+      font-size: 16pt;
+    }
+    .unit-wrapup h3 {
+      color: #b3e5fc;
+      border-color: rgba(255,255,255,0.3);
+      font-size: 12pt;
+    }
+    .unit-wrapup ul li { margin-bottom: 8px; }
+    .lesson-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .lesson-summary-card {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .lesson-summary-card .ls-emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .lesson-summary-card .ls-label { font-weight: bold; font-size: 10pt; }
+    .lesson-summary-card .ls-desc { font-size: 9pt; opacity: 0.85; margin-top: 4px; }
+    .museum-box {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 14px;
+    }
+    /* Worksheet */
+    .worksheet-page h1 { color: #1565c0; }
+    .draw-box {
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      min-height: 220px;
+      margin: 10px 0;
+      padding: 10px;
+      background: #f9fcff;
+    }
+    .draw-box .draw-prompt {
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .fill-line {
+      border-bottom: 1.5px solid #90caf9;
+      min-height: 30px;
+      margin: 6px 0 14px 0;
+      display: block;
+    }
+    .test-results-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+    .test-results-table th {
+      background: #1565c0;
+      color: white;
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 10pt;
+    }
+    .test-results-table td {
+      border: 1px solid #90caf9;
+      padding: 8px 12px;
+      height: 40px;
+      font-size: 10pt;
+      vertical-align: middle;
+    }
+    .test-results-table tr:nth-child(even) td { background: #e3f2fd; }
+    .worksheet-fill-box {
+      background: #e3f2fd;
+      border: 2px solid #0288d1;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 12pt;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Answer Key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-q {
+      margin: 14px 0;
+      padding: 12px 16px;
+      background: white;
+      border-left: 4px solid #0288d1;
+      border-radius: 0 6px 6px 0;
+    }
+    .ak-q .ak-question { font-weight: bold; color: #0d47a1; font-size: 10.5pt; }
+    .ak-q .ak-answer { font-size: 10pt; color: #333; margin-top: 5px; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .option-card, .unit-wrapup {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_LfQOBbyGBt4">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🪞 Mirrors, Signals &amp; Sending Messages 📯</h1>
+  <p class="subtitle">Physical Science — Sound &amp; Light &nbsp;|&nbsp; Unit 1, Lesson 3 of 3</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Sound &amp; Light</span>
+    <span>📖 <strong>Unit 1, Lesson 3 of 3</strong></span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🪞✨📡🥁💬</div>
+    <div class="caption">Mirrors flashing in the sun, drums echoing through the forest — humans have always found ways to talk across distances. Today, you design your own!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>1-PS4-4</strong> — Use tools and materials to design and build a device that uses light or sound to solve the problem of communicating over a distance.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>DESIGN</strong> and <strong>TEST</strong> a simple device that uses light or sound to communicate a message over a distance.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Humans have <strong>always</strong> used light and sound to communicate — from drum messages beating across forests to mirrors flashing signals across mountains. Long before phones or radios existed, people were clever engineers, using the tools they had to send messages to faraway places.</p>
+  <p>Today, your little scientist gets to be that engineer. They'll choose a signaling device, design a simple code, and test whether their message actually makes it across the room!</p>
+
+  <div class="vocab-box">
+    <strong>🔤 Key Vocabulary:</strong> communicate, signal, vibration, reflect, code, design
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <p><strong>Sound</strong> travels through vibrations. When you speak into a cup connected by a tight string, your voice makes the cup vibrate — and those vibrations travel down the string to the other cup. The tighter the string, the better the vibrations travel!</p>
+  <p><strong>Light</strong> travels in straight lines. When light hits a shiny surface like a mirror or smooth foil, it bounces (reflects) in a new direction. We can aim that reflected light like a pointer to send a signal.</p>
+  <p>Engineers use these properties of sound and light all the time — from radio towers to fiber-optic cables to satellite dishes. But the same physics that powers the International Space Station's communication system also powers a pair of paper cups and a string!</p>
+
+  <div class="tip-box">
+    💡 <strong>Real-world connections:</strong> Morse code (sound), semaphore flags (light/position), Native American smoke signals, lighthouse beams, ship signal flags, radio waves (invisible light waves that carry our phone calls and Wi-Fi)
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🪞 Option A: Mirror Signal</h3>
+    <ul>
+      <li>Small mirror <em>or</em> piece of aluminum foil (smoothed flat over cardboard for stiffness)</li>
+      <li>Flashlight (optional — sunlight near a window also works great!)</li>
+    </ul>
+    <h3>📞 Option B: String Telephone</h3>
+    <ul>
+      <li>2 paper or plastic cups</li>
+      <li>10–15 feet of string (kite string, yarn, or twine — the thinner the better)</li>
+      <li>Sharp pencil or toothpick to poke a small hole in each cup bottom</li>
+    </ul>
+    <h3>🥁 Option C: Drum Code</h3>
+    <ul>
+      <li>A pot or pan (metal makes the best sound!)</li>
+      <li>Wooden spoon or spatula for drumming</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Hook: What If You Had No Phone? (3–5 min)</strong><br>
+    Ask: <em>"Imagine you're camping deep in the woods and you need to tell your friend — who's on the other side of the campsite — that dinner is ready. You can't see them. You have no phone. How would you do it?"</em>
+    <br><br>
+    Let them brainstorm freely. Accept all ideas! Then say: <em>"Humans have been solving this problem for thousands of years. Today we're going to be the inventors."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Choose Your Device (2 min)</strong><br>
+    Present the three options. Let your child (or children) pick one — or try all three if time allows! Each option uses a different scientific principle.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Build It! (5–10 min)</strong><br>
+    Follow the instructions for the chosen option below. Emphasize: this is <strong>engineering design</strong> — it's okay if it doesn't work perfectly on the first try. That's what iteration is for!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Design Your Code (3 min)</strong><br>
+    Before testing, agree on a simple code. Examples:
+    <ul>
+      <li>1 signal = "Yes" or "Come here"</li>
+      <li>2 signals = "No" or "Wait"</li>
+      <li>3 signals = "I need help"</li>
+    </ul>
+    Write it down on the worksheet so both partners remember it!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Test It! (5–10 min)</strong><br>
+    Move apart (different sides of the room, or even different rooms for the drum). One person sends a message using only the device. The other tries to receive and understand it. Then switch! Record results on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Improve &amp; Reflect (5 min)</strong><br>
+    Did it work? What made it harder? What would you change? Complete the worksheet improvement section.
+  </div>
+
+  <!-- OPTION CARDS -->
+  <h2>🧪 The Three Options</h2>
+
+  <div class="option-card">
+    <h3>🪞 Option A: Mirror Signal</h3>
+    <ol>
+      <li>Smooth your aluminum foil flat over a piece of cardboard (or use a small mirror). The flatter the surface, the cleaner the reflection!</li>
+      <li>Near a window or with a flashlight, practice bouncing a beam of light onto a wall target. Tilt the mirror until you can see the bright spot appear on the wall.</li>
+      <li>Practice your code: <strong>1 flash = yes, 2 flashes = no, 3 flashes = come here</strong></li>
+      <li>Have one person turn away (or stand across the room facing away). The "sender" uses flashes to send a message. The "receiver" watches the wall and calls out what they think the message was.</li>
+      <li>Did it work? Try moving farther apart!</li>
+    </ol>
+    <div class="tip-box">💡 <strong>Tip:</strong> The foil mirror works best when smoothed over a stiff book or piece of cardboard — wrinkles scatter the light beam.</div>
+  </div>
+
+  <div class="option-card">
+    <h3>📞 Option B: String Telephone</h3>
+    <ol>
+      <li><strong>🔺 Adult help needed:</strong> Use a sharp pencil to carefully poke a small hole in the bottom of each cup.</li>
+      <li>Thread one end of the string through the hole in one cup and tie a big knot inside the cup so it can't pull back through. Repeat for the second cup.</li>
+      <li>Both people hold a cup each and walk apart until the string is <strong>very taut</strong> (tight like a guitar string — this is the most important step!).</li>
+      <li>One person speaks softly into their cup. The other holds their cup to their ear. Can they hear?</li>
+      <li><strong>Experiment:</strong> Now let the string go slack (floppy). Does it still work? Why not?</li>
+    </ol>
+    <div class="tip-box">💡 <strong>Why it works:</strong> Your voice makes the cup vibrate. Those vibrations travel along the tight string like waves. When the string is slack, the vibrations fizzle out instead of traveling — they need something taut to move through.</div>
+  </div>
+
+  <div class="option-card">
+    <h3>🥁 Option C: Drum Code</h3>
+    <ol>
+      <li>Choose a simple code: <strong>1 knock = yes, 2 knocks = no, knock-knock-<em>pause</em>-knock = come here</strong></li>
+      <li>One person goes to another room (or around the corner). Cover the doorway with a blanket so they absolutely can't see each other — only sound!</li>
+      <li>The "sender" drums their message on the pot. The "receiver" tries to decode it.</li>
+      <li>Switch roles. Can you send a longer message using only your code?</li>
+      <li><strong>Bonus:</strong> Can you figure out a way to send more complex messages — like "yes-yes-no" or "come here NOW"?</li>
+    </ol>
+    <div class="tip-box">💡 <strong>Real world:</strong> West African djembe drummers could send messages up to 20 miles away using drum codes that mimicked the tonal patterns of their spoken language!</div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "If you were lost in the woods without a phone, what sound or light signal could you use to let rescuers know where you are?"
+    <p class="discussion-hint">Good answers include: yelling, banging rocks together, using a mirror or shiny surface to reflect sunlight, making a fire (smoke by day, fire by night), or blowing a whistle. The international distress signal is <strong>3 of anything</strong> — 3 blasts, 3 flashes, 3 knocks. If they're interested, introduce <strong>SOS</strong> (Save Our Souls) — the international emergency signal that means "I need help!"</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "The string telephone only works when the string is tight. What does that tell you about how sound travels?"
+    <p class="discussion-hint">Sound needs something to travel <em>through</em>. In a string telephone, the vibrations from your voice travel through the tight string to the other cup. When the string is slack, the vibrations can't travel efficiently — they have nothing to carry them. Sound travels through solids (like string), liquids (like water), and gases (like air) — it needs particles close together to bump into each other and pass the vibration along.</p>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is an engineering design lesson</strong> — there is no "wrong" device. The goal is trying, testing, observing, and improving. Celebrate attempts and iteration. A device that doesn't work the first time is the most educational outcome!</li>
+      <li><strong>String telephone tip:</strong> The string telephone is the most satisfying — kids are always amazed it works. The key is making the string <em>extremely</em> taut. A slack string kills the effect every time. Also, speak softly — if you yell, they can just hear you through the air anyway and it defeats the lesson.</li>
+      <li><strong>Foil mirror tip:</strong> Smooth the aluminum foil over a book or piece of stiff cardboard before starting. Wrinkled foil scatters the light beam in too many directions. A smooth surface gives a tight, aimed reflection.</li>
+      <li><strong>Vocabulary to reinforce:</strong> communicate, signal, vibration, reflect, code, design</li>
+      <li><strong>Real-world connections to weave in:</strong> Morse code (dots and dashes = sound), semaphore (light and flag positions), Native American smoke signals, ship signal flags, lighthouse beams. The International Space Station communicates with Earth using <em>radio waves</em> — a form of light wave we can't see with our eyes.</li>
+      <li><strong>Lesson 3 of 3:</strong> This completes the Sound &amp; Light unit. See the Unit Wrap-Up section at the end for a culminating activity: the "Sound &amp; Light Museum"!</li>
+    </ul>
+  </div>
+
+  <!-- ====================== UNIT WRAP-UP ====================== -->
+  <div class="unit-wrapup">
+    <h2>🎓 Unit Wrap-Up: Sound &amp; Light — What We Learned</h2>
+    <p>Congratulations! You've completed all three lessons in Physical Science Unit 1. Here's what your scientist now knows:</p>
+
+    <div class="lesson-summary-grid">
+      <div class="lesson-summary-card">
+        <span class="ls-emoji">🔊</span>
+        <div class="ls-label">Lesson 1: Sound &amp; Vibration</div>
+        <div class="ls-desc">Sound is made by vibrations. Louder sounds = bigger vibrations. Pitch depends on how fast something vibrates.</div>
+      </div>
+      <div class="lesson-summary-card">
+        <span class="ls-emoji">🔦</span>
+        <div class="ls-label">Lesson 2: Light &amp; Shadows</div>
+        <div class="ls-desc">Light travels in straight lines. Objects can be transparent, translucent, or opaque. Light can be blocked or reflected.</div>
+      </div>
+      <div class="lesson-summary-card">
+        <span class="ls-emoji">📡</span>
+        <div class="ls-label">Lesson 3: Communication</div>
+        <div class="ls-desc">Sound and light can carry messages over distances. Engineers design devices that use these properties to communicate.</div>
+      </div>
+    </div>
+
+    <h3>🏛️ Culminating Activity: The Sound &amp; Light Museum</h3>
+    <div class="museum-box">
+      <p>Set up all three devices your family built across the three lessons and give a <strong>Museum Tour</strong>! Each child is the expert guide for their exhibit.</p>
+      <ul>
+        <li>🔊 <strong>Exhibit 1 — Sound Station:</strong> Show how a rubber band vibrates when plucked. Demonstrate: no vibration = no sound.</li>
+        <li>🔦 <strong>Exhibit 2 — Light &amp; Shadow Station:</strong> Use a flashlight to create shadows. Show a transparent, translucent, and opaque object.</li>
+        <li>📡 <strong>Exhibit 3 — Signals Station:</strong> Demonstrate one of today's devices. Explain your code and send a live message to your audience!</li>
+      </ul>
+      <p style="margin-top:10px; font-weight:bold;">Museum docent challenge: Can you explain to a family member WHY each device works — using words like "vibration," "reflect," and "signal"?</p>
+    </div>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break worksheet-page">
+
+    <h1>📋 Student Worksheet — Lesson 3</h1>
+    <p class="subtitle">Mirrors, Signals &amp; Sending Messages</p>
+    <p class="name-date">
+      Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________
+    </p>
+
+    <h2>✏️ Design Your Signaling Device</h2>
+    <p>Which device did you choose? Circle one:</p>
+    <p style="font-size:14pt; text-align:center; letter-spacing:4px;">
+      &nbsp;&nbsp;🪞 <strong>Mirror Signal</strong> &nbsp;&nbsp;&nbsp;&nbsp; 📞 <strong>String Telephone</strong> &nbsp;&nbsp;&nbsp;&nbsp; 🥁 <strong>Drum Code</strong>
+    </p>
+
+    <h3>🎨 Draw Your Device &amp; Label Its Parts</h3>
+    <div class="draw-box">
+      <p class="draw-prompt">Draw your device here. Try to label each part! (e.g., "string," "cup," "mirror," "string knot")</p>
+    </div>
+
+    <h3>🔤 My Signal Code</h3>
+    <p>What code did you and your partner use?</p>
+    <table class="test-results-table" style="margin-bottom:16px;">
+      <tr>
+        <th>Signal</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>1 signal means: &nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>2 signals means: &nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>3 signals means: &nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <h2>🧪 Test Results</h2>
+    <table class="test-results-table">
+      <tr>
+        <th>I tried to send this message:</th>
+        <th>My partner received:</th>
+        <th>Did it work?</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:center;">Yes &nbsp; / &nbsp; No</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:center;">Yes &nbsp; / &nbsp; No</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:center;">Yes &nbsp; / &nbsp; No</td>
+      </tr>
+    </table>
+
+    <h3>🔧 If I Tried Again, I Would Change…</h3>
+    <span class="fill-line"></span>
+    <span class="fill-line"></span>
+
+    <h2>✏️ Fill In the Blank</h2>
+    <div class="worksheet-fill-box">
+      Sound and light can both be used to <span style="border-bottom: 2px solid #0288d1; display: inline-block; min-width: 200px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+
+    <h3>🌟 Bonus: Name one way people sent signals before phones were invented!</h3>
+    <span class="fill-line"></span>
+    <span class="fill-line"></span>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="ak-q">
+        <div class="ak-question">Fill in the blank: "Sound and light can both be used to ___."</div>
+        <div class="ak-answer">✅ <strong>communicate</strong> (also accept: send messages, talk to people far away, signal)</div>
+      </div>
+
+      <div class="ak-q">
+        <div class="ak-question">Discussion Q1: Lost in the woods — what signal could you use?</div>
+        <div class="ak-answer">✅ Good answers: yelling, banging rocks together, using a shiny surface to reflect sunlight toward rescuers, fire/smoke signals, blowing a whistle. <strong>Key concept:</strong> The international distress signal is 3 of anything — 3 blasts, 3 flashes, 3 knocks. SOS = "Save Our Souls" — the universal emergency signal.</div>
+      </div>
+
+      <div class="ak-q">
+        <div class="ak-question">Discussion Q2: The string telephone only works when the string is tight. What does that tell us?</div>
+        <div class="ak-answer">✅ Sound needs something to travel through. The vibrations from your voice travel along the tight string to the other cup. When the string is slack, vibrations can't pass through efficiently — they need particles packed together to bump into each other. Sound travels through solids (like string), liquids (like water), and gases (like air).</div>
+      </div>
+
+      <div class="ak-q">
+        <div class="ak-question">Bonus: Name one way people sent signals before phones were invented.</div>
+        <div class="ak-answer">✅ Any historically accurate answer: Morse code (telegraph), semaphore flags, smoke signals, drum codes, mirror flashes, lighthouse beams, ship signal flags, town crier bells, carrier pigeons (light signal from a bird's arrival), horn/bugle calls. Praise creative and specific answers!</div>
+      </div>
+
+      <h3 style="color: #0d47a1; border-color: #90caf9; margin-top: 20px;">✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name at least one way to use <strong>light</strong> to communicate and one way to use <strong>sound</strong>.</li>
+        <li>Child can explain, in their own words, why the string telephone needs a taut string.</li>
+        <li>Child completes the engineering design cycle: build → test → observe → improve.</li>
+        <li>Child can fill in: "Sound and light can both be used to <strong>communicate</strong>."</li>
+        <li><em>Bonus:</em> Child connects today's lesson to at least one real-world historical signaling method.</li>
+      </ul>
+
+      <h3 style="color: #0d47a1; border-color: #90caf9;">💡 Vocabulary Check</h3>
+      <ul>
+        <li><strong>Communicate:</strong> Share information with someone else</li>
+        <li><strong>Signal:</strong> A sound, light, or movement used to send a message</li>
+        <li><strong>Vibration:</strong> A fast back-and-forth movement that creates sound</li>
+        <li><strong>Reflect:</strong> When light bounces off a surface in a new direction</li>
+        <li><strong>Code:</strong> A system where signals stand for words or messages</li>
+        <li><strong>Design:</strong> To plan and create something to solve a problem</li>
+      </ul>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_LfQOBbyGBt4" data-content-selector="body"></script>
+</body>
+</html>

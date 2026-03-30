@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Structures for Getting Food — Life Science Unit 1, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Food structure cards */
+    .food-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 15px 0;
+    }
+    .food-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 14px 12px;
+    }
+    .food-card .emoji { font-size: 30pt; display: block; margin-bottom: 6px; }
+    .food-card .animal-name { font-weight: bold; color: #1b5e20; font-size: 11pt; }
+    .food-card .structure { color: #555; font-size: 10pt; margin-top: 4px; font-style: italic; }
+    .food-card .how-it-works { color: #333; font-size: 10pt; margin-top: 6px; }
+    .food-card .food-type { color: #00B894; font-size: 9pt; margin-top: 5px; }
+    /* Design area */
+    .design-box {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+    .design-box h3 { color: #1b5e20; border-color: #a5d6a7; }
+    .draw-box {
+      border: 3px dashed #2e7d32;
+      border-radius: 10px;
+      min-height: 200px;
+      margin: 12px 0;
+      padding: 10px;
+    }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .draw-prompt-line {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin-top: 6px;
+      font-size: 9pt;
+      color: #aaa;
+    }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 200px;
+      margin: 0 4px;
+    }
+    /* Matching */
+    .matching-section {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+      align-items: flex-start;
+    }
+    .matching-col { flex: 1; }
+    .match-item {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .match-item .emoji { font-size: 22pt; display: block; margin-bottom: 4px; }
+    .match-item .label { font-weight: bold; color: #1b5e20; }
+    .match-problem {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .match-problem .label { color: #e65100; }
+    /* Worksheet */
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .ak-box h3 { color: #1b5e20; border-color: #a5d6a7; text-align: center; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 4px 0; font-size: 10pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .design-box, .food-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_z7x0HxwYbMc">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🦅 Animal Structures for Getting Food 🐘</h1>
+  <p class="subtitle">Life Science Unit 1, Lesson 5</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Animal Structures</span>
+    <span>📖 <strong>Lesson:</strong> 5 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🦅🐘🐜🦆🦒</div>
+    <div class="caption">Every animal has a specialized tool kit for getting food — no two are exactly alike!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>1-LS1-1</strong> — Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>match</strong> animal body structures to their food-getting function and <strong>explain</strong> why each structure suits that specific diet.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>An animal's body parts are perfectly matched to what it eats. A meat-eater has different tools than a plant-eater. A filter-feeder has different tools than a seed-cracker. Over millions of years, animals with the best-matched body parts for their food source survived and passed on those features. The result: an amazing variety of specialized eating tools — beaks, tongues, trunks, claws, bills, and more!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> beak, talon, trunk, filter, prehensile, specialized, diet, structure, predator, prey
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and crayons (for the drawing activity)</li>
+      <li>Optional household items for a "beak challenge" extension: tweezers (eagle beak), a spatula (duck bill), a toothpick or straw (anteater tongue), a spoon (scooping/filter feeding) — and things to pick up: small marshmallows, rice, water with floating bits</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>Core lesson needs only paper and crayons. The kitchen challenge is a fun bonus!</em></p>
+  </div>
+
+  <h2>🔬 Part 1 — Six Amazing Food-Getting Structures (15 min)</h2>
+  <p>Study each animal and its specialized body part. Ask: <em>"How does this body part help the animal get its specific food?"</em></p>
+
+  <div class="food-cards">
+    <div class="food-card">
+      <span class="emoji">🦅</span>
+      <span class="animal-name">Eagle</span>
+      <div class="structure">Talons + hooked beak</div>
+      <div class="how-it-works"><strong>Talons</strong> (curved, sharp claws) grip and hold prey tightly — even a struggling fish can't escape. The <strong>hooked beak</strong> tears meat into pieces small enough to swallow. Eagles can see 4–8 times more sharply than humans, which helps them spot prey from far away.</div>
+      <div class="food-type">🍖 Eats: fish, rabbits, squirrels, snakes</div>
+    </div>
+
+    <div class="food-card">
+      <span class="emoji">🐘</span>
+      <span class="animal-name">Elephant</span>
+      <div class="structure">Trunk (elongated nose + upper lip)</div>
+      <div class="how-it-works">The <strong>trunk</strong> can reach high branches no other land animal can access, strip bark from trees, suck up water (holds up to 2 gallons!), and use delicate tip muscles to pick up a single berry. It's a snorkel, a hand, a drinking straw, and a hose all in one.</div>
+      <div class="food-type">🌿 Eats: leaves, fruit, bark, grass — up to 300 lbs per day!</div>
+    </div>
+
+    <div class="food-card">
+      <span class="emoji">🐜</span>
+      <span class="animal-name">Giant Anteater</span>
+      <div class="structure">Long snout + long, sticky tongue</div>
+      <div class="how-it-works">The narrow <strong>snout</strong> pokes into termite mounds too small for predators to reach. The <strong>tongue</strong> (up to 24 inches long!) is covered in sticky saliva and flicks in and out up to 160 times per minute, collecting thousands of termites per visit.</div>
+      <div class="food-type">🐛 Eats: up to 35,000 ants and termites per day</div>
+    </div>
+
+    <div class="food-card">
+      <span class="emoji">🦆</span>
+      <span class="animal-name">Duck</span>
+      <div class="structure">Flat bill with comb-like edges (lamellae)</div>
+      <div class="how-it-works">The <strong>flat bill</strong> scoops water. Tiny comb-like structures called <strong>lamellae</strong> along the bill's edge act like a strainer — water squirts out but small plants, seeds, and invertebrates stay trapped inside. This is called filter feeding.</div>
+      <div class="food-type">🌊 Eats: aquatic plants, small invertebrates, seeds</div>
+    </div>
+
+    <div class="food-card">
+      <span class="emoji">🦒</span>
+      <span class="animal-name">Giraffe</span>
+      <div class="structure">Long neck + prehensile lips and tongue</div>
+      <div class="how-it-works">The <strong>long neck</strong> reaches leaves 18 feet off the ground — higher than any other browsing animal. The <strong>prehensile lips and tongue</strong> (up to 18 inches long, dark blue to resist sunburn!) wrap around thorny acacia branches and strip the leaves clean.</div>
+      <div class="food-type">🌳 Eats: acacia leaves that are toxic to most animals (giraffes tolerate the toxins)</div>
+    </div>
+
+    <div class="food-card">
+      <span class="emoji">🐦</span>
+      <span class="animal-name">Woodpecker</span>
+      <div class="structure">Chisel beak + long barbed tongue</div>
+      <div class="how-it-works">The <strong>chisel beak</strong> hammers into tree bark to expose insect tunnels — at up to 20 pecks per second! The <strong>barbed, sticky tongue</strong> (so long it wraps around the skull!) reaches into the tunnel to extract insects. The skull has special shock-absorbing structures to prevent brain injury from all that pecking.</div>
+      <div class="food-type">🪲 Eats: wood-boring beetles, ants, and tree sap</div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Discussion during Part 1:</strong>
+    <ul>
+      <li><em>"Could an eagle eat like a duck? Could a duck eat like an eagle? Why not?"</em></li>
+      <li><em>"Which animal has the most impressive food-getting structure? Why?"</em></li>
+      <li><em>"What tool do YOU use to eat? (Fork, spoon, fingers, teeth) — how do those compare to animal tools?"</em></li>
+    </ul>
+  </div>
+
+  <h2>🏗️ Part 2 — Draw an Animal Eating (15 min)</h2>
+
+  <div class="design-box">
+    <h3>🎨 Drawing Challenge: Show How It Eats!</h3>
+    <p>Pick <em>one</em> animal from above. Draw a scene showing that animal using its specialized body part to get its food. Your drawing must show:</p>
+    <ul>
+      <li>The animal</li>
+      <li>The specific body structure being used (beak, trunk, tongue, etc.)</li>
+      <li>The food being obtained</li>
+      <li>At least one label explaining how the structure helps</li>
+    </ul>
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Big Question:</strong> "If a woodpecker's beak broke, what would happen?"
+    <p class="discussion-hint">Suggested answer: The woodpecker would likely starve, because its entire feeding strategy depends on that specialized beak. This is the risk of overspecialization — an animal with a very specific tool for a very specific food is in serious trouble if that tool breaks or that food disappears. The giant panda is a famous example: it eats almost nothing but bamboo, and its "thumb" (actually an enlarged wrist bone) evolved specifically for holding bamboo stalks. If bamboo disappears from a region — which can happen when bamboo forests die — pandas starve. More generalist animals like raccoons, crows, and humans can eat almost anything and are much more adaptable when food sources change. Specialization is a tradeoff: you become very good at one thing, but vulnerable if that one thing is threatened.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🥄 <strong>Beak Challenge (Kitchen Science):</strong> Set up "food sources" — rice in water (duck filtering), marshmallows to skewer (eagle gripping), small objects in a hole in a foam cup (anteater extracting). Try each with tweezers (eagle), a spatula (duck), and a straw or toothpick (anteater). Which tool is best for each food?</li>
+      <li>🦒 <strong>Giraffe's Secret:</strong> Acacia thorns are up to 3 inches long — yet giraffes eat them! Their leathery lips and long tongue navigate between thorns. Look up a video of a giraffe eating to see this in action.</li>
+      <li>🐦 <strong>Woodpecker Skull:</strong> Search "woodpecker skull shock absorbers" — the skull has a spongy bone structure, a thick beak base, and the tongue literally wraps around the skull to cushion impact. A remarkable structural solution!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do You Do With a Tail Like This?"</em> by Steve Jenkins (features many food-getting structures!)</li>
+      <li>🌿 <strong>Generalist vs. Specialist:</strong> Compare what a raccoon can eat vs. what a koala can eat (only specific eucalyptus leaves). Which would survive better if their environment changed? Discuss the tradeoffs.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>The woodpecker discussion:</strong> The overspecialization concept is sophisticated but accessible. The core idea for Grade 1: "Being really good at one thing means you depend on that one thing." You can connect it to human specialization too — a surgeon is very specialized; a general doctor sees many things. What are the tradeoffs?</li>
+      <li><strong>Elephant trunk science:</strong> An elephant's trunk has about 40,000 muscles (humans have about 600 total). It can pick up a log weighing 700 lbs or pick a single blade of grass. It can suck up 2 gallons of water and squirt it into the mouth — or use it as a snorkel when swimming. It's one of the most versatile body parts in the animal kingdom.</li>
+      <li><strong>Anteater tongue detail:</strong> Anteaters have no teeth at all. They swallow small stones along with their insect prey — the stones grind up the insects in their stomach. The tongue itself produces so much saliva it runs down the snout in streams.</li>
+      <li><strong>Duck lamellae:</strong> The comb-like lamellae along a duck's bill are analogous to baleen whale plates — both are filter-feeding structures at very different scales. This is a beautiful example of convergent evolution (different animals evolving similar solutions).</li>
+      <li><strong>Kitchen beak challenge tip:</strong> This works wonderfully with: tweezers = eagle/heron (gripping fish), spoon = duck (scooping), straw or long toothpick = anteater (probing), clothespin = parrot (cracking seeds). Use rice, small marshmallows, dried beans, and a bowl of water as your "food sources."</li>
+      <li><strong>Giraffe toxin tolerance:</strong> Acacia leaves contain tannins that are unpleasant or toxic to most herbivores. Giraffes have evolved tolerance to these toxins — another example of co-evolution between animal and food source.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-header">🦅 Student Worksheet — Structures for Getting Food</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Matching: Animal Structure to Its Food</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line from each animal structure to what it helps the animal eat!</p>
+
+    <div class="matching-section">
+      <div class="matching-col">
+        <div class="match-item"><span class="emoji">🦅</span><span class="label">Eagle's talons and hooked beak</span></div>
+        <div class="match-item"><span class="emoji">🐘</span><span class="label">Elephant's trunk</span></div>
+        <div class="match-item"><span class="emoji">🐜</span><span class="label">Anteater's long sticky tongue</span></div>
+        <div class="match-item"><span class="emoji">🦆</span><span class="label">Duck's flat bill with comb edges</span></div>
+        <div class="match-item"><span class="emoji">🦒</span><span class="label">Giraffe's long neck and lips</span></div>
+        <div class="match-item"><span class="emoji">🐦</span><span class="label">Woodpecker's chisel beak</span></div>
+      </div>
+      <div class="matching-col" style="padding-top: 8px;">
+        <div class="match-problem"><span class="label">Drill into tree bark to find insects</span></div>
+        <div class="match-problem"><span class="label">Reach inside termite mounds</span></div>
+        <div class="match-problem"><span class="label">Catch and tear apart meat</span></div>
+        <div class="match-problem"><span class="label">Strip leaves from tall treetops</span></div>
+        <div class="match-problem"><span class="label">Reach high branches and suck up water</span></div>
+        <div class="match-problem"><span class="label">Filter tiny organisms from water</span></div>
+      </div>
+    </div>
+
+    <h3>Part 2 — Draw an Animal Eating!</h3>
+    <p style="font-size:10pt; color:#555;">Pick one animal from above. Draw it using its special body part to get its food. Label the body part and the food!</p>
+
+    <p style="font-size:10pt;"><strong>I am drawing:</strong> ___________________________</p>
+
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your animal eating here...</div>
+      <div style="height: 170px;"></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;">
+        <div>
+          <div style="font-size:9pt; color:#777;">The special body part is:</div>
+          <div class="draw-prompt-line"></div>
+        </div>
+        <div>
+          <div style="font-size:9pt; color:#777;">It helps the animal get:</div>
+          <div class="draw-prompt-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Part 3 — Think About It!</h3>
+    <div class="fill-blank" style="font-size:11pt;">
+      What would happen if a woodpecker's beak broke? Why?<br><br>
+      <span class="blank-line" style="min-width:90%;"></span><br><br>
+      <span class="blank-line" style="min-width:90%;"></span>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1 — Matching Answers</h3>
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>🦅 Structure → Food Function</h3>
+          <ul>
+            <li>🦅 Eagle talons + beak → <strong>Catch and tear apart meat</strong></li>
+            <li>🐘 Elephant trunk → <strong>Reach high branches and suck up water</strong></li>
+            <li>🐜 Anteater tongue → <strong>Reach inside termite mounds</strong></li>
+            <li>🦆 Duck flat bill → <strong>Filter tiny organisms from water</strong></li>
+            <li>🦒 Giraffe neck + lips → <strong>Strip leaves from tall treetops</strong></li>
+            <li>🐦 Woodpecker chisel beak → <strong>Drill into tree bark to find insects</strong></li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>💡 Part 3 — Think About It!</h3>
+          <ul>
+            <li>The woodpecker would likely starve</li>
+            <li>Its entire feeding method depends on its beak — no beak means no way to reach its food</li>
+            <li>Accept: "it couldn't get into trees to eat" or "its food would be gone"</li>
+            <li>Bonus: student connects this to overspecialization risk</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">Part 2 — Drawing Challenge — What to Look For</h3>
+      <ul>
+        <li>Drawing clearly shows the animal's specialized structure being used</li>
+        <li>Food source is depicted or described</li>
+        <li>Labels identify the body part and the food</li>
+        <li>Student can verbally explain how the structure helps</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student correctly matches all 6 animal structures to their food functions</li>
+        <li>Student understands: each structure is suited to a specific food source</li>
+        <li>Student can explain the woodpecker answer: specialized tool = dependent on specific food</li>
+        <li>Bonus: student can explain what "overspecialization" means and give an example (panda)</li>
+      </ul>
+
+      <div class="tip-box" style="margin-top: 14px;">
+        💡 <strong>Vocabulary bonus:</strong> The word <em>prehensile</em> means able to grasp or hold. Giraffes have prehensile lips and tongue. Monkeys have prehensile tails. Elephants have a prehensile trunk. See if your student can think of other prehensile body parts! (Your own hands are prehensile — you can wrap your fingers around objects.)
+      </div>
+    </div>
+  </div>
+
+
+<script
+  src="http://192.168.5.204:3334/feedback-layer.js"
+  data-api-url="http://192.168.5.204:3334"
+  data-content-selector="body"
+  data-document-uri="doc_z7x0HxwYbMc"
+></script>
+</body>
+</html>

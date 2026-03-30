@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stars — Suns Very Far Away | Grade 1 Earth Science Unit 1, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #e65100; }
+    .extension-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .star-chart {
+      background: #1a1a2e;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 16px 0;
+      text-align: center;
+      position: relative;
+    }
+    .star-chart-title {
+      color: #ffcc80;
+      font-size: 11pt;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .big-dipper {
+      font-size: 10pt;
+      color: #fff;
+      line-height: 2.2;
+      font-family: monospace;
+      white-space: pre;
+      display: inline-block;
+      text-align: left;
+    }
+    .star-dot { color: #ffe082; }
+    .draw-box {
+      border: 2px solid #ffcc80;
+      background: white;
+      border-radius: 8px;
+      min-height: 120px;
+      margin: 6px 0;
+      padding: 6px;
+    }
+    .experiment-box {
+      background: #fff3e0;
+      border: 2px solid #ff8f00;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .experiment-box h3 { color: #bf360c; border-color: #ff8f00; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .experiment-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_QZRU4ekQbxI">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>⭐ Stars — Suns Very Far Away</h1>
+  <p class="subtitle">Earth Science — Sun, Moon &amp; Stars | Unit 1, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Sun, Moon &amp; Stars</span>
+    <span>🏠 <strong>Materials:</strong> Household only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌟 ✨ ⭐ 🌟 ✨</div>
+    <div class="caption">Every star you see at night is a sun — just unimaginably far away</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>1-ESS1-1</strong> — Use observations of the sun, moon, and stars to describe patterns that can be predicted.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Explain</em> why stars are only visible at night (and why the sun makes them invisible during the day)</li>
+    <li><em>Describe</em> observable patterns of stars in the sky, including recognizable groupings</li>
+    <li><em>Identify</em> the Big Dipper as a reliable star pattern (asterism) visible in the night sky</li>
+  </ul>
+
+  <h2>🔬 The Big Science Idea</h2>
+  <p>Here's a surprising fact: stars are shining in the sky <em>right now</em> — even during the day! We just can't see them because our sun is so bright it outshines everything else. When the sun sets and the sky darkens, the stars become visible again — it's like turning off a bright light in a room and suddenly being able to see the stars painted on the ceiling.</p>
+  <p>Every single star you see is a sun — some smaller and dimmer than ours, many far larger and brighter. They only look tiny and faint because they are <em>unimaginably far away</em>. The closest star besides our sun (Proxima Centauri) is so far that traveling to it at the speed of an airplane would take about 4 million years.</p>
+  <p>Even though stars seem scattered randomly, some form recognizable patterns called <em>constellations</em> and <em>asterisms</em>. The Big Dipper is one of the most reliable and easiest to find — like a ladle or a dipper scoop shape in the northern sky.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> star, constellation, asterism, Big Dipper, light-year, visible, atmosphere, night sky
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You'll Need</h3>
+    <ul>
+      <li>A flashlight</li>
+      <li>A bright room (normal room lighting)</li>
+      <li>A dark room or closet</li>
+      <li>This lesson's Big Dipper star chart (Student Worksheet)</li>
+      <li>Crayons or pencil</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;"><em>For bonus nighttime activity: a clear night, your yard or a window, and the Big Dipper star chart to find the real thing!</em></p>
+  </div>
+
+  <h2>🔬 The Flashlight Experiment — Why Can't We See Stars During the Day?</h2>
+
+  <div class="experiment-box">
+    <h3>🔦 What You Need</h3>
+    <p>A flashlight and two different rooms: one bright, one dark.</p>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — The Bright Room Test</strong><br>
+    Turn on the flashlight in a normally lit room (lights on, sunshine through windows). Point it at the wall. Can you see its beam? Can you clearly see its light on the wall? Ask: <em>"Is the flashlight on?"</em> Yes, but it's hard to notice because the room is already bright.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — The Dark Room Test</strong><br>
+    Move to a dark room — close the curtains, turn off the lights. (A closet works great!) Turn on the same flashlight and point it at the wall. Wow — now it's very easy to see! Ask: <em>"Did the flashlight get brighter?"</em> No! The flashlight is the same. The difference is the darkness around it.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Connect It to Stars</strong><br>
+    Explain: Stars are like that flashlight. They're always shining. But during the day, our sun is so incredibly bright that it lights up the whole sky — just like the bright room made the flashlight hard to see. At night, the sun is on the other side of Earth, so the sky gets dark — just like the dark room — and suddenly all those flashlights (stars) become visible!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Find the Big Dipper (Nighttime Activity)</strong><br>
+    On a clear night, go outside after dark and look north. Find the Big Dipper — seven bright stars that form the shape of a ladle or dipper. The "cup" part is four stars in a rectangle; the "handle" is three stars in a curving line. Use the star chart in the worksheet to help!
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Finding the Big Dipper:</strong> It's always in the northern part of the sky. In spring evenings, the cup is right-side up. In fall evenings, the cup may appear upside-down. You can always find it — it circles around the North Star (Polaris) and never sets below the horizon in most of the US and Europe.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <p><strong>🗣️ Talk about these together:</strong></p>
+    <ul>
+      <li>Why couldn't you see the flashlight as well in the bright room?</li>
+      <li>If you were on the moon, would the sky be black even during the "day"? (Yes! The moon has no atmosphere to scatter sunlight, so the sky is black. Stars are there to see — though astronauts' eyes were adapted to the bright surface, making faint stars hard to notice in person.)</li>
+      <li>Why do stars twinkle? (Hint: Earth's atmosphere makes starlight shimmer — like looking at a penny through a stream of water.)</li>
+      <li>Can you think of any other reason why stars might be harder to see? (Light pollution from cities!)</li>
+    </ul>
+
+    <p><strong>🌟 Big Question: "Stars look tiny from Earth but the sun looks huge. Is the sun special?"</strong></p>
+    <p class="discussion-hint">The sun is actually a pretty average star — not especially big or bright by stellar standards. It looks huge and bright only because it's incomparably closer: about 93 million miles away. The next nearest star (Proxima Centauri) is about 4.2 light-years away — so far that its light takes 4.2 years to reach us. If the sun were the size of a basketball, the next nearest star would be about 5,000 miles away.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌃 <strong>Dark Sky Adventure:</strong> Drive away from city lights to see many more stars. Areas far from cities can show thousands of stars — and even the Milky Way!</li>
+      <li>📱 <strong>Star App:</strong> Free apps like "Star Walk Kids" or "SkyView Lite" let you point your phone at the sky and identify stars and constellations.</li>
+      <li>🌐 <strong>Print a Star Chart:</strong> Visit <em>stellarium.org</em> and print a free star map for your location and current date.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"Zoo in the Sky"</em> by Jacqueline Mitton, or <em>"Astrophysics for Young People in a Hurry"</em> by Neil deGrasse Tyson (simplified for adults to read aloud)</li>
+      <li>🎯 <strong>Constellation Stories:</strong> Every culture has stories for star patterns. Look up the Greek myth for Orion or the Native American stories for the Big Dipper.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>The flashlight demo is the heart of this lesson:</strong> The "bright room vs. dark room" observation is memorable and directly maps to the concept. Let kids do it themselves — don't just demonstrate it for them.</li>
+      <li><strong>Stars are always there:</strong> Emphasize this gently — it's a profound idea. The stars you see at night are the <em>same</em> stars that exist during the day. We just can't see them. This can spark genuine wonder.</li>
+      <li><strong>Big Dipper vs. constellation:</strong> Technically the Big Dipper is an <em>asterism</em> (a recognizable pattern of stars), not a true constellation. It's part of the constellation Ursa Major. For Grade 1, "star pattern" or "star shape" is perfectly fine.</li>
+      <li><strong>The North Star:</strong> If kids find the Big Dipper, show them how the two stars at the outer edge of the cup point to Polaris (the North Star). This is a real navigation trick that sailors used for centuries.</li>
+      <li><strong>Light pollution discussion:</strong> Kids in cities may have never seen a truly dark sky. This is a meaningful discussion — artificial light affects both humans and wildlife.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>⭐ Student Worksheet — Stars &amp; the Big Dipper</h1>
+    <p class="subtitle">Unit 1, Lesson 3 — Stars</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🔦 The Flashlight Experiment</h3>
+    <p>Fill in your observations from the flashlight test!</p>
+
+    <table style="width:100%; border-collapse:collapse; margin:12px 0;">
+      <tr>
+        <th style="background:#e65100; color:white; padding:8px 12px; border:2px solid #bf360c; text-align:left;">Test</th>
+        <th style="background:#e65100; color:white; padding:8px 12px; border:2px solid #bf360c; text-align:left;">Could you see the flashlight well?</th>
+        <th style="background:#e65100; color:white; padding:8px 12px; border:2px solid #bf360c; text-align:left;">Why?</th>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; background:#fff8e1;"><strong>Bright Room</strong></td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; height:50px;"></td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px;"></td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; background:#fff8e1;"><strong>Dark Room</strong></td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; height:50px;"></td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px;"></td>
+      </tr>
+    </table>
+
+    <h3>⭐ The Big Dipper Star Chart</h3>
+    <p>The Big Dipper is made of 7 stars. It looks like a giant soup ladle! Connect the dots below to make the Big Dipper shape.</p>
+
+    <div style="background:#1a1a2e; border-radius:12px; padding:30px; margin:12px 0; text-align:center;">
+      <p style="color:#ffcc80; font-size:10pt; font-weight:bold; margin-bottom:20px;">🌌 Northern Night Sky — Find the Big Dipper!</p>
+      <!-- Big Dipper dot-to-dot representation using positioned spans -->
+      <div style="position:relative; width:340px; height:200px; margin:0 auto;">
+        <!-- Handle stars -->
+        <div style="position:absolute; left:260px; top:160px; color:#ffe082; font-size:18pt;">★</div>
+        <div style="position:absolute; left:220px; top:130px; color:#ffe082; font-size:18pt;">★</div>
+        <div style="position:absolute; left:185px; top:100px; color:#ffe082; font-size:18pt;">★</div>
+        <!-- Cup stars -->
+        <div style="position:absolute; left:130px; top:80px; color:#ffe082; font-size:18pt;">★</div>
+        <div style="position:absolute; left:75px; top:80px; color:#ffe082; font-size:18pt;">★</div>
+        <div style="position:absolute; left:75px; top:130px; color:#ffe082; font-size:18pt;">★</div>
+        <div style="position:absolute; left:130px; top:130px; color:#ffe082; font-size:18pt;">★</div>
+      </div>
+      <p style="color:#aaa; font-size:9pt; margin-top:16px; font-style:italic;">Connect the 7 stars with lines to make the Big Dipper shape!<br>Hint: 4 stars make the cup, 3 stars curve out to make the handle.</p>
+    </div>
+
+    <h3>✏️ Answer These Questions</h3>
+    <ol>
+      <li style="margin-bottom:18px;">Are stars visible during the day? (circle) &nbsp; <strong>YES</strong> &nbsp; / &nbsp; <strong>NO</strong> &nbsp; — Why? ______________________</li>
+      <li style="margin-bottom:18px;">Why did the flashlight look brighter in the dark room? ______________________</li>
+      <li style="margin-bottom:18px;">The flashlight stands for the ______________ in our experiment. The bright room stands for ______________. The dark room stands for ______________.</li>
+      <li style="margin-bottom:18px;">True or False: The sun is a very special, one-of-a-kind kind of star. (circle) &nbsp; <strong>TRUE</strong> &nbsp; / &nbsp; <strong>FALSE</strong></li>
+    </ol>
+
+    <h3>🌃 Nighttime Challenge</h3>
+    <p>Go outside on a clear night and try to find the Big Dipper! Check the boxes below:</p>
+    <ul style="list-style:none; padding-left:0;">
+      <li>☐ I went outside and looked at the night sky</li>
+      <li>☐ I found the Big Dipper!</li>
+      <li>☐ I counted all 7 stars in the Big Dipper</li>
+      <li>☐ I found the North Star (Polaris) by following the two outer cup stars</li>
+    </ul>
+    <p>Draw what the night sky looked like: <div class="draw-box" style="min-height:100px;"></div></p>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🔦 Flashlight Experiment Answers</h3>
+      <ul>
+        <li><strong>Bright Room:</strong> Could <em>not</em> see the flashlight well. Because the room was already bright, so the flashlight light blended in with the background light.</li>
+        <li><strong>Dark Room:</strong> <em>Could</em> see the flashlight very well. Because there was no competing light, so the flashlight's light stood out clearly.</li>
+      </ul>
+
+      <h3>✏️ Worksheet Answers</h3>
+      <ol>
+        <li><strong>No</strong>, stars are not visible during the day. The sun's light is so bright that it overwhelms the light from distant stars. The stars are still there — we just can't see them.</li>
+        <li>The flashlight looked brighter in the dark room because there was no other light competing with it. The flashlight itself didn't change — only the environment around it changed.</li>
+        <li>The flashlight stands for a <em>star</em>. The bright room stands for <em>daytime (with the sun)</em>. The dark room stands for <em>nighttime</em>.</li>
+        <li><strong>False.</strong> The sun is actually a fairly average star. It only seems special because it's much, much closer to us than any other star.</li>
+      </ol>
+
+      <h3>🌠 Big Dipper Notes</h3>
+      <p>The Big Dipper (part of Ursa Major) is one of the most recognizable star patterns in the northern hemisphere. It's visible year-round from most of the US. The two stars on the outer edge of the "cup" (Dubhe and Merak) point directly to Polaris, the North Star — a navigation trick worth teaching!</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can explain why stars aren't visible during the day (the sun's light is too bright, not because the stars turn off)</li>
+        <li>Child understands that stars are always present — just hidden by sunlight</li>
+        <li>Child can identify or describe the Big Dipper's ladle shape</li>
+        <li>Child understands that the sun is just a star that looks bigger because it's much closer</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

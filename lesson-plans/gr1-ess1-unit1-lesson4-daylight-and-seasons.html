@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Daylight? Seasons and the Sun | Grade 1 Earth Science Unit 1, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #e65100; }
+    .safety-box {
+      background: #fff3e0;
+      border: 3px solid #bf360c;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+    }
+    .safety-box h3 { color: #bf360c; border-color: #bf360c; font-size: 13pt; }
+    .extension-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    .data-table th {
+      background: #e65100;
+      color: white;
+      padding: 8px 12px;
+      border: 2px solid #bf360c;
+      font-size: 10pt;
+    }
+    .data-table td {
+      border: 2px solid #ffcc80;
+      padding: 8px 12px;
+      height: 45px;
+      vertical-align: middle;
+    }
+    .data-table tr:nth-child(even) td { background: #fff8e1; }
+    .bar-graph-area {
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 12px 0;
+      background: white;
+    }
+    .graph-grid {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+      height: 200px;
+      border-left: 3px solid #333;
+      border-bottom: 3px solid #333;
+      padding: 10px 10px 0 10px;
+      margin-top: 10px;
+    }
+    .graph-bar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+    }
+    .graph-bar {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+    }
+    .graph-label { font-size: 9pt; text-align: center; font-weight: bold; color: #555; }
+    .season-bar-winter { background: #90caf9; height: 60px; }
+    .season-bar-spring { background: #a5d6a7; height: 120px; }
+    .season-bar-summer { background: #ffe082; height: 180px; }
+    .season-bar-fall { background: #ffb74d; height: 110px; }
+    .draw-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin: 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .safety-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_gQB3N8kCi3w">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>📅 How Much Daylight? Seasons and the Sun</h1>
+  <p class="subtitle">Earth Science — Sun, Moon &amp; Stars | Unit 1, Lesson 4 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Sun, Moon &amp; Stars</span>
+    <span>🏠 <strong>Materials:</strong> Household only</span>
+  </div>
+
+  <div class="safety-box">
+    <h3>⚠️ Sun Safety Reminder</h3>
+    <p>This lesson involves observing daylight patterns — not looking at the sun. As always, <strong>never look directly at the sun.</strong> Daylight observations mean noticing when it's light or dark outside — keep eyes away from the sun itself.</p>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">❄️ 🌱 ☀️ 🍂</div>
+    <div class="caption">Winter, Spring, Summer, Fall — daylight hours change dramatically across the seasons</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>1-ESS1-2</strong> — Make observations at different times of year to relate the amount of daylight to the time of year.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Compare</em> the hours of daylight across the four seasons</li>
+    <li><em>Explain</em> the pattern: more daylight in summer, less in winter</li>
+    <li><em>Identify</em> Earth's tilt (not distance from the sun) as the cause of seasons</li>
+    <li><em>Create</em> a bar graph showing seasonal daylight changes</li>
+  </ul>
+
+  <h2>🔬 The Big Science Idea</h2>
+  <p>Have you ever noticed that summer days last longer and winter days seem short? This is real! The number of daylight hours changes throughout the year in a predictable pattern.</p>
+  <p>In summer, the sun rises early, climbs high in the sky, and sets late — giving us more hours of light. In winter, the sun rises later, stays lower in the sky, and sets early — giving us fewer hours of light.</p>
+  <p>Here's the surprising part: this has <em>nothing</em> to do with how close Earth is to the sun! Earth is actually slightly <em>closer</em> to the sun in January (winter in the Northern Hemisphere) than in July (summer). The cause of seasons is Earth's <em>tilt</em>.</p>
+  <p>Earth spins at a tilt of about 23.5 degrees. In summer, our hemisphere is tilted <em>toward</em> the sun — days are longer and sunlight hits us more directly (more energy, more warmth). In winter, our hemisphere is tilted <em>away</em> — days are shorter and sunlight hits us at a glancing angle (less energy, less warmth).</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> season, daylight, sunrise, sunset, tilt, hemisphere, pattern, summer solstice, winter solstice, equinox
+  </div>
+
+  <div class="tip-box">
+    ☀️ <strong>Sample Daylight Hours (Denver, CO — approximate):</strong><br>
+    Winter solstice (Dec 21): ~9 hours 21 minutes of daylight<br>
+    Spring equinox (Mar 20): ~12 hours 10 minutes of daylight<br>
+    Summer solstice (Jun 21): ~14 hours 58 minutes of daylight<br>
+    Fall equinox (Sep 22): ~12 hours 10 minutes of daylight<br>
+    <em>Look up your location's actual times at <strong>timeanddate.com/sun</strong></em>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You'll Need</h3>
+    <ul>
+      <li>Paper and crayons</li>
+      <li>Ruler (to draw the bar graph)</li>
+      <li>Sunrise/sunset data — parent looks up for your location at <em>timeanddate.com/sun</em> or a weather app</li>
+      <li>This worksheet (printed)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 The Daylight Data Activity</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Gather the Data</strong><br>
+    Parent: Before this lesson, look up the sunrise and sunset times for your location for four dates:
+    <ul>
+      <li>Around <strong>December 21</strong> (winter solstice — shortest day)</li>
+      <li>Around <strong>March 20</strong> (spring equinox — equal day/night)</li>
+      <li>Around <strong>June 21</strong> (summer solstice — longest day)</li>
+      <li>Around <strong>September 22</strong> (fall equinox — equal day/night)</li>
+    </ul>
+    Write the sunrise and sunset times in the Data Table on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Calculate Daylight Hours</strong><br>
+    For each date, calculate: <em>Sunset time minus Sunrise time = Hours of daylight</em>. For Grade 1, the parent can do this calculation while the child watches and explains. Or use the sample data provided in the tip box above.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Create the Bar Graph</strong><br>
+    On the Student Worksheet, color in the bar graph using the hours of daylight for each season. Use different colors for each bar! Winter bar should be shortest, summer should be tallest.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Read the Pattern</strong><br>
+    Look at the completed graph together. Ask: <em>"What pattern do you see? Which season has the most daylight? Which has the least? What do you predict happens between winter and summer?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Connect to Real Life</strong><br>
+    Discuss: Have you noticed that it gets dark earlier in winter? That summer evenings last forever? Now you know why! Earth's tilt causes this seasonal pattern. And because Earth repeats the same tilt cycle every year, this pattern repeats predictably — every winter will be shorter days, every summer will be longer days.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <p><strong>🗣️ Talk about these together:</strong></p>
+    <ul>
+      <li>Which season did you enjoy having more daylight in? Why?</li>
+      <li>How would your day be different if the sun set at 4pm vs. 9pm?</li>
+      <li>People often say "in summer we're closer to the sun." Do you think that's true? (Actually, we're closer to the sun in winter!)</li>
+      <li>Can you think of animals that might behave differently based on how much daylight there is? (Bears hibernating, birds migrating!)</li>
+    </ul>
+
+    <p><strong>🌟 Big Question: "In Alaska in summer, the sun doesn't set for weeks. How can people sleep?"</strong></p>
+    <p class="discussion-hint">This is called the Midnight Sun and it happens above the Arctic Circle. The tilt is so extreme that the sun stays above the horizon 24 hours a day for weeks. People use blackout curtains, eye masks, and adjust their sleep schedules. In winter, the opposite happens — the sun doesn't rise for weeks (Polar Night). Residents report it affects mood and energy levels significantly, a condition called Seasonal Affective Disorder (SAD).</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌍 <strong>Flip the Seasons:</strong> When it's summer in the Northern Hemisphere, it's winter in Australia (Southern Hemisphere)! The tilt that points us toward the sun points them away. Find a pen pal in Australia and compare seasons.</li>
+      <li>📊 <strong>Monthly Data:</strong> Look up sunrise/sunset for every month of the year and make a larger graph showing all 12 months. The curve you get is called a sinusoidal curve!</li>
+      <li>🌱 <strong>Plant Connection:</strong> Many plants need a certain number of daylight hours to flower. Farmers and gardeners use daylight patterns to plan planting schedules.</li>
+      <li>🦅 <strong>Migration:</strong> Many birds migrate based on daylight length (photoperiod). As days shorten, birds fly south. As days lengthen, they return north.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Seasons ≠ distance from sun:</strong> This is one of the most common misconceptions in science. Earth is slightly closer to the sun in January. The seasons are caused by tilt, not distance. This is worth spending extra time on.</li>
+      <li><strong>The "solstice" words:</strong> "Solstice" means "sun stands still" in Latin — at the solstices, the sun's position at noon stops getting higher or lower for a few days. "Equinox" means "equal night" — day and night are roughly equal in length.</li>
+      <li><strong>Hemisphere specifics:</strong> This lesson describes the Northern Hemisphere (where most US families live). If you're in the Southern Hemisphere, the seasons are reversed — December is summer, June is winter.</li>
+      <li><strong>Grade 1 depth:</strong> For this age, the key takeaways are: (1) daylight hours change through the year, (2) summer has more, winter has less, (3) this creates a predictable repeating pattern. The mechanism (tilt) is a bonus concept.</li>
+      <li><strong>The bar graph:</strong> Grade 1 students may need help drawing the bars accurately. It's fine for the parent to draw the axes and label them while the child colors in the bars and observes the pattern.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>📅 Student Worksheet — Daylight Bar Graph</h1>
+    <p class="subtitle">Unit 1, Lesson 4 — Daylight and Seasons</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>📊 Daylight Data Table</h3>
+    <p>Fill in the sunrise, sunset, and total daylight hours for each season. Your parent will help you find the data!</p>
+
+    <table class="data-table">
+      <tr>
+        <th>Season</th>
+        <th>Date Used</th>
+        <th>Sunrise Time</th>
+        <th>Sunset Time</th>
+        <th>Total Hours of Daylight</th>
+      </tr>
+      <tr>
+        <td><strong>❄️ Winter</strong></td>
+        <td>Dec 21</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>🌱 Spring</strong></td>
+        <td>Mar 20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>☀️ Summer</strong></td>
+        <td>Jun 21</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>🍂 Fall</strong></td>
+        <td>Sep 22</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>📊 Color the Bar Graph</h3>
+    <p>Color each bar up to the number of daylight hours for that season. Use a different color for each season! The Y-axis goes from 0 to 16 hours.</p>
+
+    <div class="bar-graph-area">
+      <!-- Y-axis labels -->
+      <div style="display:flex; align-items:flex-end; gap:0;">
+        <div style="display:flex; flex-direction:column-reverse; justify-content:space-between; height:200px; margin-right:8px; text-align:right; font-size:9pt; color:#555;">
+          <span>0h</span>
+          <span>4h</span>
+          <span>8h</span>
+          <span>12h</span>
+          <span>16h</span>
+        </div>
+        <div style="flex:1; height:200px; border-left:3px solid #333; border-bottom:3px solid #333; display:flex; align-items:flex-end; padding:0 20px; gap:20px;">
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;">
+            <div style="flex:1; width:100%; border:2px dashed #90caf9; border-radius:4px 4px 0 0; background:#e3f2fd;"></div>
+            <span style="font-size:9pt; font-weight:bold; color:#1565c0;">❄️ Winter</span>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;">
+            <div style="flex:1; width:100%; border:2px dashed #a5d6a7; border-radius:4px 4px 0 0; background:#e8f5e9;"></div>
+            <span style="font-size:9pt; font-weight:bold; color:#2e7d32;">🌱 Spring</span>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;">
+            <div style="flex:1; width:100%; border:2px dashed #ffe082; border-radius:4px 4px 0 0; background:#fff8e1;"></div>
+            <span style="font-size:9pt; font-weight:bold; color:#f57f17;">☀️ Summer</span>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;">
+            <div style="flex:1; width:100%; border:2px dashed #ffb74d; border-radius:4px 4px 0 0; background:#fff3e0;"></div>
+            <span style="font-size:9pt; font-weight:bold; color:#e65100;">🍂 Fall</span>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center; font-size:9pt; color:#888; margin-top:6px; font-style:italic;">Color each bar from the bottom up to show the hours of daylight for that season!</p>
+    </div>
+
+    <h3>✏️ Answer These Questions</h3>
+    <ol>
+      <li style="margin-bottom:18px;">Which season has the <em>most</em> hours of daylight? ______________________</li>
+      <li style="margin-bottom:18px;">Which season has the <em>fewest</em> hours of daylight? ______________________</li>
+      <li style="margin-bottom:18px;">Do the hours of daylight follow a pattern? (circle) &nbsp; <strong>YES</strong> &nbsp; / &nbsp; <strong>NO</strong></li>
+      <li style="margin-bottom:18px;">What causes the seasons? (circle the correct answer):
+        <ul style="list-style:none; margin-top:8px;">
+          <li>☐ Earth gets closer to the sun in summer</li>
+          <li>☐ Earth tilts toward or away from the sun</li>
+          <li>☐ The sun gets bigger in summer</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>📊 Sample Daylight Data (Denver, CO)</h3>
+      <ul>
+        <li>Winter (Dec 21): Sunrise ~7:17am, Sunset ~4:38pm → <strong>~9 hours 21 min</strong></li>
+        <li>Spring (Mar 20): Sunrise ~6:21am, Sunset ~6:31pm → <strong>~12 hours 10 min</strong></li>
+        <li>Summer (Jun 21): Sunrise ~5:31am, Sunset ~8:29pm → <strong>~14 hours 58 min</strong></li>
+        <li>Fall (Sep 22): Sunrise ~6:38am, Sunset ~6:48pm → <strong>~12 hours 10 min</strong></li>
+      </ul>
+      <p><em>Look up your specific location at timeanddate.com/sun for accurate local times.</em></p>
+
+      <h3>✏️ Worksheet Answers</h3>
+      <ol>
+        <li><strong>Summer</strong> has the most hours of daylight (~15 hours at the summer solstice in Denver).</li>
+        <li><strong>Winter</strong> has the fewest hours of daylight (~9 hours at the winter solstice in Denver).</li>
+        <li><strong>Yes</strong> — the hours follow a predictable pattern that repeats every year.</li>
+        <li>The correct answer is: <em>Earth tilts toward or away from the sun.</em> Earth's tilt causes seasons — not its distance from the sun.</li>
+      </ol>
+
+      <h3>📈 What the Graph Should Show</h3>
+      <p>The bar graph should show: Winter (shortest bar) → Spring (medium-tall) → Summer (tallest bar) → Fall (medium-tall, similar to Spring). The pattern looks like a hill: it rises from winter to summer, then falls again toward winter.</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can read the bar graph and identify which season has more or less daylight</li>
+        <li>Child can describe the seasonal pattern (more daylight in summer, less in winter)</li>
+        <li>Child understands this pattern repeats every year (predictable)</li>
+        <li>Bonus: Child can explain that Earth's tilt causes seasons, not closeness to the sun</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Animals Protect Themselves — Life Science Unit 1, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Defense cards */
+    .defense-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 15px 0;
+    }
+    .defense-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 14px 12px;
+    }
+    .defense-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .defense-card .defense-name { font-weight: bold; color: #1b5e20; font-size: 11pt; }
+    .defense-card .animals { color: #555; font-size: 10pt; margin-top: 4px; font-style: italic; }
+    .defense-card .how-it-works { color: #333; font-size: 10pt; margin-top: 6px; }
+    .defense-card-wide {
+      grid-column: 1 / -1;
+      background: #fff3e0;
+      border: 2px solid #ffb74d;
+      border-radius: 10px;
+      padding: 14px 12px;
+    }
+    /* Design challenge */
+    .design-box {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+    .design-box h3 { color: #1b5e20; border-color: #a5d6a7; }
+    /* Draw box */
+    .draw-box {
+      border: 3px dashed #2e7d32;
+      border-radius: 10px;
+      min-height: 200px;
+      margin: 12px 0;
+      padding: 10px;
+      position: relative;
+    }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .draw-prompt-line {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin-top: 6px;
+      font-size: 9pt;
+      color: #aaa;
+    }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 200px;
+      margin: 0 4px;
+    }
+    /* Worksheet */
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .ak-box h3 { color: #1b5e20; border-color: #a5d6a7; text-align: center; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 4px 0; font-size: 10pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .design-box, .defense-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_vU6OmUNit_c">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🛡️ How Animals Protect Themselves 🦔</h1>
+  <p class="subtitle">Life Science Unit 1, Lesson 3</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Animal Structures</span>
+    <span>📖 <strong>Lesson:</strong> 3 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐢🦔🦎🐸🦡</div>
+    <div class="caption">Every animal has its own way of staying safe — and nature has invented some incredible solutions!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>1-LS1-1</strong> — Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>compare</strong> at least four different structural defenses animals use and <strong>design</strong> a protection structure inspired by one.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>In nature, being eaten is a very real problem. Animals have evolved amazing body structures — called <strong>structural defenses</strong> — to help them avoid predators. These structures are built right into the animal's body and don't require any learning or planning. Let's explore five clever defense strategies!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> defense, predator, prey, camouflage, armor, aposematism, spine, shell, structure
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>A toy figure (action figure, small animal toy, or even a LEGO minifigure)</li>
+      <li>Craft supplies from around the house: tape, cardboard, foil, cotton balls, bubble wrap, rubber bands, fabric scraps — anything you have</li>
+      <li>Paper and crayons (for the design worksheet)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No toy figure? Just draw on paper — the design challenge works either way!</em></p>
+  </div>
+
+  <h2>🔬 Part 1 — Five Defense Structures (15 min)</h2>
+  <p>Study each defense strategy. For each one, ask: <em>"What is the animal protecting itself from? How does this structure help?"</em></p>
+
+  <div class="defense-cards">
+    <div class="defense-card" style="border-color: #8d6e63;">
+      <span class="emoji">🐢</span>
+      <span class="defense-name">1. Hard Shell</span>
+      <div class="animals">Turtle, snail, hermit crab, clam</div>
+      <div class="how-it-works"><strong>How it works:</strong> A rigid shell covers the animal's soft body. When danger comes, the animal retreats inside — it's like carrying a shield and a house all in one! The shell is made of bone or minerals, making it very hard to bite through.</div>
+    </div>
+    <div class="defense-card" style="border-color: #ef9a9a;">
+      <span class="emoji">🦔</span>
+      <span class="defense-name">2. Spines and Quills</span>
+      <div class="animals">Hedgehog, sea urchin, porcupine</div>
+      <div class="how-it-works"><strong>How it works:</strong> Sharp spines stick out from the body. A predator that tries to bite gets poked — painfully! Porcupine quills even have tiny backwards hooks that make them harder to remove. The animal curls into a ball to protect its soft belly.</div>
+    </div>
+    <div class="defense-card" style="border-color: #a5d6a7;">
+      <span class="emoji">🦎</span>
+      <span class="defense-name">3. Camouflage Coloring</span>
+      <div class="animals">Stick insect, flounder, arctic fox, leaf-tailed gecko</div>
+      <div class="how-it-works"><strong>How it works:</strong> The animal's colors and patterns match its surroundings perfectly. A predator looks right at the animal and doesn't see it! The flounder can even change its pattern to match different seafloors.</div>
+    </div>
+    <div class="defense-card" style="border-color: #ef9a9a;">
+      <span class="emoji">🐸</span>
+      <span class="defense-name">4. Warning Colors</span>
+      <div class="animals">Poison dart frog, monarch butterfly, yellow jacket</div>
+      <div class="how-it-works"><strong>How it works:</strong> Bright, bold colors — red, orange, yellow, black — signal to predators: "I am dangerous, sick, or taste terrible! Don't eat me!" Predators that have learned this lesson leave these animals alone.</div>
+    </div>
+    <div class="defense-card-wide">
+      <span class="emoji">🦡</span>
+      <span class="defense-name">5. Armor Plating</span>
+      <div class="animals">Armadillo, pangolin, beetle</div>
+      <div class="how-it-works"><strong>How it works:</strong> Overlapping plates of hard material (bone for armadillos, keratin — the same as your fingernails — for pangolins) cover the animal's back and sides. The armadillo can curl into a complete ball so no soft parts are exposed. Beetles have a hard outer "shell" made of their exoskeleton called an elytra.</div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Discussion during Part 1:</strong>
+    <ul>
+      <li><em>"Which defense do you think is most effective? Why?"</em></li>
+      <li><em>"Can you think of a predator that would be foiled by each type?"</em></li>
+      <li><em>"If you were a small animal, which defense would you want?"</em></li>
+    </ul>
+  </div>
+
+  <h2>🏗️ Part 2 — Design a Protection Gadget (20 min)</h2>
+
+  <div class="design-box">
+    <h3>🎨 Engineering Challenge: Protect Your Figure!</h3>
+    <p>Pick <em>one</em> defense strategy from above. Design a "protection gadget" for a toy figure (or draw one on paper) inspired by that animal's structure.</p>
+    <p style="margin-top: 10px;"><strong>Your gadget must:</strong></p>
+    <ul>
+      <li>Be inspired by a real animal's structural defense</li>
+      <li>Physically protect the toy figure (or the drawn character) from a pretend threat</li>
+      <li>Be labeled with: what it does, which animal inspired it, and how it works</li>
+    </ul>
+    <p style="margin-top: 10px;"><strong>Ideas to get started:</strong></p>
+    <ul>
+      <li>🐢 <em>Turtle shell:</em> Cut a dome shape from cardboard and attach it to the figure's back</li>
+      <li>🦔 <em>Porcupine quills:</em> Tape toothpicks or craft sticks around the figure so it's poky to grab</li>
+      <li>🦡 <em>Armor plates:</em> Wrap overlapping pieces of foil or cardboard (like scales) around the figure</li>
+      <li>🦎 <em>Camouflage:</em> Decorate the figure with markers or materials to match a specific background (grass, sand, bark)</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step-by-Step Guide for Part 2:</strong>
+    <ol>
+      <li>Read all five defense types together and discuss which is most interesting.</li>
+      <li>Student picks one defense to copy for their toy figure (or drawing).</li>
+      <li>Using available craft materials, build or draw the protection gadget.</li>
+      <li>Label the design: <em>Which animal inspired it? What does the protection do? How does it work?</em></li>
+      <li>Optional: Test it! Gently poke or squeeze the figure and see if the protection works.</li>
+    </ol>
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Big Question:</strong> "Warning colors seem risky — they make you <em>more</em> visible. Why would that ever be a good survival strategy?"
+    <p class="discussion-hint">Suggested answer: Warning colors (called <em>aposematism</em>) only work if the predator has already learned that those colors mean danger. Bright red and black on a monarch butterfly signals that it is poisonous from the milkweed it ate as a caterpillar. A bird that eats one monarch and gets sick will avoid all orange-and-black butterflies forever. So bright colors are actually a very smart strategy — they only require one bad experience to teach the whole predator population to stay away. It works so well that many harmless animals have evolved to copy the warning colors of dangerous ones — a trick called <em>mimicry</em>. The harmless milk snake has the same red-yellow-black bands as the venomous coral snake!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🦎 <strong>Camouflage Game:</strong> Cut small pieces of green, yellow, and brown paper. Place them all on a piece of grass or a patterned fabric. From a few feet away, which ones are hardest to spot? That's camouflage in action!</li>
+      <li>🌈 <strong>Mimicry Research:</strong> Look up the "milk snake vs. coral snake" rhyme: <em>"Red on yellow, kill a fellow. Red on black, friend of Jack."</em> Why would a harmless snake evolve to look like a deadly one?</li>
+      <li>🐟 <strong>Flounder Video:</strong> Search online for a video of a flounder changing color to match the seafloor. It's remarkable — they can match checkerboard patterns!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do You Do When Something Wants to Eat You?"</em> by Steve Jenkins</li>
+      <li>🦡 <strong>Pangolin Connection:</strong> Pangolins are the world's most trafficked mammals — they're hunted for their scales. Their armor, which evolved to protect them from lions and leopards, is no match for human poachers. Discuss: how can a structural defense fail?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>The warning color discussion:</strong> "Aposematism" is a wonderful vocabulary word for curious Grade 1 students, but the concept is what matters. The key insight: warning colors are a population-level strategy, not individual. One individual has to get eaten to "teach" the predator. But the whole species benefits from that lesson spreading through predator behavior. This is sophisticated evolutionary thinking — but first graders can grasp it with the right framing: "One butterfly had to get eaten so all its orange-black butterfly friends would be safe."</li>
+      <li><strong>Mimicry vs. camouflage:</strong> These are easy to confuse. Camouflage = blend in, look like nothing. Warning colors = stand out, look dangerous. Mimicry = look like something else that IS dangerous (when you're actually harmless). All three are structural strategies shaped by evolution.</li>
+      <li><strong>Armor plates science:</strong> Pangolin scales are made of keratin — the same protein as your fingernails and hair. A pangolin rolled into a ball is so strong that lions have been observed batting them around for minutes and giving up. The scales are interlocking and can flex when the animal curls. Remarkable!</li>
+      <li><strong>Craft material ideas:</strong> Bubble wrap = soft armor. Toothpicks or craft sticks = quills. Crinkled foil = armor plates. Green yarn or paper shreds = camouflage. Be creative! The engineering challenge is open-ended by design.</li>
+      <li><strong>Younger siblings:</strong> Can participate in the "which defense would you pick?" discussion and help with the craft activity.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-header">🛡️ Student Worksheet — Animal Defense Structures</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Five Defenses: Fill in the Animal!</h3>
+    <p style="font-size:10pt; color:#555;">Fill in the name of the defense each animal uses!</p>
+    <div class="fill-blank">
+      1. A turtle uses a <span class="blank-line"></span> to protect itself.<br><br>
+      2. A porcupine uses <span class="blank-line"></span> to protect itself.<br><br>
+      3. A stick insect uses <span class="blank-line"></span> to hide from predators.<br><br>
+      4. A poison dart frog uses <span class="blank-line"></span> to warn predators to stay away.<br><br>
+      5. An armadillo uses <span class="blank-line"></span> to protect its soft body.
+    </div>
+
+    <h3>Part 2 — Design Your Protection Gadget</h3>
+    <p style="font-size:10pt; color:#555;">Pick one animal defense from above. Design a protection gadget for your toy figure inspired by that defense. Draw it below and label it!</p>
+
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your protection gadget here...</div>
+      <div style="height: 160px;"></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;">
+        <div>
+          <div style="font-size:9pt; color:#777;">The animal that inspired me:</div>
+          <div class="draw-prompt-line"></div>
+        </div>
+        <div>
+          <div style="font-size:9pt; color:#777;">The defense type (e.g. hard shell, quills):</div>
+          <div class="draw-prompt-line"></div>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <div style="font-size:9pt; color:#777;">How my gadget protects the figure:</div>
+          <div class="draw-prompt-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Part 3 — Think About It!</h3>
+    <div class="fill-blank" style="font-size:11pt;">
+      Why do <em>warning colors</em> work as a defense even though they make the animal <em>more</em> visible?<br><br>
+      <span class="blank-line" style="min-width:90%;"></span><br><br>
+      <span class="blank-line" style="min-width:90%;"></span>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1 — Fill in the Defense</h3>
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>🛡️ Answers</h3>
+          <ul>
+            <li>1. Turtle → <strong>hard shell</strong></li>
+            <li>2. Porcupine → <strong>quills / spines</strong></li>
+            <li>3. Stick insect → <strong>camouflage</strong></li>
+            <li>4. Poison dart frog → <strong>warning colors</strong></li>
+            <li>5. Armadillo → <strong>armor plating</strong></li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>💡 Think About It! Answer</h3>
+          <ul>
+            <li>Warning colors work because predators <em>learn</em> to avoid them after one bad experience</li>
+            <li>The colors advertise danger or bad taste to any predator that has been warned before</li>
+            <li>Accept: "because the predator gets sick if it eats them and remembers not to do it again"</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">Part 2 — Design Challenge — What to Look For</h3>
+      <ul>
+        <li>Student clearly identified one of the five defense strategies as inspiration</li>
+        <li>Drawing shows a physical protection structure (not just decoration)</li>
+        <li>Student can explain in words how the gadget mimics the animal's defense</li>
+        <li>Labels include: animal inspiration, defense type, how it works</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can name all five defense types and give one animal example for each</li>
+        <li>Student's design challenge connects animal structure to protection function</li>
+        <li>Student can explain warning colors: "predators learn to avoid them"</li>
+        <li>Bonus: student can distinguish between camouflage and warning colors</li>
+      </ul>
+
+      <div class="tip-box" style="margin-top: 14px;">
+        💡 <strong>Fun conversation starter:</strong> Ask: "Which defense would work best against a shark? Against a hawk? Against a cat?" Different predators are defeated by different defenses. A camouflaged fish fools a diving bird but might not fool an echolocating dolphin!
+      </div>
+    </div>
+  </div>
+
+
+<script
+  src="http://192.168.5.204:3334/feedback-layer.js"
+  data-api-url="http://192.168.5.204:3334"
+  data-content-selector="body"
+  data-document-uri="doc_vU6OmUNit_c"
+></script>
+</body>
+</html>
