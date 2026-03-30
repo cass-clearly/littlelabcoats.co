@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Science — K-PS3 Unit 2, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #0288d1;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #0d47a1; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .discussion-hint {
+      font-style: italic;
+      color: #0d47a1;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid #0288d1;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .worksheet-box {
+      border: 3px solid #1565c0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #fafafa;
+    }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .shadow-record-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .shadow-card {
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      background: white;
+      min-height: 180px;
+    }
+    .shadow-card .time-label { font-weight: bold; color: #1565c0; font-size: 11pt; margin-bottom: 6px; }
+    .shadow-card .draw-area { height: 100px; border: 1px dashed #aaa; border-radius: 6px; margin: 8px 0; background: #f9f9f9; }
+    .shadow-card .sun-angle { font-size: 9pt; color: #666; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_drQkLB1OtvI">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌑 Shadow Science 🌑</h1>
+  <p class="subtitle">Physical Science — Sunshine &amp; Warmth — Unit 2, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Sunshine &amp; Warmth</span>
+    <span>🔢 <strong>Lesson:</strong> 2 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️ → 🧸 → 🌑</div>
+    <div class="caption">Light travels in straight lines — when something blocks it, a shadow forms!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS3-1</strong> — Make observations to determine the effect of sunlight on Earth's surface (including sunlight direction and warming patterns)
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Shadows form when an object blocks sunlight. But shadows aren't just interesting to look at — <strong>shadow length tells us how directly the sun's rays are hitting Earth!</strong> A short shadow means the sun is high in the sky and rays hit the ground directly. Direct rays mean more concentrated warmth. A long shadow means the sun is at a low angle and rays are spread out — less warming per spot.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Light travels in straight lines. When an object blocks light, it creates a shadow on the other side. The <strong>angle</strong> of the sun changes throughout the day: low in the morning, high at noon, low again in the evening. A high sun creates <strong>short shadows</strong> because the sun's rays hit directly downward — all that energy concentrates on a small area, warming it quickly. A low sun creates <strong>long shadows</strong> because the rays hit at an angle, spreading energy over a much larger area — so each spot gets less warmth. This is why noon is the warmest part of the day, even though the sun has been up for hours!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> shadow, sunlight, angle, direct, spread, concentrate, noon, morning, afternoon
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li><strong>Option A (Outdoor):</strong> A sunny outdoor spot + chalk to trace shadows + a small object to cast the shadow (garden stake, ruler, or block) + tape measure or ruler</li>
+      <li><strong>Option B (Indoor):</strong> A flashlight + a small toy or block + white paper + pencil</li>
+      <li>Student worksheet (included)</li>
+      <li>Pencils and crayons</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — What Makes a Shadow? (5 min)</strong><br>
+    In a room, shine a flashlight at a wall and hold your hand in front of the beam. A shadow appears!<br>
+    Ask: <em>"What made the shadow? Where did the light go? Why doesn't the shadow appear in front of your hand?"</em><br>
+    Key point: Light travels in straight lines and can't bend around objects. The shadow is where light is blocked.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Change the Angle, Change the Shadow (10 min)</strong><br>
+    <strong>Indoor method:</strong> Place a small toy on white paper. Hold a flashlight directly above (straight down) → short shadow. Move flashlight to a low angle (like sunrise) → long shadow! Trace each shadow outline with pencil.<br><br>
+    <strong>Outdoor method:</strong> Observe shadows at morning, noon, and afternoon. At each time, trace the object's shadow with chalk or on paper. Measure the length and record on the worksheet.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Flashlight tip:</strong> For the "noon" position, hold the flashlight as high as possible directly overhead. For "morning/evening," hold it at about a 30-degree angle from the side. The difference in shadow length will be dramatic!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Record Your Shadows (10 min)</strong><br>
+    On the worksheet, students draw the object and its shadow for each sun position. They also circle whether the shadow is short, medium, or long. Discuss together which shadow goes with which time of day.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Connect to Warmth (5 min)</strong><br>
+    Ask: <em>"When the sun is low in the morning, is the shadow long or short? Is it warm outside yet?"</em><br>
+    Then: <em>"When the sun is high at noon, is the shadow long or short? Is it warm outside?"</em><br>
+    Help them connect: short shadow = high sun = more direct rays = warmer!
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ "Why is it warmer at noon than at 8am even though the sun has been up for hours?"</strong>
+    <p class="discussion-hint">→ At noon the sun is directly overhead, so its rays hit the ground more directly and concentrate more energy in one spot. In the morning, the sun is at a low angle — the same amount of energy spreads over a much bigger area, so each spot gets less warmth. It's like the difference between shining a flashlight straight down on a table versus shining it at an angle — the angled beam makes a bigger, dimmer patch of light!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📏 <strong>Shadow Diary:</strong> Go outside every hour and measure your shadow (trace it in chalk or use a ruler). Make a chart! When was it shortest?</li>
+      <li>🌍 <strong>Seasons Connection:</strong> In winter, the sun is lower in the sky all day long — that's why it's colder! The same principle as morning vs. noon, just across the whole year.</li>
+      <li>🔦 <strong>Shadow Theater:</strong> Use a flashlight and hand shadows to make animals on the wall. Notice how the shadow size and sharpness change when you move the flashlight!</li>
+      <li>🗺️ <strong>Sundial:</strong> Stick a pencil vertically into a piece of clay on a sheet of paper. Mark the shadow position every hour. You've made a sundial!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Best time outdoors:</strong> If doing this outside, early morning + noon works beautifully — the shadow change is dramatic. Even 2 hours apart shows a clear difference.</li>
+      <li><strong>Indoor works great:</strong> The flashlight method is very effective and gives you complete control over the "sun angle." Kids usually find this very visual and engaging.</li>
+      <li><strong>Common misconception:</strong> Many kids think it gets warm because "the sun has been heating the air all morning." Gently redirect: it's about the angle of the rays, not just time elapsed.</li>
+      <li><strong>Connect to Lesson 1:</strong> Remind them that in Lesson 1, they found direct sunlight warms things faster. This lesson explains WHY the sun warms more at noon — more direct rays!</li>
+    </ul>
+  </div>
+
+  <!-- WORKSHEET PAGE -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2 style="text-align:center; background:#1565c0;">🌑 Shadow Science Worksheet</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>☀️ Trace and Draw Your Shadows</h3>
+      <p style="font-size:10pt; color:#555;">Draw the shadow for each sun position. Circle SHORT, MEDIUM, or LONG for each one.</p>
+
+      <div class="shadow-record-grid">
+        <div class="shadow-card">
+          <div class="time-label">🌅 Morning Sun<br><span style="font-size:9pt; color:#888;">(low in the sky)</span></div>
+          <div class="draw-area"></div>
+          <div style="font-size:10pt;">Shadow is:<br>
+            <strong>SHORT &nbsp; MEDIUM &nbsp; LONG</strong><br>
+            <span style="font-size:9pt; color:#888;">(circle one)</span>
+          </div>
+        </div>
+        <div class="shadow-card">
+          <div class="time-label">☀️ Noon Sun<br><span style="font-size:9pt; color:#888;">(high overhead)</span></div>
+          <div class="draw-area"></div>
+          <div style="font-size:10pt;">Shadow is:<br>
+            <strong>SHORT &nbsp; MEDIUM &nbsp; LONG</strong><br>
+            <span style="font-size:9pt; color:#888;">(circle one)</span>
+          </div>
+        </div>
+        <div class="shadow-card">
+          <div class="time-label">🌇 Afternoon Sun<br><span style="font-size:9pt; color:#888;">(low in the sky)</span></div>
+          <div class="draw-area"></div>
+          <div style="font-size:10pt;">Shadow is:<br>
+            <strong>SHORT &nbsp; MEDIUM &nbsp; LONG</strong><br>
+            <span style="font-size:9pt; color:#888;">(circle one)</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>🌡️ Connect to Warmth</h3>
+      <p style="font-size:10pt; color:#555;">Match each sun position to how warm it feels outside:</p>
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <tr style="background:#e3f2fd;">
+          <th style="border:2px solid #90caf9; padding:10px; width:50%;">Sun Position</th>
+          <th style="border:2px solid #90caf9; padding:10px;">How Warm?</th>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:10px; text-align:center;">🌅 Morning — low sun</td>
+          <td style="border:2px solid #90caf9; padding:10px; height:50px;"></td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:10px; text-align:center;">☀️ Noon — high sun</td>
+          <td style="border:2px solid #90caf9; padding:10px; height:50px;"></td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:10px; text-align:center;">🌇 Afternoon — low sun</td>
+          <td style="border:2px solid #90caf9; padding:10px; height:50px;"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY PAGE -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Shadow Length Answers</h3>
+      <ul>
+        <li>🌅 <strong>Morning sun (low angle):</strong> LONG shadow — rays hit at a steep angle, energy spreads out</li>
+        <li>☀️ <strong>Noon sun (overhead):</strong> SHORT shadow — rays hit nearly straight down, energy concentrated</li>
+        <li>🌇 <strong>Afternoon sun (low angle):</strong> LONG shadow — same as morning, sun is low again</li>
+      </ul>
+
+      <h3>Warmth Connection</h3>
+      <ul>
+        <li>🌅 Morning → Cool or mild (low sun, long shadows, spread-out energy)</li>
+        <li>☀️ Noon → Warmest (high sun, short shadow, concentrated direct rays)</li>
+        <li>🌇 Afternoon → Warm but cooling (sun lowering, though ground holds some heat)</li>
+      </ul>
+
+      <h3>💡 Science Explanation for Parents</h3>
+      <p>This lesson introduces the concept of solar angle and insolation (incoming solar radiation intensity). When the sun is directly overhead, its rays strike a smaller surface area, concentrating energy and causing faster warming. At low angles, the same energy spreads over a larger area — less energy per square inch means slower warming. This is the same reason Earth's poles are colder than the equator: the sun's rays always strike the poles at a low angle, even in summer.</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can correctly identify which shadow is shortest (noon) and longest (morning/evening)</li>
+        <li>Child can connect high sun → short shadow → more warmth</li>
+        <li>Child can explain using their own words: "When the sun is up high, it's warmer"</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_drQkLB1OtvI" data-content-selector="body"></script>
+</body>
+</html>

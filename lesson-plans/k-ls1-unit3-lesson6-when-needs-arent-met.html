@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Needs Aren't Met: What Happens? — Unit 3, Lesson 6 of 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h2.accent {
+      background: #00B894;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #388e3c;
+      margin-top: 6px;
+      display: block;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .unit-wrap-up {
+      background: #e8f5e9;
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .unit-wrap-up h2 {
+      background: #1b5e20;
+      margin: -20px -24px 16px -24px;
+      border-radius: 10px 10px 0 0;
+      font-size: 15pt;
+    }
+    .lesson-badge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .lesson-badge {
+      background: white;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .lesson-badge .badge-emoji { font-size: 22pt; display: block; margin-bottom: 4px; }
+    .lesson-badge .badge-title { font-weight: bold; color: #1b5e20; display: block; font-size: 9pt; }
+    .lesson-badge .badge-sub { color: #666; font-size: 9pt; }
+    .poster-project {
+      background: #fff9c4;
+      border: 2px solid #f9a825;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 14px 0;
+    }
+    .poster-project h3 { color: #e65100; border-color: #ffcc80; }
+    .vocab-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .vocab-word {
+      background: #2e7d32;
+      color: white;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: bold;
+    }
+    .strategy-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .strategy-card {
+      background: white;
+      border: 3px solid #2e7d32;
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .strategy-card .s-emoji { font-size: 32pt; display: block; margin-bottom: 6px; }
+    .strategy-card .s-title { font-weight: bold; color: #1b5e20; font-size: 12pt; display: block; margin-bottom: 4px; }
+    .strategy-card .s-desc { font-size: 9pt; color: #555; }
+    .scenario-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 10px 0;
+    }
+    .scenario-box .scenario-q { font-weight: bold; color: #1b5e20; font-size: 11pt; }
+    .scenario-box .scenario-a { font-style: italic; color: #388e3c; margin-top: 4px; font-size: 10pt; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Worksheet styles */
+    .worksheet-panel {
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      background: #fff;
+    }
+    .worksheet-panel h3 {
+      color: #2e7d32;
+      border-color: #a5d6a7;
+      margin-top: 0;
+    }
+    .draw-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 10px 0;
+    }
+    .draw-zone {
+      border: 2px dashed #a5d6a7;
+      border-radius: 8px;
+      min-height: 140px;
+      padding: 8px;
+      text-align: center;
+      color: #999;
+      font-size: 9pt;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .draw-zone-label {
+      font-weight: bold;
+      color: #2e7d32;
+      font-size: 10pt;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .unit-wrap-up, .worksheet-panel {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_tqkqoNkNC9Y">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌿 When Needs Aren't Met: What Happens? 🌿</h1>
+  <p class="subtitle">Life Science — Animal Needs &nbsp;|&nbsp; Unit 3, Lesson 6 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Animal Needs</span>
+    <span>📋 <strong>Unit:</strong> Unit 3, Lesson 6 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐦 🐻 🐿️</div>
+    <div class="caption">Birds migrate, bears hibernate, squirrels adapt — every animal has a plan for survival!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>PREDICT and EXPLAIN</strong> what happens when an animal can't get one of its basic needs, and <strong>NAME</strong> at least 2 of the 3 survival strategies (migrate, hibernate, adapt) with a real animal example for each.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary:</strong>
+    <div class="vocab-strip">
+      <span class="vocab-word">migrate</span>
+      <span class="vocab-word">hibernate</span>
+      <span class="vocab-word">adapt</span>
+      <span class="vocab-word">survive</span>
+      <span class="vocab-word">predator</span>
+      <span class="vocab-word">prey</span>
+      <span class="vocab-word">food chain</span>
+    </div>
+  </div>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>We've learned that every animal needs <strong>food, water, air, and shelter</strong> to survive. But what happens when one of those needs suddenly disappears? Animals can't just wait and hope — they have to <em>do something</em>. In nature, animals have three main survival strategies:</p>
+
+  <div class="strategy-cards">
+    <div class="strategy-card">
+      <span class="s-emoji">🐦</span>
+      <span class="s-title">Migrate</span>
+      <span class="s-desc">Move to a new place where needs CAN be met. Birds fly south in winter to find food and warmth.</span>
+    </div>
+    <div class="strategy-card">
+      <span class="s-emoji">🐻</span>
+      <span class="s-title">Hibernate (or Torpor)</span>
+      <span class="s-desc">Go into a deep sleep and use stored energy to survive until conditions improve. Bears actually enter <em>torpor</em> — a lighter sleep. Ground squirrels and bats do true hibernation!</span>
+    </div>
+    <div class="strategy-card">
+      <span class="s-emoji">🐿️</span>
+      <span class="s-title">Adapt</span>
+      <span class="s-desc">Change behavior or grow special features — like squirrels storing nuts, or animals growing thicker fur.</span>
+    </div>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Gather These Household Items</h3>
+    <ul>
+      <li>Toy animals (any mix — farm animals, wildlife, stuffed animals all work!)</li>
+      <li>Blue fabric or blue paper (to represent a pond or water source)</li>
+      <li>Green fabric or green paper (to represent plants, meadow, or forest)</li>
+      <li>One large sheet of paper (butcher paper, poster board, or taped-together sheets)</li>
+      <li>Crayons or markers to draw and label the landscape</li>
+    </ul>
+    <p style="font-size:10pt; color:#666; margin-top:8px;"><em>✅ No special supplies needed — this is a storytelling + dramatic play lesson!</em></p>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Build the Landscape (5 min)</strong><br>
+    Spread a large sheet of paper on the floor or table. Together, draw and set up three habitats:
+    <ul>
+      <li>🔵 <strong>A pond</strong> — lay down the blue fabric/paper. Place some water animals here (duck, frog, fish).</li>
+      <li>🟢 <strong>A meadow/forest</strong> — lay down the green fabric/paper. Add plant-eating animals (rabbit, deer, caterpillar).</li>
+      <li>🌄 <strong>Open land</strong> — the rest of the paper. Place meat-eaters here (fox, owl, hawk).</li>
+    </ul>
+    Say: <em>"This is our animal world. Every animal here has everything it needs right now — food, water, air, and shelter. Let's see what happens if things change…"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Play "What If?" Scenarios (15 min)</strong><br>
+    Act out each scenario below. Let your child move the toy animals around as you discuss. Encourage them to narrate what the animals are thinking and doing!
+  </div>
+
+  <div class="scenario-box">
+    <div class="scenario-q">🌊 Scenario 1: "What if the pond dries up?"</div>
+    <div class="scenario-a">→ Animals that need water must leave! Move the duck and frog away from the dry pond. Where will they go? They'll need to find a new water source. Some might not make it if there's no water nearby.</div>
+  </div>
+
+  <div class="scenario-box">
+    <div class="scenario-q">🌿 Scenario 2: "What if all the plants disappear?"</div>
+    <div class="scenario-a">→ Plant-eaters have no food — they must move to find more plants! Move the rabbits and deer away. But wait… the foxes who eat rabbits now have NO food either. Remove the food → the whole chain is affected! <em>(Simple food chain intro!)</em></div>
+  </div>
+
+  <div class="scenario-box">
+    <div class="scenario-q">🦁 Scenario 3: "What if a dangerous new predator moves in?"</div>
+    <div class="scenario-a">→ Prey animals need to hide or move away to stay safe! Their shelter need is threatened. Some might find new hiding spots; others might need to leave the area entirely.</div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Connect to Real Life (5–8 min)</strong><br>
+    Ask these one at a time and let your child think and answer:
+    <ul>
+      <li>🐦 <em>"What do birds do in winter when food is scarce?"</em> → <strong>Migrate!</strong> They fly south where it's warmer and food is easier to find.</li>
+      <li>🐻 <em>"What do bears do when winter comes?"</em> → <strong>Hibernate!</strong> They eat a LOT of food beforehand, then sleep all winter using that stored energy.</li>
+      <li>🐿️ <em>"What do squirrels do to prepare for winter?"</em> → <strong>Adapt their behavior!</strong> They collect and hide nuts all fall so they have food stored when winter arrives.</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Discussion &amp; Worksheet (10 min)</strong><br>
+    Discuss the questions below, then complete the Student Worksheet together (page 3). Students draw each scenario and show how the animal solves its problem.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Discussion Question 1:</strong><br>
+    "In winter, it gets very cold and food is hard to find. What are three things animals might do?"
+    <span class="discussion-hint">Suggested answer: Animals have three main strategies: (1) Migrate — move to a warmer place with more food, like birds flying south. (2) Hibernate — go into a deep sleep and use stored energy, like bears. (3) Adapt — grow thicker fur, store food ahead of time, like squirrels hiding nuts.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Discussion Question 2:</strong><br>
+    "If you were an animal, which survival strategy would you choose — migrate, hibernate, or adapt? Why?"
+    <span class="discussion-hint">No wrong answer here! Look for creative reasoning: migrate (want to travel, go somewhere warm and exciting), hibernate (like to sleep, want to save energy), adapt (want to stay home, be clever about it). All are valid real strategies animals actually use!</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🦅 <strong>Migration Map:</strong> Look up where monarch butterflies migrate. Trace the path on a U.S. map together — it goes all the way to Mexico!</li>
+      <li>🐻 <strong>Hibernation Science:</strong> Look up what animals actually do during hibernation — their heart rate slows way down! Compare it to your resting heart rate.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A Warmer World"</em> by Caroline Arnold, or <em>"Animals in Winter"</em> by Henrietta Bancroft</li>
+      <li>🌍 <strong>Food Chain Challenge:</strong> Draw a simple food chain together: grass → rabbit → fox. What happens if the rabbit disappears? What if the grass disappears?</li>
+      <li>🎭 <strong>Animal Theater:</strong> Act it out! One person is the narrator, others are animals. Play out a drought scenario — who survives, who has to move?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== UNIT WRAP-UP BOX ====================== -->
+  <div class="unit-wrap-up">
+    <h2>🏆 Unit 3 Wrap-Up — The Survival Checklist</h2>
+    <p>Congratulations — you've completed <strong>all 6 lessons</strong> in Unit 3: Animal Needs! Here's everything you've learned:</p>
+
+    <div class="lesson-badge-grid">
+      <div class="lesson-badge">
+        <span class="badge-emoji">🐾</span>
+        <span class="badge-title">Lesson 1 — What Animals Need</span>
+        <span class="badge-sub">All animals share four basic needs: food, water, air, and shelter.</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🍽️</span>
+        <span class="badge-title">Lesson 2 — What Animals Eat</span>
+        <span class="badge-sub">Animals eat plants (herbivores), meat (carnivores), or both (omnivores).</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🫁</span>
+        <span class="badge-title">Lesson 3 — How Animals Breathe</span>
+        <span class="badge-sub">Animals get oxygen through lungs, gills, or even skin — all need oxygen!</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">💧</span>
+        <span class="badge-title">Lesson 4 — How Animals Drink</span>
+        <span class="badge-sub">Animals drink, absorb through skin, or eat wet food to get water.</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🏠</span>
+        <span class="badge-title">Lesson 5 — Building Shelter</span>
+        <span class="badge-sub">Animals build nests, burrows, and dens to stay safe, warm, and dry.</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🌿</span>
+        <span class="badge-title">Lesson 6 — When Needs Aren't Met</span>
+        <span class="badge-sub">When needs aren't met, animals migrate, hibernate (or enter torpor), or adapt.</span>
+      </div>
+    </div>
+
+    <div class="poster-project" style="border: 3px solid #f9a825; margin-top: 20px;">
+      <h3 style="font-size:16pt; text-align:center; border-bottom: 2px solid #ffcc80; padding-bottom: 8px; margin-bottom: 12px;">🐾 Culminating Activity: The Survival Checklist Poster</h3>
+      <div style="display:flex; gap:20px; flex-wrap:wrap; margin-bottom:12px; font-size:10pt; color:#555;">
+        <span>⏱️ <strong>Time:</strong> 30–45 minutes</span>
+        <span>🖍️ <strong>Materials:</strong> Large paper (poster board or taped sheets), crayons or markers</span>
+      </div>
+      <p><strong>Pick a favorite animal and create a poster showing how it meets ALL 4 of its basic needs!</strong></p>
+      <ol>
+        <li>Draw your animal in the center of the poster.</li>
+        <li>Add 4 sections around it — one for each need: 🍎 Food, 💧 Water, 💨 Air, 🏠 Shelter.</li>
+        <li>In each section, draw and write how YOUR animal gets that need met. Be specific!</li>
+        <li>Add a bonus section: <em>"What does this animal do when things go wrong?"</em> (migrate, hibernate, or adapt?)</li>
+        <li><strong>Present your poster to a family member!</strong> Explain each need and how your animal survives.</li>
+      </ol>
+      <p style="font-size:10pt; color:#888; font-style: italic;">Any animal works — a hummingbird, a polar bear, an octopus, a horse! The more interesting, the better.</p>
+    </div>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>🐻 Hibernate vs. Torpor:</strong> True hibernation means body temperature drops dramatically — ground squirrels and bats do this. Bears actually enter <em>torpor</em> — a lighter sleep where they can wake up more easily. At Kindergarten level, "hibernate" is perfectly acceptable! But if your child asks why bears wake up mid-winter, this is the accurate answer: bears are in torpor, not true hibernation.</li>
+      <li><strong>All household materials:</strong> Toy animals + paper + crayons is everything you need. No prep required.</li>
+      <li><strong>This is a storytelling lesson:</strong> Let the child narrate what the animals are doing and thinking. Dramatic play is genuine science learning at this age — don't rush it.</li>
+      <li><strong>Tie back to every previous lesson:</strong> This is the culminating lesson! Reference the four needs from Lesson 1 (food, water, air, shelter), how animals eat from Lesson 2, breathing/oxygen from Lesson 3, getting water from Lesson 4, and shelter-building from Lesson 5 as you play through scenarios. "Remember when we learned about water needs in Lesson 4? What happens to animals that need the pond?"</li>
+      <li><strong>Simple food chain intro:</strong> Don't over-complicate it. Just: "Rabbits eat grass. Foxes eat rabbits. If the rabbits are gone, what happens to the foxes?" That's enough for Kindergarten.</li>
+      <li><strong>Vocabulary tip:</strong> Write migrate, hibernate, and adapt on sticky notes and act them out physically — "migrate" means walk across the room; "hibernate" means pretend to sleep. Body memory sticks!</li>
+      <li><strong>Culminating poster:</strong> This can be done over several days. Let the child research their animal if they want — a great chance to use books or kid-safe websites together.</li>
+      <li><strong>Presenting to a family member:</strong> This is powerful. The act of teaching someone else cements learning. Even "presenting" to a stuffed animal counts for shy kids!</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌿 Student Worksheet — When Needs Aren't Met</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:14px;">For each scenario, draw the <strong>problem</strong> AND the animal's <strong>solution</strong>. What does the animal do to survive?<br><em style="font-size:9pt;">(Parent note: You can be your child's scribe — let them tell you what to write!)</em></p>
+
+    <div class="worksheet-panel">
+      <h3>💧 Scenario 1: The water source dries up!</h3>
+      <p style="font-size:10pt; margin:4px 0 10px 0; color:#555;">An animal that lives near a pond wakes up one morning and the pond is completely gone. What happens?</p>
+      <div class="draw-box">
+        <div>
+          <div class="draw-zone-label">🚨 Draw the PROBLEM:</div>
+          <div class="draw-zone">Draw here!</div>
+        </div>
+        <div>
+          <div class="draw-zone-label">✅ Draw the SOLUTION:</div>
+          <div class="draw-zone">Draw here!</div>
+        </div>
+      </div>
+      <p style="font-size:10pt; margin-top:8px;">What does the animal do? _______________________________________________</p>
+    </div>
+
+    <div class="worksheet-panel">
+      <h3>🍎 Scenario 2: All the food disappears!</h3>
+      <p style="font-size:10pt; margin:4px 0 10px 0; color:#555;">A rabbit wakes up and all the plants and grass are gone. There is nothing left to eat.</p>
+      <div class="draw-box">
+        <div>
+          <div class="draw-zone-label">🚨 Draw the PROBLEM:</div>
+          <div class="draw-zone">Draw here!</div>
+        </div>
+        <div>
+          <div class="draw-zone-label">✅ Draw the SOLUTION:</div>
+          <div class="draw-zone">Draw here!</div>
+        </div>
+      </div>
+      <p style="font-size:10pt; margin-top:8px;">What does the animal do? _______________________________________________</p>
+    </div>
+
+    <div style="margin-top:16px; background:#e8f5e9; border-radius:8px; padding:12px 16px; border:2px solid #a5d6a7;">
+      <strong>🌟 Bonus — Circle your survival strategy!</strong><br>
+      <p style="font-size:10pt; margin:8px 0 4px 0;">If YOU were an animal facing a tough winter, which strategy would you pick?</p>
+      <table style="width:100%; border-collapse:collapse;">
+        <tr>
+          <td style="width:33%; text-align:center; padding:10px; border:2px solid #a5d6a7; border-radius:6px; font-size:12pt;">🐦<br><strong>Migrate</strong><br><span style="font-size:9pt; color:#666;">Move somewhere new</span></td>
+          <td style="width:33%; text-align:center; padding:10px; border:2px solid #a5d6a7; font-size:12pt;">🐻<br><strong>Hibernate</strong><br><span style="font-size:9pt; color:#666;">Sleep through it</span></td>
+          <td style="width:33%; text-align:center; padding:10px; border:2px solid #a5d6a7; font-size:12pt;">🐿️<br><strong>Adapt</strong><br><span style="font-size:9pt; color:#666;">Get clever &amp; prepare</span></td>
+        </tr>
+      </table>
+      <p style="font-size:10pt; margin-top:10px;">Why? ________________________________________________________________________</p>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3 style="color:#2e7d32; border-color:#a5d6a7; margin-top:16px;">💧 Scenario 1: Water source dries up</h3>
+      <p><strong>Problem:</strong> The pond is gone — animal has no water nearby.<br>
+      <strong>Expected responses (any of these are correct):</strong></p>
+      <ul>
+        <li>The animal <strong>migrates</strong> — moves to find a new pond, river, or water source.</li>
+        <li>Some animals (like camels) can <strong>adapt</strong> by storing water in their bodies, or finding water in food.</li>
+        <li>If the animal can't find water, it won't survive — this is a valid and honest scientific answer too.</li>
+      </ul>
+      <p style="font-size:10pt; color:#666; font-style:italic;">Look for: the animal moving toward a new water source, OR drawing the animal in distress without water. Both show understanding.</p>
+
+      <h3 style="color:#2e7d32; border-color:#a5d6a7;">🍎 Scenario 2: Food source disappears</h3>
+      <p><strong>Problem:</strong> Rabbit has no plants to eat.<br>
+      <strong>Expected responses:</strong></p>
+      <ul>
+        <li>The rabbit <strong>migrates</strong> to a new area where plants are growing.</li>
+        <li>The rabbit might <strong>adapt</strong> by eating a different type of food if available.</li>
+        <li>Bonus understanding: <em>If the rabbit leaves, the fox that eats rabbits ALSO has no food</em> — this is the food chain concept. Celebrate this if the child mentions it!</li>
+      </ul>
+      <p style="font-size:10pt; color:#666; font-style:italic;">Look for: the rabbit moving away, OR showing the ripple effect on predators. Either demonstrates strong understanding.</p>
+
+      <h3 style="color:#b45309; border-color:#fcd34d;">🏠 Scenario 3: Shelter is destroyed <span style="font-size:9pt; background:#fef3c7; color:#92400e; border:1px solid #fcd34d; border-radius:4px; padding:2px 7px; margin-left:6px; font-weight:bold;">⭐ Extension Only (no corresponding worksheet question)</span></h3>
+      <p style="font-size:10pt; color:#92400e; font-style:italic; background:#fef9ee; border-left:3px solid #fcd34d; padding:6px 10px; border-radius:4px;"><strong>Note for educators:</strong> The Student Worksheet only includes Scenario 1 (water) and Scenario 2 (food). Use this scenario as an optional extension discussion — it does not have a corresponding worksheet drawing prompt.</p>
+      <p><strong>Problem:</strong> Bird's nest is gone — no safe place to rest or reproduce.<br>
+      <strong>Expected responses:</strong></p>
+      <ul>
+        <li>The bird <strong>adapts</strong> — builds a new nest! This is very common and shows resourcefulness.</li>
+        <li>The bird <strong>migrates</strong> — finds a safer tree or area with better shelter.</li>
+        <li>The bird finds an existing hollow in a tree, a cliff face, or another natural shelter structure.</li>
+      </ul>
+      <p style="font-size:10pt; color:#666; font-style:italic;">Look for: the bird building a new nest OR flying to find a new home. Either is correct.</p>
+
+      <h3 style="color:#2e7d32; border-color:#a5d6a7;">🌟 Bonus — Strategy Choice</h3>
+      <p>This is open-ended — <strong>there is no wrong answer.</strong> Evaluate based on reasoning quality:</p>
+      <ul>
+        <li><strong>Migrate:</strong> Valid if child says they want to go somewhere warmer, find more food, explore a new place.</li>
+        <li><strong>Hibernate:</strong> Valid if child says they like sleeping, want to save energy, or wait for things to get better.</li>
+        <li><strong>Adapt:</strong> Valid if child says they want to stay home, be clever, prepare ahead, or change what they eat/wear.</li>
+      </ul>
+      <p>All three are real strategies real animals use. Celebrate creative reasoning!</p>
+
+      <h3 style="color:#2e7d32; border-color:#a5d6a7; margin-top:18px;">✅ What Success Looks Like — End of Unit 3</h3>
+      <ul>
+        <li>Child can name all 4 basic animal needs: food, water, air, shelter.</li>
+        <li>Child can describe what happens when one need isn't met (animal must move or adapt).</li>
+        <li>Child can name and explain at least 2 of the 3 survival strategies: migrate, hibernate, adapt.</li>
+        <li>Child can give a real animal example for each strategy (bird → migrate, bear → hibernate, squirrel → adapt).</li>
+        <li><em>Bonus:</em> Child understands that food chains connect animals — losing one affects others.</li>
+      </ul>
+
+      <div class="poster-project" style="margin-top:16px;">
+        <h3>🌟 Culminating Project Rubric — Survival Checklist Poster</h3>
+        <table style="width:100%; border-collapse:collapse; font-size:10pt;">
+          <thead>
+            <tr>
+              <th style="background:#2e7d32; color:white; padding:8px; text-align:left; border:1px solid #ccc;">Element</th>
+              <th style="background:#2e7d32; color:white; padding:8px; text-align:center; border:1px solid #ccc;">Developing ⭐</th>
+              <th style="background:#2e7d32; color:white; padding:8px; text-align:center; border:1px solid #ccc;">Proficient ⭐⭐</th>
+              <th style="background:#2e7d32; color:white; padding:8px; text-align:center; border:1px solid #ccc;">Excellent ⭐⭐⭐</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:7px; border:1px solid #ccc;">Animal chosen &amp; drawn</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Animal is named</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Animal is drawn with details</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Animal drawn with habitat clues</td>
+            </tr>
+            <tr style="background:#f9f9f9;">
+              <td style="padding:7px; border:1px solid #ccc;">All 4 needs addressed</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">2 needs shown</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">All 4 needs shown</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">All 4 needs with specific details</td>
+            </tr>
+            <tr>
+              <td style="padding:7px; border:1px solid #ccc;">Survival strategy identified</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Strategy named</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Strategy named + explained</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Strategy with real-life example</td>
+            </tr>
+            <tr style="background:#f9f9f9;">
+              <td style="padding:7px; border:1px solid #ccc;">Presentation to family</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Describes poster briefly</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Explains each need</td>
+              <td style="padding:7px; border:1px solid #ccc; text-align:center;">Explains + answers questions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_tqkqoNkNC9Y" data-content-selector="body"></script>
+</body>
+</html>

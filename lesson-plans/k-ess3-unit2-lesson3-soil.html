@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soil — What's Under Our Feet? — K-ESS3 Unit 2, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+      background: #fffdf9;
+    }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #e65100; padding-bottom: 10px; color: #e65100; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+    .procedure-step strong { color: #bf360c; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; padding-left: 10px; border-left: 3px solid #ff8f00; }
+    .tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #fbe9e7; border: 1px solid #ffab91; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #bf360c; }
+    .extension-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .soil-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+    .soil-card { border: 2px solid #ffcc80; border-radius: 8px; padding: 14px; background: #fff8e1; }
+    .soil-card.healthy { border-color: #4caf50; background: #e8f5e9; }
+    .soil-card.sandy { border-color: #ffb74d; background: #fff3e0; }
+    .soil-card h4 { margin: 0 0 8px 0; font-size: 12pt; }
+    .soil-card.healthy h4 { color: #2e7d32; }
+    .soil-card.sandy h4 { color: #e65100; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #e65100; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; background: white; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .observation-box { border: 2px solid #ffcc80; border-radius: 8px; padding: 14px; margin: 12px 0; background: #fff8e1; min-height: 90px; }
+    .obs-label { font-weight: bold; color: #bf360c; font-size: 10pt; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🪱 Soil — What's Under Our Feet? 🪱</h1>
+  <p class="subtitle">Earth Science — Earth &amp; Human Activity | Unit 2, Lesson 3</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌍 <strong>Subject:</strong> Earth Science — Earth &amp; Human Activity</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌱 🪱 🪨 🍂 💧</div>
+    <div class="caption">Healthy soil is alive — it's full of rocks, minerals, organic matter, water, air, and living creatures!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS3-1</strong> — Use a model to represent the relationship between the needs of different plants or animals (including humans) and the places they live.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Soil isn't just dirt — it's one of Earth's most important natural resources! Healthy soil is full of tiny rock particles, organic matter (dead leaves and animals that have broken down), water, air, and living things like worms, bacteria, and fungi. Without good soil, plants can't grow — and without plants, animals (including us!) can't eat. Soil is the foundation of life on land.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Soil has four main ingredients:</p>
+  <ul>
+    <li>🪨 <strong>Minerals</strong> — tiny bits of broken-down rock. These give soil its texture (clay, silt, sand).</li>
+    <li>🍂 <strong>Organic matter (humus)</strong> — decomposed plants and animals. This gives soil its dark color and most of its nutrients.</li>
+    <li>💧 <strong>Water</strong> — fills the spaces between particles. Plants absorb water through their roots from soil.</li>
+    <li>💨 <strong>Air</strong> — also fills spaces between particles. Roots and soil organisms need oxygen to survive.</li>
+  </ul>
+  <p>Healthy soil absorbs and holds water well, provides nutrients plants need, and supports a diverse community of organisms. Sandy soil has large particles with big spaces — water drains through it fast. Healthy loamy soil has a mix of particle sizes and lots of organic matter — it holds water and nutrients much better.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> soil, organic matter, mineral, humus, sand, clay, decompose, nutrients, absorb, earthworm
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 For the Soil Investigation</h3>
+    <ul>
+      <li>Outdoor soil or potting soil (1–2 cups)</li>
+      <li>Sand from a playground, sandbox, or garden store</li>
+      <li>Magnifying glass</li>
+      <li>Two clear cups or containers</li>
+      <li>1 cup of water</li>
+      <li>White paper or paper plate (to examine soil on)</li>
+    </ul>
+    <h3>🧰 Optional</h3>
+    <ul>
+      <li>Spoon or stick for digging and stirring</li>
+      <li>Ruler (to measure water drainage)</li>
+      <li>Tray or newspaper (to keep things tidy!)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Look Closely at Soil (5–8 min)</strong><br>
+    Spread a small amount of outdoor or potting soil on a white piece of paper. Use a magnifying glass to look at it closely. Ask your students: <em>"What do you see?"</em>
+    <ul>
+      <li>Dark bits? → Organic matter (old plants and animals that broke down)</li>
+      <li>Tiny rocks or pebbles? → Mineral particles</li>
+      <li>Worms or tiny bugs? → Living organisms!</li>
+      <li>Threads or stringy bits? → Fungal threads called hyphae</li>
+    </ul>
+    Pick up a pinch of soil. Does it feel gritty? Smooth? Sticky when wet?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Compare Potting Soil and Sand (5 min)</strong><br>
+    Put some potting soil in one cup and sand in another. Compare them side by side:
+    <ul>
+      <li>Which is darker? (Soil — because of organic matter)</li>
+      <li>Which feels richer and clumpier? (Soil)</li>
+      <li>Which smells more earthy? (Healthy soil has a distinctive smell from bacteria!)</li>
+      <li>Which would you rather grow a plant in? Why?</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Water Absorption Test (8–10 min)</strong><br>
+    Set up the experiment:
+    <ol>
+      <li>Put a cup of potting soil in one container.</li>
+      <li>Put a cup of sand in another container.</li>
+      <li>Slowly pour half a cup of water over each.</li>
+      <li>Watch! Which absorbs the water better? Which lets it drain through right away?</li>
+    </ol>
+    <em>Result:</em> Healthy soil absorbs and holds water much better than sand. This is why sandy soil isn't great for most plants — the water (and nutrients!) drains away before roots can absorb it.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Student Worksheet (10 min)</strong><br>
+    Students draw what they see in the soil (observation illustration) and answer questions about the absorption test. They also draw or label the 4 ingredients of soil.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Discussion (5 min)</strong><br>
+    Use the discussion questions below. Connect to why healthy soil matters for animals and people.
+  </div>
+
+  <div class="soil-compare">
+    <div class="soil-card healthy">
+      <h4>🌱 Healthy Potting Soil</h4>
+      <ul>
+        <li>Dark brown color</li>
+        <li>Earthy smell</li>
+        <li>Holds water well</li>
+        <li>Has nutrients</li>
+        <li>May have worms!</li>
+        <li>Plants grow well in this</li>
+      </ul>
+    </div>
+    <div class="soil-card sandy">
+      <h4>🏖️ Sandy Soil</h4>
+      <ul>
+        <li>Light tan/beige color</li>
+        <li>Minimal smell</li>
+        <li>Water drains right through</li>
+        <li>Low nutrients</li>
+        <li>Few organisms</li>
+        <li>Hard for most plants to grow</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What is soil made of? Can you name the 4 things?</li>
+      <li>Why do plants need good soil? What happens if soil is poor or gone?</li>
+      <li>Which absorbed water better — soil or sand? Why does that matter for plants?</li>
+      <li>If there were no soil, what would happen to the animals that eat plants?</li>
+      <li>How do worms help soil? (They break down dead things and mix the soil!)</li>
+    </ul>
+
+    <div class="discussion-hint">
+      <strong>💡 Suggested answer — why healthy soil matters:</strong>
+      Plants need soil to anchor their roots, absorb water, and get nutrients. Without healthy soil, plants can't grow. Without plants, animals that eat plants (like rabbits, deer, and insects) can't survive. Without those animals, predators that eat them can't survive either. Everything connects back to soil! That's why soil erosion (washing away of soil) and soil pollution are serious environmental problems.
+    </div>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🪱 <strong>Worm observation:</strong> Find an earthworm after rain. Watch how it moves. Worms eat dead plant material, pass it through their bodies, and their castings (poop!) are rich nutrients for soil.</li>
+      <li>🌱 <strong>Grow experiment:</strong> Plant the same seed in potting soil and in sand. Water both equally. Which grows better over 2 weeks?</li>
+      <li>🌿 <strong>Compost connection:</strong> Start a simple compost jar with vegetable scraps. Over weeks, watch the scraps break down into rich organic matter — just like nature makes soil!</li>
+      <li>📚 <strong>Read aloud:</strong> <em>"Dirt: The Scoop on Soil"</em> by Natalie Rosinsky or <em>"Jump Into Science: Dirt"</em> by Steve Tomecek</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Safety:</strong> Wash hands thoroughly after handling outdoor soil. Some soils may contain fertilizers or other chemicals — potting soil from a bag is safest for indoor work.</li>
+      <li><strong>If you can't get outdoor soil:</strong> Potting soil from any garden center works perfectly. Compare it with play sand (also at garden centers).</li>
+      <li><strong>The absorption test:</strong> If using cups, make sure both cups have the same amount of soil/sand and you pour the same amount of water. The difference will be obvious — soil soaks it up, sand lets it pool and drain.</li>
+      <li><strong>Connection to K-ESS3-1:</strong> Soil is where plants live and grow. Animals depend on plants for food and habitat. Healthy soil = healthy ecosystems = healthy animals (including humans). This is the "relationship between needs and places they live."</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🪱 Student Worksheet — Soil Investigation</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🔬 Part 1: What I See in Soil</h3>
+    <p style="font-size:10pt; color:#555;">Look at soil through a magnifying glass. Draw what you see inside the box below!</p>
+    <div style="border: 2px solid #8d6e63; border-radius: 8px; height: 140px; margin: 8px 0; background: #efebe9; display: flex; align-items: center; justify-content: center; color: #a1887f; font-size: 10pt;">Draw your soil observation here</div>
+    <p style="font-size:10pt;">I saw: ☐ dark bits &nbsp;&nbsp; ☐ tiny rocks &nbsp;&nbsp; ☐ worms or bugs &nbsp;&nbsp; ☐ sandy grains &nbsp;&nbsp; ☐ other: _______</p>
+
+    <h3>💧 Part 2: Water Absorption Test</h3>
+    <p style="font-size:10pt; color:#555;">Pour water on potting soil and on sand. Circle the right answer:</p>
+    <p style="font-size: 11pt; margin: 8px 0;">Which absorbed water better? &nbsp;&nbsp;&nbsp; <strong>SOIL</strong> &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; <strong>SAND</strong></p>
+    <p style="font-size: 11pt; margin: 8px 0;">Which is better for growing plants? &nbsp;&nbsp;&nbsp; <strong>SOIL</strong> &nbsp;&nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp; <strong>SAND</strong></p>
+    <p style="font-size: 10pt; margin: 8px 0;">I think soil is better for plants because: __________________________________________________</p>
+
+    <h3>🌱 Part 3: Soil's 4 Ingredients</h3>
+    <p style="font-size:10pt; color:#555;">Draw or write a label in each box to show what healthy soil is made of:</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0;">
+      <div style="border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; background: #fff8e1; min-height: 80px; text-align: center;">
+        <div style="font-weight: bold; color: #e65100; margin-bottom: 4px;">Ingredient 1</div>
+      </div>
+      <div style="border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; background: #fff8e1; min-height: 80px; text-align: center;">
+        <div style="font-weight: bold; color: #e65100; margin-bottom: 4px;">Ingredient 2</div>
+      </div>
+      <div style="border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; background: #fff8e1; min-height: 80px; text-align: center;">
+        <div style="font-weight: bold; color: #e65100; margin-bottom: 4px;">Ingredient 3</div>
+      </div>
+      <div style="border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; background: #fff8e1; min-height: 80px; text-align: center;">
+        <div style="font-weight: bold; color: #e65100; margin-bottom: 4px;">Ingredient 4</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Soil's 4 Ingredients (Part 3 Answers)</h3>
+      <ul>
+        <li>🪨 <strong>Minerals</strong> — tiny broken-down rock particles (gives soil its texture: gritty, smooth, or clay-like)</li>
+        <li>🍂 <strong>Organic matter (humus)</strong> — decomposed plants and animals (the dark bits; full of nutrients)</li>
+        <li>💧 <strong>Water</strong> — stored in pores between particles (plants absorb this through roots)</li>
+        <li>💨 <strong>Air</strong> — fills remaining pore spaces (roots and soil organisms need oxygen)</li>
+      </ul>
+
+      <h3>Water Absorption Test (Part 2 Answers)</h3>
+      <ul>
+        <li><strong>Which absorbed water better?</strong> → SOIL. Organic matter acts like a sponge, holding water in the spaces between particles.</li>
+        <li><strong>Which is better for growing plants?</strong> → SOIL. Holds water + nutrients that plants need.</li>
+        <li><strong>Why?</strong> → Sandy soil has large, uniform particles with big gaps — water drains right through before roots can absorb it. Healthy soil has a mix of particle sizes + organic matter that holds water.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can name at least 2–3 ingredients of soil.</li>
+        <li>Student observed and described something they saw in the soil.</li>
+        <li>Student understands that healthy soil absorbs water better and is better for growing plants.</li>
+        <li>Student can explain (simply) why soil matters for plants and animals.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_JTvnV8IPqFc" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parts of a Plant: Root to Flower — Unit 2, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      display: block;
+      font-style: italic;
+      color: #1b5e20;
+      font-size: 10pt;
+      margin-top: 6px;
+      margin-left: 16px;
+      padding: 5px 10px;
+      border-left: 3px solid #00B894;
+      background: #f9fbe7;
+      border-radius: 0 4px 4px 0;
+    }
+    .tip-box {
+      background: #e0f2f1;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+
+    /* ===== WORKSHEET STYLES ===== */
+    .worksheet-layout {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin: 16px 0;
+    }
+    .plant-diagram-box {
+      flex: 0 0 auto;
+    }
+    .label-panel {
+      flex: 1;
+      padding-top: 30px;
+    }
+    .label-row {
+      display: flex;
+      align-items: center;
+      margin: 22px 0;
+      font-size: 12pt;
+    }
+    .label-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 50%;
+      font-size: 13pt;
+      font-weight: bold;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    .label-blank {
+      border-bottom: 2px solid #333;
+      min-width: 170px;
+      height: 28px;
+      display: inline-block;
+    }
+    .word-bank {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 20px 0 10px 0;
+      font-size: 11pt;
+      text-align: center;
+    }
+    .word-bank strong { color: #1b5e20; display: block; margin-bottom: 5px; }
+    .word-bank .words { font-size: 13pt; letter-spacing: 2px; color: #2e7d32; font-weight: bold; }
+
+    /* Match the job activity */
+    .match-activity {
+      margin: 16px 0;
+    }
+    .match-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .match-table td {
+      vertical-align: middle;
+      padding: 8px 6px;
+    }
+    .match-term {
+      background: #c8e6c9;
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-weight: bold;
+      font-size: 12pt;
+      color: #1b5e20;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .match-space {
+      border-bottom: 2px dotted #aaa;
+      width: 100%;
+    }
+    .match-job {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 10.5pt;
+      color: #333;
+    }
+
+    /* Answer Key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+      gradient: none;
+    }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+    .ak-box h3 { font-size: 11pt; color: #2e7d32; border-color: #c8e6c9; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 3px 0; font-size: 10pt; }
+
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .word-bank {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_NULNgXeNsas">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌱 Parts of a Plant: Root to Flower 🌸</h1>
+  <p class="subtitle">Life Science — Unit 2, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌿 <strong>Subject:</strong> Life Science — Plants &amp; Seeds</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌻 🔍 🌱</div>
+    <div class="caption">Every plant has four main parts — and each part has its own very important job!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Plants aren't just pretty — they're amazing living machines! Every part of a plant has a <strong>job</strong> that helps the plant grow, drink water, make food, and create new seeds. In this lesson, your child will dig up a real plant, observe all four parts up close, and discover what each part does. Then they'll set up a colorful experiment to actually <em>watch</em> the stem carry water!</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Plants have four main parts: <strong>roots</strong>, a <strong>stem</strong>, <strong>leaves</strong>, and a <strong>flower</strong>. Each part has a specific function that helps the plant survive:</p>
+  <ul>
+    <li>🌾 <strong>Roots</strong> anchor the plant in soil and absorb water and nutrients.</li>
+    <li>🪴 <strong>Stem</strong> acts like a pipe or straw — it carries water and nutrients from the roots up to the rest of the plant.</li>
+    <li>🍃 <strong>Leaves</strong> catch sunlight and use it (along with air and water) to make food for the plant — a process called photosynthesis.</li>
+    <li>🌸 <strong>Flower</strong> attracts bees and butterflies that help the plant make seeds so new plants can grow.</li>
+  </ul>
+  <p>Today's experiments let kids <em>see</em> two of these jobs in action: they'll observe the roots of a real plant, and watch a celery stem actually transporting colored water right before their eyes!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> roots, stem, leaves, flower, nutrients, absorb, transport, photosynthesis
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🌿 For the Plant Dig Activity</h3>
+    <ul>
+      <li>1 small weed or plant from the yard (dandelion is <em>perfect</em> — deep taproot, all 4 parts visible)</li>
+      <li>A spoon or small garden trowel for digging</li>
+      <li>Sheet of white paper (to lay the plant on and observe)</li>
+      <li>Crayons or colored pencils (to sketch the plant)</li>
+    </ul>
+
+    <h3>🥬 For the Celery Stem Experiment</h3>
+    <ul>
+      <li>1 celery stalk (with leaves still on, if possible)</li>
+      <li>1 clear cup or glass</li>
+      <li>Water</li>
+      <li>Red or blue food coloring (10–15 drops — more is better!)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Set Up the Celery Experiment FIRST! (3 min)</strong><br>
+    Before anything else, get your celery experiment going — it needs time to work while you do the rest of the lesson!
+    <ul>
+      <li>Fill the cup about halfway with water</li>
+      <li>Add 10–15 drops of food coloring and stir — make it nice and bright</li>
+      <li>Place the celery stalk in the colored water (cut the bottom of the stalk at an angle first for better absorption)</li>
+      <li>Set it in a sunny spot and say: <em>"Let's check on this later and see what happens!"</em></li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Warm-Up: What Do Plants Need? (5 min)</strong><br>
+    While you head outside, talk about what the kids already know:
+    <ul>
+      <li><em>"What do YOU need to survive? Water, food, air, sunlight…"</em></li>
+      <li><em>"Do plants need the same things? How do you think they get them?"</em></li>
+      <li><em>"Does a plant have a mouth? A stomach? How does it drink water without those things?"</em></li>
+    </ul>
+    Let kids share their ideas — there are no wrong answers yet!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Dig It Up! Plant Excavation (10–12 min)</strong><br>
+    Head outside and find a small weed or dandelion. Together:
+    <ul>
+      <li>Gently dig around the base, going several inches down to get the full root</li>
+      <li>Carefully pull the whole plant out and shake off excess soil</li>
+      <li>Lay it on the white paper and look at it together</li>
+      <li>Ask: <em>"Can you find all four parts? Where are the roots? The stem? The leaves? Any flowers?"</em></li>
+      <li>Touch each part — roots feel different from stem, leaves feel different from roots</li>
+      <li>Optional: sketch the plant with crayons, labeling each part</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Dandelion tip:</strong> Dandelions are ideal because their long taproot makes the root system super obvious. You can see all four parts clearly, and the fluffy seed head is a bonus conversation starter about how seeds spread!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Introduce the Four Parts (5–8 min)</strong><br>
+    Back inside (or outside on a blanket), go through each plant part:
+    <ul>
+      <li>🌾 <strong>Roots:</strong> Point to the roots. <em>"These are like the plant's straws AND its anchor. What do you think they do?"</em> (See Discussion Question below)</li>
+      <li>🪴 <strong>Stem:</strong> Run a finger up the stem. <em>"This is the highway — water travels all the way from the roots to the leaves through here!"</em></li>
+      <li>🍃 <strong>Leaves:</strong> Hold a leaf up to the light. <em>"Leaves catch sunlight like little solar panels to make the plant's food."</em></li>
+      <li>🌸 <strong>Flower:</strong> <em>"Flowers make seeds so new plants can grow — and bees love them!"</em></li>
+    </ul>
+    Use the uprooted plant as a visual the whole time.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Check the Celery! (5 min)</strong><br>
+    Return to your celery experiment. After 30–60 minutes, you should start to see color in the leaves. (After a few hours it'll be very vivid — check again at lunch or dinner!)
+    <ul>
+      <li>Look at the leaves — any color yet? What about the stalk?</li>
+      <li>Optional: carefully cut the celery stalk crosswise and look at the tiny colored dots — those are the tubes that carry water!</li>
+      <li><em>"See how the colored water traveled UP the stem? That's exactly what a real stem does every single day!"</em></li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Worksheet &amp; Wrap-Up (5–8 min)</strong><br>
+    Complete the Student Worksheet (page 2). Kids label the four plant parts on the diagram and complete the job-matching activity. Finish with the discussion question below!
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Ask this together:</strong>
+    <ul>
+      <li>
+        <strong>"What job do you think roots do for the plant?"</strong><br>
+        <span class="discussion-hint">➤ Roots are like straws — they drink up water and nutrients from the soil and send them up through the stem to the rest of the plant! They're also like anchors: they hold the plant in the ground so it doesn't blow away in the wind or wash away in the rain.</span>
+      </li>
+      <li style="margin-top: 12px;">
+        <strong>"Why do you think leaves are green and flat? What's the advantage of that shape?"</strong><br>
+        <span class="discussion-hint">➤ Flat and wide = more surface area to catch sunlight! Green comes from chlorophyll, the special material inside leaves that actually captures the sun's energy to make food.</span>
+      </li>
+      <li style="margin-top: 12px;">
+        <strong>"If a plant had no roots, what would happen?"</strong><br>
+        <span class="discussion-hint">➤ It couldn't drink water, so it would dry out and die. It also couldn't stay in the ground — the wind would knock it over! Roots do two important jobs at once.</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌹 <strong>White Carnation Upgrade:</strong> Try the same food-coloring experiment with a white carnation — the result is even more dramatic and beautiful!</li>
+      <li>✂️ <strong>Split-Color Celery:</strong> Carefully split the celery stalk partway up and put each half in a different color of water. What happens?</li>
+      <li>🗺️ <strong>Neighborhood Plant Hunt:</strong> Walk around the block and find 5 different plants. Do they all have the same four parts? Can you find roots, stem, leaves, and flowers on each?</li>
+      <li>🎨 <strong>Nature Journal:</strong> Press a small leaf between two sheets of paper and rub over it with a crayon (leaf rubbing) — try several different leaf shapes and compare!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"From Seed to Plant"</em> by Gail Gibbons, or <em>"The Tiny Seed"</em> by Eric Carle</li>
+      <li>🫘 <strong>Bean Check:</strong> How are the bean plants from Lesson 2 doing? Any sprouts? Can you identify the stem and leaves on the seedling?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>⏱️ Start the celery FIRST:</strong> The food-coloring experiment needs time to work — set it up at the very beginning so the color has 30–60 minutes to travel up while you do the outdoor plant dig. Check it mid-lesson and again after. Overnight is even more impressive!</li>
+      <li><strong>🌹 Carnations are even better:</strong> If you can grab white carnations from a grocery store, use those instead of celery. The color change is vivid, dramatic, and kids go absolutely wild for it. Still works great with celery if that's what you have.</li>
+      <li><strong>🌼 Dandelions are the ideal dig plant:</strong> Their deep taproot makes the root system super obvious — kids can actually see the whole root structure, and it's hard to miss any of the four parts. Dandelions are everywhere and free!</li>
+      <li><strong>🫘 Check in on Lesson 2 bean plants:</strong> While you're doing this lesson, peek at any beans you planted in Lesson 2. Any sprouts? If a seedling has emerged, use it as a live example — this is a real plant with real parts right in front of them!</li>
+      <li><strong>📖 Vocabulary to reinforce:</strong> <em>roots</em>, <em>stem</em>, <em>leaves</em>, <em>flower</em>, <em>nutrients</em>. Use these words naturally throughout the lesson, not just as definitions.</li>
+      <li><strong>🔬 The celery cross-section is optional but cool:</strong> If your kids are curious, cut the celery crosswise with a sharp knife (adult only) and look at the tiny colored dots in the stalk. Those are the vascular tubes that transport water — a great visual for "pipes inside the stem!"</li>
+      <li><strong>✅ Assessment:</strong> Can the child name all four plant parts? Can they point to each one on a real plant or diagram? Can they tell you one job for each part? That's success for Kindergarten.</li>
+    </ul>
+  </div>
+
+
+  <!-- ====================== WORKSHEET PAGE ====================== -->
+  <div class="page-break">
+
+    <h1>🌱 Parts of a Plant Worksheet 🌸</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2>🏷️ Part 1: Label the Plant!</h2>
+    <p style="font-size:10.5pt; color:#444; margin-bottom:8px;">Look at the numbers on the plant diagram. Write the correct plant part name on each blank line. Use the Word Bank to help you!</p>
+
+    <div class="worksheet-layout">
+
+      <!-- Plant Diagram SVG -->
+      <div class="plant-diagram-box">
+        <svg width="260" height="380" viewBox="0 0 260 380" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- Sky background -->
+          <rect x="0" y="0" width="260" height="268" fill="#f0faf0" rx="8"/>
+
+          <!-- Soil -->
+          <rect x="0" y="268" width="260" height="112" fill="#d7a96d" rx="0"/>
+          <rect x="0" y="268" width="260" height="14" fill="#8B6239"/>
+
+          <!-- Ground detail (small rocks/texture) -->
+          <circle cx="40" cy="285" r="4" fill="#a07840" opacity="0.5"/>
+          <circle cx="80" cy="295" r="3" fill="#a07840" opacity="0.4"/>
+          <circle cx="170" cy="283" r="5" fill="#a07840" opacity="0.5"/>
+          <circle cx="210" cy="293" r="3" fill="#a07840" opacity="0.4"/>
+          <circle cx="130" cy="300" r="4" fill="#a07840" opacity="0.35"/>
+
+          <!-- ROOTS (taproot system) -->
+          <!-- Main taproot -->
+          <line x1="130" y1="268" x2="130" y2="355" stroke="#8B5E3C" stroke-width="5" stroke-linecap="round"/>
+          <!-- Lateral roots -->
+          <path d="M130,290 Q100,298 80,315" stroke="#8B5E3C" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M130,305 Q108,314 95,335" stroke="#8B5E3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M130,290 Q158,298 178,315" stroke="#8B5E3C" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M130,310 Q152,320 165,340" stroke="#8B5E3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Tiny root hairs -->
+          <path d="M80,315 Q72,320 68,328" stroke="#8B5E3C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M178,315 Q186,320 190,328" stroke="#8B5E3C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M95,335 Q89,342 86,350" stroke="#8B5E3C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M165,340 Q172,346 174,353" stroke="#8B5E3C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+          <!-- STEM -->
+          <line x1="130" y1="110" x2="130" y2="268" stroke="#4CAF50" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- LEFT LEAF -->
+          <path d="M130,188 Q92,168 72,148 Q82,162 100,175 Q112,182 130,188" fill="#66BB6A"/>
+          <!-- Leaf midrib -->
+          <line x1="130" y1="188" x2="74" y2="150" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+          <!-- Leaf veins -->
+          <line x1="110" y1="178" x2="96" y2="163" stroke="#388E3C" stroke-width="1" opacity="0.7"/>
+          <line x1="95" y1="170" x2="82" y2="157" stroke="#388E3C" stroke-width="1" opacity="0.7"/>
+
+          <!-- RIGHT LEAF -->
+          <path d="M130,218 Q168,198 188,178 Q178,192 160,205 Q148,212 130,218" fill="#66BB6A"/>
+          <!-- Leaf midrib -->
+          <line x1="130" y1="218" x2="186" y2="180" stroke="#388E3C" stroke-width="1.5" fill="none"/>
+          <!-- Leaf veins -->
+          <line x1="150" y1="208" x2="165" y2="193" stroke="#388E3C" stroke-width="1" opacity="0.7"/>
+          <line x1="165" y1="198" x2="178" y2="184" stroke="#388E3C" stroke-width="1" opacity="0.7"/>
+
+          <!-- FLOWER PETALS (6 petals rotating around center 130,95) -->
+          <ellipse cx="130" cy="73" rx="12" ry="20" fill="#FDD835" transform="rotate(0 130 95)"/>
+          <ellipse cx="130" cy="73" rx="12" ry="20" fill="#FDD835" transform="rotate(60 130 95)"/>
+          <ellipse cx="130" cy="73" rx="12" ry="20" fill="#FDD835" transform="rotate(120 130 95)"/>
+          <ellipse cx="130" cy="73" rx="12" ry="20" fill="#FDD835" transform="rotate(180 130 95)"/>
+          <ellipse cx="130" cy="73" rx="12" ry="20" fill="#FDD835" transform="rotate(240 130 95)"/>
+          <ellipse cx="130" cy="73" rx="12" ry="20" fill="#FDD835" transform="rotate(300 130 95)"/>
+          <!-- Flower center -->
+          <circle cx="130" cy="95" r="16" fill="#FF8C00"/>
+          <!-- Center dots -->
+          <circle cx="125" cy="91" r="2.5" fill="#E65100" opacity="0.7"/>
+          <circle cx="135" cy="91" r="2.5" fill="#E65100" opacity="0.7"/>
+          <circle cx="130" cy="100" r="2.5" fill="#E65100" opacity="0.7"/>
+          <circle cx="122" cy="100" r="2.5" fill="#E65100" opacity="0.6"/>
+          <circle cx="138" cy="100" r="2.5" fill="#E65100" opacity="0.6"/>
+
+          <!-- NUMBER LABELS (circled markers pointing to each part) -->
+
+          <!-- ① Flower — top right with dashed line -->
+          <line x1="148" y1="78" x2="172" y2="52" stroke="#1b5e20" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <circle cx="182" cy="46" r="13" fill="#2e7d32"/>
+          <text x="182" y="51" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="Georgia, serif">1</text>
+
+          <!-- ② Leaves — right leaf tip area -->
+          <line x1="178" y1="192" x2="215" y2="185" stroke="#1b5e20" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <circle cx="225" cy="183" r="13" fill="#2e7d32"/>
+          <text x="225" y="188" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="Georgia, serif">2</text>
+
+          <!-- ③ Stem — mid-right of stem -->
+          <line x1="134" y1="240" x2="195" y2="246" stroke="#1b5e20" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <circle cx="205" cy="246" r="13" fill="#2e7d32"/>
+          <text x="205" y="251" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="Georgia, serif">3</text>
+
+          <!-- ④ Roots — lower right in soil -->
+          <line x1="165" y1="320" x2="208" y2="318" stroke="#fff" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <circle cx="218" cy="318" r="13" fill="#2e7d32"/>
+          <text x="218" y="323" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="Georgia, serif">4</text>
+
+          <!-- Optional small sun in corner -->
+          <circle cx="30" cy="30" r="16" fill="#FFEE58" opacity="0.8"/>
+          <line x1="30" y1="8" x2="30" y2="2" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="30" y1="52" x2="30" y2="58" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="8" y1="30" x2="2" y2="30" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="52" y1="30" x2="58" y2="30" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="14" y1="14" x2="10" y2="10" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="46" y1="46" x2="50" y2="50" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="46" y1="14" x2="50" y2="10" stroke="#FFEE58" stroke-width="2"/>
+          <line x1="14" y1="46" x2="10" y2="50" stroke="#FFEE58" stroke-width="2"/>
+
+        </svg>
+      </div>
+
+      <!-- Label Panel -->
+      <div class="label-panel">
+        <p style="font-size:11pt; color:#1b5e20; font-weight:bold; margin-bottom:8px;">Write the name for each numbered part:</p>
+
+        <div class="label-row">
+          <span class="label-num">1</span>
+          <span class="label-blank"></span>
+        </div>
+        <div class="label-row">
+          <span class="label-num">2</span>
+          <span class="label-blank"></span>
+        </div>
+        <div class="label-row">
+          <span class="label-num">3</span>
+          <span class="label-blank"></span>
+        </div>
+        <div class="label-row">
+          <span class="label-num">4</span>
+          <span class="label-blank"></span>
+        </div>
+
+        <div class="word-bank">
+          <strong>✏️ Word Bank</strong>
+          <div class="words">roots &nbsp;·&nbsp; stem &nbsp;·&nbsp; leaves &nbsp;·&nbsp; flower</div>
+        </div>
+      </div>
+
+    </div><!-- end worksheet-layout -->
+
+    <!-- Match the Job Activity -->
+    <h2>🔗 Part 2: Match the Job!</h2>
+    <p style="font-size:10.5pt; color:#444; margin-bottom:12px;">Draw a line from each plant part on the LEFT to its job on the RIGHT!</p>
+
+    <table class="match-table">
+      <tbody>
+        <tr>
+          <td style="width:22%; padding:10px 8px;">
+            <div class="match-term">🌾 ROOTS</div>
+          </td>
+          <td style="width:40%; padding:10px 8px;">
+            <!-- space for drawing lines -->
+          </td>
+          <td style="width:38%; padding:10px 8px;">
+            <div class="match-job">☀️ Catches sunlight to make food for the plant</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;">
+            <div class="match-term">🪴 STEM</div>
+          </td>
+          <td style="padding:10px 8px;"></td>
+          <td style="padding:10px 8px;">
+            <div class="match-job">🌸 Makes seeds and attracts bees &amp; butterflies</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;">
+            <div class="match-term">🍃 LEAVES</div>
+          </td>
+          <td style="padding:10px 8px;"></td>
+          <td style="padding:10px 8px;">
+            <div class="match-job">💧 Drinks up water from soil &amp; holds the plant in the ground</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 8px;">
+            <div class="match-term">🌸 FLOWER</div>
+          </td>
+          <td style="padding:10px 8px;"></td>
+          <td style="padding:10px 8px;">
+            <div class="match-job">🚿 Carries water from the roots all the way up to the leaves</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:22px; background:#e8f5e9; border-radius:8px; padding:14px 18px; border:2px solid #a5d6a7;">
+      <strong style="color:#1b5e20;">🎨 Bonus:</strong> Color the plant diagram above! Use green for the leaves and stem, yellow for the flower, and brown for the roots.
+    </div>
+
+  </div><!-- end worksheet page -->
+
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT / TEACHER ANSWER KEY — Remove before giving worksheet to student</h2>
+
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>🏷️ Part 1: Label the Plant — Answers</h3>
+          <ul>
+            <li>① <strong>Flower</strong> — the yellow bloom at the top</li>
+            <li>② <strong>Leaves</strong> — the flat green parts on the sides</li>
+            <li>③ <strong>Stem</strong> — the vertical green stalk in the middle</li>
+            <li>④ <strong>Roots</strong> — the brown branching parts underground in the soil</li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>🔗 Part 2: Match the Job — Answers</h3>
+          <ul>
+            <li>🌾 <strong>ROOTS</strong> → 💧 Drinks up water from soil &amp; holds the plant in the ground</li>
+            <li>🪴 <strong>STEM</strong> → 🚿 Carries water from roots up to the leaves</li>
+            <li>🍃 <strong>LEAVES</strong> → ☀️ Catches sunlight to make food for the plant</li>
+            <li>🌸 <strong>FLOWER</strong> → 🌸 Makes seeds and attracts bees &amp; butterflies</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px; color:#2e7d32; border-color:#c8e6c9;">💡 Deeper Notes for Parents</h3>
+      <ul style="font-size:10pt; color:#444;">
+        <li><strong>Flower → seeds:</strong> Some kids initially think flowers are "just pretty" — reinforce that the flower's real job is reproduction. Bees carry pollen from flower to flower, which lets the plant make seeds. That's how new plants grow!</li>
+        <li><strong>Roots → two jobs:</strong> Roots drink AND anchor. Both are correct answers. If a child says both, that's excellent scientific thinking — reinforce it.</li>
+        <li><strong>Leaves → photosynthesis:</strong> At Kindergarten level, "catches sunlight to make food" is the right level of detail. If they ask how, you can say: "Leaves have a special ingredient called chlorophyll that turns sunlight, air, and water into sugar — the plant's food!"</li>
+        <li><strong>Stem → vascular tissue:</strong> The celery experiment visually demonstrates this! The colored dots in a cross-cut celery stalk are the tiny tubes (xylem) that carry water. You don't need the vocabulary — just point and say "those are the water pipes!"</li>
+      </ul>
+
+      <h3 style="color:#2e7d32; border-color:#c8e6c9;">✅ What Success Looks Like</h3>
+      <ul style="font-size:10pt; color:#444;">
+        <li>Child can name all four plant parts when shown a real plant or diagram.</li>
+        <li>Child can describe at least one job for each part in their own words.</li>
+        <li>Child connects the celery experiment to what stems actually do.</li>
+        <li>Bonus: Child notices that both roots and flowers serve the plant's survival (water + reproduction).</li>
+      </ul>
+
+    </div>
+  </div><!-- end answer key -->
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_NULNgXeNsas" data-content-selector="body"></script>
+</body>
+</html>

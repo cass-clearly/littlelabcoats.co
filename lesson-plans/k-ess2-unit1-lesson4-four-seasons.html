@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Four Seasons — K-ESS2 Unit 1, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #5d4037;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .seasons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 15px 0;
+    }
+    .season-card {
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 2px solid;
+    }
+    .season-spring { background: #f1f8e9; border-color: #8bc34a; }
+    .season-spring h3 { color: #33691e; border-color: #8bc34a; }
+    .season-summer { background: #fff9c4; border-color: #fbc02d; }
+    .season-summer h3 { color: #f57f17; border-color: #fbc02d; }
+    .season-fall { background: #fff3e0; border-color: #e65100; }
+    .season-fall h3 { color: #bf360c; border-color: #ffcc80; }
+    .season-winter { background: #e3f2fd; border-color: #1976d2; }
+    .season-winter h3 { color: #0d47a1; border-color: #90caf9; }
+    .sort-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .sort-table th {
+      padding: 10px;
+      border: 2px solid #bf360c;
+      font-size: 13pt;
+    }
+    .sort-table td {
+      border: 2px solid #ffcc80;
+      padding: 8px;
+      height: 80px;
+      vertical-align: top;
+      font-size: 9pt;
+      color: #999;
+    }
+    .cut-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .cut-card {
+      border: 2px dashed #bf360c;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 11pt;
+      min-height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cut-card .emoji { font-size: 28pt; }
+    .cut-card .label { font-weight: bold; margin-top: 4px; color: #e65100; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .draw-box {
+      border: 2px solid #bf360c;
+      border-radius: 8px;
+      min-height: 160px;
+      margin: 8px 0;
+      background: #fffde7;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+  </style>
+</head>
+<body data-document-id="doc_V-P0NGvSjnE">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌸 The Four Seasons 🍂</h1>
+  <p class="subtitle">Earth Science — Weather &amp; Seasons</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Weather &amp; Seasons</span>
+    <span>🔢 <strong>Lesson:</strong> 4 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌸 ☀️ 🍂 ❄️</div>
+    <div class="caption">Spring, Summer, Fall, Winter — each season has its own special character!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS2-1</strong> — Use and share observations of local weather conditions to describe patterns over time.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>SEQUENCE</strong> the four seasons, <strong>DESCRIBE</strong> characteristics of each, and <strong>EXPLAIN</strong> how seasons affect plants and animals.</p>
+
+  <h2>🔬 The Four Seasons</h2>
+
+  <div class="seasons-grid">
+    <div class="season-card season-spring">
+      <h3>🌸 Spring</h3>
+      <ul>
+        <li>Warmer after winter</li>
+        <li>Flowers bloom</li>
+        <li>Baby animals are born</li>
+        <li>More rain</li>
+        <li>Trees grow new leaves</li>
+      </ul>
+    </div>
+    <div class="season-card season-summer">
+      <h3>☀️ Summer</h3>
+      <ul>
+        <li>Hottest season</li>
+        <li>Longest days (most daylight)</li>
+        <li>Plants are fully leafy and green</li>
+        <li>Fruits and vegetables grow</li>
+        <li>Good time for swimming!</li>
+      </ul>
+    </div>
+    <div class="season-card season-fall">
+      <h3>🍂 Fall (Autumn)</h3>
+      <ul>
+        <li>Getting cooler</li>
+        <li>Leaves turn red, orange, yellow</li>
+        <li>Leaves fall off trees</li>
+        <li>Animals prepare for winter</li>
+        <li>Days get shorter</li>
+      </ul>
+    </div>
+    <div class="season-card season-winter">
+      <h3>❄️ Winter</h3>
+      <ul>
+        <li>Coldest season</li>
+        <li>Shortest days (least daylight)</li>
+        <li>Some animals hibernate</li>
+        <li>Trees may lose all their leaves</li>
+        <li>Snow or frost may appear</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> season, spring, summer, fall/autumn, winter, temperature, pattern, tilt, Northern Hemisphere
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and crayons</li>
+      <li>Seasonal household items (optional): woolly hat, flower, leaf, swimsuit — OR draw picture cards together</li>
+      <li>Season Sort cards and sorting mat (last pages of this lesson)</li>
+      <li>Scissors and glue stick</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Season Warm-Up (5 min)</strong><br>
+    Ask: <em>"What season is it right now? How do you know?"</em><br>
+    Let them look outside. Point to clues: what are the trees doing? What are people wearing? How warm or cold is it?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Make the Season Cards (5 min)</strong><br>
+    Write or draw one card each for Spring, Summer, Fall, and Winter. Add 3–4 key features to each card (use the season descriptions above as a guide). Color them to match the season's feeling — warm yellows for summer, cool blues for winter!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — The Great Seasons Sort (10–15 min)</strong><br>
+    Gather seasonal household items OR use the picture cards from the next page. Sort each item to the correct season:
+    <ul>
+      <li>🧤 Woolly hat, mittens, scarf → <strong>Winter</strong></li>
+      <li>🌸 Flowers, seeds, umbrella for rain → <strong>Spring</strong></li>
+      <li>🍃 Fallen leaves, acorns, cozy sweater → <strong>Fall</strong></li>
+      <li>🏊 Swimsuit, sunscreen, ice pop → <strong>Summer</strong></li>
+    </ul>
+    If they're unsure, talk it through: <em>"When do we use this? Is it warm or cold outside then?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Favorite Season Drawing (5–10 min)</strong><br>
+    Each child draws their favorite season — include the weather, what they'd wear, what plants look like, and one thing they love to do in that season. Share with the family!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What is your favorite season? Why?</li>
+      <li>How do animals behave differently in each season?</li>
+      <li>What happens to trees over the four seasons?</li>
+      <li><strong>Big Question:</strong> Why do we have seasons? Is it because Earth gets closer to the sun in summer?</li>
+    </ul>
+    <p class="discussion-hint">💡 <em>Suggested answer: Common misconception! Seasons are caused by Earth's TILT (23.5°), not its distance from the sun. When the Northern Hemisphere tilts toward the sun, sunlight hits more directly and for longer — summer! When it tilts away — winter. Australia's seasons are the opposite of ours for exactly this reason — when we have winter, they have summer!</em></p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌍 <strong>Australia Flip:</strong> Look up what season it is right now in Australia. How is it different? This proves Earth's tilt, not distance, causes seasons!</li>
+      <li>📅 <strong>Season Circle:</strong> Draw a big circle. Divide it into 4 parts and fill in each season with drawings and weather. Put an arrow going around to show the cycle!</li>
+      <li>🌲 <strong>Tree Through Time:</strong> Draw the same tree in all 4 seasons — bare in winter, budding in spring, full in summer, colorful in fall.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>Goodbye Summer, Hello Autumn</em> by Kenard Pak or <em>Strawberries Are Red</em> by Petr Horáček</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Common misconception to address:</strong> Many adults even think seasons are caused by Earth's distance from the sun. They're caused by Earth's axial tilt (23.5°). You don't need to explain the physics deeply — just plant the seed: "It's not about how close Earth is to the sun — it's about how Earth is tilted!"</li>
+      <li><strong>Local context matters:</strong> In Colorado Springs, seasons are very distinct. If you live somewhere with mild seasons (like Southern California or Florida), acknowledge that some places have more subtle seasonal changes.</li>
+      <li><strong>The Australia connection:</strong> This is a mind-blowing fact for kids. "When our friends in Australia are sweating in summer in December, we're having Christmas in the snow!" It really reinforces that seasons aren't about sun distance.</li>
+      <li><strong>Assessment:</strong> Can the child sequence the 4 seasons? Can they describe at least 2 characteristics of each? Can they sort seasonal items correctly?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌸☀️🍂❄️ Season Sort — Student Worksheet</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <p style="font-size:10pt; color:#555; margin-bottom:10px; text-align:center;">Cut out the picture cards below. Sort each card onto the correct season!</p>
+
+    <table class="sort-table">
+      <tr>
+        <th style="background:#8bc34a; color:white;">🌸 SPRING</th>
+        <th style="background:#fbc02d; color:white;">☀️ SUMMER</th>
+        <th style="background:#e65100; color:white;">🍂 FALL</th>
+        <th style="background:#1976d2; color:white;">❄️ WINTER</th>
+      </tr>
+      <tr>
+        <td>Place spring cards here</td>
+        <td>Place summer cards here</td>
+        <td>Place fall cards here</td>
+        <td>Place winter cards here</td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top:18px;">✂️ Picture Cards — Cut Out and Sort!</h3>
+    <div class="cut-cards">
+      <div class="cut-card"><span class="emoji">🧤</span><span class="label">Woolly mittens</span></div>
+      <div class="cut-card"><span class="emoji">🌸</span><span class="label">Flowers blooming</span></div>
+      <div class="cut-card"><span class="emoji">🍁</span><span class="label">Falling leaves</span></div>
+      <div class="cut-card"><span class="emoji">🏊</span><span class="label">Swimsuit &amp; swimming</span></div>
+      <div class="cut-card"><span class="emoji">☃️</span><span class="label">Building a snowman</span></div>
+      <div class="cut-card"><span class="emoji">🌱</span><span class="label">New baby plants sprouting</span></div>
+      <div class="cut-card"><span class="emoji">🌻</span><span class="label">Tall sunflowers</span></div>
+      <div class="cut-card"><span class="emoji">🎃</span><span class="label">Halloween pumpkins</span></div>
+      <div class="cut-card"><span class="emoji">🐣</span><span class="label">Baby chicks hatching</span></div>
+      <div class="cut-card"><span class="emoji">🍦</span><span class="label">Ice cream cone</span></div>
+      <div class="cut-card"><span class="emoji">🐿️</span><span class="label">Squirrel storing acorns</span></div>
+      <div class="cut-card"><span class="emoji">🌨️</span><span class="label">Snowflakes falling</span></div>
+    </div>
+
+    <h3 style="margin-top:18px;">🎨 Draw Your Favorite Season!</h3>
+    <div class="draw-box" style="min-height:150px; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:10pt;">Draw your favorite season here — include the weather, plants, and what you're wearing!</div>
+    <p style="font-size:10pt; margin-top:8px;">My favorite season is _____________________ because ________________________________________.</p>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="answer-key-grid">
+        <div>
+          <h3 style="color:#33691e; border-color:#8bc34a;">🌸 Spring</h3>
+          <ul>
+            <li>🌸 Flowers blooming</li>
+            <li>🌱 New baby plants sprouting</li>
+            <li>🐣 Baby chicks hatching</li>
+          </ul>
+          <h3 style="color:#e65100; border-color:#ffcc80;">🍂 Fall (Autumn)</h3>
+          <ul>
+            <li>🍁 Falling leaves</li>
+            <li>🎃 Halloween pumpkins</li>
+            <li>🐿️ Squirrel storing acorns</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color:#f57f17; border-color:#fbc02d;">☀️ Summer</h3>
+          <ul>
+            <li>🏊 Swimsuit &amp; swimming</li>
+            <li>🌻 Tall sunflowers</li>
+            <li>🍦 Ice cream cone</li>
+          </ul>
+          <h3 style="color:#0d47a1; border-color:#90caf9;">❄️ Winter</h3>
+          <ul>
+            <li>🧤 Woolly mittens</li>
+            <li>☃️ Building a snowman</li>
+            <li>🌨️ Snowflakes falling</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Key Science Concepts</h3>
+      <ul>
+        <li><strong>Seasons are caused by Earth's TILT (23.5°)</strong> — NOT by Earth's distance from the sun</li>
+        <li>When the Northern Hemisphere tilts toward the sun → more direct sunlight → summer</li>
+        <li>When the Northern Hemisphere tilts away from the sun → less direct sunlight → winter</li>
+        <li>Australia has opposite seasons because they're in the Southern Hemisphere</li>
+        <li>Seasons follow a predictable cycle: spring → summer → fall → winter → spring…</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name all 4 seasons in order</li>
+        <li>Child can describe at least 2 characteristics of each season</li>
+        <li>Child correctly sorts at least 10 of 12 cards</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

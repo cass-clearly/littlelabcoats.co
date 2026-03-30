@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building a Shelter: Every Animal Needs a Home — Unit 3, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 6px;
+      padding-left: 10px;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Shelter option cards */
+    .shelter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .shelter-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 10pt;
+    }
+    .shelter-card .shelter-title {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 12pt;
+      margin-bottom: 5px;
+    }
+    .shelter-card .shelter-emoji {
+      font-size: 26pt;
+      display: block;
+      margin-bottom: 4px;
+    }
+    /* Test checklist */
+    .test-box {
+      background: #e8f5e9;
+      border: 2px solid #00B894;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .test-box h3 { color: #00695c; border-color: #80cbc4; }
+    .test-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 7px 0;
+      font-size: 10.5pt;
+    }
+    .test-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #2e7d32;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    /* Worksheet section */
+    .worksheet-draw-box {
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      margin: 12px 0;
+      min-height: 200px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-style: italic;
+      font-size: 10pt;
+    }
+    .worksheet-line {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-green h3 { color: #1b5e20; border-color: #a5d6a7; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .test-box, .shelter-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_LuM_p2MaEWI">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🏠 Building a Shelter: Every Animal Needs a Home 🏠</h1>
+  <p class="subtitle">Life Science — Animal Needs &nbsp;|&nbsp; Unit 3, Lesson 5 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Animal Needs</span>
+    <span>📋 <strong>Unit 3, Lesson 5 of 6</strong></span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐦🪹 🐇🕳️ 🐻🏔️ 🐟🪨</div>
+    <div class="caption">Birds weave nests, rabbits dig burrows, bears find dens — every animal builds or finds a home!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>BUILD a model shelter</strong> for a toy animal using household materials, <strong>IDENTIFY</strong> at least 2 things a shelter must protect an animal from, and <strong>EXPLAIN</strong> why their shelter design meets those needs.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Every animal needs shelter to survive. A shelter is a safe place that <strong>protects animals from weather</strong> (rain, cold, wind), <strong>hides them from predators</strong> (animals that might eat them), and gives them a cozy place to <strong>rest and raise their babies</strong>. Without shelter, animals would be cold, wet, and in danger.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary:</strong> shelter, predator, protection, den, burrow, nest, habitat
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <p>Animals can't just live anywhere — they need a <strong>habitat</strong> that provides food, water, AND shelter. Different animals build or find very different shelters depending on their size, their predators, and the weather in their home environment. A bird's nest is made of twigs and held high in a tree. A rabbit's burrow is dug deep underground. A bear's den might be a cave or a hollow log. A fish might hide inside an underwater cave or rocky crevice. All of these shelters do the same important jobs — they keep the animal safe, dry, and comfortable.</p>
+
+  <div class="tip-box">
+    🏠 <strong>Connect to humans:</strong> Our houses are our shelters too! A roof keeps us dry. Walls keep out the wind and cold. Locks keep us safe. We're animals too — we just build fancier homes!
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧸 You'll Need a Toy Animal</h3>
+    <ul>
+      <li>Any small toy: bird, rabbit, bear, fish, or similar</li>
+      <li>A stuffed animal works great too!</li>
+    </ul>
+    <h3>🏠 Household Building Supplies</h3>
+    <ul>
+      <li>Cardboard boxes (any size)</li>
+      <li>5–10 small sticks or twigs (pencil-length), collected from outdoors. <em>No yard? Use toothpicks, wooden coffee stirrers, or pipe cleaners instead!</em></li>
+      <li>Yarn or string</li>
+      <li>Cotton balls</li>
+      <li>Towels and blankets</li>
+      <li>Pillows</li>
+      <li>Tape and scissors</li>
+      <li>A bowl or bin (for fish option)</li>
+      <li>A spray bottle with water (for shelter testing!)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — What Is a Shelter? (5 min)</strong><br>
+    Start with a question: <em>"What does a bird need to survive? What about a bear? What about a rabbit?"</em><br><br>
+    After students name food and water, ask: <em>"What about a safe place to sleep? A place to have babies? A place to hide from danger? That's called a SHELTER."</em><br><br>
+    Show pictures or draw simple sketches of: a bird nest, a rabbit burrow, a bear den, a fish cave. Let kids identify them.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Choose Your Animal (3 min)</strong><br>
+    Each student picks a toy animal and decides what kind of shelter it needs:<br><br>
+    <div class="shelter-grid">
+      <div class="shelter-card">
+        <span class="shelter-emoji">🐦</span>
+        <div class="shelter-title">Bird → Nest</div>
+        Use sticks/twigs from the yard, yarn, and cotton balls in a bowl
+      </div>
+      <div class="shelter-card">
+        <span class="shelter-emoji">🐇</span>
+        <div class="shelter-title">Rabbit → Burrow</div>
+        Drape towels over a cardboard box with a "tunnel" entrance
+      </div>
+      <div class="shelter-card">
+        <span class="shelter-emoji">🐻</span>
+        <div class="shelter-title">Bear → Den</div>
+        Stack blankets and pillows into a cozy cave shape
+      </div>
+      <div class="shelter-card">
+        <span class="shelter-emoji">🐟</span>
+        <div class="shelter-title">Fish → Underwater Hiding Spot</div>
+        Fish find shelter in underwater plants and rocks! Create a safe hiding spot for a toy fish using a cup and crumpled paper (rocks) with a few sprigs of fake or real plant tucked around it. <em><strong>Note: this is a dry, tabletop model — no water needed! We're representing what an underwater shelter would look like.</strong></em>
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Build the Shelter! (10–15 min)</strong><br>
+    Using ONLY household materials, build the shelter for the chosen animal. Encourage kids to:<br>
+    <ul>
+      <li>Think about the SIZE — can the animal fit inside?</li>
+      <li>Think about COVERING — is there a roof or walls?</li>
+      <li>Think about HIDING — can the animal be hidden from outside?</li>
+      <li>Add a space for "babies" — make it big enough for a family!</li>
+    </ul>
+    <em>"Real animals are incredible engineers. You are too!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Test the Shelter! (5–10 min)</strong><br>
+    Now it's time to see if the shelter really works. Run each test:<br><br>
+    <div class="test-box">
+      <h3>🧪 Shelter Test Checklist</h3>
+      <div class="test-item">
+        <div class="test-checkbox"></div>
+        <div>🌧️ <strong>"Rain" test:</strong> Lightly sprinkle water near the shelter with a spray bottle. Does the animal stay dry?</div>
+      </div>
+      <div class="test-item">
+        <div class="test-checkbox"></div>
+        <div>🐣 <strong>"Baby" test:</strong> Could another small toy animal fit inside? Is there room for a family?</div>
+      </div>
+      <div class="test-item">
+        <div class="test-checkbox"></div>
+        <div>👁️ <strong>"Predator" test:</strong> Step back and look — can you see the animal from outside? Is it hidden?</div>
+      </div>
+    </div>
+    If a test fails, IMPROVE the shelter! Real animals do this too — they adjust and rebuild.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Share &amp; Discuss (5 min)</strong><br>
+    Each child presents their shelter. Ask: <em>"What did you build? What does it protect your animal from? What would you change to make it even better?"</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "What would happen if a bird didn't have a nest?"
+    <p class="discussion-hint">Without a nest, a bird's eggs would fall to the ground and break, and baby birds would be exposed to rain, cold, and predators. The nest keeps the family safe, warm, and together — it's like a nursery and a fortress!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "Humans build houses for shelter. What's one thing a human house does that an animal's shelter also needs to do?"
+    <p class="discussion-hint">Both need to keep out rain, cold, and wind — provide safety from danger — and have space for the family! Animals are clever builders: beavers build dams, birds weave nests, some fish dig holes in sand. We're not so different from animals after all!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🦫 <strong>Beaver Dam Challenge:</strong> Can you build a dam with sticks across a shallow tray of water? Will it hold? Beavers do this to make a safe pond for their lodge!</li>
+      <li>🕸️ <strong>Spider Web Hunt:</strong> Go outside and find a spider web. What materials did the spider use? How is it like a shelter?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A House Is a House for Me"</em> by Mary Ann Hoberman — a classic exploration of all kinds of animal homes!</li>
+      <li>🗺️ <strong>Animal Home Map:</strong> Draw a neighborhood — but for animals! Where does the bird live? The rabbit? The bear? Label each home.</li>
+      <li>🏘️ <strong>Real vs. Model:</strong> Look up pictures of real bird nests, beaver dams, and termite mounds. How close did your model get?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>All household materials — nothing to buy.</strong> Sticks and twigs from the yard are perfect for bird nests. Raid the blanket closet for bear dens!</li>
+      <li><strong>This is an engineering activity as well as science.</strong> When students test their shelters and find they fail, encourage them to iterate and improve — that's real science and engineering thinking. Failure is part of the process!</li>
+      <li><strong>Connect back to humans:</strong> Our houses are our "shelters" too — what does our house protect us from? Rain, wind, cold, danger? Help kids see that humans and animals have the same survival needs.</li>
+      <li><strong>Discuss different real animal shelters:</strong> birds' nests, beaver dams, rabbit burrows, spider webs, termite mounds, prairie dog towns. Each one is perfectly designed for that animal's needs.</li>
+      <li><strong>Vocab to reinforce:</strong> shelter, predator, protection, den, burrow, nest, habitat</li>
+      <li><strong>Assessment tip:</strong> Can the child name at least two things a shelter protects an animal from? Can they explain why their shelter works (or what it needs to work better)? That's the learning goal.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🏠 My Animal Shelter — Student Worksheet</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🐾 My animal is: _________________________________</h3>
+    <h3>🏠 The type of shelter I built: _________________________________</h3>
+
+    <div class="tip-box" style="margin-bottom: 16px;">
+      📝 <strong>Parent/Scribe Note:</strong> For Task 2, help your child label their drawing by writing the material names for them as they point and tell you what each part is. Kindergartners can dictate — you can be their pencil!
+    </div>
+
+    <h3>✏️ Task 1 — Draw your shelter!</h3>
+    <p style="font-size:10pt; color:#555; margin-bottom:4px;">Draw your shelter with your animal inside. Show what the shelter looks like from the outside.</p>
+    <div class="worksheet-draw-box" style="min-height:220px;">
+      &nbsp;
+    </div>
+
+    <h3>🏷️ Task 2 — Label 3 materials you used:</h3>
+    <p style="font-size:10pt; color:#555; margin-bottom:4px;">Add arrows to your drawing above and write (or have a grown-up write) the name of each material.</p>
+    <div style="display:flex; gap:16px; margin:8px 0;">
+      <span style="flex:1; border-bottom:2px solid #2e7d32; min-height:28px;">&nbsp;</span>
+      <span style="flex:1; border-bottom:2px solid #2e7d32; min-height:28px;">&nbsp;</span>
+      <span style="flex:1; border-bottom:2px solid #2e7d32; min-height:28px;">&nbsp;</span>
+    </div>
+
+    <h3>💬 Task 3 — Fill in the sentence:</h3>
+    <p style="font-size: 13pt; line-height: 2.5; border-bottom: 1px solid #bbb; margin-bottom: 20px;">
+      My shelter protects my animal from _______________________________________.
+    </p>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="ak-green">
+        <h3>💬 Discussion Question 1</h3>
+        <p><strong>Q: "What would happen if a bird didn't have a nest?"</strong></p>
+        <p><strong>A:</strong> Without a nest, a bird's eggs would fall to the ground and break, and baby birds would be exposed to rain, cold, and predators. The nest keeps the family safe, warm, and together — it's like a nursery and a fortress!</p>
+
+        <h3>💬 Discussion Question 2</h3>
+        <p><strong>Q: "Humans build houses for shelter. What's one thing a human house does that an animal's shelter also needs to do?"</strong></p>
+        <p><strong>A:</strong> Both need to keep out rain/cold/wind, provide safety from danger, and have space for the family. Animals are incredibly clever builders — beavers build dams, birds weave nests, some fish dig holes in sand. Humans and animals share the same core survival needs!</p>
+
+        <h3>✏️ Worksheet Fill-In</h3>
+        <p><strong>"My shelter protects my animal from ___."</strong><br>
+        Accept any of the following (great answers include multiple): rain, cold, wind, predators, danger, getting wet, the cold ground, being found by enemies, bad weather. A child who names 2 or more is demonstrating excellent understanding.</p>
+
+        <h3>🧪 Shelter Test Expectations</h3>
+        <ul>
+          <li>🌧️ <strong>Rain test:</strong> The shelter should provide cover. If it doesn't, guide the student to add a "roof" layer (a box lid, extra towel, or leaves).</li>
+          <li>🐣 <strong>Baby test:</strong> If the shelter is too small, encourage expanding it. Real animals often enlarge their nests/burrows as their family grows!</li>
+          <li>👁️ <strong>Predator test:</strong> If the animal is visible, encourage adding walls or a "door." Rabbits' burrow entrances are often disguised with leaves and sticks.</li>
+        </ul>
+
+        <h3>✅ What Success Looks Like</h3>
+        <ul>
+          <li>Student built a shelter that covers/hides the animal in some way</li>
+          <li>Student can name at least 2 things a shelter protects an animal from</li>
+          <li>Student can explain the function of their shelter (not just describe what it looks like)</li>
+          <li>Bonus: Student made at least one improvement after a failed test</li>
+        </ul>
+
+        <h3>🐾 Real-World Animal Shelter Reference</h3>
+        <ul>
+          <li>🐦 <strong>Bird nest:</strong> Woven from twigs, grass, mud — keeps eggs warm and off the ground</li>
+          <li>🐇 <strong>Rabbit burrow:</strong> Tunnels underground — warm, hidden from foxes and hawks</li>
+          <li>🐻 <strong>Bear den:</strong> Cave, hollow log, or dug-out space — for hibernating through winter</li>
+          <li>🐟 <strong>Fish hiding spot:</strong> Underwater plants and rocks — hides from larger fish predators. Model: cup + crumpled paper (rocks) + plant sprigs</li>
+          <li>🦫 <strong>Beaver lodge:</strong> Built from sticks and mud in the middle of a pond — entrance is underwater for protection!</li>
+          <li>🕷️ <strong>Spider web:</strong> A trap AND a home — some spiders hide in curled leaves attached to their web</li>
+          <li>🐜 <strong>Termite mound:</strong> Can be taller than a human — temperature-regulated inside!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_LuM_p2MaEWI" data-content-selector="body"></script>
+</body>
+</html>

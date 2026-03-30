@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build It! — K Engineering Design Unit 1, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #6a1b9a;
+      padding-bottom: 10px;
+      color: #6a1b9a;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f3e5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ce93d8;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #6a1b9a;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #4a148c;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #f3e5f5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #6a1b9a;
+    }
+    .procedure-step strong { color: #4a148c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #6a1b9a; }
+    .extension-box {
+      background: #ede7f6;
+      border: 1px solid #b39ddb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .compare-table th {
+      padding: 12px;
+      font-size: 13pt;
+      border: 3px solid #4a148c;
+      text-align: center;
+    }
+    .compare-table .draw-header { background: #8e24aa; color: white; }
+    .compare-table .build-header { background: #6a1b9a; color: white; }
+    .compare-table td {
+      border: 2px solid #ce93d8;
+      padding: 10px;
+      height: 220px;
+      vertical-align: top;
+      font-size: 10pt;
+      color: #999;
+    }
+    .callout-box {
+      background: #4a148c;
+      color: white;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 15px 0;
+    }
+    .callout-box .callout-head { font-size: 14pt; font-weight: bold; margin-bottom: 6px; }
+    .worksheet-box {
+      border: 3px solid #6a1b9a;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .worksheet-box h2 { margin-top: 0; }
+    .draw-box {
+      border: 2px solid #ce93d8;
+      border-radius: 8px;
+      min-height: 180px;
+      margin: 10px 0;
+      background: #fafafa;
+      position: relative;
+    }
+    .draw-box .corner-label {
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .write-lines p { border-bottom: 1px solid #bbb; height: 36px; margin: 0; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .discussion-hint { font-style: italic; color: #555; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px;
+      background: #6a1b9a; color: white; border: none;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #4a148c; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .callout-box, .worksheet-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_3wFhXYe_Z-Q">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🏗️ Build It!</h1>
+  <p class="subtitle">Engineering Design — Build It! | Unit 1, Lesson 4 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔧 <strong>Subject:</strong> Engineering Design — Build It!</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🏗️ 🌉 🚗</div>
+    <div class="caption">Time to build! Remember your drawing from Lesson 3 — let's see how your plan comes to life!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>K-2-ETS1-2</strong> — Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><strong>BUILD</strong> the bridge they designed in Lesson 3</li>
+    <li><strong>COMPARE</strong> the finished bridge to their original drawing</li>
+    <li><strong>DESCRIBE</strong> what was different, what surprised them, and what worked unexpectedly</li>
+  </ul>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Now comes the exciting part — turning your drawing into a real, physical thing! But here's a secret that every engineer knows: <strong>your first built version almost never looks exactly like your drawing.</strong> That's completely normal! That gap between "what I drew" and "what I built" is actually super valuable — it teaches you things you couldn't have learned any other way.</p>
+
+  <div class="callout-box">
+    <div class="callout-head">🧠 The Engineer's Secret</div>
+    <p style="margin: 0;">When things go differently than your drawing, you're not failing — you're learning. Every surprise tells you something real about how materials work, what shapes are strong, and what your design actually needed. Save your drawing and compare it to your bridge at the end. The differences are the most interesting part!</p>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> prototype, build, structure, test, compare, iteration
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🌉 For Building</h3>
+    <ul>
+      <li>Lesson 3 bridge drawing (essential — keep it nearby!)</li>
+      <li>3–5 sheets of plain copy paper</li>
+      <li>12 inches of tape (masking or clear)</li>
+      <li>8–10 toothpicks</li>
+      <li>Small toy car OR a marble (the "vehicle" to cross the bridge)</li>
+      <li>A tray, container lid, or baking sheet filled with about 1 inch of water (the "puddle")</li>
+    </ul>
+    <h3>📸 For Documenting</h3>
+    <ul>
+      <li>Phone/camera (optional — take a photo of the finished bridge to compare)</li>
+      <li>Student worksheet (last pages of this lesson)</li>
+      <li>Pencil or crayons</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Review Your Drawing (3 min)</strong><br>
+    Get out the bridge drawing from Lesson 3. Review it together:
+    <ul>
+      <li>What was your design plan?</li>
+      <li>What parts did you include? What do they each do?</li>
+      <li>Are there any parts of the plan you want to change before starting? (That's allowed — engineers revise drawings!)</li>
+    </ul>
+    Say: <em>"This drawing is your plan. Try to build it as closely as you can — even if you think it might not work."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Set Up the Puddle (2 min)</strong><br>
+    Fill the tray or container with about 1 inch of water. Measure the width — this is the gap your bridge must span. Write it on the worksheet.<br>
+    <em>Important: the bridge must span the gap without any part touching the water below.</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — BUILD! (15–20 min)</strong><br>
+    Build time! A few guidelines:
+    <ul>
+      <li>Keep your drawing visible — glance at it as you build</li>
+      <li>Use ONLY the allowed materials: paper, tape, toothpicks</li>
+      <li>If something doesn't work as planned, note it — don't fix your drawing yet, just keep building</li>
+      <li>If your design doesn't work at all: pause, look at the drawing, and make ONE small change</li>
+    </ul>
+    <em>Parent/teacher: observe and take notes on what students struggle with. These struggles are great discussion material later!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Quick Test (5 min)</strong><br>
+    Place the finished bridge across the puddle. Send the toy car (or marble) across. Observe:
+    <ul>
+      <li>Did the car make it across? ✅ or ❌</li>
+      <li>Did the bridge touch the water? ✅ or ❌</li>
+      <li>Did the bridge hold its shape? ✅ or ❌</li>
+    </ul>
+    Don't try to fix anything yet — we'll do official testing and fixing in Lesson 5. For now, just observe!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Compare Drawing vs. Reality (8–10 min)</strong><br>
+    This is the most important step! Lay the drawing next to the actual bridge (or photo of it) and fill in the worksheet. Guide with these questions:
+    <ul>
+      <li><em>"What is the same between your drawing and your bridge?"</em></li>
+      <li><em>"What is different? Why did it end up different?"</em></li>
+      <li><em>"What surprised you? Did anything work better or worse than you expected?"</em></li>
+      <li><em>"If you drew a new drawing of your bridge RIGHT NOW — what would be different from your Lesson 3 drawing?"</em></li>
+    </ul>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Was building harder or easier than you thought when you were drawing?</li>
+      <li>What was the hardest part to build? Why do you think it was hard?</li>
+      <li>Did you learn anything about paper or tape that you didn't know before?</li>
+      <li>If you had to give someone else your drawing and they built it — what would they need to know that wasn't in the drawing?</li>
+      <li>Why do you think engineers build a "prototype" (first version) before making the final product?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📸 <strong>Photo Documentation:</strong> Take photos at each stage of building. Engineers call this "build documentation" — it helps them remember what they did and learn from it.</li>
+      <li>📏 <strong>Measure your bridge:</strong> How long is it? How wide? How heavy does it feel? Measuring real properties helps engineers understand their designs.</li>
+      <li>🏗️ <strong>Build Version 2:</strong> Now that you've built once, draw a NEW design using what you learned. Then build that one too. Version 2 is almost always better!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Most Magnificent Thing"</em> by Ashley Spires — about a girl who builds something, finds it's not right, and learns from the process.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Resist fixing their bridge for them.</strong> If it collapses, ask: "What do you think happened? What could we try?" One coaching question beats five suggestions.</li>
+      <li><strong>Celebrate the "failures":</strong> If the bridge doesn't work, frame it positively: "This is exactly what engineers deal with! Every version that doesn't work teaches you something. What did this one teach you?"</li>
+      <li><strong>The comparison is the point:</strong> The most valuable moment in this lesson is Step 5 — comparing drawing to reality. Don't skip it, even if building takes a long time. The reflection is as important as the construction.</li>
+      <li><strong>Save both documents:</strong> Keep Lesson 3 drawing AND the Lesson 4 worksheet together. Students will use them in Lesson 5 (testing) and Lesson 6 (presentation).</li>
+      <li><strong>Assessment:</strong> Can students identify at least two differences between their drawing and their built bridge, and explain WHY the difference happened? That's success for Lesson 4.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2>🏗️ Student Worksheet — Lesson 4: Build It!</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>📏 Setup Notes</h3>
+      <p>Puddle width: _____________ inches/cm &nbsp;&nbsp;&nbsp; My bridge needs to be at least: _____________ inches/cm long</p>
+
+      <h3>🎨 Draw Your ACTUAL Bridge (After Building)</h3>
+      <p style="font-size: 10pt; color: #555;">Draw what you actually BUILT — not what you planned. Label what's the same and different from your Lesson 3 drawing.</p>
+      <div class="draw-box" style="min-height: 200px;">
+        <span class="corner-label">Draw the bridge you actually built here</span>
+      </div>
+
+      <h3>🔄 Drawing vs. Reality</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 10px 0;">
+        <tr>
+          <th style="background: #8e24aa; color: white; padding: 10px; border: 2px solid #4a148c; width: 50%; text-align: center;">📝 In My DRAWING, I planned…</th>
+          <th style="background: #6a1b9a; color: white; padding: 10px; border: 2px solid #4a148c; text-align: center;">🏗️ In my BRIDGE, I actually built…</th>
+        </tr>
+        <tr>
+          <td style="border: 2px solid #ce93d8; padding: 10px; height: 50px; vertical-align: top;"></td>
+          <td style="border: 2px solid #ce93d8; padding: 10px; height: 50px; vertical-align: top;"></td>
+        </tr>
+        <tr style="background: #f3e5f5;">
+          <td style="border: 2px solid #ce93d8; padding: 10px; height: 50px; vertical-align: top;"></td>
+          <td style="border: 2px solid #ce93d8; padding: 10px; height: 50px; vertical-align: top;"></td>
+        </tr>
+        <tr>
+          <td style="border: 2px solid #ce93d8; padding: 10px; height: 50px; vertical-align: top;"></td>
+          <td style="border: 2px solid #ce93d8; padding: 10px; height: 50px; vertical-align: top;"></td>
+        </tr>
+      </table>
+
+      <h3>🧪 First Test Results</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 8px 0;">
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ce93d8; width: 70%;">Did the car/marble cross the bridge?</td>
+          <td style="padding: 10px; border: 1px solid #ce93d8; text-align: center; font-size: 16pt;">✅ &nbsp; ❌</td>
+        </tr>
+        <tr style="background: #f3e5f5;">
+          <td style="padding: 10px; border: 1px solid #ce93d8;">Did the bridge touch the water?</td>
+          <td style="padding: 10px; border: 1px solid #ce93d8; text-align: center; font-size: 16pt;">✅ &nbsp; ❌</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ce93d8;">Did the bridge stay in one piece?</td>
+          <td style="padding: 10px; border: 1px solid #ce93d8; text-align: center; font-size: 16pt;">✅ &nbsp; ❌</td>
+        </tr>
+      </table>
+
+      <h3>😮 What surprised me:</h3>
+      <div class="write-lines">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🔄 What to Look for in the Comparison Table</h3>
+      <p class="discussion-hint">Common differences students notice between drawing and built bridge:</p>
+      <ul>
+        <li><strong>Paper folding:</strong> Drawing showed flat paper; built version needed folds to be stiff enough</li>
+        <li><strong>Toothpick placement:</strong> Drawing had them in one spot; built version needed them elsewhere for balance</li>
+        <li><strong>Size:</strong> Drawing might have shown something too short or too long for the actual puddle width</li>
+        <li><strong>Tape use:</strong> Drawing often underestimates how much tape is needed to hold things together</li>
+      </ul>
+
+      <h3>💡 Coaching Notes</h3>
+      <ul>
+        <li>If student can't identify differences: Ask "Did you use the same amount of tape as in your drawing? Look closely at the supports."</li>
+        <li>If bridge failed completely: Focus on what information they gained — "Now you know that flat paper won't span that distance. What would be different in Version 2?"</li>
+        <li>If bridge worked perfectly: Ask "What would you do differently if you had to build this faster? With even less tape?"</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student completed a "draw your actual bridge" sketch (even if rough)</li>
+        <li>Student identified at least two differences between drawing and built bridge</li>
+        <li>Student can explain WHY at least one difference happened</li>
+        <li>Student completed first test results table</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Push & Pull Sort — Unit 1, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .action-card {
+      display: inline-block;
+      background: #fff;
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 5px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 110px;
+      vertical-align: top;
+    }
+    .action-card .emoji { font-size: 24pt; display: block; margin-bottom: 4px; }
+    .action-card .label { font-weight: bold; color: #1565c0; }
+    .push-color { border-color: #ef5350; background: #ffebee; }
+    .push-color .label { color: #c62828; }
+    .pull-color { border-color: #42a5f5; background: #e3f2fd; }
+    .pull-color .label { color: #1565c0; }
+    .sort-mat {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .sort-mat th {
+      padding: 14px;
+      font-size: 18pt;
+      border: 3px solid #333;
+      width: 50%;
+    }
+    .sort-mat .push-header { background: #ef5350; color: white; }
+    .sort-mat .pull-header { background: #42a5f5; color: white; }
+    .sort-mat td {
+      border: 3px solid #333;
+      padding: 10px;
+      height: 260px;
+      vertical-align: top;
+      font-size: 10pt;
+      color: #999;
+    }
+    .cut-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .cut-card {
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 11pt;
+      min-height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cut-card .emoji { font-size: 28pt; }
+    .cut-card .label { font-weight: bold; margin-top: 4px; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-column h3 { font-size: 13pt; text-align: center; }
+    .ak-push h3 { color: #c62828; border-color: #ef9a9a; }
+    .ak-pull h3 { color: #1565c0; border-color: #90caf9; }
+    .ak-column ul { list-style: none; padding-left: 0; }
+    .ak-column li { padding: 3px 0; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>👐 The Great Push &amp; Pull Sort 👐</h1>
+  <p class="subtitle">Physical Science — Unit 1, Lesson 1</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🏗️ ← → 🚂</div>
+    <div class="caption">Everything that moves gets a push or a pull — can you figure out which is which?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS2-1</strong> — Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object<br>
+    <strong>K-PS2-2</strong> — Analyze data to determine if a design solution works as intended
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Things move because something <strong>pushes</strong> them or <strong>pulls</strong> them! A push moves something <em>away</em> from you. A pull moves something <em>toward</em> you. In this lesson, your kids will explore real objects and everyday actions, then sort them into push and pull categories.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>A <strong>force</strong> is a push or a pull that makes things move, stop, or change direction. When you push something, you use force to move it away from you. When you pull something, you use force to bring it closer. Forces are invisible, but we can see what they do — they make things move! Everything that moves had a push or a pull to start it going.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> push, pull, force, motion, direction, sort
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>A toy car or ball (to push across the floor)</li>
+      <li>A wagon, sled, or laundry basket with a rope/handle (to pull)</li>
+      <li>A drawer (to push shut and pull open)</li>
+      <li>A door (push &amp; pull demonstration)</li>
+      <li>A zipper jacket or backpack</li>
+      <li>Rubber band or hair tie (to stretch/pull)</li>
+      <li>A chair (to push in, pull out from table)</li>
+    </ul>
+
+    <h3>🧰 For the Sorting Activity</h3>
+    <ul>
+      <li>Printed sorting mat (last pages of this lesson)</li>
+      <li>Printed picture cards — cut apart (included)</li>
+      <li>Scissors ✂️</li>
+      <li>Glue stick (if you want cards glued permanently)</li>
+      <li>Crayons or markers (for coloring &amp; bonus drawing)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Warm-Up: Push Me, Pull Me (5 min)</strong><br>
+    Stand up with the kids. Say: <em>"I'm going to do something, and you tell me — is it a push or a pull?"</em><br>
+    <ul>
+      <li>Push a toy car across the floor → "PUSH!"</li>
+      <li>Pull open a drawer → "PULL!"</li>
+      <li>Push a door closed → "PUSH!"</li>
+      <li>Pull a wagon toward you → "PULL!"</li>
+    </ul>
+    Let the kids take turns doing each one. Have them feel the difference in their hands.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Body Moves (5 min)</strong><br>
+    <em>"Can your body push and pull?"</em>
+    <ul>
+      <li>Push your hands against each other → PUSH</li>
+      <li>Pull a rubber band / stretch it → PULL</li>
+      <li>Push a pillow off the couch → PUSH</li>
+      <li>Pull your sibling gently by the hand → PULL</li>
+    </ul>
+    Key question: <em>"When you push, which way does the thing move? When you pull?"</em>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Sibling tip:</strong> Have one child push a ball to the other, and the other push it back. Then try pulling a blanket together from opposite ends — tug-of-war style. They'll feel the force.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Introduce the Sort (3 min)</strong><br>
+    Give each child a <strong>sorting mat</strong> (printed from page 2). Show them the picture cards. Say: <em>"Each card shows something being pushed or pulled. Your job is to figure out which it is and put it on the right side of your mat!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — The Great Sort! (10–15 min)</strong><br>
+    <ul>
+      <li>Cut out the picture cards together (great for fine motor skills!)</li>
+      <li>One card at a time — kids discuss with each other: <em>"Is this a push or a pull?"</em></li>
+      <li>Place (or glue) each card on the correct side of the sorting mat</li>
+      <li>If they disagree, that's great! Have them explain their thinking</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Check &amp; Discuss (5–10 min)</strong><br>
+    Go through each card together. Use the discussion questions below. Celebrate what they got right and gently talk through any tricky ones.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Bonus Challenge: Draw Your Own! (5 min)</strong><br>
+    On the back of the sorting mat (or a blank paper), each child draws:<br>
+    🔴 One thing they can PUSH &nbsp;&nbsp; 🔵 One thing they can PULL<br>
+    Label them and share with each other!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What does your body do when it pushes something? What about when it pulls?</li>
+      <li>Can the same thing be pushed <em>and</em> pulled? (Think about a door, a drawer, a wagon…)</li>
+      <li>What happens if you push something really hard vs. really softly?</li>
+      <li>Can you push or pull something without touching it? (Hint: think about magnets!)</li>
+      <li>What would happen if nobody ever pushed or pulled anything? Would things move on their own?</li>
+      <li>Which is easier for you — pushing or pulling? Why do you think so?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🧲 <strong>Magnet Mystery:</strong> Get a magnet and some paper clips. Can you push and pull <em>without</em> touching? That's a force too.</li>
+      <li>📐 <strong>Ramp Races:</strong> Build a ramp from a book or board. Push a car gently, then hard. How does the push strength change how far it goes?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"Forces Make Things Move"</em> by Kimberly Brubaker Bradley or <em>"Push and Pull"</em> by Patricia Murphy</li>
+      <li>🎵 <strong>Push &amp; Pull Song:</strong> Make up a song together! <em>"Push it away, pull it close — push and pull, that's how it goes!"</em></li>
+      <li>🏠 <strong>House Hunt:</strong> Walk through the house and find 5 things you push and 5 things you pull. Make a list!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Keep it physical:</strong> Kindergartners learn by doing. The more they push and pull real objects, the better the concept sticks. The sorting mat is reinforcement, not the main event.</li>
+      <li><strong>Tricky cards:</strong> Some items can be <em>both</em> push and pull (like a door or a wagon). If kids notice this, that's fantastic thinking. Praise it and discuss.</li>
+      <li><strong>Don't rush the discussion:</strong> The conversation is where the learning happens. Let siblings debate — that's science talk.</li>
+      <li><strong>For the younger sibling:</strong> If one child is pre-K, let them participate physically (pushing/pulling objects) and place cards with help. They don't need to read the labels.</li>
+      <li><strong>Assessment:</strong> Can each child correctly sort at least eight out of 12 cards? Can they explain in their own words what push and pull mean? That's success.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== SORTING MAT ====================== -->
+  <div class="page-break">
+
+    <h1>👐 Push &amp; Pull Sorting Mat 👐</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:10px;">Cut out the picture cards on the next page. Sort each one into the correct column!</p>
+
+    <table class="sort-mat">
+      <tr>
+        <th class="push-header">⬅️ PUSH ➡️<br><span style="font-size:11pt; font-weight:normal;">Moves AWAY from you</span></th>
+        <th class="pull-header">➡️ PULL ⬅️<br><span style="font-size:11pt; font-weight:normal;">Moves TOWARD you</span></th>
+      </tr>
+      <tr>
+        <td>Glue or place your PUSH cards here</td>
+        <td>Glue or place your PULL cards here</td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top:20px;">✏️ Draw Your Own!</h3>
+    <table class="sort-mat">
+      <tr>
+        <th class="push-header" style="font-size:13pt; padding:8px;">🔴 Draw something you PUSH</th>
+        <th class="pull-header" style="font-size:13pt; padding:8px;">🔵 Draw something you PULL</th>
+      </tr>
+      <tr>
+        <td style="height:180px;"></td>
+        <td style="height:180px;"></td>
+      </tr>
+    </table>
+
+  </div>
+
+  <!-- ====================== PICTURE CARDS ====================== -->
+  <div class="page-break">
+
+    <h1>✂️ Push &amp; Pull Picture Cards</h1>
+    <p style="text-align:center; font-size:10pt; color:#555;">Cut along the dashed lines. Sort each card onto your sorting mat!</p>
+
+    <div class="cut-cards">
+      <div class="cut-card">
+        <span class="emoji">🛒</span>
+        <span class="label">Pushing a shopping cart</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🚪</span>
+        <span class="label">Pulling a door open</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🛷</span>
+        <span class="label">Pulling a sled</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">⚽</span>
+        <span class="label">Kicking a ball</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🎣</span>
+        <span class="label">Reeling in a fish</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🧹</span>
+        <span class="label">Pushing a broom</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐕</span>
+        <span class="label">Dog pulling a leash</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🏐</span>
+        <span class="label">Throwing a ball</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🧲</span>
+        <span class="label">Magnet pulling a paper clip</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🪑</span>
+        <span class="label">Pushing in a chair</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🧦</span>
+        <span class="label">Pulling on your socks</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🎉</span>
+        <span class="label">Pushing a swing</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="answer-key-grid">
+        <div class="ak-column ak-push">
+          <h3>⬅️ PUSH ➡️</h3>
+          <ul>
+            <li>🛒 Pushing a shopping cart</li>
+            <li>⚽ Kicking a ball (push with your foot)</li>
+            <li>🧹 Pushing a broom</li>
+            <li>🏐 Throwing a ball (push with your hand)</li>
+            <li>🪑 Pushing in a chair</li>
+            <li>🎉 Pushing a swing</li>
+          </ul>
+        </div>
+        <div class="ak-column ak-pull">
+          <h3>➡️ PULL ⬅️</h3>
+          <ul>
+            <li>🚪 Pulling a door open</li>
+            <li>🛷 Pulling a sled</li>
+            <li>🎣 Reeling in a fish</li>
+            <li>🐕 Dog pulling a leash</li>
+            <li>🧲 Magnet pulling a paper clip</li>
+            <li>🧦 Pulling on your socks</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">💡 Notes for Tricky Cards</h3>
+      <ul>
+        <li><strong>⚽ Kicking a ball:</strong> A kick is a push with your foot! Your foot pushes the ball away.</li>
+        <li><strong>🏐 Throwing a ball:</strong> A throw is a push with your hand — you push it away from your body.</li>
+        <li><strong>🎉 Pushing a swing:</strong> You push the swing away from you. (Note: if a child says "pull" because the swing comes back — great thinking! But the person's action is a push.)</li>
+        <li><strong>🚪 Door:</strong> If a child says a door can be pushed <em>and</em> pulled — they're right. Praise this. For the card, we mean pulling it open toward you.</li>
+        <li><strong>🧲 Magnet:</strong> Great intro to forces that work without touching! A magnet pulls metal toward it.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can sort at least eight of 12 cards correctly.</li>
+        <li>Child can explain: "A push moves things away, a pull moves things toward you."</li>
+        <li>Child can demonstrate a push and a pull with their body.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

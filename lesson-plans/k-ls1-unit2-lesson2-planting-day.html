@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planting Day: What Do Seeds Need? — Unit 2, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #388e3c;
+      margin-top: 5px;
+      display: block;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+
+    /* ===== WORKSHEET STYLES ===== */
+    .cup-draw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 15px 0;
+    }
+    .cup-card {
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 10px 8px;
+      text-align: center;
+      background: #fff;
+    }
+    .cup-card .cup-label {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 11pt;
+      margin-bottom: 6px;
+    }
+    .cup-card .cup-emoji {
+      font-size: 30pt;
+      display: block;
+      margin: 6px 0;
+    }
+    .cup-draw-area {
+      border: 1px dashed #aaa;
+      border-radius: 6px;
+      height: 120px;
+      margin: 8px 0;
+      background: #fafafa;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .cup-draw-area span {
+      font-size: 8pt;
+      color: #bbb;
+      padding-bottom: 6px;
+      font-style: italic;
+    }
+    .predict-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 10pt;
+    }
+    .predict-bubble {
+      border: 2px solid #2e7d32;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    /* Observation table */
+    .obs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 10pt;
+    }
+    .obs-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 8px 10px;
+      border: 2px solid #1b5e20;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .obs-table td {
+      border: 2px solid #a5d6a7;
+      padding: 4px 6px;
+      height: 54px;
+      vertical-align: top;
+      text-align: center;
+    }
+    .obs-table td.day-label {
+      background: #e8f5e9;
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 10pt;
+      vertical-align: middle;
+      width: 60px;
+    }
+    .obs-table td.draw-cell {
+      font-size: 8pt;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .cup-card, .obs-table {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_82zBBHI6yLg">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌱 Planting Day: What Do Seeds Need? 🌱</h1>
+  <p class="subtitle">Life Science — Unit 2, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌿 <strong>Subject:</strong> Life Science — Plants &amp; Seeds</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🫘 💧 ☀️</div>
+    <div class="caption">A tiny seed has everything it needs to become a plant — we just have to give it the right conditions!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Seeds are like tiny sleeping plants! Inside every seed is everything needed to start a new plant — but it won't wake up without the right conditions. In this lesson, students will plant three cups of seeds differently and <strong>predict</strong> which ones will grow. Over the next week, they'll <strong>observe</strong> what happens and discover what seeds truly need to sprout.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>The process of a seed beginning to grow is called <strong>germination</strong>. For germination to happen, seeds need three key things:</p>
+  <ul>
+    <li>💧 <strong>Water (moisture)</strong> — softens the seed coat and activates growth</li>
+    <li>🌡️ <strong>Warmth</strong> — provides the energy to trigger the growth process</li>
+    <li>💨 <strong>Air</strong> — seeds need oxygen to fuel their early growth</li>
+  </ul>
+  <p>Soil provides nutrients that help a plant grow big and strong <em>after</em> germination — but a seed doesn't need soil to start sprouting! That's why seeds can germinate on a wet paper towel. The dry cup won't sprout at all because without water, the seed stays dormant (asleep).</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> seed, germinate, sprout, predict, observe, root, soil, moisture, dormant
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🌱 For Each Experiment Setup</h3>
+    <ul>
+      <li>3–6 dried bean seeds (kidney beans, lima beans, or black beans from the pantry work great!)</li>
+      <li>3 clear plastic cups (clear is best — kids can watch roots develop through the sides!)</li>
+      <li>Potting soil</li>
+      <li>Paper towels</li>
+      <li>Water</li>
+      <li>Sunny windowsill</li>
+      <li>Markers for labeling cups</li>
+    </ul>
+
+    <h3>✏️ For the Worksheet</h3>
+    <ul>
+      <li>Printed worksheet pages (this lesson, last section)</li>
+      <li>Crayons or markers</li>
+      <li>Pencil</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduction: What Does a Seed Need? (5 min)</strong><br>
+    Hold up a dried bean seed. Ask: <em>"What is this? What does it have inside it?"</em> Tell students it's a sleeping plant! Ask: <em>"What do YOU need when you're sleeping and want to wake up and grow?"</em> (Food, water, warmth…) Guide kids to think: what might a tiny seed need to wake up?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Set Up the Three Cups (10–15 min)</strong><br>
+    Label each cup clearly with a marker:<br><br>
+    🟢 <strong>Cup 1: "Soil + Water"</strong> — Fill with potting soil, push 1–2 bean seeds about 1 inch deep, water gently.<br>
+    🟡 <strong>Cup 2: "Soil Only"</strong> — Fill with dry potting soil, push in 1–2 seeds. <em>Do NOT add any water.</em><br>
+    🔵 <strong>Cup 3: "No Soil + Water"</strong> — Fold a damp paper towel, place it in the bottom of the cup, tuck 1–2 bean seeds inside or against the edge of the cup. Keep the paper towel moist.<br><br>
+    Place all three cups in the <strong>same sunny windowsill</strong> so light and temperature are equal for all three.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Pro tip:</strong> If using clear cups, press the seeds against the inner wall so students can see root and shoot development from the outside — much more exciting than digging around in soil!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Make Predictions (5 min)</strong><br>
+    Before anything happens, ask the <strong>Discussion Question</strong> (below). Have each student circle YES or NO for each cup on their worksheet. There are no wrong answers right now — that's what science is for! Write down their predictions together.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Start the Observation Journal (5 min)</strong><br>
+    Look at all three cups right now — Day 1. Nothing has happened yet! Have students draw what they see for Day 1 on their observation chart. Model saying: <em>"I observe that the seeds are just sitting there. The paper towel looks wet. The soil looks dry in Cup 2."</em> Good scientists describe what they see, even when nothing is happening yet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Daily Check-Ins (Ongoing — Lessons 3–6)</strong><br>
+    Each morning for the next week, check the cups together! Use the observation chart to record what they see:<br>
+    <ul>
+      <li>Has anything changed? Any green poking through?</li>
+      <li>Can you see a root growing through the clear cup?</li>
+      <li>Draw what you observe — even if it's "nothing happened today"!</li>
+    </ul>
+    Keep the paper towel in Cup 3 <strong>moist</strong> (not soaking) throughout the week.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Before planting — make a prediction:</strong>
+    <ul>
+      <li>
+        "Which cup do you think will grow a plant first? Why?"
+        <span class="discussion-hint">✨ Both Cup 1 (Soil + Water) AND Cup 3 (No Soil + Water) should sprout! Seeds need moisture and warmth — soil helps roots anchor and feed the plant later, but isn't strictly needed to germinate. Cup 2 (Soil Only, no water) won't sprout because there's no moisture to wake the seed up.</span>
+      </li>
+    </ul>
+
+    <strong>🗣️ During check-ins — observe and wonder:</strong>
+    <ul>
+      <li>
+        "What do you notice is different about the cups today?"
+        <span class="discussion-hint">✨ Guide kids to describe changes: color, size, anything poking out, roots showing through the clear cup, etc.</span>
+      </li>
+      <li>
+        "Why do you think Cup 2 isn't growing?"
+        <span class="discussion-hint">✨ No water = no germination. The seed is dormant (still sleeping) because it can't activate without moisture.</span>
+      </li>
+      <li>
+        "Cup 3 has no soil — but it's sprouting! How is that possible?"
+        <span class="discussion-hint">✨ Seeds don't need soil to start growing — they have their own food stored inside! Soil becomes important later for the plant to grow tall and healthy. Right now the seed just needs water, warmth, and air.</span>
+      </li>
+      <li>
+        "What do you think will happen to the sprout in Cup 3 if it keeps growing with no soil?"
+        <span class="discussion-hint">✨ It will eventually run out of nutrients. Soil is what feeds a plant long-term. This is a great preview for future lessons!</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌡️ <strong>Temperature Test:</strong> Set up a 4th cup identical to Cup 1, but put it in a cold dark spot (like a closet or fridge). Does it grow? Explore how warmth affects germination.</li>
+      <li>🔦 <strong>Light vs. Dark:</strong> Try two identical "Soil + Water" cups — one on the sunny sill, one in a dark cabinet. Which sprouts first? (Spoiler: darkness doesn't stop germination, but affects what happens after!)</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Tiny Seed"</em> by Eric Carle, or <em>"From Seed to Plant"</em> by Gail Gibbons</li>
+      <li>🎨 <strong>Seed Art:</strong> Press dried bean seeds onto paper and trace their shapes. Compare shapes of different seeds (sunflower, bean, pea, corn).</li>
+      <li>📓 <strong>Science Journal:</strong> Make a simple folded-paper journal to draw the experiment results each day — good practice for scientific record-keeping!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <strong>⚠️ Don't throw away the cups!</strong> This experiment continues across Lessons 3–6. The cups are your ongoing data! Check them together each morning and keep updating the observation chart.
+    <br><br>
+    <ul>
+      <li><strong>Label clearly:</strong> Use a marker to write directly on the cups: <em>"Soil + Water"</em>, <em>"Soil Only"</em>, and <em>"No Soil + Water"</em> so everyone always knows which is which.</li>
+      <li><strong>Use clear cups:</strong> Being able to see the roots push through the side of the cup is one of the most magical moments for young learners. If you only have opaque cups, try pressing a seed against a wet paper towel in a zip-lock bag taped to the window instead.</li>
+      <li><strong>Make it a morning routine:</strong> Check the cups first thing each morning before other activities. Consistency builds the habit of scientific observation.</li>
+      <li><strong>Refresh Cup 3:</strong> Re-dampen the paper towel every day or two so it doesn't dry out. Cup 2 (Soil Only) stays dry on purpose — don't accidentally water it!</li>
+      <li><strong>The science:</strong> Germination requires moisture, warmth, and air. Soil provides nutrients and structure for long-term plant growth — but the seed itself contains enough stored food energy to sprout without it. That's why Cup 3 (paper towel) will sprout just like Cup 1! Cup 2 will stay dormant the whole week.</li>
+      <li><strong>Timing:</strong> Most bean seeds germinate in 3–7 days under warm, moist conditions. If it's taking longer, check that the seeds aren't waterlogged (too much water = no air) and that the space is warm enough.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌱 Planting Day Worksheet 🌱</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2>🖍️ Draw the Three Cups</h2>
+    <p style="font-size:10pt; color:#555; margin-bottom:10px; text-align:center;">Draw what each cup looks like on Planting Day!</p>
+
+    <div class="cup-draw-grid">
+      <div class="cup-card">
+        <div class="cup-label">Cup 1<br>Soil + Water 💧</div>
+        <div class="cup-draw-area"><span>draw here</span></div>
+        <div class="predict-row">
+          Will it grow?
+          <span class="predict-bubble">YES</span>
+          <span class="predict-bubble">NO</span>
+        </div>
+      </div>
+      <div class="cup-card">
+        <div class="cup-label">Cup 2<br>Soil Only 🏜️</div>
+        <div class="cup-draw-area"><span>draw here</span></div>
+        <div class="predict-row">
+          Will it grow?
+          <span class="predict-bubble">YES</span>
+          <span class="predict-bubble">NO</span>
+        </div>
+      </div>
+      <div class="cup-card">
+        <div class="cup-label">Cup 3<br>No Soil + Water 🌊</div>
+        <div class="cup-draw-area"><span>draw here</span></div>
+        <div class="predict-row">
+          Will it grow?
+          <span class="predict-bubble">YES</span>
+          <span class="predict-bubble">NO</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:10pt; text-align:center; color:#555; font-style:italic; margin: 6px 0 16px 0;">Circle <strong>YES</strong> or <strong>NO</strong> for each cup — these are your <em>predictions</em>! (Make your best guess!)</p>
+
+    <h2>📋 My Observation Chart</h2>
+    <p style="font-size:10pt; color:#555; margin-bottom:10px; text-align:center;">Each day, draw what you see in each cup. Even if nothing changed — draw that too! Good scientists always record their observations.</p>
+
+    <table class="obs-table">
+      <thead>
+        <tr>
+          <th style="width:60px;">Day</th>
+          <th>☁️ Cup 1: Soil + Water</th>
+          <th>🏜️ Cup 2: Soil Only</th>
+          <th>💧 Cup 3: No Soil + Water</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="day-label">Day 1<br><span style="font-weight:normal; font-size:8pt;">Today!</span></td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+        <tr>
+          <td class="day-label">Day 2</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+        <tr>
+          <td class="day-label">Day 3</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+        <tr>
+          <td class="day-label">Day 4</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+        <tr>
+          <td class="day-label">Day 5</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+        <tr>
+          <td class="day-label">Day 6</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+        <tr>
+          <td class="day-label">Day 7</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+          <td class="draw-cell">draw what you see</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 18px;">💭 What did I learn?</h3>
+    <p style="font-size:10pt; color:#444;">After a week, complete these sentences:</p>
+    <p style="font-size:11pt; border-bottom: 1px solid #aaa; padding-bottom: 4px; margin-bottom: 14px;">
+      The cup that grew first was: _______________________________
+    </p>
+    <p style="font-size:11pt; border-bottom: 1px solid #aaa; padding-bottom: 4px; margin-bottom: 14px;">
+      The cup that did NOT grow was: ____________________________
+    </p>
+    <p style="font-size:11pt; border-bottom: 1px solid #aaa; padding-bottom: 4px; margin-bottom: 14px;">
+      I think seeds need: ________________________________________
+    </p>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🌱 Prediction Answers</h3>
+      <ul>
+        <li><strong>Cup 1 (Soil + Water) → YES, it will grow.</strong> This is the control — soil, water, warmth, and air. All conditions for germination are met.</li>
+        <li><strong>Cup 2 (Soil Only, no water) → NO, it will NOT grow.</strong> No moisture = the seed stays dormant. It might look fine, but nothing will happen.</li>
+        <li><strong>Cup 3 (No Soil + Water) → YES, it will grow!</strong> This is the surprising one. Seeds contain their own stored food energy — they don't need soil to germinate! The wet paper towel provides moisture, the windowsill provides warmth, and air does the rest.</li>
+      </ul>
+
+      <h3 style="margin-top: 16px;">📋 What to Expect in the Observation Chart</h3>
+      <ul>
+        <li><strong>Days 1–2:</strong> Nothing visible yet. Seeds are absorbing water and beginning to swell. Cup 2 seeds look unchanged.</li>
+        <li><strong>Days 3–5:</strong> Cups 1 and 3 should begin showing root tips (white, thread-like). Cup 3 roots may be visible through the clear cup wall against the paper towel. Cup 2: still nothing.</li>
+        <li><strong>Days 5–7:</strong> Shoots (green stems) begin emerging in Cups 1 and 3. Roots are increasingly visible in Cup 3 and may show through the clear cup walls in Cup 1. Cup 2 remains dormant.</li>
+      </ul>
+
+      <h3 style="margin-top: 16px;">✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can predict (with reasoning) which cups will grow.</li>
+        <li>Student records observations each day — even "no change" is a valid scientific observation.</li>
+        <li>Student can explain: <em>"Seeds need water and warmth to grow. Cup 2 didn't grow because it had no water."</em></li>
+        <li>Student is surprised (and delighted!) that Cup 3 sprouted without any soil — this is the "aha" moment of the lesson!</li>
+      </ul>
+
+      <h3 style="margin-top: 16px;">🔬 Sentence Completions (Sample Answers)</h3>
+      <ul>
+        <li><strong>"The cup that grew first was…"</strong> → Cup 1 or Cup 3 (both should sprout; Cup 3 sometimes sprouts faster because roots can be seen immediately)</li>
+        <li><strong>"The cup that did NOT grow was…"</strong> → Cup 2 (Soil Only, no water)</li>
+        <li><strong>"I think seeds need…"</strong> → water (and warmth / air)</li>
+      </ul>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_82zBBHI6yLg" data-content-selector="body"></script>
+</body>
+</html>

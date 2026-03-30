@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marble Run Madness — Unit 1, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .forces-reminder {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+    .force-box {
+      text-align: center;
+      background: #fff3e0;
+      border: 2px solid #ff6f00;
+      border-radius: 10px;
+      padding: 12px;
+      width: 30%;
+      min-width: 140px;
+      margin: 5px;
+    }
+    .force-box .emoji { font-size: 36pt; display: block; margin-bottom: 5px; }
+    .force-box .label { font-weight: bold; color: #e65100; font-size: 11pt; }
+    .force-box .desc { font-size: 9pt; color: #666; margin-top:4px; }
+    .worksheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .worksheet-table th {
+      background: #d32f2f;
+      color: white;
+      padding: 10px;
+      border: 2px solid #333;
+      font-size: 11pt;
+    }
+    .worksheet-table td {
+      border: 2px solid #333;
+      padding: 10px;
+      vertical-align: top;
+      font-size: 10pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🎢 Marble Run Madness 🎢</h1>
+  <p class="subtitle">Physical Science — Unit 1, Lesson 6 (Capstone)</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces</span>
+    <span>🏆 <strong>Capstone Lesson</strong></span>
+  </div>
+
+  <div class="tip-box">
+    🏆 <strong>Capstone Lesson</strong> — This final lesson brings together all concepts from the unit. Students apply everything they've learned.
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🎢 🔴 🏁</div>
+    <div class="caption">Put all your push & pull knowledge together — build the ultimate marble run!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS2-1</strong> — Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object<br>
+    <strong>K-PS2-2</strong> — Analyze data to determine if a design solution works as intended
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>This is it — the grand finale of Unit 1. Your kids have learned about pushes, pulls, forces, magnets, and wind. Now they'll apply <em>everything</em> they've learned by building a <strong>marble run</strong> — a track made of tubes and ramps where gravity pulls the marble down and the track pushes it along the path. They'll explore how the angle of a ramp changes the marble's speed, how curves affect direction, and how to solve problems when the marble gets stuck. It's hands-on physics at its finest.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>When a marble sits at the top of a ramp, gravity pulls it downward. As it rolls, the ramp pushes back against it, guiding its path. The steeper the ramp, the faster the marble rolls. Curves in the track change the marble's direction. If the track is too flat, the marble slows down and stops. If it's too steep, the marble might jump off! Building a marble run teaches you how forces work together — gravity pulls down, the track pushes the marble along, and friction (rubbing) slows it down.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> gravity, pull, push, force, ramp, slope, speed, direction, track
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>Cardboard tubes (paper towel rolls, wrapping paper tubes, or pool noodles cut in half)</li>
+      <li>Masking tape or painter's tape (LOTS of it!)</li>
+      <li>1 marble per child (or small bouncy ball)</li>
+      <li>Small cup or bowl (to catch the marble at the end)</li>
+      <li>Books, boxes, or chairs (to prop up ramps at different heights)</li>
+      <li>Scissors (to cut tubes to different lengths)</li>
+    </ul>
+
+    <h3>🧰 Optional Add-Ons</h3>
+    <ul>
+      <li>Cardboard pieces (to make ramps)</li>
+      <li>Funnels (for marble to drop through)</li>
+      <li>Plastic bottles (cut in half lengthwise for chutes)</li>
+      <li>Toilet paper tubes (for tunnels)</li>
+      <li>Stopwatch or timer (to time marble runs)</li>
+    </ul>
+
+    <h3>📋 Printables</h3>
+    <ul>
+      <li>Student Worksheet (included at end of lesson)</li>
+      <li>Crayons/pencils for recording</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Review: What Makes Things Move? (5 min)</strong><br>
+    Before building, remind kids of what they've learned:<br>
+    <div class="forces-reminder">
+      <div class="force-box">
+        <span class="emoji">👐</span>
+        <span class="label">PUSH</span>
+        <span class="desc">Moves things away</span>
+      </div>
+      <div class="force-box">
+        <span class="emoji">🤲</span>
+        <span class="label">PULL</span>
+        <span class="desc">Moves things toward</span>
+      </div>
+      <div class="force-box">
+        <span class="emoji">🌍</span>
+        <span class="label">GRAVITY</span>
+        <span class="desc">Pulls things <em>down</em></span>
+      </div>
+    </div>
+    Say: <em>"Today, we're using <em>all</em> of these forces. Gravity will pull the marble down, and the ramp will push it along the path."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Simple Ramp Experiment (5 min)</strong><br>
+    Start simple to explore the concept:<br>
+    <ul>
+      <li>Lay one tube flat on the floor. Roll the marble through. How fast does it go? (Slow.)</li>
+      <li>Prop one end up on a book. Roll the marble again. How fast now? (Faster.)</li>
+      <li>Prop it higher (two to three books). Roll again. Even faster.</li>
+    </ul>
+    Key question: <em>"Why does the marble go faster on a steeper ramp?"</em> → Gravity pulls <em>harder</em> down a steep slope.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Sibling tip:</strong> One child drops the marble, the other watches where it goes. Then switch! Teamwork makes the experiment work.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Build Your Marble Run! (20 min)</strong><br>
+    Now for the fun part — free build time!<br>
+    <ul>
+      <li>Each child (or both together) creates a marble run using tubes, ramps, and tape</li>
+      <li>Goal: Get the marble from START (high up) to FINISH (cup on the ground)</li>
+      <li>Tape tubes to the wall, chair legs, or stack of books</li>
+      <li>Connect multiple tubes to make the path longer</li>
+      <li>Test as you go! Does the marble make it through? If it gets stuck, adjust the angle or reconnect the tubes</li>
+    </ul>
+    Encourage wild creativity: loops, tunnels, drops, zigzags!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Test & Troubleshoot (5 min)</strong><br>
+    <ul>
+      <li>Drop the marble at the starting point.</li>
+      <li>Does it make it all the way to the cup?</li>
+      <li>If it gets <em>stuck</em>: <em>"Why did it stop? What can we change?"</em> (Make the ramp steeper, tape the gap, remove a curve…)</li>
+      <li>If it goes <em>too fast</em> and flies off: <em>"How can we slow it down?"</em> (Make the ramp less steep, add a curve…)</li>
+      <li>Keep testing until it works.</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Observation & Recording (5 min)</strong><br>
+    After a successful run, fill out the observation sheet (page 2):<br>
+    <ul>
+      <li>Draw a picture of your marble run.</li>
+      <li>Answer: Where does gravity pull the marble? (<em>Down</em>!)</li>
+      <li>Answer: What pushes the marble along the track? (The ramp/tube sides.)</li>
+      <li>Time your marble run with a stopwatch (optional but fun).</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Experiment: Change One Thing (5 min)</strong><br>
+    <em>"What happens if we change the marble run?"</em><br>
+    Try <em>one</em> of these experiments:
+    <ul>
+      <li><strong>Steeper ramp:</strong> Raise the starting point higher. Does the marble go faster?</li>
+      <li><strong>Longer path:</strong> Add more tubes. Does it take longer to reach the cup?</li>
+      <li><strong>Different marble:</strong> Use a bigger or smaller ball. Does it roll the same way?</li>
+      <li><strong>Obstacle:</strong> Put a small toy in the path. Does the marble push it out of the way?</li>
+    </ul>
+    Record the result.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Share & Celebrate! (5 min)</strong><br>
+    <ul>
+      <li>Each child shows their marble run</li>
+      <li>Run the marble through one more time for the audience (parent, sibling, stuffed animals!)</li>
+      <li>Explain: <em>"What was the hardest part to build? What are you most proud of?"</em></li>
+      <li>Celebrate: YOU FINISHED UNIT 1! 🎉</li>
+    </ul>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What force pulls the marble down the ramp? (Gravity.)</li>
+      <li>Is gravity a push or a pull? (<em>Pull</em> — it pulls everything toward the ground.)</li>
+      <li>What happens if the ramp is too flat? Too steep?</li>
+      <li>When the marble goes around a curve, what pushes it to stay on the track? (The tube walls.)</li>
+      <li>Where does the marble have the most speed — at the top or the bottom? Why?</li>
+      <li>If you built this marble run again, what would you change?</li>
+      <li>Can you think of real-life things that are like marble runs? (Water slides, roller coasters, ski slopes…)</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🎢 <strong>Multi-Level Run:</strong> Build a marble run with 3+ levels. How many tubes can you connect?</li>
+      <li>🏁 <strong>Race Track:</strong> Build TWO marble runs side-by-side. Siblings release marbles at the same time — which one finishes first?</li>
+      <li>💡 <strong>Glowing Marble Run:</strong> Tape glow sticks along the track and run marbles in the dark!</li>
+      <li>🎨 <strong>Decorate the Track:</strong> Use markers to turn tubes into tunnels, race lanes, or rainbow paths.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"Roller Coaster"</em> by Marla Frazee or <em>"The Roller Coaster Kid"</em> by Mary Ann Rodman</li>
+      <li>🔬 <strong>Science Challenge:</strong> Can you make the marble STOP halfway down the run and then start again? (Use a flat section!)</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is a capstone:</strong> The goal is for kids to <em>apply</em> what they've learned about forces. Don't worry if the marble run isn't perfect — the process is the lesson.</li>
+      <li><strong>Marble runs are hard:</strong> Tubes will fall. Marbles will fly off. Gravity will expose every misalignment. That's okay. Problem-solving <em>is</em> physics.</li>
+      <li><strong>Start simple:</strong> If kids are overwhelmed, help them build a two-tube run first, then add complexity.</li>
+      <li><strong>Sibling collaboration:</strong> This can be a solo <em>or</em> team project. If siblings work together, assign roles: one tapes, one tests, etc.</li>
+      <li><strong>Safety reminder:</strong> Marbles are choking hazards for toddlers. Keep them away from younger siblings. Supervise closely.</li>
+      <li><strong>Gravity is the star:</strong> Emphasize that gravity (Earth pulling on the marble) is what makes the whole thing work. Without gravity, the marble wouldn't roll down.</li>
+      <li><strong>Tape everything:</strong> Tubes will shift. Use <em>lots</em> of tape. Painter's tape is repositionable and won't damage walls.</li>
+      <li><strong>No "right" design:</strong> Every marble run is different. Celebrate creativity. If it gets the marble from top to bottom, it's a success.</li>
+      <li><strong>Assessment:</strong> Can each child explain that gravity pulls the marble down and the track guides/pushes it? Can they identify one problem they solved (marble got stuck, flew off, etc.)? That's success.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== OBSERVATION SHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🎢 Marble Run Madness Observation Sheet 🎢</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background:#d32f2f; font-size:13pt; padding:8px; text-align:center; color:white;">📐 Draw Your Marble Run Design</h2>
+    <p style="text-align:center; font-size:9pt; color:#555;">Show where the marble starts, the path it takes, and where it ends!</p>
+    <div style="border:2px solid #333; height:280px; border-radius:8px; margin:10px 0; background:#fff;"></div>
+    <p style="font-size:9pt; color:#555; text-align:center; margin-top:5px;">Label: START, tubes/ramps, curves, FINISH (cup)</p>
+
+    <h2 style="background:#d32f2f; font-size:13pt; padding:8px; text-align:center; color:white; margin-top:25px;">🔍 What I Observed</h2>
+
+    <table class="worksheet-table">
+      <tr>
+        <th style="background:#1976d2;">Question</th>
+        <th style="background:#388e3c;">My Answer</th>
+      </tr>
+      <tr>
+        <td style="width:50%;">What force pulls the marble DOWN the ramp?</td>
+        <td style="width:50%; height:50px;"></td>
+      </tr>
+      <tr>
+        <td>What pushes the marble along the track?</td>
+        <td style="height:50px;"></td>
+      </tr>
+      <tr>
+        <td>Did my marble make it to the cup on the first try?<br><span style="font-size:9pt; color:#666;">(Circle one: YES / NO)</span></td>
+        <td style="height:50px;"></td>
+      </tr>
+      <tr>
+        <td>If it got stuck, what did I change to fix it?</td>
+        <td style="height:60px;"></td>
+      </tr>
+      <tr>
+        <td>How long did my marble run take?<br><span style="font-size:9pt; color:#666;">(Use a stopwatch if you have one!)</span></td>
+        <td style="height:50px;"></td>
+      </tr>
+    </table>
+
+    <h2 style="background:#d32f2f; font-size:13pt; padding:8px; text-align:center; color:white; margin-top:25px;">🧪 My Experiment: I Changed...</h2>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p><strong style="color:#d32f2f;">What happened when I changed it?</strong></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+
+    <h2 style="background:#d32f2f; font-size:13pt; padding:8px; text-align:center; color:white; margin-top:25px;">🌟 What I Learned About Pushes & Pulls</h2>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>📋 Expected Answers to Observation Questions</h3>
+      
+      <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+        <tr>
+          <th style="padding:8px; border:1px solid #999; background:#e3f2fd; width:50%;">Question</th>
+          <th style="padding:8px; border:1px solid #999; background:#e8f5e9; width:50%;">Expected Answer</th>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #999;">What force pulls the marble DOWN the ramp?</td>
+          <td style="padding:8px; border:1px solid #999;"><strong>Gravity</strong> (accept "the Earth pulling it" or "it wants to go down")</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #999;">What pushes the marble along the track?</td>
+          <td style="padding:8px; border:1px solid #999;"><strong>The tube/ramp</strong> (the sides of the track guide it and push it along the path)</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #999;">Did my marble make it to the cup on the first try?</td>
+          <td style="padding:8px; border:1px solid #999;">Often <strong>NO</strong>! And that's fine — it's part of the engineering process.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #999;">If it got stuck, what did I change to fix it?</td>
+          <td style="padding:8px; border:1px solid #999;">Made the ramp steeper, taped a gap, removed a curve, reconnected tubes, etc.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #999;">How long did my marble run take?</td>
+          <td style="padding:8px; border:1px solid #999;">Variable! Usually 2–10 seconds depending on length and complexity.</td>
+        </tr>
+      </table>
+
+      <h3>💡 Teaching Points & Troubleshooting</h3>
+      <ul>
+        <li><strong>Gravity is a PULL force:</strong> It pulls everything toward the center of the Earth. That's why the marble rolls DOWN, not up!</li>
+        <li><strong>The track PUSHES and GUIDES:</strong> When the marble goes around a curve, the tube walls push it in a new direction. When it rolls down a straight ramp, the ramp pushes it forward.</li>
+        <li><strong>Common problems & fixes:</strong>
+          <ul>
+            <li><em>Marble gets stuck</em> → Ramp too flat. Raise the starting point or tilt the tube more.</li>
+            <li><em>Marble flies off at curves</em> → Going too fast! Make the starting ramp less steep, or use a wider tube.</li>
+            <li><em>Gap between tubes</em> → Tape them together securely. Even a small gap stops the marble.</li>
+            <li><em>Tube falls off wall</em> → Use more tape! Painter's tape works great and doesn't damage walls.</li>
+          </ul>
+        </li>
+        <li><strong>Speed increases with height:</strong> The higher the starting point, the faster the marble goes (more gravitational potential energy converts to speed). If kids notice this, celebrate it!</li>
+        <li><strong>Friction slows it down:</strong> If the tube is rough inside or the marble is small and rattles around, it loses speed. Smooth tubes work best.</li>
+      </ul>
+
+      <h3>🎓 Concepts Covered in This Capstone</h3>
+      <ul>
+        <li><strong>Gravity as a force:</strong> Pulls objects downward</li>
+        <li><strong>Push forces:</strong> Tube walls push/guide the marble along the path</li>
+        <li><strong>Slope/angle:</strong> Steeper ramps = faster motion</li>
+        <li><strong>Problem-solving:</strong> When something doesn't work, identify the problem and adjust</li>
+        <li><strong>Engineering iteration:</strong> Test → Fix → Test again</li>
+        <li><strong>Cause and effect:</strong> Changing one thing (height, angle, length) affects the outcome</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can build a marble run with at least 2 connected sections</li>
+        <li>Child can identify gravity as the force pulling the marble down</li>
+        <li>Child can explain (in their own words) how the track pushes/guides the marble</li>
+        <li>Child attempts to solve at least one problem (stuck marble, misaligned tube, etc.)</li>
+        <li>Child completes the observation sheet with drawings and simple answers</li>
+      </ul>
+
+      <h3>🏆 Celebrating the Unit 1 Capstone</h3>
+      <p style="font-size:10pt;">This lesson brings together everything from Unit 1:</p>
+      <ul>
+        <li>✅ <strong>Lesson 1:</strong> Identifying pushes and pulls</li>
+        <li>✅ <strong>Lesson 2-3:</strong> Experimenting with force strength and direction</li>
+        <li>✅ <strong>Lesson 4:</strong> Invisible forces (gravity is another invisible pull!)</li>
+        <li>✅ <strong>Lesson 5:</strong> Engineering and iteration</li>
+        <li>✅ <strong>Lesson 6:</strong> Applying ALL concepts in a hands-on, creative project</li>
+      </ul>
+      <p style="font-size:10pt;"><strong>Well done!</strong> Your kids have completed their first science unit. Celebrate with a "Marble Run Olympics" — who can build the longest? Fastest? Most creative? 🎉</p>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

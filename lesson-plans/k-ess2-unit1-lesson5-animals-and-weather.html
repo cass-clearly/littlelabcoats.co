@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather &amp; Animals — How Animals Respond — K-ESS2 Unit 1, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #5d4037;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .adaptation-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 15px 0;
+    }
+    .adaptation-card {
+      background: #fff3e0;
+      border: 2px solid #e65100;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .adaptation-card h3 { color: #bf360c; border-color: #ffcc80; }
+    .adaptation-card .emoji { font-size: 32pt; display: block; margin-bottom: 6px; }
+    .match-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .match-table th {
+      background: #e65100;
+      color: white;
+      padding: 10px;
+      border: 2px solid #bf360c;
+      text-align: left;
+    }
+    .match-table td {
+      border: 2px solid #ffcc80;
+      padding: 10px;
+      vertical-align: top;
+    }
+    .match-table tr:nth-child(even) td { background: #fff3e0; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .draw-box {
+      border: 2px solid #bf360c;
+      border-radius: 8px;
+      min-height: 140px;
+      margin: 8px 0;
+      background: #fffde7;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+  </style>
+</head>
+<body data-document-id="doc_F6S7Os3eBKg">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🐻 Weather &amp; Animals — How Animals Respond 🦅</h1>
+  <p class="subtitle">Earth Science — Weather &amp; Seasons</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Weather &amp; Seasons</span>
+    <span>🔢 <strong>Lesson:</strong> 5 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐻 🦅 🐿️ 🐇</div>
+    <div class="caption">Animals can't put on a coat — but they have amazing ways to survive winter!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS2-2</strong> — Construct an argument supported by evidence for how plants and animals (including humans) can change the environment to meet their needs.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>DESCRIBE</strong> at least 3 ways animals adapt their behaviors to seasonal weather changes.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Animals cannot control the weather — so they've developed amazing <strong>adaptations</strong> (special behaviors and body features) that help them survive changing seasons. Some move to warmer places, some sleep through winter, some store food, and some change their appearance!</p>
+
+  <h2>🐾 Four Ways Animals Respond to Seasonal Change</h2>
+
+  <div class="adaptation-cards">
+    <div class="adaptation-card">
+      <span class="emoji">🦅</span>
+      <h3>1. Migration — Move Away!</h3>
+      <p>Some birds and animals travel (migrate) to warmer places when winter comes. They return in spring when food is available again.</p>
+      <p><strong>Examples:</strong> Geese fly south in fall, monarch butterflies travel thousands of miles to Mexico, gray whales swim south along the Pacific coast.</p>
+    </div>
+    <div class="adaptation-card">
+      <span class="emoji">🐻</span>
+      <h3>2. Hibernation — Sleep It Off!</h3>
+      <p>Some animals eat lots of food all fall to build up fat, then sleep through most of winter. Their heart rate and breathing slow way down to save energy.</p>
+      <p><strong>Examples:</strong> Bears, groundhogs, and some bats hibernate. Bears wake up in spring when it gets warmer.</p>
+    </div>
+    <div class="adaptation-card">
+      <span class="emoji">🐿️</span>
+      <h3>3. Food Storage — Plan Ahead!</h3>
+      <p>Some animals spend fall gathering and hiding food so they have enough to eat during winter when food is scarce.</p>
+      <p><strong>Examples:</strong> Squirrels bury acorns and nuts. Some birds cache (hide) seeds. Beavers store branches underwater near their lodge.</p>
+    </div>
+    <div class="adaptation-card">
+      <span class="emoji">🐇</span>
+      <h3>4. Changing Appearance — Blend In!</h3>
+      <p>Some animals change color with the seasons to stay camouflaged (hidden from predators) in both summer and winter environments.</p>
+      <p><strong>Examples:</strong> Snowshoe hares are brown in summer (blends with soil) and turn white in winter (blends with snow). Arctic foxes do the same!</p>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> adaptation, migration, hibernation, camouflage, food cache, behavior, seasonal change, predator
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and crayons</li>
+      <li>Student worksheet (next page)</li>
+      <li>Optional: books or images of migrating geese, hibernating bears, snowshoe hares</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce the 4 Adaptations (5 min)</strong><br>
+    Read through each adaptation card together. Ask:
+    <ul>
+      <li>"If it's getting very cold, which of these would YOU want to do?"</li>
+      <li>"Which animal has the coolest adaptation? Why?"</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Migration Drawing (5 min)</strong><br>
+    Draw a simple map: show "north = cold" at the top and "south = warm" at the bottom. Draw some geese at the top in summer. Then draw arrows showing where they fly in fall. Draw them at the bottom (warm winter home). Draw them flying back north in spring!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — The Snowshoe Hare (5 min)</strong><br>
+    Draw two hares side by side: one brown (summer, sitting on dirt/grass) and one white (winter, sitting on snow). Discuss: why does this help the hare survive? (Predators can't see it as easily!)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Animal Match Activity (10 min)</strong><br>
+    Complete the Animal Adaptation Matching worksheet on the next page. Match each animal to its survival strategy!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Human Adaptations Discussion (5 min)</strong><br>
+    Ask: <em>"What do YOU do to adapt to different weather?"</em><br>
+    <ul>
+      <li>Cold weather → wear coats, stay inside, turn on heat</li>
+      <li>Hot weather → wear less clothing, use air conditioning, swim</li>
+      <li>Rain → use an umbrella, wear rain boots</li>
+    </ul>
+    <em>"Humans are actually really good at changing our ENVIRONMENT instead of our bodies!"</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Which animal adaptation do you think is the most amazing? Why?</li>
+      <li>Do YOU migrate, hibernate, or store food for winter? What do you do instead?</li>
+      <li>Why can't a squirrel just go to a store and buy food in winter like we do?</li>
+      <li><strong>Big Question:</strong> Humans use houses, clothes, and heaters to adapt to weather. What would you do if you had to survive winter like a wild animal — no house, no clothes?</li>
+    </ul>
+    <p class="discussion-hint">💡 <em>Suggested answer: Good creative thinking exercise! They'd need to: find or build shelter (cave, burrow, or pile of leaves), build up fat or find very warm fur, cache food ahead of time, or migrate south. Humans are actually quite vulnerable without our technology — we've outsourced our survival to tools and clothing! Our "adaptation" is our big brain and our ability to build and use tools.</em></p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🦅 <strong>Migration Tracker:</strong> Look up a migration route on a map — where do Canada geese fly from/to? How far is that?</li>
+      <li>🐿️ <strong>Squirrel Watch:</strong> If squirrels live nearby, watch them in fall. Can you spot them burying nuts?</li>
+      <li>🌡️ <strong>Hibernation Math:</strong> Bears hibernate about 5–7 months. How many months is that? Point to those months on a calendar!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>Animals in Winter</em> by Henrietta Bancroft or <em>Time to Sleep</em> by Denise Fleming</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Hibernation clarification:</strong> True hibernation (very deep sleep, very slow heart rate) includes groundhogs and some bats. Bears actually enter "torpor" — a lighter form of sleep where they can wake up more easily. Both are valid strategies for the purposes of this lesson.</li>
+      <li><strong>K-ESS2-2 connection:</strong> This standard is specifically about how animals (and plants) CHANGE THEIR ENVIRONMENT to meet their needs. Animals building nests, dams, or burrows counts. Migration is more of a behavior than environmental modification, but food caching and nest-building fit the standard well.</li>
+      <li><strong>The snowshoe hare:</strong> The color change is triggered by changes in day length (photoperiod), not temperature! That's a fascinating connection to make for older/advanced learners.</li>
+      <li><strong>Assessment:</strong> Can the child name and describe at least 3 animal adaptations to seasonal change? Can they match at least 5 of 8 animals to their correct adaptation strategy?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🐾 Animal Adaptation Matching Worksheet</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <p style="font-size:10pt; color:#555; margin-bottom:10px; text-align:center;">Draw a line connecting each animal to how it survives winter. Some animals might have more than one strategy!</p>
+
+    <table class="match-table">
+      <tr>
+        <th>Animal</th>
+        <th>Winter Survival Strategy</th>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🦅 Canada Goose</td>
+        <td rowspan="4" style="font-size:12pt; vertical-align:middle; text-align:center; background:#fff3e0; font-weight:bold;">
+          ✈️ Migration<br><br>
+          😴 Hibernation<br><br>
+          🥜 Food Storage<br><br>
+          🎨 Changing Appearance
+        </td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🐻 Bear</td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🐿️ Squirrel</td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🐇 Snowshoe Hare</td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🦋 Monarch Butterfly</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🦔 Hedgehog</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🦊 Arctic Fox</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="font-size:13pt;">🦫 Beaver</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top:18px;">🐇 The Snowshoe Hare — Two Seasons!</h3>
+    <p style="font-size:10pt; color:#555;">Draw the snowshoe hare in SUMMER on the left, and in WINTER on the right. Don't forget to color their fur differently!</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0;">
+      <div>
+        <div style="background:#8bc34a; border-radius:8px 8px 0 0; padding:8px; text-align:center; color:white; font-weight:bold;">☀️ Summer — Brown Hare</div>
+        <div class="draw-box" style="min-height:140px; border-top:none; border-radius:0 0 8px 8px;"></div>
+      </div>
+      <div>
+        <div style="background:#1976d2; border-radius:8px 8px 0 0; padding:8px; text-align:center; color:white; font-weight:bold;">❄️ Winter — White Hare</div>
+        <div class="draw-box" style="min-height:140px; border-top:none; border-radius:0 0 8px 8px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Animal Adaptation Answers</h3>
+      <table class="match-table" style="margin-top:10px;">
+        <tr>
+          <th>Animal</th>
+          <th>Strategy</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>🦅 Canada Goose</td>
+          <td>✈️ Migration</td>
+          <td>Fly south in fall, return north in spring</td>
+        </tr>
+        <tr>
+          <td>🐻 Bear</td>
+          <td>😴 Hibernation (torpor)</td>
+          <td>Sleep through much of winter; wake in spring</td>
+        </tr>
+        <tr>
+          <td>🐿️ Squirrel</td>
+          <td>🥜 Food Storage</td>
+          <td>Buries nuts &amp; acorns to eat in winter</td>
+        </tr>
+        <tr>
+          <td>🐇 Snowshoe Hare</td>
+          <td>🎨 Changing Appearance</td>
+          <td>Brown in summer, white in winter; camouflage!</td>
+        </tr>
+        <tr>
+          <td>🦋 Monarch Butterfly</td>
+          <td>✈️ Migration</td>
+          <td>Travel up to 3,000 miles to Mexico!</td>
+        </tr>
+        <tr>
+          <td>🦔 Hedgehog</td>
+          <td>😴 Hibernation</td>
+          <td>True hibernation — heart rate drops dramatically</td>
+        </tr>
+        <tr>
+          <td>🦊 Arctic Fox</td>
+          <td>🎨 Changing Appearance</td>
+          <td>Brown/gray in summer, white in winter</td>
+        </tr>
+        <tr>
+          <td>🦫 Beaver</td>
+          <td>🥜 Food Storage</td>
+          <td>Stores branches underwater near lodge</td>
+        </tr>
+      </table>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name and describe at least 3 animal adaptations to seasonal change</li>
+        <li>Child matches at least 6 of 8 animals correctly</li>
+        <li>Snowshoe hare drawings show brown fur in summer and white fur in winter</li>
+        <li>Child can explain (in simple terms) WHY the adaptation helps the animal survive</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

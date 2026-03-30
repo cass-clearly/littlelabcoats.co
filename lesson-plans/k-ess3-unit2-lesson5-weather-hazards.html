@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Hazards — Staying Safe — K-ESS3 Unit 2, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; background: #fffdf9; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #e65100; padding-bottom: 10px; color: #e65100; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+    .procedure-step strong { color: #bf360c; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; padding-left: 10px; border-left: 3px solid #ff8f00; }
+    .tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #fbe9e7; border: 1px solid #ffab91; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #bf360c; }
+    .extension-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .hazard-card { border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+    .tornado-card { background: #f3e5f5; border: 2px solid #9c27b0; }
+    .tornado-card h4 { color: #6a1b9a; }
+    .flood-card { background: #e3f2fd; border: 2px solid #1565c0; }
+    .flood-card h4 { color: #0d47a1; }
+    .blizzard-card { background: #e8eaf6; border: 2px solid #3f51b5; }
+    .blizzard-card h4 { color: #283593; }
+    .lightning-card { background: #fff9c4; border: 2px solid #f9a825; }
+    .lightning-card h4 { color: #e65100; }
+    .hazard-card h4 { margin: 0 0 8px 0; font-size: 13pt; }
+    .hazard-row { display: grid; grid-template-columns: auto 1fr 1fr; gap: 12px; align-items: start; margin: 8px 0; }
+    .hazard-emoji { font-size: 28pt; text-align: center; }
+    .safety-card { border: 2px solid #ffcc80; border-radius: 10px; padding: 14px; margin: 20px 0; background: #fff8e1; }
+    .safety-card h3 { color: #e65100; }
+    .safety-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0; }
+    .safety-box { border: 1px solid #ffcc80; border-radius: 8px; padding: 10px; background: white; min-height: 80px; }
+    .safety-box .label { font-weight: bold; color: #bf360c; font-size: 10pt; margin-bottom: 6px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #e65100; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; background: white; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .hazard-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .matching-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 10pt; }
+    .matching-table th { background: #e65100; color: white; padding: 8px; border: 1px solid #ffcc80; }
+    .matching-table td { border: 1px solid #ffcc80; padding: 8px; background: #fff8e1; }
+    .matching-table tr:nth-child(even) td { background: #fff3e0; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>⛈️ Weather Hazards — Staying Safe ⛈️</h1>
+  <p class="subtitle">Earth Science — Earth &amp; Human Activity | Unit 2, Lesson 5</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌍 <strong>Subject:</strong> Earth Science — Earth &amp; Human Activity</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌪️ 🌊 ❄️ ⚡</div>
+    <div class="caption">Dangerous weather is powerful — but when we know what to do, we can stay safe!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS3-2</strong> — Ask questions to obtain information about the purpose of weather forecasting to prepare for, and respond to, severe weather.<br>
+    <strong>K-ESS3-3</strong> — Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Some weather can be dangerous — very strong storms, floods, blizzards, and lightning can hurt people. But when we <strong>know what's coming</strong> and <strong>know what to do</strong>, we can protect ourselves and our families. Meteorologists (weather scientists) use satellites and radar to warn us early. That warning time is the difference between being safe and being caught outside in danger.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>A <strong>weather hazard</strong> is a weather event that can cause harm to people, animals, or buildings. Weather hazards include:</p>
+  <ul>
+    <li>🌪️ <strong>Tornadoes</strong> — spinning columns of air that can destroy buildings and throw objects at dangerous speeds</li>
+    <li>🌊 <strong>Floods</strong> — water rising over land, often after heavy rain or a hurricane — even a few inches of fast-moving floodwater can knock a person down</li>
+    <li>❄️ <strong>Blizzards</strong> — heavy snow + strong winds + low visibility — can trap people, cause power outages, and freeze pipes</li>
+    <li>⚡ <strong>Lightning</strong> — lightning strikes are extremely hot (5x hotter than the sun's surface!) and can kill or start fires</li>
+  </ul>
+  <p><strong>Preparation + warning systems</strong> save lives. Weather satellites orbiting Earth and Doppler radar systems allow meteorologists to track storms and warn communities 30–60 minutes ahead.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> weather hazard, tornado, flood, blizzard, lightning, meteorologist, radar, shelter, preparation, warning
+  </div>
+
+  <h2>🌪️ The Four Major Weather Hazards</h2>
+
+  <div class="hazard-card tornado-card">
+    <h4>🌪️ Tornado</h4>
+    <p><strong>What makes it dangerous:</strong> A tornado is a violent rotating column of air that can reach speeds over 300 mph. It can destroy buildings, pull trees out of the ground, and throw cars and large objects through the air.</p>
+    <p><strong>Warning signs:</strong> Dark/greenish sky, large hail, loud roar like a train, funnel cloud visible</p>
+    <p><strong>What to do:</strong> Go to the lowest floor of a sturdy building (basement is best). Get into an interior room (bathroom, closet, hallway) — away from windows. Cover your head with your arms. Never shelter under a bridge or overpass — these are more dangerous in a tornado!</p>
+    <p><strong>Prepare ahead:</strong> Know where your shelter spot is before a tornado comes. Have a battery-powered radio for alerts.</p>
+  </div>
+
+  <div class="hazard-card flood-card">
+    <h4>🌊 Flood</h4>
+    <p><strong>What makes it dangerous:</strong> Just 6 inches of fast-moving water can knock a person off their feet. 2 feet of water can carry away a car. Floodwater often carries bacteria, chemicals, and sharp debris. It can rise very fast — sometimes faster than you can run.</p>
+    <p><strong>Warning signs:</strong> Heavy rainfall, rapidly rising water, rivers overflowing their banks, flash flood watch/warning from meteorologists</p>
+    <p><strong>What to do:</strong> Move to higher ground immediately. NEVER walk or drive through floodwater — "Turn Around, Don't Drown!" Even shallow floodwater can sweep you away. Do not touch floodwater — it may contain sewage and chemicals.</p>
+    <p><strong>Prepare ahead:</strong> Know the elevation of your home. Know high ground routes from your house.</p>
+  </div>
+
+  <div class="hazard-card blizzard-card">
+    <h4>❄️ Blizzard</h4>
+    <p><strong>What makes it dangerous:</strong> Blizzards combine heavy snow, strong winds (35+ mph), and very low visibility (you can't see more than ¼ mile). People can become disoriented and lost even just outside their own home. Roads become impassable. Power outages can last days. Temperatures can cause frostbite and hypothermia in minutes.</p>
+    <p><strong>Warning signs:</strong> Blizzard watch/warning, rapidly dropping temperatures, heavy snow forecast</p>
+    <p><strong>What to do:</strong> Stay indoors. Don't go outside unless absolutely necessary. Have extra food, water, and warm blankets. Keep battery-powered flashlights and a battery radio (power often goes out). Check on elderly neighbors.</p>
+    <p><strong>Prepare ahead:</strong> Keep an emergency kit: bottled water, non-perishable food, warm clothing, flashlights, batteries.</p>
+  </div>
+
+  <div class="hazard-card lightning-card">
+    <h4>⚡ Lightning</h4>
+    <p><strong>What makes it dangerous:</strong> A lightning bolt is about 5 times hotter than the surface of the sun (about 30,000 Kelvin!). It can travel through the ground up to 100 feet from where it strikes. Tall objects (trees, flagpoles) attract lightning.</p>
+    <p><strong>Warning signs:</strong> Thunder, dark clouds, lightning flashes — if you can hear thunder, you're close enough to be struck</p>
+    <p><strong>What to do:</strong> Go inside a building or a hard-topped vehicle immediately. Stay away from windows, doors, porches, plumbing, and electrical appliances. Do NOT stand under a tree. If you're caught outside, crouch low with your feet together — don't lie flat.</p>
+    <p><strong>The 30/30 rule:</strong> If thunder comes within 30 seconds of lightning, go inside immediately. Stay inside for 30 minutes after the last thunder.</p>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Weather Hazard Matching Game (10 min)</strong><br>
+    Read each hazard description. For each one, ask students: <em>"What makes this dangerous? What would our family do?"</em> Let kids share their own experiences with weather events.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Family Weather Safety Card (10 min)</strong><br>
+    Together, make a "Family Weather Safety Card" (worksheet). For each hazard, fill in: What do WE do in our home? Where is our safe spot? What supplies do we have? This personalizes the learning — it's YOUR family's plan, not just generic advice.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Matching Game on Worksheet (10 min)</strong><br>
+    Students match each hazard to its safety action. Then they draw one hazard and what they would do.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Discussion Questions (5 min)</strong><br>
+    Use the discussion questions below, especially the meteorologist question — it's an excellent opportunity to talk about how science and technology protect us.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Name 3 weather hazards. What makes each one dangerous?</li>
+      <li>What would YOUR family do in a tornado? A blizzard? A flood?</li>
+      <li>Why should you NEVER walk through floodwater?</li>
+      <li>Why is it dangerous to stand under a tree during lightning?</li>
+      <li>Why do meteorologists and emergency services warn people about weather BEFORE it happens?</li>
+    </ul>
+
+    <div class="discussion-hint">
+      <strong>💡 Suggested answer — why do meteorologists warn us ahead of time?</strong>
+      Early warning saves lives! If you know a tornado is coming 30 minutes ahead, you have time to shelter. Without warning, you could be caught outside in a parking lot or on the road. Weather satellites orbiting Earth can see storm systems forming from hundreds of miles up. Doppler radar can track a storm's exact path and speed. This technology gives us that warning time. Good preparation — having emergency supplies, knowing your safe shelter spot, having a family plan — combined with early warning means the difference between being safe and being in danger. Meteorology is a life-saving science!
+    </div>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📻 <strong>NOAA Weather Radio:</strong> Look up the National Weather Service website for your area (weather.gov). Look at the forecast together. Can you identify any weather watches or warnings?</li>
+      <li>🏠 <strong>Build an emergency kit:</strong> As a family project, assemble a real emergency kit: flashlight, batteries, water bottles, snacks, first aid kit, important documents copy.</li>
+      <li>📚 <strong>Read aloud:</strong> <em>"Twister on Tuesday"</em> by Mary Pope Osborne (Magic Tree House) or <em>"Wild Weather: Blizzards"</em> by Lorraine Jean Hopping</li>
+      <li>🌪️ <strong>Tornado in a bottle:</strong> Connect two plastic soda bottles together with a connector (available at toy stores). Fill one with water and a little glitter. Turn it upside down and swirl — you've made a water vortex (like a tornado)!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Be sensitive to local hazards:</strong> In Colorado Springs, thunderstorms, lightning, blizzards, and hail are the most relevant hazards. Tornadoes and floods also occur in Colorado. Adjust examples to focus on what's most likely in your area.</li>
+      <li><strong>Don't create fear:</strong> The goal is preparedness and competence, not fear. Frame weather hazards as powerful but manageable: "We know what to do, so we'll be safe." Having a plan reduces anxiety.</li>
+      <li><strong>Personal experience:</strong> If your child has experienced a storm, let them share that. Connecting learning to real experience makes it stick.</li>
+      <li><strong>Connection to K-ESS3-3:</strong> Communicating weather safety plans (the Family Weather Safety Card) IS the "communicate solutions" performance expectation. The family plan IS the solution to the weather hazard problem.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>⛈️ Student Worksheet — Family Weather Safety Card</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🔗 Part 1: Hazard Match — Draw a line to match each hazard with what to do!</h3>
+
+    <table class="matching-table">
+      <tr>
+        <th>Weather Hazard</th>
+        <th>What We Do to Stay Safe</th>
+      </tr>
+      <tr>
+        <td>🌪️ Tornado</td>
+        <td>Stay inside, have extra food and water, keep warm</td>
+      </tr>
+      <tr>
+        <td>🌊 Flood</td>
+        <td>Stay indoors, away from windows and tall trees</td>
+      </tr>
+      <tr>
+        <td>❄️ Blizzard</td>
+        <td>Move to higher ground, never walk in floodwater</td>
+      </tr>
+      <tr>
+        <td>⚡ Lightning</td>
+        <td>Go to basement or interior room, cover your head</td>
+      </tr>
+    </table>
+
+    <h3>🏠 Part 2: Our Family's Safety Plan</h3>
+    <div class="safety-grid">
+      <div class="safety-box">
+        <div class="label">🌪️ If there's a TORNADO:</div>
+        <p style="font-size: 10pt; margin: 4px 0;">Our safe spot is: ___________________</p>
+        <p style="font-size: 10pt; margin: 4px 0;">We will: _________________________</p>
+      </div>
+      <div class="safety-box">
+        <div class="label">🌊 If there's a FLOOD:</div>
+        <p style="font-size: 10pt; margin: 4px 0;">Higher ground near us: _____________</p>
+        <p style="font-size: 10pt; margin: 4px 0;">We will: _________________________</p>
+      </div>
+      <div class="safety-box">
+        <div class="label">❄️ If there's a BLIZZARD:</div>
+        <p style="font-size: 10pt; margin: 4px 0;">Our supplies: _____________________</p>
+        <p style="font-size: 10pt; margin: 4px 0;">We will: _________________________</p>
+      </div>
+      <div class="safety-box">
+        <div class="label">⚡ If there's LIGHTNING:</div>
+        <p style="font-size: 10pt; margin: 4px 0;">We will go: ______________________</p>
+        <p style="font-size: 10pt; margin: 4px 0;">We will NOT: _____________________</p>
+      </div>
+    </div>
+
+    <h3>✏️ Part 3: Draw One Weather Hazard and What You Would Do</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 10px 0;">
+      <div>
+        <p style="font-weight: bold; color: #bf360c; margin-bottom: 4px; font-size: 10pt;">The weather hazard:</p>
+        <div style="border: 2px solid #ffcc80; border-radius: 8px; height: 130px; background: #fff8e1;"></div>
+      </div>
+      <div>
+        <p style="font-weight: bold; color: #bf360c; margin-bottom: 4px; font-size: 10pt;">What I would do to stay safe:</p>
+        <div style="border: 2px solid #e8f5e9; border-radius: 8px; height: 130px; background: #e8f5e9;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1: Matching Answers</h3>
+      <ul>
+        <li>🌪️ <strong>Tornado</strong> → Go to basement or interior room, cover your head</li>
+        <li>🌊 <strong>Flood</strong> → Move to higher ground, never walk in floodwater</li>
+        <li>❄️ <strong>Blizzard</strong> → Stay inside, have extra food and water, keep warm</li>
+        <li>⚡ <strong>Lightning</strong> → Stay indoors, away from windows and tall trees</li>
+      </ul>
+
+      <h3>Weather Hazard Quick Reference</h3>
+      <table class="matching-table">
+        <tr>
+          <th>Hazard</th>
+          <th>Danger</th>
+          <th>Key Safety Rule</th>
+        </tr>
+        <tr>
+          <td>🌪️ Tornado</td>
+          <td>Up to 300 mph winds, flying debris</td>
+          <td>Basement/interior room, away from windows. NOT under bridges.</td>
+        </tr>
+        <tr>
+          <td>🌊 Flood</td>
+          <td>6 inches of water can knock you down; rises fast</td>
+          <td>"Turn Around, Don't Drown." Go to HIGH ground.</td>
+        </tr>
+        <tr>
+          <td>❄️ Blizzard</td>
+          <td>Low visibility, frostbite, power outages</td>
+          <td>Stay inside. Have emergency supplies. Don't go out unless necessary.</td>
+        </tr>
+        <tr>
+          <td>⚡ Lightning</td>
+          <td>5x hotter than sun's surface; travels through ground</td>
+          <td>Inside building or hard-topped car. Not under trees. 30/30 rule.</td>
+        </tr>
+      </table>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can identify at least 3 weather hazards by name.</li>
+        <li>Student can describe one safety action for each hazard.</li>
+        <li>Student's family safety plan is complete (Part 2) — this is the "communicate solutions" piece of K-ESS3-3.</li>
+        <li>Student understands that early warnings from meteorologists give families time to prepare.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_XB1Sa4C7muY" data-content-selector="body"></script>
+</body>
+</html>

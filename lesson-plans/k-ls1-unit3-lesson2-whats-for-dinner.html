@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's for Dinner? How Animals Eat — Unit 3, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      margin-left: 8px;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Vocab cards */
+    .vocab-row {
+      display: flex;
+      gap: 12px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+    }
+    .vocab-card {
+      flex: 1;
+      min-width: 150px;
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-align: center;
+      border: 2px solid;
+    }
+    .vocab-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .vocab-card .word { font-weight: bold; font-size: 13pt; }
+    .vocab-card .def { font-size: 9pt; margin-top: 4px; }
+    .herbivore-card { background: #f1f8e9; border-color: #81c784; }
+    .herbivore-card .word { color: #2e7d32; }
+    .carnivore-card { background: #ffebee; border-color: #ef9a9a; }
+    .carnivore-card .word { color: #c62828; }
+    .omnivore-card { background: #fff8e1; border-color: #ffcc80; }
+    .omnivore-card .word { color: #e65100; }
+    /* Sorting plate table */
+    .sort-mat {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .sort-mat th {
+      padding: 14px;
+      font-size: 16pt;
+      border: 3px solid #333;
+    }
+    .sort-mat .plants-header { background: #2e7d32; color: white; width: 33%; }
+    .sort-mat .meat-header   { background: #c62828; color: white; width: 33%; }
+    .sort-mat .both-header   { background: #e65100; color: white; width: 34%; }
+    .sort-mat td {
+      border: 3px solid #333;
+      padding: 10px;
+      height: 220px;
+      vertical-align: top;
+      font-size: 10pt;
+      color: #999;
+    }
+    /* Animal sort cards */
+    .cut-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .cut-card {
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 11pt;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cut-card .emoji { font-size: 28pt; }
+    .cut-card .label { font-weight: bold; margin-top: 4px; }
+    /* Dinner plate drawing area */
+    .dinner-plate {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 5px solid #bdbdbd;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-style: italic;
+      font-size: 10pt;
+      text-align: center;
+      background: #fafafa;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-column h3 { font-size: 12pt; text-align: center; }
+    .ak-plants h3 { color: #2e7d32; border-color: #a5d6a7; }
+    .ak-meat h3   { color: #c62828; border-color: #ef9a9a; }
+    .ak-both h3   { color: #e65100; border-color: #ffcc80; }
+    .ak-column ul { list-style: none; padding-left: 0; }
+    .ak-column li { padding: 3px 0; }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .vocab-card, .cut-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_880mwmA_-zk">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🍽️ What's for Dinner? How Animals Eat 🍽️</h1>
+  <p class="subtitle">Life Science — Animal Needs &nbsp;|&nbsp; Unit 3, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌿 <strong>Subject:</strong> Life Science — Animal Needs</span>
+    <span>🔬 <strong>NGSS:</strong> K-LS1-1</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐄🌿 &nbsp; 🦁🥩 &nbsp; 🐻🍯🐟</div>
+    <div class="caption">Some animals eat plants. Some eat meat. Some eat both — just like us!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>SORT at least 6 animals</strong> into herbivore, carnivore, or omnivore categories and <strong>EXPLAIN their reasoning</strong> for at least one choice.</p>
+
+  <h2>💡 Key Concept</h2>
+  <p>Animals eat different things to survive! Some animals eat only plants, some eat only other animals, and some eat both. Scientists have special names for each group. Knowing what an animal eats helps us understand how it lives — and how all animals in nature depend on each other.</p>
+
+  <div class="vocab-row">
+    <div class="vocab-card herbivore-card">
+      <span class="emoji">🐰</span>
+      <span class="word">Herbivore</span>
+      <span class="def">Eats <strong>plants only</strong><br>Leaves, grass, fruit, seeds</span>
+    </div>
+    <div class="vocab-card carnivore-card">
+      <span class="emoji">🦁</span>
+      <span class="word">Carnivore</span>
+      <span class="def">Eats <strong>meat only</strong><br>Other animals, fish, insects</span>
+    </div>
+    <div class="vocab-card omnivore-card">
+      <span class="emoji">🐻</span>
+      <span class="word">Omnivore</span>
+      <span class="def">Eats <strong>both!</strong><br>Plants AND meat</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> herbivore, carnivore, omnivore, food, survive, sort, plants, meat
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 All from Around the House — No Shopping Needed!</h3>
+    <ul>
+      <li>Toy animals or hand-drawn animal cards (cow, lion, bear, rabbit, eagle, pig, fox, snake, deer, wolf, chicken, raccoon) — or draw animal cards on paper together!</li>
+      <li>Three paper plates</li>
+      <li>Marker (to label the plates)</li>
+      <li>Real food items from the kitchen — lettuce, cheese, nuts, fruit, meat scraps, etc.</li>
+      <li>A pet's food bag or label (if you have one!)</li>
+      <li>Crayons</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — The Big Question (3–5 min)</strong><br>
+    Gather the kids and ask: <em>"What did YOU eat for breakfast today?"</em> Let them list things. Then ask:<br>
+    <em>"Do you think a lion eats the same things as a rabbit? What about a bear?"</em><br>
+    Let them guess — there are no wrong answers yet. Tell them: <em>"Today we're going to figure out what different animals eat for dinner!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Set Up the Plates (3 min)</strong><br>
+    Label three paper plates with a marker:
+    <ul>
+      <li>🌿 <strong>Plate 1:</strong> "Plants Only"</li>
+      <li>🥩 <strong>Plate 2:</strong> "Meat Only"</li>
+      <li>🌿🥩 <strong>Plate 3:</strong> "Both"</li>
+    </ul>
+    Spread them out on the table or floor.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — The Sort! (10–15 min)</strong><br>
+    One at a time, hold up each toy animal or animal card: <strong>cow, lion, bear, rabbit, eagle, pig</strong>.<br>
+    Ask: <em>"What does this animal eat? Which plate should it go on?"</em><br>
+    Let kids discuss, debate, and decide together before placing the animal. Celebrate all thinking — even "wrong" guesses lead to great learning.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Kitchen Safari! (5–10 min)</strong><br>
+    Walk to the kitchen together and look at real food:
+    <ul>
+      <li>Hold up some lettuce → <em>"Which animal on our plates would eat this?"</em></li>
+      <li>Hold up cheese → <em>"Would a rabbit eat this? Would a lion?"</em></li>
+      <li>Hold up nuts → <em>"Could a bear eat this? What about a cow?"</em></li>
+    </ul>
+    If you have a pet, look at the food label together — <em>"What does it eat? Where would your pet go on our plates?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Vocabulary Introduction (3–5 min)</strong><br>
+    Now introduce the science words! Point to each plate as you say:
+    <ul>
+      <li>🐰 <em>"Animals that eat ONLY plants are called <strong>herbivores</strong>!"</em></li>
+      <li>🦁 <em>"Animals that eat ONLY meat are called <strong>carnivores</strong>!"</em></li>
+      <li>🐻 <em>"Animals that eat BOTH plants and meat are called <strong>omnivores</strong>!"</em></li>
+    </ul>
+    Ask: <em>"Which one are YOU? What plate would humans go on?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Discussion &amp; Worksheet (5–10 min)</strong><br>
+    Work through the discussion questions below, then have each child complete their Student Worksheet.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "Humans eat both plants and meat. Can you think of another animal that eats both?"
+    <p class="discussion-hint">Bears eat both! They catch fish (meat) AND eat berries and honey (plants). Raccoons, pigs, and chickens eat both too. Animals that eat both are called omnivores — just like us!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "If all the rabbits in a forest disappeared, what do you think would happen to the foxes that eat them?"
+    <p class="discussion-hint">The foxes would have trouble finding food — they'd need to eat something else or move somewhere new. When one animal disappears, it affects all the animals that depend on it. This is called a food chain!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🍽️ <strong>Family Dinner Sort:</strong> Look at your family's dinner tonight and decide — are humans omnivores, herbivores, or carnivores? Which plate would your whole meal go on?</li>
+      <li>🦷 <strong>Teeth Tell the Story:</strong> Look at pictures of animal teeth. Herbivores have flat teeth for grinding plants. Carnivores have sharp teeth for tearing meat. What do humans have?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do Animals Eat?"</em> or <em>"Is a Camel a Mammal?"</em> by Tish Rabe</li>
+      <li>🎨 <strong>Draw a Food Chain:</strong> Draw the sun → grass → rabbit → fox. Each arrow means "gets eaten by." That's a food chain!</li>
+      <li>🌍 <strong>Tricky Cases:</strong> Look up the giant panda — it's technically a carnivore (bear family) but eats mostly bamboo! Nature is full of surprises.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>🥬 Kitchen Prep Note:</strong> Check your fridge before starting — you'll want at least 2–3 items from the kitchen (e.g., lettuce, apple, cheese). If you don't have these, substitute with any plant food + any animal food. Substitutions are fine — the specific items don't matter, just the category (plant food vs. animal food).</li>
+      <li><strong>All materials from around the house</strong> — no purchases needed. Toy animals work great, but drawing quick animal cards together is also a fun activity!</li>
+      <li><strong>Vocabulary:</strong> Introduce herbivore, carnivore, and omnivore after the sort — let kids discover the categories first, then give them the science words as a "reward."</li>
+      <li><strong>Use real food as props</strong> — lettuce, nuts, a piece of cheese. Making it tangible helps the concept stick at this age.</li>
+      <li><strong>Fun extension:</strong> At dinner, look at your plates and ask "Which category is your meal?" Kids love applying new words to their own lives.</li>
+      <li><strong>Tricky cases to know:</strong> Snakes eat only meat (carnivore). Pandas eat almost only plants (herbivore, even though they're bears). Eagles are carnivores. Bears are omnivores. Pigs and chickens are omnivores.</li>
+      <li><strong>Food chain intro:</strong> The second discussion question gently introduces food chains — a concept they'll explore much more in later lessons. Keep it simple and wonder-filled at this stage.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🍽️ Student Worksheet: What's for Dinner?</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:12px;">
+      Draw each animal in the right column — does it eat plants, meat, or both?
+    </p>
+
+    <table class="sort-mat">
+      <tr>
+        <th class="plants-header">🌿 Eats Plants<br><span style="font-size:10pt; font-weight:normal;">Herbivore</span></th>
+        <th class="meat-header">🥩 Eats Meat<br><span style="font-size:10pt; font-weight:normal;">Carnivore</span></th>
+        <th class="both-header">🌿🥩 Eats Both<br><span style="font-size:10pt; font-weight:normal;">Omnivore</span></th>
+      </tr>
+      <tr>
+        <td style="color:#ccc; font-style:italic;">Draw animals here</td>
+        <td style="color:#ccc; font-style:italic;">Draw animals here</td>
+        <td style="color:#ccc; font-style:italic;">Draw animals here</td>
+      </tr>
+    </table>
+
+    <h3 style="text-align:center; margin-top:24px; color:#2e7d32;">🍽️ Draw Your Favorite Animal's Dinner Plate!</h3>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:14px;">
+      Pick your favorite animal. What would it eat for dinner? Draw the food on its plate!
+    </p>
+    <p style="text-align:center; font-size:10pt; margin-bottom:8px;">
+      My favorite animal is: <span style="border-bottom: 1px solid #333; display:inline-block; width:220px;">&nbsp;</span>
+      &nbsp;&nbsp; It is a(n): <span style="border-bottom: 1px solid #333; display:inline-block; width:160px;">&nbsp;</span>
+      <em style="font-size:9pt; color:#777;">(herbivore / carnivore / omnivore)</em>
+    </p>
+
+    <div class="dinner-plate">
+      Draw its dinner here!
+    </div>
+
+  </div>
+
+  <!-- ====================== ANIMAL SORT CARDS ====================== -->
+  <div class="page-break">
+
+    <h1>✂️ Animal Sort Cards — Cut &amp; Place!</h1>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:4px;">Cut along the dashed lines. Sort each animal onto the correct plate!</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:16px;">🌿 Plants Only &nbsp;|&nbsp; 🥩 Meat Only &nbsp;|&nbsp; 🌿🥩 Both</p>
+
+    <div class="cut-cards">
+      <div class="cut-card">
+        <span class="emoji">🐄</span>
+        <span class="label">Cow</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🦁</span>
+        <span class="label">Lion</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐻</span>
+        <span class="label">Bear</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐰</span>
+        <span class="label">Rabbit</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🦅</span>
+        <span class="label">Eagle</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐷</span>
+        <span class="label">Pig</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🦊</span>
+        <span class="label">Fox</span>
+        <span style="font-size:8pt; color:#888; margin-top:2px;">(mostly carnivore, sometimes omnivore)</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐍</span>
+        <span class="label">Snake</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🦌</span>
+        <span class="label">Deer</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐺</span>
+        <span class="label">Wolf</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🐓</span>
+        <span class="label">Chicken</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🦝</span>
+        <span class="label">Raccoon</span>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:18px;">
+      <strong>🧠 Bonus challenge!</strong> Can you think of one MORE animal for each plate? Draw it in an empty box above!
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="answer-key-grid">
+        <div class="ak-column ak-plants">
+          <h3>🌿 Eats Plants Only<br><em style="font-size:10pt; font-weight:normal;">(Herbivores)</em></h3>
+          <ul>
+            <li>🐄 Cow</li>
+            <li>🐰 Rabbit</li>
+            <li>🦌 Deer</li>
+          </ul>
+        </div>
+        <div class="ak-column ak-meat">
+          <h3>🥩 Eats Meat Only<br><em style="font-size:10pt; font-weight:normal;">(Carnivores)</em></h3>
+          <ul>
+            <li>🦁 Lion</li>
+            <li>🦅 Eagle</li>
+            <li>🐍 Snake</li>
+            <li>🐺 Wolf</li>
+          </ul>
+        </div>
+        <div class="ak-column ak-both">
+          <h3>🌿🥩 Eats Both<br><em style="font-size:10pt; font-weight:normal;">(Omnivores)</em></h3>
+          <ul>
+            <li>🐻 Bear</li>
+            <li>🐷 Pig</li>
+            <li>🦊 Fox</li>
+            <li>🐓 Chicken</li>
+            <li>🦝 Raccoon</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:20px; color:#1b5e20;">💡 Notes on Tricky Animals</h3>
+      <ul>
+        <li><strong>🐷 Pig:</strong> Pigs are omnivores! They eat roots, fruit, and small animals. Domestic pigs eat nearly everything — great discussion starter.</li>
+        <li><strong>🦊 Fox:</strong> Fox classification is genuinely contested — they're primarily carnivores but regularly eat berries, fruit, and insects too. Most biologists classify them as omnivores. <em>Accept either "carnivore" or "omnivore" for fox, and use it as a teaching moment: "Nature doesn't always fit into neat boxes!"</em> The sort card is labeled "mostly carnivore, sometimes omnivore" in spirit — both answers are scientifically defensible.</li>
+        <li><strong>🦅 Eagle:</strong> Eagles eat mostly fish, small mammals, and birds — carnivore. A fun "did you know" for kids.</li>
+        <li><strong>🐓 Chicken:</strong> Chickens eat seeds AND bugs and worms — they're omnivores! Kids are often surprised by this.</li>
+        <li><strong>🐍 Snake:</strong> Snakes eat only meat (small animals, eggs). A clear carnivore example.</li>
+        <li><strong>🐻 Bear:</strong> Bears catch fish AND eat berries, honey, and plants — a classic omnivore and a great reference point for kids.</li>
+      </ul>
+
+      <h3 style="color:#1b5e20;">🗣️ Discussion Question Answers</h3>
+      <ul>
+        <li><strong>Q1 — Another omnivore?</strong> Bears, raccoons, pigs, and chickens are all omnivores — just like humans! Omnivores can eat a wide variety of foods, which helps them survive in many environments.</li>
+        <li><strong>Q2 — Rabbits disappear?</strong> Foxes (and other rabbit-eaters) would struggle to find food. They'd need to eat something else or move to a new area. This is what scientists call a <em>food chain</em> — when one animal disappears, all the animals that depend on it are affected.</li>
+      </ul>
+
+      <h3 style="color:#1b5e20;">✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can sort at least 8 of the 12 animals correctly.</li>
+        <li>Child can explain in their own words what a herbivore, carnivore, and omnivore eat.</li>
+        <li>Child can name at least one animal from each category.</li>
+        <li>Child can connect their own family's eating to the "omnivore" category.</li>
+      </ul>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_880mwmA_-zk" data-content-selector="body"></script>
+</body>
+</html>

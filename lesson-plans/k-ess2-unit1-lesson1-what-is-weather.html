@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is Weather? — K-ESS2 Unit 1, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #5d4037;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .weather-icons {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .weather-icon-card {
+      text-align: center;
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      border-radius: 12px;
+      padding: 12px 16px;
+      min-width: 90px;
+    }
+    .weather-icon-card .emoji { font-size: 32pt; display: block; }
+    .weather-icon-card .label { font-weight: bold; color: #e65100; font-size: 10pt; margin-top: 4px; }
+    .calendar-grid {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .calendar-grid th {
+      background: #e65100;
+      color: white;
+      padding: 10px;
+      border: 2px solid #bf360c;
+      font-size: 11pt;
+    }
+    .calendar-grid td {
+      border: 2px solid #bf360c;
+      padding: 8px;
+      height: 100px;
+      vertical-align: top;
+      font-size: 9pt;
+      color: #999;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .draw-box {
+      border: 2px solid #bf360c;
+      border-radius: 8px;
+      min-height: 120px;
+      margin: 8px 0;
+      background: #fffde7;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+  </style>
+</head>
+<body data-document-id="doc_8Hya_kstG_Q">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌤️ What Is Weather? 🌤️</h1>
+  <p class="subtitle">Earth Science — Weather &amp; Seasons</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Weather &amp; Seasons</span>
+    <span>🔢 <strong>Lesson:</strong> 1 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️ 🌧️ 🌬️ ❄️</div>
+    <div class="caption">What's the sky doing right now? That's weather!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS2-1</strong> — Use and share observations of local weather conditions to describe patterns over time.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>IDENTIFY</strong> at least 4 types of weather and <strong>RECORD</strong> daily weather observations for one week using a Weather Watcher Journal.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p><strong>Weather</strong> is what the atmosphere (the air around Earth) is doing right now — is it sunny? Rainy? Windy? Cold? Weather can change from hour to hour and day to day.</p>
+  <p><strong>Climate</strong> is different — it's the average pattern of weather for a place over many, many years. Denver, Colorado has a semi-arid climate, which means it's usually dry — but any one day could still be rainy or snowy!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> weather, climate, atmosphere, observation, temperature, precipitation
+  </div>
+
+  <h2>🌦️ Types of Weather</h2>
+  <div class="weather-icons">
+    <div class="weather-icon-card">
+      <span class="emoji">☀️</span>
+      <span class="label">Sunny</span>
+    </div>
+    <div class="weather-icon-card">
+      <span class="emoji">⛅</span>
+      <span class="label">Cloudy</span>
+    </div>
+    <div class="weather-icon-card">
+      <span class="emoji">🌧️</span>
+      <span class="label">Rainy</span>
+    </div>
+    <div class="weather-icon-card">
+      <span class="emoji">🌬️</span>
+      <span class="label">Windy</span>
+    </div>
+    <div class="weather-icon-card">
+      <span class="emoji">❄️</span>
+      <span class="label">Snowy</span>
+    </div>
+    <div class="weather-icon-card">
+      <span class="emoji">⛈️</span>
+      <span class="label">Stormy</span>
+    </div>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and crayons</li>
+      <li>Window with a view outside OR safe outdoor access</li>
+      <li>Weather Watcher Journal (last pages of this lesson)</li>
+      <li>Pencil or marker</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Go Observe! (5–10 min)</strong><br>
+    Head to a window or go outside briefly. Ask your child:<br>
+    <ul>
+      <li>👀 What do you <em>see</em> in the sky? (clouds, sun, rain, snow?)</li>
+      <li>🤚 What do you <em>feel</em>? (warm, cold, wind on your skin?)</li>
+      <li>👂 What do you <em>hear</em>? (wind, rain drops, birds?)</li>
+    </ul>
+    Let them soak it in like a real scientist would!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Make Your Weather Icons (10 min)</strong><br>
+    On a blank piece of paper, draw 5 weather icons together: ☀️ sunny, ⛅ cloudy, 🌧️ rainy, 🌬️ windy, ❄️ snowy. Color them brightly. These become your key for the weather journal!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Day 1 Journal Entry (5 min)</strong><br>
+    Fill in the <strong>Day 1</strong> box on the Weather Watcher Journal (next page). Draw the weather icon that matches today. Write or dictate one sentence: <em>"Today the weather is ______."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Continue All Week</strong><br>
+    Each morning this week, look out the window and fill in the next day's box. By Friday you'll have a week of real weather data! You'll use this journal again in <strong>Lesson 6</strong> to look for patterns.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Weather vs. Climate Discussion (5 min)</strong><br>
+    Read or explain: <em>"Weather is what's happening outside RIGHT NOW. Climate is the pattern over many years — it tells us what weather to usually expect in a place."</em><br>
+    Ask: <em>"If Denver usually gets 300 sunny days per year, but it's raining today — is Denver's climate sunny or rainy?"</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What types of weather have you seen this week?</li>
+      <li>What's your favorite type of weather? Why?</li>
+      <li>What would you wear outside today? Does the weather change what you wear?</li>
+      <li><strong>Big Question:</strong> What's the difference between weather and climate?</li>
+    </ul>
+    <p class="discussion-hint">💡 <em>Suggested answer: Weather is what's happening outside right now — sunny, rainy, windy. Climate is the average weather pattern over many years for a place. Denver, Colorado has a "semi-arid climate" — usually dry — but any given day could be rainy or snowy. Weather changes daily; climate changes over decades.</em></p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌡️ <strong>Temperature Check:</strong> If you have an outdoor thermometer, record the temperature each day too!</li>
+      <li>📺 <strong>Weather Forecast:</strong> Watch a TV or online weather forecast together. What do meteorologists predict for tomorrow?</li>
+      <li>🗺️ <strong>Weather Around the World:</strong> Look up what the weather is today in a faraway place like Alaska, Florida, or Australia. How is it different from yours?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>Cloudy With a Chance of Meatballs</em> by Judi Barrett — a wild take on weather!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is a week-long activity:</strong> The Weather Watcher Journal is meant to be filled in each day this week. Save it — you'll need it for Lesson 6!</li>
+      <li><strong>Weather vs. climate confusion is normal:</strong> Young kids often think "it's raining, so my place has a rainy climate." Use local examples they know.</li>
+      <li><strong>Outdoor safety:</strong> Even a peek out the front door counts if it's too cold or wet to go outside longer.</li>
+      <li><strong>Assessment:</strong> Can your child name at least 4 types of weather? Can they explain why today's weather might be different from yesterday's?</li>
+      <li><strong>SAVE the journal</strong> — it's used again in Lesson 6: Weather Patterns Over Time.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>📓 Weather Watcher Journal</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Week of: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:14px;">Each day, look outside and record the weather. Draw the weather icon and write one word or sentence!</p>
+
+    <table class="calendar-grid">
+      <tr>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <tr>
+        <td>
+          <div style="font-size:9pt; color:#e65100; font-weight:bold;">Draw weather:</div>
+          <div style="height:55px;"></div>
+          <div style="border-top:1px solid #ccc; padding-top:4px; font-size:9pt; color:#999;">Today it is:</div>
+        </td>
+        <td>
+          <div style="font-size:9pt; color:#e65100; font-weight:bold;">Draw weather:</div>
+          <div style="height:55px;"></div>
+          <div style="border-top:1px solid #ccc; padding-top:4px; font-size:9pt; color:#999;">Today it is:</div>
+        </td>
+        <td>
+          <div style="font-size:9pt; color:#e65100; font-weight:bold;">Draw weather:</div>
+          <div style="height:55px;"></div>
+          <div style="border-top:1px solid #ccc; padding-top:4px; font-size:9pt; color:#999;">Today it is:</div>
+        </td>
+        <td>
+          <div style="font-size:9pt; color:#e65100; font-weight:bold;">Draw weather:</div>
+          <div style="height:55px;"></div>
+          <div style="border-top:1px solid #ccc; padding-top:4px; font-size:9pt; color:#999;">Today it is:</div>
+        </td>
+        <td>
+          <div style="font-size:9pt; color:#e65100; font-weight:bold;">Draw weather:</div>
+          <div style="height:55px;"></div>
+          <div style="border-top:1px solid #ccc; padding-top:4px; font-size:9pt; color:#999;">Today it is:</div>
+        </td>
+      </tr>
+    </table>
+
+    <h3>🖊️ My Favorite Weather Is…</h3>
+    <div class="draw-box" style="min-height:150px; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:10pt;">Draw your favorite type of weather here!</div>
+    <p style="font-size:10pt; margin-top:8px;">My favorite weather is _____________________ because __________________________________________.</p>
+
+    <h3>🔬 Weather Word Bank</h3>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">☀️ sunny</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">⛅ cloudy</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">🌧️ rainy</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">🌬️ windy</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">❄️ snowy</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">⛈️ stormy</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">🌫️ foggy</span>
+      <span style="background:#fff3e0; border:1px solid #ffcc80; border-radius:6px; padding:4px 10px; font-size:10pt;">🌈 rainbow</span>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Weather Types — Reference List</h3>
+      <ul>
+        <li>☀️ <strong>Sunny</strong> — clear sky, bright sunlight, warm feeling</li>
+        <li>⛅ <strong>Cloudy</strong> — gray or white clouds covering the sky</li>
+        <li>🌧️ <strong>Rainy</strong> — water falling from clouds as droplets</li>
+        <li>🌬️ <strong>Windy</strong> — air is moving, you can feel it on your skin or see leaves moving</li>
+        <li>❄️ <strong>Snowy</strong> — water falls as frozen ice crystals (snow)</li>
+        <li>⛈️ <strong>Stormy</strong> — strong wind, heavy rain, often thunder and lightning</li>
+        <li>🌫️ <strong>Foggy</strong> — tiny water droplets in the air make it hard to see far</li>
+      </ul>
+
+      <h3>Weather vs. Climate — Key Distinction</h3>
+      <ul>
+        <li><strong>Weather</strong> = what the atmosphere is doing RIGHT NOW (can change day to day, even hour to hour)</li>
+        <li><strong>Climate</strong> = the average pattern of weather over many years for a specific place</li>
+        <li><strong>Example:</strong> Denver's climate is semi-arid (usually dry), but any one day could be rainy, snowy, or sunny</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name at least 4 types of weather (sunny, cloudy, rainy, windy, snowy)</li>
+        <li>Child completed at least 3 of 5 journal days</li>
+        <li>Child can explain (in their own words) that weather is what's happening now, and climate is the long-term pattern</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

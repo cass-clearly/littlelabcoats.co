@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Questions, Make Observations — K Engineering Design Unit 1, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #6a1b9a;
+      padding-bottom: 10px;
+      color: #6a1b9a;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f3e5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ce93d8;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #6a1b9a;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #4a148c;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #f3e5f5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #6a1b9a;
+    }
+    .procedure-step strong { color: #4a148c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #6a1b9a; }
+    .extension-box {
+      background: #ede7f6;
+      border: 1px solid #b39ddb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .challenge-box {
+      background: #4a148c;
+      color: white;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 15px 0;
+      text-align: center;
+    }
+    .challenge-box .challenge-text {
+      font-size: 16pt;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .question-card {
+      background: white;
+      border: 2px solid #8e24aa;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 8px 0;
+    }
+    .question-card .q-number {
+      font-size: 14pt;
+      font-weight: bold;
+      color: #6a1b9a;
+      margin-right: 8px;
+    }
+    .question-card .why-it-matters {
+      font-size: 10pt;
+      color: #666;
+      font-style: italic;
+      margin-top: 5px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+    .data-table th {
+      background: #6a1b9a;
+      color: white;
+      padding: 10px;
+      border: 2px solid #4a148c;
+    }
+    .data-table td {
+      border: 2px solid #ce93d8;
+      padding: 10px;
+      height: 50px;
+      vertical-align: top;
+    }
+    .data-table tr:nth-child(even) td { background: #f3e5f5; }
+    .worksheet-box {
+      border: 3px solid #6a1b9a;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .worksheet-box h2 { margin-top: 0; }
+    .write-lines p { border-bottom: 1px solid #bbb; height: 36px; margin: 0; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .discussion-hint { font-style: italic; color: #555; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px;
+      background: #6a1b9a; color: white; border: none;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #4a148c; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .challenge-box, .question-card, .worksheet-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_Qa1kca9PzME">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>❓ Ask Questions, Make Observations</h1>
+  <p class="subtitle">Engineering Design — Build It! | Unit 1, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔧 <strong>Subject:</strong> Engineering Design — Build It!</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🧐 📋 🔎</div>
+    <div class="caption">Real engineers ask questions BEFORE they build. The more you understand the problem, the better your solution will be!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>K-2-ETS1-1</strong> — Ask questions, make observations, and gather information about a situation people want to change in order to define a simple problem that can be solved through the development of a new or improved object or tool.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><strong>OBSERVE</strong> a challenge situation closely before jumping to solutions</li>
+    <li><strong>ASK</strong> at least 3 good questions about the challenge</li>
+    <li><strong>GATHER</strong> information by testing before designing</li>
+  </ul>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Here's a secret that separates great engineers from average ones: <strong>great engineers ask questions FIRST.</strong> Before touching a single piece of material, they want to understand everything about the problem. How big? How heavy? How fast? How many? What are the limits?</p>
+  <p>Today, we'll practice the most important engineering habit: <em>ask before you act.</em></p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> observe, gather information, question, constraint, criteria, test
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>10 small household objects of similar size (choose one):
+        <ul>
+          <li>Pebbles or rocks from outside</li>
+          <li>Pennies or coins</li>
+          <li>Dried pasta pieces (penne or rotini work great)</li>
+          <li>LEGO bricks or small toys</li>
+          <li>Folded paper squares</li>
+        </ul>
+      </li>
+      <li>A few sheets of plain paper</li>
+      <li>Pencil or crayons</li>
+      <li>Student worksheet (last pages of this lesson)</li>
+    </ul>
+  </div>
+
+  <h2>🏆 The Challenge</h2>
+
+  <div class="challenge-box">
+    <div class="challenge-text">🧩 Design a way to carry 10 small objects across the room without dropping any!</div>
+    <p style="font-size: 11pt; margin: 0;">— But first, we have questions to ask…</p>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Present the Challenge (3 min)</strong><br>
+    Read the challenge aloud. Then say: <em>"Before we do ANYTHING — before we pick up a single object — we're going to be real engineers and ask questions."</em><br>
+    Ask: <em>"Why would asking questions help us build a better solution?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Generate Questions Together (10 min)</strong><br>
+    Work through these questions as a group. For each one, talk about WHY it matters.
+  </div>
+
+  <div class="question-card">
+    <span class="q-number">Q1</span> <strong>How heavy are the objects?</strong>
+    <div class="why-it-matters">→ Why it matters: If they're heavy, your carrying method needs to be strong. Folded paper might not hold rocks.</div>
+  </div>
+
+  <div class="question-card">
+    <span class="q-number">Q2</span> <strong>How far is "across the room"?</strong>
+    <div class="why-it-matters">→ Why it matters: A short trip is different from a long one. Carrying something in your hands for 3 feet is easy — but 30 feet might need a container with a handle.</div>
+  </div>
+
+  <div class="question-card">
+    <span class="q-number">Q3</span> <strong>Can I use my hands?</strong>
+    <div class="why-it-matters">→ Why it matters: If hands are allowed, that changes the design completely! If not, you need a tool.</div>
+  </div>
+
+  <div class="question-card">
+    <span class="q-number">Q4</span> <strong>Do they need to stay organized, or just get there?</strong>
+    <div class="why-it-matters">→ Why it matters: If they just need to arrive, a bag or cup works. If they need to stay organized (like eggs!), the design needs dividers.</div>
+  </div>
+
+  <div class="question-card">
+    <span class="q-number">Q5</span> <strong>How fast do I need to carry them?</strong>
+    <div class="why-it-matters">→ Why it matters: Carrying slowly is easier than running. If speed matters, the design needs to be secure, not just big.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Answer for today's challenge:</strong> Objects are light-medium weight. Room is ~15-20 feet. Hands are allowed. They just need to arrive (not organized). No speed requirement. — Now you know what you're designing for!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Gather Information by Testing (10 min)</strong><br>
+    Before designing, do quick <strong>information tests</strong>. These aren't building — they're learning!
+    <ul>
+      <li><strong>Test A:</strong> Cup your hands together. How many objects fit? (Count and record)</li>
+      <li><strong>Test B:</strong> Fold a piece of paper into a tray/bowl shape. How many fit? Does it hold them?</li>
+      <li><strong>Test C:</strong> Pick up all 10 with your hands flat (like a waiter). What happens if you walk?</li>
+    </ul>
+    Record results in the worksheet data table. <em>You're not building yet — you're gathering information!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — What Did You Learn? (5–8 min)</strong><br>
+    Review the test data together:
+    <ul>
+      <li>Which method held the most objects without dropping?</li>
+      <li>What surprised you?</li>
+      <li>What information helped you most?</li>
+      <li>If you were going to design a carrying tool now — what would it look like?</li>
+    </ul>
+    Key point: <strong>"We learned more by testing for 5 minutes than we could have guessed in an hour!"</strong>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What's the difference between a <em>question</em> and a <em>guess</em>?</li>
+      <li>What's one thing you learned from the tests that surprised you?</li>
+      <li>If you could ask ONE more question about this challenge, what would it be?</li>
+      <li>Can you think of a real problem at home where someone should ask questions before trying to fix it? (New furniture, fixing a leak, planting a garden…)</li>
+      <li>Why do you think engineers spend time asking questions before building? Isn't that wasted time?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🏗️ <strong>Build It!</strong> Based on your information, design and build a simple carrying tool using only what's around the house. Test it!</li>
+      <li>📋 <strong>Question Board:</strong> Make a "Question Bulletin Board" in your home. Every time someone is about to solve a problem, first post at least 3 questions on the board.</li>
+      <li>🎒 <strong>Real-World Test:</strong> Try carrying 10 objects in different containers around the house — a bag, a box, a towel folded like a pouch. Which works best and why?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"Rosie Revere, Engineer"</em> by Andrea Beaty — about a girl who asks questions and keeps trying until things work.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Resist the urge to solve:</strong> Kids will want to jump to building. That's the point — slow them down and model the habit of questioning first. Say: "I love that you want to start! But first let's be real engineers and ask some questions."</li>
+      <li><strong>The questions don't have to be from the list:</strong> If students generate their own, great! Any question that helps understand the challenge better is a good engineering question.</li>
+      <li><strong>Testing IS gathering information:</strong> Steps 3 and 4 might feel like playing, but they're actually practicing data collection — a core science and engineering skill.</li>
+      <li><strong>Assessment:</strong> Can each student ask at least 3 relevant questions about a challenge before trying to solve it? Can they explain why each question helps? That's success for Lesson 2.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2>📝 Student Worksheet — Lesson 2: Ask Questions First!</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>❓ My 3 Questions</h3>
+      <p>Before you start carrying objects, write 3 questions you want to answer first:</p>
+      <div class="write-lines">
+        <p style="padding-top: 4px;">Question 1: ____________________________________________________</p>
+        <p style="padding-top: 4px;">Question 2: ____________________________________________________</p>
+        <p style="padding-top: 4px;">Question 3: ____________________________________________________</p>
+      </div>
+
+      <h3>🧪 Information Tests — What Did You Find Out?</h3>
+      <table class="data-table">
+        <tr>
+          <th>Carrying Method</th>
+          <th>How Many Objects Fit?</th>
+          <th>Did Any Drop?</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Cupped hands</td>
+          <td></td>
+          <td>Yes / No</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Folded paper tray</td>
+          <td></td>
+          <td>Yes / No</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Flat hands (waiter style)</td>
+          <td></td>
+          <td>Yes / No</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="color: #888;">My own idea: ______</td>
+          <td></td>
+          <td>Yes / No</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <h3>💡 What I Learned</h3>
+      <p>Based on my questions and tests, my best carrying method would be:</p>
+      <div class="write-lines">
+        <p></p>
+        <p></p>
+      </div>
+      <p>Because:</p>
+      <div class="write-lines">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>❓ Sample Good Questions</h3>
+      <p class="discussion-hint">Any question that helps understand the challenge counts! Sample valid questions:</p>
+      <ul>
+        <li>How heavy are the objects?</li>
+        <li>How far do I need to carry them?</li>
+        <li>Can I use my hands?</li>
+        <li>Do they need to stay in order?</li>
+        <li>What happens if I drop one? Do I start over?</li>
+        <li>Can I use any tools from around the house?</li>
+      </ul>
+
+      <h3>🧪 Typical Test Results</h3>
+      <ul>
+        <li><strong>Cupped hands:</strong> Usually holds 5–8 small objects; drops likely when walking</li>
+        <li><strong>Folded paper tray:</strong> Holds 10 if edges are folded up; more stable than hands</li>
+        <li><strong>Flat hands:</strong> Holds 10 but drops happen easily when moving; fast but risky</li>
+      </ul>
+      <p class="discussion-hint">Results vary by object size/weight and hand size. Any honest results are correct!</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student wrote at least 3 questions before testing</li>
+        <li>Student recorded honest data in the table</li>
+        <li>Student can explain WHY their best method is best based on data</li>
+        <li>Student used the data to make a decision, not just a guess</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

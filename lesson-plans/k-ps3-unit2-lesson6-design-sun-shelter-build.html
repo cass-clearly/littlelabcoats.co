@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design a Sun Shelter — Build & Test — K-PS3 Unit 2, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #0288d1;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #0d47a1; }
+    .engineering-box {
+      background: #fff3e0;
+      border: 2px solid #ff9800;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .engineering-box h3 { color: #e65100; border-color: #ffcc80; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .discussion-hint {
+      font-style: italic;
+      color: #0d47a1;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid #0288d1;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .worksheet-box {
+      border: 3px solid #1565c0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #fafafa;
+    }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .test-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .test-card {
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      background: white;
+      min-height: 150px;
+    }
+    .test-card .label { font-weight: bold; color: #1565c0; font-size: 11pt; margin-bottom: 8px; }
+    .wrap-up-box {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border: 3px solid #1565c0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .wrap-up-box h2 {
+      background: #0d47a1;
+      text-align: center;
+    }
+    .unit-badge {
+      text-align: center;
+      font-size: 48pt;
+      margin: 10px 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .engineering-box, .wrap-up-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_-jZAHRV8Nlk">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🏗️ Design a Sun Shelter — Part 2: Build &amp; Test! 🏗️</h1>
+  <p class="subtitle">Physical Science — Sunshine &amp; Warmth — Unit 2, Lesson 6 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Sunshine &amp; Warmth</span>
+    <span>🔢 <strong>Lesson:</strong> 6 of 6 ⭐</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🔨 🏠 🌡️</div>
+    <div class="caption">Time to build! Does your shelter really keep cool?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS3-2</strong> — Use tools and materials provided to design and build a structure that will reduce the warming effect of sunlight on an area
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Scientists and engineers don't just plan — they <strong>build, test, and improve</strong>! Today, students take their Lesson 5 design plans and bring them to life. After building, they test whether their shelter really does reduce the warming effect of sunlight. Then comes the most important engineering step: <strong>iteration</strong> — looking at what worked and what didn't, and thinking about how to improve the design.</p>
+
+  <div class="engineering-box">
+    <h3>🔧 Engineering Design Process (Today's Steps)</h3>
+    <ul style="margin:0;">
+      <li>✅ <strong>Ask</strong> — done in Lesson 5: "How can we keep something cool in the sun?"</li>
+      <li>✅ <strong>Imagine &amp; Plan</strong> — done in Lesson 5</li>
+      <li>🔨 <strong>Create</strong> — <em>today!</em> Build the shelter from your plan</li>
+      <li>🧪 <strong>Test</strong> — <em>today!</em> Does it reduce warming? Measure the difference</li>
+      <li>🔄 <strong>Improve</strong> — <em>today!</em> What would you change? This is iteration!</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> build, test, evaluate, iterate, compare, shelter, insulate, reflect, improve, engineering design
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏗️ Building Materials</h3>
+    <ul>
+      <li>Cardboard scraps (cereal boxes, shipping boxes)</li>
+      <li>White paper and colored paper</li>
+      <li>Aluminum foil</li>
+      <li>Fabric scraps</li>
+      <li>Tape (masking or clear)</li>
+      <li>Scissors</li>
+    </ul>
+    <h3>🧪 Testing Materials</h3>
+    <ul>
+      <li>2 identical pieces of dark paper (for testing surfaces)</li>
+      <li>A sunny spot outdoors or near a bright window</li>
+      <li>A small toy animal (to be the "resident" of the shelter)</li>
+      <li>Timer (5 minutes)</li>
+      <li>Student worksheet (included)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Review Your Plan (5 min)</strong><br>
+    Get out the Lesson 5 design plans. Review:<br>
+    <ul>
+      <li><em>"What materials did you plan to use?"</em></li>
+      <li><em>"What color did you plan for the outside?"</em></li>
+      <li><em>"What shape did you design?"</em></li>
+    </ul>
+    Gather your materials. It's okay to make small changes from the plan as you build!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Build! (15–20 min)</strong><br>
+    Construct the shelter from your materials. Encourage kids to think as they build:<br>
+    <ul>
+      <li><em>"Is the toy animal completely in the shade under your shelter?"</em></li>
+      <li><em>"Is the outside light-colored or reflective?"</em></li>
+      <li><em>"Does it stand up on its own?"</em></li>
+    </ul>
+    Help with cutting and taping as needed. The goal is a freestanding structure that covers the toy animal.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Set Up the Test (5 min)</strong><br>
+    The test is a fair comparison:<br>
+    <ul>
+      <li>Place <strong>dark paper #1</strong> in direct sunlight with <em>NO shelter</em></li>
+      <li>Place <strong>dark paper #2</strong> in the same sunny spot, but <em>under the shelter</em></li>
+      <li>Make sure both papers start at the same room temperature</li>
+      <li>Start the timer for <strong>5 minutes</strong></li>
+    </ul>
+    Predict: <em>"Will the paper under the shelter be cooler than the one without a shelter?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Test &amp; Observe (5 min)</strong><br>
+    After 5 minutes, carefully feel both pieces of dark paper.<br>
+    <ul>
+      <li>Does the paper WITHOUT a shelter feel warm?</li>
+      <li>Does the paper UNDER the shelter feel cooler?</li>
+    </ul>
+    If you have a thermometer, measure both! Record observations on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Evaluate &amp; Iterate (5 min)</strong><br>
+    Ask the key engineering questions:<br>
+    <ul>
+      <li><em>"Did your shelter work? How do you know?"</em></li>
+      <li><em>"What part of your shelter worked best?"</em></li>
+      <li><em>"What would you change if you built it again?"</em></li>
+    </ul>
+    This is <strong>iteration</strong> — real engineers always improve their designs after testing!
+  </div>
+
+  <h2>💬 Discussion Question (Unit Wrap-Up)</h2>
+
+  <div class="question-box">
+    <strong>🗣️ "You designed a shelter to reduce warming. What are some ways humans design buildings and cities to stay cooler?"</strong>
+    <p class="discussion-hint">→ White or light-colored roofs that reflect sunlight instead of absorbing it. Shade trees planted strategically to block direct sun. Green roofs covered in plants that use sunlight for photosynthesis and cool through evaporation. Underground or earth-sheltered homes that use the earth's stable temperature as insulation. Thick walls (good thermal mass) that slow heat from entering during the day. Small windows on the sunny south side. Ancient desert civilizations — in Egypt, the Middle East, and Southwest US — figured all of this out thousands of years ago! Their buildings were marvels of passive cooling design.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔄 <strong>Second Iteration:</strong> Using what you learned from the test, redesign and rebuild the shelter. Is Version 2 better? Measure both!</li>
+      <li>🏆 <strong>Shelter Competition:</strong> If you have siblings, each builds their own shelter. Test all shelters side by side. Whose kept the coolest? Why?</li>
+      <li>🌍 <strong>Architecture Tour:</strong> Walk around your neighborhood or look online. Find buildings with features designed to stay cool — light roofs, shade overhangs, lots of trees nearby, etc.</li>
+      <li>🌿 <strong>Green Roof Project:</strong> Try adding small leaves or strips of grass to your shelter roof. Does it change the temperature underneath?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>It's okay if it doesn't work perfectly:</strong> In fact, that's ideal! The evaluation and iteration step is the most important engineering learning. "It didn't work well because the roof had a gap" is excellent science thinking.</li>
+      <li><strong>Foil works especially well:</strong> If students used foil on their shelter, they'll often see a clear temperature difference. Cardboard alone works less dramatically but still shows some effect.</li>
+      <li><strong>Fair testing:</strong> The two dark papers should be in the same sunny spot with the same exposure, differing ONLY in whether the shelter covers them. This teaches controlled experiments.</li>
+      <li><strong>Iteration is the key concept:</strong> Real engineering is always iterative. Celebrate "failures" as learning data. NASA has famously said "failure is not an option" — but what they mean is they learn from every test and iterate toward success.</li>
+      <li><strong>Unit completion:</strong> After 6 lessons, students should be able to describe how sunlight warms Earth's surfaces, explain why some surfaces warm faster than others, and describe how to design a structure to reduce warming. That's K-PS3-1 and K-PS3-2 complete!</li>
+    </ul>
+  </div>
+
+  <!-- UNIT WRAP-UP BOX -->
+  <div class="wrap-up-box">
+    <h2>🌟 Unit 2 Wrap-Up — Sunshine &amp; Warmth</h2>
+    <div class="unit-badge">🏆</div>
+    <h3 style="text-align:center; border:none; color:#0d47a1;">You Completed K Physical Science Unit 2!</h3>
+
+    <p><strong>In this unit, you learned:</strong></p>
+    <ul>
+      <li>☀️ Sunlight travels from the sun to Earth and warms surfaces it hits</li>
+      <li>🖤 Dark surfaces absorb more sunlight and warm faster than light surfaces</li>
+      <li>🌑 Shadow length shows us how directly sunlight hits an area — short shadows = direct rays = more warming</li>
+      <li>🌍 Different Earth surfaces (soil, sand, water) warm at different rates</li>
+      <li>🧊 Sunlight can cause ice to melt faster, especially on dark surfaces in direct sun</li>
+      <li>🏗️ We can design and build structures to reduce warming — using light colors, reflective materials, and shade</li>
+    </ul>
+
+    <p><strong>NGSS Standards Covered:</strong></p>
+    <ul>
+      <li>✅ <strong>K-PS3-1</strong> — Make observations to determine the effect of sunlight on Earth's surface (Lessons 1–4)</li>
+      <li>✅ <strong>K-PS3-2</strong> — Use tools and materials to design and build a structure that will reduce the warming effect of sunlight (Lessons 5–6)</li>
+    </ul>
+
+    <p style="text-align:center; font-size:13pt; margin-top:16px; font-weight:bold; color:#0d47a1;">⭐ Scientists observe, compare, predict, and test. That's exactly what you did! ⭐</p>
+  </div>
+
+  <!-- WORKSHEET PAGE -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2 style="text-align:center; background:#1565c0;">🏗️ Build &amp; Test Worksheet</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>🔨 My Shelter — Draw what you built:</h3>
+      <div style="border: 2px dashed #1565c0; border-radius: 8px; min-height: 160px; background: white; display:flex; align-items:center; justify-content:center; color:#ccc; font-style:italic; margin-bottom:14px;">
+        Draw your finished shelter here
+      </div>
+
+      <h3>🧪 The Test — Circle what you found:</h3>
+      <div class="test-grid">
+        <div class="test-card">
+          <div class="label">☀️ Dark paper WITHOUT shelter</div>
+          <div style="margin-top:10px; font-size:11pt;">After 5 minutes it felt:</div>
+          <div style="font-size:11pt; margin-top:8px;"><strong>❄️ Cool &nbsp; 😐 Warm &nbsp; 🔥 Hot</strong></div>
+          <p style="font-size:9pt; color:#888; margin-top:4px;">(circle one)</p>
+        </div>
+        <div class="test-card">
+          <div class="label">🏠 Dark paper UNDER shelter</div>
+          <div style="margin-top:10px; font-size:11pt;">After 5 minutes it felt:</div>
+          <div style="font-size:11pt; margin-top:8px;"><strong>❄️ Cool &nbsp; 😐 Warm &nbsp; 🔥 Hot</strong></div>
+          <p style="font-size:9pt; color:#888; margin-top:4px;">(circle one)</p>
+        </div>
+      </div>
+
+      <h3>✅ Did my shelter work?</h3>
+      <p style="font-size:12pt; margin:8px 0;">Circle one: &nbsp;&nbsp; <strong>YES, it kept things cooler!</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>NO, same temperature</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>A little bit</strong></p>
+
+      <h3>🔄 If I built it again, I would change...</h3>
+      <p style="border-bottom:2px solid #1565c0; height:32px; margin:8px 0;"></p>
+      <p style="border-bottom:2px solid #1565c0; height:32px; margin:8px 0;"></p>
+
+      <h3>⭐ The most important thing I learned in this unit:</h3>
+      <p style="border-bottom:2px solid #1565c0; height:32px; margin:8px 0;"></p>
+      <p style="border-bottom:2px solid #1565c0; height:32px; margin:8px 0;"></p>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY PAGE -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY &amp; UNIT ASSESSMENT</h2>
+
+      <h3>Expected Test Results</h3>
+      <ul>
+        <li>The dark paper WITHOUT a shelter will feel noticeably warm or hot after 5 min in direct sun</li>
+        <li>The dark paper UNDER a well-built shelter should feel cooler — especially if the shelter uses foil or white paper on outside</li>
+        <li>The difference may be subtle or dramatic depending on shelter design and sun intensity</li>
+      </ul>
+
+      <h3>Iteration Prompts — Common Issues and Fixes</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:10pt;">
+        <tr style="background:#e3f2fd;">
+          <th style="border:2px solid #90caf9; padding:8px;">Problem</th>
+          <th style="border:2px solid #90caf9; padding:8px;">What to Try Next Time</th>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Shelter collapsed</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Add tape to corners, make wider base, use sturdier cardboard</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Gaps in roof/walls let sun through</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Cover all gaps with tape or extra material — total shade is the goal</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Dark material used on outside</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Flip to light-colored side out, or add foil covering on exterior</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Shelter too small for toy</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Extend walls, make a wider roof, or use a larger toy next time</td>
+        </tr>
+      </table>
+
+      <h3>💡 Unit Summary: K-PS3 Concepts Demonstrated</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:10pt; margin-top:10px;">
+        <tr style="background:#e3f2fd;">
+          <th style="border:2px solid #90caf9; padding:8px;">Lesson</th>
+          <th style="border:2px solid #90caf9; padding:8px;">Key Concept</th>
+          <th style="border:2px solid #90caf9; padding:8px;">NGSS</th>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">L1: Sun Warms Everything</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Dark absorbs more; wet cools by evaporation</td>
+          <td style="border:2px solid #90caf9; padding:8px;">K-PS3-1</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">L2: Shadow Science</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Sun angle determines warming intensity</td>
+          <td style="border:2px solid #90caf9; padding:8px;">K-PS3-1</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">L3: Dark vs Light Surfaces</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Earth surfaces warm at different rates; urban heat islands</td>
+          <td style="border:2px solid #90caf9; padding:8px;">K-PS3-1</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">L4: Melting Race</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Sunlight causes melting; surface color and shade matter; albedo</td>
+          <td style="border:2px solid #90caf9; padding:8px;">K-PS3-1</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">L5: Design a Shelter (Plan)</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Engineering design process: ask, imagine, plan</td>
+          <td style="border:2px solid #90caf9; padding:8px;">K-PS3-2</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">L6: Build &amp; Test</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Create, test, evaluate, iterate</td>
+          <td style="border:2px solid #90caf9; padding:8px;">K-PS3-2</td>
+        </tr>
+      </table>
+
+      <h3>✅ Unit Completion Checklist</h3>
+      <ul>
+        <li>☐ Child can explain that sunlight warms Earth's surfaces</li>
+        <li>☐ Child can say why dark surfaces warm faster than light ones</li>
+        <li>☐ Child can connect shadow length to direct vs. angled sunlight</li>
+        <li>☐ Child can rank soil, sand, and water by how fast they warm in sunlight</li>
+        <li>☐ Child built a structure designed to reduce warming and can evaluate whether it worked</li>
+        <li>☐ Child can suggest at least one improvement to their design (iteration)</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_-jZAHRV8Nlk" data-content-selector="body"></script>
+</body>
+</html>

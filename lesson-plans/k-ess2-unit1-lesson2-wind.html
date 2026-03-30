@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wind — Invisible but Powerful — K-ESS2 Unit 1, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #5d4037;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .wind-scale {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .wind-scale th {
+      background: #e65100;
+      color: white;
+      padding: 10px;
+      border: 2px solid #bf360c;
+      text-align: left;
+    }
+    .wind-scale td {
+      border: 2px solid #ffcc80;
+      padding: 10px;
+      vertical-align: top;
+    }
+    .wind-scale tr:nth-child(even) td { background: #fff3e0; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .draw-box {
+      border: 2px solid #bf360c;
+      border-radius: 8px;
+      min-height: 120px;
+      margin: 8px 0;
+      background: #fffde7;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+  </style>
+</head>
+<body data-document-id="doc_7vZMaWOfRDY">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌬️ Wind — Invisible but Powerful! 🌬️</h1>
+  <p class="subtitle">Earth Science — Weather &amp; Seasons</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Weather &amp; Seasons</span>
+    <span>🔢 <strong>Lesson:</strong> 2 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌬️ 🌀 🍃</div>
+    <div class="caption">You can't see wind — but you can feel it and measure it!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS2-1</strong> — Use and share observations of local weather conditions to describe patterns over time.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>DEMONSTRATE</strong> that wind is moving air and <strong>MEASURE</strong> wind strength using a simple pinwheel or streamers.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p><strong>Wind is air in motion.</strong> You can't see air, but you can see what it does — it spins pinwheels, bends trees, and carries clouds across the sky. Wind is actually caused by the sun heating Earth's surface unevenly, creating areas of different air pressure. Air always moves from high pressure areas toward low pressure areas — and that movement is wind!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> wind, air, air pressure, force, pinwheel, anemometer
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>One square of paper (any size — 6"×6" or 8"×8" works well)</li>
+      <li>A pencil or drinking straw</li>
+      <li>A straight pin or small piece of tape</li>
+      <li>Scissors</li>
+      <li>Outdoor access OR an electric fan indoors</li>
+      <li><em>Optional:</em> Streamers or strips of tissue paper</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Make a Pinwheel (10 min)</strong><br>
+    <ol>
+      <li>Start with a square piece of paper</li>
+      <li>Draw diagonal lines from each corner to the center (but don't cut all the way — stop about 1 inch from the center)</li>
+      <li>Cut along each diagonal line toward the center</li>
+      <li>Fold every other corner point to the center (don't crease — just hold)</li>
+      <li>Pin or tape through all the folded points and through the center, then attach to the eraser end of a pencil or the top of a straw</li>
+    </ol>
+    Your pinwheel should spin freely when you blow on it!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Test Your Pinwheel (5 min)</strong><br>
+    Try these conditions and observe what happens:
+    <ul>
+      <li>Hold still in a calm room — does it spin?</li>
+      <li>Blow very gently — slight spin?</li>
+      <li>Blow hard — fast spin?</li>
+      <li>Hold near a fan on low — medium spin?</li>
+      <li>Hold near an open window — what happens?</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Create the Wind Strength Scale (5 min)</strong><br>
+    Fill in the Wind Strength Scale on your worksheet (next page). Rate each condition you tested:
+    <ul>
+      <li>0 = still (no spin)</li>
+      <li>1 = slight/slow spin</li>
+      <li>2 = steady spin</li>
+      <li>3 = fast spin</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Outdoor Observation (5–10 min)</strong><br>
+    Take the pinwheel outside. Hold it up and observe. Rate the outdoor wind strength (0–3). Look for other signs of wind: moving leaves, swaying grass, flags, smoke direction. Can you tell which direction the wind is coming from?
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Real science connection:</strong> Scientists use an <strong>anemometer</strong> — a device with spinning cups — to measure wind speed. Your pinwheel is a simple version of the same idea!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Can you see wind? How do you know it's there?</li>
+      <li>What makes your pinwheel spin faster? What makes it spin slower?</li>
+      <li>Have you ever been outside on a really windy day? What did it feel like?</li>
+      <li><strong>Big Question:</strong> What makes wind? Where does it come from?</li>
+    </ul>
+    <p class="discussion-hint">💡 <em>Suggested answer: Wind is air moving from high pressure areas to low pressure areas. The sun heats Earth's surface unevenly — land heats up faster than water, and the equator heats more than the poles. This uneven heating causes air to rise and fall, creating the pressure differences that make wind. It's all powered by the sun!</em></p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🎏 <strong>Streamer Test:</strong> Tape strips of tissue paper or ribbon to a stick. Walk around outside with them — can you map which direction the wind is blowing?</li>
+      <li>🧭 <strong>Wind Direction:</strong> Look up which direction the wind is coming from today using a weather app. North? South? East? West?</li>
+      <li>🌳 <strong>Tree Observer:</strong> Watch trees for 5 minutes. How much are the branches moving? Can you match it to your 0–3 scale?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>Feel the Wind</em> by Arthur Dorros</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Pinwheel assembly tip:</strong> Pre-scoring the folds with a ruler makes it easier for small hands. Don't press the corners all the way flat — they should stay angled to catch air.</li>
+      <li><strong>If no pin is available:</strong> A small piece of sticky tack or a brad fastener works. The pinwheel just needs to spin freely without falling off.</li>
+      <li><strong>The science concept:</strong> Keep "wind is moving air" front and center. Kids don't need to understand pressure systems deeply — just the idea that air moves and we can feel/measure it.</li>
+      <li><strong>Assessment:</strong> Can the child demonstrate that blowing harder makes the pinwheel spin faster? Can they rate wind strength on the 0–3 scale?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌬️ Wind Strength Worksheet</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🔢 My Wind Strength Scale</h3>
+    <table class="wind-scale">
+      <tr>
+        <th>Level</th>
+        <th>What the Pinwheel Does</th>
+        <th>Wind Strength</th>
+      </tr>
+      <tr>
+        <td style="text-align:center; font-size:18pt; font-weight:bold; color:#e65100;">0</td>
+        <td>Does not spin at all</td>
+        <td>🟢 Calm — no wind</td>
+      </tr>
+      <tr>
+        <td style="text-align:center; font-size:18pt; font-weight:bold; color:#ff8f00;">1</td>
+        <td>Spins slowly or just barely moves</td>
+        <td>🟡 Light breeze</td>
+      </tr>
+      <tr>
+        <td style="text-align:center; font-size:18pt; font-weight:bold; color:#e65100;">2</td>
+        <td>Spins steadily</td>
+        <td>🟠 Moderate wind</td>
+      </tr>
+      <tr>
+        <td style="text-align:center; font-size:18pt; font-weight:bold; color:#bf360c;">3</td>
+        <td>Spins very fast!</td>
+        <td>🔴 Strong wind</td>
+      </tr>
+    </table>
+
+    <h3>📊 My Test Results</h3>
+    <table class="wind-scale">
+      <tr>
+        <th>What I tested</th>
+        <th>My rating (0–3)</th>
+        <th>What I observed</th>
+      </tr>
+      <tr>
+        <td>Still room, no blowing</td>
+        <td style="height:40px;"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Blowing gently</td>
+        <td style="height:40px;"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Blowing hard</td>
+        <td style="height:40px;"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Near a fan OR open window</td>
+        <td style="height:40px;"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Outside</td>
+        <td style="height:40px;"></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>🖊️ Draw Your Pinwheel in the Wind!</h3>
+    <div class="draw-box" style="min-height:150px; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:10pt;">
+      Draw your pinwheel spinning! Add arrows to show which way the wind is blowing.
+    </div>
+
+    <p style="font-size:10pt; margin-top:10px;">Today the wind outside was (circle one): &nbsp; <strong>0 — Calm</strong> &nbsp; | &nbsp; <strong>1 — Light</strong> &nbsp; | &nbsp; <strong>2 — Moderate</strong> &nbsp; | &nbsp; <strong>3 — Strong</strong></p>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Expected Test Results (approximate)</h3>
+      <ul>
+        <li><strong>Still room, no blowing</strong> → 0 (calm) — the pinwheel should not spin on its own if the room is still</li>
+        <li><strong>Blowing gently</strong> → 1 (light) — slight, irregular spinning</li>
+        <li><strong>Blowing hard</strong> → 3 (strong) — fast, sustained spin</li>
+        <li><strong>Near a fan/open window</strong> → 2 or 3 depending on fan setting</li>
+        <li><strong>Outside</strong> → varies; on a calm day expect 0–1; a breezy day 2–3</li>
+      </ul>
+
+      <h3>Key Science Concepts</h3>
+      <ul>
+        <li><strong>Wind is moving air</strong> — you can't see it, but you can observe its effects</li>
+        <li><strong>More air movement = higher wind speed = faster pinwheel</strong></li>
+        <li><strong>An anemometer</strong> is the real scientific tool for measuring wind speed (works the same way as the pinwheel)</li>
+        <li><strong>Wind is caused by uneven heating of Earth's surface by the sun</strong> — warm air rises (low pressure), cool air flows in to replace it</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can show that blowing harder = faster spin</li>
+        <li>Child can rate at least 3 conditions using the 0–3 scale</li>
+        <li>Child understands that wind is air that is moving</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

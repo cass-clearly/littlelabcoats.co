@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water — Earth's Most Important Resource — K-ESS3 Unit 2, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+      background: #fffdf9;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid #ff8f00;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .water-chart {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 10pt;
+    }
+    .water-chart th {
+      background: #e65100;
+      color: white;
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ffcc80;
+    }
+    .water-chart td {
+      border: 1px solid #ffcc80;
+      padding: 8px 12px;
+      background: #fff8e1;
+    }
+    .water-chart tr:nth-child(even) td { background: #fff3e0; }
+    .fact-box {
+      background: #e3f2fd;
+      border: 2px solid #42a5f5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 15px 0;
+      text-align: center;
+    }
+    .fact-box .big-number { font-size: 36pt; font-weight: bold; color: #1565c0; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; background: white; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .fact-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .tally-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .tally-table th {
+      background: #bf360c;
+      color: white;
+      padding: 8px 12px;
+      border: 1px solid #e65100;
+    }
+    .tally-table td {
+      border: 1px solid #ffcc80;
+      padding: 8px 12px;
+      background: #fff8e1;
+      height: 40px;
+    }
+    .tally-table tr:nth-child(even) td { background: #fff3e0; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>💧 Water — Earth's Most Important Resource 💧</h1>
+  <p class="subtitle">Earth Science — Earth &amp; Human Activity | Unit 2, Lesson 2</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌍 <strong>Subject:</strong> Earth Science — Earth &amp; Human Activity</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">💧 🌊 🧊 ❄️ 🐟</div>
+    <div class="caption">Earth is 71% water — but almost none of it is available for us to drink!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS3-1</strong> — Use a model to represent the relationship between the needs of different plants or animals (including humans) and the places they live.<br>
+    <strong>K-ESS3-3</strong> — Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Water is everywhere on Earth — but most of it is saltwater in oceans that living things can't drink! Only a tiny sliver of Earth's water is fresh, drinkable water. That's why we need to use water carefully and not waste it.</p>
+
+  <div class="fact-box">
+    <div class="big-number">71%</div>
+    <p>of Earth is covered in water — but only <strong>3%</strong> is fresh water, and most of <em>that</em> is frozen in glaciers!<br>
+    Less than <strong>1%</strong> of all Earth's water is available for living things to drink. 💧</p>
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <p>All living things need water to survive — plants, animals, and humans. Water is found in oceans, rivers, lakes, underground aquifers, and even in clouds and soil. Oceans hold about 97% of Earth's water, but it's saltwater — too salty for humans and most land animals to drink. Only about 3% is freshwater. Of that 3%, most is frozen in polar ice caps and glaciers. This means less than 1% of all Earth's water is liquid fresh water available for drinking, farming, and ecosystems.</p>
+  <p>Because fresh water is so rare and so important, it's a resource we must protect and conserve — even though it might seem like there's plenty when you turn on a tap!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> water, freshwater, saltwater, ocean, conservation, resource, glacier, aquifer
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 For the Water Audit Activity</h3>
+    <ul>
+      <li>Paper and pencil (to count water uses)</li>
+      <li>Printed tally sheet (included)</li>
+      <li>Optional: measuring cup and bowl (for water-saving demonstration)</li>
+    </ul>
+    <h3>💧 For the Water-Saving Demo</h3>
+    <ul>
+      <li>A bowl of water</li>
+      <li>Toothbrush</li>
+      <li>Timer (phone works great)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — The Big Question (5 min)</strong><br>
+    Ask: <em>"Earth is covered in water — 71%! So why do we need to be careful about how much we use?"</em> Let kids guess. Then reveal the secret: most of Earth's water is saltwater! Only a tiny bit is fresh. Draw a simple picture together: a big circle (all of Earth's water), a small slice (freshwater), and a tiny dot (what's actually available to drink).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Morning Water Audit (10 min)</strong><br>
+    Use the tally sheet to count how many times your family uses water in one morning. Every time someone uses water, make a tally mark!
+    <ul>
+      <li>🥛 Drinking water</li>
+      <li>🦷 Brushing teeth</li>
+      <li>🙌 Washing hands</li>
+      <li>🚽 Flushing the toilet</li>
+      <li>🚿 Taking a shower or bath</li>
+      <li>🍳 Cooking breakfast</li>
+      <li>🌱 Watering plants</li>
+    </ul>
+    Add them up! How many gallons did your family use?
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Quick math:</strong> Toilet flush = ~1.5 gallons. Shower = ~2 gallons/minute. Brushing teeth (tap running, 2 min) = ~2–4 gallons. Hand washing = ~0.5 gallons.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Water-Saving Challenge (10 min)</strong><br>
+    Test these water-saving habits and feel the difference:
+    <ul>
+      <li>🦷 <strong>Tap-off brushing:</strong> Brush teeth with the tap running vs. turning it off. Turning it off saves 8 gallons per brush — up to 16 gallons a day for a family!</li>
+      <li>🍝 <strong>Pasta water rescue:</strong> When pasta water cools, use it to water a houseplant. Plants love it!</li>
+      <li>🚿 <strong>Short shower challenge:</strong> Time a 4-minute shower vs. a 10-minute one. That's 12 gallons of savings!</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Student Worksheet (10 min)</strong><br>
+    Complete the water tally chart and water-saving pledge on the worksheet. Students circle water-wasting behaviors and draw one way they'll save water.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Earth is 71% water — why do we need to conserve it if there's so much?</li>
+      <li>Where does your drinking water come from? (Tap → water treatment plant → river or aquifer → rain or snowmelt)</li>
+      <li>What animals need fresh water? What happens to them if a river dries up?</li>
+      <li>Can you think of two ways to save water at home starting today?</li>
+      <li>What does a glacier have to do with your drinking water?</li>
+    </ul>
+
+    <div class="discussion-hint">
+      <strong>💡 Suggested answer — why conserve if there's so much water?</strong>
+      Even though 71% of Earth is covered in water, almost all of it is saltwater in the oceans — too salty for humans, most land animals, or plants to drink. Only 3% is fresh water, and most of <em>that</em> is frozen in glaciers and ice caps! Less than 1% of all Earth's water is available as liquid fresh water in rivers, lakes, and underground. That tiny amount has to support all of humanity, all land animals, and all plants. So yes — even though Earth looks blue and watery, drinkable water is actually very rare and precious.
+    </div>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🍶 <strong>Water model:</strong> Use a big bowl (ocean = salt water) and a small cup (fresh water) and a teaspoon (drinkable water) to show the proportions visually.</li>
+      <li>🌧️ <strong>Rain catcher:</strong> Set out a cup when it rains. Measure how much falls. Where does rain water go? (Some soaks into soil, some flows to rivers, some evaporates.)</li>
+      <li>📚 <strong>Read aloud:</strong> <em>"A Drop Around the World"</em> by Barbara Shaw McKinney or <em>"Water"</em> by Frank Asch</li>
+      <li>🎯 <strong>One-week challenge:</strong> Track your family's water use for one week. Can you reduce it by just 10%?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Water audit numbers:</strong> The exact gallons don't have to be perfect. The point is to raise awareness that every water use adds up.</li>
+      <li><strong>For younger children:</strong> Focus on the physical activity — tapping off the faucet, timing a shower. The concept of 1% of water being drinkable can be shown concretely with the bowl/cup/teaspoon model.</li>
+      <li><strong>Connection to K-ESS3-1:</strong> Emphasize that animals also need fresh water. A fish needs its river. A deer needs a stream. When humans pollute or divert water, animals suffer. This connects habitat needs to human activity.</li>
+      <li><strong>Connection to K-ESS3-3:</strong> Water conservation is a solution to the problem of human impact. Students designing their own water-saving action meets the "communicate solutions" performance expectation.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>💧 Student Worksheet — Water Tally</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🔢 Part 1: Water Audit — How Much Does Your Family Use?</h3>
+    <p style="font-size:10pt; color:#555;">Make a tally mark each time someone in your family uses water this morning!</p>
+
+    <table class="tally-table">
+      <tr>
+        <th>Water Use</th>
+        <th>Tally Marks</th>
+        <th>Gallons (about)</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <td>🦷 Brushing teeth</td>
+        <td></td>
+        <td>2–4 gallons each</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🙌 Washing hands</td>
+        <td></td>
+        <td>0.5 gallons each</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🚽 Toilet flush</td>
+        <td></td>
+        <td>1.5 gallons each</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🚿 Shower (minutes)</td>
+        <td></td>
+        <td>2 gallons/minute</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🍳 Cooking</td>
+        <td></td>
+        <td>2–4 gallons each</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🥛 Drinking water</td>
+        <td></td>
+        <td>0.25 gallons each</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>✏️ Part 2: My Water-Saving Pledge</h3>
+    <p style="font-size:10pt;">Draw or write ONE way you will save water starting today:</p>
+    <div style="border: 2px solid #ffcc80; border-radius: 8px; height: 120px; margin: 10px 0; background: #fff8e1;"></div>
+    <p style="font-size: 11pt; text-align: center;">I will save water by: __________________________________________________</p>
+    <p style="font-size: 10pt; text-align: center; color: #777;">This will save about _______ gallons per day! 💧</p>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Water Facts to Know</h3>
+      <ul>
+        <li><strong>Earth's water:</strong> 71% of Earth's surface is water. 97% of that is saltwater (oceans). Only 3% is fresh.</li>
+        <li><strong>Freshwater breakdown:</strong> ~69% of freshwater is frozen in glaciers. ~30% is underground. Only ~1% is in rivers and lakes — the accessible stuff!</li>
+        <li><strong>This means:</strong> Less than 1% of all Earth's water is available for humans, land animals, and plants to drink.</li>
+      </ul>
+
+      <h3>Water Use Math</h3>
+      <table class="water-chart">
+        <tr>
+          <th>Activity</th>
+          <th>Water Used</th>
+          <th>Savings if You Conserve</th>
+        </tr>
+        <tr>
+          <td>Brushing teeth (tap ON, 2 min)</td>
+          <td>~4 gallons</td>
+          <td>Turn tap OFF → saves ~3.5 gallons!</td>
+        </tr>
+        <tr>
+          <td>Toilet flush</td>
+          <td>~1.5 gallons</td>
+          <td>Low-flow toilets: 1.3 gallons</td>
+        </tr>
+        <tr>
+          <td>Shower (10 min)</td>
+          <td>~20 gallons</td>
+          <td>4-min shower → saves ~12 gallons!</td>
+        </tr>
+        <tr>
+          <td>Washing hands</td>
+          <td>~1 gallon (15 sec)</td>
+          <td>Turn off between scrubbing → saves 0.5 gal</td>
+        </tr>
+      </table>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student understands that most of Earth's water is saltwater and not drinkable.</li>
+        <li>Student can explain at least one concrete water-saving action and why it matters.</li>
+        <li>Student connects water conservation to the needs of animals and plants, not just humans.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_K-HQVTJGlfk" data-content-selector="body"></script>
+</body>
+</html>

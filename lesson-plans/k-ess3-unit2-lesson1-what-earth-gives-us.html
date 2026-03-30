@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Does Earth Give Us? — K-ESS3 Unit 2, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+      background: #fffdf9;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid #ff8f00;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .sort-mat {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .sort-mat th {
+      padding: 14px;
+      font-size: 16pt;
+      border: 3px solid #333;
+      width: 50%;
+    }
+    .sort-mat .natural-header { background: #2e7d32; color: white; }
+    .sort-mat .human-header { background: #1565c0; color: white; }
+    .sort-mat td {
+      border: 3px solid #333;
+      padding: 10px;
+      height: 260px;
+      vertical-align: top;
+      font-size: 10pt;
+      color: #999;
+    }
+    .cut-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .cut-card {
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 11pt;
+      min-height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cut-card .emoji { font-size: 28pt; }
+    .cut-card .label { font-weight: bold; margin-top: 4px; font-size: 10pt; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-column h3 { font-size: 13pt; text-align: center; }
+    .ak-natural h3 { color: #2e7d32; border-color: #a5d6a7; }
+    .ak-human h3 { color: #1565c0; border-color: #90caf9; }
+    .ak-column ul { list-style: none; padding-left: 0; }
+    .ak-column li { padding: 3px 0; }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; background: white; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌿 What Does Earth Give Us? 🌿</h1>
+  <p class="subtitle">Earth Science — Earth &amp; Human Activity | Unit 2, Lesson 1</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌍 <strong>Subject:</strong> Earth Science — Earth &amp; Human Activity</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌳 💧 🪨 ☀️ 🌾</div>
+    <div class="caption">Earth gives us everything we need — can you spot what's natural and what's human-made?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS3-1</strong> — Use a model to represent the relationship between the needs of different plants or animals (including humans) and the places they live.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Everything we use comes from Earth! Trees give us wood. Soil grows our food. Water keeps us alive. Even plastic — which looks totally human-made — started as oil deep underground. In this lesson, students explore the difference between <strong>natural resources</strong> (things Earth makes) and <strong>human-made items</strong> (things people create), and discover that almost everything traces back to something natural.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>A <strong>natural resource</strong> is something from nature that living things need or use. Air, water, sunlight, soil, plants, and rocks are all natural resources. Humans use these natural resources to build houses, make clothes, grow food, and create products. Even things that look completely human-made — like glass, plastic, or cotton clothes — started as natural materials. Glass comes from melted sand. Plastic comes from oil. Cotton comes from a plant. Understanding where things come from helps us appreciate Earth and take care of it!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> natural resource, human-made, material, soil, water, wood, rock, cotton, oil, glass
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Items to Gather for the Sorting Game</h3>
+    <ul>
+      <li>Wood items: wooden spoon, wood floor, pencil (wood + graphite)</li>
+      <li>Plastic items: plastic toy, plastic cup, plastic bag</li>
+      <li>Natural food: apple, carrot, or any fresh fruit/vegetable</li>
+      <li>Processed food: candy, crackers, chips</li>
+      <li>Fabric: cotton shirt or towel (cotton is a plant!)</li>
+      <li>Glass window or glass cup</li>
+      <li>Stone or rock from outside</li>
+    </ul>
+    <h3>🧰 For the Worksheet</h3>
+    <ul>
+      <li>Printed sorting mat (included at end of lesson)</li>
+      <li>Printed picture cards — cut apart</li>
+      <li>Scissors, glue stick</li>
+      <li>Crayons or markers</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce Natural Resources (5 min)</strong><br>
+    Hold up a glass of water. Ask: <em>"Where did this come from?"</em> (A river, a well, rain — from Earth!) Hold up a wooden spoon: <em>"Where did this come from?"</em> (A tree — from Earth!) Explain: <em>"Earth gives us everything we need to live. These are called natural resources — things from nature."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Walk Around the House (10 min)</strong><br>
+    Go on a "nature detective" walk around your home. Point to objects and ask: <em>"Is this natural — did Earth make it? Or did people make it?"</em>
+    <ul>
+      <li>🪵 Wood floor → <strong>Natural</strong> (from a tree)</li>
+      <li>🧸 Plastic toy → <strong>Human-made</strong> (but plastic = oil from Earth!)</li>
+      <li>👕 Cotton shirt → <strong>Both!</strong> (cotton plant + human stitching)</li>
+      <li>🪟 Glass window → <strong>Processed natural</strong> (sand melted into glass)</li>
+      <li>🍎 Apple → <strong>Natural</strong> (from a tree)</li>
+      <li>🍬 Candy → <strong>Human-made</strong> (but sugar comes from sugar cane!)</li>
+    </ul>
+    Start two piles: one for natural, one for human-made.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — The "Where Did It Come From?" Game (10 min)</strong><br>
+    Pick up each human-made item and trace it back to Earth. <em>"This plastic toy — where did the plastic come from?"</em> → Oil, which comes from deep in the Earth! <em>"This glass cup — where did the glass come from?"</em> → Sand from the ground! Even human-made things started as natural materials. Humans just changed them.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Student Worksheet Sort (10–15 min)</strong><br>
+    Cut out the picture cards together. Sort each card into "Natural" or "Human-Made" on the sorting mat. Some cards have a note: "started natural!" — these go in the human-made pile but kids can add an arrow showing where they came from.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Discuss &amp; Share (5 min)</strong><br>
+    Go through the worksheet together. Celebrate discoveries! Ask the discussion questions below. Kids write or draw their favorite natural resource on the back.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Can you name 5 things that come from Earth?</li>
+      <li>What would happen if we ran out of trees? What would we lose?</li>
+      <li>Is plastic natural or human-made? (Trick question — where did the oil come from?)</li>
+      <li>Which natural resource do you use the most every day?</li>
+      <li>What do animals need from Earth? (Food, water, shelter — same as us!)</li>
+    </ul>
+
+    <div class="discussion-hint">
+      <strong>💡 Suggested answer — plastic discussion:</strong> Plastic is human-made, but it started as oil — a natural resource from deep underground. This is a great "both" answer! Plastic started natural, then humans changed it. That's why it's important: once we use oil to make plastic, we can't put the oil back.
+    </div>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌲 <strong>Trace a pencil:</strong> A pencil is wood (tree) + graphite (a mineral from Earth) + metal (mined) + rubber eraser (rubber tree). Everything traces back to Earth!</li>
+      <li>🗺️ <strong>Nature walk:</strong> Go outside and collect 5 natural items (leaves, rocks, sticks, soil, seed pods). Make a nature table display.</li>
+      <li>📚 <strong>Read aloud:</strong> <em>"Dirt: The Scoop on Soil"</em> by Natalie Rosinsky or <em>"Why Should I Save Energy?"</em> by Jen Green</li>
+      <li>🎨 <strong>Art project:</strong> Draw a picture of your favorite natural resource and how you use it.</li>
+      <li>🧪 <strong>Science challenge:</strong> Make a list of everything you eat in one day. Which ingredients came directly from nature? Which were processed by people?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>The "both" category:</strong> Many items will be BOTH natural + human-made (cotton shirt, glass, paper). Praise kids who notice this — it shows nuanced thinking. Add a third "both" pile if kids want.</li>
+      <li><strong>Plastic is tricky:</strong> Kids often say plastic is human-made. It is! But it started as oil — a natural resource. Use this to introduce the idea that humans transform natural resources into new things.</li>
+      <li><strong>Connect to animal needs:</strong> Birds need trees for nests (wood/natural). Fish need water (natural). This connects K-ESS3-1 — the relationship between animal needs and where they live.</li>
+      <li><strong>Assessment:</strong> Can students identify at least 5 natural resources by name? Can they correctly sort most items and explain their reasoning? That's success.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌿 Student Worksheet — What Does Earth Give Us?</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:10px;">Cut out the picture cards below. Sort each one into the correct column!</p>
+
+    <table class="sort-mat">
+      <tr>
+        <th class="natural-header">🌿 NATURAL<br><span style="font-size:11pt; font-weight:normal;">Earth made it</span></th>
+        <th class="human-header">🏭 HUMAN-MADE<br><span style="font-size:11pt; font-weight:normal;">People made it</span></th>
+      </tr>
+      <tr>
+        <td>Glue or place your NATURAL cards here</td>
+        <td>Glue or place your HUMAN-MADE cards here</td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top:20px;">✏️ Draw Your Favorite Natural Resource</h3>
+    <div style="border: 2px solid #ffcc80; border-radius: 8px; height: 150px; margin: 10px 0; background: #fff8e1;"></div>
+    <p style="font-size: 10pt; text-align: center; color: #777;">My favorite natural resource is: __________________________ because __________________________</p>
+  </div>
+
+  <!-- ====================== PICTURE CARDS ====================== -->
+  <div class="page-break">
+    <h1>✂️ Picture Cards — Sort These!</h1>
+    <p style="text-align:center; font-size:10pt; color:#555;">Cut along the dashed lines. Sort each card onto your sorting mat!</p>
+
+    <div class="cut-cards">
+      <div class="cut-card">
+        <span class="emoji">🪨</span>
+        <span class="label">Rock</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🧸</span>
+        <span class="label">Plastic toy<br><small style="color:#999;">(started as oil!)</small></span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🍎</span>
+        <span class="label">Apple</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🪟</span>
+        <span class="label">Glass window<br><small style="color:#999;">(started as sand!)</small></span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">💧</span>
+        <span class="label">Water</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🍬</span>
+        <span class="label">Candy</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🌿</span>
+        <span class="label">Leaf</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">📱</span>
+        <span class="label">Phone</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🪵</span>
+        <span class="label">Wood log</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">👕</span>
+        <span class="label">Cotton shirt<br><small style="color:#999;">(cotton plant!)</small></span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">☀️</span>
+        <span class="label">Sunlight</span>
+      </div>
+      <div class="cut-card">
+        <span class="emoji">🍫</span>
+        <span class="label">Chocolate bar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="answer-key-grid">
+        <div class="ak-column ak-natural">
+          <h3>🌿 NATURAL</h3>
+          <ul>
+            <li>🪨 Rock</li>
+            <li>🍎 Apple</li>
+            <li>💧 Water</li>
+            <li>🌿 Leaf</li>
+            <li>🪵 Wood log</li>
+            <li>☀️ Sunlight</li>
+          </ul>
+        </div>
+        <div class="ak-column ak-human">
+          <h3>🏭 HUMAN-MADE</h3>
+          <ul>
+            <li>🧸 Plastic toy <em>(from oil)</em></li>
+            <li>🪟 Glass window <em>(from sand)</em></li>
+            <li>🍬 Candy</li>
+            <li>📱 Phone</li>
+            <li>👕 Cotton shirt <em>(cotton plant + made by people)</em></li>
+            <li>🍫 Chocolate bar <em>(cacao bean + made by people)</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">💡 Notes on Tricky Cards</h3>
+      <ul>
+        <li><strong>🧸 Plastic toy:</strong> Plastic is human-made, but it started as oil — a natural resource from Earth. Oil formed from ancient plants and animals underground over millions of years.</li>
+        <li><strong>🪟 Glass window:</strong> Glass is made by melting sand at very high temperatures. Sand = natural. Glass = processed by humans. A great "started natural" example.</li>
+        <li><strong>👕 Cotton shirt:</strong> Cotton fiber grows on a cotton plant (natural!), but humans harvested it, spun it into thread, wove it into fabric, and sewed the shirt. This is "both" — and both answers are worth praising.</li>
+        <li><strong>🍫 Chocolate bar:</strong> Made from cacao beans (plant = natural), but processed with sugar and milk by people. "Both" is a great answer.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can name at least 5 natural resources (water, soil, trees, rocks, sunlight, air, etc.).</li>
+        <li>Student can sort most cards correctly and explain basic reasoning.</li>
+        <li>Student understands that even human-made things often started as natural resources.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_LGzxXnQN5tk" data-content-selector=".lesson-content, body"></script>
+</body>
+</html>

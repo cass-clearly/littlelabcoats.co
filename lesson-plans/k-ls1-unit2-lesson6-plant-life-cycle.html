@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Plant's Life Story — Unit 2, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .discussion-hint {
+      font-style: italic;
+      color: #388e3c;
+      margin-top: 4px;
+      margin-left: 16px;
+      display: block;
+    }
+    .unit-wrapup {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .unit-wrapup h2 {
+      background: #1b5e20;
+      border-radius: 6px;
+      margin-top: 0;
+    }
+    .unit-wrapup .lesson-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 7px 0;
+      font-size: 10.5pt;
+    }
+    .unit-wrapup .lesson-badge {
+      background: #2e7d32;
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9pt;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .garden-book-box {
+      background: #fff9c4;
+      border: 2px solid #f9a825;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 14px;
+    }
+    .garden-book-box strong { color: #e65100; }
+    .vocab-box {
+      background: #e8f5e9;
+      border: 2px solid #00B894;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 10px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 20px;
+    }
+    .vocab-item { font-size: 10pt; }
+    .vocab-item strong { color: #1b5e20; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+
+    /* ── Life Cycle Wheel ── */
+    .lifecycle-diagram {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      margin: 20px auto;
+    }
+    .lifecycle-grid {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      grid-template-rows: 1fr 60px 1fr;
+      gap: 8px;
+      align-items: center;
+      justify-items: center;
+    }
+    .stage-box {
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      background: white;
+      padding: 10px 8px;
+      text-align: center;
+      width: 160px;
+    }
+    .stage-box .stage-num {
+      display: inline-block;
+      background: #2e7d32;
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 11pt;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .stage-box .stage-name {
+      font-weight: bold;
+      font-size: 11pt;
+      color: #1b5e20;
+      display: block;
+      margin: 2px 0 6px 0;
+    }
+    .stage-box .stage-emoji {
+      font-size: 22pt;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .draw-space {
+      border: 1.5px dashed #aaa;
+      border-radius: 6px;
+      height: 72px;
+      background: #fafff8;
+      margin-top: 4px;
+    }
+    .lifecycle-center {
+      grid-column: 2;
+      grid-row: 2;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #2e7d32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 8pt;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+    }
+    /* Arrows — each placed in the corner cells */
+    .arrow-cell {
+      font-size: 20pt;
+      color: #2e7d32;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1;
+    }
+    /* Arrow positioning inside the 3x3 grid */
+    .arrow-top-right    { grid-column: 3; grid-row: 1; align-self: end; justify-self: start; }
+    .arrow-right-bottom { grid-column: 3; grid-row: 3; align-self: start; justify-self: start; }
+    .arrow-bottom-left  { grid-column: 1; grid-row: 3; align-self: start; justify-self: end; }
+    .arrow-left-top     { grid-column: 1; grid-row: 1; align-self: end; justify-self: end; }
+
+    .stage-top    { grid-column: 2; grid-row: 1; }
+    .stage-right  { grid-column: 3; grid-row: 2; }
+    .stage-bottom { grid-column: 2; grid-row: 3; }
+    .stage-left   { grid-column: 1; grid-row: 2; }
+
+    /* Sentence completion */
+    .sentence-completion {
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 18px 0;
+      background: #f9fff9;
+      font-size: 12pt;
+    }
+    .sentence-completion .fill-line {
+      border-bottom: 2px solid #333;
+      display: inline-block;
+      width: 260px;
+      margin-left: 6px;
+    }
+    /* Sequence label strip */
+    .arrow-label {
+      font-size: 9pt;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .unit-wrapup,
+      .lifecycle-diagram, .stage-box, .vocab-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_ewES5_7jNnc">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌱 My Plant's Life Story 🌱</h1>
+  <p class="subtitle">Life Science — Plants &amp; Seeds — Unit 2, Lesson 6 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Seeds</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🫘 → 🌱 → 🌿 → 🌸 → 🫘</div>
+    <div class="caption">A tiny seed becomes a plant — and that plant makes new seeds. The cycle never ends!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <!-- ─── UNIT WRAP-UP ─── -->
+  <div class="unit-wrapup">
+    <h2>🎓 Unit 2 Wrap-Up — Super Seeds &amp; Perfect Plants</h2>
+    <p style="margin-top:0; font-size:10.5pt;">Congratulations — you finished all 6 lessons! Here's a look back at everything you explored together:</p>
+    <div class="lesson-row"><div class="lesson-badge">1</div><div><strong>What's Inside a Seed?</strong> — Dissected beans to find the embryo, food supply, and seed coat.</div></div>
+    <div class="lesson-row"><div class="lesson-badge">2</div><div><strong>Let's Plant!</strong> — Planted bean seeds in cups; learned what seeds need to germinate (water, warmth, soil).</div></div>
+    <div class="lesson-row"><div class="lesson-badge">3</div><div><strong>Roots &amp; Shoots</strong> — Observed which direction roots and shoots grow; learned roots anchor and absorb water.</div></div>
+    <div class="lesson-row"><div class="lesson-badge">4</div><div><strong>What Do Plants Need?</strong> — Tested sunlight and water; tied back to K-LS1-1 (plants need sunlight, water, air, nutrients).</div></div>
+    <div class="lesson-row"><div class="lesson-badge">5</div><div><strong>Parts of a Plant</strong> — Named roots, stem, leaves, flower, fruit; learned each part's job.</div></div>
+    <div class="lesson-row"><div class="lesson-badge">6</div><div><strong>My Plant's Life Story</strong> — Sequenced the full plant life cycle; made a Life Cycle Wheel. <em>(Today!)</em></div></div>
+
+    <div class="garden-book-box">
+      <strong>📖 Culminating Project: Our Little Garden Book</strong><br>
+      Make a small 6-page booklet — one page per lesson! Each page can include a drawing, one or two facts, and a label. Staple together for a keepsake that shows everything learned this unit. Great for showing grandparents or friends what a scientist can do!
+    </div>
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>A plant doesn't just grow and stop — it goes through a <strong>life cycle</strong>! A seed grows into a sprout, then into a full plant, which makes flowers, then fruit, and finally new seeds. Those new seeds grow into new plants, and the whole cycle begins again. That's why we call it a <em>cycle</em> — it goes around and around forever!</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Every living thing has a <strong>life cycle</strong> — a series of stages it passes through from birth to making new life. For a flowering plant like a bean, the cycle has four main stages:</p>
+  <ol>
+    <li><strong>Seed</strong> — the beginning; contains everything the plant needs to start growing</li>
+    <li><strong>Sprout / Seedling</strong> — the seed <em>germinates</em>; roots push down, a shoot pushes up</li>
+    <li><strong>Growing Plant</strong> — leaves grow and make food from sunlight; the stem grows taller</li>
+    <li><strong>Flower &amp; Seeds</strong> — flowers attract pollinators; <em>pollination</em> leads to fruit, which contains new seeds</li>
+  </ol>
+  <p>When the fruit ripens and falls (or is eaten!), those new seeds land in soil — and the cycle starts all over again.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> life cycle, seed, germination, seedling, sprout, growing plant, flower, pollination, fruit
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🌿 From Your Home / Garden</h3>
+    <ul>
+      <li>Bean plants from Lesson 2 (about 1 week old — for observation)</li>
+      <li>Access to a garden or yard (optional — to see plants at different stages)</li>
+      <li>Pictures of plant life stages (optional — from a magazine or printed)</li>
+    </ul>
+    <h3>🎨 For the Life Cycle Wheel Craft</h3>
+    <ul>
+      <li>Paper plate (1 per student)</li>
+      <li>Crayons or markers</li>
+      <li>Scissors ✂️</li>
+      <li>Brass fastener or tape (optional — to make a spinning wheel pointer)</li>
+    </ul>
+    <h3>📄 For the Worksheet</h3>
+    <ul>
+      <li>Printed worksheet (last pages of this lesson)</li>
+      <li>Pencil, crayons, or markers</li>
+      <li>Glue stick (if using cut-and-paste version)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Observe Your Bean Plant! (5 min)</strong><br>
+    Bring out the bean plants from Lesson 2. Let each child look closely at their plant. Ask:<br>
+    <em>"What do you notice? What does it look like now compared to when we planted it?"</em><br>
+    Point out any visible roots, the stem, and the first leaves (called <strong>cotyledons</strong>). Ask: <em>"Which stage of the life cycle is your plant at right now?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Tell the Life Cycle Story (5–7 min)</strong><br>
+    Walk through the four stages together using the emoji sequence on the board or a printed poster:<br>
+    <ul>
+      <li>🫘 <strong>Seed</strong> — "Remember when we dissected the seed? It had a tiny baby plant inside!"</li>
+      <li>🌱 <strong>Sprout</strong> — "The seed drank water and warmth — then <em>germination</em> happened! The baby plant woke up."</li>
+      <li>🌿 <strong>Growing Plant</strong> — "Leaves grew to catch sunlight. Roots drank water. The plant got bigger!"</li>
+      <li>🌸 <strong>Flower &amp; Seeds</strong> — "Flowers attract bees and butterflies for <em>pollination</em>. That makes fruit! Inside the fruit — new seeds."</li>
+    </ul>
+    Then say: <em>"And guess what happens next? Those seeds fall to the ground and… the whole story starts AGAIN!"</em>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Pro tip:</strong> Do a slow dramatic pause before "the whole story starts AGAIN!" — kids love the reveal. You can even spin your hand in a big circle to show "cycle."
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Make the Life Cycle Wheel (10–15 min)</strong><br>
+    Give each child a paper plate. Help them fold it into four equal sections (like a pizza).<br>
+    <ul>
+      <li>Open it back up — now you have 4 sections marked</li>
+      <li>Label each section (or let them copy): <strong>1 Seed, 2 Sprout, 3 Growing Plant, 4 Flower &amp; Seeds</strong></li>
+      <li>Draw or color each stage in its section — encourage them to look at their real bean plant for reference!</li>
+      <li>Draw arrows along the edge going clockwise (to show the cycle keeps going)</li>
+      <li><strong>Optional:</strong> Add a brass fastener in the center with a small cardstock pointer for a spinning wheel</li>
+    </ul>
+    <em>"Use your pointer to show me — where is YOUR plant right now?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Garden Walk (optional, 5–10 min)</strong><br>
+    If weather permits, take a walk outside! Look for plants at different stages — maybe a seed pod on the ground, a sprout coming up, a plant in full bloom, or a fruit forming on a vine.<br>
+    <em>"Can you find a plant in each stage of the life cycle?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Complete the Worksheet (10 min)</strong><br>
+    Use the circular life cycle diagram worksheet. Students draw each stage in its section, add arrows, and complete the sentence at the bottom. Younger students can dictate their sentence.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Big Discussion &amp; Wrap-Up (5 min)</strong><br>
+    Come together for the discussion questions below. Celebrate finishing all 6 lessons of Unit 2!<br>
+    <em>"You are now officially a Plant Scientist. 🌿 What was your favorite experiment?"</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ "Why is it called a <em>cycle</em> and not just a <em>line</em>?"</strong>
+    <span class="discussion-hint">Because it goes around and around! When a plant makes seeds, those seeds grow into NEW plants that make MORE seeds. It never really ends — it circles back to the beginning.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ "What would happen if a plant never made seeds?"</strong>
+    <span class="discussion-hint">There would be no new plants! The cycle would stop. Seeds are how plants make more plants and keep going.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ "What does a seed need to start its life cycle? Can you remember from Lesson 2?"</strong>
+    <span class="discussion-hint">Water, warmth, and soil — those help germination happen! Then once leaves grow, the plant also needs sunlight and air.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ "Do YOU have a life cycle? Do all living things?"</strong>
+    <span class="discussion-hint">Yes! Humans are born, grow up, and have babies — that's a life cycle too! All living things have one — dogs, trees, butterflies, even mushrooms.</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>⏱️ <strong>Fast vs. Slow:</strong> A bean completes its life cycle in about 60 days. An oak tree takes <em>decades</em> just to grow big enough to make acorns. Compare them on a timeline!</li>
+      <li>🦋 <strong>Other Life Cycles:</strong> Look up the butterfly life cycle — egg → caterpillar → chrysalis → butterfly. How is it similar to a plant's? How is it different?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Tiny Seed"</em> by Eric Carle, <em>"Jack's Garden"</em> by Henry Cole, or <em>"From Seed to Plant"</em> by Gail Gibbons</li>
+      <li>🌱 <strong>Transplant Ceremony:</strong> Move your bean plants to a bigger pot or outside in the garden. Mark the date — and predict when it will flower!</li>
+      <li>📖 <strong>Garden Book:</strong> Start the Our Little Garden Book project — one page per lesson, a keepsake of the whole unit.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Culminating lesson:</strong> This is Lesson 6 of 6 — take a moment to look back together at all 6 experiments! Ask: <em>"What did we learn about seeds? About roots? About what plants need?"</em> This review ties directly back to K-LS1-1 (plants need sunlight, water, air, and soil/nutrients).</li>
+      <li><strong>Transplant ceremony:</strong> The bean plants from Lesson 2 should be ready to move to a bigger pot or outside. Make it special! Let each child carefully dig a hole and plant their bean with a little ceremony. Science + ritual = memory.</li>
+      <li><strong>Life cycle as a concept:</strong> Introduce the phrase "life cycle" clearly — all living things have one. You might point to a butterfly book, a caterpillar, even your pet or a tree in the yard. The concept is huge and will come up in every science unit from here on.</li>
+      <li><strong>Vocabulary to introduce today:</strong>
+        <div class="vocab-box" style="margin-top:8px;">
+          <div class="vocab-item"><strong>Life cycle</strong> — the series of stages a living thing passes through</div>
+          <div class="vocab-item"><strong>Germination</strong> — when a seed starts to grow (wakes up!)</div>
+          <div class="vocab-item"><strong>Seedling</strong> — a very young plant that just sprouted</div>
+          <div class="vocab-item"><strong>Pollination</strong> — when pollen moves from flower to flower (bees help!)</div>
+          <div class="vocab-item"><strong>Fruit</strong> — the part of the plant that holds seeds (tomatoes, apples, bean pods!)</div>
+        </div>
+      </li>
+      <li><strong>Extension — fast vs. slow life cycles:</strong> A bean plant goes from seed to seed in about 60 days. A sunflower takes about 80 days. An oak tree can take 20–50 years to produce its first acorn. This is a great way to introduce the concept of variation in life cycles.</li>
+      <li><strong>Garden Book project:</strong> Encourage families to make a small 6-page booklet — one page per lesson — as a culminating project. Each page: a drawing, one sentence, and a label. Stapled together, it becomes a keepsake science journal. Perfect for grandparents!</li>
+      <li><strong>K-LS1-1 wrap-up:</strong> Circle back to the standard — <em>what do plants need to survive?</em> By now, students have observed it in multiple experiments: sunlight (Lesson 4), water (Lesson 2 &amp; 4), air (Lesson 4), soil/nutrients (Lesson 2 &amp; 3). Ask them to list it from memory — they'll likely get all four.</li>
+    </ul>
+  </div>
+
+  <!-- ==================== WORKSHEET ==================== -->
+  <div class="page-break">
+
+    <h1>🌿 Plant Life Cycle Wheel 🌿</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:16px;">
+      Draw each stage of the plant life cycle in its box. Add arrows to show the cycle keeps going!
+    </p>
+
+    <!-- Circular Life Cycle Diagram using 3x3 grid -->
+    <div class="lifecycle-diagram">
+      <div class="lifecycle-grid">
+
+        <!-- TOP-LEFT arrow (pointing from Seed → Sprout) -->
+        <div class="arrow-cell arrow-left-top" style="grid-column:1; grid-row:1; align-self:end; justify-self:end; padding-bottom:6px; padding-right:4px;">
+          <span class="arrow-label" style="font-size:8.5pt;">↑ new<br>cycle!</span>
+        </div>
+
+        <!-- Stage 2 — TOP (Sprout) -->
+        <div class="stage-box stage-top">
+          <span class="stage-num">2</span>
+          <span class="stage-emoji">🌱</span>
+          <span class="stage-name">Sprout</span>
+          <div class="draw-space"></div>
+          <p style="font-size:8pt; color:#555; margin:4px 0 0 0;">Draw a sprout coming out of the ground</p>
+        </div>
+
+        <!-- TOP-RIGHT arrow (Sprout → Growing Plant) -->
+        <div class="arrow-cell arrow-top-right" style="grid-column:3; grid-row:1; align-self:end; justify-self:start; padding-bottom:6px; padding-left:4px;">
+          <span class="arrow-label" style="font-size:9pt;">→</span>
+        </div>
+
+        <!-- Stage 1 — LEFT (Seed) -->
+        <div class="stage-box stage-left">
+          <span class="stage-num">1</span>
+          <span class="stage-emoji">🫘</span>
+          <span class="stage-name">Seed</span>
+          <div class="draw-space"></div>
+          <p style="font-size:8pt; color:#555; margin:4px 0 0 0;">Draw a seed in the ground</p>
+        </div>
+
+        <!-- CENTER -->
+        <div class="lifecycle-center">
+          🔄<br>Life<br>Cycle
+        </div>
+
+        <!-- Stage 3 — RIGHT (Growing Plant) -->
+        <div class="stage-box stage-right">
+          <span class="stage-num">3</span>
+          <span class="stage-emoji">🌿</span>
+          <span class="stage-name">Growing Plant</span>
+          <div class="draw-space"></div>
+          <p style="font-size:8pt; color:#555; margin:4px 0 0 0;">Draw a plant with leaves</p>
+        </div>
+
+        <!-- BOTTOM-LEFT arrow (Flower & Seeds → Seed) -->
+        <div class="arrow-cell arrow-bottom-left" style="grid-column:1; grid-row:3; align-self:start; justify-self:end; padding-top:6px; padding-right:4px;">
+          <span class="arrow-label" style="font-size:9pt;">←</span>
+        </div>
+
+        <!-- Stage 4 — BOTTOM (Flower & Seeds) -->
+        <div class="stage-box stage-bottom">
+          <span class="stage-num">4</span>
+          <span class="stage-emoji">🌸</span>
+          <span class="stage-name">Flower &amp; Seeds</span>
+          <div class="draw-space"></div>
+          <p style="font-size:8pt; color:#555; margin:4px 0 0 0;">Draw a flower with fruit/seeds</p>
+        </div>
+
+        <!-- BOTTOM-RIGHT arrow (Growing Plant → Flower & Seeds) -->
+        <div class="arrow-cell arrow-right-bottom" style="grid-column:3; grid-row:3; align-self:start; justify-self:start; padding-top:6px; padding-left:4px;">
+          <span class="arrow-label" style="font-size:9pt;">↓</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Sequence labels below the diagram -->
+    <p style="text-align:center; font-size:9pt; color:#388e3c; margin:4px 0 18px 0;">
+      <strong>Seed → Sprout → Growing Plant → Flower &amp; Seeds → back to Seed!</strong>
+    </p>
+
+    <!-- Sentence Completion -->
+    <div class="sentence-completion">
+      ✏️ <strong>Finish this sentence:</strong><br><br>
+      The plant life cycle is called a <em>cycle</em> because <span class="fill-line">&nbsp;</span><br><br>
+      <span style="border-bottom: 2px solid #333; display: block; height: 28px; margin-top: 8px;"></span>
+    </div>
+
+    <!-- My Plant Today -->
+    <h3 style="color:#2e7d32;">🌱 My Plant Today</h3>
+    <p style="font-size:10.5pt;">Look at your bean plant from Lesson 2. Which stage is it at? Circle it:</p>
+    <p style="font-size:13pt; text-align:center; letter-spacing:4px; padding:8px; border:2px solid #a5d6a7; border-radius:8px; background:#f9fff9;">
+      &nbsp;&nbsp;🫘 Seed &nbsp;&nbsp;&nbsp;&nbsp; 🌱 Sprout &nbsp;&nbsp;&nbsp;&nbsp; 🌿 Growing Plant &nbsp;&nbsp;&nbsp;&nbsp; 🌸 Flower &amp; Seeds
+    </p>
+    <p style="font-size:10pt; margin-top:10px;">✏️ Draw your real plant here and write (or tell) one thing you notice:</p>
+    <div style="border: 2px dashed #aaa; border-radius:8px; height:110px; background:#fafff8; margin:6px 0;"></div>
+    <div style="border-bottom: 1.5px solid #bbb; height:28px; margin:8px 0;"></div>
+
+  </div>
+
+  <!-- ==================== ANSWER KEY ==================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🌿 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>✅ Correct Life Cycle Order</h3>
+      <p style="font-size:10.5pt;">The four stages should appear in this clockwise order on the wheel:</p>
+      <ol style="font-size:10.5pt;">
+        <li><strong>🫘 Seed</strong> — A seed contains a tiny embryo plant and stored food, protected by a seed coat.</li>
+        <li><strong>🌱 Sprout (Seedling)</strong> — With water and warmth, the seed germinates: roots push down, a shoot pushes up, and the first leaves emerge (cotyledons).</li>
+        <li><strong>🌿 Growing Plant</strong> — The plant grows true leaves, which capture sunlight for photosynthesis. The stem grows taller; roots grow deeper.</li>
+        <li><strong>🌸 Flower &amp; Seeds</strong> — Flowers attract pollinators (bees, butterflies). After pollination, fruit develops. Inside the fruit are new seeds — and the cycle begins again!</li>
+      </ol>
+      <p style="font-size:10pt; color:#388e3c;"><strong>Key point:</strong> Arrows should go <em>clockwise</em> from Seed → Sprout → Growing Plant → Flower &amp; Seeds → back to Seed.</p>
+
+      <h3>✅ Sentence Completion — Accepted Answers</h3>
+      <p style="font-size:10.5pt;">Sample correct responses for: <em>"The plant life cycle is called a cycle because ___"</em></p>
+      <ul style="font-size:10.5pt;">
+        <li>"…it goes around and around and never stops."</li>
+        <li>"…the seeds make new plants that make more seeds."</li>
+        <li>"…it keeps going in a circle, back to the beginning."</li>
+        <li>"…it never has an ending — it just starts over!"</li>
+      </ul>
+
+      <h3>✅ "My Plant Today" — What to Expect</h3>
+      <ul style="font-size:10.5pt;">
+        <li>A bean planted in Lesson 2 (~7 days ago) should be at the <strong>Sprout / Seedling</strong> stage.</li>
+        <li>Students may see the stem emerging, the cotyledons (first two thick leaves), and possibly the beginning of true leaves.</li>
+        <li>Roots are usually not visible unless planted in a clear cup against the glass.</li>
+        <li><strong>Praise all observations</strong> — color, height, texture, direction of growth. There's no wrong answer for the observation drawing.</li>
+      </ul>
+
+      <h3>✅ Learning Goals — What Success Looks Like</h3>
+      <ul style="font-size:10.5pt;">
+        <li>Child can name and sequence all four stages of the plant life cycle in order.</li>
+        <li>Child can explain why it's a "cycle" (it goes around; seeds become plants that make more seeds).</li>
+        <li>Child can identify what stage their own bean plant is at.</li>
+        <li>Child can connect back to K-LS1-1: plants need sunlight, water, air, and soil/nutrients to survive.</li>
+      </ul>
+
+      <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:8px; padding:12px 16px; margin-top:14px;">
+        <strong style="color:#1b5e20;">🌟 Bonus: Discussion Question Answers</strong>
+        <ul style="font-size:10pt; margin-top:8px;">
+          <li><strong>"Why a cycle, not a line?"</strong> — Seeds → plants → more seeds. It circles back. A line has an end; a cycle doesn't.</li>
+          <li><strong>"What if no seeds were made?"</strong> — No new plants! The species would disappear. Seeds are survival.</li>
+          <li><strong>"What does a seed need to start?"</strong> — Water, warmth, soil. Then light + air for the growing plant.</li>
+          <li><strong>"Do you have a life cycle?"</strong> — Yes! Born → grow → have children → the next generation begins.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_ewES5_7jNnc" data-content-selector="body"></script>
+</body>
+</html>
