@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☀️ Sunshine & Warmth Quiz — K-PS3 Unit 2</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e3f2fd;
+      min-height: 100vh;
+      padding: 20px;
+      color: #222;
+    }
+    .quiz-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .quiz-header {
+      background: #1565c0;
+      color: white;
+      border-radius: 20px;
+      padding: 28px 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(21,101,192,0.25);
+    }
+    .quiz-header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .quiz-header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .read-aloud-note {
+      background: #fff9c4;
+      border: 3px solid #f9a825;
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #e65100;
+    }
+    .score-bar {
+      background: white;
+      border: 3px solid #1565c0;
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .score-display {
+      color: #1565c0;
+      font-size: 1.4rem;
+    }
+    .progress-text {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .question-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      border: 2px solid #bbdefb;
+      transition: border-color 0.3s;
+    }
+    .question-card.answered-correct {
+      border-color: #4caf50;
+      background: #f1f8f1;
+    }
+    .question-card.answered-wrong {
+      border-color: #f44336;
+      background: #fff5f5;
+    }
+    .question-number {
+      font-size: 0.85rem;
+      color: #1565c0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .question-text {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #1a237e;
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+    .options-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .option-btn {
+      background: #e3f2fd;
+      border: 2px solid #90caf9;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 1.15rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #1a237e;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #bbdefb;
+      border-color: #1565c0;
+      transform: translateY(-1px);
+    }
+    .option-btn:disabled {
+      cursor: default;
+    }
+    .option-btn.correct {
+      background: #c8e6c9;
+      border-color: #4caf50;
+      color: #1b5e20;
+    }
+    .option-btn.wrong {
+      background: #ffcdd2;
+      border-color: #f44336;
+      color: #b71c1c;
+    }
+    .option-btn.reveal-correct {
+      background: #c8e6c9;
+      border-color: #4caf50;
+      color: #1b5e20;
+    }
+    .feedback-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      line-height: 1.45;
+      display: none;
+    }
+    .feedback-box.correct {
+      background: #e8f5e9;
+      border: 2px solid #4caf50;
+      color: #1b5e20;
+      display: block;
+    }
+    .feedback-box.wrong {
+      background: #fff8e1;
+      border: 2px solid #ffc107;
+      color: #5d4037;
+      display: block;
+    }
+    .feedback-icon {
+      font-size: 1.4rem;
+      margin-right: 6px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #1565c0;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 10px;
+      border: 2px solid #90caf9;
+    }
+    .back-link:hover {
+      background: #e3f2fd;
+    }
+    .results-box {
+      display: none;
+      background: white;
+      border: 4px solid #1565c0;
+      border-radius: 22px;
+      padding: 36px 28px;
+      text-align: center;
+      margin-top: 20px;
+      box-shadow: 0 6px 24px rgba(21,101,192,0.2);
+    }
+    .results-box h2 {
+      font-size: 1.9rem;
+      color: #1565c0;
+      margin-bottom: 10px;
+    }
+    .results-score {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #0d47a1;
+      margin: 14px 0;
+    }
+    .results-message {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .retry-btn {
+      background: #1565c0;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .retry-btn:hover { background: #0d47a1; }
+    .unit-label {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_dPkrxQpp0mg">
+
+<div class="quiz-wrapper">
+
+  <a class="back-link" href="k-ps3-unit2-lesson1-sun-warms-everything.html">← Back to Lesson 1</a>
+
+  <div class="quiz-header">
+    <h1>☀️ Sunshine &amp; Warmth Quiz ☀️</h1>
+    <p>K-PS3 Unit 2 — Physical Science</p>
+    <p class="unit-label">Kindergarten · 10 Questions</p>
+  </div>
+
+  <div class="read-aloud-note">
+    📖 Ask a grown-up to read the questions aloud! 🗣️
+  </div>
+
+  <div class="score-bar">
+    <span>⭐ Score: <span class="score-display" id="scoreDisplay">0</span> / <span id="totalAnswered">0</span></span>
+    <span class="progress-text" id="progressText">Question 1 of 10</span>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-card" id="qcard-1">
+    <div class="question-number">Question 1 of 10</div>
+    <div class="question-text">☀️ We put a black piece of paper and a white piece of paper in the sun. Which one will feel the warmest?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(1, this, false)">🤍 The white paper</button>
+      <button class="option-btn" onclick="answer(1, this, true)">🖤 The black (dark) paper</button>
+      <button class="option-btn" onclick="answer(1, this, false)">🤷 They feel exactly the same</button>
+    </div>
+    <div class="feedback-box" id="fb-1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" id="qcard-2">
+    <div class="question-number">Question 2 of 10</div>
+    <div class="question-text">🌑 When the sun is high in the sky at noon, are the shadows SHORT or LONG?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(2, this, true)">📏 Short!</button>
+      <button class="option-btn" onclick="answer(2, this, false)">📐 Long!</button>
+      <button class="option-btn" onclick="answer(2, this, false)">🤷 Shadows disappear at noon</button>
+    </div>
+    <div class="feedback-box" id="fb-2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" id="qcard-3">
+    <div class="question-number">Question 3 of 10</div>
+    <div class="question-text">🌅 In the MORNING, the sun is low in the sky and shadows are very LONG. What does that tell us about how warm it is?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(3, this, false)">🔥 It is the hottest part of the day</button>
+      <button class="option-btn" onclick="answer(3, this, true)">❄️ It is cooler — the sun's rays are spread out</button>
+      <button class="option-btn" onclick="answer(3, this, false)">😎 Shadows have nothing to do with warmth</button>
+    </div>
+    <div class="feedback-box" id="fb-3"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" id="qcard-4">
+    <div class="question-number">Question 4 of 10</div>
+    <div class="question-text">🌱 We put dark soil, light sand, and water in the sun. Which warms up the FASTEST?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(4, this, true)">🌱 Dark soil</button>
+      <button class="option-btn" onclick="answer(4, this, false)">🏜️ Light sand</button>
+      <button class="option-btn" onclick="answer(4, this, false)">💧 Water</button>
+    </div>
+    <div class="feedback-box" id="fb-4"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" id="qcard-5">
+    <div class="question-number">Question 5 of 10</div>
+    <div class="question-text">🧊 We put an ice cube on a DARK plate and an ice cube on a WHITE plate — both in the sun. Which ice cube melts FIRST?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(5, this, true)">🖤 The one on the dark plate</button>
+      <button class="option-btn" onclick="answer(5, this, false)">🤍 The one on the white plate</button>
+      <button class="option-btn" onclick="answer(5, this, false)">🤷 They melt at the exact same time</button>
+    </div>
+    <div class="feedback-box" id="fb-5"></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" id="qcard-6">
+    <div class="question-number">Question 6 of 10</div>
+    <div class="question-text">🌳 We have two ice cubes — one in the SUN and one in the SHADE. Which one melts faster?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(6, this, true)">☀️ The one in the sun</button>
+      <button class="option-btn" onclick="answer(6, this, false)">🌳 The one in the shade</button>
+      <button class="option-btn" onclick="answer(6, this, false)">🤷 Shade and sun don't matter for ice</button>
+    </div>
+    <div class="feedback-box" id="fb-6"></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" id="qcard-7">
+    <div class="question-number">Question 7 of 10</div>
+    <div class="question-text">🏠 You are building a shelter to keep a toy cool in the hot sun. What is the BEST color for the outside of the roof?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(7, this, false)">🖤 Black — it looks nice!</button>
+      <button class="option-btn" onclick="answer(7, this, true)">🤍 White or shiny silver (foil) — it reflects the sun!</button>
+      <button class="option-btn" onclick="answer(7, this, false)">🟤 Brown — same as dirt</button>
+    </div>
+    <div class="feedback-box" id="fb-7"></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" id="qcard-8">
+    <div class="question-number">Question 8 of 10</div>
+    <div class="question-text">💧 We put a WET cloth and a DRY cloth in the sun. The wet cloth feels cooler! Why?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(8, this, false)">💧 Water likes to be cold — it never gets warm</button>
+      <button class="option-btn" onclick="answer(8, this, true)">☁️ The sun's energy is used to evaporate the water, so less heat builds up in the cloth</button>
+      <button class="option-btn" onclick="answer(8, this, false)">🌬️ Wet cloth blows away the sun</button>
+    </div>
+    <div class="feedback-box" id="fb-8"></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" id="qcard-9">
+    <div class="question-number">Question 9 of 10</div>
+    <div class="question-text">🔨 You built a shelter and tested it — but the toy inside still got warm. What should an engineer do next?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(9, this, false)">😢 Give up — the shelter failed!</button>
+      <button class="option-btn" onclick="answer(9, this, false)">😴 Do nothing — it is good enough</button>
+      <button class="option-btn" onclick="answer(9, this, true)">🔄 Improve the design and test it again! (That is called iterating!)</button>
+    </div>
+    <div class="feedback-box" id="fb-9"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" id="qcard-10">
+    <div class="question-number">Question 10 of 10</div>
+    <div class="question-text">🏡 A house has a WHITE roof and the house next door has a BLACK roof. Both are in the same sun. Which house is COOLER inside?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(10, this, true)">🤍 The house with the white roof — white reflects sunlight!</button>
+      <button class="option-btn" onclick="answer(10, this, false)">🖤 The house with the black roof — dark is stronger!</button>
+      <button class="option-btn" onclick="answer(10, this, false)">🤷 The roof color doesn't matter at all</button>
+    </div>
+    <div class="feedback-box" id="fb-10"></div>
+  </div>
+
+  <!-- Results -->
+  <div class="results-box" id="resultsBox">
+    <div id="resultsEmoji" style="font-size:3rem; margin-bottom:10px;"></div>
+    <h2>Quiz Complete! 🎉</h2>
+    <div class="results-score"><span id="finalScore">0</span> / 10</div>
+    <div class="results-message" id="resultsMessage"></div>
+    <button class="retry-btn" onclick="restartQuiz()">🔄 Try Again!</button>
+    <br><br>
+    <a class="back-link" href="k-ps3-unit2-lesson1-sun-warms-everything.html">← Back to Lesson 1</a>
+  </div>
+
+</div>
+
+<script>
+  const explanations = {
+    1: { correct: "🌟 Yes! Dark colors absorb more sunlight and warm up faster. Light colors reflect sunlight and stay cooler.", wrong: "💡 Dark paper gets warmest! Dark colors absorb more sunlight. Light colors reflect it away — that's why they stay cooler!" },
+    2: { correct: "🌟 Right! At noon the sun is directly overhead, so shadows are very short. Short shadow = sun is high = more direct warmth!", wrong: "💡 Shadows are SHORT at noon! When the sun is up high, it shines straight down — making tiny, short shadows and heating the ground more." },
+    3: { correct: "🌟 Exactly! Long shadows mean the sun is low and its rays spread out over a big area. Less heat per spot = cooler morning!", wrong: "💡 Long shadows in the morning mean the sun is low. The sun's rays spread out over a big area, so each spot gets less warmth. That is why mornings are cool!" },
+    4: { correct: "🌟 Correct! Dark soil is the darkest, so it absorbs the most sunlight and warms up the fastest.", wrong: "💡 Dark soil warms up fastest! It is the darkest color, so it soaks up the most sunlight. Water warms slowest — it needs a lot of energy to heat up." },
+    5: { correct: "🌟 Yes! The dark plate absorbs more heat AND the sun shines right on it — double warming power for the ice!", wrong: "💡 The dark plate wins the melting race! It absorbs more sunlight and turns it into heat, which melts the ice faster than the white plate does." },
+    6: { correct: "🌟 Right! Direct sunlight brings a lot of heat energy. Shade blocks that energy, so the ice in shade melts much more slowly.", wrong: "💡 The ice in the sun melts much faster! Sunlight carries heat energy. Shade blocks the sun's rays, keeping the ice cooler and slowing the melt." },
+    7: { correct: "🌟 Perfect! White and silver (foil) reflect sunlight away from the shelter, keeping the inside nice and cool!", wrong: "💡 White or shiny silver (foil) is best! These colors reflect sunlight instead of absorbing it, so the inside of the shelter stays cooler." },
+    8: { correct: "🌟 Amazing science thinking! The sun's energy evaporates the water first — so less energy goes into heating the cloth. This is exactly why sweating cools you down!", wrong: "💡 The sun's energy is used up evaporating the water. That means less energy turns into heat in the cloth — just like sweating cools YOUR body down!" },
+    9: { correct: "🌟 That is real engineering! Looking at what did not work and making it better is called ITERATING. Every great inventor does this!", wrong: "💡 A good engineer improves and tries again! When a design does not work perfectly, scientists and engineers figure out why and make it better. This is called iterating!" },
+    10: { correct: "🌟 Yes! White reflects sunlight, so less heat enters the house. Houses in hot places (like Greece!) often have brilliant white roofs for this reason!", wrong: "💡 The WHITE roof house is cooler! White reflects sunlight away, so less heat gets in. The black roof absorbs all that heat — ouch! That is why hot-country buildings often have white roofs." }
+  };
+
+  let score = 0;
+  let answered = 0;
+  const total = 10;
+
+  function answer(qNum, btn, isCorrect) {
+    const card = document.getElementById('qcard-' + qNum);
+    const fb = document.getElementById('fb-' + qNum);
+    const allBtns = card.querySelectorAll('.option-btn');
+
+    // Disable all buttons
+    allBtns.forEach(b => b.disabled = true);
+
+    if (isCorrect) {
+      btn.classList.add('correct');
+      card.classList.add('answered-correct');
+      fb.className = 'feedback-box correct';
+      fb.innerHTML = '<span class="feedback-icon">✅</span>' + explanations[qNum].correct;
+      score++;
+    } else {
+      btn.classList.add('wrong');
+      card.classList.add('answered-wrong');
+      fb.className = 'feedback-box wrong';
+      fb.innerHTML = '<span class="feedback-icon">❌</span>' + explanations[qNum].wrong;
+      // Reveal correct answer
+      allBtns.forEach(b => {
+        if (b !== btn) {
+          // Check if this is the correct one by checking onclick
+          const onclickStr = b.getAttribute('onclick');
+          if (onclickStr && onclickStr.includes('true')) {
+            b.classList.add('reveal-correct');
+          }
+        }
+      });
+    }
+
+    answered++;
+    document.getElementById('scoreDisplay').textContent = score;
+    document.getElementById('totalAnswered').textContent = answered;
+    document.getElementById('progressText').textContent = answered < total
+      ? 'Question ' + (answered + 1) + ' of ' + total
+      : 'All done!';
+
+    if (answered === total) {
+      setTimeout(showResults, 800);
+    }
+  }
+
+  function showResults() {
+    document.getElementById('finalScore').textContent = score;
+    const msg = document.getElementById('resultsMessage');
+    const emoji = document.getElementById('resultsEmoji');
+    const pct = score / total;
+    if (pct === 1) {
+      emoji.textContent = '🏆🌟🎉';
+      msg.textContent = 'PERFECT SCORE! You are a sunshine science superstar! You know everything about how the sun warms our world!';
+    } else if (pct >= 0.8) {
+      emoji.textContent = '🌟😄☀️';
+      msg.textContent = 'Wow, you did amazing! You really understand how sunlight works. One more practice and you will be unbeatable!';
+    } else if (pct >= 0.6) {
+      emoji.textContent = '😊🔬💛';
+      msg.textContent = 'Great job, young scientist! You got more than half right! Try the quiz again — you are getting there!';
+    } else if (pct >= 0.4) {
+      emoji.textContent = '💪🌤️📚';
+      msg.textContent = 'Good try! Science takes practice. Go back and read the lessons, then try again — you can do it!';
+    } else {
+      emoji.textContent = '🤗📖🌱';
+      msg.textContent = 'Keep going! Every scientist starts somewhere. Read through the lessons with a grown-up and try the quiz again!';
+    }
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('resultsBox').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function restartQuiz() {
+    score = 0;
+    answered = 0;
+    document.getElementById('scoreDisplay').textContent = '0';
+    document.getElementById('totalAnswered').textContent = '0';
+    document.getElementById('progressText').textContent = 'Question 1 of 10';
+    document.getElementById('resultsBox').style.display = 'none';
+
+    for (let i = 1; i <= 10; i++) {
+      const card = document.getElementById('qcard-' + i);
+      card.className = 'question-card';
+      const fb = document.getElementById('fb-' + i);
+      fb.className = 'feedback-box';
+      fb.innerHTML = '';
+      const btns = card.querySelectorAll('.option-btn');
+      btns.forEach(b => {
+        b.disabled = false;
+        b.className = 'option-btn';
+      });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_dPkrxQpp0mg" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌤️ Weather & Seasons Quiz — K-ESS2 Unit 1</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff3e0;
+      min-height: 100vh;
+      padding: 20px;
+      color: #222;
+    }
+    .quiz-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .quiz-header {
+      background: #e65100;
+      color: white;
+      border-radius: 20px;
+      padding: 28px 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(230,81,0,0.25);
+    }
+    .quiz-header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .quiz-header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .read-aloud-note {
+      background: #fff9c4;
+      border: 3px solid #f9a825;
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #e65100;
+    }
+    .score-bar {
+      background: white;
+      border: 3px solid #e65100;
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .score-display {
+      color: #e65100;
+      font-size: 1.4rem;
+    }
+    .progress-text {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .question-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      border: 2px solid #ffcc80;
+      transition: border-color 0.3s;
+    }
+    .question-card.answered-correct {
+      border-color: #4caf50;
+      background: #f1f8f1;
+    }
+    .question-card.answered-wrong {
+      border-color: #f44336;
+      background: #fff5f5;
+    }
+    .question-number {
+      font-size: 0.85rem;
+      color: #e65100;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .question-text {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #bf360c;
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+    .options-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .option-btn {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 1.15rem;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #bf360c;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #ffe0b2;
+      border-color: #e65100;
+      transform: translateY(-1px);
+    }
+    .option-btn:disabled {
+      cursor: default;
+    }
+    .option-btn.correct {
+      background: #c8e6c9;
+      border-color: #4caf50;
+      color: #1b5e20;
+    }
+    .option-btn.wrong {
+      background: #ffcdd2;
+      border-color: #f44336;
+      color: #b71c1c;
+    }
+    .option-btn.reveal-correct {
+      background: #c8e6c9;
+      border-color: #4caf50;
+      color: #1b5e20;
+    }
+    .feedback-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      line-height: 1.45;
+      display: none;
+    }
+    .feedback-box.correct {
+      background: #e8f5e9;
+      border: 2px solid #4caf50;
+      color: #1b5e20;
+      display: block;
+    }
+    .feedback-box.wrong {
+      background: #fff8e1;
+      border: 2px solid #ffc107;
+      color: #5d4037;
+      display: block;
+    }
+    .feedback-icon {
+      font-size: 1.4rem;
+      margin-right: 6px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #e65100;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 10px;
+      border: 2px solid #ffcc80;
+    }
+    .back-link:hover {
+      background: #fff3e0;
+    }
+    .results-box {
+      display: none;
+      background: white;
+      border: 4px solid #e65100;
+      border-radius: 22px;
+      padding: 36px 28px;
+      text-align: center;
+      margin-top: 20px;
+      box-shadow: 0 6px 24px rgba(230,81,0,0.2);
+    }
+    .results-box h2 {
+      font-size: 1.9rem;
+      color: #e65100;
+      margin-bottom: 10px;
+    }
+    .results-score {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #bf360c;
+      margin: 14px 0;
+    }
+    .results-message {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .retry-btn {
+      background: #e65100;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .retry-btn:hover { background: #bf360c; }
+    .unit-label {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_ycx5C1dsMjs">
+
+<div class="quiz-wrapper">
+
+  <a class="back-link" href="k-ess2-unit1-lesson1-what-is-weather.html">← Back to Lesson 1</a>
+
+  <div class="quiz-header">
+    <h1>🌤️ Weather &amp; Seasons Quiz 🌤️</h1>
+    <p>K-ESS2 Unit 1 — Earth Science</p>
+    <p class="unit-label">Kindergarten · 10 Questions</p>
+  </div>
+
+  <div class="read-aloud-note">
+    📖 Ask a grown-up to read the questions aloud! 🗣️
+  </div>
+
+  <div class="score-bar">
+    <span>⭐ Score: <span class="score-display" id="scoreDisplay">0</span> / <span id="totalAnswered">0</span></span>
+    <span class="progress-text" id="progressText">Question 1 of 10</span>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-card" id="qcard-1">
+    <div class="question-number">Question 1 of 10</div>
+    <div class="question-text">🌦️ What is WEATHER?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(1, this, false)">🌎 The shape of the land and mountains</button>
+      <button class="option-btn" onclick="answer(1, this, true)">☀️ What the air outside is doing right now — sunny, rainy, windy, snowy</button>
+      <button class="option-btn" onclick="answer(1, this, false)">🌊 How deep the ocean is</button>
+    </div>
+    <div class="feedback-box" id="fb-1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" id="qcard-2">
+    <div class="question-number">Question 2 of 10</div>
+    <div class="question-text">🌬️ Wind is moving ____. What is wind made of?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(2, this, false)">💧 Moving water</button>
+      <button class="option-btn" onclick="answer(2, this, false)">🌑 Moving darkness</button>
+      <button class="option-btn" onclick="answer(2, this, true)">💨 Moving air</button>
+    </div>
+    <div class="feedback-box" id="fb-2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" id="qcard-3">
+    <div class="question-number">Question 3 of 10</div>
+    <div class="question-text">💧 After it rains, you see a puddle. The sun comes out and the puddle slowly disappears. Where does the water go?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(3, this, true)">☁️ It evaporates — it turns into invisible water vapor and rises into the air</button>
+      <button class="option-btn" onclick="answer(3, this, false)">🐢 A turtle drinks it all up</button>
+      <button class="option-btn" onclick="answer(3, this, false)">🌋 It goes into a volcano underground</button>
+    </div>
+    <div class="feedback-box" id="fb-3"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" id="qcard-4">
+    <div class="question-number">Question 4 of 10</div>
+    <div class="question-text">🧊 You fill a glass with ice and cold water and set it in a warm room. Little water drops appear on the OUTSIDE of the glass. Where did those drops come from?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(4, this, false)">🕳️ The glass has tiny holes water leaks through</button>
+      <button class="option-btn" onclick="answer(4, this, true)">💨 From the warm air! Water vapor in the air cooled down and turned into water drops — that is condensation!</button>
+      <button class="option-btn" onclick="answer(4, this, false)">🌧️ It rained inside the house</button>
+    </div>
+    <div class="feedback-box" id="fb-4"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" id="qcard-5">
+    <div class="question-number">Question 5 of 10</div>
+    <div class="question-text">🌸☀️🍂❄️ The four seasons are Spring, Summer, Fall, and Winter. Which season is the HOTTEST and has the LONGEST days?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(5, this, false)">🌸 Spring</button>
+      <button class="option-btn" onclick="answer(5, this, true)">☀️ Summer</button>
+      <button class="option-btn" onclick="answer(5, this, false)">🍂 Fall (Autumn)</button>
+      <button class="option-btn" onclick="answer(5, this, false)">❄️ Winter</button>
+    </div>
+    <div class="feedback-box" id="fb-5"></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" id="qcard-6">
+    <div class="question-number">Question 6 of 10</div>
+    <div class="question-text">🐻 When winter comes and it gets very cold, bears eat a LOT of food and then do something special. What do bears do?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(6, this, false)">✈️ They fly south like birds</button>
+      <button class="option-btn" onclick="answer(6, this, true)">😴 They hibernate — they sleep through most of winter!</button>
+      <button class="option-btn" onclick="answer(6, this, false)">🏪 They go to the grocery store and buy food</button>
+    </div>
+    <div class="feedback-box" id="fb-6"></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" id="qcard-7">
+    <div class="question-number">Question 7 of 10</div>
+    <div class="question-text">🦅 When cold weather comes, some birds fly all the way to a warmer place. In spring, they fly back! What is this called?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(7, this, false)">😴 Hibernation</button>
+      <button class="option-btn" onclick="answer(7, this, true)">✈️ Migration</button>
+      <button class="option-btn" onclick="answer(7, this, false)">🥜 Food storage</button>
+    </div>
+    <div class="feedback-box" id="fb-7"></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" id="qcard-8">
+    <div class="question-number">Question 8 of 10</div>
+    <div class="question-text">🐿️ Squirrels spend all fall gathering acorns and nuts and hiding them in the ground. Why do they do this?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(8, this, false)">🎮 It is a game squirrels like to play</button>
+      <button class="option-btn" onclick="answer(8, this, true)">❄️ So they have food to eat during winter when food is hard to find</button>
+      <button class="option-btn" onclick="answer(8, this, false)">🌱 They are planting trees</button>
+    </div>
+    <div class="feedback-box" id="fb-8"></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" id="qcard-9">
+    <div class="question-number">Question 9 of 10</div>
+    <div class="question-text">🔬 A scientist who studies weather, collects weather data, looks for patterns, and predicts what weather is coming is called a ____?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(9, this, false)">🦕 Paleontologist</button>
+      <button class="option-btn" onclick="answer(9, this, false)">🌺 Botanist</button>
+      <button class="option-btn" onclick="answer(9, this, true)">🌩️ Meteorologist</button>
+    </div>
+    <div class="feedback-box" id="fb-9"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" id="qcard-10">
+    <div class="question-number">Question 10 of 10</div>
+    <div class="question-text">📊 You watch the weather every day for a week and write it down. After a week, you notice it is almost always sunny, then cloudy, then rainy in a row. What is that called?</div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(10, this, false)">🎲 A coincidence — it just happens randomly</button>
+      <button class="option-btn" onclick="answer(10, this, true)">🔁 A weather PATTERN — when weather repeats in a similar order!</button>
+      <button class="option-btn" onclick="answer(10, this, false)">🌈 A rainbow cycle</button>
+    </div>
+    <div class="feedback-box" id="fb-10"></div>
+  </div>
+
+  <!-- Results -->
+  <div class="results-box" id="resultsBox">
+    <div id="resultsEmoji" style="font-size:3rem; margin-bottom:10px;"></div>
+    <h2>Quiz Complete! 🎉</h2>
+    <div class="results-score"><span id="finalScore">0</span> / 10</div>
+    <div class="results-message" id="resultsMessage"></div>
+    <button class="retry-btn" onclick="restartQuiz()">🔄 Try Again!</button>
+    <br><br>
+    <a class="back-link" href="k-ess2-unit1-lesson1-what-is-weather.html">← Back to Lesson 1</a>
+  </div>
+
+</div>
+
+<script>
+  const explanations = {
+    1: { correct: "🌟 Yes! Weather is what the air outside is doing right now. It can be sunny, cloudy, rainy, windy, or snowy — and it can change every day!", wrong: "💡 Weather is what the air outside is doing right now — sun, rain, wind, snow! It changes from day to day. Climate is the pattern over many, many years." },
+    2: { correct: "🌟 That is right! Wind is simply air that is moving. You cannot see air, but you can feel it move and see what it does to leaves and flags!", wrong: "💡 Wind is MOVING AIR! You cannot see air, but when it moves — that is wind! You can feel it on your skin and watch it spin a pinwheel." },
+    3: { correct: "🌟 Exactly! That is evaporation — water turns into invisible water vapor and goes up into the sky. The sun's warmth makes it happen!", wrong: "💡 The puddle water evaporates! The sun warms the water until it turns into invisible water vapor and rises into the air. This is the start of the water cycle!" },
+    4: { correct: "🌟 Amazing! That is condensation — the same thing that makes clouds! Warm air holds invisible water vapor. When it touches the cold glass, the vapor cools and becomes liquid drops.", wrong: "💡 Those drops are condensation! Warm air holds invisible water vapor. When warm air touches the cold glass, the vapor cools down and turns into water drops — just like how clouds form in the sky!" },
+    5: { correct: "🌟 Right! Summer has the hottest weather and the most hours of daylight. The days are long and the sun is high in the sky!", wrong: "💡 Summer is the hottest season with the longest days! The sun is high in the sky, there are many hours of daylight, and plants grow big and green." },
+    6: { correct: "🌟 Yes! Bears hibernate — they slow way down and sleep through most of winter. They eat lots of food in fall to build up fat that keeps them alive while they sleep!", wrong: "💡 Bears hibernate! They eat a huge amount of food all fall to build up fat, then sleep in a den through most of winter. Their heart slows WAY down to save energy. Bears wake up in spring!" },
+    7: { correct: "🌟 Correct! Migration is when animals travel to a warmer place for winter. Birds like geese fly south every fall and return north in spring!", wrong: "💡 That is migration! Birds and some other animals travel (migrate) to warmer places when winter comes. They return in spring when it gets warm again. Geese, butterflies, and whales all migrate!" },
+    8: { correct: "🌟 Smart! Squirrels store food so they have enough to eat all winter. This is called a food cache. They hide acorns all over the place and dig them up when they are hungry!", wrong: "💡 Squirrels hide food for winter! When food gets scarce in winter, squirrels dig up the acorns and nuts they buried in fall. This is called a food cache — like a secret snack stash!" },
+    9: { correct: "🌟 Meteorologist! That is a big word for a weather scientist. They collect data, look for patterns, and use computers to predict what weather is coming!", wrong: "💡 A meteorologist is a weather scientist! They watch weather every day, collect lots of data, find patterns, and use that information to predict future weather — like a 10-day forecast!" },
+    10: { correct: "🌟 A weather PATTERN! When weather happens in a repeating order, that is a pattern. Scientists look for patterns to predict what weather is coming next!", wrong: "💡 That is a weather PATTERN! When weather repeats in a similar order, scientists can use that pattern to predict what comes next. That is exactly how meteorologists forecast the weather!" }
+  };
+
+  let score = 0;
+  let answered = 0;
+  const total = 10;
+
+  function answer(qNum, btn, isCorrect) {
+    const card = document.getElementById('qcard-' + qNum);
+    const fb = document.getElementById('fb-' + qNum);
+    const allBtns = card.querySelectorAll('.option-btn');
+
+    allBtns.forEach(b => b.disabled = true);
+
+    if (isCorrect) {
+      btn.classList.add('correct');
+      card.classList.add('answered-correct');
+      fb.className = 'feedback-box correct';
+      fb.innerHTML = '<span class="feedback-icon">✅</span>' + explanations[qNum].correct;
+      score++;
+    } else {
+      btn.classList.add('wrong');
+      card.classList.add('answered-wrong');
+      fb.className = 'feedback-box wrong';
+      fb.innerHTML = '<span class="feedback-icon">❌</span>' + explanations[qNum].wrong;
+      allBtns.forEach(b => {
+        if (b !== btn) {
+          const onclickStr = b.getAttribute('onclick');
+          if (onclickStr && onclickStr.includes('true')) {
+            b.classList.add('reveal-correct');
+          }
+        }
+      });
+    }
+
+    answered++;
+    document.getElementById('scoreDisplay').textContent = score;
+    document.getElementById('totalAnswered').textContent = answered;
+    document.getElementById('progressText').textContent = answered < total
+      ? 'Question ' + (answered + 1) + ' of ' + total
+      : 'All done!';
+
+    if (answered === total) {
+      setTimeout(showResults, 800);
+    }
+  }
+
+  function showResults() {
+    document.getElementById('finalScore').textContent = score;
+    const msg = document.getElementById('resultsMessage');
+    const emoji = document.getElementById('resultsEmoji');
+    const pct = score / total;
+    if (pct === 1) {
+      emoji.textContent = '🏆🌟🎉';
+      msg.textContent = 'PERFECT SCORE! You are a weather and seasons superstar! You know everything about clouds, seasons, and amazing animals!';
+    } else if (pct >= 0.8) {
+      emoji.textContent = '🌟😄☀️';
+      msg.textContent = 'Fantastic work, young scientist! You really understand weather and seasons. A little more practice and you will be unstoppable!';
+    } else if (pct >= 0.6) {
+      emoji.textContent = '😊🌤️💛';
+      msg.textContent = 'Great job! You got more than half right — you are learning so much about weather! Try the quiz again to get an even better score!';
+    } else if (pct >= 0.4) {
+      emoji.textContent = '💪🌧️📚';
+      msg.textContent = 'Good effort! Science takes practice. Go back and review the lessons with a grown-up, then give the quiz another try!';
+    } else {
+      emoji.textContent = '🤗📖🌱';
+      msg.textContent = 'Keep going — you are just getting started! Read through the lessons again with a grown-up. You can do it!';
+    }
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('resultsBox').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function restartQuiz() {
+    score = 0;
+    answered = 0;
+    document.getElementById('scoreDisplay').textContent = '0';
+    document.getElementById('totalAnswered').textContent = '0';
+    document.getElementById('progressText').textContent = 'Question 1 of 10';
+    document.getElementById('resultsBox').style.display = 'none';
+
+    for (let i = 1; i <= 10; i++) {
+      const card = document.getElementById('qcard-' + i);
+      card.className = 'question-card';
+      const fb = document.getElementById('fb-' + i);
+      fb.className = 'feedback-box';
+      fb.innerHTML = '';
+      const btns = card.querySelectorAll('.option-btn');
+      btns.forEach(b => {
+        b.disabled = false;
+        b.className = 'option-btn';
+      });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_ycx5C1dsMjs" data-content-selector="body"></script>
+</body>
+</html>
