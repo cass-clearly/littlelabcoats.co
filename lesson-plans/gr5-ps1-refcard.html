@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Chemistry Reference Card — Grade 5</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e3f2fd;
+      color: #0d2137;
+      padding: 12px;
+      min-height: 100vh;
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      @page { size: letter portrait; margin: 0.4in; }
+      body {
+        background: white;
+        padding: 0;
+        font-size: 9pt;
+      }
+      .print-btn { display: none !important; }
+      .page-card {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        page-break-inside: avoid;
+      }
+      .reaction-grid { grid-template-columns: repeat(5, 1fr) !important; }
+      .vocab-strip { flex-wrap: nowrap !important; }
+    }
+
+    /* ─── SCREEN WRAPPER ─── */
+    .page-card {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(21,101,192,0.15);
+      overflow: hidden;
+      border: 3px solid #1565c0;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 60%, #1976d2 100%);
+      color: white;
+      padding: 14px 20px 10px;
+      position: relative;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .header .grade-badge {
+      background: #fff3;
+      border: 2px solid #ffffff88;
+      border-radius: 30px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: 700;
+      color: white;
+      white-space: nowrap;
+    }
+    .big-idea {
+      margin-top: 8px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .big-idea .main-text {
+      font-size: 13pt;
+      font-weight: 800;
+      color: #fff;
+    }
+    .type-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .type-pill {
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 9pt;
+      font-weight: 700;
+      border: 2px solid;
+    }
+    .type-pill.mix  { background: #e8f5e9; color: #1b5e20; border-color: #4caf50; }
+    .type-pill.rxn  { background: #fce4ec; color: #880e4f; border-color: #e91e63; }
+
+    /* ─── BODY CONTENT ─── */
+    .card-body {
+      padding: 10px 14px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      font-size: 8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1565c0;
+      border-bottom: 2px solid #1565c0;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    /* ─── REACTION DETECTOR GRID ─── */
+    .reaction-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+    }
+    .rxn-tile {
+      border-radius: 10px;
+      padding: 8px 5px 7px;
+      text-align: center;
+      border: 2px solid;
+    }
+    .rxn-tile .tile-emoji { font-size: 24pt; display: block; line-height: 1.1; }
+    .rxn-tile .tile-title { font-size: 9pt; font-weight: 800; margin-top: 3px; display: block; }
+    .rxn-tile .tile-desc  { font-size: 7.5pt; margin-top: 2px; line-height: 1.3; display: block; color: #333; }
+
+    .rxn-tile.t1 { background: #e3f2fd; border-color: #1976d2; }
+    .rxn-tile.t2 { background: #fff3e0; border-color: #f57c00; }
+    .rxn-tile.t3 { background: #f3e5f5; border-color: #7b1fa2; }
+    .rxn-tile.t4 { background: #e8f5e9; border-color: #388e3c; }
+    .rxn-tile.t5 { background: #fffde7; border-color: #f9a825; }
+
+    /* ─── REACTANTS / PRODUCTS DIAGRAM ─── */
+    .equation-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      background: #f5f9ff;
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 9px 12px;
+    }
+    .eq-box {
+      border-radius: 8px;
+      padding: 6px 10px;
+      text-align: center;
+      min-width: 70px;
+    }
+    .eq-box .eq-label { font-size: 7pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .eq-box .eq-name  { font-size: 9.5pt; font-weight: 800; }
+    .eq-box.reactant  { background: #fce4ec; border: 2px solid #e91e63; color: #880e4f; }
+    .eq-box.product   { background: #e8f5e9; border: 2px solid #43a047; color: #1b5e20; }
+    .eq-arrow {
+      font-size: 22pt;
+      color: #1565c0;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .eq-plus {
+      font-size: 18pt;
+      font-weight: 900;
+      color: #555;
+      line-height: 1;
+    }
+    .eq-label-row {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 5px;
+      flex-wrap: wrap;
+    }
+    .eq-badge {
+      border-radius: 14px;
+      padding: 2px 10px;
+      font-size: 8pt;
+      font-weight: 700;
+    }
+    .eq-badge.r { background: #fce4ec; color: #880e4f; border: 1.5px solid #e91e63; }
+    .eq-badge.p { background: #e8f5e9; color: #1b5e20; border: 1.5px solid #43a047; }
+    .rearrange-note {
+      text-align: center;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0d47a1;
+      margin-top: 4px;
+      background: #ddeeff;
+      border-radius: 6px;
+      padding: 3px 8px;
+    }
+
+    /* ─── TWO-COLUMN LAYOUT (table + real world) ─── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* ─── COMPARISON TABLE ─── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .compare-table th {
+      padding: 6px 8px;
+      font-weight: 800;
+      text-align: center;
+      font-size: 8.5pt;
+    }
+    .compare-table td {
+      padding: 5px 8px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .th-q  { background: #e3f2fd; color: #0d47a1; }
+    .compare-table .th-mix{ background: #e8f5e9; color: #2e7d32; }
+    .compare-table .th-rxn{ background: #fce4ec; color: #c62828; }
+    .compare-table tr:nth-child(even) td { background: #fafafa; }
+
+    /* ─── REAL WORLD STRIP ─── */
+    .realworld-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+    .rw-tile {
+      background: #fffde7;
+      border: 2px solid #fbc02d;
+      border-radius: 8px;
+      padding: 6px;
+      text-align: center;
+    }
+    .rw-tile .rw-emoji  { font-size: 18pt; display: block; }
+    .rw-tile .rw-label  { font-size: 7.5pt; font-weight: 800; color: #e65100; display: block; margin-top: 2px; }
+    .rw-tile .rw-detail { font-size: 7pt; color: #555; display: block; line-height: 1.2; }
+
+    /* ─── CONSERVATION / BALANCE ─── */
+    .mass-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      background: #e8f5e9;
+      border: 2px solid #43a047;
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+    .mass-box {
+      background: white;
+      border: 2px solid #66bb6a;
+      border-radius: 8px;
+      padding: 5px 10px;
+      text-align: center;
+      min-width: 80px;
+    }
+    .mass-box .mass-name  { font-size: 8pt; font-weight: 700; color: #1b5e20; }
+    .mass-box .mass-g     { font-size: 15pt; font-weight: 900; color: #2e7d32; line-height: 1; }
+    .mass-box .mass-unit  { font-size: 7.5pt; color: #555; }
+    .mass-equals { font-size: 22pt; font-weight: 900; color: #2e7d32; }
+    .mass-note {
+      width: 100%;
+      text-align: center;
+      font-size: 8pt;
+      font-weight: 800;
+      color: #1b5e20;
+      margin-top: 4px;
+    }
+    .scale-vis {
+      font-size: 20pt;
+      line-height: 1;
+    }
+
+    /* ─── VOCABULARY STRIP ─── */
+    .vocab-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      padding: 8px;
+      background: #0d47a1;
+      border-radius: 0 0 12px 12px;
+    }
+    .vocab-pill {
+      background: white;
+      color: #0d47a1;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 8.5pt;
+      font-weight: 800;
+      border: 2px solid #90caf9;
+      white-space: nowrap;
+    }
+
+    /* ─── BRANDING ─── */
+    .branding {
+      text-align: center;
+      font-size: 7.5pt;
+      color: #90caf9;
+      padding: 3px 0 0;
+      font-weight: 600;
+    }
+
+    /* ─── PRINT BUTTON ─── */
+    .print-btn {
+      display: block;
+      margin: 12px auto;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 30px;
+      font-size: 12pt;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(21,101,192,0.3);
+      transition: background 0.15s;
+    }
+    .print-btn:hover { background: #0d47a1; }
+  </style>
+</head>
+<body>
+
+  <button class="print-btn" onclick="window.print()">🖨️ Print This Card</button>
+
+  <div class="page-card">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-top">
+        <h1>🧪 Kitchen Chemistry Reference Card</h1>
+        <span class="grade-badge">Grade 5 · PS1</span>
+      </div>
+      <div class="big-idea">
+        <span class="main-text">⚗️ Matter + Matter = New Matter (sometimes!)</span>
+        <div class="type-pills">
+          <span class="type-pill mix">🥣 Mixture — no new substance</span>
+          <span class="type-pill rxn">💥 Chemical Reaction — new substance forms!</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+
+      <!-- SECTION 1: REACTION DETECTOR -->
+      <div>
+        <div class="section-label">🔍 Visual Reaction Detector — 5 Signs a Chemical Reaction Occurred</div>
+        <div class="reaction-grid">
+          <div class="rxn-tile t1">
+            <span class="tile-emoji">🫧</span>
+            <span class="tile-title">Bubbles / Gas</span>
+            <span class="tile-desc">CO₂ was produced!</span>
+          </div>
+          <div class="rxn-tile t2">
+            <span class="tile-emoji">🌡️</span>
+            <span class="tile-title">Temperature Change</span>
+            <span class="tile-desc">Energy released or absorbed</span>
+          </div>
+          <div class="rxn-tile t3">
+            <span class="tile-emoji">🎨</span>
+            <span class="tile-title">Color Change</span>
+            <span class="tile-desc">Atoms rearranged into new molecules</span>
+          </div>
+          <div class="rxn-tile t4">
+            <span class="tile-emoji">☁️</span>
+            <span class="tile-title">Precipitate</span>
+            <span class="tile-desc">A solid formed from two liquids</span>
+          </div>
+          <div class="rxn-tile t5">
+            <span class="tile-emoji">💡</span>
+            <span class="tile-title">Light / Energy</span>
+            <span class="tile-desc">Like fire or bioluminescence</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: REACTANTS → PRODUCTS -->
+      <div>
+        <div class="section-label">⚗️ Reactants → Products Diagram</div>
+        <div class="equation-row">
+          <div class="eq-box reactant"><div class="eq-label">Reactant</div><div class="eq-name">🧂 Baking Soda</div></div>
+          <span class="eq-plus">+</span>
+          <div class="eq-box reactant"><div class="eq-label">Reactant</div><div class="eq-name">🍶 Vinegar</div></div>
+          <span class="eq-arrow">→</span>
+          <div class="eq-box product"><div class="eq-label">Product</div><div class="eq-name">🫧 Carbon Dioxide</div></div>
+          <span class="eq-plus">+</span>
+          <div class="eq-box product"><div class="eq-label">Product</div><div class="eq-name">💧 Water</div></div>
+          <span class="eq-plus">+</span>
+          <div class="eq-box product"><div class="eq-label">Product</div><div class="eq-name">🧪 Sodium Acetate</div></div>
+        </div>
+        <div class="rearrange-note">⚛️ Atoms don't disappear — they REARRANGE! The same atoms, just in new combinations.</div>
+      </div>
+
+      <!-- SECTION 3: COMPARISON TABLE + REAL WORLD (two-col) -->
+      <div class="two-col">
+
+        <!-- Comparison Table -->
+        <div>
+          <div class="section-label">📊 Mixture vs. Chemical Reaction</div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th class="th-q">Question</th>
+                <th class="th-mix">🥣 Mixture</th>
+                <th class="th-rxn">💥 Reaction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>New substance?</td><td>❌ No</td><td>✅ Yes</td></tr>
+              <tr><td>Reversible?</td><td>✅ Usually</td><td>❌ Rarely</td></tr>
+              <tr><td>Same properties?</td><td>✅ Yes</td><td>❌ New properties</td></tr>
+              <tr><td>Example</td><td>Salt + Water</td><td>Baking Soda + Vinegar</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Real World Chemistry -->
+        <div>
+          <div class="section-label">🌍 Chemistry Is Everywhere!</div>
+          <div class="realworld-grid">
+            <div class="rw-tile">
+              <span class="rw-emoji">🍳</span>
+              <span class="rw-label">Frying Egg</span>
+              <span class="rw-detail">Protein denaturation</span>
+            </div>
+            <div class="rw-tile">
+              <span class="rw-emoji">🦷</span>
+              <span class="rw-label">Toothpaste</span>
+              <span class="rw-detail">Fights cavity acids</span>
+            </div>
+            <div class="rw-tile">
+              <span class="rw-emoji">🚗</span>
+              <span class="rw-label">Car Rusting</span>
+              <span class="rw-detail">Iron + oxygen reaction</span>
+            </div>
+            <div class="rw-tile">
+              <span class="rw-emoji">🕯️</span>
+              <span class="rw-label">Candle Burning</span>
+              <span class="rw-detail">Fuel + O₂ → CO₂ + heat</span>
+            </div>
+            <div class="rw-tile">
+              <span class="rw-emoji">🍞</span>
+              <span class="rw-label">Bread Rising</span>
+              <span class="rw-detail">Yeast + sugar → CO₂</span>
+            </div>
+            <div class="rw-tile">
+              <span class="rw-emoji">🍋</span>
+              <span class="rw-label">Lemon + Soda</span>
+              <span class="rw-detail">Acid + base → fizz!</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECTION 4: CONSERVATION OF MASS -->
+      <div>
+        <div class="section-label">⚖️ Conservation of Mass — Mass is NEVER Created or Destroyed!</div>
+        <div class="mass-row">
+          <span class="scale-vis">⚖️</span>
+          <div class="mass-box">
+            <div class="mass-name">🧂 Baking Soda</div>
+            <div class="mass-g">50</div>
+            <div class="mass-unit">grams</div>
+          </div>
+          <span style="font-size:18pt;font-weight:900;color:#2e7d32">+</span>
+          <div class="mass-box">
+            <div class="mass-name">🍶 Vinegar</div>
+            <div class="mass-g">50</div>
+            <div class="mass-unit">grams</div>
+          </div>
+          <span class="mass-equals">=</span>
+          <div class="mass-box" style="background:#e8f5e9;border-color:#2e7d32">
+            <div class="mass-name">✅ All Products</div>
+            <div class="mass-g" style="color:#1b5e20">100</div>
+            <div class="mass-unit">grams</div>
+          </div>
+          <div class="mass-note">The total mass of reactants always equals the total mass of products!</div>
+        </div>
+      </div>
+
+    </div><!-- end card-body -->
+
+    <!-- VOCABULARY STRIP -->
+    <div class="vocab-strip">
+      <span class="vocab-pill">reactant</span>
+      <span class="vocab-pill">product</span>
+      <span class="vocab-pill">mixture</span>
+      <span class="vocab-pill">chemical reaction</span>
+      <span class="vocab-pill">precipitate</span>
+      <span class="vocab-pill">evidence</span>
+      <div class="branding" style="width:100%;margin-top:4px">Little Lab Coats 🥼</div>
+    </div>
+
+  </div><!-- end page-card -->
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_RrvUrD42Nsc" data-content-selector="body"></script>
+</body>
+</html>
