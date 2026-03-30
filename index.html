@@ -1813,106 +1813,637 @@
 
   <!-- ═══ SAMPLE UNITS ═══ -->
   <section id="sample-units">
-    <div class="units-inner">
-      <span class="section-label">Available now</span>
-      <h2 class="section-title">Start exploring today.</h2>
-      <p class="section-sub">Each unit is a complete, standalone science experience. Buy what fits your kids — or get everything with a subscription.</p>
+    <style>
+      /* ─── Curriculum Showcase ─── */
+      #sample-units {
+        background: var(--sage-pale);
+      }
+      .curriculum-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+      }
+      .curriculum-inner .section-label { display: block; text-align: center; }
+      .curriculum-inner .section-title { text-align: center; }
+      .curriculum-inner .section-sub { text-align: center; margin-bottom: 40px; }
 
-      <div class="units-grid">
-        <!-- Unit 1: Kindergarten Forces -->
-        <div class="unit-card">
-          <div class="unit-image">
-            <div class="image-placeholder"><span>Kindergarten Forces Preview</span></div>
-          </div>
-          <div class="unit-body">
-            <div class="unit-meta">
-              <span class="unit-tag tag-grade">Kindergarten</span>
-              <span class="unit-tag tag-lessons">6 Lessons</span>
-              <span class="unit-tag tag-subject">Physical Science</span>
-            </div>
-            <h3>Forces: Push, Pull &amp; Motion</h3>
-            <p>Your youngest scientists explore the invisible forces all around them — pushing, pulling, gravity, and how things move. Every lesson is a hands-on discovery they'll talk about for days.</p>
-            <div class="unit-footer">
-              <div>
-                <div class="unit-price">$18</div>
-                <div class="unit-price-sub">That's just $3/lesson · PDF download</div>
+      /* Grade Tabs */
+      .grade-tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        margin-bottom: 36px;
+        justify-content: center;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .grade-tabs::-webkit-scrollbar { display: none; }
+      .grade-tab {
+        flex-shrink: 0;
+        padding: 10px 22px;
+        border-radius: 999px;
+        border: 2px solid var(--navy);
+        background: transparent;
+        color: var(--navy);
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s;
+        white-space: nowrap;
+      }
+      .grade-tab:hover { background: var(--navy); color: var(--cream); }
+      .grade-tab.active { background: var(--navy); color: var(--cream); }
+
+      /* Grade Content Panels */
+      .grade-panel { display: none; }
+      .grade-panel.active { display: block; }
+
+      /* Domain Columns */
+      .domain-columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        margin-bottom: 48px;
+      }
+      .domain-col {
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+      }
+      .domain-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 18px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--white);
+        letter-spacing: 0.02em;
+      }
+      .domain-header.phys  { background: #1565c0; }
+      .domain-header.life  { background: #2e7d32; }
+      .domain-header.earth { background: #e65100; }
+      .domain-header.eng   { background: #6a1b9a; }
+
+      .domain-body { padding: 16px 18px; }
+      .unit-block { margin-bottom: 18px; }
+      .unit-block:last-child { margin-bottom: 0; }
+      .unit-name {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--navy);
+        margin-bottom: 6px;
+        line-height: 1.3;
+      }
+      .unit-name small {
+        display: block;
+        font-weight: 400;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        margin-top: 2px;
+      }
+      .lesson-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .lesson-list li { margin-bottom: 3px; }
+      .lesson-list a {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 5px;
+        font-size: 0.82rem;
+        color: var(--navy-light);
+        text-decoration: none;
+        line-height: 1.45;
+        transition: color 0.15s;
+      }
+      .lesson-list a:hover { color: var(--terracotta); text-decoration: underline; }
+      .lesson-list a::before {
+        content: '📄';
+        font-size: 0.72rem;
+        flex-shrink: 0;
+        position: relative;
+        top: 1px;
+      }
+
+      /* Featured Lesson Preview */
+      .featured-preview {
+        background: var(--cream);
+        border-left: 5px solid var(--terracotta);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        padding: 32px 36px;
+        margin-bottom: 48px;
+        position: relative;
+      }
+      .featured-preview-label {
+        position: absolute;
+        top: -14px;
+        left: 28px;
+        background: var(--terracotta);
+        color: var(--white);
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 14px;
+        border-radius: 999px;
+      }
+      .featured-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+      .featured-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 0;
+      }
+      .grade-badge {
+        background: var(--sage-pale);
+        color: var(--sage);
+        border: 1.5px solid var(--sage-light);
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        padding: 3px 12px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .featured-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .featured-box {
+        background: var(--white);
+        border-radius: var(--radius-sm);
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+      }
+      .featured-box-title {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+      }
+      .featured-box ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.85rem;
+        color: var(--navy);
+        line-height: 1.6;
+      }
+      .featured-box p {
+        font-size: 0.88rem;
+        color: var(--navy);
+        line-height: 1.6;
+        margin: 0;
+      }
+      .featured-step {
+        background: #e8f5e9;
+        border-left: 4px solid #2e7d32;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        padding: 12px 16px;
+        font-size: 0.88rem;
+        color: var(--navy);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .featured-step strong { color: #1b5e20; }
+      .featured-question {
+        background: var(--gold-pale);
+        border-left: 4px solid var(--gold);
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        padding: 12px 16px;
+        font-size: 0.88rem;
+        color: var(--navy);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .featured-question em { color: var(--brown); }
+      .featured-question .hint { font-style: italic; color: var(--text-muted); margin-top: 6px; font-size: 0.83rem; }
+      .featured-open-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--terracotta);
+        color: var(--white);
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 11px 26px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: background 0.18s, transform 0.15s;
+        border: none;
+        cursor: pointer;
+      }
+      .featured-open-btn:hover { background: var(--terracotta-light); transform: translateY(-1px); }
+
+      /* CTA Row */
+      .curriculum-cta {
+        text-align: center;
+        padding-top: 8px;
+      }
+      .curriculum-cta a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--navy);
+        color: var(--cream);
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 14px 36px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: background 0.18s, transform 0.15s;
+        box-shadow: var(--shadow-sm);
+      }
+      .curriculum-cta a:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+      @media (max-width: 700px) {
+        .featured-grid { grid-template-columns: 1fr; }
+        .domain-columns { grid-template-columns: 1fr; }
+        .featured-preview { padding: 28px 20px; }
+        .grade-tabs { justify-content: flex-start; }
+      }
+    </style>
+
+    <div class="curriculum-inner">
+      <span class="section-label">The full picture</span>
+      <h2 class="section-title">A Complete K–5 Curriculum, Built by a Scientist Mom</h2>
+      <p class="section-sub">Real lessons. Real experiments. Browse the full scope below — or click any lesson to open it.</p>
+
+      <!-- ── Grade Tabs ── -->
+      <div class="grade-tabs" role="tablist">
+        <button class="grade-tab active" role="tab" aria-selected="true"  data-target="grade-k" >Kindergarten</button>
+        <button class="grade-tab"        role="tab" aria-selected="false" data-target="grade-1" >Grade 1</button>
+        <button class="grade-tab"        role="tab" aria-selected="false" data-target="grade-2" >Grade 2</button>
+        <button class="grade-tab"        role="tab" aria-selected="false" data-target="grade-3" >Grade 3</button>
+        <button class="grade-tab"        role="tab" aria-selected="false" data-target="grade-5" >Grade 5</button>
+      </div>
+
+      <!-- ════ KINDERGARTEN ════ -->
+      <div id="grade-k" class="grade-panel active">
+        <div class="domain-columns">
+
+          <!-- Physical Science -->
+          <div class="domain-col">
+            <div class="domain-header phys">⚡ Physical Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">K-PS2: Forces &amp; Motion <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/unit1-lesson1-push-pull-sort.html" target="_blank">Push &amp; Pull Sort</a></li>
+                  <li><a href="/lesson-plans/unit1-lesson2-ramp-racers.html" target="_blank">Ramp Racers</a></li>
+                  <li><a href="/lesson-plans/unit1-lesson3-strong-push-gentle-push.html" target="_blank">Strong Push, Gentle Push</a></li>
+                  <li><a href="/lesson-plans/unit1-lesson4-magnet-magic.html" target="_blank">Magnet Magic</a></li>
+                  <li><a href="/lesson-plans/unit1-lesson5-wind-wagon.html" target="_blank">Wind Wagon</a></li>
+                  <li><a href="/lesson-plans/unit1-lesson6-marble-run.html" target="_blank">Marble Run</a></li>
+                </ul>
               </div>
-              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
+              <div class="unit-block">
+                <div class="unit-name">K-PS3: Sunshine &amp; Warmth <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html" target="_blank">The Sun Warms Everything</a></li>
+                  <li><a href="/lesson-plans/k-ps3-unit2-lesson2-shadow-science.html" target="_blank">Shadow Science</a></li>
+                  <li><a href="/lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html" target="_blank">Dark vs. Light Surfaces</a></li>
+                  <li><a href="/lesson-plans/k-ps3-unit2-lesson4-melting-race.html" target="_blank">The Melting Race</a></li>
+                  <li><a href="/lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html" target="_blank">Design a Sun Shelter (Plan)</a></li>
+                  <li><a href="/lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html" target="_blank">Design a Sun Shelter (Build &amp; Test)</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
+
+          <!-- Life Science -->
+          <div class="domain-col">
+            <div class="domain-header life">🌱 Life Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">K-LS1 Unit 2: Plants &amp; Seeds <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html" target="_blank">What's Inside a Seed?</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit2-lesson2-planting-day.html" target="_blank">Planting Day</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit2-lesson3-parts-of-a-plant.html" target="_blank">Parts of a Plant</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit2-lesson4-sunlight-or-no-sunlight.html" target="_blank">Sunlight or No Sunlight?</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit2-lesson5-seed-travelers.html" target="_blank">Seed Travelers</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit2-lesson6-plant-life-cycle.html" target="_blank">Plant Life Cycle</a></li>
+                </ul>
+              </div>
+              <div class="unit-block">
+                <div class="unit-name">K-LS1 Unit 3: Animal Needs <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html" target="_blank">What Do Animals Need?</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit3-lesson2-whats-for-dinner.html" target="_blank">What's for Dinner?</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit3-lesson3-breathing.html" target="_blank">Breathing</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit3-lesson4-how-animals-drink.html" target="_blank">How Animals Drink</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit3-lesson5-building-a-shelter.html" target="_blank">Building a Shelter</a></li>
+                  <li><a href="/lesson-plans/k-ls1-unit3-lesson6-when-needs-arent-met.html" target="_blank">When Needs Aren't Met</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Earth Science -->
+          <div class="domain-col">
+            <div class="domain-header earth">🌍 Earth Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">K-ESS2: Weather &amp; Seasons <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html" target="_blank">What Is Weather?</a></li>
+                  <li><a href="/lesson-plans/k-ess2-unit1-lesson2-wind.html" target="_blank">Wind — Invisible but Powerful</a></li>
+                  <li><a href="/lesson-plans/k-ess2-unit1-lesson3-water-cycle.html" target="_blank">Rain, Snow &amp; the Water Cycle</a></li>
+                  <li><a href="/lesson-plans/k-ess2-unit1-lesson4-four-seasons.html" target="_blank">The Four Seasons</a></li>
+                  <li><a href="/lesson-plans/k-ess2-unit1-lesson5-animals-and-weather.html" target="_blank">Weather &amp; Animals</a></li>
+                  <li><a href="/lesson-plans/k-ess2-unit1-lesson6-weather-patterns.html" target="_blank">Weather Patterns Over Time</a></li>
+                </ul>
+              </div>
+              <div class="unit-block">
+                <div class="unit-name">K-ESS3: Earth &amp; Human Activity <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html" target="_blank">What Does Earth Give Us?</a></li>
+                  <li><a href="/lesson-plans/k-ess3-unit2-lesson2-water-resource.html" target="_blank">Water — Earth's Most Important Resource</a></li>
+                  <li><a href="/lesson-plans/k-ess3-unit2-lesson3-soil.html" target="_blank">Soil — What's Under Our Feet?</a></li>
+                  <li><a href="/lesson-plans/k-ess3-unit2-lesson4-humans-change-earth.html" target="_blank">Humans Change the Earth</a></li>
+                  <li><a href="/lesson-plans/k-ess3-unit2-lesson5-weather-hazards.html" target="_blank">Weather Hazards — Staying Safe</a></li>
+                  <li><a href="/lesson-plans/k-ess3-unit2-lesson6-being-earths-helper.html" target="_blank">Being Earth's Helper</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Engineering -->
+          <div class="domain-col">
+            <div class="domain-header eng">🔧 Engineering</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">K-ETS1: Engineering Design — Build It! <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html" target="_blank">What Is a Problem?</a></li>
+                  <li><a href="/lesson-plans/k-ets1-unit1-lesson2-ask-questions.html" target="_blank">Ask Questions</a></li>
+                  <li><a href="/lesson-plans/k-ets1-unit1-lesson3-draw-your-idea.html" target="_blank">Draw Your Idea</a></li>
+                  <li><a href="/lesson-plans/k-ets1-unit1-lesson4-build-it.html" target="_blank">Build It!</a></li>
+                  <li><a href="/lesson-plans/k-ets1-unit1-lesson5-test-and-improve.html" target="_blank">Test and Improve</a></li>
+                  <li><a href="/lesson-plans/k-ets1-unit1-lesson6-share-your-solution.html" target="_blank">Share Your Solution</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /domain-columns -->
+      </div><!-- /grade-k -->
+
+      <!-- ════ GRADE 1 ════ -->
+      <div id="grade-1" class="grade-panel">
+        <div class="domain-columns">
+
+          <div class="domain-col">
+            <div class="domain-header phys">⚡ Physical Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">1-PS4: Sound &amp; Light <small>3 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html" target="_blank">Sound Is Vibration</a></li>
+                  <li><a href="/lesson-plans/gr1-ps4-unit1-lesson2-light-travels.html" target="_blank">Light Travels</a></li>
+                  <li><a href="/lesson-plans/gr1-ps4-unit1-lesson3-mirrors-and-communication.html" target="_blank">Mirrors &amp; Communication</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-col">
+            <div class="domain-header life">🌱 Life Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">1-LS1: Plant &amp; Animal Structures <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html" target="_blank">Nature's Engineers — Biomimicry</a></li>
+                  <li><a href="/lesson-plans/gr1-ls1-unit1-lesson2-plant-parts-functions.html" target="_blank">Plant Parts &amp; Functions</a></li>
+                  <li><a href="/lesson-plans/gr1-ls1-unit1-lesson3-animal-protection.html" target="_blank">How Animals Protect Themselves</a></li>
+                  <li><a href="/lesson-plans/gr1-ls1-unit1-lesson4-plants-attract-pollinators.html" target="_blank">How Plants Attract Pollinators</a></li>
+                  <li><a href="/lesson-plans/gr1-ls1-unit1-lesson5-structures-for-getting-food.html" target="_blank">Animal Structures for Getting Food</a></li>
+                  <li><a href="/lesson-plans/gr1-ls1-unit1-lesson6-structures-for-moving.html" target="_blank">Structures for Moving</a></li>
+                </ul>
+              </div>
+              <div class="unit-block">
+                <div class="unit-name">1-LS3: Parents &amp; Offspring <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html" target="_blank">You Look Like Your Parents</a></li>
+                  <li><a href="/lesson-plans/gr1-ls3-unit2-lesson2-baby-animals-and-needs.html" target="_blank">Baby Animals and Their Needs</a></li>
+                  <li><a href="/lesson-plans/gr1-ls3-unit2-lesson3-parents-protect-offspring.html" target="_blank">How Animal Parents Protect Offspring</a></li>
+                  <li><a href="/lesson-plans/gr1-ls3-unit2-lesson4-parents-teach-offspring.html" target="_blank">Teaching — When Parents Show What to Do</a></li>
+                  <li><a href="/lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html" target="_blank">Plant "Parenting"</a></li>
+                  <li><a href="/lesson-plans/gr1-ls3-unit2-lesson6-patterns-parent-offspring.html" target="_blank">Patterns of Parent &amp; Offspring Behavior</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-col">
+            <div class="domain-header earth">🌍 Earth Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">1-ESS1: Sun, Moon &amp; Stars <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html" target="_blank">The Sun</a></li>
+                  <li><a href="/lesson-plans/gr1-ess1-unit1-lesson2-the-moon.html" target="_blank">The Moon</a></li>
+                  <li><a href="/lesson-plans/gr1-ess1-unit1-lesson3-stars.html" target="_blank">Stars</a></li>
+                  <li><a href="/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html" target="_blank">Daylight &amp; Seasons</a></li>
+                  <li><a href="/lesson-plans/gr1-ess1-unit1-lesson5-sky-changes.html" target="_blank">Sky Changes</a></li>
+                  <li><a href="/lesson-plans/gr1-ess1-unit1-lesson6-patterns-in-the-sky.html" target="_blank">Patterns in the Sky</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /grade-1 -->
+
+      <!-- ════ GRADE 2 ════ -->
+      <div id="grade-2" class="grade-panel">
+        <div class="domain-columns">
+
+          <div class="domain-col">
+            <div class="domain-header phys">⚡ Physical Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">2-PS1: Mystery Powders <small>standalone lesson</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr2-ps1-lesson1-mystery-powders.html" target="_blank">Mystery Powders</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-col">
+            <div class="domain-header life">🌱 Life Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">2-LS2: Plants, Pollinators &amp; Ecosystems <small>6 lessons</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html" target="_blank">What Do Plants Need?</a></li>
+                  <li><a href="/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html" target="_blank">Pollinators</a></li>
+                  <li><a href="/lesson-plans/gr2-ls2-unit1-lesson3-seed-dispersal.html" target="_blank">Seed Dispersal</a></li>
+                  <li><a href="/lesson-plans/gr2-ls2-unit1-lesson4-food-chains.html" target="_blank">Food Chains</a></li>
+                  <li><a href="/lesson-plans/gr2-ls2-unit1-lesson5-habitats.html" target="_blank">Habitats</a></li>
+                  <li><a href="/lesson-plans/gr2-ls2-unit1-lesson6-ecosystems-under-threat.html" target="_blank">Ecosystems Under Threat</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /grade-2 -->
+
+      <!-- ════ GRADE 3 ════ -->
+      <div id="grade-3" class="grade-panel">
+        <div class="domain-columns">
+
+          <div class="domain-col">
+            <div class="domain-header life">🌱 Life Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">3-LS4: Adaptation <small>standalone lesson</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/bird-beak-buffet.html" target="_blank">Bird Beak Buffet</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-col">
+            <div class="domain-header phys">⚡ Physical Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">Cross-Grade</div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/thermal-energy-ice-cream.html" target="_blank">Thermal Energy Ice Cream</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /grade-3 -->
+
+      <!-- ════ GRADE 5 ════ -->
+      <div id="grade-5" class="grade-panel">
+        <div class="domain-columns">
+
+          <div class="domain-col">
+            <div class="domain-header phys">⚡ Physical Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">5-PS1: Kitchen Chemistry</div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/gr5-ps1-lesson1-reactants-products-mixtures.html" target="_blank">Reactants, Products &amp; Mixtures</a></li>
+                </ul>
+              </div>
+              <div class="unit-block">
+                <div class="unit-name">5-PS2: Forces <small>standalone</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/5th-forces-balanced-unbalanced.html" target="_blank">Balanced &amp; Unbalanced Forces</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-col">
+            <div class="domain-header earth">🌍 Earth Science</div>
+            <div class="domain-body">
+              <div class="unit-block">
+                <div class="unit-name">5-ESS2: Fossils <small>standalone</small></div>
+                <ul class="lesson-list">
+                  <li><a href="/lesson-plans/5th-fossils-earth-history.html" target="_blank">Fossils &amp; Earth History</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /grade-5 -->
+
+      <!-- ── Featured Lesson Preview ── -->
+      <div class="featured-preview">
+        <span class="featured-preview-label">📖 Sample Lesson Excerpt</span>
+        <div class="featured-header">
+          <h3 class="featured-title">🐾 What Do ALL Animals Need?</h3>
+          <span class="grade-badge">Kindergarten · Life Science</span>
+        </div>
+
+        <div class="featured-grid">
+          <div class="featured-box">
+            <div class="featured-box-title">🏠 What You'll Need</div>
+            <ul>
+              <li>Bowl of water</li>
+              <li>Small snack (crackers or raisins)</li>
+              <li>A hand fan or cardboard (to feel air)</li>
+              <li>Small box or container (shelter)</li>
+              <li>Stuffed animals or family pet</li>
+              <li>Paper and crayons</li>
+              <li>Distractor items: toy car, crayon, coin</li>
+            </ul>
+          </div>
+          <div class="featured-box">
+            <div class="featured-box-title">💡 The Big Idea</div>
+            <p>Every animal on Earth — from the tiniest ant to the biggest blue whale — needs four things to <strong>survive</strong>: food, water, air, and shelter. These needs are the same no matter where an animal lives or what it looks like.</p>
           </div>
         </div>
 
-        <!-- Unit 2: 3rd Grade Forces -->
-        <div class="unit-card">
-          <div class="unit-image">
-            <div class="image-placeholder"><span>3rd Grade Forces Preview</span></div>
-          </div>
-          <div class="unit-body">
-            <div class="unit-meta">
-              <span class="unit-tag tag-grade">3rd Grade</span>
-              <span class="unit-tag tag-lessons">Standalone Lesson</span>
-              <span class="unit-tag tag-subject">Physical Science</span>
-            </div>
-            <h3>Forces &amp; Motion</h3>
-            <p>Balanced and unbalanced forces brought to life through hands-on experiments. Building on foundational concepts at the 3rd-grade level.</p>
-            <div class="unit-footer">
-              <div>
-                <div class="unit-price">$18</div>
-                <div class="unit-price-sub">PDF download</div>
-              </div>
-              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Lesson</a>
-            </div>
-          </div>
+        <div class="featured-step">
+          <strong>Step 3 — Survival Sorting! (10–12 min)</strong><br>
+          Spread out all your items on the floor: the four survival items AND the distractor items. Call out items one at a time and ask: <em>"Does a dog need this to survive?"</em> Sort them together and talk through the reasoning — the discussion matters more than getting the right answer.
         </div>
 
-        <!-- Unit 3: 5th Grade Forces -->
-        <div class="unit-card">
-          <div class="unit-image">
-            <div class="image-placeholder"><span>5th Grade Forces Preview</span></div>
-          </div>
-          <div class="unit-body">
-            <div class="unit-meta">
-              <span class="unit-tag tag-grade">5th Grade</span>
-              <span class="unit-tag tag-lessons">Standalone Lesson</span>
-              <span class="unit-tag tag-subject">Physical Science</span>
-            </div>
-            <h3>Forces &amp; Motion: Advanced</h3>
-            <p>A deeper dive into forces — Newton's laws, friction, and the science behind everyday movement. Great companion to the kindergarten forces unit.</p>
-            <div class="unit-footer">
-              <div>
-                <div class="unit-price">$18</div>
-                <div class="unit-price-sub">PDF download</div>
-              </div>
-              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Lesson</a>
-            </div>
-          </div>
+        <div class="featured-question">
+          <strong>💬 Discussion Question:</strong><br>
+          <em>"Do you think a fish needs the same things as a dog?"</em>
+          <p class="hint">💡 Suggested answer: Yes! Both need food, water, air, and shelter — but they get them differently. A fish uses gills to pull oxygen from water; a dog breathes air directly with lungs. Same four needs, very different methods!</p>
         </div>
 
-        <!-- Unit 4: Ocean Explorers (Special Unit) -->
-        <div class="unit-card" style="border-color: rgba(212,137,58,0.4);">
-          <div class="unit-image">
-            <div class="image-placeholder"><span>Ocean Explorers Preview</span></div>
-          </div>
-          <div class="unit-body">
-            <span class="unit-special-badge">✨ Special Premium Unit</span>
-            <div class="unit-meta">
-              <span class="unit-tag tag-grade">Multi-Age K–5</span>
-              <span class="unit-tag tag-lessons">4 Lessons</span>
-              <span class="unit-tag tag-subject">Ocean Science</span>
-            </div>
-            <h3>Ocean Explorers</h3>
-            <p>A multidisciplinary deep dive into the world's oceans — ecosystems, marine adaptations, water pressure, and more. This special unit goes beyond the core curriculum, with dedicated equipment and cross-grade projects designed for kids who want to go deep on their interests. Perfect for the kid who wants to know everything about sharks.</p>
-            <div class="unit-footer">
-              <div>
-                <div class="unit-price">$18</div>
-                <div class="unit-price-sub">PDF · requires some special equipment</div>
-              </div>
-              <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary" style="font-size:0.9rem; padding:10px 22px;">Get Unit</a>
-            </div>
-          </div>
-        </div>
+        <a href="/lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html" target="_blank" class="featured-open-btn">🔗 Open Full Lesson</a>
+      </div>
+
+      <!-- ── CTA ── -->
+      <div class="curriculum-cta">
+        <a href="/curriculum.html">Explore the full curriculum library →</a>
       </div>
     </div>
+
+    <script>
+      (function() {
+        var tabs = document.querySelectorAll('.grade-tab');
+        tabs.forEach(function(tab) {
+          tab.addEventListener('click', function() {
+            tabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            document.querySelectorAll('.grade-panel').forEach(function(p) { p.classList.remove('active'); });
+            var target = document.getElementById(tab.getAttribute('data-target'));
+            if (target) target.classList.add('active');
+          });
+        });
+      })();
+    </script>
   </section>
 
   <!-- ═══ PRICING ═══ -->
