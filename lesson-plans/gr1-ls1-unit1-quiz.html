@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant &amp; Animal Structures Quiz — Grade 1, Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #e8f5e9;
+      color: #222;
+    }
+    .quiz-header {
+      background: linear-gradient(135deg, #2e7d32, #43a047);
+      color: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(46,125,50,0.3);
+    }
+    .quiz-header h1 { margin: 0 0 8px 0; font-size: 1.8rem; }
+    .quiz-header p { margin: 0; opacity: 0.9; font-size: 1rem; }
+    .score-bar {
+      background: white;
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 12px 20px;
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2e7d32;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .question-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border: 2px solid #a5d6a7;
+    }
+    .question-text {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #1b5e20;
+      line-height: 1.4;
+    }
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 500px) { .options { grid-template-columns: 1fr; } }
+    .option-btn {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s;
+      color: #222;
+      line-height: 1.3;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #c8e6c9;
+      border-color: #2e7d32;
+    }
+    .option-btn.correct {
+      background: #c8e6c9;
+      border-color: #2e7d32;
+      color: #1b5e20;
+      font-weight: 600;
+    }
+    .option-btn.wrong {
+      background: #ffcdd2;
+      border-color: #c62828;
+      color: #b71c1c;
+    }
+    .option-btn:disabled { cursor: default; }
+    .feedback-box {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .feedback-box.correct-fb {
+      background: #e8f5e9;
+      border: 2px solid #66bb6a;
+      color: #1b5e20;
+    }
+    .feedback-box.wrong-fb {
+      background: #fff3e0;
+      border: 2px solid #ffa726;
+      color: #e65100;
+    }
+    .results-panel {
+      display: none;
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      border: 3px solid #2e7d32;
+    }
+    .results-panel h2 { color: #2e7d32; font-size: 1.8rem; margin-bottom: 12px; }
+    .results-score { font-size: 2.5rem; font-weight: bold; color: #1b5e20; }
+    .results-msg { font-size: 1.15rem; margin-top: 16px; color: #333; }
+    .results-emoji { font-size: 3rem; }
+    .retry-btn {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+    .retry-btn:hover { background: #1b5e20; }
+    .q-number {
+      font-size: 0.8rem;
+      color: #a5d6a7;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_-XmCzjBRMRI">
+
+  <a class="back-link" href="gr1-ls1-lesson1-animal-structures-biomimicry.html">← Back to Lesson 1: Animal Structures &amp; Biomimicry</a>
+
+  <div class="quiz-header">
+    <h1>🌿 Plant &amp; Animal Structures Quiz 🦁</h1>
+    <p>Life Science · Unit 1 · Grade 1</p>
+  </div>
+
+  <div class="score-bar" id="scoreBar">
+    Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> &nbsp;|&nbsp; Questions answered: <span id="answeredNum">0</span>
+  </div>
+
+  <div id="quizContainer"></div>
+
+  <div class="results-panel" id="resultsPanel">
+    <div class="results-emoji" id="resultsEmoji"></div>
+    <h2>Quiz Complete! 🎉</h2>
+    <div class="results-score" id="resultsScore"></div>
+    <div class="results-msg" id="resultsMsg"></div>
+    <br>
+    <button class="retry-btn" onclick="resetQuiz()">🔄 Try Again</button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "🦆 Engineers who get their best ideas from nature are using a technique called what?",
+        options: ["Photosynthesis", "Biomimicry", "Camouflage", "Pollination"],
+        correct: 1,
+        explanation: "Biomimicry means copying nature's ideas to solve human problems! For example, duck webbed feet inspired swim fins, and cat retractable claws inspired folding tools. Nature has been solving problems for billions of years!"
+      },
+      {
+        q: "🌱 What do ROOTS do for a plant?",
+        options: ["Make food using sunlight", "Attract pollinators with color", "Anchor the plant in the ground and absorb water", "Make seeds for new plants"],
+        correct: 2,
+        explanation: "Roots do two important jobs: they anchor the plant in the soil so it doesn't fall over, and they absorb water and nutrients from the ground. Tiny tubes in the roots suck up water like a straw!"
+      },
+      {
+        q: "🌿 Leaves are the food factories of a plant. What do leaves use to make food?",
+        options: ["Soil and worms", "Sunlight, water, and air (carbon dioxide)", "Nectar and pollen", "Rain and wind"],
+        correct: 1,
+        explanation: "Leaves capture sunlight and use it — along with water from the roots and carbon dioxide from the air — to make sugar (food). This amazing process is called photosynthesis!"
+      },
+      {
+        q: "🐢 A turtle has a hard shell on its back. What type of animal DEFENSE does this represent?",
+        options: ["Camouflage — blending in with surroundings", "Warning colors — bright colors to say 'I'm dangerous!'", "Hard shell armor — a rigid cover to protect soft body parts", "Spines and quills — sharp points to poke predators"],
+        correct: 2,
+        explanation: "A hard shell is armor! When danger comes, the turtle can pull its head and legs inside — it's like carrying a shield AND a house. The shell is made of bone and is very hard to bite through."
+      },
+      {
+        q: "🌺 A flower is bright red with a long narrow tube shape and nectar hidden deep inside. Which pollinator is this flower most likely trying to attract?",
+        options: ["A bee (bees love blue/purple and flat landing spots)", "A hummingbird (can see red and has a long beak to reach deep nectar)", "A fly (attracted to the smell of rotting meat)", "A bat (active at night, attracted to pale flowers)"],
+        correct: 1,
+        explanation: "Hummingbirds can see the color red (bees can't!), and they have long beaks perfect for reaching nectar deep in tube-shaped flowers. The flower's color, shape, and nectar location evolved together to attract exactly the right pollinator!"
+      },
+      {
+        q: "🦅 An eagle has sharp curved TALONS and a hooked BEAK. What are these structures best suited for?",
+        options: ["Filtering tiny plankton from water", "Cracking open hard seed shells", "Catching and tearing apart prey like fish and rabbits", "Drilling holes into tree bark to find insects"],
+        correct: 2,
+        explanation: "Eagle talons grip prey so tightly even a struggling fish can't escape, and the hooked beak tears meat into pieces small enough to swallow. These structures are perfectly matched to hunting other animals for food."
+      },
+      {
+        q: "🦔 A hedgehog is covered in sharp spines. When a fox tries to bite it, the hedgehog curls into a ball. How do the spines PROTECT the hedgehog?",
+        options: ["They help it blend into tree bark to hide", "They store food for the winter", "They make it painful for predators to bite or grab it", "They attract mates with a beautiful display"],
+        correct: 2,
+        explanation: "Spines and quills are a pain-based defense! A predator that tries to bite gets poked — sometimes the quills have tiny backwards hooks that make them even harder to remove. The hedgehog curls up to protect its soft belly."
+      },
+      {
+        q: "🐝 Bees can see the color BLUE and PURPLE very well. Which flower structure uses this fact to attract bees?",
+        options: ["A deep red tube-shaped flower with nectar far inside", "A wide, flat, blue or purple flower with a landing platform", "A pale white flower that blooms at night with a strong smell", "A flower that smells like rotting meat"],
+        correct: 1,
+        explanation: "Blue and purple flowers attract bees because bees can see those colors best! Bees also need flat, wide flowers to land on — like a little helicopter pad. Bees even see UV patterns on flowers that humans can't see at all!"
+      },
+      {
+        q: "🐟 A fish has a streamlined (smooth, torpedo-shaped) body and FINS. A bat has MEMBRANE WINGS made of skin stretched between long finger bones. What do these structures have in common?",
+        options: ["Both are used for defense against predators", "Both are adaptations that help animals MOVE through their environment", "Both are used to attract mates", "Both help the animal find food underground"],
+        correct: 1,
+        explanation: "Both are movement adaptations! A fish's streamlined body and fins help it glide through water with almost no resistance. A bat's membrane wings make it incredibly maneuverable in the air. Different environments, different structures — same goal: move efficiently!"
+      },
+      {
+        q: "🦁 A woodpecker has a chisel beak for drilling into trees AND a long, barbed sticky tongue for catching insects inside. A panda has a special 'thumb' (actually a wrist bone) just for gripping bamboo. What do these examples show?",
+        options: ["All animals eat the same foods", "Animals with specialized structures for getting food are always the strongest", "Animals' body structures are matched to the specific food they eat", "Structure and function have nothing to do with each other"],
+        correct: 2,
+        explanation: "Each animal's body parts are perfectly matched to what it eats! The woodpecker's beak and tongue are specialized tools for one type of food. The panda's 'thumb' works only for bamboo. Specialization makes them very efficient — but means they're in trouble if that food disappears."
+      }
+    ];
+
+    let score = 0;
+    let answered = 0;
+
+    function buildQuiz() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = '';
+      questions.forEach((q, i) => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        card.id = `card${i}`;
+        card.innerHTML = `
+          <div class="q-number">Question ${i + 1} of ${questions.length}</div>
+          <div class="question-text">${q.q}</div>
+          <div class="options" id="opts${i}">
+            ${q.options.map((opt, j) => `
+              <button class="option-btn" onclick="answer(${i}, ${j})" id="opt${i}_${j}">${opt}</button>
+            `).join('')}
+          </div>
+          <div class="feedback-box" id="fb${i}"></div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function answer(qIdx, choiceIdx) {
+      const q = questions[qIdx];
+      const optsDiv = document.getElementById(`opts${qIdx}`);
+      const fb = document.getElementById(`fb${qIdx}`);
+      const buttons = optsDiv.querySelectorAll('.option-btn');
+
+      buttons.forEach(b => b.disabled = true);
+
+      if (choiceIdx === q.correct) {
+        buttons[choiceIdx].classList.add('correct');
+        fb.className = 'feedback-box correct-fb';
+        fb.innerHTML = `✅ <strong>Correct!</strong> ${q.explanation}`;
+        score++;
+      } else {
+        buttons[choiceIdx].classList.add('wrong');
+        buttons[q.correct].classList.add('correct');
+        fb.className = 'feedback-box wrong-fb';
+        fb.innerHTML = `❌ <strong>Not quite!</strong> The correct answer is: <strong>${q.options[q.correct]}</strong>. ${q.explanation}`;
+      }
+      fb.style.display = 'block';
+      answered++;
+      updateScore();
+
+      if (answered === questions.length) {
+        setTimeout(showResults, 800);
+      }
+    }
+
+    function updateScore() {
+      document.getElementById('scoreNum').textContent = score;
+      document.getElementById('answeredNum').textContent = answered;
+    }
+
+    function showResults() {
+      document.getElementById('resultsPanel').style.display = 'block';
+      document.getElementById('resultsScore').textContent = `${score} / ${questions.length}`;
+      document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth' });
+
+      const pct = score / questions.length;
+      let emoji, msg;
+      if (pct === 1)       { emoji = '🏆'; msg = "Perfect score! You are a plant and animal structures EXPERT! 🌿 You know biomimicry, plant parts, animal defenses, and food-getting structures like a true life scientist!"; }
+      else if (pct >= 0.8) { emoji = '⭐'; msg = "Excellent! You know so much about how plant and animal structures help living things survive. Just a couple more to master!"; }
+      else if (pct >= 0.6) { emoji = '😊'; msg = "Good work! You're understanding structures and functions well. Go back and re-read the lessons on the parts you missed!"; }
+      else if (pct >= 0.4) { emoji = '🌱'; msg = "Nice try! Biology takes practice. Review your lessons about animal defenses, plant parts, and adaptations — then give it another go!"; }
+      else                 { emoji = '💪'; msg = "Keep going, scientist! Re-read the lessons carefully and you'll see how each plant part and animal structure has a special job. Try again!"; }
+
+      document.getElementById('resultsEmoji').textContent = emoji;
+      document.getElementById('resultsMsg').textContent = msg;
+    }
+
+    function resetQuiz() {
+      score = 0;
+      answered = 0;
+      updateScore();
+      document.getElementById('resultsPanel').style.display = 'none';
+      buildQuiz();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    buildQuiz();
+  </script>
+
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_-XmCzjBRMRI" data-content-selector="body"></script>
+</body>
+</html>
