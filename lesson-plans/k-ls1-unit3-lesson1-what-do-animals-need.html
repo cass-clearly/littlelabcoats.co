@@ -289,6 +289,116 @@
     }
     .print-btn:hover { background: #1b5e20; }
     @media print { .print-btn { display: none; } }
+
+    /* Science Reference Card */
+    .science-card-toggle {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 24px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .science-card-toggle:hover { background: #1b5e20; }
+    .science-ref-card { display: none; margin-top: 20px; }
+    .science-ref-card.open { display: block; }
+
+    .ref-card-inner {
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 24px;
+      background: #fff;
+      max-width: 680px;
+      margin: 0 auto;
+      font-family: Georgia, serif;
+    }
+    .ref-card-inner h2 {
+      text-align: center;
+      font-size: 15pt;
+      color: #2e7d32;
+      background: none;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      margin: 0 0 16px 0;
+    }
+    .ref-card-vocab {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      border: 1px solid #a5d6a7;
+    }
+    .ref-card-vocab h3 {
+      font-size: 10pt;
+      text-transform: uppercase;
+      color: #1b5e20;
+      margin: 0 0 8px 0;
+      border: none;
+      padding: 0;
+      letter-spacing: 0.05em;
+    }
+    .ref-card-vocab dl { margin: 0; }
+    .ref-card-vocab dt { font-weight: bold; color: #1b5e20; margin-top: 4px; display: inline; }
+    .ref-card-vocab dd { display: inline; margin: 0; color: #333; }
+    .ref-card-vocab dd::after { content: '\A'; white-space: pre; }
+
+    .ref-card-needs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .ref-card-need {
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .ref-card-need.food { background: #fff9c4; border: 2px solid #f9a825; }
+    .ref-card-need.water { background: #e3f2fd; border: 2px solid #1976d2; }
+    .ref-card-need.shelter { background: #fce4ec; border: 2px solid #c62828; }
+    .ref-card-need.air { background: #e8f5e9; border: 2px solid #2e7d32; }
+    .ref-card-need .rc-emoji { font-size: 28pt; display: block; }
+    .ref-card-need .rc-label { font-weight: bold; font-size: 11pt; margin: 4px 0 2px; }
+    .ref-card-need .rc-desc { font-size: 9pt; color: #444; }
+
+    .ref-card-clue {
+      background: #fff8e1;
+      border: 2px solid #fbc02d;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 10pt;
+    }
+    .ref-card-clue strong { color: #e65100; }
+
+    .ref-card-print-btn {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      gap: 6px;
+    }
+    .ref-card-print-btn:hover { background: #1b5e20; }
+
+    @media print {
+      .science-card-toggle { display: none; }
+      .science-ref-card { display: none !important; }
+      .science-ref-card.print-mode { display: block !important; }
+      body.printing-card > *:not(.science-ref-card) { display: none !important; }
+      body.printing-card .science-ref-card { display: block !important; }
+    }
   </style>
 </head>
 <body data-document-id="doc_G7JJMYODtJM">
@@ -572,6 +682,60 @@
 
   </div>
 
+  <!-- ====================== SCIENCE REFERENCE CARD ====================== -->
+  <button class="science-card-toggle" onclick="toggleScienceCard()">📄 View Science Reference Card</button>
+
+  <div class="science-ref-card" id="scienceRefCard">
+    <div class="ref-card-inner">
+      <h2>🔬 Science Reference Card — What Do Animals Need?</h2>
+
+      <div class="ref-card-vocab">
+        <h3>📖 Key Vocabulary</h3>
+        <dl>
+          <dt>needs</dt><dd> — things a living thing must have to survive</dd>
+          <dt>food</dt><dd> — gives animals the energy to move, grow, and stay alive</dd>
+          <dt>water</dt><dd> — keeps the body working properly</dd>
+          <dt>shelter</dt><dd> — a safe place to live, rest, and stay protected</dd>
+          <dt>air</dt><dd> — all animals breathe it to get the oxygen they need</dd>
+        </dl>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <strong style="color:#2e7d32; font-size:10pt; text-transform:uppercase; letter-spacing:0.05em;">🐾 The 4 Animal Needs</strong>
+      </div>
+      <div class="ref-card-needs-grid">
+        <div class="ref-card-need food">
+          <span class="rc-emoji">🍎</span>
+          <div class="rc-label">Food</div>
+          <div class="rc-desc">Animals eat food to get energy for everything they do.</div>
+        </div>
+        <div class="ref-card-need water">
+          <span class="rc-emoji">💧</span>
+          <div class="rc-label">Water</div>
+          <div class="rc-desc">Water keeps every part of an animal's body working right.</div>
+        </div>
+        <div class="ref-card-need shelter">
+          <span class="rc-emoji">🏠</span>
+          <div class="rc-label">Shelter</div>
+          <div class="rc-desc">A safe place to rest, stay warm, and hide from danger.</div>
+        </div>
+        <div class="ref-card-need air">
+          <span class="rc-emoji">💨</span>
+          <div class="rc-label">Air</div>
+          <div class="rc-desc">All animals breathe air — it's all around us everywhere!</div>
+        </div>
+      </div>
+
+      <div class="ref-card-clue">
+        <strong>🌱 Living vs. Non-Living Clue:</strong><br>
+        Living things <strong>NEED</strong> food, water, air, and shelter to survive.<br>
+        Non-living things <em>do not</em> have these needs.
+      </div>
+
+      <button class="ref-card-print-btn" onclick="printCard()">🖨️ Print This Card</button>
+    </div>
+  </div>
+
   <!-- ====================== PARENT ANSWER KEY ====================== -->
   <div class="page-break">
     <div class="answer-key">
@@ -630,6 +794,30 @@
     </div>
   </div>
 
+  <!-- ====================== UNIT QUIZ LINK ====================== -->
+  <div style="margin: 32px 0 20px; text-align: center; background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 20px;">
+    <div style="font-size: 1.4rem; margin-bottom: 8px;">🧠✅</div>
+    <div style="font-size: 1.1rem; font-weight: bold; color: #1b5e20; margin-bottom: 6px;">Ready to test what you learned?</div>
+    <div style="margin-bottom: 14px; color: #444; font-size: 0.95rem;">See how much you know about Animal Needs with the unit quiz!</div>
+    <a href="k-ls1-unit3-quiz.html" style="display:inline-block; background:#2e7d32; color:white; padding:12px 28px; border-radius:8px; font-weight:600; font-size:1rem; text-decoration:none;">→ Take the Unit Quiz</a>
+  </div>
+
 <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_G7JJMYODtJM" data-content-selector="body"></script>
+<script>
+  function toggleScienceCard() {
+    const card = document.getElementById('scienceRefCard');
+    const btn = document.querySelector('.science-card-toggle');
+    card.classList.toggle('open');
+    btn.textContent = card.classList.contains('open') ? '📄 Hide Science Reference Card' : '📄 View Science Reference Card';
+  }
+
+  function printCard() {
+    document.body.classList.add('printing-card');
+    const card = document.getElementById('scienceRefCard');
+    card.classList.add('open');
+    window.print();
+    document.body.classList.remove('printing-card');
+  }
+</script>
 </body>
 </html>
