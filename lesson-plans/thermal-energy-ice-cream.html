@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermal Energy & States of Matter - Ice Cream Experiment</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .answer {
+      color: #1565c0;
+      font-style: italic;
+      margin-top: 5px;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 5px;
+    }
+    .procedure-step {
+      background: #f5f5f5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #4caf50;
+    }
+    .procedure-step strong {
+      color: #2e7d32;
+    }
+    .grade-section {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .grade-3 { border-left: 4px solid #ff9800; }
+    .grade-5 { border-left: 4px solid #9c27b0; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body { 
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 { 
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box { 
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note { 
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      /* Preserve colorful backgrounds in print */
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      /* Ensure borders and boxes print */
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧊 Thermal Energy & States of Matter</h1>
+  <p class="subtitle">Ice Cream in a Bag Experiment</p>
+
+  <div class="meta">
+    <span><strong>Grades:</strong> 3rd & 5th</span>
+    <span><strong>Duration:</strong> 45-60 minutes</span>
+    <span><strong>Subject:</strong> Physical Science</span>
+  </div>
+
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> The colorful introduction below is designed to be read WITH students (or shown on a screen if teaching multiple kids). The visual examples, videos, and kid-friendly analogies will keep an 8-year-old engaged. Consider:
+    <ul style="margin: 8px 0;">
+      <li>Reading the sections aloud together and pausing to discuss</li>
+      <li>Watching the short videos (5 min total) before starting the experiment</li>
+      <li>Using the particle dance party analogy and acting it out physically</li>
+      <li>Having kids play with the PhET simulator after the lesson for reinforcement</li>
+    </ul>
+    This takes 10-15 minutes but makes the hands-on experiment much more meaningful!
+  </div>
+
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: How Do We Make Ice Cream Without a Freezer?</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">Today you're going to become a scientist and discover the secret of freezing! You'll learn how to steal heat, make ice colder than ice, and turn liquid cream into delicious ice cream using nothing but a bag, some ice, and a little magic powder (salt). Ready?</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">🔥❄️ The Particle Dance Party!</h3>
+  
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p><strong>Imagine this:</strong> Everything around you (your desk, your water, even the air) is made of <em>tiny, invisible particles</em> called <strong>atoms</strong> and <strong>molecules</strong>. You can't see them, but they're <em>always</em> moving!</p>
+    
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>Think of particles like kids at a party:</strong></p>
+    
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 15px 0;">
+      <div style="background: #e3f2fd; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 40px;">🧊</div>
+        <strong>Solid (Ice)</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Kids standing in tight rows, barely moving, just wiggling in place</p>
+      </div>
+      <div style="background: #e1f5fe; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 40px;">💧</div>
+        <strong>Liquid (Cream)</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Kids walking around, sliding past each other on the dance floor</p>
+      </div>
+      <div style="background: #e0f7fa; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 40px;">💨</div>
+        <strong>Gas (Steam)</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Kids running and bouncing all over, super energetic!</p>
+      </div>
+    </div>
+    
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 The Key Idea:</strong> The more energy particles have, the faster they move. <strong>Heat IS energy.</strong> Hot things = fast-moving particles. Cold things = slow-moving particles.</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%); color: #333; padding: 12px; border-radius: 8px;">🎯 Heat is Sneaky: It Always Moves!</h3>
+  
+  <div style="background: #ffebee; border-left: 5px solid #f44336; padding: 15px; margin: 15px 0;">
+    <p><strong>Here's a rule that <em>never</em> breaks:</strong></p>
+    <p style="font-size: 14pt; font-weight: bold; color: #c62828; margin: 10px 0;">Heat always flows from <em>hot</em> → <em>cold</em></p>
+    
+    <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0;">
+      <p><strong>🔥 Example:</strong> Hold an ice cube in your hand. Does your hand feel cold?</p>
+      <p><strong>What's <em>really</em> happening:</strong> Heat is leaving your warm hand and going <em>into</em> the cold ice cube. The ice "steals" heat from you. That's why your hand feels cold (you're losing heat).</p>
+      <p style="margin-top: 10px; font-style: italic; color: #666;">Fun fact: "Cold" isn't a thing we can add. There's no such thing as "coldness" moving into something. Cold just means "less heat." When we make ice cream, we <em>remove</em> heat from the cream!</p>
+    </div>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">🧂 The Salt Superpower!</h3>
+  
+  <div style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); border: 3px solid #e17055; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 13pt;"><strong>🤯 Here's the coolest part (literally!):</strong></p>
+    
+    <p>Regular ice is cold, sitting at 32°F (0°C). But we need <em>super cold</em> to freeze cream fast. How do we make ice colder than ice? <strong>We add salt!</strong></p>
+    
+    <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0; border: 2px dashed #e17055;">
+      <p style="margin: 0;"><strong>🧪 The Science:</strong></p>
+      <ol style="margin: 10px 0;">
+        <li><strong>Ice normally melts at 32°F.</strong> That's when ice and water are balanced.</li>
+        <li><strong>Salt crashes the party!</strong> When you add salt, it dissolves in the water on the ice and messes up the balance.</li>
+        <li><strong>Ice "wants" to melt at a <em>lower</em> temperature now</strong>, around 0°F or even colder!</li>
+        <li><strong>But melting needs energy.</strong> Where does the ice get that energy? It <em>steals it</em> from everything around it, including your cream!</li>
+        <li><strong>Result:</strong> The salt-ice mixture becomes a <em>super freezer</em> that can pull heat out of cream fast!</li>
+      </ol>
+    </div>
+    
+    <p style="background: #fff; padding: 12px; border-radius: 8px; margin-top: 15px;">
+      <strong>🚗 Real-world connection:</strong> This is why people throw salt on icy roads in winter! The salt makes the ice melt even when it's below freezing outside. Same science, different use!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #fa709a 0%, #fee140 100%); color: white; padding: 12px; border-radius: 8px;">🎬 Watch This! Particles in Motion</h3>
+  
+  <div style="background: #f3e5f5; border: 3px solid #9c27b0; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>Want to SEE particles moving?</strong> Watch these awesome videos!</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <strong>📹 States of Matter Animation</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">See particles dancing in solids, liquids, and gases!</p>
+        <a href="https://www.youtube.com/watch?v=EZLv5xbudZY" target="_blank" style="color: #9c27b0; text-decoration: none; font-weight: bold;">▶️ Watch on YouTube</a>
+        <p style="font-size: 9pt; color: #666; margin-top: 5px;">(2 min video by Bozeman Science)</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <strong>📹 How Salt Melts Ice</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Why does salt make ice colder? See the experiment!</p>
+        <a href="https://www.youtube.com/watch?v=kR2qnUDLpLo" target="_blank" style="color: #9c27b0; text-decoration: none; font-weight: bold;">▶️ Watch on YouTube</a>
+        <p style="font-size: 9pt; color: #666; margin-top: 5px;">(3 min video by SciShow Kids)</p>
+      </div>
+    </div>
+    
+    <p style="background: white; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 11pt;">
+      <strong>💻 Interactive Simulator:</strong> Play with particles yourself! Visit <a href="https://phet.colorado.edu/en/simulations/states-of-matter" target="_blank" style="color: #9c27b0;">PhET States of Matter</a>; heat them up, cool them down, and watch them change states!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%); color: #333; padding: 12px; border-radius: 8px;">🔁 The Energy Trade: Nothing Gets Lost!</h3>
+  
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>🎭 Think of energy like money:</strong></p>
+    
+    <div style="background: white; border-radius: 8px; padding: 15px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+      <p>Imagine you have $10 and your friend has $0. You give your friend $5. Now:</p>
+      <ul style="font-size: 11pt;">
+        <li>You have $5 (you lost money)</li>
+        <li>Your friend has $5 (they gained money)</li>
+        <li><strong>Total money in the system: STILL $10!</strong></li>
+      </ul>
+      <p style="margin-top: 10px; background: #fff3e0; padding: 10px; border-radius: 5px; border-left: 4px solid #ff9800;">
+        <strong>Energy works the same way!</strong> In our experiment:
+      </p>
+      <ul style="font-size: 11pt;">
+        <li>The <span style="color: #f44336;">cream loses heat</span> (gets colder)</li>
+        <li>The <span style="color: #2196f3;">ice gains heat</span> (melts)</li>
+        <li><strong>Total energy: <em>same!</em></strong> It just moved from cream to ice.</li>
+      </ul>
+    </div>
+    
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d;">
+      <strong>🌟 Big Science Rule (5th grade):</strong> Energy can't be created or destroyed. It can only <em>move</em> from one place to another or <em>change</em> forms. Scientists call this the <em>"Law of Conservation of Energy."</em> This is a key concept you'll keep building on in middle school!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #30cfd0 0%, #330867 100%); color: white; padding: 12px; border-radius: 8px;">💪 Why Shaking Matters!</h3>
+  
+  <div style="background: #fce4ec; border: 3px solid #e91e63; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>You'll shake the bag for 10-15 minutes. Why so long? And why shake at all?</strong></p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border-radius: 8px; padding: 15px;">
+        <div style="font-size: 36px; text-align: center;">🏃‍♂️</div>
+        <strong>Speed Up Freezing</strong>
+        <p style="font-size: 10pt;">Shaking brings warm cream to the cold bag walls over and over. Without shaking, only the outside would freeze!</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 15px;">
+        <div style="font-size: 36px; text-align: center;">🍦</div>
+        <strong>Make It Smooth</strong>
+        <p style="font-size: 10pt;">Shaking breaks up big ice crystals before they form. This makes your ice cream creamy instead of chunky!</p>
+      </div>
+    </div>
+    
+    <p style="background: white; padding: 12px; border-radius: 8px; margin-top: 10px;">
+      <strong>🧤 Pro tip:</strong> The bag will get <em>really</em> cold, so use a towel or gloves. That's because heat is leaving the bag super fast. Your hands can feel it.
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ffeaa7 0%, #fab1a0 100%); color: #333; padding: 12px; border-radius: 8px;">📖 Science Words to Know</h3>
+  
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; padding: 20px; margin: 15px 0; color: white;">
+    <p style="margin-top: 0; font-size: 11pt;"><strong>Before we start, let's learn some cool scientist words:</strong></p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🔥 Thermal Energy</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Energy from particles moving. More movement = hotter!</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>➡️ Heat Transfer</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Heat moving from hot things to cold things</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🧊 Freezing</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Liquid → Solid (when you take heat away)</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>💧 Melting</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Solid → Liquid (when you add heat)</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>⚛️ Particle</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Tiny piece of matter (atom or molecule)</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>♻️ Conservation of Energy</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Energy can't appear or disappear; it just moves!</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 12px; border-radius: 8px;">🎨 Visual: What's Happening Inside the Bag?</h3>
+  
+  <div style="background: white; border: 3px solid #333; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; text-align: center;">
+      <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%); border-radius: 15px; padding: 20px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <div style="font-size: 48px; margin-bottom: 10px;">🥛</div>
+        <strong style="font-size: 14pt;">Liquid Cream</strong>
+        <p style="margin: 10px 0; font-size: 11pt;">Warm (room temp)</p>
+        <p style="margin: 10px 0; font-size: 11pt;">Particles moving fast</p>
+        <div style="background: rgba(255,255,255,0.3); padding: 10px; border-radius: 8px; margin-top: 10px;">
+          <strong>Lots of heat energy!</strong>
+        </div>
+      </div>
+      
+      <div style="font-size: 48px; color: #4caf50;">
+        <div>➡️</div>
+        <div style="font-size: 14pt; margin: 10px 0; color: #333;">Heat flows!</div>
+        <div>➡️</div>
+      </div>
+      
+      <div style="background: linear-gradient(135deg, #48dbfb 0%, #0abde3 100%); border-radius: 15px; padding: 20px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <div style="font-size: 48px; margin-bottom: 10px;">🧊</div>
+        <strong style="font-size: 14pt;">Salt + Ice</strong>
+        <p style="margin: 10px 0; font-size: 11pt;"><em>Super cold</em> (below 0°F!)</p>
+        <p style="margin: 10px 0; font-size: 11pt;">Particles barely moving</p>
+        <div style="background: rgba(255,255,255,0.3); padding: 10px; border-radius: 8px; margin-top: 10px;">
+          <strong>Very little heat energy!</strong>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 20px; padding: 15px; background: #fff3e0; border-left: 5px solid #ff9800; border-radius: 5px;">
+      <p style="margin: 0; font-size: 11pt;"><strong>⚡ What happens:</strong> Heat energy <em>leaves</em> the cream and <em>enters</em> the salt-ice mixture. The cream gets colder and colder until it freezes solid. The ice melts because it's absorbing heat. It's like a tug-of-war with energy, and the super-cold ice wins!</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: #333; border: none; font-size: 16pt;">✨ Now You're Ready to Be a Scientist! ✨</h3>
+    <p style="font-size: 12pt; color: #333; margin: 0;">Let's make some ice cream and see this science in action!</p>
+  </div>
+
+  <h2>📚 Learning Goals</h2>
+
+  <div class="grade-section grade-3">
+    <h3>3rd Grade (NGSS 2-PS1-4 introduced; builds toward 5-PS1-2)</h3>
+    <p><em>Note: Thermal energy and states of matter are primarily addressed in NGSS at 2nd grade (2-PS1-4) and 5th grade (5-PS1-2). This lesson introduces these concepts to 3rd graders as enrichment and prepares them for 5th grade standards.</em></p>
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Identify states of matter</strong>: Recognize that cream changes from liquid to solid</li>
+      <li><strong>Understand heat transfer</strong>: Explain that heat moves from warmer objects to colder objects</li>
+      <li><strong>Observe cause and effect</strong>: Describe what happened and why</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>solid, liquid, thermal energy, heat transfer, freezing</em></li>
+    </ul>
+  </div>
+
+  <div class="grade-section grade-5">
+    <h3>5th Grade (NGSS 5-PS1-2, 5-PS3-1)</h3>
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Explain state changes at particle level</strong>: Describe how molecules slow down and lock into place</li>
+      <li><strong>Understand conservation of energy</strong>: Explain that energy moved (wasn't created or destroyed)</li>
+      <li><strong>Analyze the role of salt</strong>: Explain how salt lowers ice's melting point</li>
+      <li><strong>Make real-world connections</strong>: Relate experiment to refrigerators and salting roads</li>
+      <li><strong>Collect and interpret data</strong>: Record temperatures and explain observations</li>
+    </ul>
+  </div>
+
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3>Per Student/Group</h3>
+      <ul>
+        <li><span class="checkbox"></span>1 cup half-and-half (or substitute: ½ cup whole milk + ½ cup heavy whipping cream)</li>
+        <li><span class="checkbox"></span>2 tablespoons sugar</li>
+        <li><span class="checkbox"></span>½ teaspoon vanilla extract</li>
+        <li><span class="checkbox"></span>1 small ziplock bag (sandwich size)</li>
+        <li><span class="checkbox"></span>1 gallon ziplock bag</li>
+        <li><span class="checkbox"></span>3-4 cups ice</li>
+        <li><span class="checkbox"></span>⅓ cup rock salt (recommended; do not substitute table salt (it dissolves too fast and may cause saltwater to seep into the inner bag))</li>
+        <li><span class="checkbox"></span>Towel or winter gloves</li>
+        <li><span class="checkbox"></span>Spoon for eating!</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes</h3>
+      <ul>
+        <li>Salt + ice mixture gets <em>very</em> cold, so use a towel or gloves.</li>
+        <li>Double-check bag seals to prevent leaks</li>
+        <li>Wash hands before handling food ingredients</li>
+        <li>Check for dairy allergies before starting</li>
+      </ul>
+      <h3>Optional Equipment</h3>
+      <ul>
+        <li>Thermometer: <em>strongly recommended for 5th grade;</em> if no thermometer, replace the temperature rows in the data table with descriptive observations ("feels warm," "feels icy cold")</li>
+        <li>Timer</li>
+        <li>Measuring cups/spoons</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🔬 Procedure</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Make Predictions (5 min)</strong><br>
+    Ask: "What do you think will happen when we put liquid cream in a bag surrounded by ice and salt? Why?" Have students write or share their predictions.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Prepare the Ice Cream Mix (5 min)</strong><br>
+    Combine half-and-half, sugar, and vanilla in the small ziplock bag. Squeeze out excess air and seal tightly. Double-check the seal!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Record Starting Data (3 min)</strong><br>
+    If using thermometer: record temperature of cream mixture and temperature of ice. Have students note the state of each (liquid cream, solid ice).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Build the "Freezer" (5 min)</strong><br>
+    Put ice in the gallon bag. Add salt and shake to distribute. Place the small bag of cream inside, surrounded by ice. Seal the gallon bag.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Shake! (10-15 min)</strong><br>
+    Shake and massage the bag continuously. Use a towel, as it gets very cold! Take turns if multiple people are present. Check the cream every few minutes to observe changes.
+    <br><em>Solo homeschool tip:</em> Wrap the bag in a kitchen towel and roll it back and forth across a table, or pass it between your hands like a hot potato. The parent can take 2-minute turns with the child to make shaking manageable.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Observe Results (5 min)</strong><br>
+    Open carefully. Observe the cream (now ice cream!). If using thermometer, record final temperatures. Discuss what happened.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Discuss & Eat! (10 min)</strong><br>
+    Use discussion questions below while enjoying the ice cream!
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>❓ Discussion Questions & Answers</h2>
+
+  <div class="grade-section grade-3">
+    <h3>3rd Grade Questions</h3>
+
+    <div class="question-box">
+      <strong>Q: What state was the cream at the start? At the end?</strong>
+      <p class="discussion-hint">A: Liquid at the start, solid at the end.</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: Did we add cold or remove heat?</strong>
+      <p class="discussion-hint">A: We removed heat. "Cold" isn't something we add; we pulled heat <em>out</em> of the cream and into the ice.</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: Where did the heat go?</strong>
+      <p class="discussion-hint">A: The heat moved from the cream into the ice and salt mixture. That's why the ice melted!</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: Why did we need to shake the bag?</strong>
+      <p class="discussion-hint">A: Shaking helped the heat transfer faster by making sure all the cream touched the cold sides of the bag. It also made the ice cream smooth instead of chunky.</p>
+    </div>
+  </div>
+
+  <div class="grade-section grade-5">
+    <h3>5th Grade Questions</h3>
+
+    <div class="question-box">
+      <strong>Q: Why does adding salt make ice colder?</strong>
+      <p class="discussion-hint">A: Salt lowers ice's melting point (from 32°F to around 0°F or lower). The ice "wants" to melt at this new lower temperature, but to melt it needs energy, so it pulls heat from everything around it, including the cream. This makes the mixture much colder than plain ice.</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: What's happening at the molecular level when liquid freezes?</strong>
+      <p class="discussion-hint">A: In a liquid, molecules move freely and slide past each other. When heat is removed, molecules slow down and lock into a fixed pattern (a solid). They're still vibrating, just not moving around anymore.</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: How is this similar to how a refrigerator works?</strong>
+      <p class="discussion-hint">A: A refrigerator also removes heat from the inside (your food) and releases it outside (the back coils get warm). Both use the principle that heat flows from warmer areas to colder areas. We created a super-cold environment with salt + ice to pull heat out of the cream.</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: Why did the ice melt during the experiment?</strong>
+      <p class="discussion-hint">A: The ice absorbed thermal energy (heat) from the cream. When ice absorbs enough energy, it changes state from solid to liquid. The energy went into breaking the bonds holding ice molecules in place.</p>
+    </div>
+
+    <div class="question-box">
+      <strong>Q: Is the total amount of energy in the bag more, less, or the same at the end?</strong>
+      <p class="discussion-hint">A: The same! Energy isn't created or destroyed (conservation of energy). It just moved from the cream to the ice. The cream lost thermal energy, the ice gained it.</p>
+    </div>
+  </div>
+
+  <h2>📊 Student Worksheet</h2>
+  <p style="font-size: 10pt; color: #555;"><em>No thermometer? Replace the temperature rows with descriptions like "warm," "cold," "ice cold," or "frozen." The observation row is for anything you notice: texture, sounds, appearance.</em></p>
+
+  <table class="data-table">
+    <tr>
+      <th>Measurement</th>
+      <th>Start</th>
+      <th>After 5 min</th>
+      <th>After 10 min</th>
+      <th>End</th>
+    </tr>
+    <tr>
+      <td>Cream Temperature</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Cream State (liquid/solid)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Ice Temperature</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Observations</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <h2>📝 Student Notes / Predictions</h2>
+  <div class="notes-area"></div>
+
+  <h2>🚀 Extension Activity</h2>
+  <p>Try the experiment <em>two</em> ways: one bag <em>with</em> salt, one <em>without</em> salt. Compare how long each takes to freeze. The no-salt bag won't freeze properly. Why not?</p>
+
+  <p><strong>Expected result:</strong> Without salt, ice stays at 32°F, which is not cold enough to freeze ice cream quickly. With salt, the mixture drops well below freezing, pulling heat out of the cream much faster.</p>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT/TEACHER ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Expected Data Table Results</h3>
+      <table class="data-table">
+        <tr>
+          <th>Measurement</th>
+          <th>Start</th>
+          <th>After 5 min</th>
+          <th>After 10 min</th>
+          <th>End (15 min)</th>
+        </tr>
+        <tr>
+          <td><strong>Cream Temperature</strong></td>
+          <td>~70°F (room temp)</td>
+          <td>~40-50°F</td>
+          <td>~32-35°F</td>
+          <td>~25-30°F</td>
+        </tr>
+        <tr>
+          <td><strong>Cream State</strong></td>
+          <td>Liquid</td>
+          <td>Liquid (thickening)</td>
+          <td>Slushy/semi-solid</td>
+          <td>Solid (ice cream!)</td>
+        </tr>
+        <tr>
+          <td><strong>Ice Temperature</strong></td>
+          <td>~32°F</td>
+          <td>~10-15°F</td>
+          <td>~5-10°F</td>
+          <td>~0-10°F</td>
+        </tr>
+        <tr>
+          <td><strong>Observations</strong></td>
+          <td>Bag is cold</td>
+          <td>Bag is <em>very</em> cold; ice melting.</td>
+          <td>Cream getting thick</td>
+          <td>Cream is solid!</td>
+        </tr>
+      </table>
+      <p style="margin-top: 10px; font-style: italic; color: #666;">Note: Actual temperatures vary based on amount of salt, ice quality, shaking vigor, and ambient temperature. The pattern (decreasing cream temp, frozen end state) should be consistent.</p>
+
+      <h3>Core Concepts: What Students Should Learn</h3>
+      <div style="background: white; border-left: 4px solid #2196f3; padding: 12px; margin: 12px 0;">
+        <p><strong>3rd Grade Level:</strong></p>
+        <ul>
+          <li>Heat always moves from hot things to cold things</li>
+          <li>Freezing happens when heat is removed from a liquid</li>
+          <li>Salt makes ice colder than regular ice</li>
+          <li>Shaking helps the cream freeze evenly and faster</li>
+          <li>The cream changed from a liquid state to a solid state</li>
+        </ul>
+      </div>
+
+      <div style="background: white; border-left: 4px solid #9c27b0; padding: 12px; margin: 12px 0;">
+        <p><strong>5th Grade Level (deeper understanding):</strong></p>
+        <ul>
+          <li>Thermal energy is the motion of particles; more heat = faster particles</li>
+          <li>When liquid freezes, molecules slow down and lock into a fixed structure</li>
+          <li>Salt lowers the freezing point of water (colligative property)</li>
+          <li>Energy is conserved (it moved from cream to ice, but total energy stayed the same)</li>
+          <li>Melting and freezing are opposite processes involving energy absorption/release</li>
+        </ul>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      
+      <p><strong>For All Students:</strong></p>
+      <ul>
+        <li><strong>Q: What state was the cream at the start vs. end?</strong><br>
+        A: Liquid → Solid. Accept any phrasing that shows understanding of state change.</li>
+        
+        <li><strong>Q: Did we add cold or remove heat?</strong><br>
+        A: Removed heat. Emphasize: "cold" isn't a thing we add; it's the absence of heat!</li>
+        
+        <li><strong>Q: Where did the heat go?</strong><br>
+        A: Into the ice (which melted). Students should connect cream getting colder = ice melting.</li>
+        
+        <li><strong>Q: Why shake the bag?</strong><br>
+        A: Speed up heat transfer, ensure even freezing, prevent large ice crystals (chunky texture).</li>
+      </ul>
+
+      <p><strong>For 5th Graders (additional depth):</strong></p>
+      <ul>
+        <li><strong>Q: Why does salt make ice colder?</strong><br>
+        A: Salt lowers ice's melting point. The ice needs energy to melt at the new lower temp, so it pulls heat from surroundings. This creates a super-cold environment (&lt;0°F).</li>
+        
+        <li><strong>Q: What's happening at molecular level?</strong><br>
+        A: Liquid molecules slide freely. Removing heat slows them until they lock into a rigid structure (solid). Molecules still vibrate in place but don't move around.</li>
+        
+        <li><strong>Q: How is this like a refrigerator?</strong><br>
+        A: Both remove heat from one area and release it elsewhere. Refrigerators use a coolant cycle; we used salt-ice as our "coolant."</li>
+        
+        <li><strong>Q: Why did ice melt?</strong><br>
+        A: Ice absorbed thermal energy from the cream. Absorbed energy breaks molecular bonds, changing ice (solid) to water (liquid).</li>
+        
+        <li><strong>Q: Total energy at end?</strong><br>
+        A: Same as start! Conservation of energy. Energy moved (cream → ice) but wasn't created/destroyed.</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>Ice cream won't freeze:</strong> Not enough salt, not enough ice, bag too large (small inner bag works better), or didn't shake enough. Temperature of salt-ice mix should drop well below 20°F.</li>
+        <li><strong>Ice cream is grainy/icy:</strong> Shook too little or too slowly. Slow freezing = big crystals. Fast freezing with vigorous shaking = smooth texture.</li>
+        <li><strong>Bag leaked:</strong> Double-bag or use freezer zip bags. Test seal before adding to outer bag.</li>
+        <li><strong>Too salty taste:</strong> Small hole in inner bag. Discard and remake. Rinse outside of inner bag before opening if worried about contamination.</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>3rd Grade:</strong></p>
+        <ul>
+          <li>Can identify the cream changed from liquid to solid</li>
+          <li>Can explain heat moved from cream to ice</li>
+          <li>Can state that salt makes ice colder</li>
+          <li>Uses vocabulary: thermal energy, heat transfer, freezing, states of matter</li>
+        </ul>
+      </div>
+
+      <div style="background: #f3e5f5; border: 2px solid #9c27b0; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>5th Grade:</strong></p>
+        <ul>
+          <li>Can explain particle behavior in solids vs. liquids</li>
+          <li>Can describe how salt lowers freezing point</li>
+          <li>Can apply conservation of energy to the system</li>
+          <li>Can make connections to real-world applications (refrigerators, road salt, etc.)</li>
+          <li>Can use precise scientific language in written explanations</li>
+        </ul>
+      </div>
+
+      <h3>Extension Activity Answer</h3>
+      <p><strong>Bag <em>without</em> salt:</strong> Will not freeze properly or will take much longer (more than 30 min). Plain ice stays at 32°F, which isn't cold enough to freeze cream quickly. The cream may get cold but remain liquid or become slushy at best.</p>
+      <p><strong>Bag WITH salt:</strong> Freezes in 10-15 minutes. Salt-ice mixture drops to 0-10°F, creating a powerful "heat sink" that rapidly pulls thermal energy from the cream.</p>
+      <p><strong>Conclusion:</strong> Salt is essential for making ice cream! It's not just for flavor; it's the science secret that makes freezing possible without an electric freezer.</p>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>
