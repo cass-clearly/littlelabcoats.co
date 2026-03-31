@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mia's Wednesday Learning Plan — Week 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+    h1, h2, h3 { font-family: 'Source Serif 4', serif; }
+    .header {
+      text-align: center;
+      padding: 25px 20px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 { font-size: 26pt; margin-bottom: 4px; }
+    .header .subtitle { font-size: 13pt; opacity: 0.9; }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .schedule-block {
+      text-align: center;
+      padding: 12px 8px;
+      border-radius: 10px;
+      font-size: 9.5pt;
+      font-weight: 500;
+    }
+    .schedule-block .emoji { font-size: 18pt; display: block; margin-bottom: 4px; }
+    .schedule-block .time { font-size: 8pt; opacity: 0.7; margin-top: 2px; }
+    .sb-coral { background: #ffe0d6; color: #c0392b; }
+    .sb-teal { background: #d0f0ed; color: #0e7c6b; }
+    .sb-amber { background: #fff3cd; color: #856404; }
+    .sb-lavender { background: #e8dff5; color: #5b2c8e; }
+
+    .card {
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .card h2 {
+      font-size: 16pt;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card .check {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 2.5px solid currentColor;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .card .skill-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .card-coral { background: #fff5f2; border: 2px solid #f7c5b8; }
+    .card-coral h2 { color: #c0392b; }
+    .card-coral .skill-tag { background: #f7c5b8; color: #922b21; }
+
+    .card-teal { background: #f0faf8; border: 2px solid #a3d9cf; }
+    .card-teal h2 { color: #0e7c6b; }
+    .card-teal .skill-tag { background: #a3d9cf; color: #0a5c50; }
+
+    .card-amber { background: #fffcf0; border: 2px solid #f0d78c; }
+    .card-amber h2 { color: #856404; }
+    .card-amber .skill-tag { background: #f0d78c; color: #6d5200; }
+
+    .card-lavender { background: #f8f4fd; border: 2px solid #c9b8e8; }
+    .card-lavender h2 { color: #5b2c8e; }
+    .card-lavender .skill-tag { background: #c9b8e8; color: #3e1d63; }
+
+    .instructions { margin: 12px 0; padding-left: 20px; }
+    .instructions li { margin-bottom: 6px; }
+
+    .question-box {
+      background: white;
+      border-left: 4px solid currentColor;
+      padding: 10px 14px;
+      margin: 8px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+    }
+    .card-coral .question-box { border-color: #e74c3c; }
+    .card-teal .question-box { border-color: #1abc9c; }
+
+    .cut-line {
+      border: none;
+      border-top: 2.5px dashed #bbb;
+      margin: 30px 0 10px;
+    }
+    .cut-label {
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .worksheet {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: white;
+      page-break-inside: avoid;
+    }
+    .worksheet h3 { font-size: 14pt; margin-bottom: 12px; }
+    .ws-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .ws-table th, .ws-table td {
+      border: 1.5px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ws-table th {
+      background: #f5f5f5;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+    .ws-table td { min-height: 40px; height: 40px; }
+
+    .write-line {
+      border-bottom: 1.5px solid #ccc;
+      height: 32px;
+      margin: 4px 0;
+    }
+    .lined-area { margin: 10px 0; }
+    .lined-area .line { border-bottom: 1px solid #d0d0d0; height: 28px; }
+
+    .example-box {
+      background: #f0f7ff;
+      border: 1px solid #b8d4f0;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+    .example-box .label { font-weight: 700; color: #2a6fad; font-size: 9pt; text-transform: uppercase; margin-bottom: 6px; }
+
+    .tip {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 10pt;
+      margin: 10px 0;
+      color: #2e7d32;
+    }
+
+    .tally-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 14px 0;
+    }
+    .tally-box {
+      background: white;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+    .tally-box h4 { font-family: 'Source Serif 4', serif; margin-bottom: 8px; font-size: 11pt; }
+    .tally-box .big-emoji { font-size: 32pt; display: block; margin-bottom: 6px; }
+
+    .error-paragraph {
+      background: #fff9e6;
+      border: 2px solid #f0d78c;
+      border-radius: 10px;
+      padding: 18px;
+      font-size: 12pt;
+      line-height: 2;
+      margin: 14px 0;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .source-box {
+      background: white;
+      border: 1.5px solid #a3d9cf;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 10px 0;
+    }
+    .source-box h4 { font-family: 'Source Serif 4', serif; color: #0e7c6b; margin-bottom: 8px; }
+    .source-label {
+      display: inline-block;
+      background: #0e7c6b;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    @media print {
+      body { padding: 0.25in; background: white; font-size: 10pt; }
+      .header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, .schedule-block, .skill-tag, .example-box, .tip, .tally-box, .source-box, .error-paragraph, .source-label {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .worksheet { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🎲 Mia's Wednesday Plan</h1>
+    <div class="subtitle">Week 1 • Grade 5 • ~50 minutes of brain power</div>
+  </div>
+
+  <!-- Schedule Overview -->
+  <div class="schedule">
+    <div class="schedule-block sb-coral">
+      <span class="emoji">📊</span>
+      Probability Games
+      <div class="time">15 min</div>
+    </div>
+    <div class="schedule-block sb-teal">
+      <span class="emoji">🔍</span>
+      Compare Two Sources
+      <div class="time">15 min</div>
+    </div>
+    <div class="schedule-block sb-amber">
+      <span class="emoji">🧠</span>
+      Character Court
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-lavender">
+      <span class="emoji">✏️</span>
+      Edit Someone's Work
+      <div class="time">10 min</div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 1: PROBABILITY GAMES ==================== -->
+  <div class="card card-coral">
+    <h2><span class="check"></span> 📊 Probability Games <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">15 min</span></h2>
+    <span class="skill-tag">Math — Probability & Data Collection</span>
+
+    <p>Time to become a probability scientist! 🔬 You'll run real experiments with dice and coins, make predictions, then see if the real results match what you expected. Spoiler: sometimes math is surprising!</p>
+
+    <ol class="instructions">
+      <li><strong>Predict first!</strong> Before you roll or flip, write down what you <em>think</em> will happen.</li>
+      <li><strong>Experiment!</strong> Do 20 coin flips and 24 dice rolls. Tally every result on the worksheet.</li>
+      <li><strong>Compare!</strong> Were your predictions close? Why or why not?</li>
+    </ol>
+
+    <div class="tally-grid">
+      <div class="tally-box">
+        <span class="big-emoji">🪙</span>
+        <h4>Coin Flip</h4>
+        <p style="font-size:10pt;">2 outcomes: <strong>Heads</strong> or <strong>Tails</strong></p>
+        <p style="font-size:9pt; color:#888; margin-top:4px;">Theoretical: 50/50 chance each</p>
+      </div>
+      <div class="tally-box">
+        <span class="big-emoji">🎲</span>
+        <h4>Dice Roll</h4>
+        <p style="font-size:10pt;">6 outcomes: <strong>1, 2, 3, 4, 5, or 6</strong></p>
+        <p style="font-size:9pt; color:#888; margin-top:4px;">Theoretical: each number = 1 in 6 chance</p>
+      </div>
+    </div>
+
+    <div class="tip">💡 <strong>Fun Fact:</strong> Even though each side of a coin has a 50% chance, you might get 14 heads and only 6 tails in 20 flips! The more you flip, the closer you'll get to 50/50. That's called the <strong>Law of Large Numbers</strong>!</div>
+  </div>
+
+  <!-- Worksheet: Probability Tally Sheet -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Probability Tally Sheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>📊 Probability Experiment Lab</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h4 style="font-family:'Source Serif 4',serif; margin-top:16px; color:#c0392b;">🪙 Experiment 1: Coin Flip (20 flips)</h4>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>My Prediction:</strong> I think I'll get Heads <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> times and Tails <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> times out of 20.
+    </div>
+
+    <table class="ws-table" style="margin-top:10px;">
+      <thead>
+        <tr>
+          <th style="width:25%;">Outcome</th>
+          <th style="width:50%;">Tally Marks</th>
+          <th style="width:25%;">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Heads</strong> 🪙</td>
+          <td style="height:45px;"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>Tails</strong> 🪙</td>
+          <td style="height:45px;"></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-family:'Source Serif 4',serif; margin-top:20px; color:#c0392b;">🎲 Experiment 2: Dice Roll (24 rolls)</h4>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>My Prediction:</strong> I think the number <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> will come up the most. Each number should come up about <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> times.
+    </div>
+
+    <table class="ws-table" style="margin-top:10px;">
+      <thead>
+        <tr>
+          <th style="width:15%;">Number</th>
+          <th style="width:50%;">Tally Marks</th>
+          <th style="width:15%;">Total</th>
+          <th style="width:20%;">Expected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>⚀ 1</td><td style="height:38px;"></td><td></td><td style="color:#aaa; text-align:center;">4</td></tr>
+        <tr><td>⚁ 2</td><td style="height:38px;"></td><td></td><td style="color:#aaa; text-align:center;">4</td></tr>
+        <tr><td>⚂ 3</td><td style="height:38px;"></td><td></td><td style="color:#aaa; text-align:center;">4</td></tr>
+        <tr><td>⚃ 4</td><td style="height:38px;"></td><td></td><td style="color:#aaa; text-align:center;">4</td></tr>
+        <tr><td>⚄ 5</td><td style="height:38px;"></td><td></td><td style="color:#aaa; text-align:center;">4</td></tr>
+        <tr><td>⚅ 6</td><td style="height:38px;"></td><td></td><td style="color:#aaa; text-align:center;">4</td></tr>
+      </tbody>
+    </table>
+
+    <div class="question-box" style="border-color:#e74c3c; margin-top:14px;">
+      <strong>Was your prediction close?</strong> What surprised you?
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>If you rolled the dice 100 times instead of 24, do you think the results would be closer to "expected" or further away? Why?</strong>
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 2: COMPARE TWO SOURCES ==================== -->
+  <div class="card card-teal">
+    <h2><span class="check"></span> 🔍 Compare Two Sources <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">15 min</span></h2>
+    <span class="skill-tag">Information Literacy — Evaluating Sources</span>
+
+    <p>Real researchers never trust just one source! 🧐 Read both articles below about the <strong>same topic</strong>, then figure out: what's the same? What's different? Which one do you trust more — and <em>why</em>?</p>
+
+    <ol class="instructions">
+      <li>Read <strong>Source A</strong> and <strong>Source B</strong> carefully.</li>
+      <li>Fill out the comparison chart on the worksheet.</li>
+      <li>Decide which source is more reliable and explain your reasoning.</li>
+    </ol>
+
+    <!-- Source A -->
+    <div class="source-box">
+      <span class="source-label">Source A</span>
+      <h4>🐝 "Why Are Bees So Important?" — National Wildlife Federation (nwf.org)</h4>
+      <p style="font-size:10.5pt; margin-top:6px;">
+        Bees are one of the most important pollinators on Earth. About <strong>one-third of the food we eat</strong> depends on pollination by bees, including apples, almonds, blueberries, and cucumbers. When bees visit flowers to collect nectar, pollen sticks to their fuzzy bodies and gets carried to the next flower. This is how many plants reproduce.
+      </p>
+      <p style="font-size:10.5pt; margin-top:8px;">
+        Scientists have found that bee populations are declining due to <strong>pesticides, habitat loss, and climate change</strong>. According to the U.S. Department of Agriculture, beekeepers lost about 48% of their honeybee colonies between 2022 and 2023. Researchers are studying ways to protect bees, including planting wildflower gardens and reducing pesticide use.
+      </p>
+      <p style="font-size:8.5pt; color:#888; margin-top:8px;">Published: March 2024 • Author: Dr. Sarah Chen, Wildlife Biologist</p>
+    </div>
+
+    <!-- Source B -->
+    <div class="source-box">
+      <span class="source-label">Source B</span>
+      <h4>🐝 "Bees Are Dying and It's Really Bad!" — CoolAnimalFacts.blog</h4>
+      <p style="font-size:10.5pt; margin-top:6px;">
+        OMG, did you know that bees are going EXTINCT?! 😱 Basically ALL the bees are dying and if they disappear, we'll have <strong>NO food left at all</strong>. Every single fruit and vegetable needs bees to grow. Without bees, humans would starve in like 4 years!!
+      </p>
+      <p style="font-size:10.5pt; margin-top:8px;">
+        The main reason bees are dying is because of <strong>5G towers and cell phone radiation</strong>. I saw a video about it and it totally makes sense. Also, some farmers are being really mean to bees. We need to save them ASAP or the whole planet is doomed! 🌍💀
+      </p>
+      <p style="font-size:8.5pt; color:#888; margin-top:8px;">Published: Unknown • Author: BeeL0ver_2007</p>
+    </div>
+
+    <div class="tip">💡 <strong>Source Detective Tip:</strong> Ask yourself — Who wrote it? Where was it published? Do they give evidence or just opinions? Do other sources agree?</div>
+  </div>
+
+  <!-- Worksheet: Source Comparison -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Source Comparison Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔍 Source Showdown: Who Do You Trust?</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="margin-top:6px;"><strong>Topic:</strong> Why bees are important and what's happening to them</p>
+
+    <table class="ws-table" style="margin-top:14px;">
+      <thead>
+        <tr>
+          <th style="width:28%;">Question</th>
+          <th style="width:36%;">Source A<br><span style="font-weight:400; font-size:8pt;">National Wildlife Federation</span></th>
+          <th style="width:36%;">Source B<br><span style="font-weight:400; font-size:8pt;">CoolAnimalFacts.blog</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Who wrote it?</strong></td>
+          <td style="height:50px;"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>What facts do they share?</strong></td>
+          <td style="height:50px;"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>What reasons do they give for bees dying?</strong></td>
+          <td style="height:50px;"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>Do they use evidence?</strong> (numbers, experts, studies)</td>
+          <td style="height:50px;"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>What's the tone?</strong> (calm & factual? dramatic? scary?)</td>
+          <td style="height:50px;"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>Anything that seems exaggerated or wrong?</strong></td>
+          <td style="height:50px;"></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="question-box" style="border-color:#1abc9c; margin-top:14px;">
+      <strong>Which source is MORE reliable? Circle one:</strong> &nbsp;&nbsp; <strong>Source A</strong> &nbsp;&nbsp;/&nbsp;&nbsp; <strong>Source B</strong>
+    </div>
+
+    <div class="question-box" style="border-color:#1abc9c;">
+      <strong>Explain WHY you chose that source (give at least 2 reasons):</strong>
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#1abc9c;">
+      <strong>⭐ Bonus:</strong> What's ONE thing both sources agree on?
+      <div class="write-line" style="margin-top:8px;"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 3: CHARACTER COURT ==================== -->
+  <div class="card card-amber">
+    <h2><span class="check"></span> 🧠 Character Court <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Reading — Argument & Text Evidence</span>
+
+    <p>Welcome to Character Court! ⚖️ Today you're both the <strong>lawyer</strong> and the <strong>jury</strong>. Pick a decision a character made in whatever you're reading, then argue <em>both sides</em> — FOR and AGAINST — using evidence from the text.</p>
+
+    <ol class="instructions">
+      <li>Think of a <strong>big decision</strong> a character made. (Did they lie? Leave home? Trust someone? Break a rule?)</li>
+      <li>Argue <strong>FOR</strong> the decision — why it was the right call.</li>
+      <li>Argue <strong>AGAINST</strong> — why it was a mistake.</li>
+      <li>Deliver your <strong>verdict</strong>: Was it ultimately the right decision?</li>
+    </ol>
+
+    <div class="example-box">
+      <div class="label">✅ Example — Character Court in Action</div>
+      <p><strong>Character:</strong> Charlotte (from <em>Charlotte's Web</em>)</p>
+      <p><strong>Decision:</strong> Charlotte decided to write words in her web to save Wilbur.</p>
+      <p><strong>FOR:</strong> "Charlotte saved Wilbur's life! On page 80, she says, <em>'I am not going to let them kill you.'</em> She used her talent to help a friend — that's brave and selfless."</p>
+      <p><strong>AGAINST:</strong> "Charlotte wore herself out and used all her energy. She could have focused on her own egg sac earlier. Some might say she risked her own life for a pig."</p>
+      <p><strong>Verdict:</strong> It was the right decision because true friendship sometimes means sacrifice.</p>
+    </div>
+
+    <div class="tip">💡 <strong>Court Rule:</strong> You MUST use evidence from the text for both sides! A quote, a page number, or a specific detail. No "I just think so" allowed in this court! 🔨</div>
+  </div>
+
+  <!-- Worksheet: Character Court -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Character Court Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>⚖️ Character Court</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Book:</strong> _______________________________</p>
+
+    <div class="question-box" style="border-color:#f0d78c; margin-top:14px;">
+      <strong>The Character:</strong>
+      <div class="write-line" style="margin-top:6px;"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#f0d78c;">
+      <strong>The Decision:</strong> What did they choose to do?
+      <div class="write-line" style="margin-top:6px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;">
+      <div style="background:#e8f5e9; border-radius:10px; padding:14px;">
+        <p style="font-weight:700; color:#2e7d32; font-size:12pt;">👍 FOR — It was RIGHT</p>
+        <p style="font-size:9pt; color:#666; margin:4px 0 8px;">Why was this a good decision? Use text evidence!</p>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <p style="font-size:9pt; color:#888; margin-top:6px;"><strong>Evidence (quote/page):</strong></p>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+      </div>
+      <div style="background:#ffebee; border-radius:10px; padding:14px;">
+        <p style="font-weight:700; color:#c62828; font-size:12pt;">👎 AGAINST — It was WRONG</p>
+        <p style="font-size:9pt; color:#666; margin:4px 0 8px;">Why was this a bad decision? Use text evidence!</p>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <p style="font-size:9pt; color:#888; margin-top:6px;"><strong>Evidence (quote/page):</strong></p>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="question-box" style="border-color:#f0d78c; margin-top:14px;">
+      <strong>🔨 THE VERDICT:</strong> Was it ultimately the right decision? Why?
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 4: EDIT SOMEONE ELSE'S WORK ==================== -->
+  <div class="card card-lavender">
+    <h2><span class="check"></span> ✏️ Edit Someone Else's Work <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Writing — Editing for Grammar, Structure & Clarity</span>
+
+    <p>Today you're the <strong>editor-in-chief</strong>! ✨ A student named "Alex" wrote this paragraph, but it's got problems — spelling mistakes, grammar goofs, confusing sentences, and weak structure. Your job: find the errors and make it shine!</p>
+
+    <ol class="instructions">
+      <li>Read the paragraph below carefully.</li>
+      <li>Use the worksheet to mark every error you find.</li>
+      <li>Rewrite the corrected version in your best writing.</li>
+    </ol>
+
+    <div class="error-paragraph">
+      <p style="color:#666; font-size:9pt; margin-bottom:10px; font-family:'DM Sans',sans-serif;">📝 Alex's paragraph — find and fix the errors!</p>
+      <p>
+        Last summer me and my family went to the grand canyon. it was really really big and also very deep. We hiked down a trail that was called bright Angel trail and it taked us almost the hole day. My dad bringed sandwiches and waters but he forgetted the sunscreen so we all got sunburned real bad. Their were lots of other hikers to. The most best part was when we seed a condor flying over the canyon it was huge like a airplane almost. I want to went back their someday because it was the most beautifulest place I ever saw in my life ever.
+      </p>
+    </div>
+
+    <div class="example-box">
+      <div class="label">🔍 What to look for</div>
+      <ul style="margin-top:6px; padding-left:18px; font-size:10pt;">
+        <li><strong>Spelling errors</strong> — words that aren't spelled right</li>
+        <li><strong>Grammar mistakes</strong> — wrong verb forms, "me and my" vs. "my family and I"</li>
+        <li><strong>Punctuation</strong> — missing capitals, periods, commas</li>
+        <li><strong>Repetition</strong> — words used too many times or unnecessary words</li>
+        <li><strong>Clarity</strong> — run-on sentences, confusing parts</li>
+      </ul>
+    </div>
+
+    <div class="tip">💡 <strong>Editor Tip:</strong> Read the paragraph THREE times — once for spelling, once for grammar, and once for "does this sound good?" Good editors don't try to catch everything at once!</div>
+  </div>
+
+  <!-- Worksheet: Editing -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Editor-in-Chief Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>✏️ Editor-in-Chief Report</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h4 style="font-family:'Source Serif 4',serif; margin-top:14px;">Part 1: Error Hunt 🔍</h4>
+    <p style="font-size:10pt; color:#666; margin-bottom:10px;">List every error you found. Try to find at least 10!</p>
+
+    <table class="ws-table">
+      <thead>
+        <tr>
+          <th style="width:5%;">#</th>
+          <th style="width:30%;">The Error (what's wrong)</th>
+          <th style="width:30%;">The Fix (what it should be)</th>
+          <th style="width:35%;">Type of Error<br><span style="font-weight:400; font-size:8pt;">(spelling / grammar / punctuation / clarity)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>2</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>3</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>4</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>5</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>6</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>7</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>8</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>9</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>10</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>11</td><td style="height:35px;"></td><td></td><td></td></tr>
+        <tr><td>12</td><td style="height:35px;"></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-family:'Source Serif 4',serif; margin-top:18px;">Part 2: Rewrite ✍️</h4>
+    <p style="font-size:10pt; color:#666; margin-bottom:10px;">Now rewrite Alex's paragraph with ALL the corrections. Make it sound great!</p>
+
+    <div class="lined-area">
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#c9b8e8; margin-top:14px;">
+      <strong>⭐ Editor's Score:</strong> How many errors did you find? <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> &nbsp;&nbsp; Rate Alex's writing 1–5 stars: <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>
+    </div>
+
+    <p style="text-align:center; margin-top:16px; font-size:10pt; color:#9b59b6;">🌟 Amazing editing work, Mia! Every great writer needs a great editor. 🌟</p>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

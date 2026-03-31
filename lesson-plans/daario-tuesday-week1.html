@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daario's Tuesday Learning Plan — Week 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+    h1, h2, h3 { font-family: 'Source Serif 4', serif; }
+    .header {
+      text-align: center;
+      padding: 25px 20px;
+      background: linear-gradient(135deg, #7B2FBE 0%, #7B2FBE 50%, #7B2FBE 100%);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 { font-size: 26pt; margin-bottom: 4px; }
+    .header .subtitle { font-size: 13pt; opacity: 0.9; }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    .schedule-block {
+      text-align: center;
+      padding: 10px 6px;
+      border-radius: 10px;
+      font-size: 9pt;
+      font-weight: 500;
+    }
+    .schedule-block .emoji { font-size: 18pt; display: block; margin-bottom: 4px; }
+    .schedule-block .time { font-size: 8pt; opacity: 0.7; margin-top: 2px; }
+    .sb-sky { background: #bbdefb; color: #7B2FBE; }
+    .sb-cyan { background: #b2ebf2; color: #006064; }
+    .sb-indigo { background: #c5cae9; color: #1a237e; }
+    .sb-teal { background: #b2dfdb; color: #004d40; }
+    .sb-steel { background: #cfd8dc; color: #263238; }
+
+    .card {
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .card h2 {
+      font-size: 16pt;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card .check {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 2.5px solid currentColor;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .card .skill-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card-sky { background: #F3E8FF; border: 2px solid #90caf9; }
+    .card-sky h2 { color: #7B2FBE; }
+    .card-sky .skill-tag { background: #90caf9; color: #7B2FBE; }
+
+    .card-cyan { background: #e0f7fa; border: 2px solid #80deea; }
+    .card-cyan h2 { color: #00838f; }
+    .card-cyan .skill-tag { background: #80deea; color: #006064; }
+
+    .card-indigo { background: #e8eaf6; border: 2px solid #9fa8da; }
+    .card-indigo h2 { color: #283593; }
+    .card-indigo .skill-tag { background: #9fa8da; color: #1a237e; }
+
+    .card-teal { background: #e0f2f1; border: 2px solid #80cbc4; }
+    .card-teal h2 { color: #00695c; }
+    .card-teal .skill-tag { background: #80cbc4; color: #004d40; }
+
+    .card-steel { background: #eceff1; border: 2px solid #b0bec5; }
+    .card-steel h2 { color: #37474f; }
+    .card-steel .skill-tag { background: #b0bec5; color: #263238; }
+
+    .instructions { margin: 12px 0; padding-left: 4px; }
+    .instructions li { margin-bottom: 6px; }
+
+    .question-box {
+      background: white;
+      border-left: 4px solid currentColor;
+      padding: 10px 14px;
+      margin: 8px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+    }
+
+    .example-box {
+      background: #F3E8FF;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+    .example-box .label { font-weight: 700; color: #7B2FBE; font-size: 9pt; text-transform: uppercase; margin-bottom: 6px; }
+
+    .tip {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 10pt;
+      margin: 10px 0;
+      color: #2e7d32;
+    }
+
+    .cut-line {
+      border: none;
+      border-top: 2.5px dashed #bbb;
+      margin: 30px 0 10px;
+    }
+    .cut-label {
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .worksheet {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: white;
+      page-break-inside: avoid;
+    }
+    .worksheet h3 { font-size: 14pt; margin-bottom: 12px; }
+    .ws-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .ws-table th, .ws-table td {
+      border: 1.5px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ws-table th {
+      background: #f5f5f5;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+    .ws-table td { min-height: 40px; height: 40px; }
+
+    .write-line {
+      border-bottom: 1.5px solid #ccc;
+      height: 32px;
+      margin: 4px 0;
+    }
+    .lined-area { margin: 10px 0; }
+    .lined-area .line {
+      border-bottom: 1px solid #d0d0d0;
+      height: 28px;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .recipe-grid .rh {
+      background: #F3E8FF;
+      font-weight: 700;
+      padding: 8px 12px;
+      font-size: 10pt;
+      border-bottom: 1.5px solid #ccc;
+      text-align: center;
+    }
+    .recipe-grid .rc {
+      padding: 8px 12px;
+      font-size: 10.5pt;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+    .recipe-grid .rc:nth-child(3n+2) { border-right: 1px solid #ddd; }
+    .recipe-grid .rc:nth-child(3n+3) { border-right: 1px solid #ddd; }
+
+    .tree-node {
+      text-align: center;
+      padding: 10px 18px;
+      border: 2.5px solid #7B2FBE;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14pt;
+      color: #7B2FBE;
+      display: inline-block;
+      background: #F3E8FF;
+    }
+    .branch-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 8px 0;
+    }
+    .branch-box {
+      border: 1.5px dashed #90caf9;
+      border-radius: 8px;
+      padding: 8px 14px;
+      min-width: 100px;
+      text-align: center;
+      font-size: 10.5pt;
+      background: #f5f9ff;
+    }
+
+    @media print {
+      body { padding: 0.25in; background: white; font-size: 10pt; }
+      .header { background: #7B2FBE !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, .schedule-block, .skill-tag, .example-box, .tip, .tree-node, .branch-box, .recipe-grid .rh {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .worksheet { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🌟 Daario's Tuesday Plan</h1>
+    <div class="subtitle">Week 1 • Grade 3 • ~35 minutes of awesome</div>
+  </div>
+
+  <!-- Schedule Overview -->
+  <div class="schedule">
+    <div class="schedule-block sb-sky">
+      <span class="emoji">👂</span>
+      Verbal Instructions
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-cyan">
+      <span class="emoji">🔤</span>
+      Word Building
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-indigo">
+      <span class="emoji">📏</span>
+      Cooking Math
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-teal">
+      <span class="emoji">🔠</span>
+      Capitalization
+      <div class="time">5 min</div>
+    </div>
+    <div class="schedule-block sb-steel">
+      <span class="emoji">✏️</span>
+      Describe a Picture
+      <div class="time">5 min</div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 1 ==================== -->
+  <div class="card card-sky">
+    <h2><span class="check"></span> 👂 Verbal Instructions <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Listening — Following Multi-Step Directions</span>
+
+    <p>Time to sharpen those listening ears! 🎧 A parent will read you a set of instructions — your job is to <strong>listen carefully</strong> and follow each step <em>without</em> asking them to repeat it.</p>
+
+    <ol class="instructions">
+      <li><strong>Round 1:</strong> Listen to a <strong>3-step instruction</strong> (like making a paper airplane). Do it!</li>
+      <li><strong>Round 2:</strong> Try a <strong>4-step instruction</strong> (like setting up a simple game). Trickier!</li>
+      <li><strong>Bonus Round:</strong> Can you handle <strong>5 steps</strong>? Give it a shot!</li>
+    </ol>
+
+    <div class="example-box">
+      <div class="label">🎯 Sample 3-Step Instruction</div>
+      <p><strong>Parent reads:</strong> "Get a piece of paper, fold it in half the long way, then draw a star on the front."</p>
+      <p style="margin-top:6px; font-size:9.5pt; color:#666;">👆 Daario listens once, then does all 3 steps from memory!</p>
+    </div>
+
+    <div class="example-box">
+      <div class="label">🎯 Sample 4-Step Instruction</div>
+      <p><strong>Parent reads:</strong> "Go to the kitchen, get a cup, fill it halfway with water, then bring it back and set it on the table."</p>
+    </div>
+
+    <div class="tip">💡 <strong>Listening Tip:</strong> Try picturing each step in your mind like a movie. That makes it easier to remember!</div>
+  </div>
+
+  <!-- Worksheet: Instruction Checklist -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Instruction-Following Checklist — cut or fold here</div>
+  <div class="worksheet">
+    <h3>👂 Instruction-Following Checklist</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <table class="ws-table" style="margin-top:14px;">
+      <thead>
+        <tr>
+          <th style="width:12%;">Round</th>
+          <th style="width:10%;"># Steps</th>
+          <th style="width:36%;">What was the instruction about?</th>
+          <th style="width:18%;">Got all steps? ✅❌</th>
+          <th style="width:24%;">What helped me remember?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:center;">1</td>
+          <td style="text-align:center;">3</td>
+          <td style="height:50px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="text-align:center;">2</td>
+          <td style="text-align:center;">4</td>
+          <td style="height:50px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="text-align:center;">⭐</td>
+          <td style="text-align:center;">5</td>
+          <td style="height:50px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:12px;"><strong>My best listening trick:</strong></p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+  </div>
+
+  <!-- ==================== ACTIVITY 2 ==================== -->
+  <div class="card card-cyan">
+    <h2><span class="check"></span> 🔤 Word Building <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Word Analysis — Prefixes & Suffixes</span>
+
+    <p>You're a <strong>Word Builder</strong> today! 🏗️ Start with a base word and see how many <em>real</em> words you can create by adding prefixes (beginnings) and suffixes (endings).</p>
+
+    <ol class="instructions">
+      <li>Look at the base word in the center of the tree.</li>
+      <li>Add <strong>prefixes</strong> (un-, re-, pre-, dis-) or <strong>suffixes</strong> (-ing, -ed, -er, -ly, -ful, -ness) to build new words.</li>
+      <li>Write each new word on a branch. Try to fill as many as you can!</li>
+    </ol>
+
+    <div class="example-box">
+      <div class="label">🌳 Example: Base Word = "play"</div>
+      <p><strong>play → playing, played, player, replay, playful, playfully</strong></p>
+      <p style="margin-top:4px; font-size:9.5pt; color:#666;">That's 6 words from one base! Can you beat that? 💪</p>
+    </div>
+
+    <p style="margin-top:10px;"><strong>Today's base words to try:</strong> <span style="font-size:13pt;">🌳 <strong>help</strong></span> &nbsp;&nbsp; <span style="font-size:13pt;">🌳 <strong>kind</strong></span> &nbsp;&nbsp; <span style="font-size:13pt;">🌳 <strong>paint</strong></span></p>
+
+    <div class="tip">💡 <strong>Word Tip:</strong> Not sure if a word is real? Say it out loud in a sentence. If it makes sense, it counts!</div>
+  </div>
+
+  <!-- Worksheet: Word Building Tree -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Word Building Tree — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔤 Word Building Tree</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <p style="margin-top:16px; text-align:center; font-size:10pt; color:#888;">Prefixes to try: <strong>un- &nbsp; re- &nbsp; pre- &nbsp; dis-</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Suffixes to try: <strong>-ing &nbsp; -ed &nbsp; -er &nbsp; -ly &nbsp; -ful &nbsp; -ness &nbsp; -less</strong></p>
+
+    <!-- Tree 1 -->
+    <div style="text-align:center; margin: 20px 0 8px;">
+      <div class="tree-node">help</div>
+    </div>
+    <div class="branch-row">
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+    </div>
+
+    <!-- Tree 2 -->
+    <div style="text-align:center; margin: 20px 0 8px;">
+      <div class="tree-node">kind</div>
+    </div>
+    <div class="branch-row">
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+    </div>
+
+    <!-- Tree 3 -->
+    <div style="text-align:center; margin: 20px 0 8px;">
+      <div class="tree-node">paint</div>
+    </div>
+    <div class="branch-row">
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+      <div class="branch-box">&nbsp;</div>
+    </div>
+
+    <p style="text-align:center; margin-top:14px; font-size:10pt;">⭐ <strong>Total words built:</strong> ______ &nbsp;&nbsp; Can you beat 15? 🏆</p>
+  </div>
+
+  <!-- ==================== ACTIVITY 3 ==================== -->
+  <div class="card card-indigo">
+    <h2><span class="check"></span> 📏 Cooking Math <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Measurement — Fractions & Doubling/Halving</span>
+
+    <p>Math gets delicious when you're in the kitchen! 🍳 Today you'll practice <strong>measuring with cups and tablespoons</strong> — and figure out how to double and halve a real recipe.</p>
+
+    <ol class="instructions">
+      <li>Read the recipe below. It makes <strong>1 batch</strong> of cinnamon sugar toast.</li>
+      <li>Figure out the amounts if you want to make <strong>2 batches</strong> (double it!).</li>
+      <li>Now figure out the amounts for <strong>half a batch</strong> (halve it!).</li>
+      <li>Bonus: Actually make it in the kitchen and practice measuring! 🍞</li>
+    </ol>
+
+    <div class="example-box">
+      <div class="label">🧮 Quick Reminder</div>
+      <p><strong>Doubling:</strong> 1/2 cup × 2 = 1 cup &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Halving:</strong> 1 cup ÷ 2 = 1/2 cup</p>
+      <p><strong>Tricky one:</strong> Half of 1/2 cup = 1/4 cup &nbsp;&nbsp;|&nbsp;&nbsp; Half of 1 tablespoon ≈ 1½ teaspoons</p>
+    </div>
+
+    <div class="tip">💡 <strong>Kitchen Tip:</strong> Use real measuring cups and spoons if you can. Hands-on practice makes fractions click!</div>
+  </div>
+
+  <!-- Worksheet: Recipe to Double/Halve -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Cooking Math Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>📏 Cooking Math — Cinnamon Sugar Toast</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <p style="margin: 12px 0 4px; font-size: 10pt; color:#555;">🍞 <strong>Original Recipe</strong> (makes 2 slices)</p>
+
+    <div class="recipe-grid">
+      <div class="rh">Ingredient</div>
+      <div class="rh">Original (1 batch)</div>
+      <div class="rh">Doubled (2 batches)</div>
+
+      <div class="rc" style="text-align:left;">🍞 Bread slices</div>
+      <div class="rc">2 slices</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+
+      <div class="rc" style="text-align:left;">🧈 Butter</div>
+      <div class="rc">1 tablespoon</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+
+      <div class="rc" style="text-align:left;">🍬 Sugar</div>
+      <div class="rc">2 tablespoons</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+
+      <div class="rc" style="text-align:left;">🫙 Cinnamon</div>
+      <div class="rc">1/2 teaspoon</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+    </div>
+
+    <p style="margin: 16px 0 4px; font-size: 10pt; color:#555;">Now try <strong>halving</strong> the recipe (half a batch = 1 slice):</p>
+
+    <div class="recipe-grid">
+      <div class="rh">Ingredient</div>
+      <div class="rh">Original (1 batch)</div>
+      <div class="rh">Halved (½ batch)</div>
+
+      <div class="rc" style="text-align:left;">🍞 Bread slices</div>
+      <div class="rc">2 slices</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+
+      <div class="rc" style="text-align:left;">🧈 Butter</div>
+      <div class="rc">1 tablespoon</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+
+      <div class="rc" style="text-align:left;">🍬 Sugar</div>
+      <div class="rc">2 tablespoons</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+
+      <div class="rc" style="text-align:left;">🫙 Cinnamon</div>
+      <div class="rc">1/2 teaspoon</div>
+      <div class="rc" style="border-bottom:1.5px dashed #90caf9;"></div>
+    </div>
+
+    <p style="margin-top:14px;"><strong>🤔 Challenge Question:</strong> If you wanted to make toast for 6 people (3 batches), how much sugar would you need?</p>
+    <div class="write-line"></div>
+  </div>
+
+  <!-- ==================== ACTIVITY 4 ==================== -->
+  <div class="card card-teal">
+    <h2><span class="check"></span> 🔠 Capitalization Rule of the Week <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">5 min</span></h2>
+    <span class="skill-tag">Shared — Grammar & Conventions</span>
+
+    <p>This week's rule: <strong>Proper nouns get capital letters!</strong> 🅰️</p>
+
+    <div class="example-box">
+      <div class="label">📏 The Rule</div>
+      <p>A <strong>proper noun</strong> is the <em>specific name</em> of a person, place, or thing.</p>
+      <p style="margin-top:6px;">❌ "I went to the store." → <em>store</em> is general (common noun)</p>
+      <p>✅ "I went to <strong>Walmart</strong>." → <em>Walmart</em> is specific (proper noun = capitalize!)</p>
+      <p style="margin-top:6px;"><strong>More examples:</strong> <em>dog</em> → <strong>Buddy</strong> &nbsp;|&nbsp; <em>city</em> → <strong>Denver</strong> &nbsp;|&nbsp; <em>teacher</em> → <strong>Mrs. Johnson</strong></p>
+    </div>
+
+    <p>Now write <strong>5 sentences</strong> that each use at least one proper noun (capitalized correctly!) on the worksheet below.</p>
+
+    <div class="tip">💡 <strong>Trick:</strong> If you can replace the word with a different name, it's probably a proper noun. "I went to ___" → Walmart, Target, Costco = proper nouns!</div>
+  </div>
+
+  <!-- Worksheet: Capitalization -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Capitalization Rule Card + Sentences — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔠 Capitalization — Proper Nouns</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <div style="background:#e0f2f1; border-radius:10px; padding:14px; margin:14px 0; border:2px solid #80cbc4;">
+      <p style="font-weight:700; font-size:12pt; color:#00695c; text-align:center;">📏 Rule: Always capitalize proper nouns!</p>
+      <p style="text-align:center; font-size:10pt; margin-top:4px;">Proper nouns = specific names of people, places, and things.</p>
+      <div style="display:flex; justify-content:center; gap:24px; margin-top:8px; font-size:10pt;">
+        <span>👤 <strong>Daario</strong></span>
+        <span>🏙️ <strong>Colorado</strong></span>
+        <span>🏫 <strong>Lincoln Elementary</strong></span>
+        <span>📅 <strong>Tuesday</strong></span>
+      </div>
+    </div>
+
+    <p style="margin-top:14px;"><strong>Write 5 sentences using proper nouns. Circle or underline each proper noun!</strong></p>
+
+    <p style="font-size:9.5pt; color:#888; margin-bottom:4px;">1.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <p style="font-size:9.5pt; color:#888; margin-bottom:4px;">2.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <p style="font-size:9.5pt; color:#888; margin-bottom:4px;">3.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <p style="font-size:9.5pt; color:#888; margin-bottom:4px;">4.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <p style="font-size:9.5pt; color:#888; margin-bottom:4px;">5.</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+  </div>
+
+  <!-- ==================== ACTIVITY 5 ==================== -->
+  <div class="card card-steel">
+    <h2><span class="check"></span> ✏️ Describe a Picture <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">5 min</span></h2>
+    <span class="skill-tag">Shared — Creative Writing</span>
+
+    <p>Look at the picture described below and let your imagination go wild! 🎨 You'll write about what's happening, what happened <em>before</em>, and what happens <em>next</em>.</p>
+
+    <div class="example-box" style="background:#eceff1; border-color:#b0bec5;">
+      <div class="label" style="color:#37474f;">🖼️ Today's Picture</div>
+      <p style="font-size:11pt;">Imagine this: <strong>A cat wearing tiny rain boots is standing at the edge of a huge puddle. There's a little frog sitting on a leaf in the middle of the puddle, and they're staring at each other. It's a gray, rainy day, but there's one bright rainbow in the sky.</strong></p>
+    </div>
+
+    <div class="tip">💡 <strong>Writing Tip:</strong> Use your senses! What do you see, hear, and feel in this picture?</div>
+  </div>
+
+  <!-- Worksheet: Picture Description -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Picture Description Template — cut or fold here</div>
+  <div class="worksheet">
+    <h3>✏️ Describe a Picture</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <div style="background:#f5f5f5; border-radius:10px; padding:14px; margin:12px 0; border:2px dashed #bbb; text-align:center;">
+      <p style="font-size:10pt; color:#666;">🖼️ <strong>The Picture:</strong> A cat in tiny rain boots at the edge of a big puddle. A frog sits on a leaf in the middle. Rainy day with one rainbow in the sky.</p>
+      <p style="font-size:9pt; color:#999; margin-top:4px;">(Picture this in your mind — or a parent can find a similar image to show you!)</p>
+    </div>
+
+    <p style="margin-top:14px; font-weight:600; color:#37474f;">🔍 What is happening in the picture RIGHT NOW?</p>
+    <div class="lined-area">
+      <div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+
+    <p style="margin-top:10px; font-weight:600; color:#37474f;">⏪ What do you think happened BEFORE this moment?</p>
+    <div class="lined-area">
+      <div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+
+    <p style="margin-top:10px; font-weight:600; color:#37474f;">⏩ What do you think happens NEXT?</p>
+    <div class="lined-area">
+      <div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+
+    <p style="text-align:center; margin-top:16px; font-size:10pt; color:#7B2FBE;">⭐ Awesome work today, Daario! You crushed it! ⭐</p>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

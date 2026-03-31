@@ -520,5 +520,146 @@
   </div>
 
 <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_LuM_p2MaEWI" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
 </body>
 </html>

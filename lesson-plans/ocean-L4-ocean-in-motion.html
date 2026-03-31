@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean in Motion — Ocean Explorers Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #0984E3;
+      padding-bottom: 10px;
+      color: #0984E3;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #E8F4FD;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #74B9FF;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #0984E3;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0652DD;
+      border-bottom: 2px solid #74B9FF;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .inline-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .inline-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .inline-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #E8F4FD;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #0984E3;
+    }
+    .procedure-step strong { color: #0652DD; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .safety-box {
+      background: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .vocab-table th {
+      background: #0984E3;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .vocab-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    .vocab-table tr:nth-child(even) { background: #E8F4FD; }
+    .vocab-table td:first-child { font-weight: bold; color: #0652DD; white-space: nowrap; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #74B9FF;
+      font-weight: bold;
+      color: #0652DD;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #E8F4FD; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .science-concept {
+      background: #E8F4FD;
+      border: 2px solid #74B9FF;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+    }
+    .science-concept h3 { margin-top: 0; }
+    .discussion-hint { font-style: italic; color: #666; font-size: 0.95em; margin-top: 2px; }
+    .diagram-box {
+      border: 2px dashed #0984E3;
+      min-height: 200px;
+      margin: 10px 0;
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .science-concept, .safety-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌊 Ocean in Motion 🌊</h1>
+  <p class="subtitle">Ocean Explorers — Lesson 4 of 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 75–90 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Waves, Density and Ocean Dynamics</span>
+    <span>🎒 <strong>Kit Lesson</strong></span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/ocean-wave-power.png" alt="A massive turquoise ocean wave curling with spray, sunlight streaming through the translucent crest">
+    <div class="caption">The raw power of ocean waves — energy traveling across thousands of miles of open water.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>5-PS1-3</strong> — Make observations and measurements to identify materials based on their properties<br>
+    <strong>5-PS2-1</strong> — Support an argument that the gravitational force exerted by Earth on objects is directed down<br>
+    <strong>5-ESS2-1</strong> — Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact<br><br>
+    <strong>Cross-Cutting Concepts:</strong> Cause and Effect, Systems and System Models, Energy and Matter
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>The ocean is never still. Waves roll across the surface, tides rise and fall twice a day, and massive currents circulate water around the entire planet like a giant conveyor belt. In this lesson, you'll investigate what makes waves, why salt water behaves differently than fresh water, and how differences in temperature and salinity drive deep ocean currents that regulate Earth's climate. You'll build models, run experiments, and discover that the chemistry of seawater is the key to understanding how the whole ocean moves.</p>
+
+  <h2>🔬 The Science</h2>
+
+  <div class="science-concept">
+    <h3>🌊 Anatomy of a Wave</h3>
+    <p>Most ocean waves are created by <strong>wind</strong>. As wind blows across the surface, friction between the air and water transfers energy into the water, creating ripples that grow into waves. The stronger the wind, the longer it blows, and the greater the distance of open water it covers (called the <strong>fetch</strong>), the bigger the waves become.</p>
+    <p>Every wave has the same basic anatomy:</p>
+    <ul>
+      <li><strong>Crest</strong> — the highest point of a wave</li>
+      <li><strong>Trough</strong> — the lowest point between two waves</li>
+      <li><strong>Amplitude</strong> — the height from the resting water level to the crest (half the total wave height)</li>
+      <li><strong>Wavelength</strong> — the distance from one crest to the next crest (or trough to trough)</li>
+      <li><strong>Frequency</strong> — how many waves pass a point in a given time (usually measured in waves per second)</li>
+    </ul>
+    <p>Here's something that surprises most people: <strong>water in a wave doesn't travel forward</strong>. The energy moves forward, but the water molecules move in circles, returning roughly to where they started. That's why a floating seagull bobs up and down as waves pass but doesn't get pushed to shore. Only when waves reach shallow water and "break" does the water actually surge forward.</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>🧂 Salinity: The Ocean's Secret Ingredient</h3>
+    <p>Ocean water contains about <strong>35 parts per thousand (ppt)</strong> of dissolved salts — mostly sodium chloride (table salt), but also magnesium, calcium, and potassium compounds. If you evaporated all the water from the ocean, the salt left behind would cover all the land on Earth in a layer 500 feet thick!</p>
+    <p>Salinity affects water in important ways:</p>
+    <ul>
+      <li><strong>Density:</strong> Salt water is denser (heavier per unit volume) than fresh water. A liter of ocean water weighs about 1,025 grams compared to 1,000 grams for fresh water. This is why it's easier to float in the ocean than in a swimming pool — and why you can float effortlessly in the Dead Sea, where salinity reaches 340 ppt (nearly 10 times normal).</li>
+      <li><strong>Freezing point:</strong> Salt water freezes at about -2°C (28°F) instead of 0°C (32°F). This is why we spread salt on icy roads.</li>
+      <li><strong>Layering:</strong> Water with different salinities doesn't mix easily. Denser, saltier water sinks below lighter, fresher water, creating distinct layers — just like oil floating on water.</li>
+    </ul>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/salt-fresh-boundary.png" alt="Aerial view showing the visible boundary where ocean salt water meets river fresh water, with dramatically different colors">
+    <div class="caption">Where river meets ocean — the visible boundary between fresh and salt water, caused by differences in density and sediment.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>🌡️ Thermohaline Circulation: The Global Conveyor Belt</h3>
+    <p>The word "thermohaline" comes from <em>thermo</em> (heat) and <em>haline</em> (salt). <strong>Thermohaline circulation</strong> is a system of deep ocean currents driven by differences in water density, which depends on both temperature and salinity.</p>
+    <p>Here's how it works: In the North Atlantic near Greenland, cold winds chill the surface water. As sea ice forms, salt is left behind, making the remaining water extra cold <em>and</em> extra salty — and therefore very dense. This dense water sinks to the ocean floor and flows south along the bottom of the Atlantic, eventually reaching Antarctica. There it joins a massive current flowing east around the Southern Ocean, then north into the Indian and Pacific Oceans. As the deep water slowly warms and rises, it flows back along the surface toward the Atlantic, completing the loop.</p>
+    <p>This "global conveyor belt" takes about <strong>1,000 years</strong> to complete one full cycle. It distributes heat around the planet and is one of the most important regulators of Earth's climate. The <strong>Gulf Stream</strong>, which carries warm water from the Gulf of Mexico to northern Europe, is part of this system — it's why London has milder winters than cities at the same latitude in Canada.</p>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/thermohaline-circulation.png" alt="Watercolor world map showing thermohaline circulation with warm currents in red and cold currents in blue">
+    <div class="caption">The great ocean conveyor belt — warm surface currents (red) and cold deep currents (blue) circulate water around the globe.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>🌙 Tides: The Moon's Gravitational Pull</h3>
+    <p><strong>Tides</strong> are the regular rise and fall of sea level caused by the gravitational pull of the Moon (and to a lesser extent, the Sun). The Moon's gravity pulls on everything on Earth, but because water is fluid, it responds more visibly than solid ground.</p>
+    <p>The Moon's gravity pulls ocean water toward it, creating a bulge of high water on the side of Earth facing the Moon. But there's also a bulge on the <em>opposite</em> side of Earth — this happens because the Earth itself is being pulled toward the Moon, leaving the far-side water "behind." As Earth rotates through these two bulges every 24 hours, most coastlines experience two high tides and two low tides each day.</p>
+    <ul>
+      <li><strong>Spring tides</strong> happen when the Sun, Moon, and Earth line up (during full and new moons). The Sun's gravity adds to the Moon's, producing extra-high highs and extra-low lows.</li>
+      <li><strong>Neap tides</strong> happen when the Sun and Moon are at right angles to Earth (during quarter moons). Their gravitational pulls partially cancel, producing smaller tidal ranges.</li>
+    </ul>
+    <p>Tidal ranges vary wildly around the world. The Bay of Fundy in Canada has the most extreme tides on Earth — the difference between high and low tide can be over <strong>50 feet</strong> (16 meters)!</p>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/tides-diagram.png" alt="Watercolor illustration of Earth and Moon showing tidal bulges, with high and low tide positions labeled">
+    <div class="caption">The Moon's gravity creates tidal bulges on both sides of Earth — as Earth rotates, coastlines experience high and low tides.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary</strong>
+    <table class="vocab-table">
+      <tr><th>Term</th><th>Definition</th></tr>
+      <tr><td>Wave</td><td>A disturbance that transfers energy through water (or another medium) without permanently moving the water itself</td></tr>
+      <tr><td>Crest</td><td>The highest point of a wave</td></tr>
+      <tr><td>Trough</td><td>The lowest point between two waves</td></tr>
+      <tr><td>Amplitude</td><td>The height from the resting water level to the crest of a wave</td></tr>
+      <tr><td>Wavelength</td><td>The distance from one wave crest to the next</td></tr>
+      <tr><td>Frequency</td><td>How many waves pass a point in a given amount of time</td></tr>
+      <tr><td>Salinity</td><td>The amount of dissolved salt in water, measured in parts per thousand (ppt)</td></tr>
+      <tr><td>Density</td><td>The mass of a substance per unit of volume (how heavy something is for its size)</td></tr>
+      <tr><td>Tide</td><td>The regular rise and fall of sea level caused by the Moon's gravitational pull</td></tr>
+      <tr><td>Spring tide</td><td>Extra-large tides when Sun, Moon, and Earth align (full and new moons)</td></tr>
+      <tr><td>Neap tide</td><td>Smaller tides when the Sun and Moon are at right angles to Earth (quarter moons)</td></tr>
+      <tr><td>Thermohaline</td><td>Relating to temperature (thermo) and salt content (haline) of ocean water</td></tr>
+      <tr><td>Current</td><td>A continuous flow of water in a particular direction</td></tr>
+      <tr><td>Convection</td><td>The circular movement of fluid caused by temperature differences — warm fluid rises, cool fluid sinks</td></tr>
+    </table>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧪 From Your Science Kit</h3>
+    <ul>
+      <li>2 graduated cylinders or clear measuring cups (100 mL or larger)</li>
+      <li>1 set of food coloring (4 colors: red, blue, green, yellow)</li>
+      <li>1 clear plastic bottle with cap (16 oz)</li>
+      <li>1 bag of sea salt, fine (200 g)</li>
+      <li>1 thermometer (liquid or digital)</li>
+      <li>1 set of density beads or a hydrometer</li>
+      <li>2 plastic pipettes/eyedroppers</li>
+      <li>1 bottle of mineral oil (4 oz)</li>
+    </ul>
+
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>1 large clear baking dish or plastic container (for thermohaline model)</li>
+      <li>Ice cubes (at least 4–6)</li>
+      <li>2 raw eggs</li>
+      <li>2 tall clear glasses or jars</li>
+      <li>Warm water (not boiling — about 40°C/104°F)</li>
+      <li>Room temperature water</li>
+      <li>Measuring spoons (tablespoon)</li>
+      <li>Stirring spoon</li>
+      <li>Paper towels</li>
+      <li>Pencil and printed Student Worksheet</li>
+    </ul>
+
+    <h3>🧰 Optional / Nice to Have</h3>
+    <ul>
+      <li>Kitchen scale (for mass measurements in density calculations)</li>
+      <li>Additional clear containers (for more density column layers)</li>
+      <li>Stopwatch or timer</li>
+      <li>Camera or phone (to photograph thermohaline currents forming)</li>
+    </ul>
+  </div>
+
+  <div class="safety-box">
+    ⚠️ <strong>Safety Notes:</strong> Use warm water, not boiling, for the thermohaline experiment. Food coloring stains — cover your work surface with newspaper or a plastic tablecloth and wear old clothes. The mineral oil in the wave bottle is slippery if spilled — clean up immediately.
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Build a Wave Bottle (10 min)</strong><br>
+    Fill your clear plastic bottle about two-thirds full with water. Add 3–4 drops of blue food coloring and swirl gently. Now slowly pour mineral oil on top until the bottle is nearly full (leave about an inch of air space). Screw the cap on tightly. Hold the bottle on its side and slowly tilt one end up and down — watch the waves form at the boundary between the water and oil! Observe:
+    <ul>
+      <li>Tilt gently for small waves. What do you notice about the wavelength and amplitude?</li>
+      <li>Tilt more sharply for bigger waves. How do the wavelength and amplitude change?</li>
+      <li>Try tilting at different speeds. Can you change the frequency (how many waves pass per second)?</li>
+    </ul>
+    Sketch the waves on your worksheet and label the crest, trough, amplitude, and wavelength.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Density Column: Ocean Stratification (15 min)</strong><br>
+    You'll make four salt solutions of different concentrations to model ocean layers:
+    <ul>
+      <li><strong>Layer 1 (densest):</strong> 1 cup warm water + 6 tablespoons salt. Stir until dissolved. Add 4 drops of red food coloring.</li>
+      <li><strong>Layer 2:</strong> 1 cup warm water + 4 tablespoons salt. Add 4 drops of green food coloring.</li>
+      <li><strong>Layer 3:</strong> 1 cup warm water + 2 tablespoons salt. Add 4 drops of blue food coloring.</li>
+      <li><strong>Layer 4 (least dense):</strong> 1 cup warm water + 0 tablespoons salt (plain fresh water). Add 4 drops of yellow food coloring.</li>
+    </ul>
+    Now carefully pour Layer 1 (red, densest) into a tall clear glass. Using a pipette or by pouring very slowly over the back of a spoon, add Layer 2 (green) on top. Repeat with Layer 3 (blue) and Layer 4 (yellow). If done carefully, you should see four distinct colored layers! Record your observations. Why do the layers stay separated?
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Pouring tip:</strong> The secret to clean layers is pouring <em>very</em> slowly. Hold a spoon just above the surface of the liquid below, touching the glass. Pour onto the back of the spoon so the water flows gently sideways instead of plunging down and mixing.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Salt vs. Fresh Buoyancy Test (10 min)</strong><br>
+    Fill two tall glasses with water. Leave one as plain fresh water. In the other, dissolve salt one tablespoon at a time, stirring after each addition. Gently lower a raw egg into the fresh water — it should sink. Now lower a raw egg into the salt water. Keep adding salt (and stirring) until the egg floats. Count how many tablespoons of salt it takes! Record the amount on your worksheet. <strong>Why does the egg float?</strong> The salt increases the water's density until it becomes denser than the egg, pushing the egg upward with greater buoyant force.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Thermohaline Current Model (15 min)</strong><br>
+    Fill the large clear baking dish with room-temperature water (about 3 inches deep). Let it settle until completely still. Now, working quickly:
+    <ul>
+      <li>On <strong>one end</strong>, carefully place 3–4 ice cubes that have been dyed blue (freeze water with blue food coloring the night before, or drip blue food coloring onto regular ice cubes).</li>
+      <li>On the <strong>other end</strong>, use a pipette to slowly add warm water mixed with red food coloring and 2 tablespoons of dissolved salt.</li>
+    </ul>
+    Watch what happens! The cold blue water should sink and creep along the bottom toward the warm end. The warm red salty water may initially sink (because it's salty) but as it cools, you'll see complex circulation patterns forming. Sketch what you observe on your worksheet. This is a miniature version of the thermohaline circulation that drives deep ocean currents around the globe!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Tides: Diagram and Discuss (10 min)</strong><br>
+    Look at the tides diagram in The Science section above. On your worksheet, you'll find an outline of Earth and the Moon. Draw the tidal bulges in the correct positions and label high tide and low tide. Then draw a second diagram showing the Sun, Moon, and Earth lined up for a spring tide, and a third showing them at right angles for a neap tide. Use arrows to show the direction of gravitational pull.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Analyze and Connect (10 min)</strong><br>
+    Complete the analysis questions on your worksheet. Think about how all of today's experiments connect: waves transfer energy, salinity creates density differences, density differences drive currents, and gravity from the Moon creates tides. The ocean is a single, interconnected system where everything affects everything else.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>1. The Gulf Stream carries warm water from the Caribbean to northern Europe. How does this affect Europe's climate? What might happen if thermohaline circulation slowed or stopped?</strong><br>
+    <span class="discussion-hint">Look for: The Gulf Stream makes Europe much warmer than it would otherwise be — London has mild winters even though it's as far north as parts of Canada that are frigid. If circulation slowed or stopped, Europe could become much colder. They might also mention effects on weather patterns and marine ecosystems.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>2. The Dead Sea has a salinity of about 340 ppt — nearly 10 times saltier than normal ocean water. Why is it so salty, and why can people float in it so easily?</strong><br>
+    <span class="discussion-hint">They might say: The Dead Sea has no outlet — water flows in from the Jordan River but can only leave by evaporation, which leaves all the salt behind. Over thousands of years, salt concentrated. People float because the extremely salty water is much denser than the human body, so the buoyant force pushes them up easily.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>3. In your wave bottle, the water moved in a wave pattern but didn't actually travel from one end to the other. How does this help explain why a seagull floating on the ocean bobs up and down but doesn't get carried to shore?</strong><br>
+    <span class="discussion-hint">Look for: Waves transfer energy, not water. The water molecules move in circles — up, forward, down, back — returning to roughly where they started. So the seagull moves up and down with the passing energy but stays in the same general spot. Only when waves break near shore does water actually surge forward.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>4. Your density column showed that saltier water sinks below fresher water. How does this relate to what happens when a river flows into the ocean? Which water ends up on top?</strong><br>
+    <span class="discussion-hint">Look for: The fresh river water is less dense than salt water, so it flows on top of the ocean water. This creates layers — you can sometimes see a visible boundary where the two waters meet. The salty ocean water stays underneath because it's denser.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>5. Marine animals like salmon travel between fresh and salt water. What challenges do you think this creates for their bodies? How might they adapt?</strong><br>
+    <em>Hint: Think about what would happen if you put a freshwater fish directly into salt water.</em><br>
+    <span class="discussion-hint">They might say: Moving between fresh and salt water means the salt concentration outside the body keeps changing. In salt water, water gets pulled out of the fish's body (osmosis); in fresh water, water floods in. Salmon have special cells in their gills that actively pump salt in or out to maintain balance — this is called osmoregulation. It's very stressful on their bodies.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>6. Spring tides happen during full and new moons. If you were planning a beach trip and wanted the widest possible beach to explore, would you go during a spring tide or a neap tide? Would you go at high tide or low tide? Explain.</strong><br>
+    <span class="discussion-hint">Look for: Go during a spring tide at LOW tide. Spring tides have the biggest difference between high and low, so at low tide the water pulls back the farthest, exposing the widest beach and the most tide pools. A neap tide low would expose less beach because the tidal range is smaller.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>7. Climate scientists are concerned that melting ice caps could slow thermohaline circulation. Using what you learned about density, explain why a large influx of fresh meltwater in the North Atlantic could disrupt the conveyor belt.</strong><br>
+    <span class="discussion-hint">Look for: Thermohaline circulation depends on cold, salty water being dense enough to sink. Fresh meltwater is much less dense than salty ocean water. A huge influx of fresh water would dilute the surface water, making it less salty and less dense — so it wouldn't sink. If the sinking stops, the whole conveyor belt could slow or shut down, disrupting global climate patterns.</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📊 <strong>Density Calculations:</strong> If you have a kitchen scale, measure the mass and volume of each salt solution from Step 2. Calculate density (mass ÷ volume) for each. Graph salt concentration vs. density. Is the relationship linear?</li>
+      <li>🌍 <strong>Current Mapping:</strong> Research the world's major ocean currents (Gulf Stream, Kuroshio, Benguela, Antarctic Circumpolar). Plot them on a world map. How do warm and cold currents affect the climates of nearby continents?</li>
+      <li>🌊 <strong>Tsunami vs. Wind Waves:</strong> Research how tsunamis differ from wind-generated waves. Compare wavelength, speed, and what generates them. Why can a tsunami cross an entire ocean without anyone noticing?</li>
+      <li>🧊 <strong>Ice Melt Investigation:</strong> Freeze equal amounts of salt water and fresh water. Time how long each takes to melt at room temperature. Which melts faster? What does this tell you about sea ice vs. freshwater ice?</li>
+      <li>📝 <strong>Unit Capstone:</strong> Write a one-page essay connecting all four Ocean Explorers lessons. How do coral reefs (Lesson 1), deep sea life (Lesson 2), tidal zones (Lesson 3), and ocean motion (Lesson 4) all depend on each other as parts of one giant system?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is Lesson 4 of 4</strong> in the Ocean Explorers unit — the grand finale! Encourage students to make connections back to previous lessons: how do currents affect coral reefs (L1)? How does density layering affect deep sea creatures (L2)? How do tides shape the intertidal zone (L3)?</li>
+      <li><strong>Blue ice cubes:</strong> Freeze water with blue food coloring the night before. If you forget, dripping food coloring onto regular ice cubes works, but the color disperses faster and the effect is less dramatic.</li>
+      <li><strong>Density column troubleshooting:</strong> If your layers mix, you're pouring too fast. Use the spoon method. Warm water helps dissolve the salt fully — undissolved salt grains will sink and disrupt the layers. Let solutions cool to the same temperature before layering.</li>
+      <li><strong>Egg float expectations:</strong> A raw egg in the shell typically floats at about 5–7 tablespoons of salt per cup of water (roughly 10–12% salinity). Fresh eggs are slightly denser than older eggs, so your results may vary. If the egg floats with less salt, it may be an older egg — this is actually a fun tangent about egg freshness testing!</li>
+      <li><strong>Thermohaline model:</strong> This works best in a long, shallow container (a glass baking dish is ideal). The key is to start with completely still water and add the colored water very gently. The circulation patterns may take 2–3 minutes to become clearly visible. Photograph or video the results — they're beautiful.</li>
+      <li><strong>Wave bottle longevity:</strong> The sealed wave bottle will last for months. Students can continue observing and experimenting with it. Encourage them to try different tilt angles and speeds.</li>
+      <li><strong>Gifted learner note:</strong> For advanced students, introduce the concept that density = mass/volume and have them actually calculate densities from their data. The relationship between salt concentration and density is approximately linear, which they can verify by graphing.</li>
+      <li><strong>Assessment:</strong> Can the student label all parts of a wave? Can they explain why salt water is denser than fresh water? Can they describe thermohaline circulation in their own words? Can they explain the cause of tides using the word "gravity"?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌊 Student Worksheet — Ocean in Motion 🌊</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background: #0984E3;">🌊 Part 1: Wave Bottle Observations</h2>
+    <p><strong>Sketch the waves you observe in your wave bottle. Label the crest, trough, amplitude, and wavelength.</strong></p>
+    <div class="diagram-box">
+      <p style="font-size: 9pt; color: #666;">Draw a side view of 2–3 waves. Label: crest (top), trough (bottom), amplitude (height from rest to crest), wavelength (distance crest to crest).</p>
+    </div>
+
+    <table class="data-table">
+      <tr>
+        <th style="width: 35%;">Observation</th>
+        <th style="width: 65%;">What I Noticed</th>
+      </tr>
+      <tr><td>Gentle tilt (small waves)</td><td style="background: white;"></td></tr>
+      <tr><td>Sharp tilt (big waves)</td><td style="background: white;"></td></tr>
+      <tr><td>Fast tilting (high frequency)</td><td style="background: white;"></td></tr>
+      <tr><td>Does the water travel end to end?</td><td style="background: white;"></td></tr>
+    </table>
+
+    <h2 style="background: #0984E3;">🧂 Part 2: Density Column Data</h2>
+    <table class="data-table">
+      <tr>
+        <th style="width: 18%;">Layer</th>
+        <th style="width: 18%;">Salt (tbsp)</th>
+        <th style="width: 16%;">Color</th>
+        <th style="width: 16%;">Position<br><span style="font-size: 9pt; font-weight: normal;">(top to bottom)</span></th>
+        <th style="width: 16%;">Mass (g)<br><span style="font-size: 9pt; font-weight: normal;">(optional)</span></th>
+        <th style="width: 16%;">Density<br><span style="font-size: 9pt; font-weight: normal;">(g/mL)</span></th>
+      </tr>
+      <tr><td>Layer 1</td><td style="background: white;">6</td><td style="background: white;">Red</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Layer 2</td><td style="background: white;">4</td><td style="background: white;">Green</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Layer 3</td><td style="background: white;">2</td><td style="background: white;">Blue</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Layer 4</td><td style="background: white;">0</td><td style="background: white;">Yellow</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <p><strong>Why do the layers stay separated? Explain using the word "density."</strong></p>
+    <div class="notes-lines"><p></p><p></p><p></p></div>
+
+    <h2 style="background: #0984E3;">🥚 Part 3: Egg Buoyancy Test</h2>
+    <table class="data-table">
+      <tr>
+        <th style="width: 40%;">Test</th>
+        <th style="width: 60%;">Result</th>
+      </tr>
+      <tr><td>Egg in fresh water</td><td style="background: white;"></td></tr>
+      <tr><td>Tablespoons of salt needed to float</td><td style="background: white;"></td></tr>
+      <tr><td>Egg in salt water</td><td style="background: white;"></td></tr>
+    </table>
+
+    <p><strong>Why does the egg float in salt water but sink in fresh water?</strong></p>
+    <div class="notes-lines"><p></p><p></p></div>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #0984E3;">🌡️ Part 4: Thermohaline Current Sketch</h2>
+    <p><strong>Sketch what happened when you added blue ice water and warm red salt water to opposite ends of the container. Use arrows to show the direction the currents moved.</strong></p>
+    <div class="diagram-box" style="min-height: 220px;">
+      <p style="font-size: 9pt; color: #666;">Draw the container from the side. Show the blue cold water sinking and moving along the bottom. Show the red warm water at the surface. Use arrows for current direction. Label: cold/dense, warm/less dense.</p>
+    </div>
+
+    <p><strong>What force caused the cold water to sink?</strong> ________________________________</p>
+    <p><strong>How is this model similar to real thermohaline circulation?</strong></p>
+    <div class="notes-lines"><p></p><p></p></div>
+
+    <h2 style="background: #0984E3;">🌙 Part 5: Tides Diagrams</h2>
+    <p><strong>Draw three diagrams below:</strong></p>
+
+    <p><strong>Diagram A: Basic Tides</strong> — Draw Earth with the Moon to one side. Add tidal bulges and label high tide and low tide.</p>
+    <div class="diagram-box" style="min-height: 180px;">
+      <p style="font-size: 9pt; color: #666;">Show tidal bulge on the side facing the Moon AND on the opposite side. Label both as "High Tide." Label the sides in between as "Low Tide."</p>
+    </div>
+
+    <p><strong>Diagram B: Spring Tide</strong> — Show Sun, Moon, and Earth lined up.</p>
+    <div class="diagram-box" style="min-height: 140px;">
+      <p style="font-size: 9pt; color: #666;">Sun and Moon on the same side (new moon) OR on opposite sides (full moon). Note: extra-large tidal bulges.</p>
+    </div>
+
+    <p><strong>Diagram C: Neap Tide</strong> — Show Sun and Moon at right angles to Earth.</p>
+    <div class="diagram-box" style="min-height: 140px;">
+      <p style="font-size: 9pt; color: #666;">Moon at 90° from Sun relative to Earth (quarter moon). Note: smaller tidal bulges.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #0984E3;">🤔 Part 6: Analysis Questions</h2>
+
+    <div class="question-box">
+      <strong>1. In the wave bottle, you noticed that the water doesn't travel forward with the wave — only the energy does. Explain this in your own words.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. Your density column had four layers. What property of salt water causes the layers to separate? What would happen if you stirred the column vigorously?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. In your thermohaline model, what role did temperature play? What role did salinity play? How did both work together to create currents?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>4. Explain the difference between a spring tide and a neap tide. When during the lunar cycle does each occur, and why?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>5. Connect two or more of today's experiments to each other. How do waves, salinity, density, currents, and tides all work together as part of one ocean system?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3 style="color: #333; margin-top: 15px;">Wave Bottle Expected Observations</h3>
+      <ul>
+        <li><strong>Gentle tilt:</strong> Small waves with short amplitude and relatively long wavelength. Waves move slowly.</li>
+        <li><strong>Sharp tilt:</strong> Larger waves with greater amplitude. Wavelength may be shorter as more energy is packed into the wave.</li>
+        <li><strong>Fast tilting:</strong> Higher frequency (more waves per second). Waves are closer together.</li>
+        <li><strong>Water travel:</strong> The water does NOT travel end to end. The wave pattern moves, but the water (and oil) return to roughly the same position. The boundary between water and oil oscillates but stays in place.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Density Column Expected Results</h3>
+      <table class="data-table" style="font-size: 10pt;">
+        <tr>
+          <th>Layer</th>
+          <th>Salt (tbsp/cup)</th>
+          <th>Expected Position</th>
+          <th>Approximate Density</th>
+        </tr>
+        <tr><td>Layer 1 (Red)</td><td style="background: white;">6</td><td style="background: white;">Bottom</td><td style="background: white;">~1.10–1.14 g/mL</td></tr>
+        <tr><td>Layer 2 (Green)</td><td style="background: white;">4</td><td style="background: white;">Second from bottom</td><td style="background: white;">~1.07–1.10 g/mL</td></tr>
+        <tr><td>Layer 3 (Blue)</td><td style="background: white;">2</td><td style="background: white;">Second from top</td><td style="background: white;">~1.03–1.05 g/mL</td></tr>
+        <tr><td>Layer 4 (Yellow)</td><td style="background: white;">0</td><td style="background: white;">Top</td><td style="background: white;">~1.00 g/mL</td></tr>
+      </table>
+      <p><em>The layers stay separated because denser (saltier) water sinks below less dense (fresher) water. Gravity pulls heavier fluid down. This is exactly what happens in the ocean — deep water is cold and salty, surface water is warmer and fresher.</em></p>
+
+      <h3 style="color: #333; margin-top: 18px;">Egg Buoyancy Expected Results</h3>
+      <ul>
+        <li><strong>Fresh water:</strong> Egg sinks to the bottom (the egg is denser than fresh water).</li>
+        <li><strong>Salt needed:</strong> Typically 5–7 tablespoons per cup of water (roughly 6 tablespoons for most eggs). Fresh eggs may need slightly more salt than older eggs.</li>
+        <li><strong>Salt water:</strong> Egg floats at or near the surface. The salt water's density now exceeds the egg's density, so buoyant force pushes the egg up.</li>
+      </ul>
+      <p><em>Fun fact: This is actually a classic egg freshness test! A very fresh egg sinks in plain water, while an old egg (with a larger air cell inside) may float. But in salt water concentrated enough, both sink.</em></p>
+
+      <h3 style="color: #333; margin-top: 18px;">Thermohaline Model Expected Observations</h3>
+      <ul>
+        <li>The blue ice water sinks immediately and creeps along the bottom of the container toward the opposite end.</li>
+        <li>The warm red salty water may initially sink (high salinity makes it dense despite being warm) or spread along the surface, depending on how much salt was added.</li>
+        <li>Over 2–5 minutes, a visible circulation pattern forms: cold water along the bottom, warmer water along the top, with mixing zones in between.</li>
+        <li><strong>What force causes sinking?</strong> Gravity. Cold, salty water is denser, so gravity pulls it downward.</li>
+        <li><strong>Connection to real circulation:</strong> In the real ocean, cold salty water forms near the poles and sinks to the deep ocean, flowing toward the equator. Warm surface water flows toward the poles. This is the global conveyor belt.</li>
+      </ul>
+      <p><em>If results are unclear: Try a longer, narrower container. Add the blue and red water more slowly. The effect is most visible in the first 3 minutes before mixing becomes dominant.</em></p>
+
+      <h3 style="color: #333; margin-top: 18px;">Analysis Question Answers</h3>
+
+      <p><strong>Q1 (Wave energy vs. water movement):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"When a wave moves through the bottle, the energy travels from one end to the other, but the actual water doesn't go anywhere. The water moves up and down (and in small circles) but returns to where it started. It's like doing 'the wave' in a stadium — the wave pattern moves around the stadium, but the people stay in their seats."</p>
+
+      <p><strong>Q2 (Density column layering):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"The layers separate because each has a different density. The saltiest water is the densest, so gravity pulls it to the bottom. Each layer floats on top of the denser layer below it. If you stirred the column, the layers would mix together into one uniform green-brown solution because you'd distribute the salt evenly throughout."</p>
+
+      <p><strong>Q3 (Temperature and salinity in thermohaline model):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Cold water is denser than warm water, so the blue ice water sank. Salty water is also denser, which made the red water heavier too. Together, temperature and salinity determine how dense the water is and whether it sinks or floats. In the real ocean, the coldest and saltiest water near the poles sinks and drives deep currents."</p>
+
+      <p><strong>Q4 (Spring vs. neap tides):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Spring tides have the biggest difference between high and low tide. They happen during full and new moons when the Sun, Moon, and Earth are in a line, so the Sun's gravity adds to the Moon's. Neap tides have the smallest difference and happen during quarter moons when the Sun and Moon pull at right angles, partially canceling each other out."</p>
+
+      <p><strong>Q5 (Connecting the experiments):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">Accept any thoughtful connection. Example: "Salinity affects density, which drives thermohaline currents. Those currents move water around the globe, which affects where warm and cold water are, which affects how big waves can get because wind patterns depend on ocean temperature. Tides add another layer of motion caused by gravity. Everything is connected — the chemistry of the water (salinity), the physics of energy transfer (waves), gravity (tides and sinking water), and temperature all work together."</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Gulf Stream (Q1):</strong> The Gulf Stream carries warm tropical water to Europe, making winters milder. London (51°N) has average January temps around 5°C; Churchill, Manitoba (58°N) averages -26°C. If thermohaline circulation stopped, Europe could become much colder.</li>
+        <li><strong>Dead Sea (Q2):</strong> The Dead Sea has no outlet — water enters from the Jordan River but can only leave by evaporation, concentrating salt over thousands of years. Its extreme salinity (340 ppt) makes the water so dense that a human body floats effortlessly.</li>
+        <li><strong>Marine animal adaptation (Q5):</strong> Fish like salmon have special cells in their gills called chloride cells that actively pump salt in or out to maintain their internal salt balance (osmoregulation). Moving between fresh and salt water is very stressful and requires significant biological adaptation.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Troubleshooting</h3>
+      <ul>
+        <li><strong>Density column layers mixing:</strong> Pour more slowly. Make sure all solutions are the same temperature before layering. Use the back-of-spoon technique. If layers mix, let the glass sit undisturbed for 10 minutes — partial separation may occur.</li>
+        <li><strong>Egg doesn't float:</strong> Add more salt! Some eggs are denser than others. Try up to 8 tablespoons per cup. Make sure the salt is fully dissolved before testing.</li>
+        <li><strong>Thermohaline currents hard to see:</strong> Use more food coloring. A darker room can help. Try viewing from the side at eye level. The patterns are subtle at first — patience is key.</li>
+        <li><strong>Wave bottle doesn't show clear waves:</strong> Make sure you have enough mineral oil to create a visible layer. The air gap at the top helps. Tilt slowly and steadily rather than shaking.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Success Criteria</h3>
+      <ul>
+        <li>Student can label all five parts of a wave (crest, trough, amplitude, wavelength, frequency).</li>
+        <li>Student can explain why salt water is denser than fresh water and how this causes layering.</li>
+        <li>Student can describe thermohaline circulation using the words "temperature," "salinity," and "density."</li>
+        <li>Student can draw accurate tide diagrams showing tidal bulges and the difference between spring and neap tides.</li>
+        <li>Student can connect at least two experiments to real-world ocean phenomena.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_9clIzMwEr7c" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

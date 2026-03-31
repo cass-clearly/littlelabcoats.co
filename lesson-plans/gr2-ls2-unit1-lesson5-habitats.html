@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habitats: The Right Place for the Right Plant — Unit 1, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      padding-left: 10px;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Habitat cards */
+    .habitat-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .habitat-card {
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      border: 2px solid;
+    }
+    .habitat-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .habitat-card .name { font-weight: bold; font-size: 12pt; margin-bottom: 4px; }
+    .habitat-card .desc { font-size: 9pt; color: #444; }
+    .desert { background: #fff3e0; border-color: #fb8c00; }
+    .desert .name { color: #e65100; }
+    .rainforest { background: #e8f5e9; border-color: #2e7d32; }
+    .rainforest .name { color: #1b5e20; }
+    .wetland { background: #F3E8FF; border-color: #7B2FBE; }
+    .wetland .name { color: #7B2FBE; }
+    /* Challenge cards */
+    .challenge-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .challenge-card {
+      background: #f9fbe7;
+      border: 2px dashed #aed581;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 10pt;
+    }
+    .challenge-card .clue { font-style: italic; color: #33691e; margin-bottom: 6px; }
+    .challenge-card .answer { font-weight: bold; color: #2e7d32; }
+    /* Worksheet */
+    .worksheet-header {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 10pt;
+    }
+    .comparison-table th {
+      padding: 12px 8px;
+      border: 2px solid #333;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .comparison-table td {
+      border: 2px solid #333;
+      padding: 8px;
+      height: 48px;
+      vertical-align: top;
+    }
+    .comparison-table .row-label {
+      background: #e8f5e9;
+      font-weight: bold;
+      color: #1b5e20;
+      width: 22%;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .th-desert { background: #fff3e0; color: #e65100; }
+    .th-rainforest { background: #e8f5e9; color: #1b5e20; }
+    .th-wetland { background: #F3E8FF; color: #7B2FBE; }
+    .th-label { background: #f5f5f5; }
+    .draw-box {
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 14px 0;
+      min-height: 180px;
+    }
+    .draw-box .prompt {
+      font-size: 10pt;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-section {
+      margin-top: 16px;
+    }
+    .ak-section h3 {
+      color: #1b5e20;
+      border-color: #a5d6a7;
+    }
+    .ak-habitat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 10px 0;
+    }
+    .ak-col {
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 10pt;
+    }
+    .ak-col h4 {
+      margin: 0 0 8px 0;
+      font-size: 11pt;
+    }
+    .ak-col ul { padding-left: 18px; }
+    .ak-col li { margin-bottom: 3px; }
+    .ak-desert { background: #fff3e0; border: 1px solid #fb8c00; }
+    .ak-desert h4 { color: #e65100; }
+    .ak-rainforest { background: #e8f5e9; border: 1px solid #2e7d32; }
+    .ak-rainforest h4 { color: #1b5e20; }
+    .ak-wetland { background: #F3E8FF; border: 1px solid #7B2FBE; }
+    .ak-wetland h4 { color: #7B2FBE; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .habitat-card,
+      .challenge-card, .habitat-cards, .challenge-cards {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_mL4XwOH-8C0">
+
+  <h1>🌵 Habitats: The Right Place for the Right Plant 🌿</h1>
+  <p class="subtitle">Life Science — Unit 1, Lesson 5 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Ecosystems</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🏜️ 🌲 🌊</div>
+    <div class="caption">Desert, rainforest, wetland — every plant has its perfect place. Can you figure out which is which?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS4-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>compare</em> at least 3 habitats, <em>explain</em> why specific plants are adapted to each habitat, and <em>match</em> plants to the habitat conditions that support them.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Different plants are adapted to different environments — the cactus thrives where a rainforest fern would die, and vice versa. Plants have evolved features that match their habitat's conditions. A <strong>habitat</strong> is the natural home of a living thing, and every habitat has its own amounts of water, sunlight, and temperature that plants must be suited to survive.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> habitat, adaptation, climate, moisture, native species, invasive species
+  </div>
+
+  <h2>🌍 Three Habitats to Know</h2>
+
+  <div class="habitat-cards">
+    <div class="habitat-card desert">
+      <span class="emoji">🏜️</span>
+      <div class="name">Desert</div>
+      <div class="desc">Very little water · Intense sunlight · Hot days, cold nights · Sandy or rocky soil</div>
+    </div>
+    <div class="habitat-card rainforest">
+      <span class="emoji">🌿</span>
+      <div class="name">Rainforest</div>
+      <div class="desc">Lots of rain · Shaded understory · Warm and humid · Rich dark soil</div>
+    </div>
+    <div class="habitat-card wetland">
+      <span class="emoji">🦆</span>
+      <div class="name">Wetland / Pond</div>
+      <div class="desc">Waterlogged or flooded · Medium sunlight · Mild temperature · Muddy, wet soil</div>
+    </div>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Setting Up the Habitat Stations</h3>
+    <ul>
+      <li>3 bowls or containers (one per habitat)</li>
+      <li>Dry sand or dry soil (Desert bowl)</li>
+      <li>Moist dark soil (Rainforest bowl)</li>
+      <li>Water or very wet soil (Wetland bowl)</li>
+      <li>Plastic wrap (to cover the Rainforest bowl — traps humidity)</li>
+      <li>A lamp or flashlight (aimed at the Desert bowl)</li>
+      <li>Labels: write "Desert 🏜️", "Rainforest 🌿", "Wetland 🦆" on paper and place near each bowl</li>
+    </ul>
+    <h3>🧰 For the Activity</h3>
+    <ul>
+      <li>Plant challenge description cards (write the 4 clues below on slips of paper)</li>
+      <li>Crayons or markers</li>
+      <li>Student Worksheet (last pages of this lesson)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Set Up Habitat Stations (5 min, before lesson)</strong><br>
+    Arrange the 3 bowls on a table before students arrive:
+    <ul>
+      <li><strong>Desert:</strong> Fill with dry sand or soil. Point a lamp at it. No water added.</li>
+      <li><strong>Rainforest:</strong> Fill with moist dark soil. Cover with plastic wrap. Set in a shaded spot away from the lamp.</li>
+      <li><strong>Wetland:</strong> Fill with shallow water or very wet, muddy soil.</li>
+    </ul>
+    Ask the kids: <em>"What do you notice about each bowl? How are they different? Which one would YOU want to live in if you were a plant?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Introduce Habitats (5 min)</strong><br>
+    Explain that a <strong>habitat</strong> is the natural home of a living thing — where it gets everything it needs to survive. Plants can't move, so they have to be perfectly suited to wherever they grow.<br><br>
+    Point to each bowl: <em>"This dry, bright bowl is like a desert. This humid, shaded bowl is like a rainforest floor. This wet bowl is like a pond's edge."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Plant Challenge Cards! (15 min)</strong><br>
+    Read each clue card aloud. Students point to (or place the card near) the habitat bowl they think matches.
+    Discuss <em>why</em> after each answer — the reasoning is more important than getting it right.
+  </div>
+
+  <div class="challenge-cards">
+    <div class="challenge-card">
+      <div class="clue">🃏 "I have a thick, waxy coating to hold water and spines instead of leaves."</div>
+      <div class="answer">→ 🏜️ Desert (cactus)</div>
+    </div>
+    <div class="challenge-card">
+      <div class="clue">🃏 "I have huge leaves to catch every drop of sunlight in the shade."</div>
+      <div class="answer">→ 🌿 Rainforest</div>
+    </div>
+    <div class="challenge-card">
+      <div class="clue">🃏 "My roots can handle being underwater for weeks."</div>
+      <div class="answer">→ 🦆 Wetland (mangrove, cattail)</div>
+    </div>
+    <div class="challenge-card">
+      <div class="clue">🃏 "I close up my leaves at night and open them during the day."</div>
+      <div class="answer">→ 🤔 Many plants! Discuss why this helps (water conservation, avoiding cold nights).</div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Go Outside! Your Own Habitat (10 min)</strong><br>
+    Head outside (or look out a window). Ask:
+    <ul>
+      <li><em>"What plants do you see in YOUR habitat right now?"</em></li>
+      <li><em>"Is it wet or dry here? Sunny or shaded? Hot or cold?"</em></li>
+      <li><em>"Why do you think THESE plants grow here and not cactus or ferns?"</em></li>
+    </ul>
+    Students sketch or describe what they observe on their worksheet (see <strong>Part 2 — My Own Backyard Habitat</strong> on the Student Worksheet).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Worksheet &amp; Wrap-Up (10 min)</strong><br>
+    Students complete the 3-column comparison chart on their worksheet. Bring everyone back together to share one thing they noticed. Close with: <em>"Every plant is perfectly built for its home. That's what adaptation means — it's nature's design."</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "A cactus has spines (modified leaves) that reduce water loss and deter animals. What would happen if you planted a cactus in a rainforest?"
+    <p class="discussion-hint">Suggested answer: Interestingly, the cactus might actually struggle! Its water-storing adaptations are designed for drought — in a rainforest with constant rain, the cactus's root system could easily get waterlogged and rot. Its spines also aren't needed for sun protection in a shaded forest. Adaptations are very specific to the environment they evolved in.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "Mangrove trees grow in saltwater — something most plants can't survive. What does this tell you about the diversity of life on Earth?"
+    <p class="discussion-hint">Suggested answer: Life has found a way to adapt to almost every environment on Earth, even ones that seem impossibly harsh — saltwater, boiling hot springs, frozen tundra, pitch-black ocean floors. This amazing diversity shows how billions of years of evolution finds solutions to almost any environmental challenge.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🗺️ <strong>Plant Hardiness Zones:</strong> Look up your USDA Plant Hardiness Zone at planthardiness.ars.usda.gov — your zone tells you what plants naturally thrive in your area!</li>
+      <li>🌡️ <strong>Climate Connection:</strong> Climate change is shifting habitats — plants adapted to one zone are struggling as temperatures change. Talk about what that means for local plants.</li>
+      <li>🫘 <strong>Connect to Lesson 1:</strong> Your experimental bean plants have been growing — which "habitat" conditions (light, water) produced the best plant? Compare your results!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Lorax"</em> by Dr. Seuss (habitat destruction) or <em>"Outside Your Window"</em> by Nicola Davies</li>
+      <li>🔍 <strong>Nature Detective:</strong> Look up one local native plant and one invasive species in your area. How are their needs different from your native habitat?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Setup time:</strong> All household materials — the 3 habitat stations take about 5 minutes to set up. You don't need real plants; the bowls represent the conditions, not the plants themselves.</li>
+      <li><strong>Outside observation is the best part:</strong> Even a suburban backyard or apartment window has a recognizable habitat. The connection between what kids observe and what they learned makes the concept real.</li>
+      <li><strong>Climate connection:</strong> If your student is curious, mention that climate change is shifting habitats — plants evolved for one zone are struggling as temperatures change. This is a great opening for deeper curiosity.</li>
+      <li><strong>Vocab focus:</strong> <em>habitat, adaptation, climate, moisture, native species, invasive species</em></li>
+      <li><strong>USDA Extension:</strong> Look up your zone at planthardiness.ars.usda.gov — great parent-child activity!</li>
+      <li><strong>Connection to Lesson 1:</strong> Students planted bean seeds in Lesson 1 under different light/water conditions. Ask which "habitat" produced the strongest plant — this circles back beautifully.</li>
+      <li><strong>Tricky card (leaf closing):</strong> Many plants close their leaves at night (nyctinasty). This is common enough that it's a discussion prompt, not a single-answer card. Celebrate kids who notice this has multiple possible habitats.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🔍 Habitat Detective — Student Worksheet</h1>
+    <p class="worksheet-header">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:12px;">Fill in each column to compare the three habitats. Use your observations from the activity!</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th class="th-label" style="width:22%;">🔎 What to Compare</th>
+          <th class="th-desert">🏜️ Desert</th>
+          <th class="th-rainforest">🌿 Rainforest</th>
+          <th class="th-wetland">🦆 Wetland</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">💧 Amount of Water</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="row-label">☀️ Amount of Sunlight</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="row-label">🌡️ Temperature</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="row-label">🌱 Which Plant Lives Here?</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:24px;">🏡 My Own Backyard Habitat</h3>
+    <p style="font-size:10pt; color:#555; margin-bottom:10px;">Go outside or look out a window. Draw and label the plants you see in <em>your</em> habitat. What conditions make your area good for these plants?</p>
+
+    <div class="draw-box">
+      <div class="prompt">Draw your backyard habitat here — include at least 2 plants and label them!</div>
+    </div>
+
+    <h3 style="margin-top:14px;">✏️ My habitat is like a...</h3>
+    <p style="font-size:10pt; color:#555; margin-bottom:8px;">Circle the one that best describes your area, or write your own!</p>
+    <p style="font-size:12pt;">
+      &nbsp;&nbsp;&nbsp;🏜️ <strong>Desert</strong> (dry, hot, sunny)
+      &nbsp;&nbsp;&nbsp;&nbsp;🌿 <strong>Rainforest</strong> (wet, green, shady)
+      &nbsp;&nbsp;&nbsp;&nbsp;🦆 <strong>Wetland</strong> (soggy, muddy, watery)
+      &nbsp;&nbsp;&nbsp;&nbsp;❄️ <strong>Other:</strong> ____________________
+    </p>
+
+    <h3 style="margin-top:18px;">🌵 Plant Match Challenge</h3>
+    <p style="font-size:10pt; color:#555; margin-bottom:8px;">Draw a line from each plant description to its habitat!</p>
+    <table style="width:100%; border-collapse:collapse; font-size:10pt; margin-top:8px;">
+      <tr>
+        <td style="width:40%; padding:8px; border:1px solid #ccc;">Thick waxy skin, spines instead of leaves</td>
+        <td style="width:20%; text-align:center; font-size:20pt; border:none;"></td>
+        <td style="width:40%; padding:8px; border:1px solid #ccc; background:#fff3e0; text-align:center;">🏜️ Desert</td>
+      </tr>
+      <tr>
+        <td style="padding:8px; border:1px solid #ccc;">Huge leaves to catch dim light</td>
+        <td style="text-align:center; font-size:20pt; border:none;"></td>
+        <td style="padding:8px; border:1px solid #ccc; background:#e8f5e9; text-align:center;">🌿 Rainforest</td>
+      </tr>
+      <tr>
+        <td style="padding:8px; border:1px solid #ccc;">Roots that don't mind being underwater</td>
+        <td style="text-align:center; font-size:20pt; border:none;"></td>
+        <td style="padding:8px; border:1px solid #ccc; background:#F3E8FF; text-align:center;">🦆 Wetland</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="ak-section">
+        <h3>📊 Comparison Chart — Suggested Answers</h3>
+        <div class="ak-habitat-grid">
+          <div class="ak-col ak-desert">
+            <h4>🏜️ Desert</h4>
+            <ul>
+              <li><strong>Water:</strong> Very little / almost none</li>
+              <li><strong>Sunlight:</strong> Intense / lots of direct sun</li>
+              <li><strong>Temperature:</strong> Hot days, cold nights</li>
+              <li><strong>Plant:</strong> Cactus, succulents, Joshua tree</li>
+            </ul>
+          </div>
+          <div class="ak-col ak-rainforest">
+            <h4>🌿 Rainforest</h4>
+            <ul>
+              <li><strong>Water:</strong> Lots / frequent rain, humid</li>
+              <li><strong>Sunlight:</strong> Dim / filtered through canopy</li>
+              <li><strong>Temperature:</strong> Warm and steady</li>
+              <li><strong>Plant:</strong> Ferns, giant-leaf plants, orchids, bromeliads</li>
+            </ul>
+          </div>
+          <div class="ak-col ak-wetland">
+            <h4>🦆 Wetland</h4>
+            <ul>
+              <li><strong>Water:</strong> Abundant / flooded or saturated</li>
+              <li><strong>Sunlight:</strong> Medium / open sky but not intense</li>
+              <li><strong>Temperature:</strong> Mild / moderate</li>
+              <li><strong>Plant:</strong> Cattails, mangroves, water lilies, bulrushes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ak-section">
+        <h3>🌵 Plant Match — Answer Key</h3>
+        <ul>
+          <li><strong>Thick waxy skin, spines instead of leaves</strong> → 🏜️ Desert (cactus — spines reduce water loss &amp; deter animals; wax prevents evaporation)</li>
+          <li><strong>Huge leaves to catch dim light</strong> → 🌿 Rainforest (large surface area maximizes photosynthesis in low-light forest floor)</li>
+          <li><strong>Roots that don't mind being underwater</strong> → 🦆 Wetland (mangroves, cattails — special root structures allow oxygen exchange when submerged)</li>
+        </ul>
+      </div>
+
+      <div class="ak-section">
+        <h3>💬 Discussion Question Answers</h3>
+        <ul>
+          <li><strong>Q1 — Cactus in a rainforest:</strong> The cactus would likely struggle — its shallow roots designed to quickly absorb rare rainfall would become waterlogged and rot in constant rain. Its drought adaptations become liabilities in a wet environment. Adaptations are highly specific!</li>
+          <li><strong>Q2 — Mangroves in saltwater:</strong> Life has found a way to adapt to almost every environment on Earth — boiling hot springs, frozen tundra, pitch-black ocean floors. Billions of years of evolution finds solutions to almost any challenge. This is the beauty of biodiversity!</li>
+          <li><strong>Card 4 — Leaves that open/close:</strong> This is a discussion card — many plants do this (nyctinasty). Reasons include: conserving warmth at night, protecting from nocturnal insects, reducing water loss. Accept thoughtful reasoning about any habitat.</li>
+        </ul>
+      </div>
+
+      <div class="ak-section">
+        <h3>✅ What Success Looks Like</h3>
+        <ul>
+          <li>Student can name at least 3 differences between habitats (water, sunlight, temperature).</li>
+          <li>Student can match each described plant to the correct habitat and explain why.</li>
+          <li>Student can describe something about their own local habitat — even "it's not very wet" counts!</li>
+          <li>Student uses the word "adaptation" in their explanation (or can explain the concept without the word).</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_mL4XwOH-8C0" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

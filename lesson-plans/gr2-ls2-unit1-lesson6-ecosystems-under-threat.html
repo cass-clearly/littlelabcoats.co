@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystems Under Threat: What Can We Do? — Unit 1, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+
+    /* Threat cards */
+    .threat-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .threat-card {
+      border: 2px solid #ef9a9a;
+      border-radius: 10px;
+      padding: 14px;
+      background: #fff3f3;
+    }
+    .threat-card .scenario {
+      font-style: italic;
+      color: #444;
+      font-size: 10.5pt;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #ffcdd2;
+      padding-bottom: 6px;
+    }
+    .threat-card .threat-label {
+      font-weight: bold;
+      color: #c62828;
+      font-size: 10pt;
+    }
+    .threat-card .solution-label {
+      color: #2e7d32;
+      font-size: 10pt;
+      margin-top: 5px;
+    }
+    .threat-card .threat-emoji {
+      font-size: 24pt;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* Native plant cards */
+    .plant-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .plant-card {
+      background: #f1f8e9;
+      border: 2px solid #00B894;
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-align: center;
+      min-width: 110px;
+      flex: 1 1 110px;
+    }
+    .plant-card .plant-emoji { font-size: 28pt; display: block; margin-bottom: 4px; }
+    .plant-card .plant-name { font-weight: bold; color: #1b5e20; font-size: 10pt; }
+    .plant-card .plant-pollinator { font-size: 9pt; color: #555; margin-top: 3px; }
+
+    /* Unit wrap-up box */
+    .unit-wrap-box {
+      background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .unit-wrap-box h2 {
+      background: #1b5e20;
+      margin: -20px -24px 16px -24px;
+      border-radius: 9px 9px 0 0;
+      text-align: center;
+      font-size: 15pt;
+    }
+    .lesson-badges {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .lesson-badge {
+      background: white;
+      border: 2px solid #00B894;
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .lesson-badge .badge-num {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 13pt;
+      line-height: 32px;
+      margin-bottom: 6px;
+    }
+    .lesson-badge .badge-title {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 10pt;
+      display: block;
+    }
+    .lesson-badge .badge-emoji {
+      font-size: 22pt;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .field-guide-box {
+      background: white;
+      border: 2px dashed #00B894;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    .field-guide-box h3 {
+      color: #1b5e20;
+      border-color: #a5d6a7;
+      margin-top: 0;
+    }
+
+    /* Worksheet styles */
+    .worksheet-section {
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      background: #fafffe;
+    }
+    .worksheet-section h3 { color: #2e7d32; border-color: #a5d6a7; }
+
+    .garden-grid {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+    .garden-grid th {
+      background: #2e7d32;
+      color: white;
+      padding: 8px 10px;
+      font-size: 10pt;
+      border: 2px solid #1b5e20;
+    }
+    .garden-grid td {
+      border: 2px solid #a5d6a7;
+      padding: 8px 10px;
+      height: 44px;
+      font-size: 10pt;
+      vertical-align: top;
+    }
+
+    .threat-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .threat-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 8px 10px;
+      border: 2px solid #1b5e20;
+      text-align: left;
+    }
+    .threat-table td {
+      border: 2px solid #a5d6a7;
+      padding: 8px 10px;
+      height: 50px;
+      vertical-align: top;
+    }
+
+    .reflection-line {
+      border-bottom: 1.5px solid #888;
+      height: 36px;
+      margin: 8px 0;
+    }
+
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+
+    /* Garden plot drawing area */
+    .garden-draw-area {
+      width: 100%;
+      height: 220px;
+      border: 2.5px dashed #00B894;
+      border-radius: 8px;
+      margin: 10px 0;
+      background: #f9fff9;
+      position: relative;
+    }
+    .garden-draw-label {
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-threat-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .ak-threat-table th {
+      background: #616161;
+      color: white;
+      padding: 8px 10px;
+      border: 2px solid #424242;
+      text-align: left;
+    }
+    .ak-threat-table td {
+      border: 2px solid #bbb;
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+    .ak-threat-table tr:nth-child(even) td { background: #f9f9f9; }
+
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .threat-card,
+      .unit-wrap-box, .worksheet-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_xwaU0P58j0Q">
+
+  <h1>🌿 Ecosystems Under Threat: What Can We Do? 🌿</h1>
+  <p class="subtitle">Life Science — Unit 1, Lesson 6 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Ecosystems</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌸🦋🌻🐝🌾</div>
+    <div class="caption">Healthy ecosystems are full of life — and we can help keep them that way!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS4-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats.<br>
+    <strong>K-2-ETS1-1</strong> — Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>identify</em> at least 2 threats to local ecosystems, <em>design</em> a simple solution to one threat, and <em>explain</em> how their solution helps plants, pollinators, or animals in the ecosystem.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Ecosystems are fragile — pollution, habitat loss, invasive species, and climate change can unravel food chains. But humans can also help! Even small actions (like planting native flowers or reducing pesticide use) make a <em>real</em> difference. You don't have to be a scientist or a grown-up to protect an ecosystem — you just have to care and take action.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> habitat loss, invasive species, native plants, pollinator corridor, pesticide, conservation, biodiversity
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 All from Around the House — No Purchases Needed!</h3>
+    <ul>
+      <li>Paper for garden design (plain or grid paper)</li>
+      <li>Crayons or colored pencils</li>
+      <li>Pencil</li>
+      <li>Index cards (parent writes out the 4 Threat Cards — see Activity 2)</li>
+      <li>Ruler (optional, for drawing garden grid)</li>
+      <li>Scrap paper or cardboard tubes (optional, for bee hotel bonus activity)</li>
+    </ul>
+  </div>
+
+  <!-- ===== ACTIVITY 1 ===== -->
+  <h2>🌱 Activity 1 — Design a Pollinator Patch</h2>
+
+  <p>Students design a small "pollinator garden" patch on paper — even just a window box or a corner of a yard. This is a real project your family could actually do!</p>
+
+  <h3>🌼 Native Plants That Attract Pollinators</h3>
+  <p>These plants thrive across much of North America and are loved by local pollinators:</p>
+
+  <div class="plant-cards">
+    <div class="plant-card">
+      <span class="plant-emoji">🌻</span>
+      <span class="plant-name">Black-eyed Susan</span>
+      <span class="plant-pollinator">🐝 Bees &amp; butterflies</span>
+    </div>
+    <div class="plant-card">
+      <span class="plant-emoji">💛</span>
+      <span class="plant-name">Wild Bergamot</span>
+      <span class="plant-pollinator">🐝 Native bees &amp; butterflies</span>
+    </div>
+    <div class="plant-card">
+      <span class="plant-emoji">🌿</span>
+      <span class="plant-name">Milkweed</span>
+      <span class="plant-pollinator">🦋 Monarch butterflies only!</span>
+    </div>
+    <div class="plant-card">
+      <span class="plant-emoji">🌸</span>
+      <span class="plant-name">Coneflower</span>
+      <span class="plant-pollinator">🐝🦋 Bees &amp; butterflies</span>
+    </div>
+    <div class="plant-card">
+      <span class="plant-emoji">🍀</span>
+      <span class="plant-name">Clover</span>
+      <span class="plant-pollinator">🐝 Bumblebees &amp; honeybees</span>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Look at the Prompt Cards (5 min)</strong><br>
+    Discuss each plant card above. Ask: <em>"Why do you think different pollinators like different flowers?"</em> Let students share ideas before explaining that flower shapes, colors, and bloom times match the bodies and needs of specific pollinators.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Design Your Garden Patch (15 min)</strong><br>
+    On the <strong>Student Worksheet</strong> (next section), students draw a garden plot and:
+    <ul>
+      <li>Draw where each plant goes in the patch</li>
+      <li>Label each plant by name</li>
+      <li>Write or draw which pollinator it attracts</li>
+      <li>Include at least 3 different plants in their design</li>
+    </ul>
+    Encourage creativity — it can be a window box, a corner of a yard, a school garden bed, or any size they like!
+  </div>
+
+  <div class="procedure-step">
+    <strong>🌟 Bonus — Design a Bee Hotel (10 min, optional)</strong><br>
+    Discuss: <em>"Did you know most native bees don't live in hives? They nest in hollow stems and holes in the ground!"</em><br><br>
+    Using scrap paper and cardboard, students can:
+    <ol>
+      <li>Roll sheets of paper into tight tubes (these become bee nesting tunnels)</li>
+      <li>Bundle them together and fit into a small box or cardboard container</li>
+      <li>Draw or label their bee hotel — where would they hang it? Why does a bee hotel help native bees?</li>
+    </ol>
+    Key point: Providing <em>nesting habitat</em> is just as important as food — many native bees are declining partly because their nesting spots have disappeared.
+  </div>
+
+  <!-- ===== ACTIVITY 2 ===== -->
+  <h2>⚠️ Activity 2 — Ecosystem Threat Cards</h2>
+
+  <p>Before the lesson, a parent writes out 4 index cards with the scenarios below (one scenario per card). Present each card one at a time and discuss as a family: <em>"What kind of threat is this? Who does it hurt? What could we do?"</em></p>
+
+  <div class="threat-cards-grid">
+    <div class="threat-card">
+      <span class="threat-emoji">🏗️</span>
+      <div class="scenario">"A new apartment building is being built where a meadow used to be."</div>
+      <div class="threat-label">⚠️ Threat: Habitat Loss</div>
+      <div class="solution-label">✅ Solutions: Green roofs on buildings, pollinator wildflower strips along roads, community gardens</div>
+    </div>
+    <div class="threat-card">
+      <span class="threat-emoji">🧪</span>
+      <div class="scenario">"Farmers are using pesticides that kill all insects, not just the pests."</div>
+      <div class="threat-label">⚠️ Threat: Pesticide Harm</div>
+      <div class="solution-label">✅ Solutions: Targeted pesticides, organic farming, buffer zones around wildflower areas</div>
+    </div>
+    <div class="threat-card">
+      <span class="threat-emoji">🌱</span>
+      <div class="scenario">"An invasive plant from Asia is spreading and crowding out native plants."</div>
+      <div class="threat-label">⚠️ Threat: Invasive Species</div>
+      <div class="solution-label">✅ Solutions: Removal programs, replanting with native species, don't plant invasives in gardens</div>
+    </div>
+    <div class="threat-card">
+      <span class="threat-emoji">☀️</span>
+      <div class="scenario">"A drought has lasted 3 years and the pond is drying up."</div>
+      <div class="threat-label">⚠️ Threat: Climate Change</div>
+      <div class="solution-label">✅ Solutions: Water conservation, shade planting, drought-tolerant native species</div>
+    </div>
+  </div>
+
+  <!-- ===== DISCUSSION ===== -->
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "Your pollinator garden design uses native plants. Why do you think native plants are better for local pollinators than non-native plants?"
+    <p class="discussion-hint">Think about it: How long have native plants and local pollinators been living in the same place? What might have happened over all that time?</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "We learned that <em>removing</em> one species from a food chain affects everything. Can <em>adding</em> a species also cause problems?"
+    <p class="discussion-hint">Think about it: What would happen if a new animal arrived in an ecosystem where nothing had ever hunted it before? Could it take over?</p>
+  </div>
+
+  <!-- ===== UNIT WRAP-UP ===== -->
+  <div class="unit-wrap-box">
+    <h2>🎉 Unit Wrap-Up — You Finished Unit 1!</h2>
+
+    <p><strong>Congratulations!</strong> You've completed all 6 lessons of <em>Plants, Pollinators &amp; Ecosystems.</em> Here's everything you explored:</p>
+
+    <div class="lesson-badges">
+      <div class="lesson-badge">
+        <span class="badge-emoji">🌱</span>
+        <span class="badge-num">1</span>
+        <span class="badge-title">What Plants Need</span>
+        <span style="font-size:9pt; color:#666;">Sun, water, air, and soil</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🦋</span>
+        <span class="badge-num">2</span>
+        <span class="badge-title">Pollinators</span>
+        <span style="font-size:9pt; color:#666;">How plants reproduce with helpers</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🌰</span>
+        <span class="badge-num">3</span>
+        <span class="badge-title">Seed Dispersal</span>
+        <span style="font-size:9pt; color:#666;">Wind, water, animals &amp; more</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🦅</span>
+        <span class="badge-num">4</span>
+        <span class="badge-title">Food Chains</span>
+        <span style="font-size:9pt; color:#666;">Who eats whom &amp; why it matters</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🏔️</span>
+        <span class="badge-num">5</span>
+        <span class="badge-title">Habitats</span>
+        <span style="font-size:9pt; color:#666;">Where organisms live &amp; why</span>
+      </div>
+      <div class="lesson-badge">
+        <span class="badge-emoji">🌿</span>
+        <span class="badge-num">6</span>
+        <span class="badge-title">Protecting Ecosystems</span>
+        <span style="font-size:9pt; color:#666;">Threats &amp; solutions</span>
+      </div>
+    </div>
+
+    <div class="field-guide-box">
+      <h3>📖 Culminating Project: My Ecosystem Field Guide</h3>
+      <p>Create a mini-book with <strong>6 pages</strong> — one page per lesson. On each page, draw a picture and write 1–2 sentences about what you learned.</p>
+      <ol>
+        <li><strong>Page 1:</strong> What Plants Need — Draw a plant and label what it needs to grow</li>
+        <li><strong>Page 2:</strong> Pollinators — Draw a pollinator visiting a flower and explain what they're doing</li>
+        <li><strong>Page 3:</strong> Seed Dispersal — Draw your favorite seed travel method</li>
+        <li><strong>Page 4:</strong> Food Chains — Draw a 4-link food chain from your favorite habitat</li>
+        <li><strong>Page 5:</strong> Habitats — Draw an animal in its habitat and explain why it belongs there</li>
+        <li><strong>Page 6:</strong> Protecting Ecosystems — Draw your pollinator garden design and explain how it helps</li>
+      </ol>
+      <p style="margin-top: 10px; color: #1b5e20;"><strong>📎 How to make it:</strong> Fold 3 sheets of paper in half and staple in the middle — instant 12-page booklet! Decorate the cover and share it with someone you love. 🌿</p>
+    </div>
+  </div>
+
+  <!-- ===== EXTENSIONS ===== -->
+  <h2>🚀 Extensions &amp; Going Deeper</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🦋 <strong>Monarch Migration:</strong> Look up the monarch butterfly migration map online — they travel thousands of miles to Mexico every winter. How does milkweed loss threaten their whole lifecycle?</li>
+      <li>🏙️ <strong>Map Your Neighborhood:</strong> Walk around your block and spot any native plants, "weeds" (many are native!), or places that could become pollinator habitat.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Lorax"</em> by Dr. Seuss (classic habitat loss tale); <em>"Wangari's Trees of Peace"</em> by Jeanette Winter (real conservation hero)</li>
+      <li>✉️ <strong>Write a Letter:</strong> Have students write a pretend letter to a city planner explaining why they should add a pollinator strip along a new road.</li>
+      <li>🌱 <strong>Make It Real:</strong> If you have any outdoor space — even a window box — actually plant some of the native plants from today's lesson!</li>
+    </ul>
+  </div>
+
+  <!-- ===== PARENT/TEACHER NOTES ===== -->
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>All materials from around the house</strong> — no purchases needed. Index cards can be any scraps of paper.</li>
+      <li><strong>The garden design can be real:</strong> If your family has <em>any</em> outdoor space — even a window box on an apartment sill — this is a project you could genuinely do together. That real-world connection makes the lesson stick.</li>
+      <li><strong>🦋 Milkweed is critical:</strong> Monarch butterflies are entirely dependent on milkweed — it's the <em>only</em> plant their caterpillars can eat. Planting even one milkweed plant is one of the most impactful things a family can do for monarch conservation. Make this a memorable moment in the lesson.</li>
+      <li><strong>Threat Cards prep:</strong> Write each of the 4 threat scenarios on an index card beforehand. Presenting them as physical "cards" to turn over one at a time builds anticipation and makes the discussion feel like a game.</li>
+      <li><strong>Invasive species examples to share:</strong> Kudzu vine smothering forests in the Southeast; lionfish in the Atlantic Ocean; cane toads in Australia. These are vivid, memorable examples — kids love how wild these stories are.</li>
+      <li><strong>Vocab to reinforce throughout:</strong> habitat loss, invasive species, native plants, pollinator corridor, pesticide, conservation, biodiversity</li>
+      <li><strong>Unit Wrap-Up timing:</strong> The Ecosystem Field Guide culminating project works well as a weekend project after finishing Lesson 6, or as one page per day across the following week.</li>
+      <li><strong>Assessment:</strong> Can the student name at least 2 ecosystem threats? Can they explain how their garden design solution helps pollinators or animals? Can they connect the idea of invasive species to what they learned about food chains?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌿 Ecosystem Field Designer 🌿</h1>
+    <p class="subtitle">Student Worksheet — Lesson 6: Ecosystems Under Threat</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <!-- Garden design -->
+    <div class="worksheet-section">
+      <h3>🌻 Part 1 — Design Your Pollinator Patch</h3>
+      <p style="font-size:10pt; color:#444;">Draw your pollinator garden below. Include at least 3 different plants. Label each one and write which pollinator it attracts!</p>
+
+      <div class="garden-draw-area">
+        <span class="garden-draw-label">Draw your garden here — plants, paths, even a sun and rain! ☀️🌧️</span>
+      </div>
+
+      <p style="font-size:10pt; margin-top:12px; color:#444;"><strong>My Plant List:</strong></p>
+      <table class="garden-grid">
+        <thead>
+          <tr>
+            <th>Plant Name 🌸</th>
+            <th>Where I Put It in the Garden</th>
+            <th>Which Pollinator It Attracts 🦋</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Threat Cards table -->
+    <div class="worksheet-section">
+      <h3>⚠️ Part 2 — Threat Cards Challenge</h3>
+      <p style="font-size:10pt; color:#444;">For each threat, write what is at risk in the ecosystem and your best solution idea.</p>
+      <table class="threat-table">
+        <thead>
+          <tr>
+            <th>Threat Scenario 📋</th>
+            <th>Type of Threat</th>
+            <th>What's at Risk? 🌿</th>
+            <th>My Solution Idea 💡</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A new building is being built where a meadow used to be</td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>Pesticides are killing all insects, not just pests</td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>An invasive plant from Asia is crowding out native plants</td>
+            <td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>A drought has lasted 3 years and the pond is drying up</td>
+            <td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Unit reflection -->
+    <div class="worksheet-section">
+      <h3>🌍 Part 3 — Unit Reflection</h3>
+      <p style="font-size:10pt; color:#444;">Look back at everything you learned in Unit 1. Complete the sentences below:</p>
+
+      <p style="font-size:11pt; margin-top:12px;">The most important thing I learned about ecosystems is:</p>
+      <div class="reflection-line"></div>
+      <div class="reflection-line"></div>
+
+      <p style="font-size:11pt; margin-top:16px;">One thing I can do to help protect an ecosystem near me is:</p>
+      <div class="reflection-line"></div>
+      <div class="reflection-line"></div>
+
+      <p style="font-size:11pt; margin-top:16px;">If I could tell every kid in my town one thing about pollinators, I would say:</p>
+      <div class="reflection-line"></div>
+      <div class="reflection-line"></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🌻 Part 1 — Pollinator Patch (Sample Answers)</h3>
+      <p style="font-size:10pt;">Drawings will vary. Accept any garden design that includes at least 3 correctly identified native plants with matching pollinators. Sample correct matches:</p>
+      <table class="ak-threat-table">
+        <thead>
+          <tr>
+            <th>Plant Name</th>
+            <th>Pollinators It Attracts</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Black-eyed Susan 🌻</td>
+            <td>Bees, butterflies, beetles</td>
+            <td>Hardy, drought-tolerant, blooms summer–fall</td>
+          </tr>
+          <tr>
+            <td>Wild Bergamot 💛</td>
+            <td>Native bees, butterflies, hummingbirds</td>
+            <td>True native to North America; blooms mid-summer; excellent for native bumblebees</td>
+          </tr>
+          <tr>
+            <td>Milkweed 🌿</td>
+            <td>Monarch butterflies (only host plant for caterpillars)</td>
+            <td>Critical for monarchs — caterpillars can <em>only</em> eat milkweed</td>
+          </tr>
+          <tr>
+            <td>Coneflower (Echinacea) 🌸</td>
+            <td>Bees, butterflies, some birds (seeds)</td>
+            <td>Seeds also feed goldfinches in fall</td>
+          </tr>
+          <tr>
+            <td>Clover 🍀</td>
+            <td>Bumblebees, honeybees, some wasps</td>
+            <td>Fixes nitrogen in soil — good for the garden too!</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:18px;">⚠️ Part 2 — Threat Cards (Answer Key)</h3>
+      <table class="ak-threat-table">
+        <thead>
+          <tr>
+            <th>Threat Scenario</th>
+            <th>Type of Threat</th>
+            <th>What's at Risk</th>
+            <th>Strong Solution Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Building where meadow used to be</td>
+            <td><strong>Habitat Loss</strong></td>
+            <td>All meadow species — plants, pollinators, small mammals, insects</td>
+            <td>Green roofs on buildings; pollinator wildflower strips along roads; community gardens; urban meadow parks</td>
+          </tr>
+          <tr>
+            <td>Pesticides killing all insects</td>
+            <td><strong>Pesticide Harm</strong></td>
+            <td>Pollinators (bees, butterflies), beneficial insects, birds that eat insects, food chains</td>
+            <td>Targeted/selective pesticides; organic farming; buffer zones around pollinator habitats; integrated pest management</td>
+          </tr>
+          <tr>
+            <td>Invasive plant crowding natives</td>
+            <td><strong>Invasive Species</strong></td>
+            <td>Native plants, native pollinators (whose flowers are gone), animals that depend on native plants</td>
+            <td>Removal/volunteer programs; replanting with native species; public education about not planting invasives</td>
+          </tr>
+          <tr>
+            <td>3-year drought drying the pond</td>
+            <td><strong>Climate Change</strong></td>
+            <td>Aquatic species, amphibians, birds that nest near water, animals that drink from pond</td>
+            <td>Water conservation; shade planting to reduce evaporation; drought-tolerant native species; rainwater collection</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:18px;">💬 Discussion Question Answer Guide</h3>
+      <p style="font-size:10pt;"><strong>Q1 — Why are native plants better for local pollinators?</strong><br>
+      Native plants and local pollinators evolved together over thousands of years — the flower shapes, bloom times, and pollen types match perfectly. Native bees often have mouth parts shaped specifically for certain native flowers. Non-native ornamental plants may look pretty but often have little pollen or nectar, and their bloom times may not match when local pollinators need food. Example: Monarch caterpillars can <em>only</em> eat milkweed — a non-native ornamental would be useless to them.</p>
+
+      <p style="font-size:10pt; margin-top:12px;"><strong>Q2 — Can <em>adding</em> a species also cause problems?</strong><br>
+      Yes! Invasive species are a perfect example — when a species that evolved elsewhere is introduced to a new ecosystem, it has no natural predators, so it can multiply unchecked and outcompete native species. Real examples: <em>kudzu vine</em> smothering forests in the Southeast U.S.; <em>lionfish</em> in the Atlantic (no predators there); <em>cane toads</em> in Australia (introduced to control beetles, became a massive pest themselves). Adding the wrong species can be just as damaging as removing a native one.</p>
+
+      <h3 style="margin-top:18px;">✅ What Success Looks Like</h3>
+      <ul style="font-size:10pt;">
+        <li>Student can name at least 2 ecosystem threats (habitat loss, pesticide harm, invasive species, climate change).</li>
+        <li>Student's garden design includes at least 3 correctly labeled native plants with matching pollinators.</li>
+        <li>Student can explain how their pollinator garden helps local pollinators or animals.</li>
+        <li>Student can connect invasive species to the food chain concept from Lesson 4.</li>
+        <li>Bonus: Student can explain why milkweed is uniquely critical for monarch butterflies.</li>
+      </ul>
+    </div>
+  </div>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_xwaU0P58j0Q" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

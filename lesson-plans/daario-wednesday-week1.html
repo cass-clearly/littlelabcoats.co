@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daario's Wednesday Learning Plan — Week 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+    h1, h2, h3 { font-family: 'Source Serif 4', serif; }
+    .header {
+      text-align: center;
+      padding: 25px 20px;
+      background: linear-gradient(135deg, #7B2FBE 0%, #7B2FBE 50%, #7B2FBE 100%);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 { font-size: 26pt; margin-bottom: 4px; }
+    .header .subtitle { font-size: 13pt; opacity: 0.9; }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .schedule-block {
+      text-align: center;
+      padding: 12px 8px;
+      border-radius: 10px;
+      font-size: 9pt;
+      font-weight: 500;
+    }
+    .schedule-block .emoji { font-size: 18pt; display: block; margin-bottom: 4px; }
+    .schedule-block .time { font-size: 8pt; opacity: 0.7; margin-top: 2px; }
+    .sb-sky { background: #F3E8FF; color: #7B2FBE; }
+    .sb-indigo { background: #e8eaf6; color: #283593; }
+    .sb-teal { background: #e0f2f1; color: #00695c; }
+    .sb-slate { background: #eceff1; color: #37474f; }
+    .sb-ocean { background: #e1f5fe; color: #01579b; }
+
+    .card {
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .card h2 {
+      font-size: 16pt;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card .check {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 2.5px solid currentColor;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .card .skill-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .card-sky { background: #f0f7ff; border: 2px solid #90caf9; }
+    .card-sky h2 { color: #7B2FBE; }
+    .card-sky .skill-tag { background: #90caf9; color: #7B2FBE; }
+
+    .card-indigo { background: #f3f4fb; border: 2px solid #9fa8da; }
+    .card-indigo h2 { color: #283593; }
+    .card-indigo .skill-tag { background: #9fa8da; color: #1a237e; }
+
+    .card-teal { background: #f0faf8; border: 2px solid #80cbc4; }
+    .card-teal h2 { color: #00695c; }
+    .card-teal .skill-tag { background: #80cbc4; color: #004d40; }
+
+    .card-slate { background: #f5f7f8; border: 2px solid #b0bec5; }
+    .card-slate h2 { color: #37474f; }
+    .card-slate .skill-tag { background: #b0bec5; color: #263238; }
+
+    .card-ocean { background: #f0f9ff; border: 2px solid #81d4fa; }
+    .card-ocean h2 { color: #01579b; }
+    .card-ocean .skill-tag { background: #81d4fa; color: #01579b; }
+
+    .instructions { margin: 12px 0; padding-left: 20px; }
+    .instructions li { margin-bottom: 6px; }
+
+    .question-box {
+      background: white;
+      border-left: 4px solid currentColor;
+      padding: 10px 14px;
+      margin: 8px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+    }
+
+    .tip {
+      background: #F3E8FF;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 10pt;
+      margin: 10px 0;
+      color: #7B2FBE;
+    }
+
+    .example-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+    .example-box .label { font-weight: 700; color: #283593; font-size: 9pt; text-transform: uppercase; margin-bottom: 6px; }
+
+    .cut-line {
+      border: none;
+      border-top: 2.5px dashed #bbb;
+      margin: 30px 0 10px;
+    }
+    .cut-label {
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .worksheet {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: white;
+      page-break-inside: avoid;
+    }
+    .worksheet h3 { font-size: 14pt; margin-bottom: 12px; }
+    .ws-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .ws-table th, .ws-table td {
+      border: 1.5px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ws-table th {
+      background: #F3E8FF;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+    .ws-table td { min-height: 40px; height: 40px; }
+    .write-line {
+      border-bottom: 1.5px solid #ccc;
+      height: 32px;
+      margin: 4px 0;
+    }
+    .lined-area { margin: 10px 0; }
+    .lined-area .line { border-bottom: 1px solid #d0d0d0; height: 28px; }
+
+    .clock-face {
+      display: inline-block;
+      width: 70px; height: 70px;
+      border: 3px solid #7B2FBE;
+      border-radius: 50%;
+      position: relative;
+      margin: 8px;
+      background: white;
+    }
+    .clock-face .dot { position: absolute; width: 5px; height: 5px; background: #7B2FBE; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+    .clock-face .num { position: absolute; font-size: 7pt; font-weight: 600; color: #7B2FBE; }
+    .clock-face .n12 { top: 3px; left: 50%; transform: translateX(-50%); }
+    .clock-face .n3 { top: 50%; right: 4px; transform: translateY(-50%); }
+    .clock-face .n6 { bottom: 3px; left: 50%; transform: translateX(-50%); }
+    .clock-face .n9 { top: 50%; left: 4px; transform: translateY(-50%); }
+
+    .time-problem {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px;
+      margin: 8px 0;
+      background: #f0f7ff;
+      border-radius: 10px;
+    }
+    .time-problem .problem-text { flex: 1; font-size: 10.5pt; }
+    .time-problem .answer-space { min-width: 120px; }
+
+    .dictation-box {
+      background: #fafafa;
+      border: 2px dashed #b0bec5;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .letter-section {
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 8px 0;
+    }
+    .letter-section .label-text {
+      font-size: 9pt;
+      color: #888;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    @media print {
+      body { padding: 0.25in; background: white; font-size: 10pt; }
+      .header { background: #7B2FBE !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, .schedule-block, .skill-tag, .example-box, .tip, .time-problem, .ws-table th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .worksheet { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🌊 Daario's Wednesday Plan</h1>
+    <div class="subtitle">Week 1 • Grade 3 • ~35 minutes of awesome</div>
+  </div>
+
+  <!-- Schedule Overview -->
+  <div class="schedule">
+    <div class="schedule-block sb-sky">
+      <span class="emoji">👂</span>
+      Podcast Talk
+      <div class="time">15 min</div>
+    </div>
+    <div class="schedule-block sb-indigo">
+      <span class="emoji">🔤</span>
+      Break It Down
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-teal">
+      <span class="emoji">📏</span>
+      Time Challenges
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-slate">
+      <span class="emoji">🔠</span>
+      Dictation
+      <div class="time">5 min</div>
+    </div>
+    <div class="schedule-block sb-ocean">
+      <span class="emoji">✏️</span>
+      Write a Letter
+      <div class="time">5 min</div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 1 ==================== -->
+  <div class="card card-sky">
+    <h2><span class="check"></span> 👂 Podcast Discussion <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">15 min</span></h2>
+    <span class="skill-tag">Listening — Comprehension & Discussion</span>
+
+    <p>Time to tune in! 🎧 Listen to a short episode from one of these awesome podcasts with a parent:</p>
+
+    <ul class="instructions" style="list-style:none; padding-left:0;">
+      <li>🧠 <strong>Brains On!</strong> — Science mysteries solved</li>
+      <li>❓ <strong>But Why?</strong> — Questions kids actually ask</li>
+      <li>🌍 <strong>Wow in the World</strong> — Wild science and inventions</li>
+    </ul>
+
+    <ol class="instructions">
+      <li>Listen to the episode together (pick one that's ~10 min or less).</li>
+      <li>When it's done, talk about <strong>3 things you learned</strong>.</li>
+      <li>Fill out the response sheet below!</li>
+    </ol>
+
+    <div class="tip">💡 <strong>Good Listener Tip:</strong> If you hear something surprising, give a thumbs-up so you remember to talk about it after!</div>
+  </div>
+
+  <!-- Worksheet: Podcast Response -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Podcast Response Sheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>👂 Podcast Response Sheet</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="margin-top:8px;"><strong>Podcast Name:</strong> ___________________________________</p>
+    <p><strong>Episode Title:</strong> ___________________________________</p>
+
+    <div style="margin-top:16px; padding:14px; background:#f0f7ff; border-radius:10px; border:1px solid #90caf9;">
+      <p><strong>🌟 3 Things I Learned:</strong></p>
+      <p style="margin-top:10px;"><strong>1.</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="margin-top:8px;"><strong>2.</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="margin-top:8px;"><strong>3.</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div style="margin-top:14px; padding:14px; background:#e8eaf6; border-radius:10px; border:1px solid #9fa8da;">
+      <p><strong>⭐ My Favorite Part:</strong></p>
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="margin-top:10px;"><strong>❓ One Question I Still Have:</strong></p>
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 2 ==================== -->
+  <div class="card card-indigo">
+    <h2><span class="check"></span> 🔤 Word Analysis — Break It Down <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Vocabulary — Syllables, Roots & Affixes</span>
+
+    <p>Big words aren't scary when you break them apart! 🧩 Take each word below, split it into syllables, find the root, and figure out what it means.</p>
+
+    <div class="example-box">
+      <div class="label">✅ Example</div>
+      <p><strong>Word:</strong> unhappiness</p>
+      <p><strong>Syllables:</strong> un • hap • pi • ness</p>
+      <p><strong>Root:</strong> happy &nbsp; | &nbsp; <strong>Prefix:</strong> un- (not) &nbsp; | &nbsp; <strong>Suffix:</strong> -ness (state of)</p>
+      <p><strong>Predicted meaning:</strong> the state of not being happy</p>
+    </div>
+
+    <p style="margin-top:10px;"><strong>Your 5 words:</strong></p>
+    <ol class="instructions">
+      <li><strong>replay</strong></li>
+      <li><strong>unfriendly</strong></li>
+      <li><strong>powerful</strong></li>
+      <li><strong>disappear</strong></li>
+      <li><strong>submarine</strong></li>
+    </ol>
+
+    <div class="tip">💡 <strong>Clue:</strong> Prefixes go at the beginning (re-, un-, dis-, sub-). Suffixes go at the end (-ly, -ful, -ness). The root is the main part!</div>
+  </div>
+
+  <!-- Worksheet: Syllable Breakdown -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Syllable Breakdown Table — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔤 Break It Down</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <table class="ws-table" style="margin-top:14px;">
+      <thead>
+        <tr>
+          <th style="width:14%;">Word</th>
+          <th style="width:20%;">Syllables</th>
+          <th style="width:14%;">Root</th>
+          <th style="width:22%;">Prefix / Suffix</th>
+          <th style="width:30%;">What I Think It Means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>replay</strong></td>
+          <td style="height:48px;"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>unfriendly</strong></td>
+          <td style="height:48px;"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>powerful</strong></td>
+          <td style="height:48px;"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>disappear</strong></td>
+          <td style="height:48px;"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>submarine</strong></td>
+          <td style="height:48px;"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:12px;"><strong>⭐ Bonus:</strong> Can you think of another word that uses one of these prefixes or suffixes?</p>
+    <div class="write-line"></div>
+  </div>
+
+  <!-- ==================== ACTIVITY 3 ==================== -->
+  <div class="card card-teal">
+    <h2><span class="check"></span> 📏 Time Challenges <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Measurement — Elapsed Time</span>
+
+    <p>You're the Time Master! ⏰ Figure out what time it will be after time passes, or how much time went by. Use the clocks and number lines to help!</p>
+
+    <div class="example-box">
+      <div class="label">✅ Example</div>
+      <p><strong>Problem:</strong> If we leave at 2:45 and it takes 1 hour 20 minutes, when do we arrive?</p>
+      <p><strong>Think:</strong> 2:45 + 1 hour = 3:45. Then + 20 min = <strong>4:05</strong> ✓</p>
+    </div>
+
+    <div class="tip">💡 <strong>Strategy:</strong> Add the hours first, then add the minutes. If minutes go past 60, that's another hour!</div>
+  </div>
+
+  <!-- Worksheet: Elapsed Time -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Time Challenges Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>📏 Time Challenges</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <div class="time-problem">
+      <div>
+        <div class="clock-face">
+          <span class="dot"></span>
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+        </div>
+      </div>
+      <div class="problem-text">
+        <strong>1.</strong> Soccer practice starts at <strong>3:30</strong> and lasts <strong>1 hour 15 minutes</strong>. What time does it end?
+      </div>
+      <div class="answer-space">
+        <p style="font-size:9pt; color:#888;">Answer:</p>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="time-problem">
+      <div>
+        <div class="clock-face">
+          <span class="dot"></span>
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+        </div>
+      </div>
+      <div class="problem-text">
+        <strong>2.</strong> The movie starts at <strong>7:15</strong> and ends at <strong>9:00</strong>. How long is the movie?
+      </div>
+      <div class="answer-space">
+        <p style="font-size:9pt; color:#888;">Answer:</p>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="time-problem">
+      <div>
+        <div class="clock-face">
+          <span class="dot"></span>
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+        </div>
+      </div>
+      <div class="problem-text">
+        <strong>3.</strong> You start reading at <strong>4:50</strong> and read for <strong>35 minutes</strong>. What time do you stop?
+      </div>
+      <div class="answer-space">
+        <p style="font-size:9pt; color:#888;">Answer:</p>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="time-problem">
+      <div>
+        <div class="clock-face">
+          <span class="dot"></span>
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+        </div>
+      </div>
+      <div class="problem-text">
+        <strong>4.</strong> Grandma arrives at <strong>11:45</strong>. She stays for <strong>2 hours 30 minutes</strong>. When does she leave?
+      </div>
+      <div class="answer-space">
+        <p style="font-size:9pt; color:#888;">Answer:</p>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="time-problem">
+      <div>
+        <div class="clock-face">
+          <span class="dot"></span>
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+        </div>
+      </div>
+      <div class="problem-text">
+        <strong>5.</strong> The bus left at <strong>8:20</strong> and arrived at <strong>9:05</strong>. How long was the ride?
+      </div>
+      <div class="answer-space">
+        <p style="font-size:9pt; color:#888;">Answer:</p>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="time-problem">
+      <div>
+        <div class="clock-face">
+          <span class="dot"></span>
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+        </div>
+      </div>
+      <div class="problem-text">
+        <strong>6.</strong> You need to be at the dentist at <strong>2:00</strong>. It takes <strong>25 minutes</strong> to get there. What time should you leave?
+      </div>
+      <div class="answer-space">
+        <p style="font-size:9pt; color:#888;">Answer:</p>
+        <div class="write-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 4 ==================== -->
+  <div class="card card-slate">
+    <h2><span class="check"></span> 🔠 Capitalization Dictation <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">5 min</span></h2>
+    <span class="skill-tag">Shared • Grammar — Capitalization Rules</span>
+
+    <p>A parent will read this passage aloud. You write it down with the <strong>correct capitalization</strong> — then compare to the original! 🔍</p>
+
+    <div class="dictation-box">
+      <p style="font-size:9pt; color:#888; margin-bottom:8px;">👨‍👩‍👦 <strong>FOR THE PARENT — Read this aloud slowly:</strong></p>
+      <p style="font-size:11pt; line-height:1.8;">
+        On <strong>Saturday</strong>, my friend <strong>Carlos</strong> and <strong>I</strong> went to <strong>Rocky Mountain National Park</strong>. We saw <strong>Longs Peak</strong> covered in snow. <strong>Carlos</strong> said, <strong>"I</strong> want to climb that someday!" <strong>We</strong> ate lunch by the <strong>Big Thompson River</strong> and drove home on <strong>Highway 34</strong>.
+      </p>
+    </div>
+
+    <div class="tip">💡 <strong>Tricky Spots:</strong> Names of people, places, days, the word "I", first word of a sentence, and first word someone says in quotes all get capital letters!</div>
+  </div>
+
+  <!-- Worksheet: Dictation -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Dictation Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔠 Capitalization Dictation</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="font-size:10pt; color:#888; margin:8px 0;">Listen carefully and write the passage with correct capitalization:</p>
+
+    <div class="lined-area">
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+
+    <div style="margin-top:14px; padding:12px; background:#f5f7f8; border-radius:8px; border:1px solid #b0bec5;">
+      <p><strong>Self-Check:</strong> How many capital letters did you use? ________</p>
+      <p style="margin-top:6px;"><strong>How many should there be?</strong> (Compare to the original!) ________</p>
+      <p style="margin-top:6px;"><strong>Words I missed:</strong></p>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 5 ==================== -->
+  <div class="card card-ocean">
+    <h2><span class="check"></span> ✏️ Letter to Someone <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">5 min</span></h2>
+    <span class="skill-tag">Shared • Writing — Friendly Letter Format</span>
+
+    <p>Write a letter to someone you care about! It can be a friend, a family member, or even a fictional character. 💌</p>
+
+    <ol class="instructions">
+      <li>Pick who you're writing to.</li>
+      <li>Use the letter template below — don't forget the date, greeting, body, and closing!</li>
+      <li>Tell them something real — what you've been up to, a question, or why they're great.</li>
+    </ol>
+
+    <div class="example-box">
+      <div class="label">✅ Parts of a Friendly Letter</div>
+      <p><strong>Date</strong> — February 18, 2026</p>
+      <p><strong>Greeting</strong> — Dear Grandpa,</p>
+      <p><strong>Body</strong> — Tell them your news, ask questions, share feelings!</p>
+      <p><strong>Closing</strong> — Your friend, / Love, / Sincerely,</p>
+      <p><strong>Signature</strong> — Daario</p>
+    </div>
+  </div>
+
+  <!-- Worksheet: Letter Template -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Letter Template — cut or fold here</div>
+  <div class="worksheet">
+    <h3>✏️ My Letter</h3>
+
+    <div class="letter-section">
+      <div class="label-text">📅 Date</div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="letter-section">
+      <div class="label-text">👋 Greeting (Dear ___________,)</div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="letter-section">
+      <div class="label-text">📝 Body (What do you want to say?)</div>
+      <div class="lined-area">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="letter-section">
+      <div class="label-text">🤝 Closing (Love, / Your friend, / Sincerely,)</div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="letter-section">
+      <div class="label-text">✍️ Your Signature</div>
+      <div class="write-line"></div>
+    </div>
+
+    <p style="text-align:center; margin-top:14px; font-size:10pt; color:#7B2FBE;">⭐ Awesome work today, Daario! You crushed it! 🌊⭐</p>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

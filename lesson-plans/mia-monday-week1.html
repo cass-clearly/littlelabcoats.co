@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mia's Monday Learning Plan — Week 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+    h1, h2, h3 { font-family: 'Source Serif 4', serif; }
+    .header {
+      text-align: center;
+      padding: 25px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 { font-size: 26pt; margin-bottom: 4px; }
+    .header .subtitle { font-size: 13pt; opacity: 0.9; }
+
+    /* Schedule Overview */
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .schedule-block {
+      text-align: center;
+      padding: 12px 8px;
+      border-radius: 10px;
+      font-size: 9.5pt;
+      font-weight: 500;
+    }
+    .schedule-block .emoji { font-size: 18pt; display: block; margin-bottom: 4px; }
+    .schedule-block .time { font-size: 8pt; opacity: 0.7; margin-top: 2px; }
+    .sb-coral { background: #ffe0d6; color: #c0392b; }
+    .sb-teal { background: #d0f0ed; color: #0e7c6b; }
+    .sb-amber { background: #fff3cd; color: #856404; }
+    .sb-lavender { background: #e8dff5; color: #5b2c8e; }
+
+    /* Activity Cards */
+    .card {
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .card h2 {
+      font-size: 16pt;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card .check {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 2.5px solid currentColor;
+      border-radius: 4px;
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+    .card .skill-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .card-coral { background: #fff5f2; border: 2px solid #f7c5b8; }
+    .card-coral h2 { color: #c0392b; }
+    .card-coral .skill-tag { background: #f7c5b8; color: #922b21; }
+
+    .card-teal { background: #f0faf8; border: 2px solid #a3d9cf; }
+    .card-teal h2 { color: #0e7c6b; }
+    .card-teal .skill-tag { background: #a3d9cf; color: #0a5c50; }
+
+    .card-amber { background: #fffcf0; border: 2px solid #f0d78c; }
+    .card-amber h2 { color: #856404; }
+    .card-amber .skill-tag { background: #f0d78c; color: #6d5200; }
+
+    .card-lavender { background: #f8f4fd; border: 2px solid #c9b8e8; }
+    .card-lavender h2 { color: #5b2c8e; }
+    .card-lavender .skill-tag { background: #c9b8e8; color: #3e1d63; }
+
+    .instructions { margin: 12px 0; padding-left: 4px; }
+    .instructions li { margin-bottom: 6px; }
+
+    /* Inline Charts */
+    .chart-container {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    .chart-box {
+      flex: 1;
+      min-width: 260px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .chart-box h4 { font-family: 'Source Serif 4', serif; text-align: center; margin-bottom: 10px; font-size: 11pt; }
+    .bar-chart { display: flex; align-items: flex-end; gap: 14px; height: 140px; padding: 0 10px; border-bottom: 2px solid #555; border-left: 2px solid #555; position: relative; }
+    .bar-chart .y-label { position: absolute; left: -28px; font-size: 8pt; color: #777; }
+    .bar { display: flex; flex-direction: column; align-items: center; flex: 1; }
+    .bar .fill { width: 100%; border-radius: 4px 4px 0 0; }
+    .bar .label { font-size: 8pt; margin-top: 4px; text-align: center; }
+
+    .line-chart { position: relative; height: 140px; border-bottom: 2px solid #555; border-left: 2px solid #555; margin: 0 10px; }
+    .line-chart svg { width: 100%; height: 100%; }
+
+    .question-box {
+      background: white;
+      border-left: 4px solid currentColor;
+      padding: 10px 14px;
+      margin: 8px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+    }
+    .card-coral .question-box { border-color: #e74c3c; }
+    .card-teal .question-box { border-color: #1abc9c; }
+
+    /* Worksheets */
+    .cut-line {
+      border: none;
+      border-top: 2.5px dashed #bbb;
+      margin: 30px 0 10px;
+      position: relative;
+    }
+    .cut-label {
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .worksheet {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: white;
+      page-break-inside: avoid;
+    }
+    .worksheet h3 { font-size: 14pt; margin-bottom: 12px; }
+    .ws-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .ws-table th, .ws-table td {
+      border: 1.5px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ws-table th {
+      background: #f5f5f5;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+    .ws-table td { min-height: 40px; height: 40px; }
+
+    .write-line {
+      border-bottom: 1.5px solid #ccc;
+      height: 32px;
+      margin: 4px 0;
+    }
+    .write-area {
+      min-height: 60px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      padding: 8px;
+      margin: 6px 0;
+    }
+    .lined-area {
+      margin: 10px 0;
+    }
+    .lined-area .line {
+      border-bottom: 1px solid #d0d0d0;
+      height: 28px;
+    }
+
+    .example-box {
+      background: #f0f7ff;
+      border: 1px solid #b8d4f0;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+    .example-box .label { font-weight: 700; color: #2a6fad; font-size: 9pt; text-transform: uppercase; margin-bottom: 6px; }
+
+    .prompt-list { list-style: none; padding: 0; }
+    .prompt-list li {
+      padding: 8px 12px;
+      margin: 4px 0;
+      background: #f8f4fd;
+      border-radius: 8px;
+      font-size: 10.5pt;
+    }
+    .prompt-list li::before { content: "💡 "; }
+
+    .tip {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 10pt;
+      margin: 10px 0;
+      color: #2e7d32;
+    }
+
+    @media print {
+      body { padding: 0.25in; background: white; font-size: 10pt; }
+      .header { background: #667eea !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, .schedule-block, .bar .fill, .skill-tag, .example-box, .prompt-list li, .tip {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .worksheet { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>📚 Mia's Monday Plan</h1>
+    <div class="subtitle">Week 1 • Grade 5 • ~40 minutes of awesome</div>
+  </div>
+
+  <!-- Schedule Overview -->
+  <div class="schedule">
+    <div class="schedule-block sb-coral">
+      <span class="emoji">📊</span>
+      Graph Detective
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-teal">
+      <span class="emoji">🔍</span>
+      Source Scavenger Hunt
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-amber">
+      <span class="emoji">🧠</span>
+      "Why?" Journal
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-lavender">
+      <span class="emoji">✏️</span>
+      Freewrite
+      <div class="time">10 min</div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 1 ==================== -->
+  <div class="card card-coral">
+    <h2><span class="check"></span> 📊 Graph Detective <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Data Analysis — Reading Charts</span>
+
+    <p>You're a data detective today! 🕵️‍♀️ Your job: examine the graphs below and figure out what story the data is telling.</p>
+
+    <ol class="instructions">
+      <li>Pick one (or both!) of the sample graphs below.</li>
+      <li>Study it carefully — titles, labels, numbers, everything.</li>
+      <li>Answer the detective questions on the worksheet.</li>
+    </ol>
+
+    <!-- Sample Bar Chart -->
+    <div class="chart-container">
+      <div class="chart-box">
+        <h4>Favorite Animals — Mrs. Garcia's Class</h4>
+        <div class="bar-chart">
+          <span class="y-label" style="bottom: 0;">0</span>
+          <span class="y-label" style="bottom: 33%;">4</span>
+          <span class="y-label" style="bottom: 66%;">8</span>
+          <span class="y-label" style="bottom: 95%;">12</span>
+          <div class="bar"><div class="fill" style="height:75%; background:#e74c3c;"></div><div class="label">Dogs</div></div>
+          <div class="bar"><div class="fill" style="height:58%; background:#3498db;"></div><div class="label">Cats</div></div>
+          <div class="bar"><div class="fill" style="height:25%; background:#2ecc71;"></div><div class="label">Fish</div></div>
+          <div class="bar"><div class="fill" style="height:42%; background:#f39c12;"></div><div class="label">Birds</div></div>
+          <div class="bar"><div class="fill" style="height:92%; background:#9b59b6;"></div><div class="label">Horses</div></div>
+        </div>
+        <p style="text-align:center; font-size:8pt; color:#777; margin-top:6px;">Number of Students →</p>
+      </div>
+
+      <div class="chart-box">
+        <h4>Books Read Per Month — 2025</h4>
+        <svg viewBox="0 0 300 140" style="width:100%; height:140px;">
+          <!-- Grid lines -->
+          <line x1="30" y1="10" x2="30" y2="120" stroke="#ccc" stroke-width="1"/>
+          <line x1="30" y1="120" x2="290" y2="120" stroke="#555" stroke-width="2"/>
+          <line x1="30" y1="120" x2="30" y2="10" stroke="#555" stroke-width="2"/>
+          <!-- Y axis labels -->
+          <text x="22" y="123" font-size="7" text-anchor="end" fill="#777">0</text>
+          <text x="22" y="93" font-size="7" text-anchor="end" fill="#777">3</text>
+          <text x="22" y="63" font-size="7" text-anchor="end" fill="#777">6</text>
+          <text x="22" y="33" font-size="7" text-anchor="end" fill="#777">9</text>
+          <!-- Grid -->
+          <line x1="30" y1="90" x2="290" y2="90" stroke="#eee" stroke-width="1"/>
+          <line x1="30" y1="60" x2="290" y2="60" stroke="#eee" stroke-width="1"/>
+          <line x1="30" y1="30" x2="290" y2="30" stroke="#eee" stroke-width="1"/>
+          <!-- Data line -->
+          <polyline points="55,100 100,80 145,90 190,50 235,30 280,40" fill="none" stroke="#e74c3c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Points -->
+          <circle cx="55" cy="100" r="4" fill="#e74c3c"/>
+          <circle cx="100" cy="80" r="4" fill="#e74c3c"/>
+          <circle cx="145" cy="90" r="4" fill="#e74c3c"/>
+          <circle cx="190" cy="50" r="4" fill="#e74c3c"/>
+          <circle cx="235" cy="30" r="4" fill="#e74c3c"/>
+          <circle cx="280" cy="40" r="4" fill="#e74c3c"/>
+          <!-- X labels -->
+          <text x="55" y="133" font-size="7" text-anchor="middle" fill="#777">Sep</text>
+          <text x="100" y="133" font-size="7" text-anchor="middle" fill="#777">Oct</text>
+          <text x="145" y="133" font-size="7" text-anchor="middle" fill="#777">Nov</text>
+          <text x="190" y="133" font-size="7" text-anchor="middle" fill="#777">Dec</text>
+          <text x="235" y="133" font-size="7" text-anchor="middle" fill="#777">Jan</text>
+          <text x="280" y="133" font-size="7" text-anchor="middle" fill="#777">Feb</text>
+        </svg>
+        <p style="text-align:center; font-size:8pt; color:#777;">⚠️ <em>Something's missing from this graph — can you spot it?</em></p>
+      </div>
+    </div>
+
+    <div class="tip">💡 <strong>Detective Tip:</strong> A good graph always needs a title, labeled axes, and a source. If any of those are missing, that's a clue!</div>
+  </div>
+
+  <!-- Worksheet: Graph Detective -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Graph Detective Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>📊 Graph Detective Report</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="margin-top:10px;"><strong>Which graph are you analyzing?</strong></p>
+    <div class="write-line"></div>
+
+    <div class="question-box" style="border-color:#e74c3c; margin-top:14px;">
+      <strong>1. What does this graph show?</strong> (Describe in one sentence.)
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>2. What is the title?</strong> What are the labels on each axis?
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>3. What's one thing you notice right away?</strong> (Biggest bar? A trend going up or down?)
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>4. Is anything missing or confusing?</strong> (No title? No labels? Weird scale?)
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#e74c3c;">
+      <strong>5. If you could ask the person who made this graph ONE question, what would it be?</strong>
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 2 ==================== -->
+  <div class="card card-teal">
+    <h2><span class="check"></span> 🔍 Source Scavenger Hunt <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Information Literacy — Using Reference Tools</span>
+
+    <p>Grab any <strong>nonfiction book</strong> from around the house. You're going on a scavenger hunt — using only the <strong>table of contents</strong>, <strong>index</strong>, and <strong>glossary</strong> to track down information as fast as you can! ⏱️</p>
+
+    <ol class="instructions">
+      <li>Pick up a nonfiction book (science, history, animals, cooking — anything works).</li>
+      <li>Use the scavenger hunt questions below.</li>
+      <li>For each question, write down <em>where</em> you looked and what you found on the worksheet.</li>
+    </ol>
+
+    <div class="tip">💡 <strong>Reminder:</strong> The <strong>Table of Contents</strong> shows chapters in order. The <strong>Index</strong> (back of the book) lists topics alphabetically with page numbers. The <strong>Glossary</strong> defines important words.</div>
+  </div>
+
+  <!-- Worksheet: Scavenger Hunt -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Source Scavenger Hunt Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔍 Source Scavenger Hunt</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Book Title:</strong> _______________________________</p>
+
+    <table class="ws-table" style="margin-top:14px;">
+      <thead>
+        <tr>
+          <th style="width:5%;">#</th>
+          <th style="width:30%;">Question</th>
+          <th style="width:20%;">Where I Looked<br><span style="font-weight:400; font-size:8pt;">(Index / TOC / Glossary)</span></th>
+          <th style="width:12%;">Page #</th>
+          <th style="width:33%;">What I Found</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>What is the <strong>first chapter</strong> about?</td>
+          <td style="height:45px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Find a <strong>bold vocabulary word</strong>. What does it mean?</td>
+          <td style="height:45px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>What <strong>topic</strong> appears on the most pages? (Check the index!)</td>
+          <td style="height:45px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Find a <strong>picture or diagram</strong>. What page is it on and what does it show?</td>
+          <td style="height:45px;"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:10px;"><strong>⭐ Bonus:</strong> Which tool was most helpful — the Table of Contents, Index, or Glossary? Why?</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+  </div>
+
+  <!-- ==================== ACTIVITY 3 ==================== -->
+  <div class="card card-amber">
+    <h2><span class="check"></span> 🧠 "Why?" Journal <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Reading — Extended Reasoning & Evidence</span>
+
+    <p>Think about whatever you've been reading lately. Now dig deeper — ask <strong>"Why?"</strong> and then prove your answer using the actual text. Real readers don't just read — they <em>think</em> about what they read. 🤔</p>
+
+    <ol class="instructions">
+      <li>Think of 2 "why" questions about your book.</li>
+      <li>Write your best answer for each one.</li>
+      <li>Include <strong>evidence from the text</strong> — a quote, a detail, or a page number.</li>
+    </ol>
+
+    <div class="example-box">
+      <div class="label">✅ Example — What Good Text Evidence Looks Like</div>
+      <p><strong>My question:</strong> Why did Meg want to find her father so badly?</p>
+      <p><strong>My answer:</strong> Meg felt incomplete without her dad and blamed herself for not being strong enough to help. On page 42, she says, <em>"I can't just sit here and do nothing while he's out there."</em> This shows she felt responsible and couldn't accept waiting around.</p>
+      <p style="margin-top:6px; font-size:9.5pt; color:#666;">👆 Notice: a specific quote + the reader's own thinking about what it means.</p>
+    </div>
+  </div>
+
+  <!-- Worksheet: Why Journal -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ "Why?" Journal Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🧠 "Why?" Journal</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Book:</strong> _______________________________</p>
+
+    <div style="margin-top:16px; padding:16px; background:#fffcf0; border-radius:8px; border:1px solid #f0d78c;">
+      <p><strong>Why Question #1:</strong></p>
+      <p style="color:#888; font-size:10pt;">Why did _______________ do/say/feel _______________?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+
+      <p style="margin-top:14px;"><strong>My answer:</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+
+      <p style="margin-top:14px;"><strong>My evidence from the text:</strong> <span style="font-size:9pt; color:#888;">(quote, detail, or page #)</span></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div style="margin-top:16px; padding:16px; background:#fffcf0; border-radius:8px; border:1px solid #f0d78c;">
+      <p><strong>Why Question #2:</strong></p>
+      <p style="color:#888; font-size:10pt;">Why did _______________ do/say/feel _______________?</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+
+      <p style="margin-top:14px;"><strong>My answer:</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+
+      <p style="margin-top:14px;"><strong>My evidence from the text:</strong> <span style="font-size:9pt; color:#888;">(quote, detail, or page #)</span></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 4 ==================== -->
+  <div class="card card-lavender">
+    <h2><span class="check"></span> ✏️ Freewrite <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Written Expression — Fluency</span>
+
+    <p>Set a timer for 10 minutes. Pick a prompt (or make up your own!) and just <strong>write</strong>. The only rules:</p>
+
+    <ul class="instructions" style="list-style:none; padding-left:0;">
+      <li>🚫 No stopping</li>
+      <li>🚫 No erasing</li>
+      <li>🚫 No editing</li>
+      <li>✅ Just keep your pen moving!</li>
+    </ul>
+
+    <p style="margin-top:8px;">If you get stuck, write "I don't know what to write" until something comes. It always does. 🌊</p>
+
+    <h4 style="margin-top:16px; font-family:'Source Serif 4',serif;">Prompt Ideas (pick one or use your own!):</h4>
+    <ul class="prompt-list">
+      <li>If you could have any superpower but only for one hour a day, what would it be and how would you use it?</li>
+      <li>Describe the most interesting place you've ever been — make the reader feel like they're there.</li>
+      <li>You wake up and discover you can talk to animals. What's the first conversation you have?</li>
+      <li>Write a letter to your future self, 10 years from now.</li>
+      <li>What's something you're really good at? How did you get good at it?</li>
+    </ul>
+  </div>
+
+  <!-- Worksheet: Freewrite -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Freewrite Page — cut or fold here</div>
+  <div class="worksheet">
+    <h3>✏️ Freewrite</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="font-size:10pt; color:#888; margin:6px 0 12px;">My prompt: _________________________________________________</p>
+
+    <div class="lined-area">
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+    </div>
+
+    <p style="text-align:center; margin-top:12px; font-size:10pt; color:#9b59b6;">⭐ You did it! Every word counts. Nice work today, Mia! ⭐</p>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

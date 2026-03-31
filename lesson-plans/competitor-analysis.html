@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competitor Review Analysis — Clearly Curriculum</title>
+<style>
+  :root {
+    --green: #059669;
+    --green-bg: #ecfdf5;
+    --green-border: #a7f3d0;
+    --red: #dc2626;
+    --red-bg: #fef2f2;
+    --red-border: #fecaca;
+    --blue: #2563eb;
+    --blue-bg: #eff6ff;
+    --blue-border: #bfdbfe;
+    --purple: #7c3aed;
+    --purple-bg: #f5f3ff;
+    --purple-border: #ddd6fe;
+    --amber: #d97706;
+    --amber-bg: #fffbeb;
+    --amber-border: #fde68a;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-800);
+    line-height: 1.6;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1e3a5f 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .header .subtitle { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+  .header .date { font-size: 0.85rem; opacity: 0.6; margin-top: 1rem; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  .exec-summary {
+    background: var(--blue-bg);
+    border: 1px solid var(--blue-border);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .exec-summary h2 { color: var(--blue); font-size: 1.3rem; margin-bottom: 0.75rem; }
+  .exec-summary p { color: var(--gray-700); margin-bottom: 0.5rem; }
+  .exec-summary .highlight {
+    background: white;
+    border-left: 4px solid var(--blue);
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+
+  .competitor-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .competitor-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .competitor-header h2 { font-size: 1.4rem; color: var(--gray-900); }
+  .competitor-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .tag-price { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-border); }
+  .tag-ngss { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .tag-no-ngss { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .tag-secular { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple-border); }
+  .tag-religious { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .tag-neutral { background: var(--gray-100); color: var(--gray-600); border: 1px solid var(--gray-300); }
+
+  .competitor-desc {
+    padding: 1rem 1.5rem;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--gray-100);
+    background: var(--gray-50);
+  }
+
+  .review-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  @media (max-width: 640px) {
+    .review-columns { grid-template-columns: 1fr; }
+  }
+
+  .review-col {
+    padding: 1.25rem 1.5rem;
+  }
+  .review-col:first-child {
+    border-right: 1px solid var(--gray-100);
+  }
+  @media (max-width: 640px) {
+    .review-col:first-child { border-right: none; border-bottom: 1px solid var(--gray-100); }
+  }
+
+  .review-col h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .review-col.loves h3 { color: var(--green); }
+  .review-col.hates h3 { color: var(--red); }
+
+  .review-col ul { list-style: none; }
+  .review-col ul li {
+    padding: 0.4rem 0;
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+  .review-col ul li::before {
+    display: inline-block;
+    width: 1.2rem;
+    margin-right: 0.3rem;
+    font-weight: bold;
+  }
+  .review-col.loves ul li::before { content: "✓"; color: var(--green); }
+  .review-col.hates ul li::before { content: "✗"; color: var(--red); }
+
+  .quote {
+    font-style: italic;
+    color: var(--gray-600);
+    font-size: 0.82rem;
+    background: var(--gray-50);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    display: inline;
+  }
+
+  .gaps-section {
+    margin-top: 1rem;
+  }
+  .gaps-section h2 {
+    font-size: 1.6rem;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .gaps-section .gaps-subtitle {
+    text-align: center;
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+  }
+
+  .gap-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--green);
+  }
+  .gap-card h3 {
+    color: var(--gray-900);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+  .gap-card .problem { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .gap-card .opportunity {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .price-table th {
+    background: var(--gray-800);
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .price-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.88rem;
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table tr:nth-child(even) { background: var(--gray-50); }
+  .price-table .us-row { background: var(--green-bg) !important; font-weight: 600; }
+
+  .positioning {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+  }
+  .positioning h2 { font-size: 1.3rem; margin-bottom: 1rem; opacity: 0.9; }
+  .positioning p { font-size: 1.05rem; line-height: 1.7; max-width: 700px; margin: 0 auto; }
+  .positioning .wedge {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .sources {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--gray-100);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: var(--gray-600);
+  }
+  .sources h3 { font-size: 0.85rem; color: var(--gray-700); margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔬 Competitor Review Analysis</h1>
+  <div class="subtitle">What homeschool parents love and hate about the most popular elementary science curricula — and where the gaps are.</div>
+  <div class="date">Compiled February 12, 2026 · Clearly Curriculum · Internal Research</div>
+</div>
+
+<div class="container">
+
+<div class="exec-summary">
+  <h2>📋 Executive Summary</h2>
+  <p>We analyzed reviews of 6 major competitors across Amazon, Reddit r/homeschool, Teachers Pay Teachers, Cathy Duffy Reviews, Homeschool.com, and homeschool blogs.</p>
+  <p><strong>The recurring pain points:</strong> ugly/dated design, heavy material prep, screen dependency, piecemeal coverage, and the secular-vs-religious divide.</p>
+  <div class="highlight">🎯 Nobody offers a complete, NGSS-aligned, hands-on, secular, homeschool-designed curriculum with modern design and solved materials management. That's our lane.</div>
+</div>
+
+<!-- Competitor 1: RSO -->
+<div class="competitor-card">
+  <div class="competitor-header">
+    <h2>Real Science Odyssey</h2>
+    <div class="competitor-meta">
+      <span class="tag tag-price">$45–75/subject</span>
+      <span class="tag tag-no-ngss">No NGSS</span>
+      <span class="tag tag-secular">Secular</span>
+    </div>
+  </div>
+  <div class="competitor-desc">Pandia Press · Hands-on, literature-based · Covers Bio, Chem, Astro, Earth · PDF or print · Level 1 = K-5</div>
+  <div class="review-columns">
+    <div class="review-col loves">
+      <h3>✅ What Parents Love</h3>
+      <ul>
+        <li>Truly hands-on — every lesson has a lab/activity with household materials</li>
+        <li>Covers evolution, geological time, Big Bang — genuinely secular</li>
+        <li>Goes deep: periodic table, cell theory, genetics at elementary level</li>
+        <li>Well-structured Read → Explore → Absorb → Learn format</li>
+        <li>Background info for parents so they can actually teach it</li>
+      </ul>
+    </div>
+    <div class="review-col hates">
+      <h3>❌ What Parents Hate</h3>
+      <ul>
+        <li><span class="quote">"Cheap looking and cluttered"</span> — visual design doesn't match price</li>
+        <li>$45-55 for a PDF feels expensive. Print editions even more.</li>
+        <li>Significant prep time despite "open and go" marketing</li>
+        <li>One subject per year only — no multi-topic survey option</li>
+        <li>Consumable workbook pages — must re-buy for each child</li>
+        <li>No video/multimedia — all text in a video-first world</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Competitor 2: Mystery Science -->
+<div class="competitor-card">
+  <div class="competitor-header">
+    <h2>Mystery Science</h2>
+    <div class="competitor-meta">
+      <span class="tag tag-price">Free – $99/yr</span>
+      <span class="tag tag-ngss">NGSS ✓</span>
+      <span class="tag tag-secular">Secular</span>
+    </div>
+  </div>
+  <div class="competitor-desc">Video-based lessons built around mystery questions · Originally for classrooms, massively adopted by homeschoolers · Free tier available</div>
+  <div class="review-columns">
+    <div class="review-col loves">
+      <h3>✅ What Parents Love</h3>
+      <ul>
+        <li><span class="quote">"My kids love Mystery Science! The lessons totally capture their attention"</span></li>
+        <li>Professional, engaging video quality — Doug Peltz is warm and curious</li>
+        <li>True open-and-go — minimal parent prep</li>
+        <li>NGSS-aligned with good assessments</li>
+        <li>Free tier is genuinely useful for supplementing</li>
+        <li>Hooks reluctant learners through video format</li>
+      </ul>
+    </div>
+    <div class="review-col hates">
+      <h3>❌ What Parents Hate</h3>
+      <ul>
+        <li><span class="quote">"I just don't want to always do video based"</span> — screen time concerns</li>
+        <li><span class="quote">"Kind of a pain gathering things every time. I just hate prepping as we go."</span></li>
+        <li>Material packs sized for 30 students — wasteful for homeschoolers</li>
+        <li>Not deep enough as standalone curriculum</li>
+        <li>Feels "school-ish" — group prompts don't work with 1 child</li>
+        <li>Subscription model — content disappears if you stop paying</li>
+        <li>Activities are simple demos, not real experiments</li>
+        <li>Topics feel random and disconnected unit-to-unit</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Competitor 3: Elemental Science -->
+<div class="competitor-card">
+  <div class="competitor-header">
+    <h2>Elemental Science</h2>
+    <div class="competitor-meta">
+      <span class="tag tag-price">$60–100+/yr</span>
+      <span class="tag tag-no-ngss">No NGSS</span>
+      <span class="tag tag-neutral">Neutral</span>
+    </div>
+  </div>
+  <div class="competitor-desc">Classical education approach (Well-Trained Mind) · Living books + experiments + notebooking · Cathy Duffy Top Pick · 10,000+ users</div>
+  <div class="review-columns">
+    <div class="review-col loves">
+      <h3>✅ What Parents Love</h3>
+      <ul>
+        <li><span class="quote">"The best curriculum is the one that gets used!"</span> — actually gets done</li>
+        <li>Flexible 2-day or 5-day scheduling options</li>
+        <li>Classical education alignment — endorsed by Susan Wise Bauer</li>
+        <li>Notebooking creates tangible portfolio of learning</li>
+        <li><span class="quote">"My children begged for science and more science today"</span></li>
+        <li>Full K-12 progression available</li>
+      </ul>
+    </div>
+    <div class="review-col hates">
+      <h3>❌ What Parents Hate</h3>
+      <ul>
+        <li><span class="quote">"Demonstrations don't always make sense"</span> — disconnect from reading</li>
+        <li>"Neutral" on origins — satisfies neither secular nor religious families</li>
+        <li>Requires buying separate "spine" books (DK encyclopedias) — added cost</li>
+        <li>Text-heavy for young kids — reluctant readers struggle</li>
+        <li>Workbook pages uninspiring — basic coloring and labeling</li>
+        <li>Less hands-on than marketed — more read-and-write focused</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Competitor 4: Guest Hollow -->
+<div class="competitor-card">
+  <div class="competitor-header">
+    <h2>Guest Hollow</h2>
+    <div class="competitor-meta">
+      <span class="tag tag-price">Free – $35</span>
+      <span class="tag tag-no-ngss">No NGSS</span>
+      <span class="tag tag-secular">Secular</span>
+    </div>
+  </div>
+  <div class="competitor-desc">One-person passion project · Living books + hands-on · Free schedules online · Secular · Strongest in middle/high school</div>
+  <div class="review-columns">
+    <div class="review-col loves">
+      <h3>✅ What Parents Love</h3>
+      <ul>
+        <li>Free or very affordable — full outlines available at no cost</li>
+        <li>Living books approach — Charlotte Mason friendly</li>
+        <li>Creative experiments (DNA extraction from strawberries)</li>
+        <li>Detailed day-by-day schedules reduce decision fatigue</li>
+        <li>Responsive creator with genuine homeschool-parent perspective</li>
+        <li>Multi-age friendly unit study approach</li>
+      </ul>
+    </div>
+    <div class="review-col hates">
+      <h3>❌ What Parents Hate</h3>
+      <ul>
+        <li>Dependent on library having specific books — breaks down without them</li>
+        <li>One-person operation — slow updates, uncertain longevity</li>
+        <li>Materials look homemade — not visually polished or confidence-inspiring</li>
+        <li>Elementary science offerings are thin — more curated list than curriculum</li>
+        <li>No formal assessments or documentation tools</li>
+        <li>No standards alignment (no NGSS)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Competitor 5: Science in the Beginning -->
+<div class="competitor-card">
+  <div class="competitor-header">
+    <h2>Science in the Beginning</h2>
+    <div class="competitor-meta">
+      <span class="tag tag-price">$40–50/yr</span>
+      <span class="tag tag-no-ngss">No NGSS</span>
+      <span class="tag tag-religious">Young-Earth Creationist</span>
+    </div>
+  </div>
+  <div class="competitor-desc">Jay Wile (PhD Nuclear Chemistry) · Organized around Genesis creation days · Dominates Christian homeschool market · Full-color textbook</div>
+  <div class="review-columns">
+    <div class="review-col loves">
+      <h3>✅ What Parents Love</h3>
+      <ul>
+        <li>Biblical integration feels natural and meaningful for faith-based families</li>
+        <li>Jay Wile's PhD credentials build trust</li>
+        <li>Genuinely interesting experiments with household materials</li>
+        <li>Beautiful, full-color, professional presentation</li>
+        <li>Affordable — full year for ~$40-50, all-in-one</li>
+        <li>Massive community support — Facebook groups, co-op resources</li>
+      </ul>
+    </div>
+    <div class="review-col hates">
+      <h3>❌ What Parents Hate</h3>
+      <ul>
+        <li>Young-earth creationism is non-negotiable — impossible to secularize</li>
+        <li>Actively teaches against evolutionary biology</li>
+        <li>Organization by creation days creates odd topic jumps</li>
+        <li>Shallow general survey — doesn't go deep on any one topic</li>
+        <li>Assumes narrow worldview — excludes non-YEC families</li>
+        <li>No digital/video/multimedia component</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Competitor 6: TPT -->
+<div class="competitor-card">
+  <div class="competitor-header">
+    <h2>Teachers Pay Teachers (Top NGSS Sellers)</h2>
+    <div class="competitor-meta">
+      <span class="tag tag-price">$5–15/unit · $50–120/bundle</span>
+      <span class="tag tag-ngss">NGSS ✓</span>
+      <span class="tag tag-neutral">Varies</span>
+    </div>
+  </div>
+  <div class="competitor-desc">Marketplace of individual teacher-created units · Top sellers: Kesler Science, The Trendy Science Teacher, NGSS Science for Kids · Huge variety</div>
+  <div class="review-columns">
+    <div class="review-col loves">
+      <h3>✅ What Parents Love</h3>
+      <ul>
+        <li>Buy exactly what you need — no full curriculum commitment</li>
+        <li>Clear NGSS standards correlation for documentation</li>
+        <li>Top sellers have polished, colorful, modern designs</li>
+        <li>Phenomenon-based, inquiry-driven best sellers (5E model)</li>
+        <li>Reviews visible before purchase — helps with quality filtering</li>
+        <li>Digital + print options available</li>
+      </ul>
+    </div>
+    <div class="review-col hates">
+      <h3>❌ What Parents Hate</h3>
+      <ul>
+        <li><strong>No coherent scope & sequence</strong> — biggest complaint. You build your own curriculum from pieces.</li>
+        <li>Quality varies wildly — anyone can slap "NGSS" on worksheets</li>
+        <li>Designed for classrooms (25 kids), not homeschool families</li>
+        <li>Many products are worksheet-heavy, not truly hands-on</li>
+        <li>No teacher support or community after purchase</li>
+        <li>Color printing costs add up fast for PDF-only products</li>
+        <li>Copyright restrictions make co-op use expensive</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Price Comparison -->
+<h2 style="font-size: 1.4rem; margin: 2.5rem 0 1rem; color: var(--gray-900);">💰 Price Comparison</h2>
+
+<table class="price-table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Annual Cost</th>
+      <th>Format</th>
+      <th>NGSS</th>
+      <th>Secular</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Real Science Odyssey</td><td>$45–75/subject</td><td>PDF or Print</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Mystery Science</td><td>Free – $99/yr</td><td>Online/Video</td><td>✅</td><td>✅</td></tr>
+    <tr><td>Elemental Science</td><td>$60–100+</td><td>Print + Spines</td><td>❌</td><td>Neutral</td></tr>
+    <tr><td>Guest Hollow</td><td>Free – $35</td><td>PDF + Library</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Science in the Beginning</td><td>$40–50</td><td>Print</td><td>❌</td><td>❌ (YEC)</td></tr>
+    <tr><td>TPT NGSS Units</td><td>$50–120/bundle</td><td>PDF</td><td>✅</td><td>Varies</td></tr>
+    <tr class="us-row"><td>Clearly Curriculum</td><td>TBD</td><td>PDF + Print</td><td>✅</td><td>✅</td></tr>
+  </tbody>
+</table>
+
+<!-- Gaps Section -->
+<div class="gaps-section">
+  <h2>🎯 The 8 Gaps We Can Fill</h2>
+  <p class="gaps-subtitle">Recurring pain points across all competitors that define our opportunity</p>
+
+  <div class="gap-card">
+    <h3>Gap 1: No Complete NGSS + Secular + Hands-On Package</h3>
+    <div class="problem">Mystery Science is NGSS but video-dependent. RSO is secular and hands-on but not NGSS. TPT has NGSS units but no scope & sequence. Nobody has all three.</div>
+    <div class="opportunity">→ Be the first comprehensive, NGSS-aligned, hands-on, secular curriculum designed for homeschoolers.</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 2: Beautiful Modern Design at Accessible Price</h3>
+    <div class="problem">RSO is "cheap looking and cluttered." Guest Hollow looks homemade. Elemental Science workbooks are "uninspiring." Yet TPT proves parents pay more for good design.</div>
+    <div class="opportunity">→ Professional, visually appealing materials that match TPT's polish with real curriculum depth.</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 3: Open-and-Go Without Screen Dependency</h3>
+    <div class="problem">Mystery Science is open-and-go but screen-dependent. RSO and Elemental require significant prep. Parents say: "I don't want to always do video based."</div>
+    <div class="opportunity">→ Minimal prep, materials lists provided in advance, print-first. No screens required.</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 4: Materials Management Solved</h3>
+    <div class="problem">"Kind of a pain gathering things every time." Supply lists buried or missing. Material packs sized for 30 students. Mid-lesson scrambles.</div>
+    <div class="opportunity">→ Clear advance materials lists organized by unit. Common household items. Prep once per unit, not per lesson.</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 5: Multi-Age / Multi-Child Friendly</h3>
+    <div class="problem">Most curricula are grade-specific and consumable (re-buy for each child). Homeschool families teach siblings together.</div>
+    <div class="opportunity">→ Units that work across a 2-3 grade band with differentiation notes. Family-friendly licensing.</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 6: Depth Without Overwhelm</h3>
+    <div class="problem">Mystery Science too shallow. RSO goes deep but one-subject-per-year is limiting. Elemental Science experiments "don't always make sense."</div>
+    <div class="opportunity">→ Meaningful depth per topic while covering multiple science disciplines per year. Experiments that clearly connect to concepts.</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 7: Built-In Assessments & Documentation</h3>
+    <div class="problem">RSO, Guest Hollow: no formal assessments. Parents increasingly need documentation for umbrella schools and state requirements.</div>
+    <div class="opportunity">→ Portfolio pages, rubrics, optional quizzes. Make documentation easy without making it feel like "school."</div>
+  </div>
+
+  <div class="gap-card">
+    <h3>Gap 8: The "Missing Middle" — Pro-Science, Not Anti-Religion</h3>
+    <div class="problem">Jay Wile dominates religious but is anti-evolution. Elemental Science's "neutral" satisfies nobody. Secular options can feel exclusionary to moderate religious families.</div>
+    <div class="opportunity">→ Teach scientific consensus accurately. "Here's what the evidence shows" — respect families' freedom to add their own perspective.</div>
+  </div>
+</div>
+
+<!-- Positioning -->
+<div class="positioning">
+  <h2>Our Competitive Position</h2>
+  <p>The only NGSS-aligned, hands-on, secular elementary science curriculum designed from the ground up for homeschool families — with professional design, solved materials management, multi-age flexibility, and the depth parents want without the prep they dread.</p>
+  <div class="wedge">Our wedge: NGSS + Hands-On + Secular + Homeschool-Designed + Beautiful + Affordable.<br>Nobody is there yet.</div>
+</div>
+
+<div class="sources">
+  <h3>Sources</h3>
+  Amazon customer reviews · Reddit r/homeschool · Teachers Pay Teachers reviews · Cathy Duffy Reviews · Homeschool.com · Product websites · Homeschool blogs and forums · Verified purchaser reviews
+</div>
+
+</div>
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

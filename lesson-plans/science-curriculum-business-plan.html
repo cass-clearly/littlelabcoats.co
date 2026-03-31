@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Curriculum Business Plan — Clearly Curriculum</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #2d4a7a;
+    --teal: #0d9488;
+    --teal-light: #14b8a6;
+    --teal-bg: #f0fdfa;
+    --teal-border: #99f6e4;
+    --gold: #d97706;
+    --gold-light: #f59e0b;
+    --gold-bg: #fffbeb;
+    --gold-border: #fde68a;
+    --green: #059669;
+    --green-bg: #ecfdf5;
+    --green-border: #a7f3d0;
+    --red: #dc2626;
+    --purple: #7c3aed;
+    --purple-bg: #f5f3ff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: white;
+    color: var(--gray-800);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy) 100%);
+    color: white;
+    padding: 3.5rem 2rem 3rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+  .header .subtitle { font-size: 1.15rem; opacity: 0.85; max-width: 650px; margin: 0 auto 1rem; }
+  .header .badge {
+    display: inline-block;
+    background: var(--teal);
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .header .date { font-size: 0.8rem; opacity: 0.5; margin-top: 1rem; }
+
+  /* CONTAINER */
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+  /* TOC */
+  .toc {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .toc h2 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.75rem; }
+  .toc ol { padding-left: 1.5rem; }
+  .toc li { margin-bottom: 0.3rem; }
+  .toc a { color: var(--teal); text-decoration: none; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 3rem; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--navy);
+  }
+  .section-number {
+    background: var(--navy);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+  .section-header h2 { font-size: 1.5rem; color: var(--navy); }
+
+  h3 {
+    font-size: 1.15rem;
+    color: var(--navy-light);
+    margin: 1.5rem 0 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--gray-200);
+  }
+  h4 {
+    font-size: 1rem;
+    color: var(--teal);
+    margin: 1.25rem 0 0.5rem;
+    font-weight: 700;
+  }
+
+  p { margin-bottom: 0.75rem; }
+  ul, ol { margin: 0.5rem 0 1rem; padding-left: 1.75rem; }
+  li { margin-bottom: 0.35rem; }
+
+  /* HIGHLIGHT BOXES */
+  .box {
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+  }
+  .box-teal { background: var(--teal-bg); border: 1px solid var(--teal-border); }
+  .box-gold { background: var(--gold-bg); border: 1px solid var(--gold-border); }
+  .box-green { background: var(--green-bg); border: 1px solid var(--green-border); }
+  .box-purple { background: var(--purple-bg); border: 1px solid #ddd6fe; }
+  .box-navy { background: #eef2ff; border: 1px solid #c7d2fe; }
+  .box h4 { margin-top: 0; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.92rem;
+  }
+  th {
+    background: var(--navy);
+    color: white;
+    padding: 0.65rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+  }
+  tr:nth-child(even) { background: var(--gray-50); }
+  tr:hover { background: #f0f4ff; }
+
+  /* UNIT CARDS */
+  .unit-card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .unit-card h4 {
+    margin-top: 0;
+    color: var(--navy);
+    font-size: 1.05rem;
+  }
+  .unit-card .standard-tag {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .lesson-list { list-style: none; padding: 0; }
+  .lesson-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted var(--gray-200);
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .lesson-list li:last-child { border-bottom: none; }
+  .lesson-num {
+    background: var(--gold-bg);
+    border: 1px solid var(--gold-border);
+    border-radius: 4px;
+    padding: 0 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 0.5rem 0 0.5rem 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: var(--teal);
+  }
+  .checklist li.done::before { content: '☑'; color: var(--green); }
+
+  /* PHASE TIMELINE */
+  .phase {
+    border-left: 4px solid var(--teal);
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+  }
+  .phase::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--teal);
+    border-radius: 50%;
+    position: absolute;
+    left: -9px;
+    top: 1rem;
+  }
+  .phase h4 { margin-top: 0; color: var(--navy); }
+
+  /* KEY INSIGHT */
+  .insight {
+    background: linear-gradient(135deg, #6a2a4f 0%, #804060 100%);
+    color: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+  }
+  .insight strong { color: var(--gold-light); }
+
+  /* PRINT */
+  @media print {
+    body { font-size: 11pt; }
+    .header { padding: 2rem 1rem; }
+    .header h1 { font-size: 1.8rem; }
+    .container { padding: 1rem; }
+    .section { page-break-inside: avoid; }
+    .unit-card, .box { page-break-inside: avoid; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .header h1 { font-size: 1.6rem; }
+    .container { padding: 1rem; }
+    table { font-size: 0.8rem; }
+    th, td { padding: 0.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">BUSINESS PLAN — FEBRUARY 2026</div>
+  <h1>🔬 Clearly Curriculum</h1>
+  <p class="subtitle">NGSS-Aligned, Hands-On Science for Homeschool Families<br>Kindergarten through 5th Grade</p>
+  <p class="date">Prepared for Serena Salvato · v1.0</p>
+</div>
+
+<div class="container">
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h2>📋 Table of Contents</h2>
+  <ol>
+    <li><a href="#product">Product Structure — Kindergarten NGSS Curriculum</a></li>
+    <li><a href="#pricing">Product Tiers &amp; Pricing</a></li>
+    <li><a href="#tech">Website &amp; Tech Stack</a></li>
+    <li><a href="#pipeline">Content Production Pipeline</a></li>
+    <li><a href="#launch">Launch Strategy</a></li>
+    <li><a href="#action">Immediate Action Items</a></li>
+    <li><a href="#revenue">Revenue Projections</a></li>
+  </ol>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="insight">
+  <strong>The Opportunity:</strong> There is no comprehensive, NGSS-aligned, hands-on, secular science curriculum designed specifically for homeschool families. Mystery Science is video-dependent and shallow. Real Science Odyssey looks dated. TPT is piecemeal. <em>Clearly Curriculum</em> fills the gap — beautiful design, real experiments, minimal prep, no screens required — built by a scientist who actually homeschools.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 1: PRODUCT STRUCTURE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="product">
+  <div class="section-header">
+    <div class="section-number">1</div>
+    <h2>Product Structure — Kindergarten NGSS Curriculum</h2>
+  </div>
+
+  <p>The full Kindergarten year maps to <strong>36 weeks</strong> (1 lesson/week), organized into <strong>6 units</strong> of 6 lessons each. Each unit aligns to a specific NGSS Disciplinary Core Idea and integrates Engineering Design (K-2-ETS1) throughout rather than as a standalone unit — this mirrors how real scientists work.</p>
+
+  <div class="box box-teal">
+    <h4>🗓️ Year-at-a-Glance Pacing</h4>
+    <table>
+      <tr><th>Unit</th><th>NGSS Standard</th><th>Weeks</th><th>Theme</th></tr>
+      <tr><td>1</td><td>K-PS2</td><td>1–6</td><td>Pushes, Pulls &amp; How Things Move</td></tr>
+      <tr><td>2</td><td>K-PS3</td><td>7–12</td><td>Sunshine &amp; Energy</td></tr>
+      <tr><td>3</td><td>K-LS1</td><td>13–18</td><td>Living Things &amp; What They Need</td></tr>
+      <tr><td>4</td><td>K-ESS2</td><td>19–24</td><td>Weather Watchers</td></tr>
+      <tr><td>5</td><td>K-ESS3</td><td>25–30</td><td>Our Earth, Our Job</td></tr>
+      <tr><td>6</td><td>K-2-ETS1</td><td>31–36</td><td>Design Lab — Solve It!</td></tr>
+    </table>
+    <p style="font-size:0.85rem;color:var(--gray-600);margin-bottom:0;">Engineering design (ETS1) is woven into Units 1–5 as well, with Unit 6 serving as a capstone project unit.</p>
+  </div>
+
+  <!-- UNIT 1 -->
+  <div class="unit-card">
+    <span class="standard-tag">K-PS2 · Forces &amp; Interactions</span>
+    <h4>Unit 1: Pushes, Pulls &amp; How Things Move (Weeks 1–6)</h4>
+    <p><strong>Performance Expectations:</strong> K-PS2-1 (plan and conduct investigation on effects of different strengths/directions of pushes &amp; pulls) · K-PS2-2 (analyze data to determine if design solution works)</p>
+    <ul class="lesson-list">
+      <li><span class="lesson-num">L1</span><div><strong>The Great Push &amp; Pull Sort</strong> — Classify objects/actions as pushes or pulls. Sort cards + physical objects (toy car, wagon, door). <em>Materials: sort cards (print), toy car, string, small objects.</em></div></li>
+      <li><span class="lesson-num">L2</span><div><strong>Ramp Racers</strong> — Investigate how ramp height changes how far a ball rolls. Measure with unifix cubes. <em>Materials: cardboard ramp, ball, unifix cubes, data sheet.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L3</span><div><strong>Strong Push, Gentle Push</strong> — Push objects with different forces, observe &amp; record results. Connect to real-world (bowling, soccer). <em>Materials: ping pong ball, cotton ball, blocks, data sheet.</em></div></li>
+      <li><span class="lesson-num">L4</span><div><strong>Magnet Magic</strong> — Explore pushes and pulls you can't see. Test which materials are magnetic. <em>Materials: magnets, paperclips, coins, fabric, plastic items, recording sheet.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L5</span><div><strong>Wind Wagon Engineering Challenge</strong> — Design a sail-powered wagon that moves with wind (fan/blowing). Iterate &amp; improve. (ETS1 integration) <em>Materials: cardboard, straws, paper, tape, wheels/caps, fan.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L6</span><div><strong>Marble Run Madness</strong> — Capstone: build a marble run using tubes &amp; ramps. Apply all push/pull/force concepts. Record observations. <em>Materials: cardboard tubes, tape, marble, cup.</em></div></li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--gray-500);"><strong>Kit vs. Digital:</strong> Lessons 2, 4, 5 benefit most from curated kits (magnets, wheels, unifix cubes). Others use common household items — digital-only friendly.</p>
+  </div>
+
+  <!-- UNIT 2 -->
+  <div class="unit-card">
+    <span class="standard-tag">K-PS3 · Energy</span>
+    <h4>Unit 2: Sunshine &amp; Energy (Weeks 7–12)</h4>
+    <p><strong>Performance Expectations:</strong> K-PS3-1 (make observations to determine effect of sunlight on Earth's surface) · K-PS3-2 (use tools &amp; materials to design a structure to reduce warming by sunlight)</p>
+    <ul class="lesson-list">
+      <li><span class="lesson-num">L7</span><div><strong>Sun vs. Shade Temperature Hunt</strong> — Use thermometers to compare temperatures in sun and shade around the house/yard. Record data. <em>Materials: 2 thermometers, data sheet, clipboard.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L8</span><div><strong>Black vs. White: Color &amp; Heat</strong> — Place black and white paper/fabric in sunlight, measure temperature after 30 min. <em>Materials: black &amp; white paper/fabric, thermometers, data sheet.</em></div></li>
+      <li><span class="lesson-num">L9</span><div><strong>Ice Cream in a Bag</strong> — Make ice cream to explore energy transfer (thermal energy). Your existing lesson! <em>Materials: cream, sugar, vanilla, ice, salt, zip bags.</em></div></li>
+      <li><span class="lesson-num">L10</span><div><strong>Solar Oven S'mores</strong> — Build a solar oven from a pizza box; melt chocolate. Connect to renewable energy. <em>Materials: pizza box, aluminum foil, plastic wrap, chocolate, graham crackers, marshmallows.</em></div></li>
+      <li><span class="lesson-num">L11</span><div><strong>Design a Shade Structure</strong> — Engineering challenge: build a structure that keeps an ice cube from melting in sunlight. (ETS1 integration) <em>Materials: craft sticks, foil, fabric scraps, tape, ice cubes.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L12</span><div><strong>Sun Journal Wrap-Up</strong> — Review sun observations from the unit. Draw and label "what sunlight does." Create mini science poster. <em>Materials: poster paper, crayons/markers, data from prior lessons.</em></div></li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--gray-500);"><strong>Kit vs. Digital:</strong> Thermometers (L7, L8) are the key kit item. Solar oven and ice cream use kitchen supplies. Shade structure kit materials are useful to include.</p>
+  </div>
+
+  <!-- UNIT 3 -->
+  <div class="unit-card">
+    <span class="standard-tag">K-LS1 · From Molecules to Organisms</span>
+    <h4>Unit 3: Living Things &amp; What They Need (Weeks 13–18)</h4>
+    <p><strong>Performance Expectations:</strong> K-LS1-1 (use observations to describe patterns of what plants &amp; animals need to survive)</p>
+    <ul class="lesson-list">
+      <li><span class="lesson-num">L13</span><div><strong>Living or Not? The Great Sort</strong> — Sort pictures and objects into living vs. non-living. Establish criteria (grows, needs food/water, reproduces). <em>Materials: sort cards (print), real objects (rock, plant, toy animal, fruit).</em></div></li>
+      <li><span class="lesson-num">L14</span><div><strong>Seed Germination Station</strong> — Plant seeds in zip bags with wet paper towels. Observe over 2 weeks. Daily drawing journal. <em>Materials: bean seeds, paper towels, zip bags, spray bottle, observation journal.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L15</span><div><strong>What Do Plants Need? Light Experiment</strong> — Grow 3 identical seedlings: one with light, one in dark, one with partial light. Compare over 2 weeks. <em>Materials: 3 cups, soil, seeds, box for dark, data sheet.</em></div></li>
+      <li><span class="lesson-num">L16</span><div><strong>Bird Beak Buffet</strong> — Your existing lesson! Explore animal adaptations through tool-based feeding simulation. <em>Materials: tweezers, chopsticks, spoons, clothespins, various "foods."</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L17</span><div><strong>Habitat Diorama</strong> — Choose an animal, research its needs, build a shoebox habitat. Label food, water, shelter. (ETS1 integration) <em>Materials: shoebox, construction paper, clay, natural materials, labels.</em></div></li>
+      <li><span class="lesson-num">L18</span><div><strong>Pet Vet Observation Day</strong> — Observe a real pet or visit animals. Record: What does it eat? Where does it sleep? How does it stay safe? Compare to wild animals. <em>Materials: observation sheet, clipboard, colored pencils.</em></div></li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--gray-500);"><strong>Kit vs. Digital:</strong> Seed kit (L14) and beak buffet tools (L16) are perfect kit items. Other lessons use household/craft supplies.</p>
+  </div>
+
+  <!-- UNIT 4 -->
+  <div class="unit-card">
+    <span class="standard-tag">K-ESS2 · Earth's Systems</span>
+    <h4>Unit 4: Weather Watchers (Weeks 19–24)</h4>
+    <p><strong>Performance Expectations:</strong> K-ESS2-1 (use &amp; share observations of local weather conditions to describe patterns over time) · K-ESS2-2 (construct argument from evidence for how plants &amp; animals can change environment)</p>
+    <ul class="lesson-list">
+      <li><span class="lesson-num">L19</span><div><strong>My Weather Station</strong> — Set up a daily weather observation routine: temperature, cloud cover, precipitation, wind. Introduce weather tools. <em>Materials: outdoor thermometer, weather journal, wind sock (make from bag + string).</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L20</span><div><strong>Cloud in a Jar</strong> — Create a cloud using warm water, ice, and hairspray. Identify cloud types (cumulus, stratus, cirrus). <em>Materials: jar, warm water, ice, hairspray, cloud ID card (print).</em></div></li>
+      <li><span class="lesson-num">L21</span><div><strong>Rain Gauge &amp; Water Cycle</strong> — Build a simple rain gauge. Model the water cycle in a zip bag taped to a window. <em>Materials: plastic bottle (cut), ruler, zip bag, blue food coloring, tape.</em></div></li>
+      <li><span class="lesson-num">L22</span><div><strong>Wild Wind Experiments</strong> — Make a pinwheel and anemometer. Test wind strength at different locations. <em>Materials: paper, pin, pencil eraser, small cups, straws, tape.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L23</span><div><strong>Weather Forecaster for a Day</strong> — Use 4 weeks of weather data to spot patterns. Make a 3-day "forecast." Compare to actual weather app. <em>Materials: weather journal (from L19), forecast worksheet.</em></div></li>
+      <li><span class="lesson-num">L24</span><div><strong>Severe Weather Safety Plan</strong> — Learn about thunderstorms, tornadoes, blizzards (regional). Design a family safety poster. (ETS1 integration) <em>Materials: poster paper, info cards (print), markers.</em></div></li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--gray-500);"><strong>Kit vs. Digital:</strong> Weather station kit (thermometer, wind sock materials, anemometer supplies) is a high-value kit. Rain gauge and cloud jar use household items.</p>
+  </div>
+
+  <!-- UNIT 5 -->
+  <div class="unit-card">
+    <span class="standard-tag">K-ESS3 · Earth &amp; Human Activity</span>
+    <h4>Unit 5: Our Earth, Our Job (Weeks 25–30)</h4>
+    <p><strong>Performance Expectations:</strong> K-ESS3-1 (use a model to represent relationship between needs of plants/animals and places they live) · K-ESS3-2 (ask questions about data from maps showing natural hazards) · K-ESS3-3 (communicate solutions to reduce human impact)</p>
+    <ul class="lesson-list">
+      <li><span class="lesson-num">L25</span><div><strong>Where Do Animals Live &amp; Why?</strong> — Match animals to habitats. Discuss what each habitat provides (food, water, shelter, space). <em>Materials: animal/habitat matching cards (print), world map poster.</em></div></li>
+      <li><span class="lesson-num">L26</span><div><strong>Trash Audit</strong> — Collect 1 day of family trash (clean items). Sort into categories. Calculate what could be reduced, reused, or recycled. <em>Materials: gloves, sorting bins/bags, tally sheet, scale (optional).</em></div></li>
+      <li><span class="lesson-num">L27</span><div><strong>Oil Spill Clean-Up Challenge</strong> — Simulate an oil spill (vegetable oil + water + feathers) and try to clean it. Discuss impact on animals. <em>Materials: tray, water, vegetable oil, feathers, cotton balls, spoons, dish soap, paper towels.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L28</span><div><strong>Compost in a Bottle</strong> — Build a mini compost column. Observe decomposition over weeks. <em>Materials: 2-liter bottle, soil, food scraps, leaves, spray bottle, observation journal.</em></div></li>
+      <li><span class="lesson-num">L29</span><div><strong>Design a Solution: Reduce, Reuse, Redesign</strong> — Choose a waste problem, design a solution (reusable lunch wrap, bird feeder from recycled materials, etc.). Build prototype. (ETS1 integration) <em>Materials: recycled materials collection, tape, glue, scissors.</em></div></li>
+      <li><span class="lesson-num">L30</span><div><strong>Earth Helpers Pledge &amp; Poster</strong> — Create a personal or family "Earth Pledge" poster with specific actions. Present to family. <em>Materials: poster board, markers, stickers, pledge template (print).</em></div></li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--gray-500);"><strong>Kit vs. Digital:</strong> Oil spill kit (L27) is a standout kit item — fun, dramatic, memorable. Other lessons use household/recycled items.</p>
+  </div>
+
+  <!-- UNIT 6 -->
+  <div class="unit-card">
+    <span class="standard-tag">K-2-ETS1 · Engineering Design (Capstone)</span>
+    <h4>Unit 6: Design Lab — Solve It! (Weeks 31–36)</h4>
+    <p><strong>Performance Expectations:</strong> K-2-ETS1-1 (ask questions, make observations, gather information about a problem to solve) · K-2-ETS1-2 (develop a simple sketch, drawing, or model to illustrate a solution) · K-2-ETS1-3 (analyze data from testing to determine best solution)</p>
+    <ul class="lesson-list">
+      <li><span class="lesson-num">L31</span><div><strong>What Is Engineering?</strong> — Introduce the engineering design process. Meet real engineers (diverse photo cards). Practice identifying problems around the house. <em>Materials: engineer photo cards (print), problem-spotting worksheet.</em></div></li>
+      <li><span class="lesson-num">L32</span><div><strong>Tower Challenge</strong> — Build the tallest freestanding tower using limited materials. Sketch design first, build, measure, iterate. <em>Materials: index cards, tape (limited supply), ruler.</em></div></li>
+      <li><span class="lesson-num">L33</span><div><strong>Bridge Builder</strong> — Design a bridge that holds the most weight between two stacks of books. Test with coins/washers. <em>Materials: popsicle sticks, tape, coins/washers, books, design journal.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L34</span><div><strong>Egg Drop Protector</strong> — Classic engineering challenge: protect an egg from a drop. Sketch → build → test → redesign. <em>Materials: egg, cotton balls, straws, tape, rubber bands, paper, zip bag.</em></div></li>
+      <li><span class="lesson-num">L35</span><div><strong>Float Your Boat</strong> — Design a foil boat that holds the most pennies without sinking. Data collection + comparison of designs. <em>Materials: aluminum foil, pennies, tub of water, data sheet.</em> 🎒 Kit</div></li>
+      <li><span class="lesson-num">L36</span><div><strong>My Invention — Final Project</strong> — Students identify a real problem in their life and design a solution. Draw blueprints, build model, present to family. <em>Materials: mixed craft/building supplies, presentation rubric, certificate of completion (print).</em></div></li>
+    </ul>
+    <p style="font-size:0.85rem;color:var(--gray-500);"><strong>Kit vs. Digital:</strong> Bridge kit (popsicle sticks, washers) and boat kit (foil, pennies) are great kit items. Tower and egg drop use common household supplies.</p>
+  </div>
+
+  <div class="box box-gold">
+    <h4>📦 Materials Summary</h4>
+    <p>Of the 36 lessons, approximately <strong>12 lessons</strong> (marked 🎒) have materials that are ideal for a curated physical kit (specialty items like magnets, thermometers, seeds, craft engineering supplies). The remaining <strong>24 lessons</strong> use common household items (paper, tape, food items, recycled materials) and are well-suited for digital-only customers with a clear advance supply list.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 2: PRICING -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="pricing">
+  <div class="section-header">
+    <div class="section-number">2</div>
+    <h2>Product Tiers &amp; Pricing</h2>
+  </div>
+
+  <h3>💰 Three-Tier Model</h3>
+
+  <table>
+    <tr>
+      <th style="width:20%;">Tier</th>
+      <th style="width:30%;">What's Included</th>
+      <th style="width:15%;">Per Unit<br>(6 lessons)</th>
+      <th style="width:15%;">Full Year<br>(6 units)</th>
+      <th style="width:20%;">Notes</th>
+    </tr>
+    <tr>
+      <td><strong>🖨️ Digital Download</strong></td>
+      <td>Lesson plans (PDF), worksheets, data sheets, parent guide, answer keys, materials list, pacing guide</td>
+      <td><strong>$18</strong></td>
+      <td><strong>$89</strong><br><span style="font-size:0.8rem;color:var(--green);">save $19</span></td>
+      <td>Instant delivery. Family license (print for all children in household).</td>
+    </tr>
+    <tr>
+      <td><strong>📦 Digital + Kit</strong></td>
+      <td>Everything in Digital PLUS a physical box with all specialty materials for that unit's experiments</td>
+      <td><strong>$49</strong></td>
+      <td><strong>$249</strong><br><span style="font-size:0.8rem;color:var(--green);">save $45</span></td>
+      <td>Ships within 5 days. Includes consumables + reusables. ~$12–18 materials cost per kit.</td>
+    </tr>
+    <tr>
+      <td><strong>🔄 Annual Subscription</strong></td>
+      <td>All digital content for the grade level, dripped weekly. Bonus: parent community access, early access to new grades, quarterly live Q&amp;A with Serena</td>
+      <td>—</td>
+      <td><strong>$119/year</strong></td>
+      <td>Recurring. Cancel anytime. Add-on: kit subscription $199/year (6 boxes shipped).</td>
+    </tr>
+  </table>
+
+  <div class="box box-teal">
+    <h4>🎯 Pricing Rationale</h4>
+    <ul>
+      <li><strong>Digital at $89/year</strong> — Undercuts RSO ($45–55 per subject × 2+ subjects) and beats TPT bundles ($50–120) while offering a complete, sequenced curriculum. Above "race to the bottom" pricing that signals quality.</li>
+      <li><strong>Kit at $249/year</strong> — Below the $300–500 range of premium kit curricula (Mel Science, KiwiCo annual). Materials cost ~$12–18/kit × 6 = $72–108, leaving ~$140–175 margin before shipping.</li>
+      <li><strong>Subscription at $119/year</strong> — Sweet spot above Mystery Science ($99) with more value (hands-on, not just video). The 34% premium over one-time digital ($89) is justified by community access and drip convenience.</li>
+    </ul>
+  </div>
+
+  <h3>📊 Estimated Kit Material Costs (Per Unit)</h3>
+  <table>
+    <tr><th>Unit</th><th>Key Kit Items</th><th>Est. Material Cost</th><th>Shipping Est.</th></tr>
+    <tr><td>1: Forces</td><td>Magnets, unifix cubes, wheels/axles, craft supplies</td><td>$14</td><td>$6</td></tr>
+    <tr><td>2: Energy</td><td>2 thermometers, aluminum foil, fabric samples</td><td>$12</td><td>$5</td></tr>
+    <tr><td>3: Living Things</td><td>Bean seeds, tweezers, clothespins, chopsticks, cups</td><td>$11</td><td>$5</td></tr>
+    <tr><td>4: Weather</td><td>Thermometer, anemometer cups, wind sock materials</td><td>$13</td><td>$5</td></tr>
+    <tr><td>5: Earth</td><td>Feathers, cotton balls, oil spill simulation supplies</td><td>$10</td><td>$5</td></tr>
+    <tr><td>6: Engineering</td><td>Popsicle sticks, washers, foil, pennies, craft supplies</td><td>$12</td><td>$5</td></tr>
+  </table>
+  <p style="font-size:0.85rem;color:var(--gray-500);">Average material cost: ~$12/unit. With branded packaging: ~$15/unit. Shipping via USPS flat rate small box: ~$5–7. <strong>Total COGS per kit: ~$20. Selling at $49 = ~59% gross margin.</strong></p>
+
+  <h3>🎁 Launch Pricing Strategy</h3>
+  <div class="box box-green">
+    <ul>
+      <li><strong>Beta/Early Bird:</strong> 30% off all tiers for first 50 customers → Digital $62/year, Kit $175/year</li>
+      <li><strong>Free Sample Lesson:</strong> One complete lesson (Bird Beak Buffet or Ramp Racers) as lead magnet. Full quality — show them what they're getting.</li>
+      <li><strong>"Founding Family" tier:</strong> First 25 annual subscribers get lifetime 20% renewal discount + name in the curriculum acknowledgments</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 3: TECH STACK -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="tech">
+  <div class="section-header">
+    <div class="section-number">3</div>
+    <h2>Website &amp; Tech Stack</h2>
+  </div>
+
+  <div class="insight">
+    <strong>Recommendation: Shopify Basic</strong> — It handles digital downloads, physical shipping, and subscriptions all in one platform. No code needed. Serena can manage it independently.
+  </div>
+
+  <table>
+    <tr><th style="width:30%;">Need</th><th style="width:35%;">Solution</th><th style="width:15%;">Cost/mo</th><th style="width:20%;">Notes</th></tr>
+    <tr><td>E-commerce Platform</td><td><strong>Shopify Basic</strong></td><td>$39</td><td>All-in-one: storefront, cart, checkout, inventory</td></tr>
+    <tr><td>Digital Downloads</td><td><strong>Shopify Digital Downloads</strong> (free app) or <strong>Sky Pilot</strong> ($15/mo)</td><td>$0–15</td><td>Free app works fine to start. Sky Pilot adds PDF stamping and drip.</td></tr>
+    <tr><td>Subscriptions</td><td><strong>Seal Subscriptions</strong> (free plan) or <strong>Recharge</strong></td><td>$0</td><td>Free tier allows up to 150 subscriptions — plenty to start</td></tr>
+    <tr><td>Payment Processing</td><td><strong>Shopify Payments</strong> (Stripe-powered)</td><td>2.9% + 30¢/tx</td><td>Built-in. No additional setup needed.</td></tr>
+    <tr><td>Email Marketing</td><td><strong>Shopify Email</strong> (10k free/mo) → migrate to <strong>Klaviyo</strong> or <strong>Mailchimp</strong> when list grows</td><td>$0</td><td>Free tier generous enough for first 6+ months</td></tr>
+    <tr><td>Domain</td><td><strong>clearlycurriculum.com</strong> (or similar — check availability)</td><td>$1.25</td><td>~$15/year via Shopify or Cloudflare</td></tr>
+    <tr><td>Blog/SEO Content</td><td>Shopify built-in blog</td><td>$0</td><td>Post free science tips, homeschool advice for SEO</td></tr>
+  </table>
+
+  <div class="box box-gold">
+    <h4>💡 Total Monthly Cost: ~$40–55/month</h4>
+    <p>That's it. Shopify Basic + free apps gets you a professional store with digital downloads, physical product shipping, subscription billing, and email marketing. Scale up tools only when revenue justifies it.</p>
+  </div>
+
+  <h3>🚫 Why NOT Other Platforms</h3>
+  <ul>
+    <li><strong>WordPress + WooCommerce:</strong> More flexible but requires technical maintenance. Plugin conflicts, security updates, hosting management. Too much overhead for Serena.</li>
+    <li><strong>Squarespace:</strong> Beautiful templates but weak e-commerce. No native subscriptions, clunky digital delivery.</li>
+    <li><strong>Teachable/Thinkific:</strong> Great for courses but not physical products. Would need a second platform for kits.</li>
+    <li><strong>Etsy/TPT:</strong> Good for discovery but high fees (15–25%), no brand building, no email list ownership. Use as <em>additional</em> sales channel, not primary.</li>
+  </ul>
+
+  <h3>📱 Additional Channels (Phase 2+)</h3>
+  <ul>
+    <li><strong>Teachers Pay Teachers:</strong> List individual units at $18 each. TPT takes ~20% but provides built-in audience of millions. Use as a funnel to your main site.</li>
+    <li><strong>Etsy:</strong> List physical kits. Etsy's audience skews toward handmade/curated — kits fit well.</li>
+    <li><strong>Amazon:</strong> Future possibility for kits once volume justifies FBA. Complex — Phase 4+.</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 4: PRODUCTION PIPELINE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="pipeline">
+  <div class="section-header">
+    <div class="section-number">4</div>
+    <h2>Content Production Pipeline</h2>
+  </div>
+
+  <h3>🔄 Per-Lesson Workflow</h3>
+  <table>
+    <tr><th>Step</th><th>Who</th><th>What</th><th>Time Est.</th></tr>
+    <tr><td>1. Outline &amp; Research</td><td>Serena + Cass</td><td>Serena identifies NGSS standard targets; Cass drafts lesson outline with activities, discussion questions, assessment ideas</td><td>30 min</td></tr>
+    <tr><td>2. Draft Lesson Plan</td><td>Cass</td><td>Generate full HTML lesson plan in established format (matching bird-beak-buffet style): teacher guide, student worksheets, data sheets, materials list</td><td>15 min</td></tr>
+    <tr><td>3. Generate Illustrations</td><td>Cass</td><td>Create AI illustrations for key concepts using image generation (cartoon/educational style matching existing lessons)</td><td>15 min</td></tr>
+    <tr><td>4. Science Review</td><td>Serena</td><td>Review for scientific accuracy, age-appropriateness, NGSS alignment. Edit wording, fix any errors.</td><td>30 min</td></tr>
+    <tr><td>5. Test the Experiment</td><td>Serena + kids</td><td>Actually do the experiment. Note what works, what needs adjustment, real timing, mess level, kid engagement.</td><td>30–60 min</td></tr>
+    <tr><td>6. Photo Documentation</td><td>Serena</td><td>Photograph real materials, setup, process, results. These replace/supplement AI images for authenticity.</td><td>15 min</td></tr>
+    <tr><td>7. Revise &amp; Finalize</td><td>Cass + Serena</td><td>Incorporate test feedback, add real photos, final formatting, generate PDF version</td><td>20 min</td></tr>
+    <tr><td>8. Parent Guide</td><td>Cass</td><td>Create parent-facing overview: learning objectives, common questions, extension activities, book recommendations</td><td>10 min</td></tr>
+  </table>
+
+  <div class="box box-teal">
+    <h4>⏱️ Total Time Per Lesson</h4>
+    <p><strong>Serena's time: ~1.5–2 hours</strong> (review + test + photograph)<br>
+    <strong>Cass's time: ~1 hour</strong> (draft + illustrations + revisions + parent guide)<br>
+    <strong>Total: ~2.5–3 hours per lesson</strong></p>
+    <p>At 2 lessons/week production pace → one 6-lesson unit every 3 weeks → <strong>full Kindergarten year in ~18 weeks (4.5 months)</strong></p>
+  </div>
+
+  <h3>📦 Batch Production Strategy</h3>
+  <ol>
+    <li><strong>Batch by unit:</strong> Complete all 6 lessons in a unit before moving to the next. This allows unit-level coherence and scope review.</li>
+    <li><strong>Cass pre-drafts:</strong> Cass can draft all 6 lesson plans in a unit in one session (~2 hours). Serena then reviews and tests in batches.</li>
+    <li><strong>Photo days:</strong> Batch experiment testing into 2–3 "photo shoot" days per unit. Set up, test, photograph multiple experiments in sequence.</li>
+    <li><strong>Kit sourcing:</strong> Once lesson materials are finalized, bulk-order kit components for the unit. Source from Amazon, Dollar Tree, Oriental Trading, ULINE for packaging.</li>
+  </ol>
+
+  <h3>🤖 What Cass Can Do RIGHT NOW</h3>
+  <ul>
+    <li>Draft complete lesson plans in the established HTML format (matching bird-beak-buffet style)</li>
+    <li>Generate AI illustrations for each lesson</li>
+    <li>Create printable worksheets, data sheets, and recording pages</li>
+    <li>Write parent guides with background science info and discussion prompts</li>
+    <li>Format everything for print-friendly PDF output</li>
+    <li>Build the website content (about page, product descriptions, blog posts)</li>
+    <li>Create social media content templates</li>
+    <li>Research material costs and supplier options for kits</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 5: LAUNCH STRATEGY -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="launch">
+  <div class="section-header">
+    <div class="section-number">5</div>
+    <h2>Launch Strategy</h2>
+  </div>
+
+  <div class="phase">
+    <h4>🏗️ Phase 1: Build Foundation (Months 1–2)</h4>
+    <ul>
+      <li>Complete Unit 1 (K-PS2: Forces) — all 6 lessons, reviewed, tested, photographed</li>
+      <li>Set up Shopify store with branding, 1 product (Unit 1 Digital), and 1 free sample lesson</li>
+      <li>Create email signup landing page with free lesson as lead magnet</li>
+      <li>Set up Instagram strategy — post 3x/week: experiment sneak peeks, "did you know" science facts, behind-the-scenes of curriculum creation</li>
+      <li>Join 5–10 homeschool Facebook groups (secular/eclectic focus). Participate genuinely before promoting.</li>
+      <li>Begin Unit 2 production</li>
+    </ul>
+    <p><strong>Goal:</strong> 200 email subscribers, 500 Instagram followers, 1 unit ready to sell</p>
+  </div>
+
+  <div class="phase">
+    <h4>🚀 Phase 2: Soft Launch (Months 3–4)</h4>
+    <ul>
+      <li>Release Units 1 &amp; 2 as digital downloads</li>
+      <li>Offer 30% "founding family" early bird discount to email list</li>
+      <li>Send 5–10 free review copies to homeschool bloggers/instagrammers</li>
+      <li>Collect testimonials and feedback aggressively — survey every buyer</li>
+      <li>Iterate on lesson format based on feedback</li>
+      <li>Assemble first physical kits (Units 1 &amp; 2) — small batch of 20–30</li>
+      <li>List Units 1 &amp; 2 on TPT as additional sales channel</li>
+      <li>Start Unit 3 &amp; 4 production</li>
+    </ul>
+    <p><strong>Goal:</strong> 50 digital sales, 10 kit sales, 500 email subscribers, first reviews/testimonials</p>
+  </div>
+
+  <div class="phase">
+    <h4>📈 Phase 3: Scale (Months 5–8)</h4>
+    <ul>
+      <li>Release Units 3–6, completing full Kindergarten year</li>
+      <li>Launch full-year digital bundle ($89) and annual subscription ($119/yr)</li>
+      <li>Begin Facebook/Instagram paid ads — $10–20/day targeting homeschool parents, secular homeschoolers, NGSS interest groups</li>
+      <li>Partner with 3–5 homeschool co-ops for group discounts / wholesale</li>
+      <li>Guest post on 2–3 homeschool blogs (Secular Homeschooler, Hip Homeschool Moms, etc.)</li>
+      <li>Begin 1st Grade curriculum design (outline + first unit drafts)</li>
+      <li>Scale kit production — find local assembly help if volume warrants</li>
+    </ul>
+    <p><strong>Goal:</strong> 200+ total digital sales, 50+ kit sales, $5,000+ total revenue, 1,500 email subscribers</p>
+  </div>
+
+  <div class="phase">
+    <h4>🌟 Phase 4: Grow (Months 9–12)</h4>
+    <ul>
+      <li>Complete 1st Grade curriculum (all 6 units)</li>
+      <li>Begin 2nd Grade curriculum</li>
+      <li>Launch affiliate program (15–20% commission for homeschool bloggers/influencers)</li>
+      <li>Explore wholesale partnerships (homeschool convention vendors, Rainbow Resource, Timberdoodle)</li>
+      <li>Apply to present at 1–2 homeschool conventions (Great Homeschool Conventions circuit)</li>
+      <li>Consider Kickstarter for premium kit line or expansion to K-2 complete bundle</li>
+      <li>Hire VA for customer service and kit assembly if volume warrants</li>
+    </ul>
+    <p><strong>Goal:</strong> 500+ total customers, $15,000+ total revenue, 2 grade levels complete, brand recognition in homeschool communities</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 6: ACTION ITEMS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="action">
+  <div class="section-header">
+    <div class="section-number">6</div>
+    <h2>Immediate Action Items</h2>
+  </div>
+
+  <h3>📌 THIS WEEK</h3>
+  <ul class="checklist">
+    <li><strong>Decide on brand name.</strong> "Clearly Curriculum" is a working title. Other options to consider: "Clearly Science," "Little Lab Coat," "Hands-On NGSS," "Roots &amp; Rockets Science." Check domain availability, Instagram handle availability, and TPT store name availability for top 3 choices.</li>
+    <li><strong>Have Cass draft Unit 1, Lessons 1–3</strong> (Push &amp; Pull Sort, Ramp Racers, Strong Push Gentle Push) in the established HTML format. These three are the simplest to produce and test.</li>
+    <li><strong>Serena: test Lesson 2 (Ramp Racers)</strong> with the kids. Photograph setup and results. Note timing and kid reactions.</li>
+    <li><strong>Claim the Instagram handle</strong> for the chosen brand name. Set up a simple bio: "NGSS-aligned hands-on science for homeschoolers 🔬 Built by a PhD microbiologist &amp; homeschool mom 🧪 Free lesson ↓"</li>
+    <li><strong>Claim the domain name</strong> for top brand choice (even before Shopify setup — domains are cheap to park).</li>
+    <li><strong>Review this business plan</strong> — Mark up anything that doesn't feel right. Adjust pricing, pacing, or scope. (Use Remarq to highlight and comment!)</li>
+  </ul>
+
+  <h3>📌 THIS MONTH</h3>
+  <ul class="checklist">
+    <li><strong>Complete all 6 Unit 1 lesson plan drafts</strong> (Cass generates, Serena reviews)</li>
+    <li><strong>Test &amp; photograph at least 4 of the 6 Unit 1 experiments</strong></li>
+    <li><strong>Set up Shopify store</strong> — basic theme, logo, about page, 1 free lesson page, email capture</li>
+    <li><strong>Create a lead magnet page:</strong> "Download a FREE hands-on science lesson" → email signup → get Bird Beak Buffet PDF</li>
+    <li><strong>Post first 10 Instagram posts:</strong> experiment teasers, "ask a scientist" posts, curriculum sneak peeks</li>
+    <li><strong>Join and introduce yourself in 5 homeschool Facebook groups</strong> (don't promote yet — just contribute genuinely)</li>
+    <li><strong>Start Unit 2 lesson plan drafts</strong></li>
+    <li><strong>Research kit materials sourcing:</strong> Price magnets, thermometers, unifix cubes, seeds in bulk. Check Dollar Tree, Amazon bulk, Oriental Trading.</li>
+    <li><strong>Set up a simple logo.</strong> Cass can draft concepts; Canva for final version. Keep it clean — no clip art.</li>
+  </ul>
+
+  <h3>🤖 What Cass Should Start Building RIGHT NOW</h3>
+  <div class="box box-navy">
+    <ol>
+      <li><strong>Unit 1, Lesson 1: "The Great Push &amp; Pull Sort"</strong> — Full lesson plan HTML in bird-beak-buffet style</li>
+      <li><strong>Unit 1, Lesson 2: "Ramp Racers"</strong> — Full lesson plan + data recording sheet</li>
+      <li><strong>Unit 1, Lesson 3: "Strong Push, Gentle Push"</strong> — Full lesson plan + observation worksheet</li>
+      <li><strong>Parent Guide template</strong> — Reusable format for unit overview with learning objectives, materials list, pacing suggestions</li>
+      <li><strong>Free sample lesson landing page copy</strong> — For the Shopify lead magnet page</li>
+    </ol>
+    <p style="font-size:0.85rem;margin-bottom:0;margin-top:0.75rem;color:var(--gray-600);">Serena: just say the word and Cass will start generating these immediately.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 7: REVENUE PROJECTIONS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="revenue">
+  <div class="section-header">
+    <div class="section-number">7</div>
+    <h2>Revenue Projections — Year 1</h2>
+  </div>
+
+  <p>Conservative estimates assuming organic growth + modest paid advertising starting Month 5. These assume the <strong>Kindergarten curriculum only</strong> — 1st Grade revenue would be additive.</p>
+
+  <h3>📊 Monthly Revenue Forecast</h3>
+  <table>
+    <tr>
+      <th>Month</th>
+      <th>Digital Sales</th>
+      <th>Kit Sales</th>
+      <th>Subscriptions</th>
+      <th>Revenue</th>
+      <th>Expenses</th>
+      <th>Net</th>
+    </tr>
+    <tr><td>1–2</td><td>—</td><td>—</td><td>—</td><td>$0</td><td>$150</td><td style="color:var(--red);">-$150</td></tr>
+    <tr><td>3</td><td>15 units × $18</td><td>3 kits × $49</td><td>—</td><td>$417</td><td>$150</td><td>$267</td></tr>
+    <tr><td>4</td><td>20 units × $18</td><td>5 kits × $49</td><td>5 × $119/12</td><td>$655</td><td>$200</td><td>$455</td></tr>
+    <tr><td>5</td><td>10 bundles × $89</td><td>8 kits × $49</td><td>10 × $10</td><td>$1,382</td><td>$500</td><td>$882</td></tr>
+    <tr><td>6</td><td>15 bundles × $89</td><td>10 kits × $49</td><td>15 × $10</td><td>$1,975</td><td>$550</td><td>$1,425</td></tr>
+    <tr><td>7</td><td>18 bundles × $89</td><td>12 kits × $49</td><td>20 × $10</td><td>$2,390</td><td>$600</td><td>$1,790</td></tr>
+    <tr><td>8</td><td>20 bundles × $89</td><td>15 kits × $49</td><td>25 × $10</td><td>$2,795</td><td>$650</td><td>$2,145</td></tr>
+    <tr><td>9</td><td>22 bundles × $89</td><td>15 kits × $49</td><td>35 × $10</td><td>$3,043</td><td>$700</td><td>$2,343</td></tr>
+    <tr><td>10</td><td>25 bundles × $89</td><td>18 kits × $49</td><td>45 × $10</td><td>$3,557</td><td>$750</td><td>$2,807</td></tr>
+    <tr><td>11</td><td>28 bundles × $89</td><td>20 kits × $49</td><td>55 × $10</td><td>$4,022</td><td>$800</td><td>$3,222</td></tr>
+    <tr><td>12</td><td>30 bundles × $89</td><td>22 kits × $49</td><td>60 × $10</td><td>$4,348</td><td>$850</td><td>$3,498</td></tr>
+  </table>
+  <p style="font-size:0.85rem;color:var(--gray-500);">Expenses include: Shopify ($40/mo), ads (starting Month 5 at $10–20/day), kit materials (COGS ~$20/kit), packaging supplies, shipping materials. Does NOT include Serena's time.</p>
+
+  <div class="box box-green">
+    <h4>📈 Year 1 Summary</h4>
+    <table style="background:transparent;">
+      <tr><td><strong>Total Revenue</strong></td><td style="text-align:right;font-size:1.2rem;font-weight:700;color:var(--green);">~$24,600</td></tr>
+      <tr><td><strong>Total Expenses</strong></td><td style="text-align:right;">~$5,900</td></tr>
+      <tr><td><strong>Net Profit (before tax)</strong></td><td style="text-align:right;font-size:1.2rem;font-weight:700;color:var(--green);">~$18,700</td></tr>
+      <tr><td><strong>Total Customers</strong></td><td style="text-align:right;">~350–400</td></tr>
+      <tr><td><strong>Active Subscribers (Month 12)</strong></td><td style="text-align:right;">~60</td></tr>
+      <tr><td><strong>Email List</strong></td><td style="text-align:right;">~2,000–3,000</td></tr>
+    </table>
+  </div>
+
+  <h3>🎯 Key Assumptions</h3>
+  <ul>
+    <li>These are <strong>conservative</strong> — assumes no viral moments, no convention sales, no wholesale deals</li>
+    <li><strong>Homeschool market size:</strong> ~3.3 million homeschool students in the US (2023 NCES). Even capturing 0.01% = 330 customers.</li>
+    <li><strong>Seasonal peaks:</strong> August–September (back-to-school planning) and January (mid-year curriculum switches) are the biggest sales months for homeschool curriculum. Time launches accordingly.</li>
+    <li><strong>Kit margins tighten with shipping costs.</strong> Consider flat-rate USPS Priority ($9.45 small box) and pass shipping to customer or include in price.</li>
+    <li><strong>Year 2 potential with K + 1st Grade:</strong> $50,000–$75,000 if growth continues and 1st Grade launches by Month 8–9</li>
+  </ul>
+
+  <h3>🚀 Upside Scenarios</h3>
+  <ul>
+    <li><strong>Homeschool convention booth:</strong> A single convention with a good booth can generate $2,000–5,000 in weekend sales + hundreds of email signups</li>
+    <li><strong>Co-op adoption:</strong> A single co-op buying for 15–30 families = $1,300–2,700 in one order</li>
+    <li><strong>Viral social media:</strong> One well-timed Instagram Reel of a kid doing an experiment can drive thousands of site visits</li>
+    <li><strong>TPT sales:</strong> Top-selling NGSS units on TPT generate $500–2,000/month passively</li>
+  </ul>
+</div>
+
+<!-- CLOSING -->
+<div style="text-align:center;margin-top:3rem;padding:2rem;background:var(--gray-50);border-radius:12px;">
+  <p style="font-size:1.3rem;font-weight:700;color:var(--navy);">🔬 The world needs more scientists who teach.<br>And more teachers who think like scientists.</p>
+  <p style="color:var(--gray-600);font-size:0.95rem;">Serena, you have the credentials, the experience, the voice, and the vision.<br>The market gap is real. The plan is here. Let's build it.</p>
+  <p style="font-size:0.8rem;color:var(--gray-400);margin-top:1.5rem;">Clearly Curriculum Business Plan · v1.0 · February 2026 · Prepared by Cass</p>
+</div>
+
+</div><!-- /.container -->
+<script
+  src="https://unpkg.com/@csalvato/remarq@1.6.0/dist/feedback-layer.js"
+  data-api-url="http://192.168.5.204:3334"
+  data-document-id="doc_PM1haThHaD0"
+  data-content-selector="body"
+></script>
+</body>
+</html>

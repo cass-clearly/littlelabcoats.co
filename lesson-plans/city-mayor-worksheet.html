@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who Runs Your City? — All About Mayors!</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1a237e;
+      padding-bottom: 10px;
+      color: #1a237e;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8eaf6;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #9fa8da;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1a237e;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1a237e;
+      border-bottom: 2px solid #9fa8da;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #f9a825;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #f9a825; }
+    .procedure-step {
+      background: #e8eaf6;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1a237e;
+    }
+    .procedure-step strong { color: #1a237e; }
+    .question-box {
+      background: #F3E8FF;
+      border-left: 5px solid #7B2FBE;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .grade-section {
+      border: 2px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .grade-4 { border-left: 5px solid #1a237e; background: #e8eaf6; }
+    .grade-label {
+      font-weight: bold;
+      font-size: 12pt;
+      margin-bottom: 6px;
+    }
+    .grade-4 .grade-label { color: #1a237e; }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #f9a825;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .standards-box {
+      background: #fce4ec;
+      border: 1px solid #ef9a9a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #b71c1c; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .govt-card {
+      display: inline-block;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 130px;
+    }
+    .govt-card .emoji { font-size: 24pt; display: block; margin-bottom: 4px; }
+    .govt-card .name { font-weight: bold; display: block; }
+    .govt-card .detail { font-size: 9pt; color: #555; font-style: italic; }
+    .govt-federal { background: #F3E8FF; border: 1px solid #90caf9; }
+    .govt-federal .name { color: #7B2FBE; }
+    .govt-state { background: #fce4ec; border: 1px solid #ef9a9a; }
+    .govt-state .name { color: #b71c1c; }
+    .govt-city { background: #fff8e1; border: 1px solid #f9a825; }
+    .govt-city .name { color: #e65100; }
+    .activity-box {
+      background: #e8f5e9;
+      border: 2px solid #66bb6a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .activity-box h3 { color: #2e7d32; border-color: #66bb6a; }
+    /* Data tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #c5cae9;
+      font-weight: bold;
+      color: #1a237e;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .matching-table th { background: #ffcdd2; color: #b71c1c; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .fill-line {
+      border-bottom: 1px solid #333;
+      display: inline-block;
+      min-width: 200px;
+      height: 1.2em;
+    }
+    .word-bank {
+      background: #fff8e1;
+      border: 2px dashed #f9a825;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .word-bank strong { color: #e65100; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .grade-section, .teacher-note, .activity-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .hero-image img { max-height: 250px; }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏛️ Who Runs Your City? 🏛️</h1>
+  <p class="subtitle">All About Mayors — The Leaders of Our Cities &amp; Towns!</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 4th</span>
+    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
+    <span>🏛️ <strong>Subject:</strong> Social Studies — Civics &amp; Government</span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/city-mayor.png" alt="A friendly cartoon mayor at city hall">
+    <div class="caption">Meet the mayor — the person in charge of making your city a great place to live!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 Standards Alignment:</strong><br>
+    <strong>C3 Framework D2.Civ.1.3-5</strong> — Distinguish the responsibilities and powers of government officials at various levels<br>
+    <strong>C3 Framework D2.Civ.2.3-5</strong> — Explain how a democracy relies on people's responsible participation<br>
+    <strong>C3 Framework D2.Civ.6.3-5</strong> — Describe ways people can act to influence their local government
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Every city and town in the United States has a leader — and that leader is called the <strong>mayor</strong>! The mayor is kind of like the <em>principal</em> of a city. Just like your principal makes decisions about your school, the mayor makes decisions about your whole city. And here's the coolest part: regular people get to <strong>vote</strong> to choose who the mayor is! 🗳️</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> mayor, election, candidate, campaign, ballot, vote, city council, government, citizen, community
+  </div>
+
+  <h2>🤔 What IS a Mayor?</h2>
+  <div class="procedure-step">
+    <strong>Think of it this way:</strong> If your city were a school...<br>
+    🏫 The <strong>principal</strong> = the <strong>mayor</strong><br>
+    👩‍🏫 The <strong>teachers</strong> = the <strong>city council</strong> (they work with the mayor)<br>
+    📋 The <strong>school rules</strong> = the <strong>city laws</strong> (called ordinances)<br>
+    🧒 The <strong>students</strong> = the <strong>citizens</strong> (that's YOU and your family!)
+  </div>
+  <p>A <strong>mayor</strong> is the person elected to lead a city or town government. They are the <em>top decision-maker</em> for the community. Most mayors serve for <strong>4 years</strong> at a time (called a "term"), and then there's another election!</p>
+
+  <div class="tip-box">
+    🌟 <strong>Fun Fact:</strong> The youngest mayor in US history was Bobby Tufts — he became mayor of Dorset, Minnesota at just <strong>3 years old</strong> in 2013! (It was a small town with a fun tradition of picking a name from a hat.) 🎩
+  </div>
+
+  <h2>📋 What Does a Mayor DO All Day?</h2>
+  <p>Being a mayor is a BIG job! Here are some of the things mayors do:</p>
+
+  <div class="procedure-step">
+    <strong>🚒 Keep people safe:</strong> The mayor works with the police department and fire department to make sure your city is a safe place to live.
+  </div>
+  <div class="procedure-step">
+    <strong>🛣️ Fix roads &amp; bridges:</strong> Potholes? Broken sidewalks? The mayor helps decide which roads get repaired and when.
+  </div>
+  <div class="procedure-step">
+    <strong>🏞️ Build parks &amp; playgrounds:</strong> Want a new splash pad or skate park? The mayor helps decide where parks get built!
+  </div>
+  <div class="procedure-step">
+    <strong>💰 Manage the city's money:</strong> Every city has a budget (like an allowance, but MUCH bigger!). The mayor helps decide how to spend it — on schools, roads, libraries, and more.
+  </div>
+  <div class="procedure-step">
+    <strong>🤝 Listen to people:</strong> Citizens come to the mayor with problems and ideas. A good mayor LISTENS and tries to help!
+  </div>
+  <div class="procedure-step">
+    <strong>📢 Be the city's spokesperson:</strong> When something big happens — a storm, a celebration, or a new business coming to town — the mayor speaks for the whole community.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Think about it:</strong> If YOU were mayor, what's the FIRST thing you'd want to fix or build in your city? 🤔
+  </div>
+
+  <h2>🗳️ How Does Someone BECOME Mayor?</h2>
+
+  <div class="hero-image">
+    <img src="images/kids-voting.png" alt="Kids voting in a mock election">
+    <div class="caption">Voting is how we choose our leaders — every vote counts!</div>
+  </div>
+
+  <p>Mayors aren't born into the job — they're <strong>elected</strong>! That means the people of the city get to CHOOSE who they want to lead them. Here's how it works:</p>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Decide to Run! 🏃</strong><br>
+    Someone in the community says, "I want to make my city better — I'm going to run for mayor!" This person is now called a <strong>candidate</strong>.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2 — Campaign! 📣</strong><br>
+    The candidate tells everyone their ideas. They make posters, give speeches, knock on doors, and explain WHY people should vote for them. This is called a <strong>campaign</strong>.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3 — Election Day! 🗳️</strong><br>
+    On a special day, adult citizens go to a polling place and cast their <strong>vote</strong> — they pick which candidate they think would be the best mayor.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4 — Count the Votes! 📊</strong><br>
+    After everyone votes, the votes are counted. The candidate with the <strong>most votes wins!</strong> That's democracy in action!
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5 — Inauguration! 🎉</strong><br>
+    The new mayor takes an oath (a special promise) to do their best for the city. Then they get to work!
+  </div>
+
+  <h2>🏛️ Mayors, Governors &amp; Presidents — What's the Difference?</h2>
+  <p>The United States has <strong>three levels of government</strong>, like layers of a cake! Each level has its own leader:</p>
+
+  <div class="hero-image">
+    <img src="images/government-levels.png" alt="Three levels of government shown as a layer cake">
+    <div class="caption">Government works in layers — from your city all the way up to the whole country!</div>
+  </div>
+
+  <div style="text-align: center; margin: 16px 0;">
+    <div class="govt-card govt-city"><span class="emoji">🏘️</span><span class="name">City / Town</span><span class="detail">Led by the MAYOR</span></div>
+    <div class="govt-card govt-state"><span class="emoji">🗺️</span><span class="name">State</span><span class="detail">Led by the GOVERNOR</span></div>
+    <div class="govt-card govt-federal"><span class="emoji">🇺🇸</span><span class="name">Country (Federal)</span><span class="detail">Led by the PRESIDENT</span></div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>🏘️ Mayor</strong> → Takes care of <strong>ONE city or town</strong> (roads, parks, police, fire dept.)<br>
+    <strong>🗺️ Governor</strong> → Takes care of a <strong>whole STATE</strong> (state highways, state parks, state laws)<br>
+    <strong>🇺🇸 President</strong> → Takes care of the <strong>entire COUNTRY</strong> (national defense, dealing with other countries)
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Easy way to remember:</strong> Mayor = My city. Governor = my state (Got the whole state!). President = the whole Place (the whole country!). Each one is in charge of a BIGGER area! 🎯
+  </div>
+
+  <h2>🎨 Activity: Run for Mayor!</h2>
+  <div class="activity-box">
+    <h3>🗳️ Design Your Campaign — Head-to-Head!</h3>
+    <p>You're BOTH running for mayor of your town — against each other! Each of you will create a campaign, then hold a debate and election. May the best candidate win! 🏆</p>
+
+    <div class="procedure-step">
+      <strong>Part 1 — Campaign Poster 🖼️</strong><br>
+      On a separate piece of paper (or the back of your worksheet), design a campaign poster! Include:
+      <ul>
+        <li>Your name and a catchy slogan (example: "Vote for Maya — She'll Make Our Parks Amazing!")</li>
+        <li>A drawing of yourself looking like a leader</li>
+        <li>At least 3 promises of things you'd do as mayor</li>
+        <li>Bright colors and bold letters so people notice it!</li>
+      </ul>
+    </div>
+
+    <div class="procedure-step">
+      <strong>Part 2 — Campaign Speech 🎤</strong><br>
+      Write a short speech (3–5 sentences) telling your family why they should vote for you. Use the space on the activity page! Remember to include:
+      <ul>
+        <li>What problem in your town you want to fix</li>
+        <li>Your plan to fix it</li>
+        <li>Why YOU are the best person for the job</li>
+      </ul>
+    </div>
+
+    <div class="procedure-step">
+      <strong>Part 3 — The Great Debate! 🎙️</strong><br>
+      Now face off! Take turns answering these questions (1 minute each):
+      <ul>
+        <li>"What's the #1 problem in our town and how would YOU fix it?"</li>
+        <li>"Why should people vote for YOU instead of your opponent?"</li>
+        <li>"What's one thing you'd build or create for the community?"</li>
+      </ul>
+      After the debate, have a parent (or even a pet 🐕) cast the deciding vote!
+    </div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="grade-section grade-4">
+    <div class="grade-label">🔵 4th Grade Discussion</div>
+    <ul>
+      <li>Why is it important for citizens to vote in elections?</li>
+      <li>What qualities make a GOOD mayor? (Think about what makes a good leader!)</li>
+      <li>If you could ask your city's mayor ONE question, what would it be?</li>
+      <li>Why do you think mayors only serve for a few years before there's a new election?</li>
+      <li>What's one thing in your neighborhood or town that you wish the mayor would change?</li>
+      <li>How is being a mayor similar to being a class president? How is it different?</li>
+      <li>Why do we need DIFFERENT leaders for cities, states, and the whole country? Why not just one person in charge of everything?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔎 <strong>Research Your Mayor:</strong> Find out who the mayor of YOUR city is! What's their name? How long have they been mayor? What are they working on?</li>
+      <li>📰 <strong>Mayor in the News:</strong> Find a news article about a mayor making a decision. What did they decide? Do you agree with it?</li>
+      <li>🎭 <strong>Mock Election:</strong> Hold a family election! Both students give speeches, then a parent (or siblings, stuffed animals, or pets!) act as voters. Use secret ballots — fold your votes so nobody peeks! Count them together.</li>
+      <li>✉️ <strong>Write to Your Mayor:</strong> Write a real letter to your city's mayor about something you'd like to see changed. Most mayors LOVE hearing from kids!</li>
+      <li>🗺️ <strong>Government Scavenger Hunt:</strong> Find the names of your mayor, your governor, AND the president. Bonus: find the vice president and your city council members!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Struggling readers:</strong> Read sections aloud together — take turns! The "school analogy" (mayor = principal) is a powerful anchor — keep returning to it.</li>
+      <li><strong>For the campaign activity:</strong> Give both kids 15–20 minutes. Play upbeat music! Have them present their speeches to each other and to you — it builds confidence.</li>
+      <li><strong>Real-world connection:</strong> Look up your city's mayor's office website together. Show kids it's a REAL person with a REAL job.</li>
+      <li><strong>⚠️ Common misconception:</strong> Kids often think the president is in charge of everything. Emphasize that mayors handle LOCAL issues — the stuff that affects their daily life most directly!</li>
+      <li><strong>Differentiation:</strong> For students who need more challenge, ask them to compare mayor-council vs. council-manager forms of city government.</li>
+      <li><strong>Keep it nonpartisan:</strong> Focus on the ROLE and PROCESS of being mayor, not specific political parties or current political debates.</li>
+      <li><strong>Assessment:</strong> The matching exercise and fill-in-the-blank on the activity page make great formative assessments.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== ACTIVITY & WORKSHEET PAGE ====================== -->
+  <div class="page-break">
+
+    <h1>🏛️ Mayor Worksheet — Activity Page 🏛️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>📝 Fill in the Blank</h3>
+    <div class="word-bank">
+      <strong>Word Bank:</strong> &nbsp; mayor &nbsp; | &nbsp; vote &nbsp; | &nbsp; election &nbsp; | &nbsp; candidate &nbsp; | &nbsp; campaign &nbsp; | &nbsp; governor &nbsp; | &nbsp; president &nbsp; | &nbsp; citizens &nbsp; | &nbsp; city council
+    </div>
+
+    <div class="question-box">
+      <strong>1.</strong> The leader of a city or town is called the <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>2.</strong> When someone decides to run for mayor, they are called a <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>3.</strong> Making posters, giving speeches, and telling people your ideas is part of a <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>4.</strong> On Election Day, people go to a polling place and cast their <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>5.</strong> The special day when people choose their leaders is called an <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>6.</strong> The leader of a whole STATE is called the <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>7.</strong> The leader of the entire COUNTRY is the <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>8.</strong> The people who live in a city and can vote are called <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>9.</strong> The group of people who work WITH the mayor to make laws for the city is the <span class="fill-line">&nbsp;</span>.
+    </div>
+
+    <h3>🔗 Matching — Who's the Leader?</h3>
+    <p>Draw a line to match each level of government with its leader:</p>
+    <table class="data-table matching-table">
+      <tr>
+        <th style="width: 50%;">Level of Government</th>
+        <th style="width: 50%;">Leader</th>
+      </tr>
+      <tr>
+        <td style="text-align:left; font-weight:bold; background:#fff8e1;">🏘️ City or Town</td>
+        <td style="background:white;">🇺🇸 President</td>
+      </tr>
+      <tr>
+        <td style="text-align:left; font-weight:bold; background:#fff8e1;">🗺️ State</td>
+        <td style="background:white;">🏛️ Mayor</td>
+      </tr>
+      <tr>
+        <td style="text-align:left; font-weight:bold; background:#fff8e1;">🇺🇸 Country (Federal)</td>
+        <td style="background:white;">🗺️ Governor</td>
+      </tr>
+    </table>
+
+    <h3>🎤 My Campaign Speech</h3>
+    <p><em>Pretend you're running for mayor! Write a short speech (3–5 sentences) about what you'd do.</em></p>
+    <div class="question-box">
+      <strong>"My fellow citizens, if you elect me as your mayor, I promise to..."</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== MY CAMPAIGN PLATFORM ====================== -->
+  <div class="page-break">
+
+    <h1>🏛️ My Campaign Platform 🏛️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-style:italic; color:#555;">If YOU were running for mayor, what would you care about? Fill in your platform!</p>
+
+    <div class="question-box">
+      <strong>🏘️ My City / Town Name:</strong>
+      <div class="notes-lines"><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>🎯 Campaign Slogan</strong> (a short, catchy phrase — like "Building a Better Tomorrow!"):<br>
+      <div class="notes-lines"><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>🔥 Issue #1 — The BIGGEST problem I want to fix:</strong>
+      <div class="notes-lines"><p></p><p></p></div>
+      <strong>My plan to fix it:</strong>
+      <div class="notes-lines"><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>🌟 Issue #2 — Something NEW I want to build or create:</strong>
+      <div class="notes-lines"><p></p><p></p></div>
+      <strong>My plan to make it happen:</strong>
+      <div class="notes-lines"><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>💪 Issue #3 — Something I want to KEEP and make even better:</strong>
+      <div class="notes-lines"><p></p><p></p></div>
+      <strong>How I'd improve it:</strong>
+      <div class="notes-lines"><p></p><p></p></div>
+    </div>
+
+    <h3 style="margin-top: 24px;">🤔 Short Answer Questions</h3>
+
+    <div class="question-box">
+      <strong>1. Why is it important for a mayor to listen to the people in their city?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. What's the difference between what a mayor does and what a governor does? Give one example for each.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. Imagine a mayor wants to build a new park, but there isn't enough money. What should they do? What are their options?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>4. Why do we have elections instead of just letting someone be mayor forever?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+
+    <div class="teacher-note" style="background: #f0f0f0; border: 3px dashed #999; padding: 20px;">
+      <h1 style="text-align: center; color: #555; font-size: 18pt; border-bottom: 2px dashed #999; padding-bottom: 10px;">✂️ PARENT ANSWER KEY</h1>
+      <p style="text-align: center; font-style: italic; color: #888; font-size: 11pt;">Detach before giving worksheet to students</p>
+
+      <h3 style="color: #333; border-color: #999;">📝 Fill in the Blank — Answers</h3>
+      <ol style="font-size: 11pt; color: #333;">
+        <li>The leader of a city or town is called the <strong>mayor</strong>.</li>
+        <li>When someone decides to run for mayor, they are called a <strong>candidate</strong>.</li>
+        <li>Making posters, giving speeches, and telling people your ideas is part of a <strong>campaign</strong>.</li>
+        <li>On Election Day, people go to a polling place and cast their <strong>vote</strong>.</li>
+        <li>The special day when people choose their leaders is called an <strong>election</strong>.</li>
+        <li>The leader of a whole STATE is called the <strong>governor</strong>.</li>
+        <li>The leader of the entire COUNTRY is the <strong>president</strong>.</li>
+        <li>The people who live in a city and can vote are called <strong>citizens</strong>.</li>
+        <li>The group of people who work WITH the mayor to make laws for the city is the <strong>city council</strong>.</li>
+      </ol>
+
+      <h3 style="color: #333; border-color: #999;">🔗 Matching — Answers</h3>
+      <ul style="font-size: 11pt; color: #333;">
+        <li>🏘️ City or Town → 🏛️ <strong>Mayor</strong></li>
+        <li>🗺️ State → 🗺️ <strong>Governor</strong></li>
+        <li>🇺🇸 Country (Federal) → 🇺🇸 <strong>President</strong></li>
+      </ul>
+
+      <h3 style="color: #333; border-color: #999;">🤔 Short Answer — Example Responses</h3>
+      <p style="font-size: 10pt; color: #888; font-style: italic;">These are sample answers — accept any reasonable response that shows understanding!</p>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>1. Why is it important for a mayor to listen to the people in their city?</strong><br>
+        <em>Because the mayor works FOR the citizens. If they don't listen, they won't know what problems need fixing. Citizens know their neighborhoods best — a good mayor uses that knowledge to make better decisions for everyone.</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>2. What's the difference between what a mayor does and what a governor does?</strong><br>
+        <em>A mayor takes care of one city — like fixing local roads, managing the city's police and fire departments, and building parks. A governor takes care of a whole state — like state highways, state parks, and state laws that apply to every city in the state.</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>3. A mayor wants to build a new park but there isn't enough money. What should they do?</strong><br>
+        <em>They could: raise money through fundraisers, apply for a grant, ask the city council to adjust the budget, ask citizens to volunteer to help build it, or wait and save up money over time. They should also ask citizens if a park is what they want most!</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>4. Why do we have elections instead of just letting someone be mayor forever?</strong><br>
+        <em>Elections make sure the leader is doing a good job — if people aren't happy, they can vote for someone new. It also gives other people a chance to lead and bring new ideas. Without elections, a mayor might stop listening to what people want.</em>
+      </div>
+    </div>
+
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

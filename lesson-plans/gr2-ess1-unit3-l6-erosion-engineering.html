@@ -1,127 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering: Slow the Erosion: Earth Science Unit 3, Lesson 6</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: Georgia,'Times New Roman',serif; max-width:8.5in; margin:0 auto; padding:0.5in; font-size:11pt; line-height:1.4; color:#222; }
-    h1 { text-align:center; font-size:22pt; margin-bottom:5px; border-bottom:3px solid #e65100; padding-bottom:10px; color:#e65100; }
-    .subtitle { text-align:center; font-style:italic; margin-bottom:20px; color:#555; font-size:13pt; }
-    .meta { display:flex; justify-content:space-between; background:#fbe9e7; padding:10px 15px; border-radius:8px; margin-bottom:20px; font-size:10pt; border:1px solid #ffccbc; flex-wrap:wrap; gap:5px; }
-    h2 { font-size:14pt; background:#e65100; color:white; padding:8px 14px; margin:24px 0 12px 0; border-radius:6px; }
-    h3 { font-size:12pt; color:#e65100; border-bottom:2px solid #ffccbc; padding-bottom:4px; margin:18px 0 8px 0; }
-    ul,ol { margin:8px 0; padding-left:25px; } li { margin-bottom:5px; }
-    .hero { text-align:center; margin:16px 0; } .hero .emoji { font-size:72pt; line-height:1.2; } .hero .cap { font-size:9pt; color:#777; font-style:italic; margin-top:4px; }
-    .matbox { background:#fff8e1; border:2px solid #ffcc80; padding:14px 18px; border-radius:8px; margin:10px 0; } .matbox h3 { color:#e65100; border-color:#ffcc80; }
-    .step { background:#fbe9e7; padding:10px 15px; margin:8px 0; border-radius:6px; border-left:5px solid #e65100; } .step strong { color:#e65100; }
-    .qbox { background:#fbe9e7; border-left:5px solid #e65100; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; }
-    .discussion-hint { font-style:italic; color:#555; margin-top:6px; font-size:10pt; }
-    .tip { background:#e0f7fa; border-left:5px solid #00bcd4; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; font-size:10pt; }
-    .std { background:#f3e5f5; border:1px solid #ce93d8; border-radius:8px; padding:14px 18px; margin:10px 0; font-size:10pt; } .std strong { color:#7b1fa2; }
-    .ext { background:#e8eaf6; border:1px solid #9fa8da; border-radius:8px; padding:14px 18px; margin:10px 0; }
-    .tnote { background:#f5f5f5; border:2px dashed #999; border-radius:8px; padding:15px; margin:20px 0; font-size:10pt; color:#555; } .tnote strong { color:#333; }
-    .wshead { background:#e65100; color:white; padding:8px 14px; border-radius:6px; font-size:14pt; font-weight:bold; margin:0 0 12px 0; text-align:center; }
-    .namedate { text-align:center; margin-bottom:16px; font-size:12pt; }
-    .dbox { border:3px dashed #e65100; border-radius:10px; min-height:180px; margin:12px 0; padding:10px; } .dbox .dl { font-size:9pt; color:#aaa; font-style:italic; }
-    .fb { background:#fbe9e7; border:2px solid #ffccbc; border-radius:8px; padding:14px 18px; margin:12px 0; font-size:12pt; }
-    .bl { display:inline-block; border-bottom:2px solid #e65100; min-width:180px; margin:0 4px; }
-    .dt { width:100%; border-collapse:collapse; margin:12px 0; font-size:11pt; } .dt th { background:#e65100; color:white; padding:8px 12px; text-align:left; } .dt td { border:1px solid #ffccbc; padding:8px 12px; } .dt tr:nth-child(even) { background:#fbe9e7; }
-    .ak { background:#f5f5f5; border:3px dashed #999; border-radius:8px; padding:20px; margin:20px 0; } .ak h2 { background:#757575; text-align:center; }
-    @media print { body { padding:0.25in; font-size:10pt; } h2 { break-after:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact; } h3 { break-after:avoid; } .step,.qbox,.tnote,.ak,.matbox,.tip,.ext { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
-    .pb { page-break-before:always; margin-top:20px; }
-    .print-btn { position:fixed; top:20px; right:20px; background:#e65100; color:white; border:none; padding:10px 18px; border-radius:8px; font-size:0.95rem; font-weight:600; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000; }
-    .print-btn:hover { opacity:0.88; } @media print { .print-btn { display:none; } }
-
-    .vocab-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:15px 0; }
-    .vocab-card { background:#fff3e0; border:2px solid #ffcc80; border-radius:10px; padding:12px 10px; text-align:center; }
-    .vocab-word { font-weight:bold; color:#e65100; font-size:12pt; display:block; margin-bottom:4px; }
-    .vocab-def { color:#555; font-size:9pt; line-height:1.4; display:block; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering: Slow the Erosion - Grade 2 Earth Science</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #222;
+}
+h1 {
+  text-align: center;
+  font-size: 22pt;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #e65100;
+  padding-bottom: 10px;
+  color: #e65100;
+}
+.subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+.meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+ul, ol { margin: 8px 0; padding-left: 25px; }
+li { margin-bottom: 5px; }
+.materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+.materials-box h3 { color: #e65100; border-color: #ffcc80; }
+.procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+.procedure-step strong { color: #bf360c; }
+.question-box { background: #fff3e0; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+.discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+.tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+.standards-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+.standards-box strong { color: #e65100; }
+.extension-box { background: #fff8e1; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+.teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+.teacher-note strong { color: #333; }
+.answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+.answer-key h2 { background: #757575; text-align: center; }
+.name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+.worksheet-header { background: #bf360c; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+.draw-box { border: 2px solid #ffcc80; background: white; border-radius: 8px; min-height: 120px; margin: 6px 0; padding: 6px; }
+.draw-label { font-size: 9pt; color: #888; font-style: italic; text-align: center; margin-top: 4px; }
+.vocab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+.vocab-card { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 10px; text-align: center; font-size: 10pt; }
+.vocab-card .vocab-word { font-weight: bold; color: #e65100; font-size: 12pt; display: block; margin-bottom: 4px; }
+.vocab-card .vocab-def { color: #555; font-size: 9pt; line-height: 1.4; }
+@media print {
+  body { padding: 0.25in; font-size: 10pt; }
+  h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h3 { break-after: avoid; }
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+.page-break { page-break-before: always; margin-top: 20px; }
+.print-btn {
+  position: fixed; top: 20px; right: 20px; background: #e65100; color: white;
+  border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000; display: flex; align-items: center; gap: 6px;
+}
+.print-btn:hover { background: #bf360c; }
+@media print { .print-btn { display: none; } }
+</style>
 </head>
-<body data-document-id="doc_m1kY6u9kq78">
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
-  <h1>Engineering: Slow the Erosion</h1>
-  <p class="subtitle">Earth Science Unit 3, Lesson 6</p>
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 60 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Earth Science: Engineering Design</span>
-    <span>🧰 <strong>Kit Lesson:</strong> No</span>
-  </div>
-  <div class="hero"><div class="emoji">🏗️💧🌿🛡️</div><div class="cap">Engineers design solutions to protect land from erosion. Can you build a barrier to slow the water?</div></div>
-  <div class="std"><strong>📋 NGSS Standard:</strong><br><strong>2-ESS2-1</strong>: Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.</div>
-  <h2>🎯 Learning Goals</h2>
-  <ul>
-    <li>Apply knowledge of erosion to design a solution to slow water erosion.</li>
-    <li>Test two different barrier designs and compare their effectiveness.</li>
-    <li>Explain which design worked better and why, using evidence.</li>
-  </ul>
-  <h2>💡 Background</h2>
-  <p>Erosion can cause serious problems: it washes away farmland, destroys hillsides, and damages coastlines. Engineers design solutions to slow or stop erosion. Farmers plant grasses and trees on hillsides (plant roots hold soil in place). Engineers build retaining walls, install rocks on slopes, and plant native vegetation. In this lesson, you will design and test your own erosion barrier using craft sticks, leaves, and other household materials.</p>
-  <div class="tip">💡 <strong>Key vocabulary:</strong> barrier, erosion control, retaining wall, vegetation, slope</div>
-  <h2>📦 Materials</h2>
-  <div class="matbox"><h3>🏠 What You Need</h3><ul>
-      <li>A baking pan or cookie sheet (tilt one end up with a book to create a slope)</li>
-      <li>Sand or dirt (2 to 3 cups)</li>
-      <li>Water in a small cup for pouring</li>
-      <li>Craft sticks or toothpicks</li>
-      <li>Leaves, grass clippings, or small sticks</li>
-      <li>Optional: small rocks, aluminum foil pieces</li>
-      <li>Paper and pencil for recording</li>
-  </ul><p style="font-size:10pt;color:#555;margin-top:8px;">✅ <em>All household items, nothing to buy!</em></p></div>
-  <h2>📖 Vocabulary</h2>
-  <div class="vocab-grid">
-    <div class="vocab-card"><span class="vocab-word">barrier</span><span class="vocab-def">something that blocks or slows movement</span></div>
-    <div class="vocab-card"><span class="vocab-word">erosion control</span><span class="vocab-def">methods used to prevent or reduce soil loss by water or wind</span></div>
-    <div class="vocab-card"><span class="vocab-word">retaining wall</span><span class="vocab-def">a structure that holds back soil on a slope</span></div>
-    <div class="vocab-card"><span class="vocab-word">vegetation</span><span class="vocab-def">plant life, especially grasses and trees used to protect soil</span></div>
-    <div class="vocab-card"><span class="vocab-word">slope</span><span class="vocab-def">a surface that is not flat but tilted at an angle</span></div>
-  </div>
-  <h2>🔬 Procedure</h2>
-  <div class="step"><strong>Step 1 (10 min): Review and Problem:</strong> Remind students of the Lesson 3 erosion experiment. The problem: water is washing away the sand/soil. The engineering challenge: design a barrier to slow or stop the erosion.</div>
-  <div class="step"><strong>Step 2 (10 min): Imagine and Plan Design 1:</strong> Brainstorm solutions. Could craft sticks be a retaining wall? Could leaves act like ground cover? Sketch Design 1 on paper.</div>
-  <div class="step"><strong>Step 3 (10 min): Build and Test Design 1:</strong> Set up the sand slope in the tilted pan. Build your barrier. Pour the same amount of water as in Lesson 3. Observe and record how much sand moved.</div>
-  <div class="step"><strong>Step 4 (10 min): Improve:</strong> What worked? What did not? Plan Design 2 with improvements.</div>
-  <div class="step"><strong>Step 5 (10 min): Build and Test Design 2:</strong> Build and test the improved design. Compare to Design 1.</div>
-  <div class="step"><strong>Step 6 (10 min): Wrap-Up:</strong> Ask the discussion questions and complete the worksheet.</div>
-  <h2>💬 Discussion Questions</h2>
+<body data-document-id="">
 
-  <div class="qbox"><strong>🗣️ Q1:</strong> Design 1 let some sand move through. How could you improve it?<p class="discussion-hint">Suggested answer: Possible improvements: fill gaps between craft sticks, add a layer of leaves in front of the sticks to catch fine particles, pack rocks on the slope to weigh down the soil, or build a more solid wall with overlapping sticks. Real engineers test multiple designs and refine them.</p></div>
-  <div class="qbox"><strong>🗣️ Q2:</strong> Farmers plant grass on hillsides to prevent erosion. Why do you think plants help?<p class="discussion-hint">Suggested answer: Plant roots grow deep into the soil and hold it together like glue. Leaves and stems also slow the water down as it flows over the surface, giving the water time to soak in rather than run off and carry soil away. Grass roots form a dense mat that can hold even steep slopes.</p></div>
-  <h2>🚀 Extensions</h2>
-  <div class="ext"><ul>
-      <li>🌱 <strong>Grass Roots Test:</strong> Compare erosion on a bare sand slope vs. a slope with a piece of grass sod on top. Which has less erosion?</li>
-      <li>🌊 <strong>Real Erosion Control:</strong> Research 'riprap' (large rocks placed on slopes near water) or 'terracing' (steps cut into hillsides). Draw an example.</li>
-      <li>📚 <strong>Book Connection:</strong> 'Building on Nature: The Life of Antoni Gaudi' by Rachel Victoria Rodriguez</li>
-  </ul></div>
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="tnote"><ul>
-      <li><strong>Fair test:</strong> Use the same amount of water poured from the same height in each test so comparisons are valid.</li>
-      <li><strong>Best designs typically:</strong> combine a physical barrier (craft sticks) with a ground cover layer (leaves or grass clippings) that slows water and catches fine particles.</li>
-      <li><strong>NGSS link:</strong> 2-ESS2-1 asks students to compare multiple solutions to erosion. Students are doing exactly this by building and comparing two designs.</li>
-      <li><strong>Engineering design process:</strong> This is another full cycle of Ask, Imagine, Plan, Create, Test, Improve.</li>
-  </ul></div>
-  <div class="pb">
-    <div class="wshead">🔬 Student Worksheet: Engineering: Slow the Erosion</div>
-    <p class="namedate">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;">
-      <div class="dbox" style="min-height:140px;"><div class="dl">Design 1 sketch (label all materials used)</div></div>
-      <div class="dbox" style="min-height:140px;"><div class="dl">Design 2 improved sketch (what did you change?)</div></div>
-    </div>
-    <table class="dt">
-      <tr><th>Design</th><th>Materials used</th><th>How much sand moved? (a lot/some/a little)</th><th>Why?</th></tr>
-      <tr><td>Design 1</td><td></td><td></td><td></td></tr>
-      <tr><td>Design 2</td><td></td><td></td><td></td></tr>
-    </table>
-    <div class="fb">My best design worked because <span class="bl"></span>.<br><br>Plants help prevent erosion because their <span class="bl"></span> hold soil in place.<br><br>Engineers use the <span class="bl"></span> process to test and improve solutions.</div>
+<button class="print-btn" onclick="window.print()">&#x1F5A8;&#xFE0F; Print Lesson</button>
+
+<h1>&#x1F3D7;&#xFE0F; Engineering: Slow the Erosion</h1>
+<p class="subtitle">Earth Science Unit 3, Lesson 6 of 6 (Unit Culminating Challenge)</p>
+
+<div class="meta">
+  <span><strong>Grade:</strong> 2</span>
+  <span><strong>Duration:</strong> 60 minutes</span>
+  <span><strong>Subject:</strong> Earth Science, Engineering Design</span>
+  <span><strong>Materials:</strong> Baking pan, sand, craft sticks, rocks, leaves, water</span>
+</div>
+
+<div class="standards-box">
+  <strong>NGSS Standard:</strong> 2-ESS2-1, K-2-ETS1-1 — Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.
+</div>
+
+<h2>&#x1F3AF; Learning Goals</h2>
+<ul>
+  <li>Apply the Engineering Design Process to a real problem (soil erosion)</li>
+  <li>Design and test a barrier to slow water erosion</li>
+  <li>Evaluate results and improve the design</li>
+</ul>
+
+<h2>&#x1F4E6; Materials</h2>
+<div class="materials-box">
+  <ul>
+    <li>Baking pan with sand/dirt (same setup as L3)</li>
+    <li>Craft sticks (popsicle sticks)</li>
+    <li>Small rocks or pebbles</li>
+    <li>Leaves (fresh or dried)</li>
+    <li>Tape (optional)</li>
+    <li>Cup of water</li>
+    <li>Pencil/ruler for measuring how far sand moved</li>
+  </ul>
+</div>
+
+<h2>&#x1F4D6; Vocabulary</h2>
+<div class="vocab-grid">
+  <div class="vocab-card">
+    <span class="vocab-word">engineering</span>
+    <span class="vocab-def">Using science and math to design solutions to real problems</span>
   </div>
-  <div class="pb">
-    <div class="ak"><h2>✂️ PARENT ANSWER KEY</h2>
-      <p>Fill-in: student's actual reasoning; roots; engineering design</p>
-    </div>
+  <div class="vocab-card">
+    <span class="vocab-word">design process</span>
+    <span class="vocab-def">The steps engineers follow: Ask, Imagine, Plan, Create, Test, Improve</span>
   </div>
-  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="" data-content-selector="body"></script>
+  <div class="vocab-card">
+    <span class="vocab-word">barrier</span>
+    <span class="vocab-def">Something that blocks or slows down movement (like a wall or fence)</span>
+  </div>
+  <div class="vocab-card">
+    <span class="vocab-word">erosion control</span>
+    <span class="vocab-def">Methods used to stop or slow the movement of soil by water or wind</span>
+  </div>
+  <div class="vocab-card">
+    <span class="vocab-word">iteration</span>
+    <span class="vocab-def">Repeating a process to make improvements each time</span>
+  </div>
+</div>
+
+<h2>&#x1F52C; Background</h2>
+<p>In Lesson 3, you observed how water moves sand and shapes the land. Now, like a real engineer, you will design a solution to slow that erosion. This is exactly what engineers do in real life! Farmers build terraces (flat step-like shelves on hillsides) to slow water. Civil engineers build retaining walls with rocks or concrete to hold soil in place. Environmentalists plant deep-rooted grasses and trees so roots hold the soil together. All of these are erosion control solutions.</p>
+<p>Engineers follow a design process: Ask (what is the problem?), Imagine (what could work?), Plan (draw your design), Create (build it), Test (pour the water!), and Improve (what would make it better?). The "Improve" step is the most important. Engineers rarely get it perfect the first time. Each test teaches you something new that helps you improve your next design.</p>
+<p>The materials we will use today (craft sticks, rocks, and leaves) are simplified models of real engineering materials. Craft sticks are like retaining walls or wooden fences. Rocks are like riprap (the large boulders placed along riverbanks and hillsides). Leaves are like planted vegetation. Real engineers think about cost, durability, and environmental impact when choosing materials. You will think about what works best!</p>
+
+<h2>&#x1F9EA; Activity: Erosion Barrier Challenge</h2>
+<div class="procedure-step">
+  <strong>Step 1:</strong> Rebuild the sand hill from L3 in the baking pan (use the same slope).
+</div>
+<div class="procedure-step">
+  <strong>Step 2:</strong> First, do a control test: pour one cup of water over the unprotected hill. Mark or measure how far sand traveled. This is your "before engineering" measurement.
+</div>
+<div class="procedure-step">
+  <strong>Step 3:</strong> Rebuild the hill again.
+</div>
+<div class="procedure-step">
+  <strong>Step 4:</strong> Design Phase: Look at your materials (craft sticks, rocks, leaves). On paper, sketch your barrier design BEFORE building. Think: where will you put it? How will you arrange the materials?
+</div>
+<div class="procedure-step">
+  <strong>Step 5:</strong> Build your barrier on the hill using your chosen materials.
+</div>
+<div class="procedure-step">
+  <strong>Step 6:</strong> Test Phase: Slowly pour one cup of water from the top. Measure how far sand moved this time.
+</div>
+<div class="procedure-step">
+  <strong>Step 7:</strong> Compare: did your barrier slow the erosion? By how much?
+</div>
+<div class="procedure-step">
+  <strong>Step 8:</strong> Improve Phase: What did not work well? Redesign and rebuild your barrier, making at least one change. Test again.
+</div>
+<div class="procedure-step">
+  <strong>Step 9:</strong> Final comparison: which design worked best and why?
+</div>
+
+<h2>&#x1F4AC; Discussion Questions</h2>
+<div class="question-box">
+  <strong>Q1:</strong> What worked best: craft sticks, rocks, or leaves? Why do you think that material worked better?
+  <p class="discussion-hint"><strong>Hint:</strong> Rocks usually work best because they are heavy and do not move. Craft sticks work if they are pressed into the sand firmly. They act like a wall. Leaves alone tend to wash away because they are light. In real life, a combination (like rocks plus plants) works best. The rocks stop the water and the plant roots hold the soil below.</p>
+</div>
+<div class="question-box">
+  <strong>Q2:</strong> What would you try if you had one more test? What improvement would you make?
+  <p class="discussion-hint"><strong>Hint:</strong> Encourage creative thinking. Good answers: packing rocks more tightly, making the barrier taller, using more layers, making the slope less steep, adding multiple rows. All of these are things real engineers try. There is no single right answer. This is engineering thinking!</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>&#x270F;&#xFE0F; Student Worksheet</h2>
+<div class="worksheet-header">Engineering: Slow the Erosion - Student Worksheet</div>
+<div class="name-date">Name: _________________________ &nbsp;&nbsp; Date: _____________</div>
+
+<h3>1. Design sketch</h3>
+<p>Draw your barrier design BEFORE building it. Label the materials you will use.</p>
+<div class="draw-box" style="min-height: 180px;"></div>
+
+<h3>2. Data table</h3>
+<table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+  <thead>
+    <tr style="background: #fff3e0;">
+      <th style="border: 2px solid #ffcc80; padding: 8px;">Test</th>
+      <th style="border: 2px solid #ffcc80; padding: 8px;">How far did sand move?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 2px solid #ffcc80; padding: 10px;">Test 1 (no barrier)</td>
+      <td style="border: 2px solid #ffcc80; padding: 10px;">Sand moved ___________ cm</td>
+    </tr>
+    <tr>
+      <td style="border: 2px solid #ffcc80; padding: 10px;">Test 2 (my barrier)</td>
+      <td style="border: 2px solid #ffcc80; padding: 10px;">Sand moved ___________ cm</td>
+    </tr>
+    <tr>
+      <td style="border: 2px solid #ffcc80; padding: 10px;">Test 3 (improved barrier)</td>
+      <td style="border: 2px solid #ffcc80; padding: 10px;">Sand moved ___________ cm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3. Reflection</h3>
+<p><strong>What worked best?</strong></p>
+<p>___________________________________________________________________________</p>
+<p><strong>What would I change next time?</strong></p>
+<p>___________________________________________________________________________</p>
+
+<h3>4. Real-world connection</h3>
+<p>Name one way real engineers slow erosion in real life:</p>
+<p>___________________________________________________________________________</p>
+
+<div class="page-break"></div>
+
+<h2>&#x1F469;&#x200D;&#x1F3EB; Parent/Teacher Notes</h2>
+<div class="teacher-note">
+  <ul>
+    <li><strong>Culminating activity:</strong> This is the unit culminating activity. It brings together erosion (L3), landforms (L1), and engineering thinking.</li>
+    <li><strong>Material substitutions:</strong> If craft sticks are not available, use pencils, straws, or twigs from outside. Anything stick-like works.</li>
+    <li><strong>Measurement:</strong> The measurement does not need to be precise. Approximate comparisons ("sand moved to the edge" vs. "sand only moved 2 inches") are totally fine.</li>
+    <li><strong>Real-world discussion:</strong> Ask: "What do real engineers use to stop erosion?" Good real-world answers: retaining walls, sandbags, riprap (large rocks), planted vegetation, silt fences, terraced hillsides.</li>
+    <li><strong>Additional standards:</strong> This lesson connects to engineering standards K-2-ETS1-1 (defining a simple problem that can be solved through the development of a new or improved object or tool) and K-2-ETS1-3 (analyzing data from tests of two objects to compare the strengths and weaknesses of how each performs).</li>
+  </ul>
+</div>
+
+<h2>&#x2702;&#xFE0F; PARENT ANSWER KEY</h2>
+<div class="answer-key">
+  <h3>Worksheet Answers</h3>
+  <ol>
+    <li><strong>Design sketch:</strong> Accept any labeled sketch that shows materials placed on or around the sand hill. Look for thoughtful placement (barriers across the path of water flow, not random placement).</li>
+    <li><strong>Data table:</strong> Answers will vary. The key check: Test 2 and Test 3 measurements should generally be less than Test 1 (the barrier should slow the erosion). If not, discuss why and what could be improved.</li>
+    <li><strong>Reflection:</strong> Accept any thoughtful response. Good answers identify which material or arrangement worked and explain why (heavier materials stayed in place, multiple rows slowed water more, etc.).</li>
+    <li><strong>Real-world connection:</strong> Accept any of: retaining walls, planting trees/grass, sandbags, riprap (large rocks along riverbanks), terracing hillsides, silt fences. Any reasonable erosion control method is correct.</li>
+  </ol>
+</div>
+
+<!-- Remarq feedback layer injected after registration -->
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
 </body>
 </html>

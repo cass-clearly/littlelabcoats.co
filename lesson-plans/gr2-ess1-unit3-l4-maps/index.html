@@ -1,116 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maps and Directions: Earth Science Unit 3, Lesson 4</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { font-family: Georgia,'Times New Roman',serif; max-width:8.5in; margin:0 auto; padding:0.5in; font-size:11pt; line-height:1.4; color:#222; }
-    h1 { text-align:center; font-size:22pt; margin-bottom:5px; border-bottom:3px solid #e65100; padding-bottom:10px; color:#e65100; }
-    .subtitle { text-align:center; font-style:italic; margin-bottom:20px; color:#555; font-size:13pt; }
-    .meta { display:flex; justify-content:space-between; background:#fbe9e7; padding:10px 15px; border-radius:8px; margin-bottom:20px; font-size:10pt; border:1px solid #ffccbc; flex-wrap:wrap; gap:5px; }
-    h2 { font-size:14pt; background:#e65100; color:white; padding:8px 14px; margin:24px 0 12px 0; border-radius:6px; }
-    h3 { font-size:12pt; color:#e65100; border-bottom:2px solid #ffccbc; padding-bottom:4px; margin:18px 0 8px 0; }
-    ul,ol { margin:8px 0; padding-left:25px; } li { margin-bottom:5px; }
-    .hero { text-align:center; margin:16px 0; } .hero .emoji { font-size:72pt; line-height:1.2; } .hero .cap { font-size:9pt; color:#777; font-style:italic; margin-top:4px; }
-    .matbox { background:#fff8e1; border:2px solid #ffcc80; padding:14px 18px; border-radius:8px; margin:10px 0; } .matbox h3 { color:#e65100; border-color:#ffcc80; }
-    .step { background:#fbe9e7; padding:10px 15px; margin:8px 0; border-radius:6px; border-left:5px solid #e65100; } .step strong { color:#e65100; }
-    .qbox { background:#fbe9e7; border-left:5px solid #e65100; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; }
-    .discussion-hint { font-style:italic; color:#555; margin-top:6px; font-size:10pt; }
-    .tip { background:#e0f7fa; border-left:5px solid #00bcd4; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; font-size:10pt; }
-    .std { background:#f3e5f5; border:1px solid #ce93d8; border-radius:8px; padding:14px 18px; margin:10px 0; font-size:10pt; } .std strong { color:#7b1fa2; }
-    .ext { background:#e8eaf6; border:1px solid #9fa8da; border-radius:8px; padding:14px 18px; margin:10px 0; }
-    .tnote { background:#f5f5f5; border:2px dashed #999; border-radius:8px; padding:15px; margin:20px 0; font-size:10pt; color:#555; } .tnote strong { color:#333; }
-    .wshead { background:#e65100; color:white; padding:8px 14px; border-radius:6px; font-size:14pt; font-weight:bold; margin:0 0 12px 0; text-align:center; }
-    .namedate { text-align:center; margin-bottom:16px; font-size:12pt; }
-    .dbox { border:3px dashed #e65100; border-radius:10px; min-height:180px; margin:12px 0; padding:10px; } .dbox .dl { font-size:9pt; color:#aaa; font-style:italic; }
-    .fb { background:#fbe9e7; border:2px solid #ffccbc; border-radius:8px; padding:14px 18px; margin:12px 0; font-size:12pt; }
-    .bl { display:inline-block; border-bottom:2px solid #e65100; min-width:180px; margin:0 4px; }
-    .dt { width:100%; border-collapse:collapse; margin:12px 0; font-size:11pt; } .dt th { background:#e65100; color:white; padding:8px 12px; text-align:left; } .dt td { border:1px solid #ffccbc; padding:8px 12px; } .dt tr:nth-child(even) { background:#fbe9e7; }
-    .ak { background:#f5f5f5; border:3px dashed #999; border-radius:8px; padding:20px; margin:20px 0; } .ak h2 { background:#757575; text-align:center; }
-    @media print { body { padding:0.25in; font-size:10pt; } h2 { break-after:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact; } h3 { break-after:avoid; } .step,.qbox,.tnote,.ak,.matbox,.tip,.ext { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
-    .pb { page-break-before:always; margin-top:20px; }
-    .print-btn { position:fixed; top:20px; right:20px; background:#e65100; color:white; border:none; padding:10px 18px; border-radius:8px; font-size:0.95rem; font-weight:600; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000; }
-    .print-btn:hover { opacity:0.88; } @media print { .print-btn { display:none; } }
-
-    .vocab-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:15px 0; }
-    .vocab-card { background:#fff3e0; border:2px solid #ffcc80; border-radius:10px; padding:12px 10px; text-align:center; }
-    .vocab-word { font-weight:bold; color:#e65100; font-size:12pt; display:block; margin-bottom:4px; }
-    .vocab-def { color:#555; font-size:9pt; line-height:1.4; display:block; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maps and Directions - Grade 2 Earth Science</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #222;
+}
+h1 {
+  text-align: center;
+  font-size: 22pt;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #e65100;
+  padding-bottom: 10px;
+  color: #e65100;
+}
+.subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+.meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+ul, ol { margin: 8px 0; padding-left: 25px; }
+li { margin-bottom: 5px; }
+.materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+.materials-box h3 { color: #e65100; border-color: #ffcc80; }
+.procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+.procedure-step strong { color: #bf360c; }
+.question-box { background: #fff3e0; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+.discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+.tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+.standards-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+.standards-box strong { color: #e65100; }
+.extension-box { background: #fff8e1; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+.teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+.teacher-note strong { color: #333; }
+.answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+.answer-key h2 { background: #757575; text-align: center; }
+.name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+.worksheet-header { background: #bf360c; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+.draw-box { border: 2px solid #ffcc80; background: white; border-radius: 8px; min-height: 120px; margin: 6px 0; padding: 6px; }
+.draw-label { font-size: 9pt; color: #888; font-style: italic; text-align: center; margin-top: 4px; }
+.vocab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+.vocab-card { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 10px; text-align: center; font-size: 10pt; }
+.vocab-card .vocab-word { font-weight: bold; color: #e65100; font-size: 12pt; display: block; margin-bottom: 4px; }
+.vocab-card .vocab-def { color: #555; font-size: 9pt; line-height: 1.4; }
+@media print {
+  body { padding: 0.25in; font-size: 10pt; }
+  h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h3 { break-after: avoid; }
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+.page-break { page-break-before: always; margin-top: 20px; }
+.print-btn {
+  position: fixed; top: 20px; right: 20px; background: #e65100; color: white;
+  border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000; display: flex; align-items: center; gap: 6px;
+}
+.print-btn:hover { background: #bf360c; }
+@media print { .print-btn { display: none; } }
+</style>
 </head>
-<body data-document-id="doc_C8yKm0e6yJA">
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
-  <h1>Maps and Directions</h1>
-  <p class="subtitle">Earth Science Unit 3, Lesson 4</p>
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 50 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Earth Science: Maps</span>
-    <span>🧰 <strong>Kit Lesson:</strong> No</span>
-  </div>
-  <div class="hero"><div class="emoji">🗺️🧭📐✏️</div><div class="cap">Maps help us understand Earth's surface! Scientists and explorers use maps to find their way.</div></div>
-  <div class="std"><strong>📋 NGSS Standard:</strong><br><strong>2-ESS2-2</strong>: Map the shapes and kinds of land and bodies of water in an area and where water on Earth is found.</div>
-  <h2>🎯 Learning Goals</h2>
-  <ul>
-    <li>Identify the key elements of a map: title, key/legend, compass rose, and symbols.</li>
-    <li>Draw a map of a familiar space (room or yard) using map conventions.</li>
-    <li>Use cardinal directions (North, South, East, West) to describe locations.</li>
-  </ul>
-  <h2>💡 Background</h2>
-  <p>Maps are tools that show Earth's surface (or part of it) from above. A good map has several key elements: a title (what the map shows), a key or legend (what each symbol means), a compass rose (showing North, South, East, West directions), and a scale (showing how distances on the map compare to real distances). Scientists use maps to track landforms, water, weather, and much more. Even ancient peoples drew maps to navigate and share information about the land.</p>
-  <div class="tip">💡 <strong>Key vocabulary:</strong> map, symbol, key, compass rose, scale</div>
-  <h2>📦 Materials</h2>
-  <div class="matbox"><h3>🏠 What You Need</h3><ul>
-      <li>Paper (at least 2 sheets per student)</li>
-      <li>Pencil</li>
-      <li>Crayons or markers</li>
-      <li>Ruler (optional)</li>
-      <li>A simple map to examine (a neighborhood map, park map, or map in a book)</li>
-  </ul><p style="font-size:10pt;color:#555;margin-top:8px;">✅ <em>All household items, nothing to buy!</em></p></div>
-  <h2>📖 Vocabulary</h2>
-  <div class="vocab-grid">
-    <div class="vocab-card"><span class="vocab-word">map</span><span class="vocab-def">a drawing that shows an area from above, using symbols to represent real features</span></div>
-    <div class="vocab-card"><span class="vocab-word">symbol</span><span class="vocab-def">a small drawing or shape on a map that represents something real</span></div>
-    <div class="vocab-card"><span class="vocab-word">key</span><span class="vocab-def">a list that explains what each symbol on a map means (also called a legend)</span></div>
-    <div class="vocab-card"><span class="vocab-word">compass rose</span><span class="vocab-def">a symbol on a map showing the four main directions: North, South, East, West</span></div>
-    <div class="vocab-card"><span class="vocab-word">scale</span><span class="vocab-def">a guide showing how map distances relate to real distances</span></div>
-  </div>
-  <h2>🔬 Procedure</h2>
-  <div class="step"><strong>Step 1 (10 min): Examine a Real Map:</strong> Look at a simple map together. Identify: what is the title? Where is the compass rose? What symbols are used? Does it have a scale?</div>
-  <div class="step"><strong>Step 2 (5 min): Plan Your Map:</strong> Look around the room (or plan to map the yard). What features will you include? Furniture, doors, windows, plants, trees?</div>
-  <div class="step"><strong>Step 3 (20 min): Draw the Map:</strong> Draw the room or yard from above (bird's eye view). Include: title, at least 5 symbols with a key, and a compass rose. Add color to make it clear.</div>
-  <div class="step"><strong>Step 4 (10 min): Share and Compare:</strong> If both parent and student draw the same space, compare the maps. What is similar? What is different? Which details did each person notice?</div>
-  <div class="step"><strong>Step 5 (5 min): Discussion and Wrap-Up:</strong> Ask the discussion questions and complete the worksheet.</div>
-  <h2>💬 Discussion Questions</h2>
+<body data-document-id="">
 
-  <div class="qbox"><strong>🗣️ Q1:</strong> If your map has a compass rose showing North at the top, which direction is the front door from the living room?<p class="discussion-hint">Suggested answer: This depends on their specific map! The learning here is that students can use their compass rose to describe directions. Practice: 'The window is to the North of the sofa.' Or 'The door is to the East.' If the compass rose is correct, these should match reality.</p></div>
-  <div class="qbox"><strong>🗣️ Q2:</strong> Why do all maps need a key (legend)? What would happen without one?<p class="discussion-hint">Suggested answer: Without a key, map readers would not know what each symbol represents. A symbol might mean a mountain or a building, and you would not know which. The key is like a translation guide for the map's special language of symbols.</p></div>
-  <h2>🚀 Extensions</h2>
-  <div class="ext"><ul>
-      <li>🌍 <strong>Treasure Map:</strong> Draw a map of the house with a hidden 'treasure' (a toy or treat). Give the map to a family member and have them find it using the directions!</li>
-      <li>📱 <strong>Compare to Google Maps:</strong> Look at your house on Google Maps (satellite view). Compare to your hand-drawn map. What is the same? What did you miss?</li>
-      <li>📚 <strong>Book Connection:</strong> 'Me on the Map' by Joan Swanson</li>
-  </ul></div>
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="tnote"><ul>
-      <li><strong>Bird's eye view challenge:</strong> Some students find top-down perspective difficult at first. Practice by looking straight down at a pencil or book on the table and drawing what you see from above.</li>
-      <li><strong>Cardinal directions tip:</strong> Use 'Never Eat Soggy Waffles' as a memory trick for North, East, South, West (going clockwise).</li>
-      <li><strong>NGSS link:</strong> 2-ESS2-2 asks students to map shapes and kinds of land. Drawing a map with a legend and compass rose directly fulfills this standard.</li>
-  </ul></div>
-  <div class="pb">
-    <div class="wshead">🔬 Student Worksheet: Maps and Directions</div>
-    <p class="namedate">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-    <h3>My Map</h3>
-    <div class="dbox" style="min-height:260px;"><div class="dl">Draw a map of your room or yard from above (bird's eye view). Include: Title at the top, Key/Legend showing what each symbol means, Compass rose (N, S, E, W).</div></div>
-    <div class="fb">The four cardinal directions are <span class="bl"></span>, <span class="bl"></span>, <span class="bl"></span>, and <span class="bl"></span>.<br><br>A map's key (legend) tells you <span class="bl"></span>.<br><br>A compass rose shows <span class="bl"></span>.</div>
+<button class="print-btn" onclick="window.print()">&#x1F5A8;&#xFE0F; Print Lesson</button>
+
+<h1>&#x1F5FA;&#xFE0F; Maps and Directions</h1>
+<p class="subtitle">Earth Science Unit 3, Lesson 4 of 6</p>
+
+<div class="meta">
+  <span><strong>Grade:</strong> 2</span>
+  <span><strong>Duration:</strong> 45 minutes</span>
+  <span><strong>Subject:</strong> Earth Science, Geography Skills</span>
+  <span><strong>Materials:</strong> Paper, pencil, crayons, ruler</span>
+</div>
+
+<div class="standards-box">
+  <strong>NGSS Standard:</strong> 2-ESS2-2 — Develop a model to represent the shapes and kinds of land and bodies of water in an area.
+</div>
+
+<h2>&#x1F3AF; Learning Goals</h2>
+<ul>
+  <li>Understand that maps show Earth's features from a bird's eye (top-down) view</li>
+  <li>Create a simple map with a compass rose, legend/key, and map symbols</li>
+  <li>Use a map to navigate through a space</li>
+</ul>
+
+<h2>&#x1F4E6; Materials</h2>
+<div class="materials-box">
+  <ul>
+    <li>Paper (one large sheet per student, or use notebook paper)</li>
+    <li>Pencil</li>
+    <li>Crayons or markers</li>
+    <li>Ruler (optional)</li>
+  </ul>
+</div>
+
+<h2>&#x1F4D6; Vocabulary</h2>
+<div class="vocab-grid">
+  <div class="vocab-card">
+    <span class="vocab-word">map</span>
+    <span class="vocab-def">A drawing that shows an area from above, like a bird looking down</span>
   </div>
-  <div class="pb">
-    <div class="ak"><h2>✂️ PARENT ANSWER KEY</h2>
-      <p>Fill-in: North, South, East, West; what each symbol means; directions (North/South/East/West)</p>
-    </div>
+  <div class="vocab-card">
+    <span class="vocab-word">compass rose</span>
+    <span class="vocab-def">A symbol on a map that shows North, South, East, and West</span>
   </div>
-  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="" data-content-selector="body"></script>
+  <div class="vocab-card">
+    <span class="vocab-word">legend</span>
+    <span class="vocab-def">A key that explains what the symbols on a map mean</span>
+  </div>
+  <div class="vocab-card">
+    <span class="vocab-word">symbol</span>
+    <span class="vocab-def">A small drawing or shape that represents something real on a map</span>
+  </div>
+  <div class="vocab-card">
+    <span class="vocab-word">bird's eye view</span>
+    <span class="vocab-def">Looking at something from directly above, as if you were flying</span>
+  </div>
+</div>
+
+<h2>&#x1F52C; Background</h2>
+<p>A map is a drawing that shows what an area looks like from directly above, as if you were a bird flying overhead. Maps can show any size area, from your bedroom to the whole planet. Scientists who make maps are called cartographers. Maps have been used for thousands of years to help people navigate, find resources, and understand the world.</p>
+<p>All maps have some basic features. A compass rose shows the four directions: North, South, East, and West. A legend (also called a key) explains what the symbols on the map mean. Symbols are small drawings or shapes that represent real things, like a blue line for a river, a green square for a park, or a small house shape for buildings. Using symbols makes maps easier to read and understand than drawing detailed pictures of everything.</p>
+<p>Maps are very useful for studying Earth's features. Topographic maps show hills and mountains using curved lines (contour lines). Political maps show country and state borders. Physical maps show landforms and bodies of water with colors (brown for mountains, blue for water, green for flat land). Reading maps is a scientific skill that geographers, explorers, engineers, and scientists all use every day.</p>
+
+<h2>&#x1F9EA; Activity: Room Map</h2>
+<div class="procedure-step">
+  <strong>Step 1:</strong> Walk around the room (or yard) you will map. Note the main features: doors, windows, furniture or large objects, any special areas.
+</div>
+<div class="procedure-step">
+  <strong>Step 2:</strong> Start with a large sheet of paper turned sideways (landscape). Decide which side of your paper will be "North" and lightly write N at the top.
+</div>
+<div class="procedure-step">
+  <strong>Step 3:</strong> Draw the outline of the room as a simple rectangle or shape. Include the walls.
+</div>
+<div class="procedure-step">
+  <strong>Step 4:</strong> Add a compass rose in one corner (N, S, E, W pointing in the right directions).
+</div>
+<div class="procedure-step">
+  <strong>Step 5:</strong> Draw the main features: at least one door, one window, and 3 pieces of furniture or major objects. Use simple shapes and symbols.
+</div>
+<div class="procedure-step">
+  <strong>Step 6:</strong> Create a legend/key box in a corner: list each symbol and what it means (example: rectangle = table, X = door, square with circle = chair).
+</div>
+<div class="procedure-step">
+  <strong>Step 7:</strong> Add a title to your map ("My Bedroom," "Our Backyard," etc.).
+</div>
+<div class="procedure-step">
+  <strong>Step 8:</strong> Trade maps with a family member. Can they follow your map to find a specific object you point to? Can you follow theirs?
+</div>
+
+<h2>&#x1F4AC; Discussion Questions</h2>
+<div class="question-box">
+  <strong>Q1:</strong> How is a map different from a photograph of the same room?
+  <p class="discussion-hint"><strong>Hint:</strong> A photo shows what things look like from the side: you can see colors, textures, and heights. A map shows where things are in relation to each other from directly above. Maps leave out detail but make it easier to understand the layout and navigate. Pilots, ship captains, and hikers all need maps more than photos because maps show position.</p>
+</div>
+<div class="question-box">
+  <strong>Q2:</strong> Why do mapmakers use symbols instead of drawing everything in detail?
+  <p class="discussion-hint"><strong>Hint:</strong> If you drew every tree as a real tree picture, the map would be too crowded and hard to read. Symbols are simple and quick to understand once you know the legend. They also save space. All maps use the same standard symbols by agreement (blue = water, for example) so people everywhere can read maps from any place.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>&#x270F;&#xFE0F; Student Worksheet</h2>
+<div class="worksheet-header">Maps and Directions - Student Worksheet</div>
+<div class="name-date">Name: _________________________ &nbsp;&nbsp; Date: _____________</div>
+
+<h3>1. My Map</h3>
+<p>Draw your room or yard map here. Include a compass rose, legend, and title.</p>
+<div class="draw-box" style="min-height: 280px;"></div>
+
+<h3>2. Map Checklist</h3>
+<p>Check off each item your map includes:</p>
+<ul style="list-style: none; padding-left: 10px;">
+  <li>&#9744; Compass rose (N, S, E, W)</li>
+  <li>&#9744; Legend with 3 or more symbols</li>
+  <li>&#9744; Title</li>
+  <li>&#9744; At least one door</li>
+  <li>&#9744; At least one window</li>
+</ul>
+
+<h3>3. Fill in the blank</h3>
+<p>The legend on a map tells you what each _______________ means.</p>
+
+<h3>4. Quick quiz</h3>
+<p>On a map, blue color usually represents _______________.</p>
+
+<div class="page-break"></div>
+
+<h2>&#x1F469;&#x200D;&#x1F3EB; Parent/Teacher Notes</h2>
+<div class="teacher-note">
+  <ul>
+    <li><strong>Scale is not required:</strong> The map does not need to be perfectly to scale. The goal is understanding the concept of bird's eye view and the use of symbols, not precise measurement.</li>
+    <li><strong>Estimation is fine:</strong> If measuring is difficult, encourage estimation: "The table is about halfway across the room." That is more than enough for 2nd grade.</li>
+    <li><strong>Make it interactive:</strong> When trading maps with a family member, one person holds the map while the other walks around following it. This makes the activity memorable and fun.</li>
+    <li><strong>Cross-curricular connection:</strong> This lesson directly supports understanding of physical geography maps, which appear in many social studies curricula at the same grade level.</li>
+  </ul>
+</div>
+
+<h2>&#x2702;&#xFE0F; PARENT ANSWER KEY</h2>
+<div class="answer-key">
+  <h3>Worksheet Answers</h3>
+  <ol>
+    <li><strong>My Map:</strong> Accept any top-down drawing of a room or yard that includes walls/boundaries, some features inside, a compass rose, a legend, and a title. The map does not need to be to scale.</li>
+    <li><strong>Map Checklist:</strong> All five items should be checked. If any are missing, have the student add them to their map.</li>
+    <li><strong>Fill in the blank:</strong> symbol</li>
+    <li><strong>Quick quiz:</strong> water (accept also: oceans, rivers, lakes)</li>
+  </ol>
+</div>
+
+<!-- Remarq feedback layer injected after registration -->
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
 </body>
 </html>

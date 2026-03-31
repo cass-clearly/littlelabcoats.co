@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fossils: Reading the Pages of Earth's History</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #00B894;
+      padding-bottom: 10px;
+      color: #00B894;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e0f5f0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #80cbc4;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #00B894;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #007a62;
+      border-bottom: 2px solid #80cbc4;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div { flex: 1; }
+    .procedure-step {
+      background: #e0f5f0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #00B894;
+    }
+    .procedure-step strong { color: #007a62; }
+    .fossil-card {
+      display: inline-block;
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 120px;
+      vertical-align: top;
+    }
+    .fossil-card .emoji { font-size: 20pt; display: block; margin-bottom: 4px; }
+    .fossil-card .name { font-weight: bold; color: #2e7d32; }
+    .fossil-card .desc { font-style: italic; color: #555; font-size: 9pt; }
+    .organism-card {
+      display: inline-block;
+      background: #fce4ec;
+      border: 1px solid #f48fb1;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 100px;
+    }
+    .organism-card .emoji { font-size: 18pt; display: block; margin-bottom: 2px; }
+    .organism-card .name { font-weight: bold; color: #c2185b; }
+    .organism-card .item { font-size: 9pt; color: #555; }
+    .question-box {
+      background: #F3E8FF;
+      border-left: 5px solid #2196f3;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #00897b;
+      margin-left: 16px;
+      margin-top: 4px;
+      font-size: 10pt;
+    }
+    .instructor-voice {
+      background: #e0f7fa;
+      border-left: 5px solid #00acc1;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+      font-style: italic;
+      color: #006064;
+    }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .hook-box {
+      background: #fff3e0;
+      border: 2px solid #ffb74d;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .hook-box h3 { color: #e65100; border-color: #ffb74d; }
+    /* Data tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #b2dfdb;
+      font-weight: bold;
+      color: #004d40;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #e0f5f0; }
+    .sketch-box {
+      border: 2px solid #bbb;
+      border-radius: 8px;
+      min-height: 160px;
+      background: #fafafa;
+      margin: 8px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 8px;
+    }
+    .sketch-label {
+      font-size: 9pt;
+      color: #888;
+      font-style: italic;
+    }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #444;
+    }
+    .answer-key h2 {
+      background: #757575;
+      font-size: 13pt;
+      text-align: center;
+    }
+    .answer-key .expected {
+      background: white;
+      border-left: 4px solid #00B894;
+      padding: 8px 14px;
+      margin: 8px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .hook-box, .instructor-voice {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .hero-image img { max-height: 250px; }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="">
+
+  <h1>🪨 Fossils: Reading the Pages of Earth's History 🪨</h1>
+  <p class="subtitle">A Cast &amp; Mold Investigation — What Did Earth Leave Behind?</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth &amp; Space Science</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>4-ESS1-1</strong> — Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.<br>
+    <em>Also addresses:</em> <strong>ESS1.C</strong> (The History of Planet Earth) · <strong>ETS1.B</strong> (Developing Possible Solutions — designing the best "organism" to fossilize)<br>
+    <em>Crosscutting Concepts:</em> Patterns · Cause and Effect
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Fossils are Earth's own record books — preserved clues about creatures, climates, and landscapes that existed millions of years ago. By studying fossils, scientists piece together the story of life on our planet. In this lesson, students will make their own mold and cast fossils from household materials and discover why some organisms leave lasting impressions while others disappear without a trace.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> fossil, mold fossil, cast fossil, trace fossil, amber, compression fossil, fossilization, mineral replacement, index fossil, body fossil, sediment, paleontologist
+  </div>
+
+  <!-- ====================== BACKGROUND SCIENCE ====================== -->
+  <h2>🔬 Background Science <span style="font-size:10pt; font-weight:normal;">(for Parent/Teacher)</span></h2>
+
+  <h3>What Is a Fossil?</h3>
+  <p>A fossil is the preserved remains or trace of an organism that lived in the geologic past — typically more than 10,000 years old. Fossils form in sedimentary rock layers (strata) when an organism or its activity is buried and preserved over millions of years. Because fossilization is rare and requires precise conditions, each fossil is an extraordinary window into ancient life.</p>
+
+  <h3>Types of Fossils</h3>
+  <div style="text-align: center; margin: 10px 0;">
+    <div class="fossil-card">
+      <span class="emoji">🐚</span>
+      <span class="name">Mold Fossil</span>
+      <span class="desc">Hollow impression left in rock after organism decays. Shows shape &amp; texture.</span>
+    </div>
+    <div class="fossil-card">
+      <span class="emoji">🗿</span>
+      <span class="name">Cast Fossil</span>
+      <span class="desc">Minerals fill a mold → 3D replica of original organism. Shows volume &amp; detail.</span>
+    </div>
+    <div class="fossil-card">
+      <span class="emoji">🦕</span>
+      <span class="name">Trace Fossil</span>
+      <span class="desc">Evidence of activity: footprints, burrows, eggs, droppings. Shows behavior.</span>
+    </div>
+    <div class="fossil-card">
+      <span class="emoji">🌿</span>
+      <span class="name">Compression Fossil</span>
+      <span class="desc">Flat, pressed impression of soft organism (leaves, fish). Shows fine detail.</span>
+    </div>
+    <div class="fossil-card">
+      <span class="emoji">🍯</span>
+      <span class="name">Amber Fossil</span>
+      <span class="desc">Organism trapped in tree resin that hardened over millions of years. Best soft-tissue preservation.</span>
+    </div>
+  </div>
+
+  <h3>How Fossilization Happens</h3>
+  <ol>
+    <li><strong>Death &amp; Quick Burial:</strong> An organism dies and is rapidly covered by sediment (mud, sand, ash). Without quick burial, scavengers and decomposers destroy the remains.</li>
+    <li><strong>Soft Tissue Decays:</strong> Over time, soft parts (skin, organs, fur) break down. Hard parts — shells, bones, teeth — remain.</li>
+    <li><strong>Mineral Replacement:</strong> Groundwater seeps through the sediment, slowly replacing the organic material with dissolved minerals. The organism literally turns to stone (a process called permineralization).</li>
+    <li><strong>Rock Formation:</strong> Layers of sediment compact and harden into sedimentary rock around the fossil. This takes thousands to millions of years.</li>
+    <li><strong>Erosion &amp; Discovery:</strong> Eventually, erosion wears away overlying rock layers, exposing the fossil for a lucky paleontologist — or a curious student — to find.</li>
+  </ol>
+
+  <h3>Why Are Fossils Rare?</h3>
+  <p>The vast majority of organisms that ever lived left no fossil record at all. For fossilization to succeed, conditions must be just right: rapid burial before decay begins, presence of hard body parts, the right chemical environment, and millions of years without disruption. Soft-bodied animals like jellyfish and worms almost never fossilize. Hard shells, bones, and teeth fossilize far more readily.</p>
+
+  <h3>What Fossils Tell Us</h3>
+  <ul>
+    <li><strong>Ancient environments:</strong> Coral fossils in a desert tell us that area was once a shallow ocean.</li>
+    <li><strong>Climate change:</strong> Tropical plant fossils in Antarctica show the continent was once warm.</li>
+    <li><strong>Evolution:</strong> Sequences of fossils reveal how species changed over time.</li>
+    <li><strong>Extinction events:</strong> Abrupt disappearances in the fossil record mark mass extinctions.</li>
+    <li><strong>Index fossils</strong> are fossils of organisms that lived only during a specific, well-defined time period — useful for dating rock layers.</li>
+  </ul>
+
+  <div class="instructor-voice">
+    🎙️ <strong>Instructor Note:</strong> Famous examples to reference: <em>trilobites</em> (hard-shelled marine arthropods, 250–500 million years old), <em>ammonites</em> (coiled mollusks), <em>leaf compression fossils</em> (pressed flat in shale), <em>dinosaur footprints</em> (trace fossils), and <em>insects in amber</em> (Baltic amber specimens with 40–50 million year old insects). The Burgess Shale in Canada is one of the most remarkable fossil sites ever found — it preserved soft-bodied Cambrian animals (540 million years ago) in extraordinary detail.
+  </div>
+
+  <!-- ====================== LESSON FLOW ====================== -->
+  <h2>🚀 Lesson Flow</h2>
+
+  <div class="hook-box">
+    <h3>🪝 Hook (5 minutes)</h3>
+    <p>Hold up a few everyday objects — a coin, a leaf, a key. Ask your student:</p>
+    <p style="margin-left:16px; font-style: italic;">"If you wanted someone to find proof that <em>you</em> existed 10,000 years from now — with no technology, no paper — what would you leave behind? What materials last that long? What would decay?"</p>
+    <p>Let them brainstorm. (Coins? Bones? Plastic? Glass?) Then pivot:</p>
+    <p style="margin-left:16px; font-style: italic;">"Here's the thing — Earth has already been doing exactly this for millions of years. The records it keeps are called <strong>fossils</strong>. And today, we're going to make some."</p>
+    <div class="discussion-hint">This hook surfaces prior knowledge and gives students an intuitive frame for "what lasts" before introducing the science. Let them be wrong — soft objects, paper, wood — and gently redirect.</div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Background Science (7–10 min):</strong> Use the Background Science section above to walk through types of fossils and how fossilization happens. Point to the fossil type cards and quiz your student: "If a dinosaur walked through mud and the mud hardened — what type of fossil would that be?" (Trace fossil.) "What if a bug got stuck in tree sap?" (Amber.) Keep it conversational.
+  </div>
+
+  <div class="instructor-voice">
+    🎙️ <strong>Setup tip:</strong> Before the lesson, gather your "organisms" (see materials below) and flatten or lightly roll clay into palm-sized discs. Having 4–5 discs ready per student avoids delays mid-activity.
+  </div>
+
+  <!-- ====================== MATERIALS ====================== -->
+  <h2>📦 What You'll Need</h2>
+  <div class="materials-box">
+    <h3>🧱 The "Rock" (clay)</h3>
+    <ul>
+      <li>Play-Doh or air-dry clay (preferred)</li>
+      <li><em>Or</em> homemade salt dough: 1 cup flour + ½ cup salt + ½ cup water, kneaded until smooth</li>
+      <li>Enough for 8–10 palm-sized discs per student</li>
+    </ul>
+
+    <h3>🦴 The "Organisms" (objects to press)</h3>
+    <div style="text-align: center; margin: 10px 0;">
+      <div class="organism-card"><span class="emoji">🍂</span><span class="name">Leaf</span><span class="item">Fresh leaf with visible veins</span></div>
+      <div class="organism-card"><span class="emoji">🐚</span><span class="name">Shell</span><span class="item">Small seashell or snail shell</span></div>
+      <div class="organism-card"><span class="emoji">🪙</span><span class="name">Coin</span><span class="item">Track-like impressions</span></div>
+      <div class="organism-card"><span class="emoji">🍝</span><span class="name">Pasta</span><span class="item">Farfalle or rigatoni</span></div>
+      <div class="organism-card"><span class="emoji">🍴</span><span class="name">Fork</span><span class="item">Simulate track fossils</span></div>
+      <div class="organism-card"><span class="emoji">🗝️</span><span class="name">Key</span><span class="item">Complex shape, good detail test</span></div>
+    </div>
+
+    <h3>🧰 Other Supplies</h3>
+    <ul>
+      <li>Wax paper or a silicone mat (to work on — keeps clay from sticking to the table)</li>
+      <li>A rolling pin or smooth cup (to flatten clay discs evenly)</li>
+      <li>Pencils for labeling and the Student Worksheet (last page)</li>
+      <li><em>Optional:</em> Small tray or baking sheet if using air-dry clay (to let keepsakes dry)</li>
+    </ul>
+  </div>
+
+  <!-- ====================== HANDS-ON ACTIVITY ====================== -->
+  <h2>🔬 Hands-On Activity: Cast &amp; Mold Fossil Investigation (20–25 min)</h2>
+
+  <div class="instructor-voice">
+    🎙️ <strong>Before you begin:</strong> Explain that each clay disc represents a layer of soft sediment (mud or sand). The objects students press in represent organisms. This is a simplified but accurate model of how mold fossils form in nature.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Make Your Sediment:</strong><br>
+    Flatten a disc of clay until it's about ½ inch thick — like a small, flat pancake. This is your "sediment layer."
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Press Your Organism:</strong><br>
+    Choose one of your "organisms" (leaf, shell, coin, pasta, etc.). Press it <em>firmly</em> into the clay, then carefully peel it away. Do not twist — lift straight up. What's left behind is a <strong>mold fossil</strong>. It shows the shape and texture of the organism, but not its volume — it's just an impression.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Make a Cast:</strong><br>
+    Flatten a second disc of clay. Now press this new disc <em>onto the mold</em> you just made. Press gently but firmly, then peel the two pieces apart. The new disc now has a raised 3D replica of the original organism — that's your <strong>cast fossil</strong>. In nature, this happens when minerals slowly fill the mold over millions of years.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Test 3–4 Organisms:</strong><br>
+    Repeat Steps 1–3 with different "organisms." For each one, record in the Student Worksheet: which object gave the <em>clearest</em> impression and why. Was it the shape? The ridges? The hardness?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Compare Mold vs. Cast:</strong><br>
+    Hold up your mold and cast from the same organism side by side. Discuss:<br>
+    <ul>
+      <li>What information can you get from just the mold? (Shape, texture, outline)</li>
+      <li>What additional information does the cast give? (3D volume, surface relief, depth)</li>
+      <li>Which one tells you more about the organism?</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — The "Soft Body" Test (2 min):</strong><br>
+    Try pressing a cotton ball or a small piece of tissue into the clay. What happens? <em>(Almost no impression — it's too soft and compressible.)</em> Connect back: this is why jellyfish, worms, and other soft-bodied animals almost never fossilize. There's nothing hard enough to leave a lasting impression before decay begins.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Best results:</strong> Fresh leaves with prominent veins give spectacular impressions. Small ridged pasta (rigatoni, farfalle) works beautifully and is easy for young hands to press firmly. Shells are the most "authentic" fossil experience.
+  </div>
+
+  <!-- ====================== TIMELINE ACTIVITY ====================== -->
+  <h2>📅 Secondary Activity: Fossil Timeline Sorting (5–10 min)</h2>
+  <p>Draw or print a simple timeline from <em>0 to 540 million years ago</em>. Have students place the following events in order by looking them up or using provided clues:</p>
+  <ul>
+    <li>🦖 <strong>Dinosaur extinction</strong> — 66 million years ago (mass extinction event)</li>
+    <li>🐟 <strong>First fish appear</strong> — ~500 million years ago</li>
+    <li>🌿 <strong>First land plants</strong> — ~470 million years ago</li>
+    <li>🦋 <strong>First insects</strong> — ~385 million years ago</li>
+    <li>🐊 <strong>First reptiles</strong> — ~310 million years ago</li>
+    <li>🦕 <strong>First dinosaurs</strong> — ~230 million years ago</li>
+    <li>🐾 <strong>First mammals</strong> — ~225 million years ago</li>
+    <li>🐒 <strong>First primates</strong> — ~55 million years ago</li>
+    <li>🧍 <strong>Modern humans</strong> — ~300,000 years ago</li>
+  </ul>
+  <div class="instructor-voice">
+    🎙️ <strong>Instructor Note:</strong> The goal isn't memorization — it's scale. When students realize dinosaurs went extinct 66 million years ago, and <em>that's recent</em> on the geological timeline, the concept of deep time starts to land. Ask: "How long have humans existed compared to trilobites?" (Trilobites: ~270 million years. Humans: 0.3 million years.)
+  </div>
+
+  <!-- ====================== DISCUSSION QUESTIONS ====================== -->
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>1. Why do you think most organisms never become fossils?</strong>
+    <p class="discussion-hint">→ Look for: they need to be buried quickly before decomposing — most organisms are eaten by scavengers or broken down by bacteria before sediment can cover them. Soft-bodied animals (jellyfish, worms) rarely have hard parts that survive long enough to leave an impression. Even many organisms with hard parts never end up in the right place at the right time.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>2. What does finding a coral fossil in the middle of a desert tell us about Earth's history?</strong>
+    <p class="discussion-hint">→ They might say: the desert used to be underwater — specifically a shallow ocean where corals lived. The environment changed dramatically over millions of years. Oceans can move, dry up, or be lifted into mountains by tectonic forces. This is one of the most powerful things fossils can tell us: places change.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>3. How is a mold fossil different from a cast fossil, and what does each one tell us?</strong>
+    <p class="discussion-hint">→ Look for: a mold is a hollow impression in rock showing the shape and texture of the original organism's exterior. A cast is a 3D replica formed when minerals fill the mold — it shows volume, surface detail, and depth. Together, they give a more complete picture than either alone. A mold tells you what pressed against the sediment; a cast tells you what filled that space.</p>
+  </div>
+
+  <!-- ====================== EXTENSIONS ====================== -->
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌍 <strong>Burgess Shale:</strong> Research this remarkable site in British Columbia, Canada. It preserved soft-bodied Cambrian animals 508 million years ago in extraordinary detail — including creatures with no living relatives. Why is this so unusual?</li>
+      <li>🏔️ <strong>Fossil in a Mountain:</strong> If you find a marine fossil on a mountainside, what does that tell you? Research the Himalayan ammonites (<em>shaligrams</em>) found at high altitude.</li>
+      <li>🦟 <strong>Amber Exploration:</strong> Search for images of Cretaceous amber specimens. What kinds of organisms are found? What does this tell us about forests from 100 million years ago?</li>
+      <li>🔗 <strong>Rock Cycle Connection:</strong> How does the rock cycle connect to fossil formation? Why are fossils found in sedimentary rock but almost never in igneous or metamorphic rock?</li>
+      <li>🎨 <strong>Keepsake Fossil:</strong> If using air-dry clay, let your best mold fossil dry for 24 hours. Paint it with watercolors to highlight the impression — you now have a permanent fossil cast!</li>
+    </ul>
+  </div>
+
+  <!-- ====================== PARENT/TEACHER NOTES ====================== -->
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Clay substitutes:</strong> Salt dough (1 cup flour, ½ cup salt, ½ cup water) works beautifully and costs almost nothing. Regular Play-Doh is great. Even thick peanut butter in a zip-lock bag can work for soft impressions in a pinch — press objects through the bag.</li>
+      <li><strong>Best organisms to press:</strong> Fresh leaves with prominent veins (press vein-side down for maximum detail); small shells; ridged pasta like farfalle or rigatoni; coins for track-like impressions. The more surface texture, the better the fossil.</li>
+      <li><strong>Air-dry clay keepsakes:</strong> If you use air-dry clay, let the mold fossils dry overnight. They make great display pieces — paint them if you like!</li>
+      <li><strong>Common misconception:</strong> Students often think fossilization is a fast process. Emphasize: real mineral replacement takes <em>thousands to millions of years</em>. Our clay model is a useful analogy, but the real process is driven by chemistry over geological time.</li>
+      <li><strong>The "soft body" test:</strong> The Step 6 cotton ball test is a powerful moment. Let students articulate why soft organisms don't fossilize — don't rush to give the answer.</li>
+      <li><strong>Cross-grade connection:</strong> This lesson pairs naturally with 5th grade rock cycle / geological time lessons. If you've covered sedimentary vs. igneous vs. metamorphic rocks, this is a great application.</li>
+      <li><strong>Extend with Burgess Shale:</strong> The Burgess Shale (British Columbia, Canada) is one of the world's most important fossil sites — it preserved 508-million-year-old soft-bodied creatures in extraordinary detail because of unusually rapid burial in an oxygen-poor environment. A quick image search shows jaw-dropping specimens that defy the "fossils are rare" expectation.</li>
+      <li><strong>For advanced students:</strong> Introduce index fossils — fossils used to date the rock layers they're found in, because the organism only lived during a specific period. Ask: what properties make a good index fossil? (Wide geographic range, distinctive shape, lived for a short time before extinction.)</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🪨 Fossils — Student Worksheet 🪨</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🖊️ Part 1: Draw Your Fossils</h3>
+    <p>Choose your <em>best</em> organism from the activity. In the boxes below, sketch your mold fossil and your cast fossil. Label any differences you can see.</p>
+
+    <div class="two-column" style="gap: 24px; margin: 12px 0;">
+      <div>
+        <p style="text-align:center; font-weight:bold; color: #007a62;">🐚 My Mold Fossil</p>
+        <p style="text-align:center; font-size:9pt; font-style:italic; margin-bottom:4px;">Object pressed: _______________________</p>
+        <div class="sketch-box">
+          <span class="sketch-label">Sketch here ✏️</span>
+        </div>
+      </div>
+      <div>
+        <p style="text-align:center; font-weight:bold; color: #007a62;">🗿 My Cast Fossil</p>
+        <p style="text-align:center; font-size:9pt; font-style:italic; margin-bottom:4px;">Object pressed: _______________________</p>
+        <div class="sketch-box">
+          <span class="sketch-label">Sketch here ✏️</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 24px;">📊 Part 2: Organism Comparison Table</h3>
+    <p>Test 3–4 different "organisms." Rate each impression: <strong>3</strong> = very clear, <strong>2</strong> = okay, <strong>1</strong> = not clear.</p>
+    <table class="data-table">
+      <tr>
+        <th style="width:22%;">Object Pressed</th>
+        <th>Impression Clarity (1–3)</th>
+        <th>Hard or Soft?</th>
+        <th>Lots of Surface Texture?</th>
+        <th>Notes — Why did it work (or not)?</th>
+      </tr>
+      <tr>
+        <td style="height:44px;"></td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td style="height:44px;"></td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td style="height:44px;"></td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td style="height:44px;"></td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top: 24px;">🤔 Part 3: Writing Questions</h3>
+
+    <div class="question-box">
+      <strong>1. What can scientists learn from a mold fossil?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. What additional information does a cast fossil give that a mold fossil cannot?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. Based on your table above: what made certain objects leave a better impression? Write a pattern you noticed.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box" style="background: #f3e5f5; border-left-color: #9c27b0;">
+      <strong>⭐ Bonus Question: Why is it rare to find fossils of jellyfish or worms?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 2: Organism Comparison — Expected Patterns</h3>
+
+      <div class="expected">
+        <strong>🍂 Fresh leaf:</strong> Clarity 3 — Hard enough to press, textured surface with prominent veins. Excellent fossilizer model. In nature, leaves compress into shale as compression fossils.
+      </div>
+      <div class="expected">
+        <strong>🐚 Seashell:</strong> Clarity 3 — Hard, highly textured, holds shape. Best real-world fossil analog. Shells are among the most common fossils found because they are hard and decay-resistant.
+      </div>
+      <div class="expected">
+        <strong>🪙 Coin:</strong> Clarity 2–3 — Hard and flat, clear edge impression, some surface detail. Good for discussing track fossils (footprints = flat impressions in sediment).
+      </div>
+      <div class="expected">
+        <strong>🍝 Pasta (ridged):</strong> Clarity 2–3 — Ridged shapes like rigatoni give great texture impressions. Fragile, but good detail when pressed firmly.
+      </div>
+      <div class="expected">
+        <strong>Cotton ball / tissue:</strong> Clarity 1 — Too soft, leaves almost no impression. This is the key teaching moment: soft bodies don't fossilize.
+      </div>
+
+      <h3>Part 3: Writing Questions — Expected Answers</h3>
+
+      <div class="expected">
+        <strong>Q1 — What can scientists learn from a mold fossil?</strong><br>
+        A mold fossil shows the shape, size, and surface texture of the outside of an organism. Scientists can identify what kind of organism it was, how large it was, and details of its exterior structure (shell ridges, leaf veins, scale patterns) from a mold fossil alone.
+      </div>
+
+      <div class="expected">
+        <strong>Q2 — What additional information does a cast fossil give?</strong><br>
+        A cast fossil shows the three-dimensional volume and surface relief of the original organism — not just a flat impression. It gives a more complete picture of the organism's shape, depth, and structure. Some internal details may also be preserved if the original organism had hollow chambers (like a nautilus shell).
+      </div>
+
+      <div class="expected">
+        <strong>Q3 — Pattern from the table:</strong><br>
+        Look for: objects that were harder and had more surface texture (ridges, veins, bumps) left clearer impressions. Smooth, soft, or flexible objects left poor or no impression. Students may say: "Hard objects with texture fossilize better" — this is correct and directly maps to why shells, bones, and teeth are the most common fossils in the real world.
+      </div>
+
+      <div class="expected" style="border-left-color: #9c27b0;">
+        <strong>⭐ Bonus — Why is it rare to find fossils of jellyfish or worms?</strong><br>
+        Jellyfish and worms have no hard parts — no shells, no bones, no teeth. When they die, their soft bodies decay quickly before sediment can preserve them. For fossilization to occur, an organism typically needs hard structures that resist decay long enough to be buried and replaced with minerals. Soft-bodied animals almost never meet this requirement, which is why the few soft-body fossil sites (like the Burgess Shale) are so scientifically valuable.
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+
+      <div class="expected">
+        <strong>Q1 — Why do most organisms never become fossils?</strong><br>
+        Most organisms are eaten by scavengers, decomposed by bacteria, or simply never buried by sediment. Even if they are buried, they may be in the wrong chemical environment for mineral replacement, or the rock may be later melted or crushed by tectonic activity. Fossilization requires precise conditions to align — rare burial timing, the right minerals, the right chemistry, and millions of undisturbed years.
+      </div>
+
+      <div class="expected">
+        <strong>Q2 — Coral fossil in a desert?</strong><br>
+        Corals only live in warm, shallow ocean water. If a coral fossil is found in a desert, that land was once covered by a shallow sea. Over millions of years, tectonic forces may have lifted the seafloor, or sea levels may have dropped, or the continent itself moved. This is a vivid example of how fossils reveal dramatic environmental change over geological time.
+      </div>
+
+      <div class="expected">
+        <strong>Q3 — Mold vs. cast fossil differences:</strong><br>
+        A mold is a hollow impression showing the outline and surface texture of the organism. A cast forms when minerals fill the mold, creating a 3D solid replica. Mold: tells you shape and texture. Cast: adds volume, depth, and sometimes structural detail. Together they give a more complete picture than either alone — which is exactly why paleontologists get excited when they find both for the same specimen.
+      </div>
+
+      <h3>What Success Looks Like</h3>
+      <ul>
+        <li>Students can identify the five main fossil types and give a real-world example of each</li>
+        <li>Students understand that hard body parts (shells, bones, teeth) fossilize far more readily than soft tissue</li>
+        <li>Students can explain the difference between a mold and cast fossil and what each reveals</li>
+        <li>Students connect fossil evidence to environmental change over time (coral in desert = ancient ocean)</li>
+        <li>Students recognize that fossilization is rare, not the norm, and can articulate why</li>
+      </ul>
+
+    </div>
+  </div>
+
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seed Dispersal: How Plants Travel — Unit 1, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+      padding-left: 10px;
+      border-left: 3px solid #a5d6a7;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Dispersal method cards */
+    .method-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .method-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .method-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .method-card .label { font-weight: bold; color: #2e7d32; font-size: 11pt; }
+    .method-card .example { color: #555; font-size: 9pt; margin-top: 4px; }
+    .method-card.wind   { border-color: #90caf9; background: #F3E8FF; }
+    .method-card.wind .label { color: #7B2FBE; }
+    .method-card.animal { border-color: #ffcc80; background: #fff8e1; }
+    .method-card.animal .label { color: #e65100; }
+    .method-card.water  { border-color: #80cbc4; background: #e0f2f1; }
+    .method-card.water .label { color: #00695c; }
+    .method-card.explosion { border-color: #ef9a9a; background: #ffebee; }
+    .method-card.explosion .label { color: #c62828; }
+    /* Worksheet */
+    .worksheet-design-box {
+      border: 3px solid #2e7d32;
+      border-radius: 10px;
+      min-height: 220px;
+      margin: 12px 0;
+      padding: 10px;
+      background: #fff;
+      position: relative;
+    }
+    .worksheet-design-box .corner-label {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .ws-line {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .ws-field {
+      margin: 10px 0;
+    }
+    .ws-field label {
+      font-size: 10pt;
+      color: #333;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .ws-field .line {
+      border-bottom: 1px solid #999;
+      height: 26px;
+    }
+    /* Matching table */
+    .matching-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .matching-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .matching-table td {
+      border: 1px solid #a5d6a7;
+      padding: 8px 12px;
+      vertical-align: middle;
+    }
+    .matching-table tr:nth-child(even) td { background: #f1f8e9; }
+    .matching-blank {
+      border-bottom: 1px solid #999;
+      display: inline-block;
+      min-width: 140px;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key h3 {
+      color: #333;
+      border-color: #bbb;
+    }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .method-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="doc__kFwFRsekOI">
+
+  <h1>🌱 Seed Dispersal: How Plants Travel 🌱</h1>
+  <p class="subtitle">Life Science — Plants &amp; Ecosystems — Unit 1, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Ecosystems</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🍁 🌬️ 🐦 💧 💥</div>
+    <div class="caption">Wind, animals, water, and explosions — plants have some seriously clever tricks for getting their seeds out into the world!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-2</strong> — Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Identify</em> at least 4 methods of seed dispersal (wind, animals, water, explosion)</li>
+    <li><em>Design</em> a model seed for one dispersal method of their choice</li>
+    <li><em>Explain</em> why plants benefit from spreading seeds far from the parent plant</li>
+  </ul>
+
+  <h2>🌿 The Big Idea</h2>
+  <p>Imagine you're a plant. You can't walk, run, or drive to a new neighborhood. But you <em>really</em> need your seeds to find fresh soil, sunlight, and water to grow into new plants. So what do you do?</p>
+  <p>You get creative! Plants have evolved incredibly clever ways to launch their seeds into the world. If all seeds fell directly beneath the parent plant, they'd be competing for the same light, water, and space — and most wouldn't survive. Instead, plants hitch rides on the wind, in animal bellies, on rivers, and even fling themselves with built-in "spring-loaded" pods!</p>
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> dispersal, germinate, adaptations, samara, parachute, ballistic, float
+  </div>
+
+  <h2>🔬 The Science: 4 Big Dispersal Methods</h2>
+
+  <div class="method-cards">
+    <div class="method-card wind">
+      <span class="emoji">🌬️</span>
+      <span class="label">Wind</span>
+      <div class="example">Dandelion, maple samara, milkweed, cottonwood</div>
+    </div>
+    <div class="method-card animal">
+      <span class="emoji">🦊</span>
+      <span class="label">Animals</span>
+      <div class="example">Burrs (hitchhike on fur), berries (eaten &amp; deposited), acorns (buried by squirrels)</div>
+    </div>
+    <div class="method-card water">
+      <span class="emoji">💧</span>
+      <span class="label">Water</span>
+      <div class="example">Coconut, lotus, alder seeds — float downstream or out to sea</div>
+    </div>
+    <div class="method-card explosion">
+      <span class="emoji">💥</span>
+      <span class="label">Explosion</span>
+      <div class="example">Touch-me-not (Impatiens), witch hazel, squirting cucumber — pop!</div>
+    </div>
+  </div>
+
+  <h3>Why spread far away?</h3>
+  <p>If seeds land right under their parent plant, they're stuck in the parent's shadow (competing for sunlight), fighting for the same water and nutrients in the soil, and living right where any pests or diseases that attacked the parent might already be lurking. Spreading out gives each seed its own territory — the best chance to grow into a healthy plant.</p>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Gather Before You Start</h3>
+    <ul>
+      <li>Toothpicks</li>
+      <li>Cotton balls</li>
+      <li>Paper (for folding)</li>
+      <li>Tape (masking or scotch)</li>
+      <li>Scissors ✂️</li>
+      <li>Crayons or markers</li>
+      <li>Small paper scraps (to be "seeds" in the explosion demo)</li>
+    </ul>
+    <h3>🧰 For Testing</h3>
+    <ul>
+      <li>A fuzzy sock and a small piece of hook-and-loop (Velcro) tape (for animal/velcro seed test — most craft boxes have this!)</li>
+      <li>A bowl of water (for water seed test)</li>
+      <li>A balloon, optional — for explosion demo (have a towel ready!)</li>
+      <li>A stepstool or height to drop wind seeds from</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Hook: The Disappearing Dandelion (3–5 min)</strong><br>
+    If you have access to a dandelion (or a picture), hold it up. Ask: <em>"If I blow on this, what happens to the seeds? Where do they go? Why would the plant want that?"</em><br>
+    Or do the thought experiment: <em>"If all a plant's seeds fell straight down, what would happen to them all?"</em> Let students discuss — they'll quickly realize: crowding is bad!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Introduce the 4 Methods (8–10 min)</strong><br>
+    Walk through each dispersal method, showing examples (real seeds if you have them, or the emoji cards above):<br>
+    <ul>
+      <li>🌬️ <strong>Wind:</strong> Light, feathery, winged, or fluffy seeds catch air currents. Show a maple helicopter (samara) if possible — fold a strip of paper and spin it to demonstrate.</li>
+      <li>🦊 <strong>Animals (external):</strong> Burrs and sticky seeds latch onto fur or clothing. Rub a piece of hook-and-loop tape on a fuzzy sock — that's exactly what a burdock seed does!</li>
+      <li>🍓 <strong>Animals (internal):</strong> Sweet, colorful fruits attract animals. The animal eats the fruit, and the seed travels through its digestive system and gets deposited (often far away, with a built-in fertilizer package!).</li>
+      <li>💧 <strong>Water:</strong> Some seeds float! Coconuts can drift thousands of miles on ocean currents. Seeds with air pockets or waxy coatings can bob along rivers and streams.</li>
+      <li>💥 <strong>Explosion:</strong> Some plants build up tension in their seed pods — when the pod dries out or gets touched, it snaps open and launches seeds like a tiny catapult! Touch-me-not (Impatiens) is a great example.</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Choose Your Method &amp; Design (5 min)</strong><br>
+    Each student picks <strong>ONE</strong> dispersal method and designs a model seed for it. Have them sketch their design first on the worksheet (page 2) before building. Encourage them to think like engineers: <em>"What feature of your seed will help it travel?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Build It! (10 min)</strong><br>
+    Build the model seeds! Here are the recommended builds by method:<br>
+    <ul>
+      <li>🌬️ <strong>Wind — Dandelion style:</strong> Tape or stick a cotton ball to the tip of a toothpick. Drop it from waist height — watch it float!</li>
+      <li>🌬️ <strong>Wind — Maple helicopter:</strong> Cut a strip of paper about 3" × 1". Fold one end to create a weighted body; leave the other end as a "wing." Drop it — it should spin!</li>
+      <li>🦊 <strong>Animal (external) — Burr seed:</strong> Crumple a small square of tape (sticky side out) or attach a piece of hook-and-loop tape to a foam or cardboard scrap. Press it onto a fuzzy sock — does it stick?</li>
+      <li>💧 <strong>Water — Floating seed:</strong> Fold a small paper boat shape or cut an oval and fold up the edges. Float it in a bowl of water. Does it hold a small paper "seed"?</li>
+      <li>💥 <strong>Explosion — Optional demo:</strong> Put 10–15 small paper scraps inside a balloon. Inflate it, tie it, then have an adult pop it with a pin (adult supervision required). Watch the "seeds" scatter! (Have a towel ready for cleanup.)</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Test It! (5–7 min)</strong><br>
+    <ul>
+      <li>🌬️ Wind seeds: Drop from a high point (stand on a chair or drop from a second-floor staircase railing). How far did it travel? How long did it stay in the air?</li>
+      <li>🦊 Animal seeds: Press your seed design onto a fuzzy sock. Walk around — does it stay attached? Try shaking it off.</li>
+      <li>💧 Water seeds: Place in a bowl of water. Does it float? Does it carry its "cargo" (a small paper dot = the seed)?</li>
+      <li>💥 Explosion: Did your balloon pop scatter the seeds? How far did they travel?</li>
+    </ul>
+    Record results on the worksheet!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Share Out &amp; Discussion (5–7 min)</strong><br>
+    Each student (or pair) shares: What method did you design for? What did you build? Did it work? What would you change if you could redesign it?<br>
+    <em>Scientists iterate</em> — if the first design didn't work perfectly, that's a success! Talk about what you'd try next.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "You designed a seed for wind dispersal. What features made it travel farther — and what real plant seeds have similar features?"
+    <p class="discussion-hint">💡 <em>Suggested answer: Light weight, large surface area (like a wing or parachute), and the ability to spin or float all help wind seeds travel. Real examples: dandelion (feathery parachute), maple (helicopter/samara), cottonwood (fluffy fibers), milkweed (silky fibers). The key is maximizing air resistance while minimizing weight.</em></p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "Why would a plant 'want' its seeds to travel far away rather than land right underneath it?"
+    <p class="discussion-hint">💡 <em>Suggested answer: If seeds land right under the parent plant, they'd be in its shadow (competing for sunlight), competing for the same water and nutrients in the soil, and in the same location where pests or disease might already be present. Spreading out gives each seed its own space, sunlight, and fresh soil to grow into a healthy plant. More distance = less competition.</em></p>
+  </div>
+
+  <h2>🚀 Extensions &amp; Connections</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌰 <strong>Seed Safari:</strong> Walk outside and look for seeds! Can you find any that stick to your clothes? Any fluffy or winged seeds? Any berries? Try to identify the dispersal method for each one.</li>
+      <li>🍎 <strong>Snack Science:</strong> At lunch, look at what you're eating. Are there seeds? (Apple core, berries, tomato, pepper.) What dispersal method might those seeds use?</li>
+      <li>📐 <strong>Engineering Challenge:</strong> Can you redesign your seed model to travel even farther? What one change would make the biggest difference?</li>
+      <li>🌍 <strong>Map It:</strong> If a coconut falls off a tree in Hawaii and floats for 6 months, where might it end up? Look at ocean current maps!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A Seed Is Sleepy"</em> by Dianna Hutts Aston, or <em>"The Tiny Seed"</em> by Eric Carle (classic!)</li>
+      <li>🌱 <strong>Connection to Lesson 1:</strong> Are the bean/lentil seeds from Lesson 1 sprouting? Check them today — and talk about where those seeds originally came from (humans dispersed them into the soil!).</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Design-and-test is the point:</strong> This is an engineering lesson at heart. The NGSS standard asks students to "develop a simple model" — the building and testing cycle IS the science. If a design fails, celebrate it: <em>"Scientists iterate! What would you change?"</em></li>
+      <li><strong>Best quick builds:</strong> The toothpick + cotton ball dandelion takes about 2 minutes and works remarkably well. The paper helicopter is also fast and kids love how it spins.</li>
+      <li><strong>Balloon explosion (optional):</strong> Dramatic and memorable, but have a towel ready for the paper scraps. Best done on a hard floor.</li>
+      <li><strong>Real seeds to examine if you have them:</strong> Sunflower (easy to find), apple from snack (slice it open — count the seeds!), any berry from lunch, a dandelion from the yard, a maple samara in fall.</li>
+      <li><strong>Animal (internal) method:</strong> This one is hard to model physically, so it's best handled as a class discussion. Why are fruits bright, sweet, and nutritious? It's the plant bribing animals to eat them and carry the seeds away!</li>
+      <li><strong>Vocab to use throughout:</strong> dispersal, germinate, adaptations, samara, parachute, iterate, engineer. You don't need to quiz them — just use the words naturally in context and they absorb them.</li>
+      <li><strong>Connection to L1 experiment:</strong> Check on those sprouting bean/lentil seeds today! Ask: "How did those seeds get into the ground? Who dispersed them?" (Answer: a human gardener — also a dispersal agent!)</li>
+      <li><strong>Assessment:</strong> Can each student name at least 4 dispersal methods? Can they explain their model design and what it mimics? Can they explain why spreading out is good for the plant? That's your success bar.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌱 Seed Dispersal — Student Worksheet 🌱</h1>
+    <p class="name-date">Name: _________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2>🎨 Design Your Seed!</h2>
+    <p style="font-size:10pt; color:#555;">Choose ONE dispersal method. Draw and label your model seed design in the box below.</p>
+
+    <div class="ws-field">
+      <label>My dispersal method is: <span class="matching-blank"></span></label>
+    </div>
+
+    <div class="worksheet-design-box">
+      <span class="corner-label">Draw your seed design here!</span>
+    </div>
+
+    <div class="ws-field">
+      <label>Label the parts of your seed that help it travel:</label>
+      <div class="line"></div>
+      <div class="line" style="margin-top:8px;"></div>
+      <div class="line" style="margin-top:8px;"></div>
+    </div>
+
+    <h2>🔬 Test Results</h2>
+    <p style="font-size:10pt; color:#555;">Test your seed model and record what happened!</p>
+
+    <div class="ws-field">
+      <label>Did it work as expected?</label>
+      <span style="margin-left:20px;">⬜ Yes &nbsp;&nbsp;&nbsp;&nbsp; ⬜ No &nbsp;&nbsp;&nbsp;&nbsp; ⬜ Sort of!</span>
+    </div>
+
+    <div class="ws-field">
+      <label>What happened when you tested it?</label>
+      <div class="line"></div>
+      <div class="line" style="margin-top:8px;"></div>
+    </div>
+
+    <div class="ws-field">
+      <label>If you could change ONE thing to make it work better, what would you change?</label>
+      <div class="line"></div>
+      <div class="line" style="margin-top:8px;"></div>
+    </div>
+
+    <h2>🔗 Real-World Match-Up</h2>
+    <p style="font-size:10pt; color:#555;">Draw a line connecting each seed to how it travels! (Some seeds may travel more than one way.)</p>
+
+    <table class="matching-table">
+      <tr>
+        <th>🌱 Seed / Plant</th>
+        <th>✈️ How It Travels</th>
+      </tr>
+      <tr>
+        <td>Dandelion</td>
+        <td rowspan="6" style="vertical-align:middle; line-height:2.8; font-size:10pt;">
+          🌬️ Wind<br>
+          🦊 Animal (sticks to fur)<br>
+          🍓 Animal (eaten)<br>
+          💧 Water<br>
+          💥 Explosion<br>
+          🐿️ Animal (buried)
+        </td>
+      </tr>
+      <tr><td>Coconut</td></tr>
+      <tr><td>Burdock burr</td></tr>
+      <tr><td>Strawberry</td></tr>
+      <tr><td>Touch-me-not (Impatiens)</td></tr>
+      <tr><td>Acorn</td></tr>
+    </table>
+
+    <h2>✏️ Fill In the Blank</h2>
+    <p style="font-size:12pt; line-height:2.2;">
+      Plants spread their seeds so that _______________________________________________<br>
+      _________________________________________________________________________________.<br><br>
+      One cool seed dispersal method I learned about today is _________________________<br>
+      because _________________________________________________________________________.
+    </p>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🔗 Real-World Match-Up — Answers</h3>
+      <table class="matching-table">
+        <tr>
+          <th>🌱 Seed / Plant</th>
+          <th>✈️ How It Travels</th>
+          <th>📝 Notes</th>
+        </tr>
+        <tr>
+          <td>Dandelion</td>
+          <td>🌬️ Wind</td>
+          <td>Feathery "parachute" (pappus) catches the breeze</td>
+        </tr>
+        <tr>
+          <td>Coconut</td>
+          <td>💧 Water</td>
+          <td>Huge, buoyant, waterproof husk — floats for months</td>
+        </tr>
+        <tr>
+          <td>Burdock burr</td>
+          <td>🦊 Animal (sticks to fur)</td>
+          <td>Tiny hooks — the inspiration for Velcro!</td>
+        </tr>
+        <tr>
+          <td>Strawberry</td>
+          <td>🍓 Animal (eaten)</td>
+          <td>Bright red &amp; sweet to attract animals; seeds pass through</td>
+        </tr>
+        <tr>
+          <td>Touch-me-not (Impatiens)</td>
+          <td>💥 Explosion</td>
+          <td>Seed pod "springs" open when touched — kids love this one!</td>
+        </tr>
+        <tr>
+          <td>Acorn</td>
+          <td>🐿️ Animal (buried)</td>
+          <td>Squirrels bury them as food caches and forget some — trees grow!</td>
+        </tr>
+      </table>
+
+      <div class="ak-grid">
+        <div>
+          <h3>💬 Discussion Question 1 — Wind Seed Features</h3>
+          <ul>
+            <li><strong>Key features:</strong> Light weight, large surface area, ability to spin or parachute</li>
+            <li><strong>Dandelion:</strong> Feathery parachute (pappus) on each seed</li>
+            <li><strong>Maple:</strong> Helicopter/samara — spins to slow descent</li>
+            <li><strong>Cottonwood:</strong> Fluffy white fibers carry seeds great distances</li>
+            <li><strong>Milkweed:</strong> Silky white fibers, seeds can travel miles</li>
+            <li><em>Accept any answer that mentions: lightness, surface area, spinning, floating, or slowing the fall</em></li>
+          </ul>
+        </div>
+        <div>
+          <h3>💬 Discussion Question 2 — Why Travel Far?</h3>
+          <ul>
+            <li>Parent plant creates shade → less sunlight for seedlings below</li>
+            <li>Parent plant uses up nearby water and soil nutrients</li>
+            <li>Same pests, pathogens, or fungi that attacked parent may be present</li>
+            <li>Less competition for space</li>
+            <li>New territory = new opportunities to thrive</li>
+            <li><em>Accept any answer combining sunlight, water, nutrients, space, or competition</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>✅ Fill in the Blank — Suggested Answers</h3>
+      <ul>
+        <li><strong>"Plants spread their seeds so that..."</strong> each seed has enough room, light, and water to grow / they don't have to compete with the parent plant / they can find new places to grow / they have the best chance of surviving</li>
+        <li><em>Accept any scientifically accurate explanation involving reduced competition or improved survival chances</em></li>
+      </ul>
+
+      <h3>✅ Success Checklist</h3>
+      <ul>
+        <li>☑ Student can name at least 4 dispersal methods (wind, animal, water, explosion)</li>
+        <li>☑ Student's seed model clearly connects to a specific dispersal method</li>
+        <li>☑ Student can explain their design choices (why those features help it travel)</li>
+        <li>☑ Student can articulate why spreading out benefits the plant (less competition)</li>
+        <li>☑ Student attempted a redesign or improvement even if first test failed — <em>this is the NGSS engineering mindset!</em></li>
+      </ul>
+
+      <h3>🌟 Bonus: Real Seeds to Examine</h3>
+      <ul>
+        <li><strong>Sunflower seed:</strong> Animal (eaten by birds) and sometimes wind-aided</li>
+        <li><strong>Apple seeds:</strong> Animal (eaten) — the sweet apple is the plant's delivery vehicle</li>
+        <li><strong>Any berry from lunch:</strong> Animal (eaten) — note the bright color as an advertisement to animals</li>
+        <li><strong>Dandelion from yard:</strong> Wind — blow on one! Count the seeds. One dandelion can produce up to 200 seeds!</li>
+      </ul>
+    </div>
+  </div>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc__kFwFRsekOI" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

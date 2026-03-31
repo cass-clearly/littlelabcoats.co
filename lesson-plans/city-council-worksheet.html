@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The City Council &amp; the Mayor — How They Work Together!</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1a237e;
+      padding-bottom: 10px;
+      color: #1a237e;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8eaf6;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #9fa8da;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1a237e;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1a237e;
+      border-bottom: 2px solid #9fa8da;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #f9a825;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #f9a825; }
+    .procedure-step {
+      background: #e8eaf6;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1a237e;
+    }
+    .procedure-step strong { color: #1a237e; }
+    .question-box {
+      background: #F3E8FF;
+      border-left: 5px solid #7B2FBE;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .grade-section {
+      border: 2px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .grade-4 { border-left: 5px solid #1a237e; background: #e8eaf6; }
+    .grade-label {
+      font-weight: bold;
+      font-size: 12pt;
+      margin-bottom: 6px;
+    }
+    .grade-4 .grade-label { color: #1a237e; }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #f9a825;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .standards-box {
+      background: #fce4ec;
+      border: 1px solid #ef9a9a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #b71c1c; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .activity-box {
+      background: #e8f5e9;
+      border: 2px solid #66bb6a;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .activity-box h3 { color: #2e7d32; border-color: #66bb6a; }
+    .comparison-card {
+      display: inline-block;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 130px;
+      vertical-align: top;
+    }
+    .comparison-card .emoji { font-size: 24pt; display: block; margin-bottom: 4px; }
+    .comparison-card .name { font-weight: bold; display: block; }
+    .comparison-card .detail { font-size: 9pt; color: #555; font-style: italic; }
+    .card-mayor { background: #fff8e1; border: 2px solid #f9a825; }
+    .card-mayor .name { color: #e65100; }
+    .card-council { background: #e8eaf6; border: 2px solid #1a237e; }
+    .card-council .name { color: #1a237e; }
+    .card-both { background: #fce4ec; border: 2px solid #b71c1c; }
+    .card-both .name { color: #b71c1c; }
+    .flow-step {
+      background: #fff;
+      border: 2px solid #1a237e;
+      border-radius: 10px;
+      padding: 8px 14px;
+      margin: 6px auto;
+      max-width: 500px;
+      text-align: center;
+      font-size: 11pt;
+      position: relative;
+    }
+    .flow-arrow {
+      text-align: center;
+      font-size: 20pt;
+      color: #1a237e;
+      margin: 2px 0;
+    }
+    .scenario-card {
+      border: 2px dashed #b71c1c;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 8px 0;
+      background: #fff;
+    }
+    .scenario-card strong { color: #b71c1c; }
+    .power-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .power-table th, .power-table td {
+      border: 2px solid #333;
+      padding: 8px;
+      font-size: 10pt;
+    }
+    .power-table th {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    .power-table td { text-align: left; }
+    .th-mayor { background: #f9a825; color: #333 !important; }
+    .th-arrow { background: #fff; color: #1a237e !important; width: 40px; text-align: center; font-size: 16pt; }
+    .th-council { background: #1a237e; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #c5cae9;
+      font-weight: bold;
+      color: #1a237e;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .matching-table th { background: #ffcdd2; color: #b71c1c; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .fill-line {
+      border-bottom: 1px solid #333;
+      display: inline-block;
+      min-width: 200px;
+      height: 1.2em;
+    }
+    .word-bank {
+      background: #fff8e1;
+      border: 2px dashed #f9a825;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .word-bank strong { color: #e65100; }
+    .venn-container {
+      position: relative;
+      height: 320px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .venn-circle {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 3px solid;
+      top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9pt;
+    }
+    .venn-left {
+      left: 20px;
+      border-color: #f9a825;
+      background: rgba(249,168,37,0.1);
+    }
+    .venn-right {
+      right: 20px;
+      border-color: #1a237e;
+      background: rgba(26,35,126,0.1);
+    }
+    .venn-label {
+      position: absolute;
+      font-weight: bold;
+      font-size: 13pt;
+      top: -5px;
+    }
+    .venn-label-left { left: 100px; color: #e65100; }
+    .venn-label-right { right: 100px; color: #1a237e; }
+    .venn-label-both { left: 50%; transform: translateX(-50%); color: #b71c1c; top: -5px; position: absolute; }
+    .venn-lines {
+      position: absolute;
+      top: 40px;
+    }
+    .venn-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 26px;
+      margin: 0;
+      width: 110px;
+    }
+    .venn-lines-left { left: 35px; }
+    .venn-lines-right { right: 35px; }
+    .venn-lines-center { left: 50%; transform: translateX(-50%); }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .grade-section, .teacher-note, .activity-box, .scenario-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .hero-image img { max-height: 250px; }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🏛️ The City Council &amp; the Mayor 🏛️</h1>
+  <p class="subtitle">How They Work Together to Run Your City!</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 4th</span>
+    <span>⏱️ <strong>Duration:</strong> 60–90 minutes</span>
+    <span>🏛️ <strong>Subject:</strong> Social Studies — Civics &amp; Government</span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/city-council-meeting.png" alt="A diverse city council sitting around a curved desk with the mayor">
+    <div class="caption">A city council meeting — where big decisions are made for your community!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 Standards Alignment:</strong><br>
+    <strong>C3 Framework D2.Civ.1.3-5</strong> — Distinguish the responsibilities and powers of government officials at various levels<br>
+    <strong>C3 Framework D2.Civ.2.3-5</strong> — Explain how a democracy relies on people's responsible participation<br>
+    <strong>C3 Framework D2.Civ.6.3-5</strong> — Describe ways people can act to influence their local government<br>
+    <strong>C3 Framework D2.Civ.3.3-5</strong> — Examine the origins and purposes of rules, laws, and key U.S. constitutional provisions
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> city council, council member, district, ward, at-large, ordinance, majority vote, checks and balances, budget, public hearing, strong mayor, weak mayor
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>In our last lesson, we learned all about <strong>mayors</strong> — the leaders of our cities. But here's something really important: <em>the mayor doesn't run the city alone!</em> There's a whole <strong>team</strong> called the <strong>City Council</strong> that works with the mayor. Think of it like this: the mayor is the captain of the team, but the council members are the other players. You need EVERYONE working together to win! 🏆</p>
+
+  <h2>🤔 What IS a City Council?</h2>
+
+  <div class="procedure-step">
+    <strong>🏫 Classroom Analogy — Let's Make It Simple!</strong><br><br>
+    Imagine your school is a city. Now picture this:<br><br>
+    👑 The <strong>Class President</strong> = the <strong>Mayor</strong> (one leader for the whole school)<br>
+    🙋 The <strong>Class Representatives</strong> = the <strong>City Council</strong> (one person from each classroom who speaks for their classmates)<br>
+    📋 The <strong>School Rules</strong> = <strong>City Laws</strong> (called ordinances)<br>
+    🧒 The <strong>Students</strong> = the <strong>Citizens</strong> (that's you!)<br><br>
+    The class president can't just make rules all by themselves. They have to talk to the class representatives, and the representatives <strong>vote</strong> on whether a new rule is a good idea. If MOST of them agree, the rule passes! 🗳️
+  </div>
+
+  <p>A <strong>City Council</strong> is a group of people — usually between <strong>5 and 15 members</strong> — who are elected by the people of the city to make important decisions together. They meet regularly (usually every week or two) to discuss problems, hear from citizens, and <strong>vote</strong> on new rules and plans for the city.</p>
+
+  <div class="tip-box">
+    🌟 <strong>Key Point:</strong> The city council is a <strong>GROUP</strong> that makes decisions <strong>TOGETHER</strong> by voting. No single council member can make a decision alone — they need a <strong>majority</strong> (more than half) to agree! That's what makes it fair.
+  </div>
+
+  <h2>🗳️ How Are Council Members Elected?</h2>
+
+  <div class="hero-image">
+    <img src="images/city-districts.png" alt="A city divided into colorful districts">
+    <div class="caption">Cities are often divided into districts — like puzzle pieces! Each district picks one council member.</div>
+  </div>
+
+  <p>This is where it gets interesting! There are <strong>two main ways</strong> cities choose their council members:</p>
+
+  <h3>🍕 Way #1: Districts (or Wards)</h3>
+  <div class="procedure-step">
+    <strong>Think of it like a pizza!</strong> 🍕<br><br>
+    Imagine your city is a big pizza. Now cut it into <strong>slices</strong> — maybe 5, 7, or 9 slices. Each slice is called a <strong>district</strong> (some cities call them <strong>wards</strong>).<br><br>
+    Each slice/district gets to pick <strong>ONE person</strong> to represent them on the city council. So if you live in District 3, you only vote for the person who will represent District 3. Your neighbor in District 4 votes for a different person!<br><br>
+    <strong>Why is this good?</strong> Every neighborhood has someone who speaks for THEM specifically. If your part of town needs a new stoplight, YOUR council member fights for it!
+  </div>
+
+  <h3>🌐 Way #2: At-Large Elections</h3>
+  <div class="procedure-step">
+    <strong>Think of it like a school-wide vote!</strong><br><br>
+    In some cities, there are NO districts. Instead, <strong>everyone in the whole city</strong> votes for ALL the council members. It's like if the entire school voted for every single class representative — not just their own classroom's representative.<br><br>
+    <strong>Why is this good?</strong> Council members care about the WHOLE city, not just one neighborhood.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Fun Fact:</strong> Some cities use BOTH methods! They might have 5 council members from districts AND 2 members elected at-large. Every city gets to decide for itself! 🏙️
+  </div>
+
+  <h3>📋 Who Can Run for Council?</h3>
+  <div class="procedure-step">
+    <strong>The rules are usually pretty simple:</strong>
+    <ul>
+      <li>You must be a <strong>citizen</strong> (live in the city)</li>
+      <li>You must be old enough (usually <strong>18 or older</strong>)</li>
+      <li>If it's a district election, you usually have to <strong>live in that district</strong></li>
+      <li>You sign up, collect signatures from neighbors who support you, and start campaigning!</li>
+    </ul>
+    <strong>Campaigns at the local level</strong> are usually much simpler than presidential campaigns. Council candidates might knock on doors, put up signs in yards, go to neighborhood meetings, and talk to people at the grocery store! It's very personal. 🤝
+  </div>
+
+  <div class="procedure-step">
+    <strong>⏰ How Long Do They Serve?</strong><br>
+    Most council members serve a <strong>term</strong> of <strong>2 or 4 years</strong>. After that, they can run again if they want to keep their seat. Some cities have <strong>term limits</strong> — meaning you can only serve a certain number of terms and then you have to let someone else have a turn!
+  </div>
+
+  <h2>🗳️ Mayor vs. Council: How Elections Are Different</h2>
+
+  <p>This is a <strong>really important</strong> difference, so let's make it super clear:</p>
+
+  <div style="text-align: center; margin: 20px 0;">
+    <div class="comparison-card card-mayor" style="width: 240px;">
+      <span class="emoji">👑</span>
+      <span class="name">Mayor Election</span>
+      <span class="detail">The WHOLE CITY votes for ONE person</span>
+      <div style="margin-top: 8px; font-size: 10pt; text-align: left;">
+        ✅ Everyone in the city votes<br>
+        ✅ Only ONE winner<br>
+        ✅ Represents the entire city
+      </div>
+    </div>
+    <div class="comparison-card card-council" style="width: 240px;">
+      <span class="emoji">🙋</span>
+      <span class="name">Council Election</span>
+      <span class="detail">Each DISTRICT picks its own person</span>
+      <div style="margin-top: 8px; font-size: 10pt; text-align: left;">
+        ✅ Only your district votes<br>
+        ✅ Multiple winners (one per district)<br>
+        ✅ Represents one neighborhood
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>🎯 Easy Way to Remember:</strong><br>
+    <strong>Mayor</strong> = Everyone picks ONE leader for the whole city (like choosing a class president — everyone votes!)<br>
+    <strong>Council</strong> = Each neighborhood picks their OWN representative (like each classroom picking one representative!)
+  </div>
+
+  <h2>📋 What Does the City Council DO?</h2>
+  <p>Council members have some really important jobs! Here are their main <strong>powers</strong>:</p>
+
+  <div class="procedure-step">
+    <strong>📜 1. Vote on New Laws (Ordinances)</strong><br>
+    When the city needs a new rule — like "no parking on Main Street during parades" — the council discusses it and <strong>votes</strong>. If the majority says YES, it becomes a law! These city laws are called <strong>ordinances</strong>.
+  </div>
+  <div class="procedure-step">
+    <strong>💰 2. Approve the City Budget</strong><br>
+    The city budget is like a giant allowance plan — it decides where ALL the city's money goes. New playground? More firefighters? Fix the library roof? The council votes on how to spend the money. This is one of their MOST powerful tools!
+  </div>
+  <div class="procedure-step">
+    <strong>👂 3. Listen to Residents (Public Meetings)</strong><br>
+    Council meetings are open to the public! Citizens can come, stand up, and tell the council what they think. Want a stop sign on your street? Go to a council meeting and ask! This is called a <strong>public hearing</strong>.
+  </div>
+  <div class="procedure-step">
+    <strong>✅❌ 4. Approve or Reject the Mayor's Plans</strong><br>
+    When the mayor has a big idea — like building a new community center — they can't just DO it. They have to present the idea to the council, and the council votes on whether to approve it. The council is like a <strong>checkpoint</strong>!
+  </div>
+  <div class="procedure-step">
+    <strong>🔍 5. Oversee City Departments</strong><br>
+    The council keeps an eye on how the city's departments (police, fire, parks, etc.) are doing. They ask questions, review reports, and make sure everything is running smoothly.
+  </div>
+
+  <h2>⚖️ Mayor vs. Council — Who Has the Power?</h2>
+  <p>This is the <strong>KEY</strong> part! The mayor and council have <em>different</em> powers, and they <strong>check</strong> each other — just like the national government has checks and balances! ⚖️</p>
+
+  <table class="power-table">
+    <tr>
+      <th class="th-mayor" style="width: 40%;">👑 The MAYOR...</th>
+      <th class="th-arrow">⇄</th>
+      <th class="th-council" style="width: 40%;">🏛️ The COUNCIL...</th>
+    </tr>
+    <tr>
+      <td style="background:#fff8e1;"><strong>Proposes</strong> new ideas and plans</td>
+      <td style="text-align:center; background:#f5f5f5;">→</td>
+      <td style="background:#e8eaf6;"><strong>Approves or rejects</strong> those plans by voting</td>
+    </tr>
+    <tr>
+      <td style="background:#fff8e1;"><strong>Runs</strong> the city day-to-day (like a manager)</td>
+      <td style="text-align:center; background:#f5f5f5;">→</td>
+      <td style="background:#e8eaf6;"><strong>Sets the rules</strong> the city has to follow</td>
+    </tr>
+    <tr>
+      <td style="background:#fff8e1;"><strong>Hires</strong> department heads (police chief, fire chief)</td>
+      <td style="text-align:center; background:#f5f5f5;">→</td>
+      <td style="background:#e8eaf6;"><strong>Controls the budget</strong> (decides where money goes)</td>
+    </tr>
+    <tr>
+      <td style="background:#fff8e1;"><strong>Speaks</strong> for the city publicly</td>
+      <td style="text-align:center; background:#f5f5f5;">→</td>
+      <td style="background:#e8eaf6;"><strong>Listens</strong> to what residents want</td>
+    </tr>
+    <tr>
+      <td style="background:#fff8e1;"><strong>Can veto</strong> (say NO to) council decisions in some cities</td>
+      <td style="text-align:center; background:#f5f5f5;">→</td>
+      <td style="background:#e8eaf6;"><strong>Can override</strong> the veto with enough votes!</td>
+    </tr>
+  </table>
+
+  <div class="tip-box">
+    ⚖️ <strong>Checks &amp; Balances at the City Level!</strong> Neither the mayor NOR the council has ALL the power. They have to work together. If the mayor goes too far, the council can stop them. If the council makes a bad rule, the mayor can veto it. It's designed so no one person or group gets too much power!
+  </div>
+
+  <h3>🔑 Strong Mayor vs. Weak Mayor — It Depends on the City!</h3>
+  <div class="procedure-step">
+    <strong>Not all mayors have the same amount of power!</strong> It depends on the city's rules (called a <strong>charter</strong>).<br><br>
+    <strong>💪 "Strong Mayor" cities:</strong> The mayor has MORE power — they can hire and fire department heads, create the budget, and sometimes veto council votes. They're more like a boss. (Examples: New York City, Chicago)<br><br>
+    <strong>🤝 "Weak Mayor" cities:</strong> The mayor has LESS individual power — the council makes most of the big decisions, and the mayor is more like a team captain who leads meetings but shares power equally. Sometimes there's also a <strong>city manager</strong> who handles daily operations.<br><br>
+    <strong>Neither system is better or worse — they're just different!</strong> Each city picks the system that works best for them. 🏙️
+  </div>
+
+  <h2>🤝 How Do They Work TOGETHER?</h2>
+
+  <div class="hero-image">
+    <img src="images/mayor-council-teamwork.png" alt="Mayor and council working together as a team">
+    <div class="caption">Teamwork makes the dream work — the mayor and council need each other!</div>
+  </div>
+
+  <p>Let's walk through a <strong>real example</strong> of how the mayor and council work together. Let's say the kids in the city want a <strong>new playground!</strong> 🛝</p>
+
+  <div class="flow-step" style="background: #fff8e1; border-color: #f9a825;">
+    <strong>Step 1:</strong> 👑 The <strong>Mayor</strong> has an idea: "Let's build a new playground in Oak Park!"
+  </div>
+  <div class="flow-arrow">⬇️</div>
+  <div class="flow-step" style="background: #e8eaf6;">
+    <strong>Step 2:</strong> 🏛️ The Mayor <strong>presents the plan</strong> to the City Council at a meeting
+  </div>
+  <div class="flow-arrow">⬇️</div>
+  <div class="flow-step" style="background: #e8f5e9; border-color: #66bb6a;">
+    <strong>Step 3:</strong> 👂 The Council holds a <strong>public hearing</strong> — citizens come and share their thoughts! "We love it!" "Can it have swings?" "How much will it cost?"
+  </div>
+  <div class="flow-arrow">⬇️</div>
+  <div class="flow-step" style="background: #e8eaf6;">
+    <strong>Step 4:</strong> 🗣️ Council members <strong>discuss and debate</strong>: "Is there enough money in the budget?" "Is Oak Park the best location?"
+  </div>
+  <div class="flow-arrow">⬇️</div>
+  <div class="flow-step" style="background: #fce4ec; border-color: #b71c1c;">
+    <strong>Step 5:</strong> 🗳️ The Council <strong>VOTES!</strong> If the majority (more than half) say YES...
+  </div>
+  <div class="flow-arrow">⬇️</div>
+  <div class="flow-step" style="background: #fff8e1; border-color: #f9a825;">
+    <strong>Step 6:</strong> ✅ It's approved! The <strong>Mayor</strong> works with city departments to actually BUILD the playground! 🎉
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Notice:</strong> The Mayor had the idea AND does the building — but the Council had to say YES first. And citizens got to share their opinions too! That's democracy at work at the local level! 🇺🇸
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="grade-section grade-4">
+    <div class="grade-label">🔵 4th Grade Discussion</div>
+    <ul>
+      <li>Why is it important that the mayor can't just make decisions alone?</li>
+      <li>If you were a council member, what's the first thing you'd want to vote on?</li>
+      <li>What are the advantages of districts? What about at-large elections?</li>
+      <li>Why do you think public hearings are important? What if citizens never got to speak?</li>
+      <li>Would you rather be the mayor or a council member? Why?</li>
+      <li>How is the mayor-council relationship similar to checks and balances in the national government?</li>
+      <li>Why might a city choose a "strong mayor" system? Why might another choose a "weak mayor" system?</li>
+    </ul>
+  </div>
+
+  <h2>🎭 Fun Activity: City Council Meeting Role-Play!</h2>
+  <div class="activity-box">
+    <h3>🗳️ Run Your Own Council Meeting!</h3>
+    <p><strong>How to play:</strong></p>
+    <ol>
+      <li>Pick <strong>one student</strong> to be the <strong>Mayor</strong></li>
+      <li>Pick <strong>5–7 students</strong> to be <strong>Council Members</strong></li>
+      <li>The rest of the class are <strong>Citizens</strong> who can speak during public comment</li>
+      <li>Cut out one of the <strong>Scenario Cards</strong> below</li>
+      <li>The Mayor presents the idea → Citizens share opinions → Council discusses → Council VOTES!</li>
+      <li>Majority wins! Count the votes!</li>
+    </ol>
+  </div>
+
+  <h3>✂️ Scenario Cards (Cut These Out!)</h3>
+
+  <div class="scenario-card">
+    <strong>🛝 Scenario #1: The New Playground</strong><br>
+    The mayor wants to spend $50,000 to build a brand-new playground in Riverside Park. Some citizens think the money should be used to fix potholes on Main Street instead. <em>What does the council decide?</em>
+  </div>
+
+  <div class="scenario-card">
+    <strong>🐕 Scenario #2: The Dog Park Debate</strong><br>
+    Citizens are asking for an off-leash dog park in the empty lot on Elm Street. But some neighbors are worried about noise and mess. The mayor supports the idea. <em>Does the council approve it? With any conditions?</em>
+  </div>
+
+  <div class="scenario-card">
+    <strong>🚗 Scenario #3: The Speed Limit Change</strong><br>
+    Parents near Oakwood Elementary want the speed limit on School Street lowered from 30 mph to 15 mph during school hours. Some business owners say it will cause traffic jams. <em>How does the council vote?</em>
+  </div>
+
+  <div class="scenario-card">
+    <strong>📚 Scenario #4: Save the Library!</strong><br>
+    The city is running low on money. The mayor says the city might need to close the library on Saturdays to save $20,000. The librarian and many families say Saturday is the busiest day. <em>Can the council find another solution?</em>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔎 <strong>Research Your Council:</strong> Find out how many council members YOUR city has! What are their names? What district do they represent?</li>
+      <li>📺 <strong>Watch a Real Meeting:</strong> Many cities stream their council meetings online. Watch 10 minutes of one — what did they discuss?</li>
+      <li>✉️ <strong>Write to Your Council Member:</strong> Write a letter about something you'd like to see changed in your neighborhood!</li>
+      <li>📊 <strong>Compare Two Cities:</strong> Pick two cities and compare their government structures. How many council members? Strong or weak mayor? Districts or at-large?</li>
+      <li>🗺️ <strong>Draw a District Map:</strong> Draw a map of your city and divide it into districts. How would you make the districts fair?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is a follow-up</strong> to the "Who Runs Your City? — All About Mayors!" worksheet. Students should have that foundation before starting this lesson.</li>
+      <li><strong>The #1 confusion point:</strong> Students struggle with the idea that the mayor can't just "do things" — they need council approval. The playground flowchart is designed to make this click. Walk through it step by step!</li>
+      <li><strong>For the role-play:</strong> Give students 15–20 minutes. The Mayor should practice presenting, council members should ask questions, and citizens should advocate for their position. Rotate roles if time allows!</li>
+      <li><strong>District vs. at-large:</strong> The pizza analogy works really well. Actually draw a circle on the board, divide it into slices, and label each one. Then contrast it with "the whole pizza votes together."</li>
+      <li><strong>⚠️ Common misconception:</strong> Students often think council members are appointed or hired. Emphasize they are ELECTED — people vote for them, just like the mayor!</li>
+      <li><strong>Strong vs. weak mayor:</strong> Keep this simple. Don't get into council-manager systems in depth — just plant the seed that not all cities work the same way.</li>
+      <li><strong>Keep it nonpartisan:</strong> Focus on the STRUCTURE and PROCESS, not specific political issues or parties.</li>
+      <li><strong>Assessment:</strong> The worksheet pages (Venn diagram, fill-in-the-blank, true/false, matching, and short answer) provide thorough formative assessment.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== WORKSHEET PAGE 1: VENN DIAGRAM ====================== -->
+  <div class="page-break">
+
+    <h1>🏛️ Mayor vs. City Council — Venn Diagram 🏛️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <p style="text-align: center; font-style: italic;">Write things that are UNIQUE to each in the outer sections. Write things they SHARE in the middle!</p>
+
+    <div style="margin: 30px auto; max-width: 650px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+        <strong style="color: #e65100; font-size: 14pt; margin-left: 60px;">👑 Mayor Only</strong>
+        <strong style="color: #b71c1c; font-size: 14pt;">Both ⚖️</strong>
+        <strong style="color: #1a237e; font-size: 14pt; margin-right: 40px;">🏛️ Council Only</strong>
+      </div>
+
+      <svg viewBox="0 0 650 340" style="width: 100%; height: auto;">
+        <!-- Left circle -->
+        <ellipse cx="220" cy="170" rx="200" ry="155" fill="rgba(249,168,37,0.12)" stroke="#f9a825" stroke-width="3"/>
+        <!-- Right circle -->
+        <ellipse cx="430" cy="170" rx="200" ry="155" fill="rgba(26,35,126,0.12)" stroke="#1a237e" stroke-width="3"/>
+        <!-- Lines in left section -->
+        <line x1="50" y1="80" x2="190" y2="80" stroke="#bbb" stroke-width="1"/>
+        <line x1="40" y1="110" x2="200" y2="110" stroke="#bbb" stroke-width="1"/>
+        <line x1="30" y1="140" x2="205" y2="140" stroke="#bbb" stroke-width="1"/>
+        <line x1="25" y1="170" x2="210" y2="170" stroke="#bbb" stroke-width="1"/>
+        <line x1="30" y1="200" x2="205" y2="200" stroke="#bbb" stroke-width="1"/>
+        <line x1="40" y1="230" x2="200" y2="230" stroke="#bbb" stroke-width="1"/>
+        <line x1="50" y1="260" x2="190" y2="260" stroke="#bbb" stroke-width="1"/>
+        <!-- Lines in center -->
+        <line x1="270" y1="80" x2="380" y2="80" stroke="#bbb" stroke-width="1"/>
+        <line x1="260" y1="110" x2="390" y2="110" stroke="#bbb" stroke-width="1"/>
+        <line x1="255" y1="140" x2="395" y2="140" stroke="#bbb" stroke-width="1"/>
+        <line x1="250" y1="170" x2="400" y2="170" stroke="#bbb" stroke-width="1"/>
+        <line x1="255" y1="200" x2="395" y2="200" stroke="#bbb" stroke-width="1"/>
+        <line x1="260" y1="230" x2="390" y2="230" stroke="#bbb" stroke-width="1"/>
+        <line x1="270" y1="260" x2="380" y2="260" stroke="#bbb" stroke-width="1"/>
+        <!-- Lines in right section -->
+        <line x1="460" y1="80" x2="600" y2="80" stroke="#bbb" stroke-width="1"/>
+        <line x1="450" y1="110" x2="610" y2="110" stroke="#bbb" stroke-width="1"/>
+        <line x1="445" y1="140" x2="620" y2="140" stroke="#bbb" stroke-width="1"/>
+        <line x1="440" y1="170" x2="625" y2="170" stroke="#bbb" stroke-width="1"/>
+        <line x1="445" y1="200" x2="620" y2="200" stroke="#bbb" stroke-width="1"/>
+        <line x1="450" y1="230" x2="610" y2="230" stroke="#bbb" stroke-width="1"/>
+        <line x1="460" y1="260" x2="600" y2="260" stroke="#bbb" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="tip-box">
+      💡 <strong>Hints:</strong> Think about — Who runs things day-to-day? Who votes on laws? Who controls the budget? Who hires people? Who speaks for the city? Who listens at public meetings? What do they BOTH do?
+    </div>
+
+  </div>
+
+  <!-- ====================== WORKSHEET PAGE 2: FILL IN THE BLANK ====================== -->
+  <div class="page-break">
+
+    <h1>🏛️ City Council Worksheet — Fill in the Blank 🏛️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <div class="word-bank">
+      <strong>Word Bank:</strong> &nbsp; city council &nbsp; | &nbsp; districts &nbsp; | &nbsp; ordinances &nbsp; | &nbsp; majority &nbsp; | &nbsp; budget &nbsp; | &nbsp; public hearing &nbsp; | &nbsp; at-large &nbsp; | &nbsp; veto &nbsp; | &nbsp; elected &nbsp; | &nbsp; checks and balances &nbsp; | &nbsp; strong mayor &nbsp; | &nbsp; council members
+    </div>
+
+    <div class="question-box">
+      <strong>1.</strong> The group of people who work with the mayor to make decisions for the city is called the <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>2.</strong> City council members are <span class="fill-line">&nbsp;</span> by the people — citizens vote to choose them.<br><br>
+      <strong>3.</strong> When a city is divided into sections, and each section picks one council member, those sections are called <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>4.</strong> When EVERYONE in the whole city votes for council members (not just one neighborhood), that's called an <span class="fill-line">&nbsp;</span> election.<br><br>
+      <strong>5.</strong> City laws are called <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>6.</strong> The plan for how the city spends its money is called the <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>7.</strong> When citizens come to a council meeting to share their opinions, it's called a <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>8.</strong> For a vote to pass, more than half of the council must agree. This is called a <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>9.</strong> In some cities, the mayor can say NO to a council decision. This is called a <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>10.</strong> The system where the mayor and council limit each other's power is called <span class="fill-line">&nbsp;</span>.<br><br>
+      <strong>11.</strong> In a <span class="fill-line">&nbsp;</span> system, the mayor has more individual power, like hiring department heads and creating the budget.<br><br>
+      <strong>12.</strong> The people who represent specific neighborhoods or districts on the council are called <span class="fill-line">&nbsp;</span>.
+    </div>
+
+  </div>
+
+  <!-- ====================== WORKSHEET PAGE 3: TRUE OR FALSE + MATCHING ====================== -->
+  <div class="page-break">
+
+    <h1>🏛️ True or False &amp; Matching 🏛️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>✅❌ True or False?</h3>
+    <p><em>Write T (True) or F (False) next to each statement.</em></p>
+
+    <div class="question-box">
+      <strong>_____ 1.</strong> The city council is just one person who helps the mayor.<br><br>
+      <strong>_____ 2.</strong> Council members are elected by the people, just like the mayor.<br><br>
+      <strong>_____ 3.</strong> In a district election, everyone in the whole city votes for the same council member.<br><br>
+      <strong>_____ 4.</strong> The city council votes on new laws called ordinances.<br><br>
+      <strong>_____ 5.</strong> The mayor can spend the city's money however they want without the council's approval.<br><br>
+      <strong>_____ 6.</strong> Citizens can attend public hearings to share their opinions with the council.<br><br>
+      <strong>_____ 7.</strong> Every city in the United States gives the mayor the exact same amount of power.<br><br>
+      <strong>_____ 8.</strong> A majority vote means more than half of the council members must agree.
+    </div>
+
+    <h3 style="margin-top: 24px;">🔗 Matching — Who Has the Power?</h3>
+    <p><em>Write <strong>M</strong> (Mayor), <strong>C</strong> (Council), or <strong>B</strong> (Both) next to each power.</em></p>
+
+    <table class="data-table matching-table">
+      <tr>
+        <th style="width: 75%; text-align: left; padding-left: 15px;">Power / Responsibility</th>
+        <th style="width: 25%;">M, C, or B?</th>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Runs the city's day-to-day operations</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Votes on new ordinances (city laws)</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Approves the city budget</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Speaks for the city at events and in the news</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Listens to citizens at public hearings</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Hires department heads (police chief, fire chief)</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Can veto (say NO to) a decision</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Works to make the city a better place</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Is elected by the people</td>
+        <td style="background: white;"></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; font-weight: normal; background: white;">Proposes new plans and projects</td>
+        <td style="background: white;"></td>
+      </tr>
+    </table>
+
+  </div>
+
+  <!-- ====================== WORKSHEET PAGE 4: SHORT ANSWER ====================== -->
+  <div class="page-break">
+
+    <h1>🏛️ Short Answer Questions 🏛️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <div class="question-box">
+      <strong>1. A resident wants a stop sign on their street. Describe ALL the steps from idea to reality, including both the mayor and the city council.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. Explain the difference between how a mayor is elected and how council members are elected (in a district system). Use the pizza analogy if it helps!</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. Why is it important to have BOTH a mayor AND a city council? Why not just have the mayor make all the decisions?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>4. What is the difference between a "strong mayor" city and a "weak mayor" city? Which one gives the council more power?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>5. Imagine you are a council member. The mayor wants to close the community pool to save money. You disagree. What can you do?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+
+    <div class="teacher-note" style="background: #f0f0f0; border: 3px dashed #999; padding: 20px;">
+      <h1 style="text-align: center; color: #555; font-size: 18pt; border-bottom: 2px dashed #999; padding-bottom: 10px;">✂️ PARENT ANSWER KEY</h1>
+      <p style="text-align: center; font-style: italic; color: #888; font-size: 11pt;">Detach before giving worksheet to students</p>
+
+      <h3 style="color: #333; border-color: #999;">📝 Fill in the Blank — Answers</h3>
+      <ol style="font-size: 11pt; color: #333;">
+        <li><strong>city council</strong></li>
+        <li><strong>elected</strong></li>
+        <li><strong>districts</strong></li>
+        <li><strong>at-large</strong></li>
+        <li><strong>ordinances</strong></li>
+        <li><strong>budget</strong></li>
+        <li><strong>public hearing</strong></li>
+        <li><strong>majority</strong></li>
+        <li><strong>veto</strong></li>
+        <li><strong>checks and balances</strong></li>
+        <li><strong>strong mayor</strong></li>
+        <li><strong>council members</strong></li>
+      </ol>
+
+      <h3 style="color: #333; border-color: #999;">✅❌ True or False — Answers</h3>
+      <ol style="font-size: 11pt; color: #333;">
+        <li><strong>F</strong> — The city council is a GROUP of people, not just one.</li>
+        <li><strong>T</strong></li>
+        <li><strong>F</strong> — In a district election, only people in THAT district vote for their council member.</li>
+        <li><strong>T</strong></li>
+        <li><strong>F</strong> — The mayor needs the council's approval for the budget.</li>
+        <li><strong>T</strong></li>
+        <li><strong>F</strong> — Different cities give the mayor different amounts of power (strong mayor vs. weak mayor systems).</li>
+        <li><strong>T</strong></li>
+      </ol>
+
+      <h3 style="color: #333; border-color: #999;">🔗 Matching — Who Has the Power?</h3>
+      <ul style="font-size: 11pt; color: #333; list-style: none; padding-left: 10px;">
+        <li>Runs the city's day-to-day operations → <strong>M</strong> (Mayor)</li>
+        <li>Votes on new ordinances → <strong>C</strong> (Council)</li>
+        <li>Approves the city budget → <strong>B</strong> (Both — mayor proposes, council approves)</li>
+        <li>Speaks for the city at events → <strong>M</strong> (Mayor)</li>
+        <li>Listens to citizens at public hearings → <strong>B</strong> (Both)</li>
+        <li>Hires department heads → <strong>M</strong> (Mayor — in strong mayor systems)</li>
+        <li>Can veto a decision → <strong>M</strong> (Mayor)</li>
+        <li>Works to make the city a better place → <strong>B</strong> (Both!)</li>
+        <li>Is elected by the people → <strong>B</strong> (Both)</li>
+        <li>Proposes new plans and projects → <strong>B</strong> (Both can propose)</li>
+      </ul>
+
+      <h3 style="color: #333; border-color: #999;">🤔 Short Answer — Example Responses</h3>
+      <p style="font-size: 10pt; color: #888; font-style: italic;">Accept any reasonable response that shows understanding!</p>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>1. Steps from idea to stop sign:</strong><br>
+        <em>The resident attends a public hearing or contacts their council member. The council member brings the idea to a council meeting. The council discusses it and votes. If a majority says yes, the mayor signs it (or can veto). If approved, the city's transportation department installs the stop sign.</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>2. Mayor vs. council member elections:</strong><br>
+        <em>The mayor is elected by EVERYONE in the whole city — all citizens vote for the same person. In a district system, the city is divided into sections (like slices of pizza), and only people in each section vote for their own council member. So the mayor represents the whole city, while a council member represents their neighborhood.</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>3. Why both a mayor AND a council?</strong><br>
+        <em>Having both prevents one person from having too much power (checks and balances). The council makes sure different neighborhoods are represented. If the mayor makes a bad decision, the council can vote against it. It's like having teammates — more perspectives lead to better decisions for everyone.</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>4. Strong mayor vs. weak mayor:</strong><br>
+        <em>In a strong mayor city, the mayor has more power — they can hire/fire department heads, create the budget, and veto council decisions. In a weak mayor city, the council has more power and the mayor is more of a figurehead. The "weak mayor" system gives the council more power.</em>
+      </div>
+
+      <div style="margin: 10px 0; padding: 8px 12px; background: #e8e8e8; border-radius: 6px;">
+        <strong>5. Disagreeing with the mayor about the pool:</strong><br>
+        <em>As a council member, you could: speak against it at the council meeting, vote NO, rally other council members to vote no too (you need a majority), hold a public hearing so citizens can share their opinions, or propose an alternative (like reducing pool hours instead of closing it entirely).</em>
+      </div>
+    </div>
+
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

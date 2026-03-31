@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balanced & Unbalanced Forces, Friction, and Newton's Laws — 5th Grade</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #0984E3;
+      padding-bottom: 10px;
+      color: #0984E3;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #E8F4FD;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #74B9FF;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #0984E3;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0652DD;
+      border-bottom: 2px solid #74B9FF;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 64pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #E8F4FD;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #0984E3;
+    }
+    .procedure-step strong { color: #0652DD; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .vocab-table th {
+      background: #0984E3;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .vocab-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    .vocab-table tr:nth-child(even) { background: #E8F4FD; }
+    .vocab-table td:first-child { font-weight: bold; color: #0652DD; white-space: nowrap; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #74B9FF;
+      font-weight: bold;
+      color: #0652DD;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #E8F4FD; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .science-concept {
+      background: #E8F4FD;
+      border: 2px solid #74B9FF;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+    }
+    .science-concept h3 { margin-top: 0; }
+    .diagram-box {
+      text-align: center;
+      background: white;
+      border: 2px solid #0984E3;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px 0;
+    }
+    .force-arrow-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 12px 0;
+    }
+    .force-label {
+      background: #E8F4FD;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 10pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .science-concept {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚖️ The Force Is With You ⚖️</h1>
+  <p class="subtitle">Physical Science — Balanced &amp; Unbalanced Forces, Friction, and Newton's Laws</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">⚖️ 📦 💨</div>
+    <div class="caption">Forces are everywhere — balanced, unbalanced, and always following Newton's rules.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>5-PS2-1</strong> — Support an argument that the gravitational force exerted by Earth on objects is directed down<br>
+    <strong>3-PS2-1</strong> — Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object<br>
+    <strong>3-PS2-2</strong> — Make observations and/or measurements of an object's motion to provide evidence that a pattern can be used to predict future motion
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Every time something moves, speeds up, slows down, or changes direction, <strong>forces</strong> are at work. When forces on an object are <em>balanced</em>, nothing changes — the object stays still or keeps moving at the same speed. When forces are <em>unbalanced</em>, the object accelerates. In this lesson, you'll investigate balanced and unbalanced forces, explore how friction affects motion on different surfaces, and discover the three laws that Sir Isaac Newton figured out over 300 years ago.</p>
+
+  <h2>🔬 The Science</h2>
+
+  <div class="science-concept">
+    <h3>⚖️ Balanced vs. Unbalanced Forces</h3>
+    <p>A <strong>force</strong> is a push or a pull. Forces have two important properties: <em>strength</em> (how hard) and <em>direction</em> (which way). When two or more forces act on an object, we look at the <strong>net force</strong> — the combined result of all forces together.</p>
+    <ul>
+      <li><strong>Balanced forces:</strong> Forces that are equal in strength but opposite in direction. They cancel each other out, and the net force is zero. A book sitting on a table has balanced forces — gravity pulls it down, and the table pushes it up with equal force.</li>
+      <li><strong>Unbalanced forces:</strong> Forces that don't cancel out. There's a net force in one direction, and the object accelerates (speeds up, slows down, or changes direction). Kicking a soccer ball creates an unbalanced force — your foot pushes harder than air resistance pushes back.</li>
+    </ul>
+  </div>
+
+  <div class="science-concept">
+    <h3>🛑 Friction: The Force That Slows Things Down</h3>
+    <p><strong>Friction</strong> is a force that opposes motion when two surfaces rub against each other. It always pushes in the <em>opposite</em> direction of movement. Friction depends on two things: the types of surfaces touching and how hard they're pressed together.</p>
+    <ul>
+      <li><strong>Static friction:</strong> Keeps a stationary object from starting to move. It's why a book doesn't slide off a tilted desk until the tilt is steep enough.</li>
+      <li><strong>Sliding (kinetic) friction:</strong> Acts on an object that's already moving across a surface. Sliding friction is usually weaker than static friction.</li>
+      <li><strong>Rolling friction:</strong> Acts on wheels and balls rolling across a surface. Rolling friction is much less than sliding friction — that's why wheels were such a big invention.</li>
+    </ul>
+    <p>Rough surfaces (like sandpaper or carpet) create more friction. Smooth surfaces (like tile or ice) create less friction.</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>🍎 Newton's Three Laws of Motion</h3>
+    <p>Sir Isaac Newton described three laws that explain how forces and motion work. These laws apply to everything — from a sliding book to a orbiting planet.</p>
+
+    <p><strong>Newton's First Law (The Law of Inertia):</strong> An object at rest stays at rest, and an object in motion stays in motion at the same speed and direction, <em>unless</em> an unbalanced force acts on it. This is why you lurch forward when a car brakes suddenly — your body wants to keep moving.</p>
+
+    <p><strong>Newton's Second Law (Force = Mass × Acceleration):</strong> The acceleration of an object depends on the net force acting on it and its mass. More force means more acceleration. More mass means less acceleration. A bowling ball is harder to push than a tennis ball because it has more mass.</p>
+
+    <p><strong>Newton's Third Law (Action and Reaction):</strong> For every action, there is an equal and opposite reaction. When you push against a wall, the wall pushes back on you with the same force. When you jump, your feet push the ground down and the ground pushes you up.</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>⬇️ Gravity: Always Pulling Down</h3>
+    <p>Gravity is a force that pulls objects toward the center of the Earth. It acts on <em>every</em> object with mass, and it always pulls <em>straight down</em>. Gravity is why things fall when you drop them, why you stay on the ground instead of floating away, and why a ball thrown upward always comes back down. The force of gravity on an object is called its <strong>weight</strong>.</p>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary</strong>
+    <table class="vocab-table">
+      <tr><th>Term</th><th>Definition</th></tr>
+      <tr><td>Force</td><td>A push or a pull that can change an object's motion</td></tr>
+      <tr><td>Net force</td><td>The combined result of all forces acting on an object</td></tr>
+      <tr><td>Balanced forces</td><td>Equal forces acting in opposite directions; net force is zero</td></tr>
+      <tr><td>Unbalanced forces</td><td>Unequal forces that result in a net force; cause acceleration</td></tr>
+      <tr><td>Friction</td><td>A force that opposes motion between two surfaces in contact</td></tr>
+      <tr><td>Static friction</td><td>Friction that keeps a still object from starting to move</td></tr>
+      <tr><td>Kinetic friction</td><td>Friction acting on an object already in motion (sliding friction)</td></tr>
+      <tr><td>Gravity</td><td>A force that pulls objects toward the center of the Earth</td></tr>
+      <tr><td>Inertia</td><td>An object's tendency to resist changes in its motion</td></tr>
+      <tr><td>Acceleration</td><td>A change in speed or direction of motion</td></tr>
+    </table>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>1 hardcover book (medium weight, like a textbook)</li>
+      <li>1 large rubber band (or a loop of string)</li>
+      <li>1 ruler or measuring tape</li>
+      <li>4–5 different surfaces to test (examples below):
+        <ul>
+          <li>Tile or hardwood floor</li>
+          <li>Carpet or a rug</li>
+          <li>A towel laid flat</li>
+          <li>Aluminum foil (taped flat to a table)</li>
+          <li>Sandpaper (if available)</li>
+        </ul>
+      </li>
+      <li>1 spring scale or rubber band "scale" (see setup below)</li>
+      <li>A few small objects for force demos: a toy car, a ball, a coin</li>
+      <li>Pencil and printed Student Worksheet</li>
+    </ul>
+
+    <h3>🧰 Optional / Nice to Have</h3>
+    <ul>
+      <li>Kitchen scale (to weigh the book)</li>
+      <li>Stopwatch or phone timer</li>
+      <li>Additional books for stacking (to test weight and friction)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Balanced and Unbalanced Forces Demo (5 min)</strong><br>
+    Place a book on a table. Ask: "Is this book moving? What forces are acting on it?" (Gravity pulls it down; the table pushes it up. These forces are balanced — net force is zero.) Now push the book gently. Ask: "What changed?" (You added an unbalanced force. The push was stronger than friction, so the book moved.) Stop pushing. Ask: "Why did the book stop?" (Friction was an unbalanced force acting against the motion.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Newton's First Law in Action (5 min)</strong><br>
+    Stack a coin on top of an index card on top of a cup. Flick the card quickly sideways. The coin drops straight into the cup. Ask: "Why didn't the coin fly sideways with the card?" (Inertia — the coin was at rest and wanted to stay at rest. The card was pulled away so fast that friction between the card and coin wasn't strong enough to move the coin sideways. Gravity then pulled it straight down into the cup.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Build Your Friction Tester (5 min)</strong><br>
+    Loop a rubber band around the front cover of a hardcover book. Hook the rubber band over a pencil or ruler so you can pull the book by stretching the rubber band. The more the rubber band stretches, the more force you're using to overcome friction. (If you have a spring scale, attach it to the book with string instead — this gives a direct force reading.)
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>No spring scale?</strong> Use the rubber band method: mark the rubber band's resting length on a piece of tape. When you pull the book, measure how far the rubber band stretches. More stretch = more force needed = more friction.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Friction Experiment: Testing Surfaces (15–20 min)</strong><br>
+    Place the book on each surface, one at a time. Pull the book slowly and steadily using the rubber band or spring scale. Record how much force (rubber band stretch or spring scale reading) it takes to:
+    <ul>
+      <li><strong>Start</strong> the book moving (static friction)</li>
+      <li><strong>Keep</strong> the book moving at a steady pace (kinetic friction)</li>
+    </ul>
+    Test each surface at least two times and calculate the average. Record all data on the Student Worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Weight and Friction (5 min)</strong><br>
+    Pick your smoothest and roughest surfaces. Now stack a second book on top of the first and repeat the test on both surfaces. Does adding weight change the friction? Record results.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Newton's Third Law Demo (3 min)</strong><br>
+    Sit in a rolling chair (or stand on a smooth floor in socks). Hold a heavy book against your chest. Push the book away from you quickly. What happens to your body? (You roll or slide backward.) The book went one way; you went the other. For every action (pushing the book forward), there's an equal and opposite reaction (your body moves backward).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Analyze and Discuss (10 min)</strong><br>
+    Complete the analysis questions on the Student Worksheet. Use the discussion questions below to talk through your findings. Connect your friction data to Newton's laws and the concepts of balanced and unbalanced forces.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>1. When the book was sitting still on the table, were forces acting on it? How do you know?</strong><br>
+    <em>Think about what would happen if you removed the table.</em>
+  </div>
+
+  <div class="question-box">
+    <strong>2. Which surface required the most force to pull the book across? Why do you think that surface creates more friction?</strong><br>
+    <em>Consider the texture and roughness of that surface.</em>
+  </div>
+
+  <div class="question-box">
+    <strong>3. Was more force needed to <em>start</em> the book moving or to <em>keep</em> it moving? What does this tell you about static vs. kinetic friction?</strong>
+  </div>
+
+  <div class="question-box">
+    <strong>4. When you added a second book, what happened to the friction force? Use Newton's Second Law to explain why a heavier object is harder to accelerate.</strong>
+  </div>
+
+  <div class="question-box">
+    <strong>5. Explain why a ball rolling across the floor eventually stops, using the terms "unbalanced force" and "friction" in your answer.</strong>
+  </div>
+
+  <div class="question-box">
+    <strong>6. If you dropped the book and a feather at the same time, which would hit the ground first? Is gravity pulling harder on one of them, or is something else going on?</strong><br>
+    <em>Hint: Think about air resistance as a type of friction.</em>
+  </div>
+
+  <div class="question-box">
+    <strong>7. Imagine you're on a frozen lake with no friction at all. You're standing still. How could you get to shore without anyone pushing you? Which of Newton's laws would you use?</strong>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📐 <strong>Ramp and Gravity:</strong> Prop a board against a stack of books to make a ramp. Place objects at the top and let them slide down. Measure the distance they travel on different surfaces at the bottom. How does the ramp height (more gravitational potential energy) affect the distance?</li>
+      <li>🧊 <strong>Friction Reducers:</strong> Test what happens when you add "lubricants" between the book and the surface — try a few drops of cooking oil on foil, a layer of plastic wrap, or pencils as rollers. How much does friction decrease?</li>
+      <li>📊 <strong>Graph It:</strong> Create a bar graph comparing the friction force for each surface. Add error bars showing the range of your measurements. Which surface had the most consistent results?</li>
+      <li>🏗️ <strong>Engineering Connection:</strong> Research how engineers use friction (brake pads, tire treads) and reduce friction (ball bearings, lubricants, streamlined shapes). Write a paragraph connecting your experiment to a real-world application.</li>
+      <li>🎈 <strong>Pair With the Rocket Car Lesson:</strong> If you've done the balloon car lesson, compare your friction data to how far the car traveled on different surfaces. Do your predictions match?</li>
+      <li>🌙 <strong>Gravity on Other Planets:</strong> Research the gravitational force on the Moon, Mars, and Jupiter. If your book weighs 2 pounds on Earth, what would it weigh on each? How would friction change?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Companion lesson:</strong> This lesson is designed to run alongside the Kindergarten "Push &amp; Pull Sort" lesson. While younger siblings sort pushes and pulls, the 5th grader digs deeper into the same theme with quantitative data and Newton's laws.</li>
+      <li><strong>The rubber band method works well.</strong> If you don't have a spring scale, the rubber band "stretch distance" is a reliable relative measure. Consistency matters more than exact numbers — just make sure the student pulls at the same speed each time.</li>
+      <li><strong>Static vs. kinetic friction:</strong> Students should notice it takes more force to <em>start</em> the book moving than to keep it moving. This is a key observation. If they don't notice, have them pay close attention to the rubber band stretch right at the moment the book begins to slide.</li>
+      <li><strong>Newton's Laws at this age:</strong> Fifth graders don't need to calculate F=ma numerically. The goal is conceptual understanding — more force means more acceleration, more mass means you need more force. Keep it qualitative.</li>
+      <li><strong>Common misconception:</strong> Students often think "no motion = no forces." Use the book-on-table example to show that forces can be present and balanced. The table is actively pushing up.</li>
+      <li><strong>Surface selection:</strong> The experiment works best with surfaces that are noticeably different. Tile vs. carpet is a dramatic contrast. If all your surfaces are similar, results may not show clear differences.</li>
+      <li><strong>Assessment:</strong> Can the student explain the difference between balanced and unbalanced forces using an example? Can they predict which surface will have more friction and explain why? Can they connect their observations to at least one of Newton's laws?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>⚖️ Student Worksheet — Forces and Friction Investigation ⚖️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background: #0984E3;">📝 Part 1: Predictions</h2>
+    <p><strong>List the surfaces you'll test. Rank them from <em>most friction</em> (1) to <em>least friction</em> before you begin:</strong></p>
+    <table class="data-table">
+      <tr>
+        <th style="width: 15%;">Rank</th>
+        <th style="width: 45%;">Surface</th>
+        <th style="width: 40%;">Why I Think This</th>
+      </tr>
+      <tr><td>1 (most)</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>2</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>3</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>4</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>5 (least)</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <h2 style="background: #0984E3;">🧪 Part 2: Friction Data</h2>
+    <p><strong>Pull the book across each surface. Record the force needed (rubber band stretch in cm, or spring scale reading).</strong></p>
+    <table class="data-table">
+      <tr>
+        <th style="width: 20%;">Surface</th>
+        <th style="width: 16%;">Trial 1<br><span style="font-size: 9pt; font-weight: normal;">Start / Keep</span></th>
+        <th style="width: 16%;">Trial 2<br><span style="font-size: 9pt; font-weight: normal;">Start / Keep</span></th>
+        <th style="width: 16%;">Average<br><span style="font-size: 9pt; font-weight: normal;">Start</span></th>
+        <th style="width: 16%;">Average<br><span style="font-size: 9pt; font-weight: normal;">Keep</span></th>
+        <th style="width: 16%;">Rank<br><span style="font-size: 9pt; font-weight: normal;">(1 = most)</span></th>
+      </tr>
+      <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <h2 style="background: #0984E3;">📦 Part 3: Weight Test</h2>
+    <p><strong>Add a second book. Test on your smoothest and roughest surfaces.</strong></p>
+    <table class="data-table">
+      <tr>
+        <th style="width: 25%;">Surface</th>
+        <th style="width: 25%;">1 Book<br><span style="font-size: 9pt; font-weight: normal;">(Force to Start)</span></th>
+        <th style="width: 25%;">2 Books<br><span style="font-size: 9pt; font-weight: normal;">(Force to Start)</span></th>
+        <th style="width: 25%;">Difference</th>
+      </tr>
+      <tr><td>Smoothest:</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Roughest:</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #0984E3;">🤔 Part 4: Analysis Questions</h2>
+
+    <div class="question-box">
+      <strong>1. Did your predictions match your results? Which surface surprised you?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. Was more force needed to start the book moving or keep it moving? Explain why, using the terms "static friction" and "kinetic friction."</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. What happened when you added a second book? Explain why, using Newton's Second Law (more mass requires more force).</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>4. Draw a force diagram of the book being pulled across a table. Label all forces with arrows showing their direction and relative size.</strong>
+      <div style="border: 2px dashed #0984E3; min-height: 200px; margin: 10px 0; background: white; border-radius: 8px; padding: 15px;">
+        <p style="font-size: 9pt; color: #666;">Include: gravity (down), normal force (up), applied force/pull (forward), friction (backward). Make arrow sizes show relative strength.</p>
+      </div>
+    </div>
+
+    <div class="question-box">
+      <strong>5. Explain how your friction experiment demonstrates Newton's First Law. What would happen to the book if there were <em>no</em> friction at all?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>6. Give one real-world example where friction is <em>helpful</em> and one where it's <em>harmful</em>. Explain both.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3 style="color: #333; margin-top: 15px;">Expected Results</h3>
+
+      <p><strong>Friction ranking (typical, most to least):</strong></p>
+      <ol>
+        <li>Sandpaper (very rough — highest friction)</li>
+        <li>Carpet or towel (soft, textured — high friction)</li>
+        <li>Wood or laminate floor (moderate friction)</li>
+        <li>Tile (smooth, moderate-low friction)</li>
+        <li>Aluminum foil (smooth, low friction)</li>
+      </ol>
+      <p>Results will vary by specific materials. The key is that rougher surfaces consistently require more force.</p>
+
+      <p><strong>Static vs. kinetic friction:</strong> Students should observe that it takes <em>more</em> force to start the book moving than to keep it moving. The rubber band stretches farther just before the book begins to slide, then relaxes slightly once it's moving. This is because static friction is stronger than kinetic friction.</p>
+
+      <p><strong>Weight test:</strong> Adding a second book should roughly double the friction force on both surfaces. More weight presses the surfaces together harder, increasing friction.</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Sample Answers</h3>
+
+      <p><strong>Q1 (Predictions vs. Results):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"My predictions mostly matched. I thought carpet would have the most friction and it did. I was surprised that the towel had almost as much friction as carpet — I thought it would be smoother because it feels soft."</p>
+
+      <p><strong>Q2 (Static vs. Kinetic):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"It took more force to start the book moving than to keep it moving. This is because static friction (when the book is still) is stronger than kinetic friction (when the book is sliding). Once the surfaces start sliding past each other, there's less resistance."</p>
+
+      <p><strong>Q3 (Adding Weight):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"When I added a second book, it took a lot more force to pull. Newton's Second Law says force equals mass times acceleration. With more mass, I needed more force to get the same acceleration. Also, the extra weight pressed the book down harder, which increased friction."</p>
+
+      <p><strong>Q4 (Force Diagram):</strong></p>
+      <p style="margin-left: 20px;">The diagram should show four arrows:</p>
+      <ul style="margin-left: 20px;">
+        <li>⬇️ <strong>Gravity</strong> — arrow pointing straight down from center of book</li>
+        <li>⬆️ <strong>Normal force</strong> — arrow pointing straight up, same size as gravity (balanced)</li>
+        <li>➡️ <strong>Applied force (pull)</strong> — arrow pointing in the direction of motion</li>
+        <li>⬅️ <strong>Friction</strong> — arrow pointing opposite to motion, slightly smaller than applied force (if the book is accelerating) or same size (if moving at constant speed)</li>
+      </ul>
+      <p style="margin-left: 20px; font-style: italic;">If your child draws gravity and normal force as the same size, that's correct — they're balanced vertically. If they show the pull arrow larger than friction, that's also correct for an accelerating book.</p>
+
+      <p><strong>Q5 (Newton's First Law):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Newton's First Law says an object in motion stays in motion unless an unbalanced force acts on it. In my experiment, friction was the unbalanced force that slowed and stopped the book after I let go. If there were no friction, the book would keep sliding forever at the same speed — it would never stop on its own."</p>
+
+      <p><strong>Q6 (Helpful vs. Harmful Friction):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Helpful: Friction between your shoes and the floor keeps you from slipping when you walk. Without it, every step would be like walking on ice. Harmful: Friction between moving parts in a car engine creates heat and wears down the parts, which is why engines need oil to reduce friction." Other good examples: brake pads (helpful), rug burn (harmful), writing with a pencil (helpful), bike chain wear (harmful).</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Troubleshooting</h3>
+      <ul>
+        <li><strong>Inconsistent results:</strong> Make sure the student pulls at a steady speed each time. Jerky pulling gives unreliable readings. Practice a few times before recording data.</li>
+        <li><strong>Rubber band too stretchy or stiff:</strong> Switch to a different rubber band, or use a longer/shorter piece of string on a spring scale.</li>
+        <li><strong>Can't tell the difference between surfaces:</strong> Try more extreme contrasts — sandpaper vs. a plastic bag, or carpet vs. a cookie sheet.</li>
+        <li><strong>Book won't slide on rough surface:</strong> Use a lighter book, or switch to a smoother object like a plastic container lid.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Success Criteria</h3>
+      <ul>
+        <li>Student can explain the difference between balanced and unbalanced forces with a concrete example.</li>
+        <li>Student collected data from at least three surfaces with two trials each.</li>
+        <li>Student correctly identifies that static friction is greater than kinetic friction.</li>
+        <li>Student draws a force diagram with all four forces labeled and directions correct.</li>
+        <li>Student can connect at least one observation to one of Newton's three laws.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

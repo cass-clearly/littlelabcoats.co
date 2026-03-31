@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharks — Built to Hunt</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #00B894;
+      padding-bottom: 10px;
+      color: #00B894;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #E8F8F5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #7DCEA0;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #00B894;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #00875A;
+      border-bottom: 2px solid #7DCEA0;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #E8F8F5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #00B894;
+    }
+    .procedure-step strong { color: #00875A; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .science-concept {
+      background: #E8F8F5;
+      border: 2px solid #7DCEA0;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+    }
+    .science-concept h3 { margin-top: 0; }
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .vocab-table th {
+      background: #00B894;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .vocab-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    .vocab-table tr:nth-child(even) { background: #E8F8F5; }
+    .vocab-table td:first-child { font-weight: bold; color: #00875A; white-space: nowrap; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #7DCEA0;
+      font-weight: bold;
+      color: #00875A;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #E8F8F5; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #444;
+    }
+    .answer-key h2 {
+      background: #757575;
+      font-size: 13pt;
+      text-align: center;
+    }
+    .answer-key .expected {
+      background: white;
+      border-left: 4px solid #00B894;
+      padding: 8px 14px;
+      margin: 8px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .safety-box {
+      background: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint { font-style: italic; color: #666; font-size: 0.95em; margin-top: 2px; }
+    .dichotomous-key {
+      background: #f9f9f9;
+      border: 2px solid #7DCEA0;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .dichotomous-key ol { list-style: none; padding-left: 0; }
+    .dichotomous-key .key-step {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 6px 0;
+    }
+    .dichotomous-key .key-step strong { color: #00875A; }
+    .shark-card {
+      display: inline-block;
+      background: #E8F8F5;
+      border: 1px solid #7DCEA0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 130px;
+    }
+    .shark-card .emoji { font-size: 20pt; display: block; margin-bottom: 4px; }
+    .shark-card .name { font-weight: bold; color: #00875A; }
+    .shark-card .order { font-style: italic; color: #555; font-size: 9pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .science-concept, .safety-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🦈 Sharks — Built to Hunt 🦈</h1>
+  <p class="subtitle">Ocean Explorers — Lesson 2 of 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 60–90 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Adaptation &amp; Taxonomy + Physics — Buoyancy &amp; Hydrodynamics</span>
+    <span>🎒 <strong>Kit Lesson</strong></span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/great-white-shark.png" alt="A great white shark gliding through sunlit water">
+    <div class="caption">The great white shark — 450 million years of evolution made this apex predator.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>4-LS1-1</strong> — Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction<br>
+    <strong>3-LS4-3</strong> — Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all<br>
+    <strong>5-LS1-1</strong> — Support an argument that plants get the materials they need for growth chiefly from air and water (contrast: sharks must hunt for energy — animals cannot make their own food)<br><br>
+    <strong>Cross-Cutting Concepts:</strong> Structure and Function, Cause and Effect
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Sharks have been swimming Earth's oceans for over <strong>450 million years</strong> — that's about 200 million years before the first dinosaurs appeared. They've survived five mass extinctions. How? Because every part of a shark's body is an extraordinary <em>adaptation</em> for hunting, sensing, and surviving in the ocean. In this lesson, you'll investigate how a shark's skeleton, skin, liver, and sensory systems work together to make it one of the most successful predators in the history of life.</p>
+
+  <h2>🔬 The Science</h2>
+
+  <div class="science-concept">
+    <h3>🦴 Cartilage vs. Bone — A Lighter Skeleton</h3>
+    <p>Most fish have skeletons made of <strong>bone</strong>, but sharks belong to a group called <em>Chondrichthyes</em> (kon-DRIK-theez) — fish with skeletons made entirely of <strong>cartilage</strong>. Cartilage is the same flexible material in your nose and ears. It's about half the density of bone, which means a shark's skeleton is much lighter than a bony fish of the same size.</p>
+    <p>Why does this matter? Sharks don't have a <strong>swim bladder</strong> — the gas-filled organ that bony fish use to control their buoyancy. Without one, a shark would sink like a rock if it stopped swimming. A lighter cartilage skeleton helps reduce the sinking problem, but it's not enough on its own. Sharks need another trick…</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>🫧 The Oily Liver — A Built-In Life Jacket</h3>
+    <p>A shark's liver is <em>enormous</em> — it can make up 25% of its total body weight. The liver is filled with an oil called <strong>squalene</strong>, which is less dense than water. This oil-filled liver acts like a built-in flotation device, providing <strong>buoyancy</strong> — an upward force that counteracts gravity pulling the shark down. Between the light cartilage skeleton and the oily liver, a shark can stay close to <em>neutral buoyancy</em> (neither sinking nor floating).</p>
+    <p>But sharks are still slightly <em>negatively buoyant</em> — they're a little heavier than the water around them. That's why most sharks must keep swimming to generate <strong>lift</strong> with their pectoral fins, just like airplane wings generate lift to keep a plane in the air. Stop swimming, and they slowly sink.</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>🔬 Dermal Denticles — Shark Skin That Cuts Through Water</h3>
+    <p>Shark skin isn't covered in scales like other fish — it's covered in tiny tooth-like structures called <strong>dermal denticles</strong> (literally "skin teeth"). If you rub a shark from head to tail, it feels smooth. Rub it the other direction, and it feels like sandpaper.</p>
+    <p>These denticles are shaped like tiny ridged teardrops that channel water along the shark's body. They reduce <em>drag</em> — the friction force that slows objects moving through water — by up to 8%. This makes sharks incredibly <strong>hydrodynamic</strong>. Engineers have studied dermal denticles to design faster swimsuits and ship hulls — a real-world example of <em>biomimicry</em>.</p>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/shark-anatomy.png" alt="Watercolor scientific illustration of shark anatomy">
+    <div class="caption">Shark anatomy — every structure is adapted for life as an ocean predator.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>📡 Sensory Superpowers — Seeing the Invisible</h3>
+    <p>Sharks have some of the most remarkable sensory systems in the animal kingdom:</p>
+    <ul>
+      <li><strong>Lateral line:</strong> A row of pressure-sensitive pores running along each side of the shark's body. The lateral line detects vibrations and pressure changes in the water, letting sharks "feel" the movement of nearby animals — even in complete darkness.</li>
+      <li><strong>Ampullae of Lorenzini:</strong> Hundreds of tiny gel-filled pores on the shark's snout that detect weak <strong>electrical fields</strong>. Every living creature generates a faint electrical signal when its muscles contract or its heart beats. Sharks can sense these signals from several feet away — a sense called <strong>electroreception</strong>. A hammerhead's wide head gives it an even wider "electrical search area."</li>
+      <li><strong>Smell:</strong> Sharks can detect one drop of blood in 25 gallons of water. About two-thirds of a shark's brain is dedicated to processing smell.</li>
+      <li><strong>Hearing:</strong> Sharks can hear low-frequency sounds (like a struggling fish) from over a mile away.</li>
+    </ul>
+  </div>
+
+  <div class="science-concept">
+    <h3>🗂️ Shark Taxonomy — Classifying the Hunters</h3>
+    <p>There are over 500 known species of sharks, organized into 8 major <strong>orders</strong>. <strong>Taxonomy</strong> is the science of classifying living things into groups based on shared characteristics. Scientists use tools called <strong>dichotomous keys</strong> — a series of yes/no questions — to identify and classify organisms.</p>
+    <p>Some key shark orders:</p>
+    <div style="text-align: center; margin: 10px 0;">
+      <div class="shark-card"><span class="emoji">🦈</span><span class="name">Great White</span><span class="order">Lamniformes</span></div>
+      <div class="shark-card"><span class="emoji">🔨</span><span class="name">Hammerhead</span><span class="order">Carcharhiniformes</span></div>
+      <div class="shark-card"><span class="emoji">🐋</span><span class="name">Whale Shark</span><span class="order">Orectolobiformes</span></div>
+      <div class="shark-card"><span class="emoji">💤</span><span class="name">Nurse Shark</span><span class="order">Orectolobiformes</span></div>
+      <div class="shark-card"><span class="emoji">⚡</span><span class="name">Mako</span><span class="order">Lamniformes</span></div>
+      <div class="shark-card"><span class="emoji">🌊</span><span class="name">Thresher</span><span class="order">Lamniformes</span></div>
+      <div class="shark-card"><span class="emoji">🪚</span><span class="name">Sawshark</span><span class="order">Pristiophoriformes</span></div>
+      <div class="shark-card"><span class="emoji">👼</span><span class="name">Angel Shark</span><span class="order">Squatiniformes</span></div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/shark-taxonomy.png" alt="Watercolor taxonomy chart of shark orders">
+    <div class="caption">The incredible diversity of sharks — from filter feeders to apex predators.</div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary</strong>
+    <table class="vocab-table">
+      <tr><th>Term</th><th>Definition</th></tr>
+      <tr><td>Cartilage</td><td>Flexible, lightweight connective tissue that makes up a shark's skeleton (also found in your nose and ears)</td></tr>
+      <tr><td>Taxonomy</td><td>The science of classifying living things into organized groups based on shared characteristics</td></tr>
+      <tr><td>Order</td><td>A level of biological classification between class and family; sharks have 8 orders</td></tr>
+      <tr><td>Species</td><td>A group of organisms that can reproduce with each other; the most specific level of classification</td></tr>
+      <tr><td>Adaptation</td><td>A trait or structure that has evolved to help an organism survive in its environment</td></tr>
+      <tr><td>Buoyancy</td><td>The upward force that a fluid exerts on an object; determines whether it sinks or floats</td></tr>
+      <tr><td>Hydrodynamic</td><td>Shaped to move through water with minimal resistance (drag)</td></tr>
+      <tr><td>Dermal denticle</td><td>Tiny tooth-like structures covering shark skin that reduce drag through water</td></tr>
+      <tr><td>Lateral line</td><td>A sensory organ along a shark's side that detects vibrations and pressure changes in water</td></tr>
+      <tr><td>Ampullae of Lorenzini</td><td>Gel-filled pores on a shark's snout that detect weak electrical fields from other animals</td></tr>
+      <tr><td>Electroreception</td><td>The ability to sense electrical fields generated by living organisms</td></tr>
+      <tr><td>Apex predator</td><td>A predator at the top of its food chain with no natural predators of its own</td></tr>
+      <tr><td>Dichotomous key</td><td>A tool used to identify organisms by answering a series of two-choice (yes/no) questions</td></tr>
+      <tr><td>Biomimicry</td><td>Designing human technology inspired by structures and systems found in nature</td></tr>
+    </table>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧪 From Your Science Kit</h3>
+    <ul>
+      <li>1 real shark tooth fossil (for observation and discussion)</li>
+      <li>4 sheets of sandpaper (60-grit, 120-grit, 220-grit, and 400-grit)</li>
+      <li>1 package modeling clay (oil-based, non-drying)</li>
+      <li>2 graduated cylinders (100 mL)</li>
+      <li>1 spring scale (5 N or 500 g)</li>
+      <li>4 balloons (latex, standard size)</li>
+      <li>1 set of shark taxonomy cards (8 cards with shark images, facts, and characteristics)</li>
+      <li>1 dichotomous key reference sheet</li>
+      <li>Fishing line (3 feet)</li>
+    </ul>
+
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>Vegetable oil or cooking oil (about 1 cup)</li>
+      <li>A large bowl, tub, or baking dish filled with water (for drag and buoyancy tests)</li>
+      <li>Small objects for buoyancy testing: a cork, a marble, a coin, a grape, a small toy</li>
+      <li>Tape (masking or painter's tape)</li>
+      <li>A ruler or measuring tape</li>
+      <li>Paper towels (for cleanup)</li>
+      <li>Pencils and printed Student Worksheet</li>
+    </ul>
+
+    <h3>🧰 Optional / Nice to Have</h3>
+    <ul>
+      <li>A magnifying glass (to examine the shark tooth fossil and sandpaper grits)</li>
+      <li>Stopwatch or phone timer</li>
+      <li>Food coloring (to visualize water flow around clay shark)</li>
+    </ul>
+  </div>
+
+  <div class="safety-box">
+    ⚠️ <strong>Safety Note:</strong> The shark tooth fossil may have sharp edges — handle with care. Oil can be slippery on floors; keep paper towels handy. Adult supervision recommended for balloon filling.
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Shark Tooth Fossil Observation (5 min)</strong><br>
+    Pass around the shark tooth fossil. Feel its edges, look at its shape. Ask: "What can you tell about a shark just from its tooth?" (It's a predator — the tooth is designed for gripping and tearing prey.) Explain that sharks lose and replace thousands of teeth in their lifetime. Some species go through 30,000 teeth! Compare to human teeth — we get two sets total.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Buoyancy Lab: Sink or Float? (15 min)</strong><br>
+    <strong>Part A — Testing Objects:</strong> Fill the large bowl with water. Predict whether each small object (cork, marble, coin, grape, toy) will sink or float. Test each one and record results on the Student Worksheet. Discuss: What determines whether something sinks or floats? (Its <em>density</em> compared to water — objects denser than water sink; less dense objects float.)
+    <br><br>
+    <strong>Part B — Modeling a Shark's Oily Liver:</strong>
+    <ol>
+      <li>Fill one balloon with water (about half full) and tie it off. This represents a fish with a water-filled body.</li>
+      <li>Fill another balloon with vegetable oil (about the same amount) and tie it off. This represents a shark's oil-filled liver.</li>
+      <li>Place both balloons in the water. Observe: Which one floats higher? Which one sinks lower?</li>
+      <li>The oil balloon should float noticeably higher because oil is <em>less dense</em> than water. This is how a shark's squalene-filled liver provides buoyancy.</li>
+    </ol>
+    Ask: "If a shark doesn't have a swim bladder like bony fish, what else helps it stay up besides the oily liver?" (Its pectoral fins generate lift as it swims — like airplane wings.)
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Use the graduated cylinder to measure equal amounts of oil and water for the balloons. This makes the comparison fair and introduces measurement skills.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Shark Skin Drag Test (15 min)</strong><br>
+    Shark skin is covered in dermal denticles that reduce drag. Let's test how surface texture affects drag:
+    <ol>
+      <li>Cut four equal strips from each sandpaper grit (60, 120, 220, 400). Also cut one strip of plain paper as a control.</li>
+      <li>Wrap each strip around a piece of modeling clay shaped into an identical small cylinder.</li>
+      <li>Attach a piece of fishing line to each cylinder.</li>
+      <li>Pull each cylinder through the water tub at a steady speed using the spring scale. Record the force reading for each grit.</li>
+      <li>If you don't have a spring scale, time how long it takes each cylinder to slide down a water-filled ramp (tilted baking dish).</li>
+    </ol>
+    <strong>Predict first:</strong> Which grit will have the most drag? The least? How does this model dermal denticles?<br>
+    (The finest grit — 400 — should have the least drag, similar to how shark dermal denticles are incredibly fine and reduce friction with water. The coarsest grit — 60 — creates the most drag.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Taxonomy Card Sort (10 min)</strong><br>
+    Spread out the 8 shark taxonomy cards. Using the dichotomous key reference sheet, classify each shark into its correct order. Work through the key step by step:
+    <div class="dichotomous-key">
+      <h3 style="margin-top: 0; text-align: center;">🔑 Simplified Shark Dichotomous Key</h3>
+      <div class="key-step"><strong>1a.</strong> Body flattened like a ray, pectoral fins fused to head → <em>Squatiniformes</em> (Angel Sharks)</div>
+      <div class="key-step"><strong>1b.</strong> Body NOT flattened → Go to 2</div>
+      <div class="key-step"><strong>2a.</strong> Snout has a long saw-like blade with teeth on edges → <em>Pristiophoriformes</em> (Sawsharks)</div>
+      <div class="key-step"><strong>2b.</strong> Snout does NOT have a saw blade → Go to 3</div>
+      <div class="key-step"><strong>3a.</strong> Mouth at the front of the head (terminal) → Go to 4</div>
+      <div class="key-step"><strong>3b.</strong> Mouth on the underside of the head (ventral) → Go to 5</div>
+      <div class="key-step"><strong>4a.</strong> Has an anal fin → <em>Carcharhiniformes</em> (Hammerheads, Reef Sharks, Tiger Sharks)</div>
+      <div class="key-step"><strong>4b.</strong> No anal fin → <em>Squaliformes</em> (Dogfish Sharks)</div>
+      <div class="key-step"><strong>5a.</strong> Has a nictitating membrane (extra eyelid) → <em>Carcharhiniformes</em></div>
+      <div class="key-step"><strong>5b.</strong> No nictitating membrane → Go to 6</div>
+      <div class="key-step"><strong>6a.</strong> Mouth extends behind the eyes; has patterned skin or barbels → <em>Orectolobiformes</em> (Whale Sharks, Nurse Sharks)</div>
+      <div class="key-step"><strong>6b.</strong> Mouth does NOT extend behind eyes → Go to 7</div>
+      <div class="key-step"><strong>7a.</strong> Five gill slits; large eyes; no anal fin → <em>Hexanchiformes</em> (Cow Sharks, Frilled Sharks)</div>
+      <div class="key-step"><strong>7b.</strong> Five gill slits; conical snout; powerful tail → <em>Lamniformes</em> (Great White, Mako, Thresher)</div>
+    </div>
+    Record your classifications on the Student Worksheet. Check your answers against the answer key.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Design Challenge: Build a Shark for Speed (15 min)</strong><br>
+    Using modeling clay, design and shape a shark body optimized for minimum drag:
+    <ol>
+      <li>Study the shapes of real sharks — notice the pointed snout, torpedo body, and tapered tail.</li>
+      <li>Shape your clay into a "shark" body. Think about: Where should it be widest? How should the nose taper? What about fins?</li>
+      <li>Make the body roughly the same mass as a simple clay ball (your control).</li>
+      <li>Drop both shapes (your shark and the ball) into the water tub from the same height. Which one reaches the bottom first?</li>
+      <li>Sketch your design on the Student Worksheet and label the features you included.</li>
+    </ol>
+    Discuss: Why is the torpedo shape faster through water? (It's <em>hydrodynamic</em> — the tapered front pushes water smoothly around the body instead of creating turbulence.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Analyze and Discuss (10 min)</strong><br>
+    Complete the analysis questions on the Student Worksheet. Use the discussion questions below to connect your experiments to the science of shark adaptations, taxonomy, and conservation.
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/shark-diversity.png" alt="Diverse sharks swimming together showing size comparison">
+    <div class="caption">From the enormous whale shark to the small reef shark — incredible diversity in one group of animals.</div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>1. How are sharks different from bony fish? Name at least three structural differences and explain how each one helps sharks survive.</strong><br>
+    <span class="discussion-hint">Look for any three: (1) Cartilage skeleton instead of bone — lighter, more flexible. (2) No swim bladder — they use an oily liver for buoyancy instead. (3) Dermal denticles instead of scales — reduces drag for faster swimming. (4) Multiple rows of replaceable teeth. (5) Ampullae of Lorenzini for electroreception — bony fish don't have this.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>2. Why do most sharks sink if they stop swimming? Explain using the terms "buoyancy," "swim bladder," and "density."</strong><br>
+    <span class="discussion-hint">Look for: Sharks don't have a swim bladder (the gas-filled organ bony fish use to control buoyancy). Even with their oily liver, sharks are slightly denser than water — they're negatively buoyant. So they must keep swimming to generate lift with their pectoral fins, like an airplane's wings. Stop swimming = slowly sink.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>3. How do dermal denticles help a shark hunt? Connect your sandpaper drag test to how real shark skin works.</strong><br>
+    <span class="discussion-hint">They might say: In the drag test, finer sandpaper had less drag. Dermal denticles are incredibly fine, tooth-shaped structures that channel water smoothly along the shark's body, reducing friction (drag). Less drag means the shark swims faster and uses less energy — a huge advantage when chasing prey.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>4. Imagine you're a hammerhead shark hunting at night in murky water. Which sensory systems would you rely on, and why?</strong><br>
+    <em>Think about the lateral line, ampullae of Lorenzini, and smell.</em><br>
+    <span class="discussion-hint">Look for: Lateral line to detect vibrations from moving prey, ampullae of Lorenzini to sense electrical fields from heartbeats and muscle movements (even from buried prey), and smell to detect traces of blood or chemicals from far away. The hammerhead's wide head gives it an extra-wide electrical "search area." Vision would be almost useless in murky water.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>5. Sharks are apex predators. What do you think would happen to ocean ecosystems if all sharks disappeared? Think about the food chain.</strong><br>
+    <span class="discussion-hint">Look for: Without sharks, mid-level predator populations would explode (no one eating them). Those predators would overeat the smaller herbivorous fish. With fewer herbivores, algae would overgrow and smother coral reefs. This is called a trophic cascade — the effects ripple all the way down the food chain.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>6. Engineers have copied shark skin designs for swimsuits and submarine hulls. Can you think of other examples where humans could copy nature's designs? What is this called?</strong><br>
+    <span class="discussion-hint">This is called biomimicry. They might say: Velcro (inspired by burrs), airplane wings (bird wings), bullet train nose (kingfisher beak), building ventilation (termite mounds), wind turbines (whale fins). Accept any reasonable example where a human invention was inspired by nature.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>7. Sharks have survived for 450 million years and five mass extinctions. But many shark species are now endangered because of humans. Why should we care about shark conservation?</strong><br>
+    <span class="discussion-hint">They might say: Sharks keep ocean ecosystems balanced as apex predators. Without them, food chains collapse (trophic cascade). They also mention that sharks have been around far longer than humans — losing them would mean losing 450 million years of evolution. Accept moral arguments too ("every species matters") and practical ones (healthy oceans support fishing, tourism, oxygen production).</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🧬 <strong>Evolutionary Timeline:</strong> Create a timeline showing when sharks first appeared (450 million years ago), when dinosaurs lived (230–66 million years ago), and when humans evolved (about 300,000 years ago). How does this change your perspective on sharks?</li>
+      <li>🏊 <strong>Biomimicry Research:</strong> Look up the Speedo LZR Racer swimsuit that was banned from Olympic competition because it reduced drag so much. It was inspired by shark skin! Write a paragraph about another biomimicry invention.</li>
+      <li>📊 <strong>Graph Your Data:</strong> Create a bar graph of your sandpaper drag test results. Add error bars if you did multiple trials. Which grit gave the most consistent results?</li>
+      <li>🗺️ <strong>Shark Range Maps:</strong> Choose three shark species from different orders. Research where they live and plot their ranges on a world map. Do any overlap? What does that tell you about competition?</li>
+      <li>🦷 <strong>Fossil Detective:</strong> Research what scientists can learn from shark tooth fossils. How do they estimate the size of ancient sharks like Megalodon from teeth alone?</li>
+      <li>🌊 <strong>Shark Conservation Action:</strong> Research a shark conservation organization. What threats do sharks face? Create a poster or infographic about why sharks matter to ocean health.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This lesson is designed for a gifted learner</strong> working above grade level with a strong interest in sharks. The taxonomy card sort section is specifically designed to engage an older sibling who loves classification. Let them lead the dichotomous key activity.</li>
+      <li><strong>Buoyancy lab:</strong> Filling balloons with oil can be tricky. Use a funnel and work over the sink. If the balloon pops, oil is easy to clean but slippery — have paper towels ready. An alternative: use small sealed containers (film canisters or small jars) filled with oil vs. water.</li>
+      <li><strong>Drag test:</strong> The spring scale method gives the best quantitative data, but the ramp method works if you don't have a spring scale. For the ramp method, tilt a baking dish at about 30° and time how long the cylinder takes to slide from top to bottom underwater.</li>
+      <li><strong>Modeling clay:</strong> Oil-based clay works best because it won't dissolve in water. If you only have regular play dough, wrap it in plastic wrap before the water test.</li>
+      <li><strong>Common misconception:</strong> Students often think sharks are "primitive" because they have cartilage instead of bone. Cartilage skeletons are actually a highly successful adaptation — sharks have thrived for 450 million years. Don't frame cartilage as inferior to bone.</li>
+      <li><strong>Sensitivity note:</strong> Some students may fear sharks due to media portrayals. This lesson is a great opportunity to discuss how rare shark attacks are (you're more likely to be struck by lightning) and why sharks are essential to healthy oceans.</li>
+      <li><strong>Assessment:</strong> Can the student explain at least three shark adaptations and how each one helps survival? Can they use the dichotomous key to classify sharks correctly? Can they connect their experimental data to real shark biology?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🦈 Student Worksheet — Sharks: Built to Hunt 🦈</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background: #00B894;">🫧 Part 1: Buoyancy Lab</h2>
+
+    <h3>Predictions: Will It Sink or Float?</h3>
+    <table class="data-table">
+      <tr>
+        <th style="width: 25%;">Object</th>
+        <th style="width: 25%;">Prediction<br><span style="font-size: 9pt; font-weight: normal;">(sink / float)</span></th>
+        <th style="width: 25%;">Result<br><span style="font-size: 9pt; font-weight: normal;">(sink / float)</span></th>
+        <th style="width: 25%;">Why?</th>
+      </tr>
+      <tr><td>Cork</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Marble</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Coin</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Grape</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Small toy</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <h3>Oil Balloon vs. Water Balloon</h3>
+    <table class="data-table">
+      <tr>
+        <th style="width: 30%;">Balloon</th>
+        <th style="width: 35%;">What Happened?<br><span style="font-size: 9pt; font-weight: normal;">(sank / floated / in between)</span></th>
+        <th style="width: 35%;">How High Did It Float?<br><span style="font-size: 9pt; font-weight: normal;">(draw a line on the balloon)</span></th>
+      </tr>
+      <tr><td>Water balloon</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Oil balloon</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <div class="question-box">
+      <strong>How does a shark's oily liver help it stay afloat without a swim bladder?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <h2 style="background: #00B894;">🔬 Part 2: Shark Skin Drag Test</h2>
+
+    <h3>Drag Force by Sandpaper Grit</h3>
+    <table class="data-table">
+      <tr>
+        <th style="width: 20%;">Surface</th>
+        <th style="width: 16%;">Trial 1<br><span style="font-size: 9pt; font-weight: normal;">(force or time)</span></th>
+        <th style="width: 16%;">Trial 2<br><span style="font-size: 9pt; font-weight: normal;">(force or time)</span></th>
+        <th style="width: 16%;">Trial 3<br><span style="font-size: 9pt; font-weight: normal;">(force or time)</span></th>
+        <th style="width: 16%;">Average</th>
+        <th style="width: 16%;">Rank<br><span style="font-size: 9pt; font-weight: normal;">(1 = most drag)</span></th>
+      </tr>
+      <tr><td>60-grit (coarse)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>120-grit (medium)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>220-grit (fine)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>400-grit (very fine)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Plain paper (control)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <div class="question-box">
+      <strong>Which surface had the LEAST drag? How does this compare to real shark skin (dermal denticles)?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #00B894;">🗂️ Part 3: Taxonomy Card Sort</h2>
+
+    <p><strong>Use the dichotomous key to classify each shark. Write the order name next to each shark.</strong></p>
+    <table class="data-table">
+      <tr>
+        <th style="width: 30%;">Shark Species</th>
+        <th style="width: 30%;">Key Path<br><span style="font-size: 9pt; font-weight: normal;">(steps you followed)</span></th>
+        <th style="width: 25%;">Order</th>
+        <th style="width: 15%;">✓</th>
+      </tr>
+      <tr><td>Great White Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Hammerhead Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Whale Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Nurse Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Mako Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Thresher Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Angel Shark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Sawshark</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <h2 style="background: #00B894;">🏗️ Part 4: Design Challenge — Build a Shark for Speed</h2>
+
+    <p><strong>Sketch your clay shark design below. Label the features you included and explain why.</strong></p>
+    <div style="border: 2px dashed #00B894; min-height: 220px; margin: 10px 0; background: white; border-radius: 8px; padding: 15px;">
+      <p style="font-size: 9pt; color: #666;">Include labels for: snout shape, body width, tail shape, fins (if you added them). Explain how each feature reduces drag.</p>
+    </div>
+
+    <table class="data-table">
+      <tr>
+        <th style="width: 50%;">Shape</th>
+        <th style="width: 50%;">Time to Reach Bottom<br><span style="font-size: 9pt; font-weight: normal;">(or observation)</span></th>
+      </tr>
+      <tr><td>Clay ball (control)</td><td style="background: white;"></td></tr>
+      <tr><td>My shark design</td><td style="background: white;"></td></tr>
+    </table>
+
+    <div class="question-box">
+      <strong>Did your shark design sink faster or slower than the ball? Why? What would you change to make it even more hydrodynamic?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <h2 style="background: #00B894;">🤔 Part 5: Analysis Questions</h2>
+
+    <div class="question-box">
+      <strong>1. Name three adaptations that make sharks successful predators. For each one, explain the <em>structure</em> and its <em>function</em>.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. Plants make their own food using sunlight, air, and water. Sharks cannot. How do sharks get the energy they need to survive? Why does this make adaptations for hunting so important?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. Look at your taxonomy card sort. Which two sharks are in the same order but look very different? Why might scientists group them together even though they look different on the outside?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3 style="color: #333; margin-top: 15px;">Part 1: Buoyancy Lab — Expected Results</h3>
+
+      <div class="expected">
+        <strong>Sink or Float:</strong><br>
+        <strong>Cork:</strong> Floats (less dense than water)<br>
+        <strong>Marble:</strong> Sinks (glass is denser than water)<br>
+        <strong>Coin:</strong> Sinks (metal is much denser than water)<br>
+        <strong>Grape:</strong> Usually sinks slightly or hovers near the bottom (density very close to water)<br>
+        <strong>Small toy:</strong> Varies — hollow plastic toys float; solid ones may sink
+      </div>
+
+      <div class="expected">
+        <strong>Oil Balloon vs. Water Balloon:</strong><br>
+        The <strong>oil balloon</strong> should float higher than the water balloon. Oil is about 80–92% the density of water, so it floats. The water balloon will be neutrally buoyant — it hovers at or just below the surface, or sinks very slowly (the latex adds a tiny bit of weight).<br><br>
+        <strong>Connection to sharks:</strong> A shark's liver filled with squalene oil works like the oil balloon — it provides buoyancy by being less dense than the surrounding seawater. Without this oily liver, the shark would sink much faster because cartilage and muscle are denser than water.
+      </div>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 2: Drag Test — Expected Results</h3>
+
+      <div class="expected">
+        <strong>Ranking (most drag to least drag):</strong>
+        <ol>
+          <li>60-grit (coarsest — most drag)</li>
+          <li>120-grit</li>
+          <li>220-grit</li>
+          <li>400-grit (finest — least drag among sandpapers)</li>
+          <li>Plain paper (smoothest — least drag overall)</li>
+        </ol>
+        <strong>Note:</strong> Results may vary. The key observation is that <em>finer textures create less drag than coarse textures</em>. Real shark dermal denticles are incredibly fine (microscopic!) — even finer than 400-grit sandpaper — and their teardrop shape actively channels water, reducing drag beyond what simple smoothness achieves.<br><br>
+        <strong>If plain paper has less drag than 400-grit:</strong> This is expected and a great teaching moment! Plain paper is smoother than any sandpaper. But explain that dermal denticles aren't just "smooth" — their special shape actually reduces drag MORE than a smooth surface would, because they break up tiny vortices (swirling water) along the skin.
+      </div>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 3: Taxonomy Card Sort — Answers</h3>
+
+      <div class="expected">
+        <table style="width: 100%; border-collapse: collapse; font-size: 10pt;">
+          <tr style="background: #E8F8F5;"><td style="padding: 6px; font-weight: bold;">Great White Shark</td><td style="padding: 6px;">1b → 2b → 3b → 5b → 6b → 7b</td><td style="padding: 6px;"><em>Lamniformes</em></td></tr>
+          <tr><td style="padding: 6px; font-weight: bold;">Hammerhead Shark</td><td style="padding: 6px;">1b → 2b → 3b → 5a</td><td style="padding: 6px;"><em>Carcharhiniformes</em></td></tr>
+          <tr style="background: #E8F8F5;"><td style="padding: 6px; font-weight: bold;">Whale Shark</td><td style="padding: 6px;">1b → 2b → 3b → 5b → 6a</td><td style="padding: 6px;"><em>Orectolobiformes</em></td></tr>
+          <tr><td style="padding: 6px; font-weight: bold;">Nurse Shark</td><td style="padding: 6px;">1b → 2b → 3b → 5b → 6a</td><td style="padding: 6px;"><em>Orectolobiformes</em></td></tr>
+          <tr style="background: #E8F8F5;"><td style="padding: 6px; font-weight: bold;">Mako Shark</td><td style="padding: 6px;">1b → 2b → 3b → 5b → 6b → 7b</td><td style="padding: 6px;"><em>Lamniformes</em></td></tr>
+          <tr><td style="padding: 6px; font-weight: bold;">Thresher Shark</td><td style="padding: 6px;">1b → 2b → 3b → 5b → 6b → 7b</td><td style="padding: 6px;"><em>Lamniformes</em></td></tr>
+          <tr style="background: #E8F8F5;"><td style="padding: 6px; font-weight: bold;">Angel Shark</td><td style="padding: 6px;">1a</td><td style="padding: 6px;"><em>Squatiniformes</em></td></tr>
+          <tr><td style="padding: 6px; font-weight: bold;">Sawshark</td><td style="padding: 6px;">1b → 2a</td><td style="padding: 6px;"><em>Pristiophoriformes</em></td></tr>
+        </table>
+      </div>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 4: Design Challenge</h3>
+
+      <div class="expected">
+        <strong>Expected result:</strong> The torpedo-shaped shark design should sink slightly faster than the ball because the streamlined shape encounters less drag (water resistance). However, some students may find their ball sinks faster if their shark design has large protruding fins that catch water.<br><br>
+        <strong>Key features of a good design:</strong> Pointed nose (reduces frontal area), widest point about 1/3 from the front, smooth taper toward the tail, small fins angled back (not sticking straight out).<br><br>
+        <strong>If the ball sinks faster:</strong> This is still a valid result! Discuss that in this test, both shapes are sinking due to gravity — a real shark uses its hydrodynamic shape for <em>forward</em> movement, not sinking speed. Try pulling both shapes horizontally through the water with fishing line to test drag more accurately.
+      </div>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 5: Analysis Questions — Sample Answers</h3>
+
+      <p><strong>Q1 (Three adaptations):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">Any three of: (1) Dermal denticles — tiny tooth-shaped structures on the skin that reduce drag, letting sharks swim faster and more efficiently. (2) Ampullae of Lorenzini — gel-filled pores on the snout that detect electrical fields from prey, even hidden prey buried in sand. (3) Oily liver — a massive liver filled with low-density squalene oil that provides buoyancy without a swim bladder. (4) Cartilage skeleton — lighter than bone, reducing weight and energy needed to swim. (5) Lateral line — pressure-sensitive pores that detect vibrations from nearby animals.</p>
+
+      <p><strong>Q2 (Plants vs. sharks):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Plants can make their own food through photosynthesis using sunlight, carbon dioxide from air, and water. Sharks can't do this — they have to catch and eat other animals to get energy. Because they must hunt to survive, having adaptations that make them better hunters (sharp teeth, fast swimming, amazing senses) is literally a matter of life and death. A shark that can't hunt efficiently will starve."</p>
+
+      <p><strong>Q3 (Same order, different appearance):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"The whale shark and nurse shark are both in Orectolobiformes but look very different — whale sharks are enormous filter feeders and nurse sharks are small bottom-dwellers. Scientists group them together because they share internal anatomical features like mouth position, gill structure, and skeletal characteristics that aren't obvious from the outside. Taxonomy looks at evolutionary relationships, not just appearance."</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Discussion Question Guidance</h3>
+
+      <p><strong>Q5 (What if sharks disappeared?):</strong> Without apex predators, mid-level predators (like smaller fish that eat herbivorous fish) would overpopulate. With fewer herbivorous fish, algae would overgrow and smother coral reefs. The entire ecosystem cascades — this is called a <em>trophic cascade</em>. This has actually been documented in areas where shark populations have declined.</p>
+
+      <p><strong>Q6 (Biomimicry):</strong> Accept any reasonable answer. Examples: Velcro (inspired by burrs), airplane wings (bird wings), bullet train nose (kingfisher beak), building ventilation (termite mounds), wind turbine blades (whale fins).</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Troubleshooting</h3>
+      <ul>
+        <li><strong>Oil balloon won't fill:</strong> Use a funnel with a wide mouth. Warm oil flows more easily. Alternatively, use small sealed containers (film canisters or baby food jars) filled with oil vs. water.</li>
+        <li><strong>Drag test results are inconsistent:</strong> Make sure all clay cylinders are the same size and weight. Pull at a consistent speed. The spring scale method gives more reliable data than timing.</li>
+        <li><strong>Student struggles with dichotomous key:</strong> Walk through the first shark together, reading each step aloud. The key is designed to be simplified — if a student gets stuck, remind them to look at the physical characteristics described (flattened body? saw blade? mouth position?).</li>
+        <li><strong>Clay dissolves in water:</strong> Use oil-based modeling clay, not water-based play dough. If you only have play dough, wrap it tightly in plastic wrap before testing.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Success Criteria</h3>
+      <ul>
+        <li>Student can explain at least three shark adaptations using "structure and function" language</li>
+        <li>Student correctly classified at least 6 of 8 sharks using the dichotomous key</li>
+        <li>Student collected buoyancy and drag data with reasonable accuracy</li>
+        <li>Student can explain why sharks sink without swimming (no swim bladder, slightly negatively buoyant)</li>
+        <li>Student connects experimental results to real shark biology (oil = buoyancy, fine texture = less drag)</li>
+        <li>Student articulates why shark conservation matters for ocean ecosystems</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

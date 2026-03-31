@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mia's Thursday Learning Plan — Week 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #2d2d2d;
+      background: #fafafa;
+    }
+    h1, h2, h3 { font-family: 'Source Serif 4', serif; }
+    .header {
+      text-align: center;
+      padding: 25px 20px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 { font-size: 26pt; margin-bottom: 4px; }
+    .header .subtitle { font-size: 13pt; opacity: 0.9; }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .schedule-block {
+      text-align: center;
+      padding: 12px 8px;
+      border-radius: 10px;
+      font-size: 9.5pt;
+      font-weight: 500;
+    }
+    .schedule-block .emoji { font-size: 18pt; display: block; margin-bottom: 4px; }
+    .schedule-block .time { font-size: 8pt; opacity: 0.7; margin-top: 2px; }
+    .sb-coral { background: #ffe0d6; color: #c0392b; }
+    .sb-teal { background: #d0f0ed; color: #0e7c6b; }
+    .sb-amber { background: #fff3cd; color: #856404; }
+    .sb-lavender { background: #e8dff5; color: #5b2c8e; }
+
+    .card {
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .card h2 {
+      font-size: 16pt;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card .check {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 2.5px solid currentColor;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .card .skill-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .card-coral { background: #fff5f2; border: 2px solid #f7c5b8; }
+    .card-coral h2 { color: #c0392b; }
+    .card-coral .skill-tag { background: #f7c5b8; color: #922b21; }
+
+    .card-teal { background: #f0faf8; border: 2px solid #a3d9cf; }
+    .card-teal h2 { color: #0e7c6b; }
+    .card-teal .skill-tag { background: #a3d9cf; color: #0a5c50; }
+
+    .card-amber { background: #fffcf0; border: 2px solid #f0d78c; }
+    .card-amber h2 { color: #856404; }
+    .card-amber .skill-tag { background: #f0d78c; color: #6d5200; }
+
+    .card-lavender { background: #f8f4fd; border: 2px solid #c9b8e8; }
+    .card-lavender h2 { color: #5b2c8e; }
+    .card-lavender .skill-tag { background: #c9b8e8; color: #3e1d63; }
+
+    .instructions { margin: 12px 0; padding-left: 20px; }
+    .instructions li { margin-bottom: 6px; }
+
+    .question-box {
+      background: white;
+      border-left: 4px solid currentColor;
+      padding: 10px 14px;
+      margin: 8px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 10.5pt;
+    }
+
+    .cut-line {
+      border: none;
+      border-top: 2.5px dashed #bbb;
+      margin: 30px 0 10px;
+    }
+    .cut-label {
+      text-align: center;
+      font-size: 9pt;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .worksheet {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: white;
+      page-break-inside: avoid;
+    }
+    .worksheet h3 { font-size: 14pt; margin-bottom: 12px; }
+
+    .write-line {
+      border-bottom: 1.5px solid #ccc;
+      height: 32px;
+      margin: 4px 0;
+    }
+    .lined-area { margin: 10px 0; }
+    .lined-area .line { border-bottom: 1px solid #d0d0d0; height: 28px; }
+
+    .example-box {
+      background: #f0f7ff;
+      border: 1px solid #b8d4f0;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+    .example-box .label { font-weight: 700; color: #2a6fad; font-size: 9pt; text-transform: uppercase; margin-bottom: 6px; }
+
+    .tip {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 10pt;
+      margin: 10px 0;
+      color: #2e7d32;
+    }
+
+    .story-box {
+      background: #fffdf5;
+      border: 2px solid #e8d5a3;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 14px 0;
+      font-family: 'Source Serif 4', serif;
+      font-size: 11pt;
+      line-height: 1.7;
+    }
+    .story-box h4 { text-align: center; font-size: 14pt; margin-bottom: 10px; color: #7a6420; }
+    .story-box p { margin-bottom: 10px; text-indent: 20px; }
+    .story-box p:first-of-type { text-indent: 0; }
+
+    .combo-set {
+      background: #f8f4fd;
+      border: 1px solid #d4c4ec;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 10px 0;
+      page-break-inside: avoid;
+    }
+    .combo-set .set-num {
+      font-weight: 700;
+      color: #5b2c8e;
+      font-size: 10pt;
+      margin-bottom: 6px;
+    }
+    .combo-set .choppy {
+      font-size: 10.5pt;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .combo-set .choppy span {
+      display: inline-block;
+      background: #eee;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin: 2px 3px;
+      font-size: 10pt;
+    }
+
+    .ws-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    .ws-table th, .ws-table td {
+      border: 1.5px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .ws-table th {
+      background: #f5f5f5;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+
+    .link-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 11pt;
+      margin: 10px 0;
+    }
+    .link-btn:hover { opacity: 0.9; }
+
+    @media print {
+      body { padding: 0.25in; background: white; font-size: 10pt; }
+      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, .schedule-block, .skill-tag, .example-box, .tip, .story-box, .combo-set, .link-btn {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .worksheet { page-break-inside: avoid; }
+      .link-btn { background: #e74c3c !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🌟 Mia's Thursday Plan</h1>
+    <div class="subtitle">Week 1 • Grade 5 • ~40 minutes of awesome</div>
+  </div>
+
+  <!-- Schedule Overview -->
+  <div class="schedule">
+    <div class="schedule-block sb-coral">
+      <span class="emoji">📊</span>
+      Khan Academy
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-teal">
+      <span class="emoji">🔍</span>
+      Read-Close-Write
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-amber">
+      <span class="emoji">🧠</span>
+      Theme Detective
+      <div class="time">10 min</div>
+    </div>
+    <div class="schedule-block sb-lavender">
+      <span class="emoji">✏️</span>
+      Sentence Combining
+      <div class="time">10 min</div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 1: Khan Academy ==================== -->
+  <div class="card card-coral">
+    <h2><span class="check"></span> 📊 Khan Academy: Data & Statistics <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Math — Data & Statistics</span>
+
+    <p>Time to crunch some numbers! 🔢 Head to Khan Academy and complete <strong>one lesson</strong> from the 5th grade Data and Statistics unit. You'll learn how to read, interpret, and make sense of real data!</p>
+
+    <ol class="instructions">
+      <li>Click the link below (or type it into your browser).</li>
+      <li>Pick <strong>one lesson</strong> you haven't done yet — videos + practice problems count!</li>
+      <li>Spend about 10 minutes working through it.</li>
+      <li>Check off the box when done! ✅</li>
+    </ol>
+
+    <p style="margin-top: 14px; text-align: center;">
+      <a class="link-btn" href="https://www.khanacademy.org/math/cc-fifth-grade-math/imp-data-and-statistics" target="_blank">🚀 Go to Khan Academy — Data & Statistics</a>
+    </p>
+
+    <div class="tip">💡 <strong>Pro Tip:</strong> If you finish a lesson early, try the practice quiz at the end. Getting 100% feels amazing! 🎯</div>
+  </div>
+
+  <!-- ==================== ACTIVITY 2: Read-Close-Write ==================== -->
+  <div class="card card-teal">
+    <h2><span class="check"></span> 🔍 Read-Close-Write <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Reading Comprehension — Recall & Accuracy</span>
+
+    <p>This is a memory challenge! 🧠 You'll read a short article, <strong>close it</strong>, then write down what you remember. Ready?</p>
+
+    <ol class="instructions">
+      <li><strong>READ</strong> the article below carefully (about 2 minutes).</li>
+      <li><strong>CLOSE</strong> — flip this page over or cover the article.</li>
+      <li><strong>WRITE</strong> — on the worksheet, write <strong>3 key facts</strong> you remember.</li>
+      <li><strong>CHECK</strong> — uncover the article and check your accuracy! ✅ or ❌ each fact.</li>
+    </ol>
+
+    <div class="story-box" style="background: #f0faf8; border-color: #a3d9cf;">
+      <h4>🐙 The Amazing Octopus</h4>
+      <p>Octopuses are some of the most incredible creatures in the ocean. They have <strong>three hearts</strong> — two pump blood to their gills, and one pumps it to the rest of the body. When an octopus swims, the heart that delivers blood to the body actually stops beating, which is why they prefer crawling to swimming!</p>
+      <p>These animals are also masters of disguise. An octopus can change its <strong>color, texture, and even shape</strong> in less than a second. Scientists have watched octopuses mimic the appearance of rocks, coral, and even other animals like lionfish and sea snakes to avoid predators.</p>
+      <p>Perhaps most surprising is how smart they are. Octopuses have been observed <strong>opening jars from the inside</strong>, solving mazes, and even using coconut shells as portable shelters — which scientists consider a form of <strong>tool use</strong>. Each of their eight arms contains clusters of neurons, meaning their arms can taste, touch, and even "think" independently!</p>
+      <p>Sadly, octopuses have very short lifespans — most live only <strong>1 to 2 years</strong>. But in that short time, they pack in a whole lot of brilliance.</p>
+    </div>
+
+    <div class="tip">💡 <strong>Challenge:</strong> Can you get all 3 facts right without peeking? Bonus points if you remember specific numbers or details!</div>
+  </div>
+
+  <!-- Worksheet: Read-Close-Write -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Read-Close-Write Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🔍 Read-Close-Write</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="margin-top:6px; font-size:10pt; color:#666;">Article topic: <strong>The Amazing Octopus</strong></p>
+
+    <p style="margin-top:16px; font-weight:600;">Step 1: Cover the article. Write 3 key facts from memory:</p>
+
+    <table class="ws-table" style="margin-top:10px;">
+      <thead>
+        <tr>
+          <th style="width:5%;">#</th>
+          <th style="width:70%;">Key Fact (from memory!)</th>
+          <th style="width:25%;">Accurate? ✅ or ❌<br><span style="font-weight:400; font-size:8pt;">(check after)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td style="height:50px;"></td><td></td></tr>
+        <tr><td>2</td><td style="height:50px;"></td><td></td></tr>
+        <tr><td>3</td><td style="height:50px;"></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:14px; font-weight:600;">Step 2: Uncover the article. Check your facts!</p>
+
+    <div class="question-box" style="border-color:#1abc9c; margin-top:10px;">
+      <strong>How did you do?</strong> _____ out of 3 correct!
+    </div>
+
+    <div class="question-box" style="border-color:#1abc9c;">
+      <strong>What's one detail you missed or got wrong?</strong>
+      <div class="write-line" style="margin-top:6px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="question-box" style="border-color:#1abc9c;">
+      <strong>⭐ Bonus: What was the most surprising thing you learned?</strong>
+      <div class="write-line" style="margin-top:6px;"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 3: Theme Detective ==================== -->
+  <div class="card card-amber">
+    <h2><span class="check"></span> 🧠 Theme Detective <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Reading — Theme & Evidence</span>
+
+    <p>Every story has a hidden message — a <strong>theme</strong>. Your job as a Theme Detective is to read the fable below, figure out the theme, and find <strong>3 pieces of evidence</strong> that prove it! 🔎</p>
+
+    <ol class="instructions">
+      <li>Read the fable carefully.</li>
+      <li>Think: What lesson is this story trying to teach?</li>
+      <li>Find <strong>3 moments</strong> in the story that support the theme.</li>
+      <li>Fill out the detective worksheet!</li>
+    </ol>
+
+    <div class="story-box">
+      <h4>🦅 The Crow and the Pitcher</h4>
+      <p>On a scorching summer day, a crow flew for miles searching for water. Her throat was dry and her wings ached. At last she spotted a tall pitcher sitting in a garden. She swooped down eagerly and peered inside.</p>
+      <p>There was water at the bottom — but the pitcher was too tall and narrow for her beak to reach it. She tried tipping it over, but it was too heavy. She tried breaking it with her beak, but the clay was too thick.</p>
+      <p>The crow sat on the rim, exhausted. She was about to give up and fly away when she noticed a pile of small pebbles nearby. An idea sparked in her mind.</p>
+      <p>One by one, she picked up pebbles and dropped them into the pitcher. <em>Plink. Plink. Plink.</em> Slowly, the water began to rise. After many trips back and forth, the water finally reached the top.</p>
+      <p>The crow drank deeply, her thirst finally quenched. She ruffled her feathers proudly and flew off into the sky, stronger than before.</p>
+      <p style="text-align:center; font-style:italic; color:#7a6420; margin-top:8px; text-indent:0;">— Adapted from Aesop's Fables</p>
+    </div>
+
+    <div class="example-box">
+      <div class="label">🔑 What is a Theme?</div>
+      <p>A theme is the <strong>life lesson or message</strong> the author wants you to learn. It's NOT a one-word topic (like "water" or "birds"). It's a full sentence, like: <em>"Hard work pays off"</em> or <em>"True friends stick together in tough times."</em></p>
+    </div>
+  </div>
+
+  <!-- Worksheet: Theme Detective -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Theme Detective Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>🧠 Theme Detective Report</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="margin-top:6px; font-size:10pt; color:#666;">Story: <strong>The Crow and the Pitcher</strong></p>
+
+    <div class="question-box" style="border-color:#f39c12; margin-top:14px;">
+      <strong>🔎 What is the theme of this story?</strong> (Write it as a complete sentence.)
+      <div class="write-line" style="margin-top:8px;"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <p style="margin-top:16px; font-weight:600;">Find 3 pieces of evidence from the story that support your theme:</p>
+
+    <div style="margin-top:10px; padding:14px; background:#fffcf0; border-radius:8px; border:1px solid #f0d78c;">
+      <p><strong>Evidence #1:</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="margin-top:8px; font-size:9.5pt; color:#888;">How does this support the theme?</p>
+      <div class="write-line"></div>
+    </div>
+
+    <div style="margin-top:10px; padding:14px; background:#fffcf0; border-radius:8px; border:1px solid #f0d78c;">
+      <p><strong>Evidence #2:</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="margin-top:8px; font-size:9.5pt; color:#888;">How does this support the theme?</p>
+      <div class="write-line"></div>
+    </div>
+
+    <div style="margin-top:10px; padding:14px; background:#fffcf0; border-radius:8px; border:1px solid #f0d78c;">
+      <p><strong>Evidence #3:</strong></p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <p style="margin-top:8px; font-size:9.5pt; color:#888;">How does this support the theme?</p>
+      <div class="write-line"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ACTIVITY 4: Sentence Combining ==================== -->
+  <div class="card card-lavender">
+    <h2><span class="check"></span> ✏️ Sentence Combining <span style="font-size:11pt; font-weight:400; opacity:0.6; margin-left:auto;">10 min</span></h2>
+    <span class="skill-tag">Writing — Sentence Structure</span>
+
+    <p>Short, choppy sentences are boring! 😴 Your mission: take the choppy sentences and <strong>combine them into 1–2 smooth, well-structured sentences</strong>. Use words like <em>and, but, because, although, while, who, which, when</em> to connect ideas.</p>
+
+    <div class="example-box">
+      <div class="label">✅ Example</div>
+      <p><strong>Choppy:</strong> The dog was big. The dog was brown. The dog liked to swim.</p>
+      <p><strong>Combined:</strong> The big, brown dog loved to swim.</p>
+    </div>
+  </div>
+
+  <!-- Worksheet: Sentence Combining -->
+  <hr class="cut-line">
+  <div class="cut-label">✂️ Sentence Combining Worksheet — cut or fold here</div>
+  <div class="worksheet">
+    <h3>✏️ Sentence Combining</h3>
+    <p><strong>Name:</strong> _______________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+    <p style="font-size:10pt; color:#666; margin:6px 0 16px;">Combine each set of choppy sentences into 1–2 smooth sentences. Use connecting words!</p>
+
+    <div class="combo-set">
+      <div class="set-num">Set 1</div>
+      <div class="choppy"><span>The volcano erupted.</span> <span>Lava flowed down the mountain.</span> <span>The villagers ran to safety.</span></div>
+      <p style="font-size:10pt; color:#888; margin-bottom:4px;">Your combined sentence:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="combo-set">
+      <div class="set-num">Set 2</div>
+      <div class="choppy"><span>Maya loved reading.</span> <span>She went to the library every Saturday.</span> <span>She always checked out three books.</span></div>
+      <p style="font-size:10pt; color:#888; margin-bottom:4px;">Your combined sentence:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="combo-set">
+      <div class="set-num">Set 3</div>
+      <div class="choppy"><span>The test was hard.</span> <span>Jamal studied all week.</span> <span>He got an A.</span> <span>He was proud of himself.</span></div>
+      <p style="font-size:10pt; color:#888; margin-bottom:4px;">Your combined sentence:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="combo-set">
+      <div class="set-num">Set 4</div>
+      <div class="choppy"><span>The kitten was tiny.</span> <span>The kitten was gray.</span> <span>It hid under the porch.</span> <span>It was scared of the thunder.</span></div>
+      <p style="font-size:10pt; color:#888; margin-bottom:4px;">Your combined sentence:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="combo-set">
+      <div class="set-num">Set 5</div>
+      <div class="choppy"><span>The ocean was calm.</span> <span>The sun was setting.</span> <span>The sky turned orange and pink.</span> <span>We sat on the beach watching.</span></div>
+      <p style="font-size:10pt; color:#888; margin-bottom:4px;">Your combined sentence:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="combo-set">
+      <div class="set-num">Set 6 ⭐ Challenge!</div>
+      <div class="choppy"><span>The astronaut floated in space.</span> <span>She looked down at Earth.</span> <span>Earth looked small and blue.</span> <span>She felt amazed.</span> <span>She also felt a little lonely.</span></div>
+      <p style="font-size:10pt; color:#888; margin-bottom:4px;">Your combined sentence:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <p style="text-align:center; margin-top:16px; font-size:10pt; color:#5b2c8e;">⭐ Awesome job, Mia! Smooth sentences = strong writing! ⭐</p>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

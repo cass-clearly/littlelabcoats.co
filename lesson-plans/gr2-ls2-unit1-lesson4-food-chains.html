@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Chains: Who Eats Whom? — Unit 1, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 64pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Food chain role cards */
+    .role-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0;
+      justify-content: center;
+    }
+    .role-card {
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 100px;
+      border: 2px solid;
+    }
+    .role-card .emoji { font-size: 28pt; display: block; margin-bottom: 4px; }
+    .role-card .label { font-weight: bold; }
+    .role-card .sublabel { font-size: 8.5pt; color: #555; margin-top: 2px; }
+    .role-plant { background: #e8f5e9; border-color: #4caf50; }
+    .role-plant .label { color: #2e7d32; }
+    .role-herbivore { background: #fffde7; border-color: #ffd600; }
+    .role-herbivore .label { color: #f57f17; }
+    .role-carnivore { background: #fff3e0; border-color: #ff9800; }
+    .role-carnivore .label { color: #e65100; }
+    .role-apex { background: #ffebee; border-color: #f44336; }
+    .role-apex .label { color: #b71c1c; }
+    .role-decomp { background: #efebe9; border-color: #795548; }
+    .role-decomp .label { color: #4e342e; }
+    /* Chain arrow display */
+    .chain-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 14px 0;
+      font-size: 12pt;
+    }
+    .chain-node {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-align: center;
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 10pt;
+    }
+    .chain-arrow {
+      font-size: 20pt;
+      color: #00B894;
+      font-weight: bold;
+    }
+    /* Vocabulary badge strip */
+    .vocab-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .vocab-badge {
+      background: #2e7d32;
+      color: white;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 9.5pt;
+      font-weight: bold;
+    }
+    /* Worksheet styles */
+    .worksheet-section {
+      margin: 16px 0;
+    }
+    .chain-build-boxes {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 14px 0;
+      flex-wrap: wrap;
+    }
+    .chain-build-box {
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 6px 4px;
+      text-align: center;
+      background: #f9fbe7;
+    }
+    .chain-build-box .draw-area {
+      flex: 1;
+      width: 100%;
+    }
+    .chain-build-box .chain-label {
+      font-size: 8pt;
+      color: #2e7d32;
+      font-weight: bold;
+      margin-top: 4px;
+      border-top: 1px solid #a5d6a7;
+      padding-top: 3px;
+      width: 100%;
+    }
+    .chain-build-arrow {
+      font-size: 22pt;
+      color: #00B894;
+      font-weight: bold;
+    }
+    .fill-blank {
+      display: inline-block;
+      border-bottom: 2px solid #2e7d32;
+      min-width: 120px;
+      height: 22px;
+      margin: 0 4px;
+    }
+    .fill-blank-wide {
+      display: inline-block;
+      border-bottom: 2px solid #2e7d32;
+      min-width: 220px;
+      height: 22px;
+      margin: 0 4px;
+    }
+    .what-if-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .what-if-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+      border: 1px solid #1b5e20;
+    }
+    .what-if-table td {
+      border: 1px solid #a5d6a7;
+      padding: 10px;
+      height: 52px;
+      vertical-align: top;
+      background: #f9fbe7;
+    }
+    .what-if-table td.scenario {
+      background: #e8f5e9;
+      font-weight: bold;
+      color: #1b5e20;
+      width: 28%;
+    }
+    .web-diagram {
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 12px 0;
+      background: #f9fbe7;
+      min-height: 180px;
+      position: relative;
+      text-align: center;
+      font-size: 10pt;
+      color: #999;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-box {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+    }
+    .ak-box h3 { color: #2e7d32; border-color: #a5d6a7; }
+    .ak-answer {
+      background: #e8f5e9;
+      border-left: 4px solid #00B894;
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      margin: 6px 0;
+      font-size: 10pt;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .what-if-table,
+      .chain-build-boxes, .role-cards {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_xUJUbARGihA">
+
+  <h1>🌿 Food Chains: Who Eats Whom? 🦅</h1>
+  <p class="subtitle">Life Science — Plants &amp; Ecosystems — Unit 1, Lesson 4 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Ecosystems</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️ → 🌿 → 🦗 → 🐸 → 🦅</div>
+    <div class="caption">Energy from the sun travels through every living thing — one link at a time.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS4-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats.<br>
+    <em style="font-size:9pt; color:#888;">Note: Food chain concepts build toward 3-LS2-1 and 5-LS2-1. This lesson provides the foundational ecosystem vocabulary and thinking needed for those standards.</em>
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>build</em> a simple food chain with at least 4 links and <em>explain</em> the role of producers, consumers, and decomposers in an ecosystem.</p>
+
+  <div class="vocab-strip">
+    <span class="vocab-badge">producer</span>
+    <span class="vocab-badge">consumer</span>
+    <span class="vocab-badge">decomposer</span>
+    <span class="vocab-badge">food chain</span>
+    <span class="vocab-badge">food web</span>
+    <span class="vocab-badge">ecosystem</span>
+    <span class="vocab-badge">energy</span>
+    <span class="vocab-badge">nutrients</span>
+  </div>
+
+  <h2>🌱 The Big Idea</h2>
+  <p>All living things need energy to survive. Plants get their energy directly from the <strong>sun</strong> — they make food using sunlight, water, and air. Animals can't do this, so they have to <em>eat</em> to get energy. A <strong>food chain</strong> shows how that energy moves from one living thing to another.</p>
+
+  <p>Here's the key insight: <strong>without plants, there would be no energy for anyone.</strong> Plants are the foundation of almost every food chain on Earth. Remove the plants, and the whole chain collapses.</p>
+
+  <div class="chain-display">
+    <div class="chain-node">☀️<br>Sun<br><span style="font-size:8pt;font-weight:normal;">(energy source)</span></div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node">🌿<br>Grass<br><span style="font-size:8pt;font-weight:normal;">(producer)</span></div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node">🦗<br>Grasshopper<br><span style="font-size:8pt;font-weight:normal;">(consumer)</span></div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node">🐸<br>Frog<br><span style="font-size:8pt;font-weight:normal;">(consumer)</span></div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node">🦅<br>Hawk<br><span style="font-size:8pt;font-weight:normal;">(consumer)</span></div>
+    <div class="chain-arrow">→</div>
+    <div class="chain-node">🍄<br>Decomposer<br><span style="font-size:8pt;font-weight:normal;">(mushroom/bacteria)</span></div>
+  </div>
+
+  <h2>🔬 The Science</h2>
+
+  <h3>Producers — Plants Make the Food</h3>
+  <p>Plants are called <strong>producers</strong> because they <em>produce</em> (make) food. They use sunlight, water, and carbon dioxide from the air to make sugar — this process is called <strong>photosynthesis</strong>. Every animal in the food chain is ultimately eating energy that started in a plant.</p>
+
+  <div class="tip-box">
+    💡 <strong>Connection to Lesson 1:</strong> Remember those bean plants you've been growing? They're producers! Right now, those plants are capturing sunlight and turning it into food. Every leaf is a tiny solar panel.
+  </div>
+
+  <h3>Consumers — Animals Eat to Get Energy</h3>
+  <p>Animals can't make their own food, so they eat other living things. They are called <strong>consumers</strong>. There are different kinds:</p>
+  <ul>
+    <li><strong>Herbivores</strong> — eat only plants (grasshoppers, rabbits, deer)</li>
+    <li><strong>Carnivores</strong> — eat other animals (frogs, hawks, wolves)</li>
+    <li><strong>Omnivores</strong> — eat both plants and animals (bears, raccoons, humans!)</li>
+  </ul>
+
+  <h3>Decomposers — Nature's Recyclers</h3>
+  <p>When plants and animals die, <strong>decomposers</strong> break them down — mushrooms, worms, and bacteria. They return the nutrients back into the soil, which helps new plants grow. Without decomposers, dead things would just pile up forever and soil would run out of nutrients. They complete the cycle!</p>
+
+  <h3>From Chain to Web</h3>
+  <p>In real life, it's not a straight line. Grass also feeds rabbits. Rabbits also feed foxes. Foxes also eat frogs. These overlapping connections form a <strong>food web</strong> — much messier, but much more true to nature. When one species disappears from a web, the effects ripple outward in every direction.</p>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧰 What You Need</h3>
+    <ul>
+      <li>Index cards or paper to draw food chain picture cards</li>
+      <li>Crayons or markers</li>
+      <li>Yarn or string (optional — to show food web connections)</li>
+      <li>Tape</li>
+      <li>Scissors</li>
+      <li>Printed worksheets (last pages of this lesson)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Warm-Up: Who Eats Whom? (5 min)</strong><br>
+    Start a conversation: <em>"What did you eat for breakfast today? Where did that food come from? And where did THAT come from?"</em><br>
+    Keep tracing back. Cereal → grain → plants → sunlight. Orange juice → oranges → orange tree → sunlight. Almost every path leads back to plants and the sun.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Introduce the Chain (5 min)</strong><br>
+    Say: <em>"Scientists have a special name for the path energy takes when one thing eats another — it's called a food chain."</em><br>
+    Draw or display the chain: ☀️ → 🌿 Grass → 🦗 Grasshopper → 🐸 Frog → 🦅 Hawk → 🍄 Decomposer<br><br>
+    Introduce vocabulary:
+    <ul>
+      <li><strong>Producer</strong> — the plant at the start (makes food from sunlight)</li>
+      <li><strong>Consumer</strong> — any animal that eats to get energy</li>
+      <li><strong>Decomposer</strong> — the mushroom/worm/bacteria at the end (breaks things down, returns nutrients)</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Make the Picture Cards (8 min)</strong><br>
+    Have kids draw and cut out 6 picture cards:
+    <div class="role-cards" style="margin-top:10px;">
+      <div class="role-card role-plant"><span class="emoji">☀️</span><span class="label">Sun</span><span class="sublabel">energy source</span></div>
+      <div class="role-card role-plant"><span class="emoji">🌿</span><span class="label">Grass</span><span class="sublabel">producer</span></div>
+      <div class="role-card role-herbivore"><span class="emoji">🦗</span><span class="label">Grasshopper</span><span class="sublabel">consumer</span></div>
+      <div class="role-card role-carnivore"><span class="emoji">🐸</span><span class="label">Frog</span><span class="sublabel">consumer</span></div>
+      <div class="role-card role-apex"><span class="emoji">🦅</span><span class="label">Hawk</span><span class="sublabel">consumer</span></div>
+      <div class="role-card role-decomp"><span class="emoji">🍄</span><span class="label">Mushroom</span><span class="sublabel">decomposer</span></div>
+    </div>
+    Arrange them in order with arrows showing energy flow. Label each one: <em>producer, consumer,</em> or <em>decomposer</em>.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Play "What If?" (10 min)</strong><br>
+    With the cards arranged, take turns removing one card and asking: <em>"What happens to everything else?"</em>
+    <ul>
+      <li><strong>Remove the <em>grass</em>:</strong> Grasshoppers starve → frogs lose food → hawks lose food → whole chain collapses</li>
+      <li><strong>Remove the <em>frogs</em>:</strong> Grasshoppers multiply out of control (eat too much grass) → hawks lose their main food source</li>
+      <li><strong>Remove the <em>hawks</em>:</strong> Frog population explodes → they eat more grasshoppers → what happens to the grass?</li>
+      <li><strong>Remove the <em>decomposers</em>:</strong> Dead things pile up, soil loses nutrients, new plants can't grow as well</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Build a Food Web (7 min)</strong><br>
+    Add new cards: 🐇 Rabbit and 🦊 Fox.<br>
+    <ul>
+      <li>Grass also feeds rabbits → connect with yarn or draw an arrow</li>
+      <li>Rabbits also feed foxes → connect</li>
+      <li>Foxes also eat frogs → connect</li>
+    </ul>
+    Now the "chain" has become a <strong>web</strong>! Notice how much more complicated (and resilient) it is. If frogs disappear, foxes can still eat rabbits. Redundancy in nature is a good thing.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 (Optional Active Version) — Food Chain Tag! (10 min)</strong><br>
+    If you have siblings, a co-op group, or outdoor space:
+    <div class="role-cards" style="margin-top:10px;">
+      <div class="role-card role-plant"><span class="emoji">🌿</span><span class="label">Plants (2–3)</span><span class="sublabel">ROOTED — can't move!</span></div>
+      <div class="role-card role-herbivore"><span class="emoji">🦗</span><span class="label">Grasshoppers (2–3)</span><span class="sublabel">Tag plants to "eat" them</span></div>
+      <div class="role-card role-carnivore"><span class="emoji">🐸</span><span class="label">Frogs (1–2)</span><span class="sublabel">Tag grasshoppers</span></div>
+      <div class="role-card role-apex"><span class="emoji">🦅</span><span class="label">Hawk (1)</span><span class="sublabel">Tags frogs</span></div>
+    </div>
+    When "eaten" → sit down. Watch the ecosystem respond in real time! What happens when there are too many hawks? Too few plants? This is <strong>population dynamics</strong> they'll remember forever.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "If all the frogs in a pond disappeared due to a disease, what would happen to the grasshoppers? What would happen to the hawks?"
+    <p class="discussion-hint">Think about what the frogs eat, and what eats the frogs. If frogs are gone, what changes above and below them in the chain?</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "Plants are called 'producers.' What do you think they produce — and why does that matter to every other animal in the ecosystem?"
+    <p class="discussion-hint">Hint: what do plants make that nothing else in the chain can make? Where does the energy in a grasshopper's body originally come from?</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌳 <strong>Backyard Food Chain:</strong> Go outside — what plants are there? What insects? What birds? Build a real food chain from your own backyard.</li>
+      <li>🔬 <strong>Decomposer Lab:</strong> Put a small piece of fruit outside. Check it every few days. Who shows up to decompose it?</li>
+      <li>🗺️ <strong>Different Habitats:</strong> Build a food chain for an ocean, a desert, and an arctic habitat. How are they similar? Different?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do You Do With a Tail Like This?"</em> by Jenkins &amp; Page, or <em>"Who Eats Who? Food Chains and Food Webs"</em> by Bridget Heos</li>
+      <li>🎨 <strong>Food Web Poster:</strong> Draw a large food web mural for the wall — have each child draw and label one organism with arrows connecting to everything it eats and everything that eats it.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Tabletop vs. Active:</strong> The tabletop card version works perfectly for homeschool — rich discussion happens around the table. The active tag version is a bonus for co-ops or when siblings are involved. Both teach the same concepts; active just adds kinesthetic memory.</li>
+      <li><strong>Don't forget decomposers!</strong> Mushrooms, worms, and bacteria are constantly overlooked, but they're the unsung heroes — they break down dead material and return nutrients to the soil, completing the cycle. Without them, dead things would pile up and soil would become barren. Worth emphasizing.</li>
+      <li><strong>Vocab:</strong> producer, consumer, decomposer, food chain, food web, ecosystem, energy, nutrients. Have kids use these words during discussion — not just on paper.</li>
+      <li><strong>Chain vs. Web:</strong> Kids often think of a straight chain, but nature is always a web. Reinforce that "web" = more connections = more resilient = better for the ecosystem. Straight chains are fragile; webs absorb shocks.</li>
+      <li><strong>Connection to Lesson 1:</strong> Those bean plants they've been growing are producers! They're capturing sunlight and making food right now. That's a real, living link in a food chain — help them see this.</li>
+      <li><strong>Assessment:</strong> Can students correctly label producer, consumer, and decomposer in a food chain? Can they predict what happens when one organism is removed? That's success for 2nd grade.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌿 Student Worksheet — Food Chains</h1>
+    <p class="subtitle">Who Eats Whom? — Unit 1, Lesson 4 of 6</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2>🔗 Part 1: Build-a-Food-Chain</h2>
+    <p>Draw and label each part of a food chain in the boxes below. Start with the sun and end with a consumer! Draw an arrow between each box to show how energy flows.</p>
+
+    <div class="chain-build-boxes">
+      <div class="chain-build-box">
+        <div class="draw-area"></div>
+        <div class="chain-label">☀️ Sun<br>(energy source)</div>
+      </div>
+      <div class="chain-build-arrow">→</div>
+      <div class="chain-build-box">
+        <div class="draw-area"></div>
+        <div class="chain-label">Producer<br>(a plant)</div>
+      </div>
+      <div class="chain-build-arrow">→</div>
+      <div class="chain-build-box">
+        <div class="draw-area"></div>
+        <div class="chain-label">Consumer 1<br>(plant-eater)</div>
+      </div>
+      <div class="chain-build-arrow">→</div>
+      <div class="chain-build-box">
+        <div class="draw-area"></div>
+        <div class="chain-label">Consumer 2<br>(animal-eater)</div>
+      </div>
+      <div class="chain-build-arrow">→</div>
+      <div class="chain-build-box">
+        <div class="draw-area"></div>
+        <div class="chain-label">Decomposer<br>(mushroom/worm)</div>
+      </div>
+    </div>
+
+    <h2>🌐 Part 2: Food Web Diagram</h2>
+    <p>A food chain is a straight line. A food web shows ALL the connections! In the box below, draw at least 2 animals that eat the same plant, and draw arrows showing who eats who. Use the words: <strong>producer, consumer, decomposer</strong> somewhere in your diagram.</p>
+
+    <div class="web-diagram">
+      Draw your food web here — use arrows to show who eats who!<br>
+      (Hint: grass → grasshopper AND grass → rabbit → fox)
+    </div>
+
+    <h2>✏️ Part 3: Fill in the Blanks</h2>
+
+    <div class="worksheet-section">
+      <p>Plants are called <span class="fill-blank"></span> because they <span class="fill-blank-wide"></span> .</p>
+      <br>
+      <p>Animals that eat plants are called <span class="fill-blank"></span> .</p>
+      <br>
+      <p>Mushrooms and worms are called <span class="fill-blank"></span> because they <span class="fill-blank-wide"></span> .</p>
+      <br>
+      <p>When lots of food chains overlap, scientists call it a food <span class="fill-blank"></span> .</p>
+    </div>
+
+    <h2>🤔 Part 4: "What If?" Table</h2>
+    <p>Scientists think about what would happen if one animal disappeared. Complete the table below!</p>
+
+    <table class="what-if-table">
+      <tr>
+        <th>If this disappeared…</th>
+        <th>What happens to this animal?</th>
+        <th>What happens to this animal?</th>
+      </tr>
+      <tr>
+        <td class="scenario">🌿 All the grass disappears</td>
+        <td>🦗 Grasshoppers: </td>
+        <td>🐸 Frogs: </td>
+      </tr>
+      <tr>
+        <td class="scenario">🐸 All the frogs disappear</td>
+        <td>🦗 Grasshoppers: </td>
+        <td>🦅 Hawks: </td>
+      </tr>
+      <tr>
+        <td class="scenario">🍄 All the decomposers disappear</td>
+        <td>🌿 Plants (over time): </td>
+        <td>🦗 Grasshoppers (over time): </td>
+      </tr>
+    </table>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="ak-box">
+        <h3>Part 1: Build-a-Food-Chain</h3>
+        <p>Any valid 4-link chain is correct. Example chain:</p>
+        <div class="chain-display">
+          <div class="chain-node">☀️ Sun</div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-node">🌿 Grass<br><em>producer</em></div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-node">🦗 Grasshopper<br><em>consumer</em></div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-node">🐸 Frog<br><em>consumer</em></div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-node">🍄 Mushroom<br><em>decomposer</em></div>
+        </div>
+        <p style="font-size:10pt; color:#555;">Other valid examples: Sun → Oak tree → Caterpillar → Robin → Bacteria. Accept any chain where energy flows from a plant to at least one animal, with a decomposer at the end.</p>
+      </div>
+
+      <div class="ak-box">
+        <h3>Part 2: Food Web Diagram</h3>
+        <div class="ak-answer">
+          Look for: at least 2 animals connected to the same plant, arrows pointing in the direction of energy flow (from what is eaten to what eats it), and labels using producer/consumer/decomposer. A sample web: Grass → Grasshopper → Frog → Hawk; Grass → Rabbit → Fox; Fox → Frog (connection). Award full credit for any web showing multiple overlapping connections.
+        </div>
+      </div>
+
+      <div class="ak-box">
+        <h3>Part 3: Fill in the Blanks</h3>
+        <div class="ak-answer">
+          <ul style="margin: 0; padding-left: 20px;">
+            <li>Plants are called <strong>producers</strong> because they <strong>make/produce food (using sunlight, water, and air)</strong>.</li>
+            <li>Animals that eat plants are called <strong>consumers</strong>.</li>
+            <li>Mushrooms and worms are called <strong>decomposers</strong> because they <strong>break down dead things and return nutrients to the soil</strong>.</li>
+            <li>When lots of food chains overlap, scientists call it a food <strong>web</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ak-box">
+        <h3>Part 4: "What If?" Table — Suggested Answers</h3>
+        <div class="ak-answer">
+          <strong>🌿 All the grass disappears:</strong><br>
+          🦗 Grasshoppers: Would starve and their population would crash — they have no food source.<br>
+          🐸 Frogs: Would also decline because their food (grasshoppers) has disappeared. The whole chain collapses.
+        </div>
+        <div class="ak-answer" style="margin-top:8px;">
+          <strong>🐸 All the frogs disappear:</strong><br>
+          🦗 Grasshoppers: Population would <em>explode</em> — nothing is eating them anymore. They'd eat too much grass.<br>
+          🦅 Hawks: Would struggle — their main food source is gone. They'd need to find other prey (rabbits, mice) or their numbers would drop.
+        </div>
+        <div class="ak-answer" style="margin-top:8px;">
+          <strong>🍄 All the decomposers disappear:</strong><br>
+          🌿 Plants (over time): Would gradually decline — the soil loses nutrients as dead material stops breaking down and being recycled.<br>
+          🦗 Grasshoppers (over time): Would eventually decline as plants weaken and the whole chain loses its foundation.
+        </div>
+        <p style="font-size:10pt; color:#666; margin-top:10px;">💡 <strong>Discussion tip:</strong> For the frog question, walk students through the logic step-by-step: "If frogs are gone, who does that help? Who does it hurt?" This is the heart of understanding food webs — every removal has both a winner and a loser.</p>
+      </div>
+
+      <div class="ak-box">
+        <h3>Discussion Question Answers</h3>
+        <div class="ak-answer">
+          <strong>Q1 — Frogs disappear:</strong> Without frogs eating them, the grasshopper population would explode — too many grasshoppers would devour too much grass. Hawks would struggle because their main food source is gone — they'd have to find other prey or their population would decrease. This illustrates how removing ONE species sends ripple effects through the entire web.
+        </div>
+        <div class="ak-answer" style="margin-top:8px;">
+          <strong>Q2 — Plants as producers:</strong> Plants produce food — specifically sugar/glucose — using sunlight, water, and carbon dioxide (photosynthesis). Every animal in the food chain ultimately depends on this energy. Without producers, there would be no energy entering the ecosystem and all animal life would eventually starve. The sun's energy can only enter the food chain through plants.
+        </div>
+      </div>
+
+      <div class="ak-box">
+        <h3>✅ What Success Looks Like</h3>
+        <ul>
+          <li>Student can build a food chain with at least 4 links (sun → producer → consumer → consumer).</li>
+          <li>Student can correctly label producer, consumer, and decomposer.</li>
+          <li>Student can explain (in their own words) that plants make food from sunlight.</li>
+          <li>Student can predict what happens to at least one other organism when one is removed from the chain.</li>
+          <li>Bonus: Student understands the difference between a food chain (linear) and a food web (multiple overlapping connections).</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_xUJUbARGihA" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

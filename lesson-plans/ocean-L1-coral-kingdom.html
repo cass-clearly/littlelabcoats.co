@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Coral Kingdom — Ocean Explorers Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #00B894;
+      padding-bottom: 10px;
+      color: #00B894;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #E8F8F5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #7DCEA0;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #00B894;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #00896B;
+      border-bottom: 2px solid #7DCEA0;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .inline-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .inline-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .inline-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #E8F8F5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #00B894;
+    }
+    .procedure-step strong { color: #00896B; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .safety-box {
+      background: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .vocab-table th {
+      background: #00B894;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .vocab-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    .vocab-table tr:nth-child(even) { background: #E8F8F5; }
+    .vocab-table td:first-child { font-weight: bold; color: #00896B; white-space: nowrap; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #7DCEA0;
+      font-weight: bold;
+      color: #00896B;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #E8F8F5; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .science-concept {
+      background: #E8F8F5;
+      border: 2px solid #7DCEA0;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+    }
+    .science-concept h3 { margin-top: 0; }
+    .discussion-hint { font-style: italic; color: #666; font-size: 0.95em; margin-top: 2px; }
+    .food-web-box {
+      border: 2px dashed #00B894;
+      min-height: 280px;
+      margin: 10px 0;
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .science-concept, .safety-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐠 The Coral Kingdom 🪸</h1>
+  <p class="subtitle">Ocean Explorers — Lesson 1 of 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 60–90 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Coral Reef Ecosystems &amp; Chemistry</span>
+    <span>🎒 <strong>Kit Lesson</strong></span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/coral-reef-scene.png" alt="A vibrant coral reef teeming with tropical fish, colorful corals, and sunlight filtering through clear blue water">
+    <div class="caption">A thriving coral reef — one of the most biodiverse ecosystems on Earth.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>5-LS2-1</strong> — Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment<br>
+    <strong>5-PS1-3</strong> — Make observations and measurements to identify materials based on their properties<br><br>
+    <strong>Cross-Cutting Concepts:</strong> Systems and System Models, Cause and Effect
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Coral reefs are often called the "rainforests of the sea" — and for good reason. Although they cover less than 1% of the ocean floor, they support roughly <em>25% of all marine species</em>. In this lesson, you'll discover how reef creatures depend on each other through food webs and symbiosis, and you'll investigate how ocean chemistry — specifically <strong>pH</strong> and <strong>acidification</strong> — threatens these remarkable ecosystems. You'll build a food web, test pH like a real marine chemist, and watch what acid does to shells and chalk — the same materials coral reefs are built from.</p>
+
+  <h2>🔬 The Science</h2>
+
+  <div class="science-concept">
+    <h3>🪸 Coral Polyps: Animals, Not Plants!</h3>
+    <p>Here's a fact that surprises most people: <strong>corals are animals</strong>. Each coral head is actually a colony of thousands of tiny creatures called <strong>polyps</strong>. A single polyp looks like a miniature sea anemone — a soft, tube-shaped body with a ring of stinging tentacles around its mouth. At night, polyps extend their tentacles to catch tiny floating organisms called <strong>zooplankton</strong>.</p>
+    <p>But here's where it gets really interesting. Living inside the tissue of most reef-building corals are microscopic algae called <strong>zooxanthellae</strong> (zoh-uh-zan-THEL-ee). These tiny algae use <strong>photosynthesis</strong> — just like plants — to convert sunlight into food. The zooxanthellae share that food with the coral, and in return, the coral gives the algae a safe home and nutrients. This relationship provides up to <em>90% of the coral's energy</em>. It's also what gives corals their beautiful colors — when corals are stressed, they expel their zooxanthellae and turn white, a process called <strong>coral bleaching</strong>.</p>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/coral-symbiosis.png" alt="Watercolor illustration of coral reef symbiosis showing clownfish in anemone, cleaner wrasse, and coral polyps with zooxanthellae">
+    <div class="caption">Symbiosis on the reef: clownfish and anemone, cleaner wrasse and grouper, coral polyps and zooxanthellae.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>🤝 Symbiosis: Living Together</h3>
+    <p><strong>Symbiosis</strong> means "living together" — it describes close, long-term relationships between different species. On a coral reef, symbiosis is everywhere:</p>
+    <ul>
+      <li><strong>Mutualism</strong> (both species benefit): Clownfish live among the stinging tentacles of sea anemones. The clownfish are protected from predators, and they chase away butterfly fish that would eat the anemone. Both win! The coral-zooxanthellae relationship is also mutualism.</li>
+      <li><strong>Commensalism</strong> (one benefits, the other is unaffected): Remora fish attach to sharks with a suction-cup fin on their head. The remora gets free transportation and scraps of food. The shark isn't helped or harmed.</li>
+      <li><strong>Parasitism</strong> (one benefits, the other is harmed): Isopods are small crustaceans that attach to fish gills and feed on their blood — like underwater ticks. The parasite thrives while the fish is weakened.</li>
+    </ul>
+  </div>
+
+  <div class="science-concept">
+    <h3>🕸️ Food Webs: Who Eats Whom?</h3>
+    <p>A <strong>food web</strong> shows how energy and matter move through an ecosystem. Every food web starts with <strong>producers</strong> — organisms that make their own food from sunlight. On a coral reef, the main producers are phytoplankton (microscopic floating algae), seaweed, and the zooxanthellae inside coral.</p>
+    <p><strong>Consumers</strong> eat other organisms: zooplankton eat phytoplankton, small fish eat zooplankton, larger fish eat smaller fish, and top predators like reef sharks eat the largest fish. <strong>Decomposers</strong> like bacteria and sea cucumbers break down dead organisms and return nutrients to the water, completing the cycle.</p>
+    <p>If you remove one species from a food web, the effects ripple outward. Take away parrotfish — which eat algae off coral — and algae smothers the reef. Take away sharks, and populations of medium-sized fish explode, overgrazing the reef. Every species matters.</p>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/ocean-food-web.png" alt="Watercolor illustration of an ocean food web showing energy flow from sun through phytoplankton, zooplankton, fish, to sharks">
+    <div class="caption">Energy flows through a coral reef food web — from the sun to producers to consumers to top predators.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>⚗️ pH and Ocean Acidification</h3>
+    <p>The <strong>pH scale</strong> measures how acidic or basic (alkaline) a substance is, on a scale from 0 to 14. Pure water is neutral at pH 7. Anything below 7 is acidic (like vinegar at pH 2.4 or lemon juice at pH 2). Anything above 7 is basic (like baking soda solution at pH 9 or bleach at pH 13). Healthy ocean water is slightly basic, around pH 8.1.</p>
+    <p>Here's the problem: when humans burn fossil fuels, we release carbon dioxide (CO₂) into the atmosphere. The ocean absorbs about 30% of that CO₂. When CO₂ dissolves in seawater, it forms <strong>carbonic acid</strong>, which lowers the ocean's pH — a process called <strong>ocean acidification</strong>. Since the Industrial Revolution, ocean pH has dropped from about 8.2 to 8.1. That might sound small, but because the pH scale is <em>logarithmic</em>, this represents a 26% increase in acidity.</p>
+    <p>Why does this matter for reefs? Corals build their skeletons from <strong>calcium carbonate</strong> — the same material in chalk and seashells. Acid dissolves calcium carbonate. As the ocean becomes more acidic, corals have a harder time building their skeletons, and existing reef structures weaken and dissolve. In today's experiment, you'll see this happen right before your eyes.</p>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary</strong>
+    <table class="vocab-table">
+      <tr><th>Term</th><th>Definition</th></tr>
+      <tr><td>Symbiosis</td><td>A close, long-term relationship between two different species</td></tr>
+      <tr><td>Mutualism</td><td>A type of symbiosis where <em>both</em> species benefit</td></tr>
+      <tr><td>Photosynthesis</td><td>The process by which plants and algae use sunlight to make food from CO₂ and water</td></tr>
+      <tr><td>pH</td><td>A scale from 0–14 measuring how acidic or basic a substance is</td></tr>
+      <tr><td>Acidification</td><td>The process of becoming more acidic (lower pH); in oceans, caused by absorbing CO₂</td></tr>
+      <tr><td>Biodiversity</td><td>The variety of different species living in an ecosystem</td></tr>
+      <tr><td>Polyp</td><td>A tiny, tube-shaped animal that builds coral reefs in colonies of thousands</td></tr>
+      <tr><td>Zooxanthellae</td><td>Microscopic algae that live inside coral tissue and provide energy through photosynthesis</td></tr>
+      <tr><td>Food web</td><td>A diagram showing how energy and matter flow through an ecosystem via feeding relationships</td></tr>
+      <tr><td>Producer</td><td>An organism that makes its own food from sunlight (plants, algae, phytoplankton)</td></tr>
+      <tr><td>Consumer</td><td>An organism that gets energy by eating other organisms</td></tr>
+      <tr><td>Decomposer</td><td>An organism that breaks down dead material and returns nutrients to the ecosystem</td></tr>
+    </table>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧪 From Your Science Kit</h3>
+    <ul>
+      <li>1 set of reef food web cards (16 illustrated organism cards with feeding info on back)</li>
+      <li>1 ball of cotton string (for connecting food web)</li>
+      <li>pH test strips (pack of 20, range 0–14)</li>
+      <li>2 real seashells (small clam or conch shells)</li>
+      <li>1 bag of coral sand (50 g)</li>
+      <li>2 pieces of white chalk</li>
+      <li>1 head of red cabbage (dehydrated flakes, 15 g — for making indicator juice)</li>
+      <li>3 clear plastic cups (labeled: "Ocean," "Tap," "Acid")</li>
+      <li>1 plastic pipette</li>
+      <li>1 magnifying glass</li>
+      <li>1 laminated pH scale reference card</li>
+    </ul>
+
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>White vinegar (at least 1 cup)</li>
+      <li>Tap water</li>
+      <li>1 tablespoon of sea salt (to make simulated ocean water)</li>
+      <li>1 small pot and stove access (to boil water for cabbage indicator)</li>
+      <li>1 strainer or coffee filter</li>
+      <li>3 clear jars or cups (for the shell dissolution experiment)</li>
+      <li>Baking soda (1 teaspoon — for testing a basic solution)</li>
+      <li>Paper towels</li>
+      <li>Pencil and printed Student Worksheet</li>
+    </ul>
+
+    <h3>🧰 Optional / Nice to Have</h3>
+    <ul>
+      <li>Lemon juice (for additional pH testing)</li>
+      <li>Soda water / club soda (carbonated water — to simulate mild acidification)</li>
+      <li>Timer or stopwatch (for shell dissolution observations)</li>
+      <li>Camera or phone (to photograph shell changes over time)</li>
+    </ul>
+  </div>
+
+  <div class="safety-box">
+    ⚠️ <strong>Safety Notes:</strong> Vinegar is a mild acid — safe to handle, but avoid getting it in eyes. The boiling water for cabbage indicator requires adult supervision. Red cabbage indicator may stain clothing and countertops — wear old clothes or an apron and cover your work surface.
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Make Red Cabbage pH Indicator (10 min, adult help needed)</strong><br>
+    Bring 2 cups of water to a boil. Add the dehydrated red cabbage flakes (or about 2 cups of chopped fresh red cabbage). Let it simmer for 5–10 minutes until the water turns deep purple. Strain out the cabbage and let the purple liquid cool. This is your <strong>pH indicator</strong> — it changes color depending on whether a substance is acidic, neutral, or basic. Set it aside while you do the next activity.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Build a Reef Food Web (15–20 min)</strong><br>
+    Spread the 16 organism cards on the table. Read the back of each card to learn what that creature eats and what eats it. Now arrange the cards in a web pattern: producers (phytoplankton, seaweed, zooxanthellae) at the bottom, primary consumers (zooplankton, sea urchins, parrotfish) in the middle, secondary consumers (octopus, moray eel, sea turtle) above them, and top predators (reef shark) at the top. Use string to connect each predator to its prey — you should end up with a tangled web of connections! On your worksheet, draw the food web and label each organism.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — The Disappearing Species Game (5 min)</strong><br>
+    Now pick up <em>one</em> organism card from your food web — try removing the parrotfish. Look at all the strings connected to it. What other organisms are affected? Discuss: What would happen to the algae that parrotfish eat? What would happen to the predators that eat parrotfish? Try removing different organisms and see which ones cause the most disruption. Record your observations on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — pH Testing with Cabbage Indicator (15 min)</strong><br>
+    Prepare three test solutions in the labeled cups:
+    <ul>
+      <li><strong>"Ocean"</strong> — 1 cup of tap water + 1 tablespoon sea salt (stir well)</li>
+      <li><strong>"Tap"</strong> — 1 cup of plain tap water</li>
+      <li><strong>"Acid"</strong> — ½ cup of white vinegar</li>
+    </ul>
+    First, <strong>predict</strong>: which will be most acidic? Most basic? Write your predictions on the worksheet. Now add 1–2 tablespoons of cabbage indicator juice to each cup and observe the color change:
+    <ul>
+      <li><strong>Red/pink</strong> = acidic (pH 1–4)</li>
+      <li><strong>Purple</strong> = neutral (pH 7)</li>
+      <li><strong>Blue/green</strong> = basic (pH 8–12)</li>
+    </ul>
+    Also dip a pH test strip into each solution for a more precise reading. Record both the cabbage color and the pH strip value on your worksheet.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Bonus test:</strong> Try dissolving ½ teaspoon of baking soda in water and testing it. What color does the cabbage indicator turn? What about lemon juice or soda water? The more substances you test, the better you'll understand the pH scale!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Shell Dissolution Experiment: Setup (10 min)</strong><br>
+    Label three clear jars: "Ocean Water," "Tap Water," and "Vinegar." Fill each about halfway. Place one seashell and one piece of chalk in each jar. Sprinkle a pinch of coral sand into each jar as well. Observe immediately — do you see anything happening? (The vinegar jar should start bubbling right away!) Record your initial observations on the worksheet. The bubbles are CO₂ gas being released as the acid dissolves the calcium carbonate.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Observe, Record, and Discuss (10 min now + check back in 24 hours)</strong><br>
+    After 10 minutes, examine all three jars with the magnifying glass. Compare the shells, chalk, and coral sand in each jar. Are there differences in texture, size, or shape? Can you feel a difference if you gently rub the shells? Record your observations. Then leave the jars undisturbed and check back in 24 hours for dramatic results — the vinegar shell and chalk will be noticeably smaller, softer, or even partially dissolved. Use the discussion questions below to connect your observations to what's happening to real coral reefs.
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/starfish-anemones.png" alt="Photo-realistic close-up of colorful starfish and sea anemones on a coral reef">
+    <div class="caption">Starfish and sea anemones — just two of thousands of species that depend on healthy coral reefs.</div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>1. Coral reefs are called the "rainforests of the sea." What do coral reefs and rainforests have in common that earns this comparison?</strong><br>
+    <em>Think about biodiversity, structure, and the role each plays in its environment.</em><br>
+    <span class="discussion-hint">Look for: Both have incredibly high biodiversity — tons of species packed into a small area. Both have complex structures (trees/coral) that create homes for other organisms. Both cycle nutrients and support food webs. They might also mention that both are threatened by human activity.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>2. In the food web activity, which organism caused the most disruption when removed? Why do you think some species are more important to the web than others?</strong><br>
+    <span class="discussion-hint">They might say phytoplankton or parrotfish. Look for: Organisms with the most connections (producers at the base, or "keystone" species like parrotfish) cause the most disruption because many other species depend on them. Removing a top predator or a foundational producer sends ripples through the whole web.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>3. The coral-zooxanthellae relationship is mutualism. What would happen to the coral if the zooxanthellae died or were expelled? What would happen to the zooxanthellae without the coral?</strong><br>
+    <span class="discussion-hint">Look for: Without zooxanthellae, the coral loses up to 90% of its energy and turns white (coral bleaching) — it can starve and die. Without the coral, zooxanthellae lose their protected home and nutrient supply. Both are worse off alone — that's what makes it mutualism.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>4. Your pH tests showed that vinegar is acidic. The ocean's pH has dropped only 0.1 units (from 8.2 to 8.1) since the Industrial Revolution. If such a small change matters, what does that tell you about how sensitive ocean ecosystems are?</strong><br>
+    <span class="discussion-hint">Look for: Ocean ecosystems are extremely sensitive — even tiny chemical changes can have big effects. They might mention that the pH scale is logarithmic, so 0.1 units = 26% more acidic. Also accept: marine organisms evolved for very specific conditions, so even small shifts can disrupt shell-building, reproduction, and survival.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>5. In the shell dissolution experiment, the vinegar caused dramatic damage. Real ocean acidification is much slower and milder. Why might a slow, steady change be <em>more</em> dangerous to reefs than a sudden one?</strong><br>
+    <em>Hint: Think about whether organisms can adapt, and how long reef-building takes.</em><br>
+    <span class="discussion-hint">They might say: A slow change is sneaky — it's hard to notice until the damage is severe. Coral reefs take hundreds of years to grow, so they can't rebuild fast enough to keep up. Also, organisms may not "realize" they need to adapt because the change is so gradual. Multiple valid answers here.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>6. How does burning fossil fuels — which happens on land — end up affecting coral reefs deep under the ocean? Trace the path from a car's exhaust pipe to a coral polyp.</strong><br>
+    <span class="discussion-hint">Look for the chain: Car burns gasoline → CO₂ released into the air → ocean absorbs CO₂ from the atmosphere → CO₂ dissolves in seawater and forms carbonic acid → ocean pH drops → acid makes it harder for coral to build calcium carbonate skeletons → reef weakens and dissolves.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>7. If you were a marine biologist, what would you recommend to protect coral reefs? Think of at least two actions — one that addresses the root cause and one that helps reefs survive in the meantime.</strong><br>
+    <span class="discussion-hint">Look for: Root cause — reduce CO₂ emissions (use renewable energy, drive less, etc.). Meanwhile — create marine protected areas, ban destructive fishing, grow coral in nurseries and transplant them, reduce pollution runoff. Accept any reasonable pair of ideas.</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌡️ <strong>Temperature and Bleaching:</strong> Research coral bleaching events. What temperature triggers bleaching? Design an experiment to test how temperature affects zooxanthellae (using warm water and aquarium plants as a model).</li>
+      <li>📊 <strong>Long-Term Data:</strong> Check your shell dissolution jars every 24 hours for a week. Measure and weigh the shells each day (if you have a kitchen scale). Graph the mass loss over time. Does it slow down or speed up?</li>
+      <li>🗺️ <strong>Reef Mapping:</strong> Research the world's major coral reef systems (Great Barrier Reef, Mesoamerican Reef, Coral Triangle). Plot them on a world map. What do they have in common? Why are reefs found where they are?</li>
+      <li>🎨 <strong>Scientific Illustration:</strong> Choose one reef organism and create a detailed scientific illustration. Label its adaptations for reef life. Write a paragraph about its role in the ecosystem.</li>
+      <li>📝 <strong>Write a Food Web Story:</strong> Choose a path through your food web from a producer to a top predator. Write a narrative following the energy as it moves from organism to organism.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is Lesson 1 of 4</strong> in the Ocean Explorers unit. Future lessons cover the deep sea (bioluminescence, pressure), tidal zones (adaptation, engineering), and ocean conservation (data analysis, persuasive writing).</li>
+      <li><strong>Cabbage indicator prep:</strong> You can make the indicator juice a day ahead and refrigerate it — it keeps for about a week. If using dehydrated flakes from the kit, use the full packet. The liquid should be a rich, deep purple.</li>
+      <li><strong>pH testing tips:</strong> Tap water pH varies by region (typically 6.5–8.5). Your "ocean water" simulation won't perfectly match real ocean pH (8.1), but it should test slightly basic. If it doesn't, add a tiny pinch of baking soda.</li>
+      <li><strong>Shell dissolution timeline:</strong> In full-strength vinegar, you'll see bubbling immediately. After 24 hours, chalk will be noticeably smaller or crumbly. Shells take 2–3 days for visible erosion. For faster results, use warm vinegar.</li>
+      <li><strong>Zooxanthellae pronunciation:</strong> It's a mouthful! Practice saying "zoh-uh-zan-THEL-ee" a few times. Kids love learning impressive science words — don't skip this one.</li>
+      <li><strong>Food web cards:</strong> If you don't have the kit cards, you can make your own on index cards. Include: phytoplankton, zooplankton, seaweed, zooxanthellae/coral, sea urchin, parrotfish, clownfish, sea anemone, jellyfish, starfish, moray eel, octopus, sea turtle, grouper, reef shark, and sea cucumber (decomposer).</li>
+      <li><strong>Gifted learner note:</strong> This lesson is designed for a student working above grade level. Encourage deeper inquiry — ask "why" and "how do you know" frequently. The logarithmic nature of the pH scale is a great opportunity to introduce that concept if the student is ready.</li>
+      <li><strong>Assessment:</strong> Can the student explain why coral is an animal, not a plant? Can they describe at least two types of symbiosis with reef examples? Can they connect CO₂ emissions to ocean acidification to coral damage?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🐠 Student Worksheet — The Coral Kingdom 🪸</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background: #00B894;">🕸️ Part 1: Coral Reef Food Web</h2>
+    <p><strong>Draw your food web in the space below. Place producers at the bottom, primary consumers in the middle, secondary consumers above, and top predators at the top. Draw arrows showing the direction energy flows (from prey → predator).</strong></p>
+    <div class="food-web-box">
+      <p style="font-size: 9pt; color: #666;">Include at least 10 organisms. Label each one. Draw arrows from the organism being eaten TO the organism eating it (energy flow direction).</p>
+      <p style="font-size: 9pt; color: #666; margin-top: 5px;"><strong>Producers:</strong> phytoplankton, seaweed, zooxanthellae &nbsp;|&nbsp; <strong>Primary consumers:</strong> zooplankton, sea urchin, parrotfish &nbsp;|&nbsp; <strong>Secondary consumers:</strong> octopus, moray eel, sea turtle &nbsp;|&nbsp; <strong>Top predators:</strong> reef shark &nbsp;|&nbsp; <strong>Decomposers:</strong> sea cucumber, bacteria</p>
+    </div>
+
+    <p><strong>The Disappearing Species:</strong> Which organism did you remove? ________________________________</p>
+    <p><strong>What happened to the food web?</strong></p>
+    <div class="notes-lines"><p></p><p></p><p></p></div>
+
+    <h2 style="background: #00B894;">⚗️ Part 2: pH Testing Data</h2>
+    <p><strong>Predictions:</strong> Rank the solutions from most acidic to most basic <em>before</em> testing:</p>
+    <p>Most acidic → ______________ → ______________ → ______________ ← Most basic</p>
+
+    <table class="data-table">
+      <tr>
+        <th style="width: 22%;">Solution</th>
+        <th style="width: 26%;">Cabbage Indicator Color</th>
+        <th style="width: 22%;">pH Strip Reading</th>
+        <th style="width: 30%;">Acidic, Neutral, or Basic?</th>
+      </tr>
+      <tr><td>Simulated ocean water</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Tap water</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Vinegar</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Baking soda water (bonus)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Other: __________</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <p><strong>Did your predictions match? What surprised you?</strong></p>
+    <div class="notes-lines"><p></p><p></p></div>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #00B894;">🐚 Part 3: Shell Dissolution Observations</h2>
+
+    <table class="data-table">
+      <tr>
+        <th style="width: 22%;">Observation</th>
+        <th style="width: 26%;">Ocean Water Jar</th>
+        <th style="width: 26%;">Tap Water Jar</th>
+        <th style="width: 26%;">Vinegar Jar</th>
+      </tr>
+      <tr><td>Immediate (0 min)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>After 10 minutes</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>After 24 hours</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>After 48 hours (optional)</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <p><strong>Describe what happened to the chalk in the vinegar jar. What were the bubbles?</strong></p>
+    <div class="notes-lines"><p></p><p></p><p></p></div>
+
+    <h2 style="background: #00B894;">🤔 Part 4: Analysis Questions</h2>
+
+    <div class="question-box">
+      <strong>1. Coral polyps are animals, but they depend on zooxanthellae (algae) for most of their energy. Explain this relationship using the word "mutualism."</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. Look at your food web drawing. Choose one organism and explain what would happen to <em>at least two other species</em> if it disappeared.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. The ocean's pH has dropped from 8.2 to 8.1. Your shell experiment used vinegar (pH ~2.4). Why did scientists use stronger acid in experiments like yours, even though the real change is much smaller?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>4. Trace the path: How does CO₂ from a car's exhaust end up affecting a coral reef? Write the chain of events.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>5. Name all three types of symbiosis and give one coral reef example of each.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3 style="color: #333; margin-top: 15px;">Expected pH Results</h3>
+      <table class="data-table" style="font-size: 10pt;">
+        <tr>
+          <th>Solution</th>
+          <th>Expected Cabbage Color</th>
+          <th>Expected pH</th>
+          <th>Classification</th>
+        </tr>
+        <tr><td>Simulated ocean water</td><td style="background: white;">Blue-purple to blue</td><td style="background: white;">7.5–8.5</td><td style="background: white;">Slightly basic</td></tr>
+        <tr><td>Tap water</td><td style="background: white;">Purple (may lean blue or pink)</td><td style="background: white;">6.5–8.5 (varies by region)</td><td style="background: white;">Near neutral</td></tr>
+        <tr><td>Vinegar</td><td style="background: white;">Bright red/pink</td><td style="background: white;">2.0–3.0</td><td style="background: white;">Strongly acidic</td></tr>
+        <tr><td>Baking soda water</td><td style="background: white;">Blue-green to green</td><td style="background: white;">8.5–9.5</td><td style="background: white;">Basic</td></tr>
+      </table>
+      <p><em>Note: Tap water pH varies significantly by city and water treatment. If your tap water tests slightly acidic or basic, that's normal — discuss why with your student (minerals, treatment chemicals).</em></p>
+
+      <h3 style="color: #333; margin-top: 18px;">Food Web Sample Answers</h3>
+      <p><strong>Removing parrotfish:</strong> Algae would grow unchecked and smother coral (parrotfish eat algae). Predators like moray eels and reef sharks lose a food source. With less coral, all the species that depend on coral for shelter (clownfish, small reef fish) would decline too.</p>
+      <p><strong>Removing phytoplankton:</strong> This is the most disruptive — phytoplankton are a foundational producer. Zooplankton starve, then everything up the chain collapses. Almost every organism in the web is affected.</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Analysis Question Answers</h3>
+
+      <p><strong>Q1 (Coral-zooxanthellae mutualism):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Coral polyps and zooxanthellae have a mutualism relationship — both species benefit. The zooxanthellae live inside the coral's tissue and use photosynthesis to make food, sharing up to 90% of the energy with the coral. In return, the coral gives the zooxanthellae a safe home and provides nutrients like nitrogen and phosphorus. Neither does as well alone."</p>
+
+      <p><strong>Q2 (Disappearing species):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">Accept any answer that correctly traces at least two effects through the food web. Look for understanding that impacts go both "up" (predators lose food) and "down" (prey populations may explode).</p>
+
+      <p><strong>Q3 (Why use strong acid in experiments):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Scientists use stronger acid so we can see the effects in minutes instead of waiting years. The real ocean change is slow — pH dropped only 0.1 units over 200+ years — but the chemical process is the same. The experiment speeds up time so we can observe what would normally happen over decades." If your child recognizes this is a model/simulation, that's excellent scientific thinking.</p>
+
+      <p><strong>Q4 (CO₂ to coral pathway):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">Car burns gasoline → CO₂ released into atmosphere → atmosphere mixes globally → ocean surface absorbs CO₂ → CO₂ + seawater = carbonic acid → ocean pH drops → acid dissolves calcium carbonate → coral skeletons weaken and dissolve → reef ecosystem declines.</p>
+
+      <p><strong>Q5 (Three types of symbiosis):</strong></p>
+      <ul style="margin-left: 20px; font-style: italic;">
+        <li><strong>Mutualism:</strong> Clownfish and sea anemone (both benefit) OR coral and zooxanthellae</li>
+        <li><strong>Commensalism:</strong> Remora fish riding on sharks (remora benefits, shark unaffected)</li>
+        <li><strong>Parasitism:</strong> Isopods on fish gills (parasite benefits, fish is harmed)</li>
+      </ul>
+      <p style="margin-left: 20px;">Accept any correct reef examples. If your child names different examples they researched, even better!</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Shell Dissolution Expected Results</h3>
+      <ul>
+        <li><strong>Immediate:</strong> Vinegar jar — vigorous bubbling on chalk and shell surfaces (CO₂ gas releasing). Ocean and tap water jars — no visible change.</li>
+        <li><strong>10 minutes:</strong> Vinegar jar — chalk surface becoming soft/powdery, shell surface slightly rough, coral sand dissolving. Other jars — unchanged.</li>
+        <li><strong>24 hours:</strong> Vinegar jar — chalk significantly smaller or dissolved into mush, shell noticeably thinner/rougher, coral sand mostly dissolved. Other jars — no change.</li>
+        <li><strong>48 hours:</strong> Vinegar jar — chalk may be completely dissolved, shell very thin and fragile.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Troubleshooting</h3>
+      <ul>
+        <li><strong>Cabbage indicator is too faint:</strong> Use more cabbage flakes or boil longer. The liquid should be deeply pigmented — nearly opaque purple.</li>
+        <li><strong>No bubbling in vinegar jar:</strong> Make sure you're using real seashells (not plastic/resin decorations) and regular chalk (not oil pastels). The bubbling should be visible within seconds.</li>
+        <li><strong>pH strips not matching cabbage color:</strong> pH strips are more precise. Use the strips for data recording and the cabbage for the visual "wow" factor. Some variation is normal.</li>
+        <li><strong>Ocean water tests the same as tap:</strong> Add a tiny pinch of baking soda to bring the pH up slightly. Real ocean water would test around 8.1.</li>
+        <li><strong>Child struggling with "zooxanthellae":</strong> Practice together! Break it down: "zoo-zan-THEL-ee." Make it fun — it's one of the longest words in biology.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Success Criteria</h3>
+      <ul>
+        <li>Student can explain that coral polyps are animals, not plants, and describe the zooxanthellae relationship.</li>
+        <li>Student drew a food web with at least 10 organisms, correct arrow direction, and proper trophic level placement.</li>
+        <li>Student recorded pH data accurately and can explain the difference between acidic, neutral, and basic.</li>
+        <li>Student can connect CO₂ emissions → ocean acidification → coral damage in their own words.</li>
+        <li>Student can name and define all three types of symbiosis with reef examples.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc__upB0x0Yogo" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

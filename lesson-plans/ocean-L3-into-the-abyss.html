@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Into the Abyss — Ocean Explorers Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #0984E3;
+      padding-bottom: 10px;
+      color: #0984E3;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #E8F4FD;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #74B9FF;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #0984E3;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0652DD;
+      border-bottom: 2px solid #74B9FF;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .inline-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .inline-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .inline-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #E8F4FD;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #0984E3;
+    }
+    .procedure-step strong { color: #0652DD; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .safety-box {
+      background: #fff3e0;
+      border-left: 5px solid #ff9800;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .vocab-table th {
+      background: #0984E3;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .vocab-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+    .vocab-table tr:nth-child(even) { background: #E8F4FD; }
+    .vocab-table td:first-child { font-weight: bold; color: #0652DD; white-space: nowrap; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #74B9FF;
+      font-weight: bold;
+      color: #0652DD;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #E8F4FD; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .science-concept {
+      background: #E8F4FD;
+      border: 2px solid #74B9FF;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+    }
+    .science-concept h3 { margin-top: 0; }
+    .discussion-hint { font-style: italic; color: #666; font-size: 0.95em; margin-top: 2px; }
+    .zone-diagram-box {
+      border: 2px dashed #0984E3;
+      min-height: 350px;
+      margin: 10px 0;
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    .creature-design-box {
+      border: 2px dashed #0984E3;
+      min-height: 280px;
+      margin: 10px 0;
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .science-concept, .safety-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌊 Into the Abyss 🔦</h1>
+  <p class="subtitle">Ocean Explorers — Lesson 3 of 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 60–90 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physics, Life Science &amp; Earth Science — Ocean Zones</span>
+    <span>🎒 <strong>Kit Lesson</strong></span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/ocean-unit/anglerfish-abyss.png" alt="A deep-sea anglerfish with its bioluminescent lure glowing in the pitch-black abyss">
+    <div class="caption">An anglerfish hunts in total darkness, using its bioluminescent lure to attract prey in the midnight zone.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>5-PS1-3</strong> — Make observations and measurements to identify materials based on their properties<br>
+    <strong>4-PS4-2</strong> — Develop a model to describe that light reflecting from objects and entering the eye allows objects to be seen<br>
+    <strong>5-LS1-1</strong> — Support an argument that plants get the materials they need for growth chiefly from air and water<br><br>
+    <strong>Cross-Cutting Concepts:</strong> Scale, Proportion, and Quantity; Energy and Matter; Cause and Effect
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>The ocean isn't one uniform body of water — it's a stack of wildly different worlds layered on top of each other. Near the surface, sunlight floods in and life explodes with color. But go deeper and the light fades, the temperature drops, and the pressure crushes. By the time you reach the abyssal and hadal zones, you're in a world of permanent darkness, near-freezing cold, and pressures that would crush a submarine. Yet even here, life thrives — bizarre, beautiful creatures that make their own light, survive without sunlight, and have evolved adaptations so extreme they look like science fiction. In this lesson, you'll explore all five ocean zones, investigate how pressure and light change with depth, build a bioluminescent creature, and discover why the deep ocean is one of the most alien environments on Earth.</p>
+
+  <h2>🔬 The Science</h2>
+
+  <div class="science-concept">
+    <h3>🌅 The Five Ocean Zones</h3>
+    <p>Scientists divide the ocean into five major zones based on depth, light, and temperature. Each zone has distinct conditions and creatures adapted to survive there.</p>
+    <ul>
+      <li><strong>Epipelagic (Sunlit) Zone: 0–200 m (0–656 ft)</strong> — This is where sunlight penetrates and photosynthesis happens. It's warm, bright, and packed with life: phytoplankton, coral reefs, sea turtles, dolphins, tuna, and most of the fish you know. Only about 2.5% of the ocean's total volume, but home to the vast majority of marine life.</li>
+      <li><strong>Mesopelagic (Twilight) Zone: 200–1,000 m (656–3,280 ft)</strong> — Dim, filtered light reaches here but not enough for photosynthesis. Temperature drops sharply. This is where bioluminescence becomes common — lanternfish, hatchetfish, and jellyfish all glow. Many creatures here migrate to the surface at night to feed and return to the dark by day.</li>
+      <li><strong>Bathypelagic (Midnight) Zone: 1,000–4,000 m (3,280–13,123 ft)</strong> — Total darkness. No sunlight reaches here at all. Water temperature hovers around 4°C (39°F). The anglerfish, giant squid, and vampire squid call this zone home. Food is scarce — creatures survive on "marine snow" (dead organisms and waste drifting down from above) or by eating each other.</li>
+      <li><strong>Abyssal Zone: 4,000–6,000 m (13,123–19,685 ft)</strong> — The vast, flat abyssal plains cover more than 50% of Earth's surface. Near-freezing temperatures, crushing pressure, and zero light. Yet hydrothermal vents on the ocean floor support thriving ecosystems powered by <strong>chemosynthesis</strong>, not sunlight. Giant tube worms, vent shrimp, and ghostly white crabs cluster around these volcanic chimneys.</li>
+      <li><strong>Hadal Zone: 6,000–11,000 m (19,685–36,089 ft)</strong> — The deepest trenches on Earth. The Mariana Trench reaches 10,935 m (35,876 ft) — deeper than Mount Everest is tall. Only a few organisms survive here: tiny amphipods, sea cucumbers, and the snailfish — the deepest-living fish ever recorded at 8,178 m. The pressure at the bottom of the Mariana Trench is over 1,000 times atmospheric pressure at sea level.</li>
+    </ul>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/ocean-zones-diagram.png" alt="Watercolor illustration of the five ocean zones showing representative creatures at each depth level">
+    <div class="caption">The five ocean zones — from the sunlit surface to the crushing depths of the hadal trenches.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>💡 Bioluminescence: Living Light</h3>
+    <p>In the deep ocean, there's no sunlight — but that doesn't mean there's no light. An estimated <strong>90% of deep-sea creatures</strong> produce their own light through a chemical process called <strong>bioluminescence</strong>. Here's how it works: a molecule called <strong>luciferin</strong> reacts with oxygen, and an enzyme called <strong>luciferase</strong> speeds up the reaction. The result? Light — with almost no heat.</p>
+    <p>Animals use bioluminescence for different purposes:</p>
+    <ul>
+      <li><strong>Hunting:</strong> The anglerfish dangles a glowing lure from its head to attract curious prey right to its enormous mouth.</li>
+      <li><strong>Defense:</strong> Some squid squirt bioluminescent ink to confuse predators. Others flash bright light to startle attackers — like shining a flashlight in someone's eyes in a dark room.</li>
+      <li><strong>Communication:</strong> Lanternfish have species-specific patterns of light organs along their bodies, helping them find mates in the dark.</li>
+      <li><strong>Camouflage:</strong> Some fish produce light on their undersides to match the faint glow from above, making them invisible to predators looking up from below. This is called <strong>counter-illumination</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/bioluminescent-jellyfish.png" alt="Ethereal bioluminescent jellyfish glowing blue and purple in the dark ocean">
+    <div class="caption">Bioluminescent jellyfish drift through the twilight and midnight zones, producing their own ghostly light.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>⬇️ Pressure: The Weight of Water</h3>
+    <p>At sea level, the atmosphere pushes down on you with a force of about 14.7 pounds per square inch (1 atmosphere, or 1 ATM). You don't feel it because your body pushes back with equal force. But water is much heavier than air. For every 10 meters (33 feet) you descend in the ocean, the pressure increases by 1 ATM — the weight of the entire water column above you is pressing down.</p>
+    <ul>
+      <li>At the surface: 1 ATM</li>
+      <li>At 100 m (scuba diving limit): 11 ATM</li>
+      <li>At 1,000 m (twilight zone): 101 ATM</li>
+      <li>At 4,000 m (midnight zone): 401 ATM</li>
+      <li>At 10,000 m (hadal zone): 1,001 ATM</li>
+    </ul>
+    <p>At the bottom of the Mariana Trench, the pressure is like balancing 50 jumbo jets on top of you. A sealed Styrofoam cup sent to that depth would be crushed to the size of a thimble — all the air pockets squeezed out. Deep-sea creatures survive because their bodies have no air spaces. They don't have swim bladders (air-filled organs that help shallow fish float). Their cells are filled with liquid, and liquids barely compress at all.</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>🌈 Light Penetration: Why the Deep Ocean Is Dark</h3>
+    <p>Sunlight is made of all the colors of the rainbow, and each color has a different wavelength. When sunlight enters the ocean, water absorbs these wavelengths one by one — starting with the longest wavelengths first:</p>
+    <ul>
+      <li><strong>Red light</strong> is absorbed within the first 10–20 m</li>
+      <li><strong>Orange</strong> disappears by about 40 m</li>
+      <li><strong>Yellow</strong> fades by about 100 m</li>
+      <li><strong>Green</strong> penetrates to about 150 m</li>
+      <li><strong>Blue light</strong> travels the deepest — down to about 200 m before it too fades away</li>
+    </ul>
+    <p>This is why the ocean looks blue from the surface — blue light scatters and reflects the most before being absorbed. It's also why underwater photos taken deep without artificial light look entirely blue or blue-green. Below 200 m, there's no usable sunlight left. Below 1,000 m, it's as dark as the inside of a cave — forever.</p>
+  </div>
+
+  <div class="science-concept">
+    <h3>🌋 Hydrothermal Vents: Life Without Sunlight</h3>
+    <p>In 1977, scientists exploring the ocean floor near the Galapagos Islands made one of the greatest discoveries in biology: thriving ecosystems 2,500 m deep, in total darkness, clustered around cracks in the ocean floor where superheated water (up to 400°C / 750°F) gushes out. These are <strong>hydrothermal vents</strong>.</p>
+    <p>The water pouring from these vents is loaded with chemicals like hydrogen sulfide. Special bacteria called <strong>chemosynthetic bacteria</strong> use these chemicals — instead of sunlight — to produce food. This process is called <strong>chemosynthesis</strong>, and it's the foundation of entire ecosystems that exist completely independently of the sun. Giant tube worms (up to 2 m long) have no mouth, no stomach, and no eyes — they rely entirely on chemosynthetic bacteria living inside their bodies. Vent shrimp, white crabs, and mussels crowd around the vents, forming communities as dense as a coral reef.</p>
+    <p>This discovery changed everything scientists thought about where life could exist. If life can thrive without sunlight at the bottom of the ocean, maybe it could exist on other worlds too — like Jupiter's moon Europa, which may have a liquid ocean beneath its icy crust.</p>
+  </div>
+
+  <div class="inline-image">
+    <img src="images/ocean-unit/hydrothermal-vent.png" alt="Watercolor illustration of a deep-sea hydrothermal vent ecosystem with tube worms, vent shrimp, and a black smoker chimney">
+    <div class="caption">A hydrothermal vent ecosystem — giant tube worms and vent shrimp thrive in total darkness, powered by chemosynthesis.</div>
+  </div>
+
+  <div class="science-concept">
+    <h3>🦑 Extreme Adaptations</h3>
+    <p>Deep-sea creatures have evolved remarkable adaptations to survive in their extreme environment:</p>
+    <ul>
+      <li><strong>No swim bladder:</strong> Shallow fish use gas-filled swim bladders to control buoyancy. At depth, gas compresses to nothing. Deep-sea fish use oil droplets or watery, gelatinous bodies instead.</li>
+      <li><strong>Huge eyes or no eyes:</strong> In the twilight zone, some fish have enormous eyes to capture every last photon of light. In total darkness, some species have lost their eyes entirely — they're useless where there's nothing to see.</li>
+      <li><strong>Expandable stomachs:</strong> Food is so scarce in the deep that when a meal comes along, you'd better eat it all. The black swallower can eat prey more than twice its own size, stretching its stomach like a balloon.</li>
+      <li><strong>Flexible bodies:</strong> Without rigid bones, deep-sea fish can withstand crushing pressure. Many have soft, gelatinous bodies — the blobfish, for example, is actually a normal-looking fish at depth, but turns to mush at the surface where pressure is low.</li>
+      <li><strong>Slow metabolism:</strong> In the cold, dark deep, energy conservation is critical. Deep-sea creatures often have extremely slow metabolisms, moving slowly and living for decades or even centuries.</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary</strong>
+    <table class="vocab-table">
+      <tr><th>Term</th><th>Definition</th></tr>
+      <tr><td>Epipelagic zone</td><td>The sunlit surface layer (0–200 m) where photosynthesis occurs</td></tr>
+      <tr><td>Mesopelagic zone</td><td>The twilight zone (200–1,000 m) with dim light and common bioluminescence</td></tr>
+      <tr><td>Bathypelagic zone</td><td>The midnight zone (1,000–4,000 m) in total darkness</td></tr>
+      <tr><td>Abyssal zone</td><td>The deep ocean floor (4,000–6,000 m) with hydrothermal vents</td></tr>
+      <tr><td>Hadal zone</td><td>The deepest ocean trenches (6,000–11,000 m)</td></tr>
+      <tr><td>Bioluminescence</td><td>The production of light by living organisms through a chemical reaction</td></tr>
+      <tr><td>Luciferin</td><td>The light-producing molecule in bioluminescent organisms</td></tr>
+      <tr><td>Photic zone</td><td>The upper ocean where enough sunlight penetrates for photosynthesis (same as epipelagic)</td></tr>
+      <tr><td>Chemosynthesis</td><td>Making food from chemical energy (not sunlight) — used by bacteria at hydrothermal vents</td></tr>
+      <tr><td>Hydrothermal vent</td><td>A crack in the ocean floor where superheated, mineral-rich water gushes out</td></tr>
+      <tr><td>Pressure</td><td>The force per unit area exerted by the water column above; increases with depth</td></tr>
+      <tr><td>Adaptation</td><td>A trait that helps an organism survive in its specific environment</td></tr>
+    </table>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧪 From Your Science Kit</h3>
+    <ul>
+      <li>4 glow sticks (assorted colors — green, blue, yellow, pink)</li>
+      <li>1 bottle of glow-in-the-dark paint (2 oz, non-toxic)</li>
+      <li>2 large syringes without needles (60 mL)</li>
+      <li>2 Styrofoam cups</li>
+      <li>5 sheets of colored cellophane (red, orange, yellow, green, blue)</li>
+      <li>Craft supplies: 6 pipe cleaners, 10 googly eyes, 2 sheets of felt (black and white), 2 sheets of tissue paper</li>
+      <li>1 sheet of black poster board (22" × 28")</li>
+    </ul>
+
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>1 flashlight (bright LED preferred)</li>
+      <li>4–6 mini marshmallows</li>
+      <li>1 tall clear jar or bottle (for ocean zones model)</li>
+      <li>Blue food coloring (optional, for zone layers)</li>
+      <li>Scissors, tape, and glue</li>
+      <li>Markers or colored pencils</li>
+      <li>A dark room or closet (for bioluminescence activities)</li>
+      <li>Pencil and printed Student Worksheet</li>
+    </ul>
+
+    <h3>🧰 Optional / Nice to Have</h3>
+    <ul>
+      <li>Clear corn syrup, vegetable oil, and water (for a density-layered zone jar)</li>
+      <li>Small plastic ocean creature toys (to place at different zone levels)</li>
+      <li>UV/blacklight flashlight (makes glow paint and some materials fluoresce)</li>
+      <li>Cotton balls (for building creature models)</li>
+    </ul>
+  </div>
+
+  <div class="safety-box">
+    ⚠️ <strong>Safety Notes:</strong> Glow sticks contain a mildly irritating liquid — do not cut them open or break the inner tube outside the plastic casing. If liquid leaks, wash skin with soap and water and avoid contact with eyes. Syringes are needleless and safe, but supervise younger children to prevent pinching fingers in the plunger. Glow-in-the-dark paint is non-toxic but may stain clothing — wear old clothes or an apron.
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Light Penetration Demo (10 min)</strong><br>
+    Take the flashlight and the five colored cellophane sheets to a dark room. Shine the flashlight at a wall — this represents sunlight entering the ocean surface. Now layer the red cellophane over the flashlight. What happened to the red light? It's mostly blocked — just like the ocean absorbs red light first, within the top 20 m. Add the orange sheet on top of the red. Then yellow. Then green. Finally, add the blue sheet. With all five layers, almost no light gets through — you've simulated the total darkness below 200 m. Now remove layers in reverse order (blue first) and watch the light return. Discuss: Why is the deep ocean dark? Why does the ocean appear blue from the surface?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Pressure Demo: The Shrinking Marshmallow (10 min)</strong><br>
+    Place a mini marshmallow inside the large syringe. Push the plunger in until it touches the marshmallow, then seal the tip with your finger (or cap it). Now pull the plunger <em>out</em> — watch the marshmallow expand as pressure decreases! Push the plunger in — the marshmallow compresses as pressure increases. This simulates what happens to objects with air pockets as they descend into the deep ocean. The deeper you go, the more pressure squeezes the air out. Ask: "Why don't deep-sea fish get crushed?" (They don't have air-filled spaces — their bodies are made of liquid and flexible materials that don't compress.)
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Bonus pressure demo:</strong> If you have a second Styrofoam cup, draw on it with markers, then look up videos of Styrofoam cups sent to the deep ocean on submersibles — they come back the size of a thimble! The same principle as the marshmallow: pressure crushes the air pockets in the Styrofoam. (You can't replicate deep-ocean pressure at home, but the syringe demo shows the concept beautifully.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Build an Ocean Zones Model (20 min)</strong><br>
+    Use the black poster board to create a vertical ocean zones poster. Divide it into five horizontal sections and label each zone with its name, depth range, and key features:
+    <ul>
+      <li><strong>Epipelagic (0–200 m):</strong> Draw or cut out sun rays, dolphins, sea turtles, coral, tuna</li>
+      <li><strong>Mesopelagic (200–1,000 m):</strong> Dimmer colors, draw jellyfish, lanternfish, swordfish, hatchetfish</li>
+      <li><strong>Bathypelagic (1,000–4,000 m):</strong> Black background, add anglerfish (with glow-in-the-dark paint for its lure!), giant squid, vampire squid</li>
+      <li><strong>Abyssal (4,000–6,000 m):</strong> Draw hydrothermal vents, tube worms, vent shrimp, tripod fish</li>
+      <li><strong>Hadal (6,000–11,000 m):</strong> Draw a trench shape, add amphipods, sea cucumbers, snailfish</li>
+    </ul>
+    Use the glow-in-the-dark paint to highlight bioluminescent creatures in the twilight and midnight zones. When you're done, take the poster into a dark room and watch the deep-sea creatures glow!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Design a Bioluminescent Creature (20 min)</strong><br>
+    You've learned how deep-sea creatures use light, survive crushing pressure, and find food in total darkness. Now it's your turn to invent one! Using the craft supplies (pipe cleaners, googly eyes, felt, tissue paper) and a glow stick for bioluminescence, design and build an imaginary deep-sea creature. As you build, think about:
+    <ul>
+      <li>Which ocean zone does it live in?</li>
+      <li>How does it use bioluminescence? (Hunting, defense, communication, or camouflage?)</li>
+      <li>What does it eat?</li>
+      <li>How does it handle the pressure?</li>
+      <li>Does it have eyes? How big?</li>
+    </ul>
+    Give your creature a scientific-sounding name. On the Student Worksheet, draw your creature with labeled adaptations and write a short "field guide" description. Then turn off the lights and show off your glowing creation!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Glow Stick Chemistry Connection (5 min)</strong><br>
+    Crack a glow stick and watch it light up. Explain: Inside the plastic tube are two chemicals separated by a thin glass vial. When you bend the stick, the glass breaks and the chemicals mix. One chemical is similar to <strong>luciferin</strong>, and the reaction produces light — just like in a bioluminescent jellyfish. Ask: "Does the glow stick feel hot?" (No — it barely produces any heat. Bioluminescence is the same way. Scientists call it "cold light" because almost all the energy goes into light, not heat. That's incredibly efficient!)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Discuss and Reflect (10 min)</strong><br>
+    Use the discussion questions below to explore what you've learned. Compare your ocean zones poster to the diagram in this lesson. Present your bioluminescent creature to a partner or family member — explain why it looks the way it does and how each adaptation helps it survive.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>1. Why do scientists divide the ocean into zones? What changes as you go deeper that makes each zone different?</strong><br>
+    <em>Think about at least three things that change with depth.</em><br>
+    <span class="discussion-hint">Look for at least three: light decreases (gone by 200 m), temperature drops (near freezing in the deep), pressure increases enormously, and food becomes scarcer. These changes create very different environments, so different organisms are adapted to each zone.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>2. About 90% of deep-sea creatures are bioluminescent. Why would making your own light be so important in a world of total darkness?</strong><br>
+    <span class="discussion-hint">They might say: In total darkness, light is incredibly useful — for luring prey (anglerfish), scaring predators (bright flashes), finding mates (lanternfish patterns), or camouflage (counter-illumination). Without any sunlight, making your own light is the only way to see or be seen. Multiple answers are valid here.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>3. Hydrothermal vent communities survive without any sunlight, using chemosynthesis instead of photosynthesis. How is chemosynthesis similar to photosynthesis? How is it different?</strong><br>
+    <em>Hint: Think about what goes in and what comes out of each process.</em><br>
+    <span class="discussion-hint">Look for: Both produce food (sugars) for organisms and both use CO₂ and water. The difference is the energy source — photosynthesis uses sunlight, chemosynthesis uses chemical energy from hydrogen sulfide or other minerals. Photosynthesis produces oxygen; chemosynthesis does not. Photosynthesis needs the sun; chemosynthesis can happen in total darkness.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>4. Could life exist on other planets or moons without sunlight? Use what you learned about hydrothermal vents to support your argument.</strong><br>
+    <span class="discussion-hint">Look for: Yes! Hydrothermal vents prove that life doesn't need sunlight — just chemical energy, water, and the right conditions. Jupiter's moon Europa may have a liquid ocean under its ice with hydrothermal vents on the ocean floor. If life thrives in Earth's deep ocean without sunlight, similar life could exist on Europa or Saturn's moon Enceladus.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>5. The blobfish looks like a saggy, sad blob in photos taken at the surface. But at its natural depth (1,000+ m), it looks like a normal fish. Why does it change shape so dramatically when brought to the surface?</strong><br>
+    <em>Think about what happens to its body when pressure decreases.</em><br>
+    <span class="discussion-hint">Look for: At depth, enormous water pressure compresses the blobfish's soft, gelatinous body into a normal fish shape. When brought to the surface where pressure is much lower, its body expands and loses structure — like taking a balloon out of a vacuum. Its body evolved for high pressure, not low pressure.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>6. How do scientists explore the deep ocean? Why can't humans simply dive down to the hadal zone? What technologies make deep-sea exploration possible?</strong><br>
+    <span class="discussion-hint">They might say: The pressure would crush a human body and any normal vessel. Scientists use submersibles (like Alvin or Deepsea Challenger), ROVs (remotely operated vehicles), and autonomous underwater vehicles. Challenges include crushing pressure, total darkness, freezing cold, and no communication via radio waves underwater.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>7. What Earth environments share conditions with the deep ocean (darkness, extreme pressure, extreme temperatures)? What kinds of organisms live there?</strong><br>
+    <em>Think about caves, deep underground, polar ice caps, and volcanic areas.</em><br>
+    <span class="discussion-hint">Look for: Deep caves (darkness, isolated ecosystems with blind cave fish), deep underground rock (bacteria that live in rock pores), polar ice (organisms in near-freezing water under ice), hot springs and volcanic vents on land (thermophilic bacteria). The common thread: extremophiles — organisms adapted to conditions that seem impossible for life.</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🎬 <strong>Deep Sea Documentary:</strong> Watch clips from "Blue Planet II" (Episode 2: The Deep) or "Life in the Deep" and identify which ocean zone each creature lives in. Pause and predict adaptations before the narrator explains them.</li>
+      <li>📏 <strong>Scale Model:</strong> The ocean is 11 km deep at its deepest point. If you used a roll of toilet paper (about 45 m of paper), each sheet would represent about 110 m. Mark the zone boundaries and tape creature drawings at the correct depths. Unroll it down a hallway for dramatic effect!</li>
+      <li>🧮 <strong>Pressure Math:</strong> Calculate the pressure at each zone boundary in ATM. At what depth would the pressure reach 500 ATM? 1,000 ATM? Graph pressure vs. depth — what kind of relationship do you see? (Linear!)</li>
+      <li>🔬 <strong>Bioluminescence Research:</strong> Investigate how scientists are using bioluminescence in medicine (GFP — green fluorescent protein — won the Nobel Prize in 2008). How do researchers use glowing proteins to track diseases inside living cells?</li>
+      <li>🌋 <strong>Vent Ecosystems:</strong> Research the "black smokers" and "white smokers" at hydrothermal vents. What minerals do they deposit? Why do some scientists believe life on Earth may have originated at hydrothermal vents?</li>
+      <li>🎨 <strong>Deep-Sea Field Guide:</strong> Create a mini field guide for five real deep-sea creatures. For each one, include a drawing, its zone, depth range, diet, and one amazing adaptation.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is Lesson 3 of 4</strong> in the Ocean Explorers unit. Lesson 1 covered coral reef ecosystems and ocean chemistry. Lesson 2 explored tidal zones. Lesson 4 will focus on ocean conservation, data analysis, and persuasive writing.</li>
+      <li><strong>The light penetration demo works best</strong> in a very dark room. A closet or bathroom with the lights off is ideal. If your cellophane sheets are thin, double them up for a more dramatic effect. The key observation: layering filters progressively blocks light, simulating depth.</li>
+      <li><strong>Marshmallow syringe tip:</strong> The effect is most dramatic when you pull the plunger OUT (decreasing pressure, marshmallow expands) rather than pushing IN (compressing). For compression, you need a very tight seal — cap the tip firmly with your thumb or use a syringe cap. If air leaks, the marshmallow won't shrink much.</li>
+      <li><strong>Glow-in-the-dark paint needs charging.</strong> Hold the poster under a bright light for 30–60 seconds before taking it into the dark room. The glow fades after a few minutes — this is a great teaching moment about energy storage and release.</li>
+      <li><strong>Creature design is the highlight.</strong> Give kids creative freedom here. There are no wrong answers as long as they can explain their design choices. The worksheet asks them to connect each feature to a survival advantage — this is the real learning.</li>
+      <li><strong>Common misconception:</strong> Kids often think deep-sea fish are huge. In reality, most are small (under 30 cm) because food is so scarce. Giant squid are the exception, not the rule. The "giant" creatures get all the attention, but tiny organisms dominate the deep.</li>
+      <li><strong>Chemosynthesis vs. photosynthesis:</strong> Both processes produce food (glucose) for organisms. Photosynthesis uses sunlight + CO₂ + water. Chemosynthesis uses chemical energy (hydrogen sulfide) + CO₂ + water. The key insight for students: sunlight is NOT required for life. This is a paradigm-shifting concept!</li>
+      <li><strong>Gifted learner note:</strong> Push the pressure math if your student is ready. The relationship is beautifully linear: P = 1 + (depth in meters / 10). At 10,000 m, P = 1,001 ATM. This connects math to a visceral, physical concept.</li>
+      <li><strong>Assessment:</strong> Can the student name all five zones in order with approximate depths? Can they explain why the deep ocean is dark (light wavelength absorption)? Can they describe bioluminescence and give two uses? Can they contrast chemosynthesis with photosynthesis?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌊 Student Worksheet — Into the Abyss 🔦</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background: #0984E3;">🌊 Part 1: Ocean Zones Diagram</h2>
+    <p><strong>Label each zone with its name (scientific and common), depth range, temperature description, and at least two creatures that live there.</strong></p>
+    <div class="zone-diagram-box">
+      <table class="data-table" style="width: 100%;">
+        <tr>
+          <th style="width: 22%;">Zone Name</th>
+          <th style="width: 18%;">Depth Range</th>
+          <th style="width: 15%;">Light Level</th>
+          <th style="width: 45%;">Creatures (at least 2)</th>
+        </tr>
+        <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+        <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+        <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+        <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+        <tr><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      </table>
+    </div>
+
+    <h2 style="background: #0984E3;">⬇️ Part 2: Pressure Calculations</h2>
+    <p><strong>Pressure increases by 1 ATM for every 10 meters of depth. Complete the table.</strong></p>
+    <table class="data-table">
+      <tr>
+        <th style="width: 25%;">Depth</th>
+        <th style="width: 25%;">Pressure (ATM)</th>
+        <th style="width: 50%;">What Could Survive Here?</th>
+      </tr>
+      <tr><td>0 m (surface)</td><td style="background: white;">1</td><td style="background: white;"></td></tr>
+      <tr><td>10 m</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>100 m</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>1,000 m</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>4,000 m</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>10,000 m</td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <p><strong>At what depth would the pressure reach 500 ATM?</strong> _____________ m</p>
+    <p><strong>Describe what happened to the marshmallow when you pushed the plunger in. Why?</strong></p>
+    <div class="notes-lines"><p></p><p></p><p></p></div>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #0984E3;">🌈 Part 3: Light Wavelength Chart</h2>
+    <p><strong>Fill in the depth at which each color of light is absorbed by the ocean.</strong></p>
+    <table class="data-table">
+      <tr>
+        <th style="width: 20%;">Color</th>
+        <th style="width: 25%;">Approximate Depth Absorbed</th>
+        <th style="width: 20%;">Order Absorbed (1 = first)</th>
+        <th style="width: 35%;">What You Observed with Cellophane</th>
+      </tr>
+      <tr><td>Red</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Orange</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Yellow</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Green</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+      <tr><td>Blue</td><td style="background: white;"></td><td style="background: white;"></td><td style="background: white;"></td></tr>
+    </table>
+
+    <p><strong>Why does the ocean look blue from the surface?</strong></p>
+    <div class="notes-lines"><p></p><p></p></div>
+
+    <h2 style="background: #0984E3;">🦑 Part 4: Design Your Deep-Sea Creature</h2>
+    <p><strong>Draw your imaginary deep-sea creature below. Label each adaptation and explain how it helps the creature survive.</strong></p>
+    <div class="creature-design-box">
+      <p style="font-size: 9pt; color: #666;">Include labels for: bioluminescence (how and why it glows), body shape, eyes, mouth, how it handles pressure, and how it finds food.</p>
+    </div>
+
+    <p><strong>Creature name:</strong> ________________________________________</p>
+    <p><strong>Ocean zone:</strong> _________________________ <strong>Depth:</strong> _______________ m</p>
+    <p><strong>Diet (what does it eat?):</strong></p>
+    <div class="notes-lines"><p></p></div>
+    <p><strong>How does it use bioluminescence?</strong></p>
+    <div class="notes-lines"><p></p><p></p></div>
+    <p><strong>Describe two adaptations that help it survive at this depth:</strong></p>
+    <div class="notes-lines"><p></p><p></p><p></p></div>
+
+    <div class="page-break"></div>
+
+    <h2 style="background: #0984E3;">🤔 Part 5: Analysis Questions</h2>
+
+    <div class="question-box">
+      <strong>1. Compare photosynthesis and chemosynthesis. What do they have in common? What is different?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. The vampire squid has the largest eyes relative to its body size of any animal. It lives in the twilight and midnight zones. Why would having huge eyes be an advantage there?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. Giant tube worms at hydrothermal vents have no mouth and no stomach. How do they get food? Explain using the term "chemosynthesis."</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>4. Only three people have ever visited the bottom of the Mariana Trench. Why is deep-ocean exploration so difficult and dangerous? Name at least three challenges.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>5. If you could send one message to scientists based on what you've learned in this lesson, what question would you most want them to answer about the deep ocean? Explain why.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3 style="color: #333; margin-top: 15px;">Part 1: Ocean Zones</h3>
+      <table class="data-table" style="font-size: 10pt;">
+        <tr>
+          <th>Zone</th>
+          <th>Depth</th>
+          <th>Light</th>
+          <th>Sample Creatures</th>
+        </tr>
+        <tr><td>Epipelagic (Sunlit)</td><td style="background: white;">0–200 m</td><td style="background: white;">Full sunlight</td><td style="background: white;">Dolphins, sea turtles, tuna, coral, phytoplankton</td></tr>
+        <tr><td>Mesopelagic (Twilight)</td><td style="background: white;">200–1,000 m</td><td style="background: white;">Dim, fading</td><td style="background: white;">Jellyfish, lanternfish, hatchetfish, swordfish</td></tr>
+        <tr><td>Bathypelagic (Midnight)</td><td style="background: white;">1,000–4,000 m</td><td style="background: white;">None</td><td style="background: white;">Anglerfish, giant squid, vampire squid, viperfish</td></tr>
+        <tr><td>Abyssal</td><td style="background: white;">4,000–6,000 m</td><td style="background: white;">None</td><td style="background: white;">Tube worms, vent shrimp, tripod fish, sea spiders</td></tr>
+        <tr><td>Hadal</td><td style="background: white;">6,000–11,000 m</td><td style="background: white;">None</td><td style="background: white;">Snailfish, amphipods, sea cucumbers</td></tr>
+      </table>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 2: Pressure Calculations</h3>
+      <table class="data-table" style="font-size: 10pt;">
+        <tr><th>Depth</th><th>Pressure</th><th>Notes</th></tr>
+        <tr><td>0 m</td><td style="background: white;">1 ATM</td><td style="background: white;">Humans, all surface life</td></tr>
+        <tr><td>10 m</td><td style="background: white;">2 ATM</td><td style="background: white;">Shallow snorkeling/diving</td></tr>
+        <tr><td>100 m</td><td style="background: white;">11 ATM</td><td style="background: white;">Near the limit for recreational scuba diving</td></tr>
+        <tr><td>1,000 m</td><td style="background: white;">101 ATM</td><td style="background: white;">Twilight zone — requires submersible</td></tr>
+        <tr><td>4,000 m</td><td style="background: white;">401 ATM</td><td style="background: white;">Midnight/abyssal — Titanic wreck depth</td></tr>
+        <tr><td>10,000 m</td><td style="background: white;">1,001 ATM</td><td style="background: white;">Hadal zone — Mariana Trench territory</td></tr>
+      </table>
+      <p><strong>500 ATM = 4,990 m</strong> (accept 4,990 or ~5,000 m)</p>
+      <p><strong>Marshmallow demo:</strong> The marshmallow shrank/compressed when the plunger was pushed in because increased pressure compressed the air pockets inside the marshmallow. When the plunger was pulled out, the marshmallow expanded because the decreased pressure let the air pockets expand. Deep-sea creatures avoid this problem by not having air-filled spaces in their bodies.</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 3: Light Wavelength Chart</h3>
+      <table class="data-table" style="font-size: 10pt;">
+        <tr><th>Color</th><th>Depth Absorbed</th><th>Order</th></tr>
+        <tr><td>Red</td><td style="background: white;">~10–20 m</td><td style="background: white;">1 (first)</td></tr>
+        <tr><td>Orange</td><td style="background: white;">~40 m</td><td style="background: white;">2</td></tr>
+        <tr><td>Yellow</td><td style="background: white;">~100 m</td><td style="background: white;">3</td></tr>
+        <tr><td>Green</td><td style="background: white;">~150 m</td><td style="background: white;">4</td></tr>
+        <tr><td>Blue</td><td style="background: white;">~200 m</td><td style="background: white;">5 (last)</td></tr>
+      </table>
+      <p><strong>Why the ocean looks blue:</strong> Blue light has the shortest wavelength of the visible colors that penetrate water, so it travels the deepest and scatters the most before being absorbed. When we look at the ocean, we see the blue light bouncing back to our eyes while all the other colors have already been absorbed. Accept any answer that connects blue light's deeper penetration to the ocean's blue appearance.</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 4: Creature Design</h3>
+      <p>There are no "wrong" creatures! Evaluate based on whether the student can <em>explain</em> their design choices:</p>
+      <ul>
+        <li>Does the creature's bioluminescence serve a clear purpose (not just "it looks cool")?</li>
+        <li>Are the adaptations appropriate for the chosen zone? (A creature at 8,000 m shouldn't have a swim bladder or rely on photosynthesis.)</li>
+        <li>Does the diet make sense? (At depth, food comes from marine snow, chemosynthesis, or predation — not photosynthetic plants.)</li>
+        <li>Bonus points for creativity, scientific vocabulary, and a clever creature name.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Part 5: Analysis Questions</h3>
+
+      <p><strong>Q1 (Photosynthesis vs. chemosynthesis):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Both photosynthesis and chemosynthesis produce food (sugar/glucose) for organisms, and both use CO₂ and water. The difference is the energy source: photosynthesis uses sunlight, while chemosynthesis uses chemical energy from hydrogen sulfide or other minerals. Photosynthesis produces oxygen as a byproduct; chemosynthesis does not. Photosynthesis requires the sun and can only happen in the photic zone. Chemosynthesis can happen in total darkness."</p>
+
+      <p><strong>Q2 (Vampire squid's huge eyes):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"In the twilight zone, there's very little light — just a faint glow from above and flashes of bioluminescence. Huge eyes have larger pupils that can collect more of the available light, helping the vampire squid detect dim bioluminescent flashes from prey, predators, or mates. It's like having night-vision goggles — the bigger the lens, the more light you capture." Accept any answer connecting large eyes to low-light environments.</p>
+
+      <p><strong>Q3 (Tube worms and chemosynthesis):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">"Giant tube worms have chemosynthetic bacteria living inside a special organ in their body. The tube worm absorbs hydrogen sulfide from the hydrothermal vent water and delivers it to the bacteria. The bacteria use chemosynthesis to turn the hydrogen sulfide and CO₂ into food, and the tube worm absorbs the nutrients. It's a mutualism — the bacteria get shelter and chemicals, the worm gets food."</p>
+
+      <p><strong>Q4 (Challenges of deep-sea exploration):</strong></p>
+      <ul style="margin-left: 20px; font-style: italic;">
+        <li>Crushing pressure (over 1,000 ATM at the deepest point) requires incredibly strong vessels</li>
+        <li>Total darkness means all light must be brought along (powerful LEDs, limited battery life)</li>
+        <li>Near-freezing temperatures (around 1–4°C) affect equipment and human endurance</li>
+        <li>Extreme distance from the surface means slow travel time and no quick rescue</li>
+        <li>Communication is difficult — radio waves don't travel well through water</li>
+      </ul>
+      <p style="margin-left: 20px;">Accept any three well-explained challenges. If your child mentions ROVs (remotely operated vehicles) or the submersibles <em>Alvin</em>, <em>Trieste</em>, or the <em>Deepsea Challenger</em> — that's excellent research!</p>
+
+      <p><strong>Q5 (Question for scientists):</strong></p>
+      <p style="margin-left: 20px; font-style: italic;">This is an open-ended question. Look for genuine curiosity and a connection to something learned in the lesson. Great answers might include: "How many species in the deep ocean haven't been discovered yet?" or "Could chemosynthetic life exist on Europa?" or "What's at the very bottom of the Mariana Trench that we haven't seen yet?"</p>
+
+      <h3 style="color: #333; margin-top: 18px;">Troubleshooting</h3>
+      <ul>
+        <li><strong>Cellophane demo isn't dramatic enough:</strong> Use a very bright flashlight and a very dark room. Double or triple the cellophane layers. The goal is to see a clear difference between one layer and all five layers — even if each individual layer doesn't block much.</li>
+        <li><strong>Marshmallow won't compress:</strong> Make sure the syringe has a tight seal. If air leaks around the plunger or tip, the pressure won't build. Try pulling the plunger OUT instead (marshmallow expands dramatically) — this direction often works better.</li>
+        <li><strong>Glow paint doesn't glow:</strong> It needs to "charge" under bright light (sunlight or close-up lamp) for at least 30–60 seconds. The glow is brightest in the first 30 seconds after entering darkness and fades quickly. This is a great teaching moment about phosphorescence vs. bioluminescence.</li>
+        <li><strong>Child overwhelmed by zone names:</strong> Start with the common names (Sunlit, Twilight, Midnight, Abyss, Trench) and add the scientific names as bonus vocabulary. The common names are intuitive and memorable.</li>
+      </ul>
+
+      <h3 style="color: #333; margin-top: 18px;">Success Criteria</h3>
+      <ul>
+        <li>Student can name all five ocean zones in order (surface to deepest) and give approximate depth ranges.</li>
+        <li>Student can explain why the deep ocean is dark (light wavelengths absorbed by water, red first, blue last).</li>
+        <li>Student can define bioluminescence and give at least two reasons deep-sea creatures produce light.</li>
+        <li>Student correctly calculates pressure at various depths using the 1 ATM per 10 m rule.</li>
+        <li>Student can compare chemosynthesis and photosynthesis in their own words.</li>
+        <li>Student's creature design includes at least three labeled adaptations with survival explanations.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_73RWNwyb1uo" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

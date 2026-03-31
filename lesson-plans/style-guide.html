@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Lab Coats Style Guide — Editorial Standards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1a2744;
+      --navy-light: #2d4a7a;
+      --teal: #0d9488;
+      --teal-bg: #f0fdfa;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+      --gold: #f59e0b;
+      --gold-bg: #fffbeb;
+      --purple: #7c3aed;
+      --purple-bg: #f5f3ff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-500: #6b7280;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', -apple-system, sans-serif;
+      background: var(--gray-50);
+      color: var(--gray-800);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .header h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .header .date {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .toc {
+      background: white;
+      border: 2px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .toc h2 {
+      font-family: 'Quicksand', sans-serif;
+      color: var(--navy);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--navy);
+    }
+    .toc ol {
+      padding-left: 1.75rem;
+      counter-reset: section;
+    }
+    .toc li {
+      margin-bottom: 0.5rem;
+      counter-increment: section;
+    }
+    .toc a {
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--navy);
+    }
+    .section-number {
+      background: var(--navy);
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+    }
+    h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.2rem;
+      color: var(--navy-light);
+      margin: 1.5rem 0 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    h4 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      color: var(--teal);
+      margin: 1.25rem 0 0.5rem;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 0.75rem;
+    }
+    ul, ol {
+      margin: 0.75rem 0;
+      padding-left: 1.75rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .rule-box {
+      background: var(--teal-bg);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .rule-box strong {
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .error-box {
+      background: var(--red-bg);
+      border-left: 4px solid var(--red);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .error-box .wrong {
+      color: var(--red);
+      text-decoration: line-through;
+      font-weight: 700;
+    }
+    .error-box .right {
+      color: #059669;
+      font-weight: 700;
+    }
+    .warning-box {
+      background: var(--gold-bg);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .warning-box strong {
+      color: var(--gold);
+    }
+    .example-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .example-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .example-card .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .example-card.wrong .label {
+      color: var(--red);
+    }
+    .example-card.right .label {
+      color: #059669;
+    }
+    .glossary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .glossary-table th {
+      background: var(--navy);
+      color: white;
+      padding: 0.75rem;
+      text-align: left;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+    }
+    .glossary-table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--gray-200);
+      vertical-align: top;
+    }
+    .glossary-table tr:nth-child(even) {
+      background: var(--gray-50);
+    }
+    .glossary-table td:first-child {
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .color-swatch {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 1px solid var(--gray-300);
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      padding: 0.5rem 0 0.5rem 2rem;
+      position: relative;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .checklist li::before {
+      content: '☐';
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+      color: var(--teal);
+    }
+    @media print {
+      body {
+        font-size: 11pt;
+      }
+      .header {
+        padding: 1.5rem 1rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+      .section {
+        page-break-inside: avoid;
+        box-shadow: none;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    @media (max-width: 640px) {
+      .header h1 {
+        font-size: 1.8rem;
+      }
+      .example-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>✍️ Little Lab Coats Style Guide</h1>
+  <p class="subtitle">The Editorial Bible for NGSS-Aligned Science Curriculum<br><strong>Kindergarten through 5th Grade</strong></p>
+  <p class="date">Created by Margaret Hoffman · Last Updated: February 2026</p>
+</div>
+
+<div class="container">
+
+<!-- INTRODUCTION -->
+<div class="section">
+  <p><strong>Purpose:</strong> This document establishes the editorial standards for all Little Lab Coats curriculum materials. Every lesson plan, worksheet, parent guide, and supplementary material must conform to these rules. Consistency is not optional — it is the foundation of professional educational publishing.</p>
+  
+  <p><strong>Why this matters:</strong> Parents who purchase curriculum are making a significant investment in their children's education. Inconsistent terminology, erratic formatting, and sloppy punctuation signal carelessness. We cannot afford to look careless. Every typo is a crack in our credibility.</p>
+
+  <div class="warning-box">
+    <strong>⚠️ Non-Negotiable Rule:</strong> If a decision is documented in this style guide, it applies to <em>every future lesson without exception</em>. Deviations require explicit approval and documentation of the change. Style drift kills brands.
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <h2>📑 Table of Contents</h2>
+  <ol>
+    <li><a href="#brand">Brand Identity</a></li>
+    <li><a href="#structure">Document Structure</a></li>
+    <li><a href="#metadata">Metadata Bar Standards</a></li>
+    <li><a href="#typography">Typography Rules</a></li>
+    <li><a href="#punctuation">Punctuation Standards</a></li>
+    <li><a href="#glossary">Terminology Glossary</a></li>
+    <li><a href="#ngss">NGSS Citation Format</a></li>
+    <li><a href="#materials">Materials Section Format</a></li>
+    <li><a href="#emoji">Emoji Usage Policy</a></li>
+    <li><a href="#colors">Color Coding System</a></li>
+    <li><a href="#css">CSS & Design Standards</a></li>
+    <li><a href="#print">Print Formatting Rules</a></li>
+    <li><a href="#answers">Answer Key Format</a></li>
+    <li><a href="#checklist">Pre-Publication Checklist</a></li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 1: BRAND IDENTITY -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="brand">
+  <div class="section-header">
+    <div class="section-number">1</div>
+    <h2>Brand Identity</h2>
+  </div>
+
+  <h3>Official Brand Name</h3>
+  <div class="rule-box">
+    <strong>CANONICAL:</strong> Little Lab Coats (three words, title case)<br>
+    <strong>Never:</strong> "Little Labcoats," "little lab coats," "LittleLabCoats," "LLC" (conflicts with Limited Liability Company)
+  </div>
+
+  <h3>Tagline</h3>
+  <p><strong>Primary:</strong> "NGSS-Aligned, Hands-On Science for Homeschool Families"</p>
+  <p><strong>Short version:</strong> "Real Science, Real Experiments, Real Fun"</p>
+
+  <h3>Target Audience</h3>
+  <ul>
+    <li><strong>Primary:</strong> Homeschool parents educating multiple children (typically ages 5–11, K–5th grade)</li>
+    <li><strong>Secondary:</strong> Micro-schools, homeschool co-ops, afterschool enrichment programs</li>
+    <li><strong>Geographic:</strong> United States (NGSS alignment is US-specific)</li>
+    <li><strong>Values:</strong> Secular, science-based, inquiry-driven, minimal screen time</li>
+  </ul>
+
+  <h3>Brand Voice</h3>
+  <p><strong>For parents/teachers:</strong> Warm but authoritative. Written by a scientist who is ALSO a homeschool parent. We understand the chaos, the mess, the reality of teaching multiple ages simultaneously. Practical, not preachy. Evidence-based, not dogmatic.</p>
+  
+  <p><strong>For students:</strong> Enthusiastic and curious. We use exclamation marks (sparingly) to signal excitement. Questions are genuine, not rhetorical. We assume kids are smart and capable — we scaffold complexity, we don't dumb it down.</p>
+
+  <div class="rule-box">
+    <strong>Tone checklist:</strong> Before publishing, ask:
+    <ul style="margin-top:0.5rem;">
+      <li>Does this sound like a real teacher talking to a real parent?</li>
+      <li>Would I say this out loud to a friend?</li>
+      <li>Is the science accurate without being condescending?</li>
+      <li>Does it respect the parent's time and intelligence?</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 2: DOCUMENT STRUCTURE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="structure">
+  <div class="section-header">
+    <div class="section-number">2</div>
+    <h2>Document Structure</h2>
+  </div>
+
+  <h3>Required Sections (in exact order)</h3>
+  <p>Every lesson plan MUST contain these sections in this sequence:</p>
+
+  <ol>
+    <li><strong>Title</strong> — Emoji + Lesson name + Emoji (e.g., "🎢 Marble Run Madness 🎢")</li>
+    <li><strong>Subtitle</strong> — Grade range or unit designation in italics</li>
+    <li><strong>Metadata Bar</strong> — Grade, duration, subject, optional kit designation</li>
+    <li><strong>Hero Image or Emoji</strong> — Visual anchor with caption</li>
+    <li><strong>NGSS Standards Box</strong> — Standards alignment in purple box</li>
+    <li><strong>The Big Idea</strong> — 2–3 sentences summarizing the lesson's core concept</li>
+    <li><strong>The Science</strong> — Age-appropriate science theory, concepts, and background that introduces students to the WHY behind the activity. This section eases kids into the lesson by building foundational understanding before they start the practical work. Should include key concepts explained in kid-friendly language.</li>
+    <li><strong>Key Vocabulary (Tip Box)</strong> — 6–10 terms introduced in this lesson</li>
+    <li><strong>Materials</strong> — Organized by source (kit vs household) with subcategories</li>
+    <li><strong>Let's Get Started</strong> — Numbered steps in blue boxes with strong headers</li>
+    <li><strong>Discussion Questions</strong> — In green boxes, 5–8 questions</li>
+    <li><strong>Extensions</strong> — Optional enrichment activities in purple box</li>
+    <li><strong>Parent/Teacher Notes</strong> — Gray dashed box with practical tips</li>
+  </ol>
+
+  <h3>Discussion Questions: Suggested Answer Hints</h3>
+  <div class="rule-box">
+    <strong>RULE:</strong> Every discussion question must include a suggested answer directly beneath it, formatted in italics. This helps guide the instructor during live discussion without needing to flip to the answer key.<br><br>
+    <strong>Format:</strong>
+    <ul style="margin-top:0.5rem;">
+      <li>Question text in normal weight</li>
+      <li>Suggested answer immediately below in <code>&lt;em&gt;</code> italics, using the CSS class <code>.discussion-hint</code> (styled with muted color, slightly smaller font)</li>
+      <li>Answers should be conversational and acknowledge multiple valid responses where applicable</li>
+      <li>Use phrasing like "Look for answers like…" or "They might say…" to keep it open-ended</li>
+      <li>Answers must be scientifically accurate and age-appropriate for the target grade level</li>
+    </ul>
+    <strong>CSS class:</strong><br>
+    <code>.discussion-hint { font-style: italic; color: #666; font-size: 0.95em; margin-top: 2px; }</code>
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Correct</div>
+      <p style="font-size:0.9rem;"><strong>What would happen to the reef if all the parrotfish disappeared?</strong><br>
+      <em style="color:#666; font-size:0.95em;">Look for: The coral would get overgrown with algae because parrotfish eat the algae that competes with coral for space. Without them, algae would smother the reef.</em></p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Wrong</div>
+      <p style="font-size:0.9rem;"><strong>What would happen to the reef if all the parrotfish disappeared?</strong><br>
+      (No suggested answer provided — instructor must flip to the answer key)</p>
+    </div>
+  </div>
+
+  <h3>Required Sections (continued)</h3>
+  <ol start="12">
+    <li><strong>Student Worksheet(s)</strong> — Page break, then student-facing materials</li>
+    <li><strong>Parent Answer Key</strong> — Final page, clearly marked for removal</li>
+    <li><strong>Remarq Script Tag</strong> — HTML footer script for feedback layer</li>
+  </ol>
+
+  <div class="error-box">
+    <strong>INCONSISTENCY FOUND:</strong> Some lessons include a "Setting:" field in the metadata bar (e.g., "Homeschool (2 students)"). Others omit it.<br><br>
+    <strong>RESOLUTION:</strong> <span class="wrong">Never include a "Setting:" field.</span> <span class="right">The curriculum is designed for homeschools by default. Omit this field entirely.</span>
+  </div>
+
+  <h3>Optional Sections (where applicable)</h3>
+  <ul>
+    <li><strong>Safety Box</strong> — Orange box warning about specific hazards (hot glue, sharp objects, choking hazards)</li>
+    <li><strong>Setup Instructions</strong> — If significant prep is required, add a "Setup (5 min)" step before Procedure Step 1</li>
+    <li><strong>Grade-Differentiated Sections</strong> — For multi-grade lessons (3rd & 5th), use colored boxes to separate age-appropriate content</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 3: METADATA BAR -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="metadata">
+  <div class="section-header">
+    <div class="section-number">3</div>
+    <h2>Metadata Bar Standards</h2>
+  </div>
+
+  <h3>Required Fields</h3>
+  <div class="rule-box">
+    <strong>Format:</strong> Icon + <strong>Label:</strong> Value<br>
+    <strong>Order:</strong> Grade, Duration, Subject, (optional) Kit designation
+  </div>
+
+  <table class="glossary-table">
+    <tr>
+      <th>Field</th>
+      <th>Icon</th>
+      <th>Label</th>
+      <th>Format</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Grade</td>
+      <td>📚</td>
+      <td><strong>Grade:</strong></td>
+      <td>Full word, no abbreviation</td>
+      <td>Kindergarten<br>3rd – 5th<br>3rd & 5th (if non-contiguous)</td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td>⏱️</td>
+      <td><strong>Duration:</strong></td>
+      <td>Range with en dash, include "minutes"</td>
+      <td>30–45 minutes<br>45–60 minutes</td>
+    </tr>
+    <tr>
+      <td>Subject</td>
+      <td>🔬</td>
+      <td><strong>Subject:</strong></td>
+      <td>Broad discipline — specific NGSS topic</td>
+      <td>Physical Science — Forces<br>Life Science — Adaptation</td>
+    </tr>
+    <tr>
+      <td>Kit (optional)</td>
+      <td>🎒</td>
+      <td><strong>Kit Lesson</strong></td>
+      <td>No colon, just the badge</td>
+      <td>🎒 <strong>Kit Lesson</strong></td>
+    </tr>
+  </table>
+
+  <h3>Grade Range Formatting</h3>
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Correct</div>
+      <p><strong>Grade:</strong> Kindergarten</p>
+      <p><strong>Grades:</strong> 3rd – 5th</p>
+      <p><strong>Grades:</strong> 3rd & 5th</p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Wrong</div>
+      <p><strong>Grade:</strong> K<br>(spell it out)</p>
+      <p><strong>Grades:</strong> 3-5<br>(use en dash, not hyphen)</p>
+      <p><strong>Grades:</strong> 3rd - 5th<br>(use en dash, not hyphen with spaces)</p>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <strong>Contiguous vs. Non-Contiguous Grades:</strong>
+    <ul style="margin-top:0.5rem;">
+      <li>Use <strong>en dash (–)</strong> for contiguous ranges: 3rd–5th</li>
+      <li>Use <strong>ampersand (&)</strong> for non-contiguous: 3rd & 5th</li>
+      <li><strong>Rationale:</strong> The ampersand signals "both/and" without implying 4th grade is included</li>
+    </ul>
+  </div>
+
+  <h3>Fields to NEVER Include</h3>
+  <ul>
+    <li><span class="wrong">Setting:</span> — redundant, lessons are homeschool by default</li>
+    <li><span class="wrong">Author:</span> — brand consistency, not individual attribution</li>
+    <li><span class="wrong">Date Created:</span> — internal versioning only, not customer-facing</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 4: TYPOGRAPHY RULES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="typography">
+  <div class="section-header">
+    <div class="section-number">4</div>
+    <h2>Typography Rules</h2>
+  </div>
+
+  <h3>Heading Hierarchy</h3>
+  <table class="glossary-table">
+    <tr>
+      <th>Level</th>
+      <th>Tag</th>
+      <th>Usage</th>
+      <th>Capitalization</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>H1</td>
+      <td>&lt;h1&gt;</td>
+      <td>Lesson title only</td>
+      <td>Title Case</td>
+      <td>The Great Push & Pull Sort</td>
+    </tr>
+    <tr>
+      <td>H2</td>
+      <td>&lt;h2&gt;</td>
+      <td>Major sections</td>
+      <td>Title Case</td>
+      <td>Materials, Procedure, Discussion Questions</td>
+    </tr>
+    <tr>
+      <td>H3</td>
+      <td>&lt;h3&gt;</td>
+      <td>Subsections within H2</td>
+      <td>Title Case</td>
+      <td>From Your Science Kit, For Older Siblings</td>
+    </tr>
+    <tr>
+      <td>H4</td>
+      <td>&lt;h4&gt;</td>
+      <td>Rare; use for tertiary divisions</td>
+      <td>Title Case</td>
+      <td>Optional: Additional Context</td>
+    </tr>
+  </table>
+
+  <h3>Number Formatting</h3>
+  <div class="rule-box">
+    <strong>RULE:</strong> Spell out numbers one through nine. Use numerals for 10 and above.<br>
+    <strong>EXCEPTION:</strong> Always use numerals for:
+    <ul style="margin-top:0.5rem;">
+      <li>Measurements: 5 feet, 2 cups, 3 inches</li>
+      <li>Ages: 5 years old, 8-year-old child</li>
+      <li>Quantities in lists: 3 magnets, 4 wheels, 10 paperclips</li>
+      <li>Step numbers: Step 1, Step 2</li>
+      <li>Grades: 3rd grade, 5th grade</li>
+    </ul>
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Correct</div>
+      <p>Test three different surfaces.</p>
+      <p>The car rolled 12 inches.</p>
+      <p>You need 5 paperclips.</p>
+      <p>This works for 5-year-olds.</p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Wrong</div>
+      <p>Test 3 different surfaces.<br>(spell out small numbers in prose)</p>
+      <p>The car rolled twelve inches.<br>(use numerals with units)</p>
+      <p>You need five paperclips.<br>(list quantities = numerals)</p>
+    </div>
+  </div>
+
+  <h3>Range Formatting</h3>
+  <div class="rule-box">
+    <strong>RULE:</strong> Use en dash (–) for all ranges, with NO spaces.<br>
+    <strong>Examples:</strong> 30–45 minutes, 3rd–5th grade, pages 12–18, 0°F–32°F
+  </div>
+
+  <div class="error-box">
+    <strong>COMMON ERRORS:</strong>
+    <ul style="margin-top:0.5rem;">
+      <li><span class="wrong">30-45 minutes</span> — That's a hyphen, not an en dash</li>
+      <li><span class="wrong">30 – 45 minutes</span> — No spaces around en dash in ranges</li>
+      <li><span class="wrong">30 to 45 minutes</span> — Use en dash, not the word "to"</li>
+    </ul>
+  </div>
+
+  <h3>Emphasis Conventions</h3>
+  <ul>
+    <li><strong>Bold:</strong> Key terms on first use, step headers, procedural emphasis<br><em>Example: "A <strong>push</strong> moves something away from you."</em></li>
+    <li><strong>Italic:</strong> Book titles, introducing scientific terms, emphasis in dialogue<br><em>Example: Read <em>Forces Make Things Move</em> by Kimberly Bradley.</em></li>
+    <li><strong>ALL CAPS:</strong> Rare. Only for strong student emphasis in questions or warnings<br><em>Example: "ONLY use the beak — no hands!"</em></li>
+  </ul>
+
+  <h3>Font Stack</h3>
+  <div class="rule-box">
+    <strong>Body text:</strong> Georgia, 'Times New Roman', serif (professional, readable, print-friendly)<br>
+    <strong>Headings:</strong> 'Nunito' or 'Quicksand' (web fonts for visual warmth), fallback to sans-serif<br>
+    <strong>Code/technical:</strong> Consolas, Monaco, monospace (rare, only for HTML examples)
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 5: PUNCTUATION STANDARDS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="punctuation">
+  <div class="section-header">
+    <div class="section-number">5</div>
+    <h2>Punctuation Standards</h2>
+  </div>
+
+  <h3>Serial (Oxford) Comma</h3>
+  <div class="rule-box">
+    <strong>POLICY:</strong> Always use the serial comma in lists of three or more items.<br>
+    <strong>RATIONALE:</strong> Eliminates ambiguity, aligns with Chicago Manual of Style (educational publishing standard)
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Correct</div>
+      <p>You need a ball, a ramp, and a ruler.</p>
+      <p>Test with ice, salt, and water.</p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Wrong</div>
+      <p>You need a ball, a ramp and a ruler.</p>
+      <p>Test with ice, salt and water.</p>
+    </div>
+  </div>
+
+  <h3>Contractions</h3>
+  <div class="rule-box">
+    <strong>POLICY:</strong> Contractions are permitted and encouraged in student-facing text and parent notes to maintain conversational tone.<br>
+    <strong>EXCEPTIONS:</strong> Avoid contractions in formal sections (Standards box, academic discussion)
+  </div>
+
+  <p><strong>Permitted:</strong> you'll, we'll, it's (it is), doesn't, can't, that's, what's, let's</p>
+  <p><strong>Forbidden:</strong> ain't, gonna, wanna, coulda/shoulda/woulda</p>
+
+  <h3>Exclamation Marks</h3>
+  <div class="rule-box">
+    <strong>POLICY:</strong> Use sparingly to signal genuine excitement or surprise.<br>
+    <strong>LIMIT:</strong> No more than 3 exclamation marks per page of body text.<br>
+    <strong>NEVER:</strong> Multiple exclamation marks (!!!) or mixed punctuation (!?!)
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Good Use</div>
+      <p>"Whoa! What happened?"</p>
+      <p>"You just made ice cream!"</p>
+      <p>Watch it spin!</p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Overuse</div>
+      <p>"This is so cool!!!"</p>
+      <p>"Try it! Test it! Measure it!"<br>(three in a row = overkill)</p>
+    </div>
+  </div>
+
+  <h3>List Punctuation</h3>
+  <div class="rule-box">
+    <strong>RULE:</strong> If list items are complete sentences, end with periods. If fragments, no periods.<br>
+    <strong>CONSISTENCY:</strong> All items in a single list must follow the same rule — don't mix.
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Consistent</div>
+      <p><strong>Complete sentences:</strong></p>
+      <ul style="font-size:0.9rem;">
+        <li>The ball rolled 5 feet.</li>
+        <li>The ramp was too steep.</li>
+        <li>Try it again with less height.</li>
+      </ul>
+      <p><strong>Fragments:</strong></p>
+      <ul style="font-size:0.9rem;">
+        <li>1 ball</li>
+        <li>2 ramps</li>
+        <li>3 books</li>
+      </ul>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Inconsistent</div>
+      <ul style="font-size:0.9rem;">
+        <li>The ball rolled 5 feet.</li>
+        <li>Ramp too steep</li>
+        <li>Try again with less height</li>
+      </ul>
+      (mixing sentences and fragments)
+    </div>
+  </div>
+
+  <h3>Quotation Marks</h3>
+  <div class="rule-box">
+    <strong>STYLE:</strong> American style — periods and commas go INSIDE closing quotation marks, even when illogical.<br>
+    <strong>EXCEPTION:</strong> Question marks and exclamation marks follow logic (inside if part of quote, outside if not)
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Correct</div>
+      <p>Ask: "What is a push?"</p>
+      <p>The card says "magnetic."</p>
+      <p>Did you say "pull"?</p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Wrong</div>
+      <p>The card says "magnetic".</p>
+      <p>Ask: "What is a push"?</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 6: TERMINOLOGY GLOSSARY -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="glossary">
+  <div class="section-header">
+    <div class="section-number">6</div>
+    <h2>Terminology Glossary</h2>
+  </div>
+
+  <p>Use these exact terms consistently. Do not invent synonyms.</p>
+
+  <table class="glossary-table">
+    <tr>
+      <th style="width:30%;">Term</th>
+      <th style="width:70%;">Usage & Notes</th>
+    </tr>
+    <tr>
+      <td>Student Worksheet</td>
+      <td>ALWAYS use this exact phrase for student-facing recording sheets. Never "data sheet," "recording page," "observation sheet," or "handout."</td>
+    </tr>
+    <tr>
+      <td>Parent Answer Key</td>
+      <td>Not "Answer Key for Parents," not "Teacher Guide." Always "Parent Answer Key" with the detach instruction.</td>
+    </tr>
+    <tr>
+      <td>Let's Get Started</td>
+      <td>The main instruction section. Never "Procedure," "Setup," "Instructions," "How to Do It," or "Directions." If pre-lesson setup is needed, call it "Setup (5 min)" as a separate box before Step 1.</td>
+    </tr>
+    <tr>
+      <td>The Big Idea</td>
+      <td>Section introducing the core concept. Title case, no colon. Never "Big Idea:," "Concept:," or "Overview:"</td>
+    </tr>
+    <tr>
+      <td>Discussion Questions</td>
+      <td>Never "Reflection Questions," "Think About It," or "Debrief." Consistent across all lessons.</td>
+    </tr>
+    <tr>
+      <td>Extensions</td>
+      <td>Never "Extension Activities," "Going Further," "Challenge," or "Enrichment." Just "Extensions."</td>
+    </tr>
+    <tr>
+      <td>Parent Notes</td>
+      <td>For kindergarten lessons. For 3rd–5th, use "Parent / Teacher Notes" or "Teacher Notes." Never "Tips," "FYI," or "Notes to Instructors."</td>
+    </tr>
+    <tr>
+      <td>Materials</td>
+      <td>Never "Supplies," "Stuff You Need," "Shopping List," or "What to Gather." Section title is always just "Materials."</td>
+    </tr>
+    <tr>
+      <td>Kit Lesson</td>
+      <td>When a lesson benefits from the physical kit, badge it as "🎒 Kit Lesson" in the metadata bar. Do not use "Requires Kit" or "Kit Required."</td>
+    </tr>
+    <tr>
+      <td>NGSS Standard</td>
+      <td>Use singular "Standard:" even when listing multiple standards. This matches the established pattern. Never "Standards:" plural in the label.</td>
+    </tr>
+  </table>
+
+  <div class="warning-box">
+    <strong>Why this matters:</strong> If Lesson 1 calls it a "recording sheet" and Lesson 3 calls it a "data sheet," parents will wonder if they're different documents. They're not — we're just being sloppy. Pick one term and enforce it everywhere.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 7: NGSS CITATION FORMAT -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="ngss">
+  <div class="section-header">
+    <div class="section-number">7</div>
+    <h2>NGSS Citation Format</h2>
+  </div>
+
+  <h3>Standard Code Structure</h3>
+  <div class="rule-box">
+    <strong>FORMAT:</strong> Grade-DisciplineCode-Number<br>
+    <strong>EXAMPLE:</strong> K-PS2-1, 3-LS4-2, 5-PS1-3<br>
+    <strong>NEVER:</strong> Add "NGSS" prefix — it's redundant (e.g., don't write "NGSS K-PS2-1")
+  </div>
+
+  <h3>Standards Box Heading</h3>
+  <div class="rule-box">
+    <strong>SINGULAR:</strong> "NGSS Standard:" (not "Standards:")<br>
+    <strong>RATIONALE:</strong> Established pattern in existing lessons. Maintain consistency even when listing multiple standards.
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Correct Format</div>
+      <p><strong>📋 NGSS Standard:</strong><br>
+      <strong>K-PS2-1</strong> — Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object<br><br>
+      <strong>3-LS4-2</strong> — Use evidence to construct an explanation for how the variations in characteristics among individuals of the same species may provide advantages in surviving</p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Wrong Format</div>
+      <p><strong>NGSS Standards:</strong><br>(should be singular)</p>
+      <p><strong>NGSS K-PS2-1</strong><br>(don't add NGSS prefix to code)</p>
+      <p><strong>K-PS2.1</strong><br>(use hyphen, not period)</p>
+    </div>
+  </div>
+
+  <h3>Full Standard Text</h3>
+  <p>After the standard code, include the full performance expectation text. Use an em dash (—) to separate code from text.</p>
+
+  <h3>Placement</h3>
+  <p>Standards box appears immediately after the hero image/emoji section and before "The Big Idea." Always in a purple/lavender box (#f3e5f5 background, #ce93d8 border).</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 8: MATERIALS SECTION FORMAT -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="materials">
+  <div class="section-header">
+    <div class="section-number">8</div>
+    <h2>Materials Section Format</h2>
+  </div>
+
+  <h3>Standard Subcategories (in order)</h3>
+  <ol>
+    <li><strong>From Your Science Kit</strong> — Items included in the physical kit (if applicable)</li>
+    <li><strong>Household Items to Gather</strong> — Common items parents already own or can easily obtain</li>
+    <li><strong>Optional / Nice to Have</strong> — Enhances the lesson but not required</li>
+    <li><strong>Printables</strong> — PDFs to download and print (worksheets, data sheets, cards)</li>
+  </ol>
+
+  <h3>List Formatting</h3>
+  <div class="rule-box">
+    <strong>RULE:</strong> Use bullet lists, not numbered lists. Include quantities and brief descriptions.<br>
+    <strong>FORMAT:</strong> [Quantity] [Item] [(optional clarification)]
+  </div>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Clear & Specific</div>
+      <ul style="font-size:0.9rem;">
+        <li>2 bar magnets (refrigerator magnets work)</li>
+        <li>10+ paperclips (metal, not plastic-coated)</li>
+        <li>1 marble per child</li>
+        <li>Masking tape (at least 12 inches)</li>
+      </ul>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Vague</div>
+      <ul style="font-size:0.9rem;">
+        <li>Magnets</li>
+        <li>Paperclips</li>
+        <li>Marbles</li>
+        <li>Tape</li>
+      </ul>
+      (How many? What kind?)
+    </div>
+  </div>
+
+  <h3>Kit Designation</h3>
+  <p>If a lesson includes 🎒 Kit Lesson in the metadata bar, the "From Your Science Kit" section is mandatory and should list 3–8 specialty items that justify the kit.</p>
+
+  <h3>Subsection Styling</h3>
+  <p>Materials section uses a yellow/gold box (#fff8e1 background, #ffcc80 border). Subsection headings (&lt;h3&gt;) inside the box use orange color (#e65100).</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 9: EMOJI USAGE POLICY -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="emoji">
+  <div class="section-header">
+    <div class="section-number">9</div>
+    <h2>Emoji Usage Policy</h2>
+  </div>
+
+  <h3>When Emoji Are Appropriate</h3>
+  <ul>
+    <li><strong>Titles:</strong> Flanking the lesson title (🧲 Magnet Magic 🧲)</li>
+    <li><strong>Metadata bar:</strong> One emoji per field (📚 Grade, ⏱️ Duration)</li>
+    <li><strong>Section icons:</strong> Optional emoji before section titles (🎯 The Big Idea, 📦 Materials)</li>
+    <li><strong>Kindergarten lessons:</strong> Liberally throughout to maintain engagement</li>
+    <li><strong>Student worksheets:</strong> As visual cues for sorting, labeling, and matching activities</li>
+  </ul>
+
+  <h3>When Emoji Are NOT Appropriate</h3>
+  <ul>
+    <li>NGSS Standards box — formal, no emoji</li>
+    <li>Parent Answer Key — professional tone, no emoji</li>
+    <li>Mid-sentence decorative emoji — distracting</li>
+    <li>Replacing words (❤️ instead of "love") — accessibility issue for screen readers</li>
+  </ul>
+
+  <h3>Grade-Level Emoji Density</h3>
+  <div class="rule-box">
+    <strong>Kindergarten:</strong> High emoji use — they're pre-readers, visual cues help navigation<br>
+    <strong>3rd–5th Grades:</strong> Moderate use — emoji for organization and emphasis, not decoration
+  </div>
+
+  <h3>Emoji Glossary (Standardized Meanings)</h3>
+  <table class="glossary-table">
+    <tr>
+      <th style="width:15%;">Emoji</th>
+      <th style="width:25%;">Meaning</th>
+      <th style="width:60%;">Usage</th>
+    </tr>
+    <tr>
+      <td>🎒</td>
+      <td>Kit Lesson</td>
+      <td>Appears in metadata bar when lesson uses physical kit materials</td>
+    </tr>
+    <tr>
+      <td>🏠</td>
+      <td>Household Items</td>
+      <td>Subsection header in Materials section</td>
+    </tr>
+    <tr>
+      <td>🧰</td>
+      <td>Supplies / Tools</td>
+      <td>General equipment section in Materials</td>
+    </tr>
+    <tr>
+      <td>📋</td>
+      <td>Standards / Printables</td>
+      <td>NGSS box header, or printable materials list</td>
+    </tr>
+    <tr>
+      <td>🎯</td>
+      <td>Goal / Big Idea</td>
+      <td>Marks the core concept section</td>
+    </tr>
+    <tr>
+      <td>💡</td>
+      <td>Tip / Insight</td>
+      <td>Parent tips, helpful hints, key insights</td>
+    </tr>
+    <tr>
+      <td>⚠️</td>
+      <td>Warning / Safety</td>
+      <td>Safety notes, important cautions</td>
+    </tr>
+    <tr>
+      <td>✅</td>
+      <td>Correct / Success</td>
+      <td>Example boxes showing correct usage</td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Incorrect / Error</td>
+      <td>Example boxes showing what to avoid</td>
+    </tr>
+    <tr>
+      <td>🚀</td>
+      <td>Extension / Challenge</td>
+      <td>Extensions section icon</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 10: COLOR CODING SYSTEM -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="colors">
+  <div class="section-header">
+    <div class="section-number">10</div>
+    <h2>Color Coding System</h2>
+  </div>
+
+  <h3>Lesson-Level Color Themes</h3>
+  <table class="glossary-table">
+    <tr>
+      <th>Grade / Subject</th>
+      <th>Primary Color</th>
+      <th>Hex Codes</th>
+      <th>Usage</th>
+    </tr>
+    <tr>
+      <td>Physical Science (K)</td>
+      <td><span class="color-swatch" style="background:#FF6B6B;"></span>Bright Coral</td>
+      <td>#FF6B6B (dark)<br>#FFB4B4 (light)<br>#FFF0F0 (bg)</td>
+      <td>Headers, boxes, procedure steps</td>
+    </tr>
+    <tr>
+      <td>Life Science (all grades)</td>
+      <td><span class="color-swatch" style="background:#00B894;"></span>Vibrant Green</td>
+      <td>#00B894 (dark)<br>#7DCEA0 (light)<br>#E8F8F5 (bg)</td>
+      <td>Headers, discussion boxes</td>
+    </tr>
+    <tr>
+      <td>Physical Science (3–5)</td>
+      <td><span class="color-swatch" style="background:#0984E3;"></span>Electric Blue</td>
+      <td>#0984E3 (dark)<br>#74B9FF (light)<br>#E8F4FD (bg)</td>
+      <td>Headers, boxes, procedure steps</td>
+    </tr>
+    <tr>
+      <td>Earth Science</td>
+      <td><span class="color-swatch" style="background:#F39C12;"></span>Warm Amber</td>
+      <td>#F39C12 (dark)<br>#F8C471 (light)<br>#FEF9E7 (bg)</td>
+      <td>Headers, boxes</td>
+    </tr>
+    <tr>
+      <td>Engineering/ETS</td>
+      <td><span class="color-swatch" style="background:#6C5CE7;"></span>Bold Purple</td>
+      <td>#6C5CE7 (dark)<br>#A29BFE (light)<br>#F0EDFF (bg)</td>
+      <td>Headers, boxes</td>
+    </tr>
+  </table>
+
+  <h3>Functional Box Colors (Consistent Across All Lessons)</h3>
+  <table class="glossary-table">
+    <tr>
+      <th>Element</th>
+      <th>Color</th>
+      <th>Hex Codes</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>NGSS Standards</td>
+      <td><span class="color-swatch" style="background:#7c3aed;"></span>Purple</td>
+      <td>#7c3aed (border)<br>#f3e5f5 (bg)</td>
+      <td>Formal standards alignment box</td>
+    </tr>
+    <tr>
+      <td>Materials</td>
+      <td><span class="color-swatch" style="background:#f59e0b;"></span>Gold/Orange</td>
+      <td>#ffcc80 (border)<br>#fff8e1 (bg)</td>
+      <td>Materials list box</td>
+    </tr>
+    <tr>
+      <td>Discussion Questions</td>
+      <td><span class="color-swatch" style="background:#4caf50;"></span>Green</td>
+      <td>#4caf50 (border)<br>#e8f5e9 (bg)</td>
+      <td>Question boxes</td>
+    </tr>
+    <tr>
+      <td>Tip Box</td>
+      <td><span class="color-swatch" style="background:#00bcd4;"></span>Cyan</td>
+      <td>#00bcd4 (border)<br>#e0f7fa (bg)</td>
+      <td>💡 Parent tips, helpful hints</td>
+    </tr>
+    <tr>
+      <td>Extensions</td>
+      <td><span class="color-swatch" style="background:#9fa8da;"></span>Indigo</td>
+      <td>#9fa8da (border)<br>#e8eaf6 (bg)</td>
+      <td>Extension activities box</td>
+    </tr>
+    <tr>
+      <td>Parent Notes</td>
+      <td><span class="color-swatch" style="background:#999;"></span>Gray</td>
+      <td>#999 (dashed border)<br>#f5f5f5 (bg)</td>
+      <td>Teacher/parent guidance box</td>
+    </tr>
+    <tr>
+      <td>Safety Warnings</td>
+      <td><span class="color-swatch" style="background:#ff9800;"></span>Orange</td>
+      <td>#ff9800 (border)<br>#fff3e0 (bg)</td>
+      <td>Safety cautions</td>
+    </tr>
+  </table>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 11: CSS & DESIGN STANDARDS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="css">
+  <div class="section-header">
+    <div class="section-number">11</div>
+    <h2>CSS & Design Standards</h2>
+  </div>
+
+  <h3>Page Layout</h3>
+  <div class="rule-box">
+    <strong>Max width:</strong> 8.5 inches (letter size)<br>
+    <strong>Padding:</strong> 0.5in on screen, 0.25in in print<br>
+    <strong>Font size:</strong> 11pt body text for print-friendly reading<br>
+    <strong>Line height:</strong> 1.4–1.65 for readability
+  </div>
+
+  <h3>Box Styling Standards</h3>
+  <ul>
+    <li><strong>Border radius:</strong> 6–12px (rounded corners, friendly feel)</li>
+    <li><strong>Padding:</strong> 10–15px inside boxes</li>
+    <li><strong>Margin:</strong> 10–20px between sections</li>
+    <li><strong>Border width:</strong> 1–2px for standard boxes, 3px for emphasis boxes</li>
+  </ul>
+
+  <h3>Color Accessibility</h3>
+  <p>All text on colored backgrounds must meet WCAG AA contrast ratio (4.5:1 minimum). Never use light text on light backgrounds or dark text on dark backgrounds.</p>
+
+  <div class="warning-box">
+    <strong>Print Color Preservation:</strong> Always include this CSS in every lesson:
+    <pre style="background:#f5f5f5;padding:0.75rem;border-radius:6px;font-size:0.85rem;overflow-x:auto;"><code>* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}</code></pre>
+    This ensures colored boxes print correctly and aren't converted to grayscale.
+  </div>
+
+  <h3>Responsive Design</h3>
+  <p>Include a mobile breakpoint at 640px that adjusts font size, removes multi-column layouts, and increases touch target sizes for parent phones/tablets.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 12: PRINT FORMATTING RULES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="print">
+  <div class="section-header">
+    <div class="section-number">12</div>
+    <h2>Print Formatting Rules</h2>
+  </div>
+
+  <h3>Page Break Strategy</h3>
+  <div class="rule-box">
+    <strong>RULE:</strong> Student worksheets and answer keys MUST start on a new page.<br>
+    <strong>METHOD:</strong> Use <code>.page-break { page-break-before: always; }</code> class<br>
+    <strong>NEVER:</strong> Let a worksheet start at the bottom of the lesson plan page<br><br>
+    <strong>CRITICAL:</strong> When printed, no section should be split across pages in a way that breaks readability. Use <code>page-break-before: auto</code> and <code>page-break-inside: avoid</code> on section containers. Student Worksheets and Answer Keys MUST start on new pages.
+  </div>
+
+  <h3>Avoid Orphans and Widows</h3>
+  <ul>
+    <li>Apply <code>page-break-inside: avoid;</code> to procedure steps, question boxes, materials boxes, discussion boxes, and all important sections</li>
+    <li>Apply <code>break-after: avoid;</code> to all headings so they don't separate from their content</li>
+    <li>Use <code>orphans: 3;</code> and <code>widows: 3;</code> in body text to prevent single lines stranded on pages</li>
+    <li>EVERY major section should start with enough breathing room — use consistent margins and avoid cramped layouts</li>
+  </ul>
+
+  <h3>Detachable Components</h3>
+  <p>Student worksheets and answer keys are designed to be printed separately. Include clear visual separation (dashed borders, "✂️ Detach Here" instructions) on the Parent Answer Key.</p>
+
+  <div class="rule-box">
+    <strong>Standard detach instruction:</strong><br>
+    "✂️ PARENT ANSWER KEY — Detach before giving worksheet to students"
+  </div>
+
+  <h3>Print CSS Block</h3>
+  <p>Every lesson MUST include this print media query:</p>
+  <pre style="background:#f5f5f5;padding:0.75rem;border-radius:6px;font-size:0.85rem;overflow-x:auto;"><code>@media print {
+  body { padding: 0.25in; font-size: 10pt; }
+  h2 { break-after: avoid; }
+  h3 { break-after: avoid; }
+  .procedure-step, .question-box, .teacher-note {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}</code></pre>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 13: ANSWER KEY FORMAT -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="answers">
+  <div class="section-header">
+    <div class="section-number">13</div>
+    <h2>Answer Key Format</h2>
+  </div>
+
+  <h3>Required Elements</h3>
+  <ol>
+    <li><strong>Detach instruction:</strong> "✂️ PARENT ANSWER KEY — Detach before giving worksheet to students"</li>
+    <li><strong>Expected results:</strong> What data/observations should students record</li>
+    <li><strong>Sample answers:</strong> Model answers for discussion questions</li>
+    <li><strong>Troubleshooting section:</strong> Common problems and how to fix them</li>
+    <li><strong>Success criteria:</strong> What mastery looks like ("Can explain X," "Correctly sorted Y")</li>
+  </ol>
+
+  <h3>Styling</h3>
+  <div class="rule-box">
+    <strong>Container:</strong> Gray dashed border (#999), light gray background (#f5f5f5)<br>
+    <strong>Heading:</strong> Gray H2 background (#757575), white text<br>
+    <strong>Font size:</strong> 10pt (slightly smaller than lesson body to fit more on page)
+  </div>
+
+  <h3>Tone</h3>
+  <p>Answer keys are written for parents, not students. Use a supportive, practical tone. Acknowledge variability ("Results may vary slightly," "If your child said X, that's also correct because…").</p>
+
+  <div class="example-grid">
+    <div class="example-card right">
+      <div class="label">✅ Supportive Tone</div>
+      <p style="font-size:0.9rem;"><strong>Q: Why did the car stop?</strong><br>
+      <em>Answer: Friction slowed it down until it stopped. If your child said "it ran out of push" or "the balloon was empty," that's also correct — they're describing the same phenomenon in their own words.</em></p>
+    </div>
+    <div class="example-card wrong">
+      <div class="label">❌ Rigid Tone</div>
+      <p style="font-size:0.9rem;"><strong>Q: Why did the car stop?</strong><br>
+      <em>Answer: Friction. If they didn't say friction, they got it wrong.</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SECTION 14: PRE-PUBLICATION CHECKLIST -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="section" id="checklist">
+  <div class="section-header">
+    <div class="section-number">14</div>
+    <h2>Pre-Publication Checklist</h2>
+  </div>
+
+  <p>Before any lesson is published or sent to a customer, verify every item on this checklist.</p>
+
+  <ul class="checklist">
+    <li>Title includes flanking emoji and matches capitalization rules</li>
+    <li>Metadata bar includes all required fields in correct order (Grade, Duration, Subject)</li>
+    <li>No "Setting:" field in metadata (REMOVED per style guide)</li>
+    <li>NGSS Standards box uses singular "NGSS Standard:" label</li>
+    <li>Standard codes use hyphen format (K-PS2-1) not period or other separator</li>
+    <li>Duration uses en dash (30–45 minutes) not hyphen (30-45)</li>
+    <li>Grade ranges use en dash for contiguous (3rd–5th) or ampersand for non-contiguous (3rd & 5th)</li>
+    <li>Serial commas used in all lists of three or more items</li>
+    <li>Exclamation marks limited to 3 per page maximum</li>
+    <li>Numbers 1–9 spelled out in prose, 10+ as numerals (except measurements, ages, steps)</li>
+    <li>Student-facing document labeled "Student Worksheet" not "recording sheet," "data sheet," or other variant</li>
+    <li>Parent-facing answer key labeled "Parent Answer Key" with detach instruction</li>
+    <li>Main instruction section titled "Let's Get Started" not "Procedure," "Setup," or "Instructions"</li>
+    <li>All section titles use consistent terminology from glossary (Materials, Discussion Questions, Extensions)</li>
+    <li>Let's Get Started steps use consistent formatting (numbered, in colored boxes with bold headers)</li>
+    <li>Color coding matches grade level and subject (blue for K, green for life science, etc.)</li>
+    <li>Box colors match functional standards (purple for NGSS, gold for materials, etc.)</li>
+    <li>Multi-grade lessons use orange for 3rd grade, purple for 5th grade differentiation</li>
+    <li>Emoji usage appropriate for grade level (high for K, moderate for 3–5)</li>
+    <li>Print CSS includes color preservation and page-break rules</li>
+    <li>Student worksheet starts on new page (page-break-before: always)</li>
+    <li>Answer key starts on new page and includes "✂️ Detach" instruction</li>
+    <li>All internal cross-references verified (if mentioning another lesson, check lesson number is correct)</li>
+    <li>Spell-checked (no typos in body text, headings, or worksheets)</li>
+    <li>Remarq script tag present at bottom with correct document ID</li>
+  </ul>
+
+  <div class="warning-box">
+    <strong>⚠️ Zero-Tolerance Errors:</strong> These errors are unacceptable in published materials:
+    <ul style="margin-top:0.5rem;">
+      <li>Misspelled student-facing text</li>
+      <li>Incorrect NGSS standard code</li>
+      <li>Wrong lesson number in cross-references</li>
+      <li>Broken page layout (orphaned sections, cut-off boxes)</li>
+      <li>Missing answer key</li>
+    </ul>
+    If you find any of these in a published lesson, pull it immediately and issue a corrected version.
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div style="background:white;border:2px solid var(--navy);border-radius:12px;padding:2rem;margin-top:2rem;text-align:center;">
+  <h3 style="color:var(--navy);margin-top:0;font-family:'Quicksand',sans-serif;">✍️ Style is the Difference Between Good and Great</h3>
+  <p style="color:var(--gray-700);margin-bottom:0;">This guide exists because consistency is the foundation of trust. Parents who pay for curriculum deserve materials that look and feel professional at every turn. No exceptions. No excuses. Every lesson, every worksheet, every word matters.</p>
+  <p style="color:var(--gray-500);font-size:0.85rem;margin-top:1.5rem;">— Margaret Hoffman, Copy Editor</p>
+  <p style="color:var(--gray-400);font-size:0.75rem;margin-top:1rem;">Little Lab Coats Style Guide v1.0 · February 2026</p>
+</div>
+
+</div><!-- /.container -->
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_twgyBH6JRL4" data-content-selector=".container"></script>
+</body>
+</html>

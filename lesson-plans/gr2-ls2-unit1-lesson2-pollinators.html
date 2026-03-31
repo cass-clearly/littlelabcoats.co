@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pollinators: Nature's Delivery Service — Unit 1, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 5px;
+      display: block;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Pollinator cards for "Who Pollinates What?" */
+    .pollinator-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .pollinator-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+    .pollinator-card .emoji { font-size: 30pt; display: block; margin-bottom: 4px; }
+    .pollinator-card .pollinator-name { font-weight: bold; color: #2e7d32; font-size: 11pt; }
+    .pollinator-card .flower-match { font-size: 10pt; color: #555; margin-top: 4px; }
+    /* Worksheet styles */
+    .worksheet-title {
+      text-align: center;
+      font-size: 18pt;
+      color: #2e7d32;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Flower diagram */
+    .flower-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .flower-box {
+      border: 2px solid #2e7d32;
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+      min-width: 130px;
+      background: #e8f5e9;
+    }
+    .flower-box .flower-emoji { font-size: 40pt; }
+    .flower-box .flower-label { font-size: 9pt; color: #555; font-style: italic; }
+    .arrow-box {
+      font-size: 28pt;
+      color: #00B894;
+      text-align: center;
+    }
+    .bee-box {
+      border: 2px dashed #f9a825;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      background: #fff8e1;
+      min-width: 110px;
+    }
+    .bee-box .bee-emoji { font-size: 30pt; }
+    /* Label lines for diagram */
+    .label-line-block {
+      margin: 10px 0;
+    }
+    .label-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+    }
+    .label-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #2e7d32;
+      flex-shrink: 0;
+    }
+    .label-blank {
+      border-bottom: 1px solid #333;
+      flex: 1;
+      height: 22px;
+    }
+    /* Matching game */
+    .match-left {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      gap: 8px;
+      align-items: center;
+      margin: 15px 0;
+    }
+    .match-item {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 10pt;
+      text-align: center;
+    }
+    .match-flower {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 10pt;
+      text-align: center;
+    }
+    .match-line {
+      border-bottom: 1px solid #999;
+      height: 1px;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-section { margin: 12px 0; }
+    .ak-section h3 { color: #1b5e20; border-color: #a5d6a7; }
+    .ak-match-list { list-style: none; padding-left: 0; }
+    .ak-match-list li { padding: 4px 0; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .pollinator-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_8COJPE7TH7w">
+
+  <h1>🐝 Pollinators: Nature's Delivery Service 🌸</h1>
+  <p class="subtitle">Life Science — Plants &amp; Ecosystems — Unit 1, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Ecosystems</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌺 🐝 🌻</div>
+    <div class="caption">Without pollinators, most of the fruits and vegetables we eat wouldn't exist!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-2</strong> — Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>explain</em> the role of pollinators in plant reproduction and <em>create</em> a model demonstrating how pollen transfers from flower to flower.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Flowers need pollen moved from one flower to another to make seeds. <strong>Bees, butterflies, birds, and even wind</strong> do this job — they're called <strong>pollinators</strong>, and without them, most fruits and vegetables wouldn't exist.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> pollinator, pollen, nectar, stamen, pistil, stigma, reproduce, seed
+  </div>
+
+  <h2>🌿 The Science</h2>
+  <p>Flowers are actually <em>advertisements</em> — their bright colors and sweet smells are designed to attract pollinators. When a bee lands on a flower to drink nectar, it accidentally picks up tiny <strong>pollen</strong> grains on its fuzzy body. When it visits the next flower, some of that pollen rubs off onto the flower's <strong>stigma</strong> — the sticky tip in the center. This is <strong>pollination</strong>! Once a flower is pollinated, it can grow seeds, and those seeds can grow into new plants.</p>
+
+  <p>Different pollinators match different flowers — it's like a lock and key system evolved over millions of years. Hummingbirds have long beaks for tubular flowers. Bumblebees need wide, open flowers they can land on. Moths visit white flowers that bloom at night. Wind-pollinated plants like grasses don't need to attract anyone — they just make enormous amounts of lightweight pollen and let the breeze do the work.</p>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 For the "Be a Bee!" Activity</h3>
+    <ul>
+      <li>4 paper cups (your model "flowers")</li>
+      <li>Yellow cornmeal, flour, or powdered spice (your "pollen") — about 1 tablespoon per cup</li>
+      <li>Cotton balls or fuzzy pipe cleaners (your "bee" — the pollinator)</li>
+      <li>Colored paper to decorate flower cups (optional)</li>
+      <li>A tray or sheet of newspaper to catch spills</li>
+    </ul>
+    <h3>🧰 For the Worksheet</h3>
+    <ul>
+      <li>Crayons or colored pencils</li>
+      <li>Pencil for writing labels</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Activity 1: Be a Bee!</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Set Up Your Flowers (5 min)</strong><br>
+    Place 4 paper cups on a tray. Put a small amount of yellow cornmeal or flour in the center of each cup. These are your model flowers — the yellow powder is the pollen! If you like, decorate the outside of the cups with colored paper petals.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Meet the Bee (2 min)</strong><br>
+    Give each student a cotton ball or fuzzy pipe cleaner pom. Say: <em>"This is your bee! Look at how fuzzy it is. Why do you think real bees are fuzzy?"</em> Let them guess. (The fuzz — plus static electricity — catches and holds pollen grains!)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Visit Flower 1 (3 min)</strong><br>
+    Press your cotton ball / pipe cleaner gently into the center of Flower 1. Watch the yellow "pollen" stick to the fuzz! Lift it up — you should see pollen clinging to it. Ask: <em>"What happened? Where did the pollen go?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Visit Flower 2 (3 min)</strong><br>
+    Now press the same pollen-covered cotton ball into Flower 2. Watch the pollen transfer! Some will fall off onto the flower. Say: <em>"That's pollination! The bee just delivered pollen from flower to flower."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Repeat &amp; Observe (5 min)</strong><br>
+    Try visiting all four flowers in different orders. Which flower has the most pollen after several visits? Why? Compare a cotton ball vs. a pipe cleaner — which picks up more pollen? (The pipe cleaner! That's why bee fuzziness matters.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Debrief Discussion (5 min)</strong><br>
+    Ask the discussion questions below. Connect the model to real life: the cotton ball = bee, the yellow powder = real pollen, the cups = real flowers.
+  </div>
+
+  <h2>🌼 Activity 2: Who Pollinates What?</h2>
+  <p>Different pollinators have evolved to match specific flowers. Explore the matchups below, then try the matching game on the Student Worksheet!</p>
+
+  <div class="pollinator-grid">
+    <div class="pollinator-card">
+      <span class="emoji">🦜</span>
+      <div class="pollinator-name">Hummingbird</div>
+      <div class="flower-match">→ Red tubular flowers 🌺<br><em>Long beak fits perfectly inside the tube to reach nectar</em></div>
+    </div>
+    <div class="pollinator-card">
+      <span class="emoji">🐝</span>
+      <div class="pollinator-name">Bumblebee</div>
+      <div class="flower-match">→ Open, wide flowers 🌻<br><em>Big enough to land on — a bee-sized landing pad</em></div>
+    </div>
+    <div class="pollinator-card">
+      <span class="emoji">🌙</span>
+      <div class="pollinator-name">Moth</div>
+      <div class="flower-match">→ White flowers (night blooming) 🌕<br><em>Moths are nocturnal — white flowers glow in moonlight</em></div>
+    </div>
+    <div class="pollinator-card">
+      <span class="emoji">💨</span>
+      <div class="pollinator-name">Wind</div>
+      <div class="flower-match">→ Grasses &amp; trees 🌾<br><em>No color, no smell needed — just clouds of tiny, light pollen</em></div>
+    </div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "Why do you think flowers are bright colors and have sweet smells? What would happen to a flower that had no color or smell?"
+    <span class="discussion-hint">Suggested answer: Flowers are bright and fragrant to attract pollinators — bees and butterflies find them visually and by scent. A flower with no color or smell would attract fewer pollinators, meaning less pollen transfer, fewer seeds, and fewer new plants. Some wind-pollinated plants (like grass) actually DON'T have showy flowers — they don't need to attract anyone!</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "If all the bees disappeared, what do you think would happen to our food supply?"
+    <span class="discussion-hint">Suggested answer: It would be a catastrophe! About 1/3 of the food humans eat depends on bee pollination — fruits, vegetables, nuts. Without bees, many crops would fail or produce very little. This is why declining bee populations (due to pesticides and habitat loss) is such a serious environmental concern.</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌸 <strong>Real Flower Dissection:</strong> Find a real flower at home or outdoors. Gently pull it apart and find the stamens (covered in pollen) and the sticky stigma in the center.</li>
+      <li>🌱 <strong>Pollinator Garden:</strong> Look up which local flowers attract bees in your region. Plant a pollinator-friendly garden — even one pot on a windowsill counts!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Honeybee"</em> by Kirsten Hall or <em>"Are You a Bee?"</em> by Judy Allen &amp; Tudor Humphries</li>
+      <li>🎬 <strong>Nature Watch:</strong> If it's warm outside, sit quietly near a flowering plant and count how many different pollinators you see in 5 minutes.</li>
+      <li>🔎 <strong>Bee Colony Collapse:</strong> Bee populations are declining — this is called Colony Collapse Disorder. Research what causes it and what people can do to help.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Yellow cornmeal is ideal pollen</strong> — it's visible, doesn't fly around, cleans up easily, and sticks satisfyingly to fuzzy things. Flour works but is messier. Powdered turmeric adds a pop of color!</li>
+      <li><strong>Fuzzy pipe cleaner vs. cotton ball:</strong> The pipe cleaner picks up noticeably more "pollen" — lean into this as a teaching moment. Why are bees fuzzy? (Tiny hairs + static electricity trap pollen grains.)</li>
+      <li><strong>Real flowers at home:</strong> If you have flowers, examine them together. Find the stamens (the stalks with yellow powder — that's real pollen!) and the stigma (the sticky tip in the center of the flower).</li>
+      <li><strong>Real-world urgency:</strong> Bee colony collapse disorder is a genuine and serious environmental problem. This is an excellent entry point for conservation discussions with 2nd graders — they're old enough to understand cause and effect.</li>
+      <li><strong>Extension tip:</strong> Look up your local Cooperative Extension office or a site like the Xerces Society for region-specific lists of bee-friendly plants.</li>
+      <li><strong>Vocabulary to reinforce:</strong> pollinator, pollen, nectar, stamen, pistil, stigma, reproduce, seed</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <div class="worksheet-title">🐝 Student Worksheet: Be a Bee!</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Label the Pollen Transfer Diagram</h3>
+    <p style="font-size:10pt; color:#555;">Use the word bank to label the diagram. Draw arrows showing how pollen travels from Flower 1 to Flower 2!</p>
+
+    <div style="background:#e8f5e9; border:2px solid #a5d6a7; border-radius:10px; padding:16px; margin:10px 0;">
+      <div class="flower-diagram">
+        <!-- Flower 1 -->
+        <div class="flower-box">
+          <div class="flower-emoji">🌸</div>
+          <div style="font-size:10pt; font-weight:bold; margin:4px 0;">Flower 1</div>
+          <div style="border-bottom:1px solid #333; width:120px; margin:6px auto; height:20px;"></div>
+          <div class="flower-label">(write a part name here)</div>
+        </div>
+        <!-- Arrow area -->
+        <div class="arrow-box" style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+          <div style="font-size:24pt;">🐝</div>
+          <div style="font-size:9pt; color:#555; text-align:center;">bee carries<br>pollen</div>
+          <div style="font-size:20pt; color:#00B894;">→</div>
+        </div>
+        <!-- Flower 2 -->
+        <div class="flower-box">
+          <div class="flower-emoji">🌼</div>
+          <div style="font-size:10pt; font-weight:bold; margin:4px 0;">Flower 2</div>
+          <div style="border-bottom:1px solid #333; width:120px; margin:6px auto; height:20px;"></div>
+          <div class="flower-label">(write a part name here)</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <strong style="font-size:10pt; color:#1b5e20;">Draw arrows showing the path of the pollen:</strong>
+        <div style="border:2px dashed #a5d6a7; border-radius:8px; height:80px; margin-top:8px; background:#fff; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:9pt;">(draw your arrows here)</div>
+      </div>
+    </div>
+
+    <div style="background:#fff8e1; border:1px solid #ffcc80; border-radius:8px; padding:10px 16px; margin-bottom:14px;">
+      <strong style="font-size:10pt; color:#e65100;">📚 Word Bank:</strong>
+      <span style="font-size:10pt; margin-left:10px;">anther &nbsp;•&nbsp; pollen &nbsp;•&nbsp; stigma &nbsp;•&nbsp; petal &nbsp;•&nbsp; seed</span>
+    </div>
+
+    <h3>Part 2 — Label the Flower Parts</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line from each label to the correct flower part. Use the descriptions to help you!</p>
+
+    <div style="background:#e8f5e9; border:2px solid #a5d6a7; border-radius:10px; padding:16px; margin:10px 0;">
+      <div style="text-align:center; font-size:40pt; margin-bottom:10px;">🌺</div>
+      <div class="label-line-block">
+        <div class="label-line">
+          <div class="label-dot"></div>
+          <span style="font-size:10pt; min-width:70px;"><strong>Anther</strong></span>
+          <div class="label-blank"></div>
+          <span style="font-size:9pt; color:#555; min-width:180px;">the part that holds and releases pollen</span>
+        </div>
+        <div class="label-line">
+          <div class="label-dot" style="background:#00B894;"></div>
+          <span style="font-size:10pt; min-width:70px;"><strong>Pollen</strong></span>
+          <div class="label-blank"></div>
+          <span style="font-size:9pt; color:#555; min-width:180px;">tiny grains that bees carry from flower to flower</span>
+        </div>
+        <div class="label-line">
+          <div class="label-dot" style="background:#e65100;"></div>
+          <span style="font-size:10pt; min-width:70px;"><strong>Stigma</strong></span>
+          <div class="label-blank"></div>
+          <span style="font-size:9pt; color:#555; min-width:180px;">the sticky tip in the center that catches pollen</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Part 3 — Who Pollinates What? Match It!</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line connecting each pollinator to the flower it works with. Use what you learned!</p>
+
+    <div style="background:#e8f5e9; border:2px solid #a5d6a7; border-radius:10px; padding:16px; margin:10px 0;">
+      <table style="width:100%; border-collapse:collapse;">
+        <tr>
+          <td style="width:40%; padding:6px; vertical-align:middle;">
+            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🦜 Hummingbird</div>
+          </td>
+          <td style="width:20%; text-align:center; font-size:9pt; color:#aaa;">draw a line →</td>
+          <td style="width:40%; padding:6px; vertical-align:middle;">
+            <div style="background:#fff8e1; border:2px solid #ffcc80; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🌾 Grasses &amp; trees (no color, no smell)</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:6px; vertical-align:middle;">
+            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🐝 Bumblebee</div>
+          </td>
+          <td style="text-align:center; font-size:9pt; color:#aaa;">draw a line →</td>
+          <td style="padding:6px; vertical-align:middle;">
+            <div style="background:#fff8e1; border:2px solid #ffcc80; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🌺 Red tubular flowers</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:6px; vertical-align:middle;">
+            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🌙 Moth</div>
+          </td>
+          <td style="text-align:center; font-size:9pt; color:#aaa;">draw a line →</td>
+          <td style="padding:6px; vertical-align:middle;">
+            <div style="background:#fff8e1; border:2px solid #ffcc80; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🌻 Wide open flowers (landing pad)</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:6px; vertical-align:middle;">
+            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">💨 Wind</div>
+          </td>
+          <td style="text-align:center; font-size:9pt; color:#aaa;">draw a line →</td>
+          <td style="padding:6px; vertical-align:middle;">
+            <div style="background:#fff8e1; border:2px solid #ffcc80; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🌕 White flowers (blooms at night)</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Part 4 — My Thinking 🧠</h3>
+    <p style="font-size:10pt; color:#555;">Answer in your own words:</p>
+
+    <div style="margin:10px 0;">
+      <p style="font-size:10pt; font-weight:bold; margin-bottom:4px;">Why is it helpful for a bee to be fuzzy?</p>
+      <div class="notes-lines">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+
+    <div style="margin:10px 0;">
+      <p style="font-size:10pt; font-weight:bold; margin-bottom:4px;">If there were no pollinators, what do you think would happen to flowers and food?</p>
+      <div class="notes-lines">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+
+    <div style="margin:10px 0;">
+      <p style="font-size:10pt; font-weight:bold; margin-bottom:4px;">🎨 Bonus: In the box below, draw a bee visiting a flower and label the pollen it's carrying!</p>
+      <div style="border:2px solid #a5d6a7; border-radius:8px; height:110px; background:#fafff8;"></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="ak-section">
+        <h3>Part 1 — Pollen Transfer Diagram</h3>
+        <ul>
+          <li><strong>Flower 1 label:</strong> <em>Anther</em> (where pollen comes from)</li>
+          <li><strong>Flower 2 label:</strong> <em>Stigma</em> (where pollen lands)</li>
+          <li><strong>Arrows:</strong> Should show pollen leaving Flower 1 → onto the bee → deposited on Flower 2's center</li>
+          <li>Accept any reasonable answer that shows pollen moving from one flower to the other via the bee.</li>
+        </ul>
+      </div>
+
+      <div class="ak-section">
+        <h3>Part 2 — Flower Parts</h3>
+        <ul>
+          <li><strong>Anther</strong> → the stalk-like structure inside the flower covered in yellow dust/powder; the pollen producer</li>
+          <li><strong>Pollen</strong> → the tiny yellow grains — in the model, this was the cornmeal</li>
+          <li><strong>Stigma</strong> → the sticky central tip of the flower; pollen must land here for pollination to occur</li>
+          <li><em>Note for real flower examination:</em> stamens = anther + filament (stalk); pistil = stigma + style + ovary. For 2nd grade, anther and stigma are sufficient.</li>
+        </ul>
+      </div>
+
+      <div class="ak-section">
+        <h3>Part 3 — Who Pollinates What? (Correct Matches)</h3>
+        <ul class="ak-match-list">
+          <li>🦜 <strong>Hummingbird</strong> → 🌺 <strong>Red tubular flowers</strong> — long beak fits the tube perfectly to reach nectar deep inside</li>
+          <li>🐝 <strong>Bumblebee</strong> → 🌻 <strong>Wide open flowers (landing pad)</strong> — bees need a flat surface to land and collect pollen</li>
+          <li>🌙 <strong>Moth</strong> → 🌕 <strong>White flowers (blooms at night)</strong> — moths are nocturnal; white flowers are visible in moonlight</li>
+          <li>💨 <strong>Wind</strong> → 🌾 <strong>Grasses &amp; trees (no color, no smell)</strong> — wind doesn't need to be attracted; plants produce enormous quantities of tiny, light pollen</li>
+        </ul>
+      </div>
+
+      <div class="ak-section">
+        <h3>Part 4 — My Thinking (Model Answers)</h3>
+        <p><strong>Why is it helpful for a bee to be fuzzy?</strong></p>
+        <p style="font-size:10pt; font-style:italic; margin-left:15px;">The fuzz (tiny branched hairs) physically traps pollen grains as the bee brushes against flower parts. Static electricity — built up as bees fly — also attracts pollen to the hairs electrostatically. Bees even have special pollen "baskets" (corbiculae) on their hind legs to carry extra pollen back to the hive. The more surface area, the more pollen clings.</p>
+
+        <p><strong>If there were no pollinators, what would happen to flowers and food?</strong></p>
+        <p style="font-size:10pt; font-style:italic; margin-left:15px;">Most flowering plants would not be able to reproduce — they couldn't make seeds. Many fruit and vegetable crops (apples, strawberries, almonds, blueberries, cucumbers, etc.) would fail or produce little to no food. About 1/3 of the human food supply depends on animal pollinators, especially bees. Wind-pollinated crops (wheat, corn, rice, oats) would survive, but biodiversity and the ecosystem would suffer enormously.</p>
+      </div>
+
+      <div class="ak-section">
+        <h3>✅ What Success Looks Like</h3>
+        <ul>
+          <li>Child can explain in their own words what a pollinator does (moves pollen from flower to flower).</li>
+          <li>Child can correctly match at least 3 of 4 pollinators to their flower type.</li>
+          <li>Child can identify at least 2 of 3 flower parts (anther, pollen, stigma).</li>
+          <li>Child understands that pollinators are essential for plants to make seeds — and therefore for our food supply.</li>
+        </ul>
+      </div>
+
+      <div class="ak-section">
+        <h3>🔬 Activity Debrief Notes</h3>
+        <ul>
+          <li><strong>Fuzzy pipe cleaner vs. cotton ball:</strong> The pipe cleaner picks up significantly more "pollen." This is the model for why bees' branched hairs are so effective.</li>
+          <li><strong>Cornmeal tip:</strong> If pollen isn't sticking, try slightly dampening the cotton ball — real bees groom pollen and use a bit of nectar/saliva to pack it.</li>
+          <li><strong>Multiple flower visits:</strong> As students visit more "flowers," they'll see pollen spreading throughout all cups — great visual for how a single bee visit affects an entire field.</li>
+          <li><strong>Conservation connection:</strong> If bees fascinate your student, look up the Xerces Society or ask at a local garden center about planting bee-friendly natives in your region.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_8COJPE7TH7w" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

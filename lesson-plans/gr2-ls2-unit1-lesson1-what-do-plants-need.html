@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Do Plants Need? — Grade 2, Unit 1, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+
+    /* Discussion hint */
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      padding-left: 8px;
+    }
+
+    /* Experiment cups */
+    .cup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .cup-card {
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+      background: #fff;
+    }
+    .cup-card .cup-emoji { font-size: 36pt; display: block; margin-bottom: 6px; }
+    .cup-card .cup-label { font-weight: bold; color: #1b5e20; font-size: 11pt; margin-bottom: 6px; }
+    .cup-card .cup-conditions { font-size: 9.5pt; color: #444; }
+    .cup-card .cup-conditions span { display: block; line-height: 1.6; }
+    .cup-card.control { border-color: #2e7d32; background: #e8f5e9; }
+    .cup-card.no-sun { border-color: #78909c; background: #eceff1; }
+    .cup-card.no-water { border-color: #ef9a9a; background: #ffebee; }
+    .cup-card.control .cup-label { color: #2e7d32; }
+    .cup-card.no-sun .cup-label { color: #455a64; }
+    .cup-card.no-water .cup-label { color: #c62828; }
+
+    /* Vocab chips */
+    .vocab-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .vocab-chip {
+      background: #e8f5e9;
+      border: 1.5px solid #00B894;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+
+    /* Worksheet styles */
+    .worksheet-section {
+      margin: 20px 0;
+    }
+    .prediction-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 14px 0;
+    }
+    .prediction-box {
+      border: 2.5px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+    .prediction-box .pred-label {
+      font-weight: bold;
+      font-size: 10pt;
+      color: #1b5e20;
+      margin-bottom: 6px;
+    }
+    .prediction-box .draw-area {
+      border: 1.5px dashed #bbb;
+      border-radius: 6px;
+      height: 100px;
+      margin-bottom: 8px;
+      background: #fafafa;
+    }
+    .prediction-box .yes-no {
+      font-size: 10pt;
+      color: #444;
+    }
+    .prediction-box .yes-no span {
+      display: inline-block;
+      border: 1.5px solid #888;
+      border-radius: 12px;
+      padding: 2px 12px;
+      margin: 0 3px;
+      font-size: 9.5pt;
+    }
+
+    /* 7-day chart */
+    .obs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 9.5pt;
+    }
+    .obs-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 7px 5px;
+      border: 1.5px solid #1b5e20;
+      text-align: center;
+    }
+    .obs-table td {
+      border: 1.5px solid #a5d6a7;
+      padding: 5px;
+      height: 38px;
+      vertical-align: top;
+    }
+    .obs-table .day-col {
+      background: #e8f5e9;
+      font-weight: bold;
+      text-align: center;
+      width: 60px;
+      color: #1b5e20;
+    }
+
+    .science-sentence {
+      background: #e8f5e9;
+      border: 2px solid #00B894;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 12pt;
+      text-align: center;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #2e7d32;
+      min-width: 90px;
+      margin: 0 4px;
+    }
+
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .prediction-box, .cup-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body data-document-id="doc_Om89jaLtBbI">
+
+  <h1>🌱 What Do Plants Need? 🌱</h1>
+  <p class="subtitle">Life Science — Plants &amp; Ecosystems — Unit 1, Lesson 1 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plants &amp; Ecosystems</span>
+    <span>📋 <strong>Unit:</strong> Unit 1, Lesson 1 of 6</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️ 💧 🌱</div>
+    <div class="caption">What happens if a plant gets sun but no water? Water but no sun? Let's find out!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-1</strong> — Plan and conduct an investigation to determine if plants need sunlight and water to grow.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>design</em> a simple investigation to test whether plants need sunlight and water, and <em>predict</em> which conditions will produce the healthiest plant.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Plants need sunlight, water, air, and soil to grow — and we can test which ones are <em>strictly essential</em> for a seedling! Like scientists, we'll set up an experiment with three cups and observe what happens when we change just one thing at a time.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">germinate</span>
+      <span class="vocab-chip">sunlight</span>
+      <span class="vocab-chip">photosynthesis</span>
+      <span class="vocab-chip">water</span>
+      <span class="vocab-chip">soil</span>
+      <span class="vocab-chip">nutrients</span>
+      <span class="vocab-chip">transpiration</span>
+    </div>
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <p>Plants make their own food using a process called <strong>photosynthesis</strong> — they use <strong>sunlight</strong> and <strong>water</strong> to turn air into sugar for energy. Without sunlight, a plant can't make food and will weaken. Without water, it can't run any of its processes and will dry out.</p>
+  <p>Seeds are interesting — they can actually <em>germinate</em> (sprout) without light because they have stored energy inside. But once that energy runs out, a seedling without sunlight will grow pale, stretched, and weak as it desperately searches for light.</p>
+  <p>Plants also release water vapor through tiny pores called stomata — that process is called <strong>transpiration</strong>. You can actually see this water with the plastic bag demo!</p>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Gather These Items</h3>
+    <ul>
+      <li>Bean seeds or lentils (from the pantry — either works!)</li>
+      <li>3 clear plastic cups</li>
+      <li>Potting soil</li>
+      <li>Water</li>
+      <li>Sunny windowsill</li>
+      <li>Dark closet or cardboard box</li>
+      <li>Plastic zip-top bag</li>
+      <li>Wet paper towel (for bonus demo)</li>
+      <li>Permanent marker (to label the cups)</li>
+      <li>Ruler or craft stick (optional, for measuring growth)</li>
+    </ul>
+  </div>
+
+  <h2>🧪 Let's Set Up Our Experiment!</h2>
+
+  <p>We're going to grow three plants under <em>different conditions</em>. We'll change <strong>one thing</strong> at a time so we can see exactly what makes the difference.</p>
+
+  <div class="cup-grid">
+    <div class="cup-card control">
+      <span class="cup-emoji">☀️💧</span>
+      <div class="cup-label">Cup 1 — Control</div>
+      <div class="cup-conditions">
+        <span>✅ Soil</span>
+        <span>✅ Water</span>
+        <span>✅ Sunlight</span>
+        <span style="margin-top:4px; font-style:italic;">Full conditions — our "normal" plant</span>
+      </div>
+    </div>
+    <div class="cup-card no-sun">
+      <span class="cup-emoji">🌑💧</span>
+      <div class="cup-label">Cup 2 — No Sunlight</div>
+      <div class="cup-conditions">
+        <span>✅ Soil</span>
+        <span>✅ Water</span>
+        <span>❌ No sunlight</span>
+        <span style="margin-top:4px; font-style:italic;">Lives in a dark closet</span>
+      </div>
+    </div>
+    <div class="cup-card no-water">
+      <span class="cup-emoji">☀️🏜️</span>
+      <div class="cup-label">Cup 3 — No Water</div>
+      <div class="cup-conditions">
+        <span>✅ Soil</span>
+        <span>❌ No water (dry!)</span>
+        <span>✅ Sunlight</span>
+        <span style="margin-top:4px; font-style:italic;">Sits in the sun but stays dry</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Set Up the Cups (10 min)</strong><br>
+    Label three clear cups: <em>"Cup 1 — Control," "Cup 2 — No Sun," "Cup 3 — No Water."</em> Fill each cup about ¾ full with potting soil. Press 2–3 seeds or lentils about a finger-depth into the soil of each cup.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Water Cups 1 and 2 (2 min)</strong><br>
+    Give Cup 1 and Cup 2 a good drink of water until the soil is moist but not soaking. <strong>Do not water Cup 3.</strong> Place Cup 1 on the sunny windowsill. Put Cup 2 in a dark closet or cover it with a box. Put Cup 3 on the sunny windowsill next to Cup 1.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Make Your Predictions (5 min)</strong><br>
+    Before anything grows, fill out the <strong>Student Worksheet</strong> prediction boxes on the last pages. Draw what you think each cup will look like in 7 days. Circle YES or NO for "Will it grow?" Discuss with each other — it's OK to disagree!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Daily Observations (5–7 days, 5 min/day)</strong><br>
+    Each day, check the cups at the same time. Record observations in the 7-day chart on your worksheet:<br>
+    <ul>
+      <li>Is there a sprout? How tall is it?</li>
+      <li>What color are the leaves (if any)?</li>
+      <li>Does the plant look healthy, stretched, or droopy?</li>
+      <li>Cup 2: Is it reaching toward the light? Which direction?</li>
+    </ul>
+    <em>Remember: Keep watering Cup 1 and Cup 2 every 2–3 days. Do NOT water Cup 3.</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Bonus Transpiration Demo ⭐ (5 min)</strong><br>
+    Put a wet paper towel inside a clear plastic zip bag. Seal it and tape it to a sunny window. Check back in 1–2 hours. What do you see on the inside of the bag?<br>
+    <em>Even better: seal a small plant or a few spinach leaves in a clear bag in sunlight for 2 hours. Water droplets will form on the inside — that's transpiration!</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong><br>
+    "Cup 2 has water and soil but no sunlight. What do you predict will happen, and why?"
+    <p class="discussion-hint">Hint: Seeds have stored energy inside — but what happens once that energy is used up? What does a plant need to make more food?</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong><br>
+    "Why do farmers plant in the spring instead of winter?"
+    <p class="discussion-hint">Hint: Think about how much sunlight there is in spring vs. winter. What about the temperature of the soil?</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌀 <strong>Celery Color Experiment:</strong> Put a stalk of celery in colored water. Watch the color travel up the stem over 24 hours — that's water moving through the plant!</li>
+      <li>🔦 <strong>Phototropism Test:</strong> After Cup 2 sprouts, open the closet door just a crack so a thin beam of light gets in. Which direction does the plant lean? Draw it!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A Seed Is Sleepy"</em> by Dianna Aston or <em>"From Seed to Plant"</em> by Gail Gibbons</li>
+      <li>📊 <strong>Graph It:</strong> After the experiment, make a bar graph comparing the heights of the three plants at Day 7.</li>
+      <li>🌿 <strong>Start a Garden Journal:</strong> Keep a notebook just for plant observations — press leaves, sketch flowers, track the weather alongside plant growth.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Lentils vs. beans:</strong> Lentils from the pantry germinate in just 3–4 days — faster than beans (5–7 days). Either works great for this experiment.</li>
+      <li><strong>Use clear cups if possible:</strong> Kids can watch roots develop along the sides — a genuine wow moment that reinforces what soil and water do.</li>
+      <li><strong>Don't throw away the cups!</strong> This experiment runs across multiple lessons in Unit 1. The cups will be referenced again as we discuss pollinators and ecosystems.</li>
+      <li><strong>The transpiration demo:</strong> Seal a few spinach leaves or a small herb in a clear bag in sunlight for 2 hours. Water droplets appear on the inside. Kids are always amazed — plants sweating!</li>
+      <li><strong>Cup 2 note:</strong> The dark-closet plant will likely sprout (seeds germinate without light), but it will be pale yellow-green, stretched, and leggy. This is called "etiolation" — you don't need that word, but it's a spectacular visual demonstration.</li>
+      <li><strong>Cup 3 note:</strong> The dry cup may not sprout at all, or sprout then quickly shrivel. Either result tells the story.</li>
+      <li><strong>Assessment:</strong> Can the student predict before the experiment begins which cup will grow best? Can they explain <em>why</em> using the words sunlight and photosynthesis? That's the learning target.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌱 Student Worksheet — What Do Plants Need?</h1>
+    <p class="subtitle">What Do Plants Need? — Unit 1, Lesson 1</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <div class="worksheet-section">
+      <h3>🔮 My Predictions — Before We Start</h3>
+      <p style="font-size:10pt;">Draw what you think each plant will look like after 7 days. Then circle <strong>YES</strong> or <strong>NO</strong> for "Will it grow?"</p>
+
+      <div class="prediction-grid">
+        <div class="prediction-box">
+          <div class="pred-label">☀️💧 Cup 1<br>Soil + Water + Sun</div>
+          <div class="draw-area"></div>
+          <div class="yes-no">Will it grow? <span>YES</span> <span>NO</span></div>
+        </div>
+        <div class="prediction-box">
+          <div class="pred-label">🌑💧 Cup 2<br>Soil + Water, No Sun</div>
+          <div class="draw-area"></div>
+          <div class="yes-no">Will it grow? <span>YES</span> <span>NO</span></div>
+        </div>
+        <div class="prediction-box">
+          <div class="pred-label">☀️🏜️ Cup 3<br>Soil + Sun, No Water</div>
+          <div class="draw-area"></div>
+          <div class="yes-no">Will it grow? <span>YES</span> <span>NO</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="worksheet-section">
+      <h3>📅 7-Day Observation Chart</h3>
+      <p style="font-size:10pt;">Write or draw what you see each day. Is there a sprout? What color? How tall? Healthy or droopy?</p>
+
+      <table class="obs-table">
+        <thead>
+          <tr>
+            <th style="width:60px;">Day</th>
+            <th>☀️💧 Cup 1 — Control</th>
+            <th>🌑💧 Cup 2 — No Sun</th>
+            <th>☀️🏜️ Cup 3 — No Water</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day-col">Day 1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="day-col">Day 2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="day-col">Day 3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="day-col">Day 4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="day-col">Day 5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="day-col">Day 6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="day-col">Day 7</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="worksheet-section">
+      <h3>✍️ Science Sentence</h3>
+      <div class="science-sentence">
+        Plants need <span class="blank-line">&nbsp;</span>, <span class="blank-line">&nbsp;</span>, and <span class="blank-line">&nbsp;</span> to grow.
+      </div>
+    </div>
+
+    <div class="worksheet-section">
+      <h3>🏆 Which cup grew best? Why?</h3>
+      <p style="border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0;"></p>
+      <p style="border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0;"></p>
+      <p style="border-bottom: 1.5px solid #bbb; height: 30px; margin: 0;"></p>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🔮 Predictions — What to Expect</h3>
+      <ul>
+        <li><strong>☀️💧 Cup 1 (Control — soil + water + sunlight):</strong> This plant will grow the best! Strong green shoots, healthy leaves. This is what a happy bean or lentil looks like.</li>
+        <li><strong>🌑💧 Cup 2 (No sunlight):</strong> The seed will likely sprout (seeds contain stored energy and can germinate in the dark), but the seedling will be pale yellow or white, stretched very tall and thin, and leaning desperately toward any light source. It will not thrive. This is called etiolation.</li>
+        <li><strong>☀️🏜️ Cup 3 (No water):</strong> This seed may not sprout at all, or may sprout briefly and then shrivel and die. Dry soil cannot support germination or growth.</li>
+      </ul>
+
+      <h3>💬 Discussion Question Answers</h3>
+      <div class="question-box" style="margin:10px 0;">
+        <strong>Question 1:</strong> "Cup 2 has water and soil but no sunlight. What do you predict will happen, and why?"<br><br>
+        <strong>Suggested answer:</strong> The plant might sprout because seeds have stored energy inside that lets them germinate without light. But it will quickly become pale, stretched, and unhealthy because without sunlight, it can't make food through photosynthesis. It will grow tall and spindly as it reaches desperately toward any light source.
+      </div>
+      <div class="question-box" style="margin:10px 0;">
+        <strong>Question 2:</strong> "Why do farmers plant in the spring instead of winter?"<br><br>
+        <strong>Suggested answer:</strong> In spring there's more sunlight (longer days) and warmer temperatures — two things plants need to grow. Winter has short, dark days and cold soil that slows or stops growth. Farmers time their planting to match what plants need!
+      </div>
+
+      <h3>✍️ Science Sentence — Accepted Answers</h3>
+      <p>Plants need <strong>sunlight</strong>, <strong>water</strong>, and <strong>soil</strong> to grow. <em>(Also accept: air, nutrients)</em></p>
+      <p style="font-size:10pt; color:#555; font-style:italic;">Note: The key takeaway is sunlight and water — those are the two conditions being tested. Soil is also correct and expected. Encourage kids who write "air" or "nutrients" too!</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student predicts Cup 1 will grow the best <em>before</em> the experiment begins.</li>
+        <li>Student can explain why sunlight matters: <em>"Plants need sunlight to make food (photosynthesis)."</em></li>
+        <li>Student observes differences in the cups over 7 days and records them on the chart.</li>
+        <li>Student can say in their own words: <em>"Plants need sunlight, water, and soil to grow."</em></li>
+      </ul>
+
+      <h3>🌟 Bonus: Transpiration Demo Answer</h3>
+      <p>Water droplets form on the inside of the sealed bag. This shows that plants release water vapor through a process called <strong>transpiration</strong>. The water comes out through tiny pores (stomata) in the leaves and condenses on the cool bag surface. <em>Fun way to describe it: plants sweat!</em></p>
+
+      <h3>📖 Vocab Quick Reference</h3>
+      <ul>
+        <li><strong>Germinate:</strong> When a seed starts to sprout and grow into a plant.</li>
+        <li><strong>Sunlight:</strong> Energy from the sun that plants use to make food.</li>
+        <li><strong>Photosynthesis:</strong> The process plants use to turn sunlight + water + air into food (sugar).</li>
+        <li><strong>Water:</strong> Plants absorb water through their roots; it carries nutrients and is essential for growth.</li>
+        <li><strong>Soil:</strong> The ground plants grow in; it holds roots in place and provides nutrients.</li>
+        <li><strong>Nutrients:</strong> Minerals in soil that plants absorb to stay healthy.</li>
+        <li><strong>Transpiration:</strong> When plants release water vapor through tiny pores in their leaves.</li>
+      </ul>
+    </div>
+  </div>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_Om89jaLtBbI" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    // Find the last h2 that matches a "goals/objective" keyword
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      // Fallback: hide by class/id keywords
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk siblings/cousins after the goals section and hide them
+    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
+    // containing top-level element (or after the next h2 that follows it)
+
+    // Find the next h2 after lastGoalsH2 — everything from there is locked
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      // No further h2 found; lock everything after the goals h2 paragraph
+      // Hide siblings that follow lastGoalsH2
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>
