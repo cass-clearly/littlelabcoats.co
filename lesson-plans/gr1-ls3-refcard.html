@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parents & Offspring Reference Card — Grade 1 LS3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #e8f5e9;
+      color: #0d2012;
+      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      @page { size: letter portrait; margin: 0; }
+      body {
+        background: white;
+        padding: 0;
+        min-height: 0;
+        height: 11in;
+      }
+      .no-print { display: none !important; }
+      .page-card {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        height: 11in;
+        page-break-after: avoid;
+      }
+      .grid-section {
+        flex: 1;
+        min-height: 0;
+      }
+      .tile {
+        min-height: 0 !important;
+      }
+    }
+
+    /* ─── CARD WRAPPER ─── */
+    .page-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      width: 100%;
+      max-width: 8.5in;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ─── HEADER BANNER ─── */
+    .header-banner {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 28px 24px 22px;
+      flex-shrink: 0;
+    }
+
+    .header-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .header-banner .subtitle {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #a5d6a7;
+      text-transform: uppercase;
+    }
+
+    /* ─── 2×2 GRID ─── */
+    .grid-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 28px;
+      text-align: center;
+      border: 3px solid rgba(255,255,255,0.6);
+      min-height: 280px;
+    }
+
+    .tile-traits   { background: #e8f5e9; }
+    .tile-instinct { background: #fff9c4; }
+    .tile-learned  { background: #e3f2fd; }
+    .tile-survival { background: #fce4ec; }
+
+    .tile-emoji {
+      font-size: 3.5rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .tile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .tile-traits   .tile-name { color: #1b5e20; }
+    .tile-instinct .tile-name { color: #f57f17; }
+    .tile-learned  .tile-name { color: #0d47a1; }
+    .tile-survival .tile-name { color: #880e4f; }
+
+    .tile-bullets {
+      list-style: none;
+      width: 100%;
+    }
+
+    .tile-bullets li {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.4;
+      padding: 5px 0;
+      color: #1a1a1a;
+    }
+
+    .tile-bullets li + li {
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* ─── WITHOUT STRIP ─── */
+    .without-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #fff8e1;
+      border-top: 3px solid #ffe082;
+      flex-shrink: 0;
+    }
+
+    .without-tile {
+      padding: 16px 14px;
+      text-align: center;
+      border-right: 2px solid #ffe082;
+    }
+    .without-tile:last-child { border-right: none; }
+
+    .without-emoji { font-size: 1.8rem; margin-bottom: 6px; }
+
+    .without-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #e65100;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .without-text {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #5d4037;
+      line-height: 1.35;
+    }
+
+    /* ─── FUN FACTS STRIP ─── */
+    .facts-strip {
+      background: #2e7d32;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 18px 20px;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .fact-pill {
+      background: rgba(255,255,255,0.18);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      text-align: center;
+      flex: 1;
+      line-height: 1.3;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: #f1f8e9;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.85rem;
+      color: #555;
+      font-weight: 700;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    /* ─── PRINT BUTTON ─── */
+    .print-btn {
+      margin-top: 20px;
+      padding: 12px 32px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+  </style>
+</head>
+<body data-doc-id="doc_F_q9dYnrRqQ">
+
+  <div class="page-card">
+
+    <!-- HEADER BANNER -->
+    <div class="header-banner">
+      <h1>👨‍👧 Offspring Look Like Parents</h1>
+      <div class="subtitle">Inherited Traits &nbsp;·&nbsp; Instinct &nbsp;·&nbsp; Learning &nbsp;·&nbsp; Survival</div>
+    </div>
+
+    <!-- 2×2 GRID -->
+    <div class="grid-section">
+
+      <div class="tile tile-traits">
+        <div class="tile-emoji">🧬</div>
+        <div class="tile-name">INHERITED TRAITS</div>
+        <ul class="tile-bullets">
+          <li>Passed from parents</li>
+          <li>Eye color, fur pattern</li>
+          <li>🐯 Tiger cubs have stripes</li>
+          <li>Can't choose your traits</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-instinct">
+        <div class="tile-emoji">🐣</div>
+        <div class="tile-name">INSTINCT</div>
+        <ul class="tile-bullets">
+          <li>Born knowing how</li>
+          <li>🐢 Baby turtles find ocean</li>
+          <li>🐦 Birds know to fly south</li>
+          <li>No one teaches instinct</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-learned">
+        <div class="tile-emoji">🎓</div>
+        <div class="tile-name">LEARNED BEHAVIOR</div>
+        <ul class="tile-bullets">
+          <li>Taught by parents</li>
+          <li>🐻 Bear cub learns to fish</li>
+          <li>🦁 Lion cub learns to hunt</li>
+          <li>Humans teach language</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-survival">
+        <div class="tile-emoji">🛡️</div>
+        <div class="tile-name">OFFSPRING SURVIVAL</div>
+        <ul class="tile-bullets">
+          <li>Parents protect young</li>
+          <li>🐊 Croc carries babies in mouth</li>
+          <li>🐧 Penguins keep eggs warm</li>
+          <li>More care = better survival</li>
+        </ul>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- WITHOUT STRIP -->
+    <div class="without-strip">
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Inherited Traits</div>
+        <div class="without-text">Offspring look random</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Instincts</div>
+        <div class="without-text">Can't survive alone</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Parental Teaching</div>
+        <div class="without-text">Miss survival skills</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Protection</div>
+        <div class="without-text">Young don't survive</div>
+      </div>
+    </div>
+
+    <!-- FUN FACTS STRIP -->
+    <div class="facts-strip">
+      <div class="fact-pill">🐨 Koala joeys live in pouch 6 months</div>
+      <div class="fact-pill">🦅 Eagle parents teach flying by pushing</div>
+      <div class="fact-pill">🐋 Orca whales teach hunting techniques</div>
+      <div class="fact-pill">🌱 Apple seeds grow into apple trees — always!</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">Little Lab Coats 🥼</div>
+
+  </div><!-- /page-card -->
+
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Print</button>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_F_q9dYnrRqQ" data-content-selector="body"></script>
+</body>
+</html>

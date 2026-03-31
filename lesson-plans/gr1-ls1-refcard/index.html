@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant & Animal Structures Reference Card — Grade 1 LS1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #e8f5e9;
+      color: #0d2012;
+      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      @page { size: letter portrait; margin: 0; }
+      body {
+        background: white;
+        padding: 0;
+        min-height: 0;
+        height: 11in;
+      }
+      .no-print { display: none !important; }
+      .page-card {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        height: 11in;
+        page-break-after: avoid;
+      }
+      .grid-section {
+        flex: 1;
+        min-height: 0;
+      }
+      .tile {
+        min-height: 0 !important;
+      }
+    }
+
+    /* ─── CARD WRAPPER ─── */
+    .page-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      width: 100%;
+      max-width: 8.5in;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ─── HEADER BANNER ─── */
+    .header-banner {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 28px 24px 22px;
+      flex-shrink: 0;
+    }
+
+    .header-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .header-banner .subtitle {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #a5d6a7;
+      text-transform: uppercase;
+    }
+
+    /* ─── 2×2 GRID ─── */
+    .grid-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 28px;
+      text-align: center;
+      border: 3px solid rgba(255,255,255,0.6);
+      min-height: 280px;
+    }
+
+    .tile-protection { background: #e8f5e9; }
+    .tile-food       { background: #fff9c4; }
+    .tile-movement   { background: #e3f2fd; }
+    .tile-attraction { background: #fce4ec; }
+
+    .tile-emoji {
+      font-size: 3.5rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .tile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .tile-protection .tile-name { color: #1b5e20; }
+    .tile-food       .tile-name { color: #f57f17; }
+    .tile-movement   .tile-name { color: #0d47a1; }
+    .tile-attraction .tile-name { color: #880e4f; }
+
+    .tile-bullets {
+      list-style: none;
+      width: 100%;
+    }
+
+    .tile-bullets li {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.4;
+      padding: 5px 0;
+      color: #1a1a1a;
+    }
+
+    .tile-bullets li + li {
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* ─── WITHOUT STRIP ─── */
+    .without-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #fff8e1;
+      border-top: 3px solid #ffe082;
+      flex-shrink: 0;
+    }
+
+    .without-tile {
+      padding: 16px 14px;
+      text-align: center;
+      border-right: 2px solid #ffe082;
+    }
+    .without-tile:last-child { border-right: none; }
+
+    .without-emoji { font-size: 1.8rem; margin-bottom: 6px; }
+
+    .without-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #e65100;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .without-text {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #5d4037;
+      line-height: 1.35;
+    }
+
+    /* ─── FUN FACTS STRIP ─── */
+    .facts-strip {
+      background: #2e7d32;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 18px 20px;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .fact-pill {
+      background: rgba(255,255,255,0.18);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      text-align: center;
+      flex: 1;
+      line-height: 1.3;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: #f1f8e9;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.85rem;
+      color: #555;
+      font-weight: 700;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    /* ─── PRINT BUTTON ─── */
+    .print-btn {
+      margin-top: 20px;
+      padding: 12px 32px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+  </style>
+</head>
+<body data-doc-id="doc_wHjKUWmwl6M">
+
+  <div class="page-card">
+
+    <!-- HEADER BANNER -->
+    <div class="header-banner">
+      <h1>🦋 Structures Have Jobs</h1>
+      <div class="subtitle">Protection &nbsp;·&nbsp; Movement &nbsp;·&nbsp; Getting Food &nbsp;·&nbsp; Attraction</div>
+    </div>
+
+    <!-- 2×2 GRID -->
+    <div class="grid-section">
+
+      <div class="tile tile-protection">
+        <div class="tile-emoji">🛡️</div>
+        <div class="tile-name">PROTECTION</div>
+        <ul class="tile-bullets">
+          <li>Keep animals safe</li>
+          <li>🐢 Hard shell blocks bites</li>
+          <li>🦔 Spines say "stay away"</li>
+          <li>🦎 Camouflage = hiding in plain sight</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-food">
+        <div class="tile-emoji">🦅</div>
+        <div class="tile-name">GETTING FOOD</div>
+        <ul class="tile-bullets">
+          <li>Specialized tools</li>
+          <li>🦅 Eagle talons grip fish</li>
+          <li>🐘 Long trunk reaches leaves</li>
+          <li>🐸 Sticky tongue snaps bugs</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-movement">
+        <div class="tile-emoji">🏊</div>
+        <div class="tile-name">MOVEMENT</div>
+        <ul class="tile-bullets">
+          <li>Built for environment</li>
+          <li>🐟 Fins move through water</li>
+          <li>🦅 Wings ride air currents</li>
+          <li>🦘 Strong legs = big jumps</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-attraction">
+        <div class="tile-emoji">🌸</div>
+        <div class="tile-name">ATTRACTION</div>
+        <ul class="tile-bullets">
+          <li>Plants attract helpers</li>
+          <li>🌺 Bright red = hummingbirds</li>
+          <li>🌼 Yellow + UV = bees</li>
+          <li>🌸 Scent draws pollinators</li>
+        </ul>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- WITHOUT STRIP -->
+    <div class="without-strip">
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Protection</div>
+        <div class="without-text">Easy prey for predators</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Food Structures</div>
+        <div class="without-text">Can't catch food</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Movement</div>
+        <div class="without-text">Stuck in one spot</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Attraction</div>
+        <div class="without-text">No pollination</div>
+      </div>
+    </div>
+
+    <!-- FUN FACTS STRIP -->
+    <div class="facts-strip">
+      <div class="fact-pill">🦎 Chameleons change color to communicate</div>
+      <div class="fact-pill">🌺 Some flowers only open at night for moths</div>
+      <div class="fact-pill">🦈 Sharks have 3,000 teeth in a lifetime</div>
+      <div class="fact-pill">🕷️ Spider silk is stronger than steel wire</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">Little Lab Coats 🥼</div>
+
+  </div><!-- /page-card -->
+
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Print</button>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_wHjKUWmwl6M" data-content-selector="body"></script>
+</body>
+</html>
