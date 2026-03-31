@@ -145,6 +145,41 @@
       border-top: 1px solid rgba(0,0,0,0.08);
     }
 
+    /* ─── WITHOUT STRIP ─── */
+    .without-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #fff8e1;
+      border-top: 3px solid #ffe082;
+      flex-shrink: 0;
+    }
+
+    .without-tile {
+      padding: 16px 14px;
+      text-align: center;
+      border-right: 2px solid #ffe082;
+    }
+    .without-tile:last-child { border-right: none; }
+
+    .without-emoji { font-size: 1.8rem; margin-bottom: 6px; }
+
+    .without-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #e65100;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .without-text {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #5d4037;
+      line-height: 1.35;
+    }
+
     /* ─── FUN FACTS STRIP ─── */
     .facts-strip {
       background: #2e7d32;
@@ -253,6 +288,30 @@
       </div>
 
     </div><!-- /grid -->
+
+    <!-- WITHOUT STRIP -->
+    <div class="without-strip">
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Food</div>
+        <div class="without-text">Loses energy, weakens</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Water</div>
+        <div class="without-text">Body stops working</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Shelter</div>
+        <div class="without-text">Exposed to danger</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">⚠️</div>
+        <div class="without-title">No Air</div>
+        <div class="without-text">Survives only minutes!</div>
+      </div>
+    </div>
 
     <!-- FUN FACTS STRIP -->
     <div class="facts-strip">
