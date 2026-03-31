@@ -186,6 +186,17 @@
       letter-spacing: 0.05em;
       margin-right: 4px;
     }
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+      flex-wrap: nowrap;
+      margin-bottom: 32px;
+    }
+    .filter-row::-webkit-scrollbar { display: none; }
     .filter-btn {
       padding: 7px 18px;
       border-radius: 50px;
@@ -197,6 +208,7 @@
       color: var(--navy);
       cursor: pointer;
       transition: all 0.18s;
+      flex-shrink: 0;
     }
     .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
     .filter-btn.active {
@@ -478,12 +490,14 @@
   <div class="filter-bar">
     <div class="filter-inner">
       <span class="filter-label">Grade:</span>
-      <button class="filter-btn active" data-grade="all">All Grades</button>
-      <button class="filter-btn" data-grade="k">Kindergarten</button>
+      <div class="filter-row">
+      <button class="filter-btn" data-grade="all">All Grades</button>
+      <button class="filter-btn active" data-grade="k">Kindergarten</button>
       <button class="filter-btn" data-grade="1">Grade 1</button>
       <button class="filter-btn" data-grade="2">Grade 2</button>
       <button class="filter-btn" data-grade="3">Grade 3</button>
       <button class="filter-btn" data-grade="5">Grade 5</button>
+      </div>
     </div>
   </div>
 
@@ -693,7 +707,7 @@
       </div><!-- /grade-section K -->
 
       <!-- ═══════════════ GRADE 1 ═══════════════ -->
-      <div class="grade-section" data-grade="1">
+      <div class="grade-section" data-grade="1" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">1</div>
           <h2 class="grade-title">Grade 1</h2>
@@ -810,7 +824,7 @@
       </div><!-- /grade-section 1 -->
 
       <!-- ═══════════════ GRADE 2 ═══════════════ -->
-      <div class="grade-section" data-grade="2">
+      <div class="grade-section" data-grade="2" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">2</div>
           <h2 class="grade-title">Grade 2</h2>
@@ -906,7 +920,7 @@
       </div><!-- /grade-section 2 -->
 
       <!-- ═══════════════ GRADE 3 ═══════════════ -->
-      <div class="grade-section" data-grade="3">
+      <div class="grade-section" data-grade="3" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">3</div>
           <h2 class="grade-title">Grade 3</h2>
@@ -957,7 +971,7 @@
       </div>
 
       <!-- ═══════════════ GRADE 5 ═══════════════ -->
-      <div class="grade-section" data-grade="5">
+      <div class="grade-section" data-grade="5" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">5</div>
           <h2 class="grade-title">Grade 5</h2>
