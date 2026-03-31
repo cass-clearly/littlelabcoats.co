@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You! — Little Lab Coats</title>
+  <meta name="description" content="Your download links for Little Lab Coats curriculum." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:             #FAF7F2;
+      --cream-dark:        #F0EAE0;
+      --sage:              #5C7A5E;
+      --sage-light:        #8AAF8C;
+      --sage-pale:         #EDF4EE;
+      --terracotta:        #C2580C;
+      --terracotta-light:  #E07840;
+      --terracotta-pale:   #FDF0E8;
+      --navy:              #1A2744;
+      --navy-light:        #2D3F6E;
+      --brown:             #5C3D2E;
+      --brown-light:       #7A5342;
+      --gold:              #D4893A;
+      --gold-pale:         #FDF5E8;
+      --white:             #FFFFFF;
+      --border:            #E0D8CC;
+      --text-muted:        #7A6A5A;
+      --shadow-sm:  0 2px 8px rgba(26,39,68,0.07);
+      --shadow-md:  0 8px 32px rgba(26,39,68,0.10);
+      --shadow-lg:  0 20px 60px rgba(26,39,68,0.14);
+      --radius-sm:  8px;
+      --radius-md:  14px;
+      --radius-lg:  22px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', 'Segoe UI', sans-serif;
+      background-color: var(--cream);
+      color: var(--navy);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    p {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.75;
+      color: var(--brown);
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,247,242,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      height: 72px;
+      gap: 32px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--sage); }
+    .nav-cta { margin-left: 8px; }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(194,88,12,0.28);
+    }
+    .btn-primary:hover {
+      background: #A84A09;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ─── Thank You Hero ─── */
+    .thankyou-hero {
+      background: linear-gradient(135deg, var(--sage) 0%, #4A6550 100%);
+      color: white;
+      text-align: center;
+      padding: 72px 24px 56px;
+    }
+
+    .thankyou-hero .hero-emoji {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .thankyou-hero h1 {
+      color: white;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    .thankyou-hero p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ─── Content ─── */
+    .content-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ─── Bookmark Notice ─── */
+    .bookmark-notice {
+      background: var(--gold-pale);
+      border: 1px solid rgba(212,137,58,0.3);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .bookmark-notice .icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .bookmark-notice p {
+      margin: 0;
+      font-weight: 700;
+      color: var(--brown);
+    }
+
+    .bookmark-notice p span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* ─── Product Not Found ─── */
+    #product-not-found {
+      text-align: center;
+      padding: 40px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ─── Downloads Box ─── */
+    .downloads-box {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .downloads-header {
+      background: var(--navy);
+      color: white;
+      padding: 24px 32px;
+    }
+
+    .downloads-header h2 {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .downloads-header p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .downloads-body {
+      padding: 24px 32px;
+    }
+
+    .unit-group {
+      margin-bottom: 32px;
+    }
+
+    .unit-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .unit-label {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      background: var(--sage-pale);
+      border: 1px solid rgba(92,122,94,0.2);
+      border-radius: 99px;
+      padding: 4px 12px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .download-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 8px;
+    }
+
+    .download-list li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--cream);
+      border: 1px solid var(--border);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.88rem;
+      color: var(--navy);
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .download-list li a:hover {
+      background: var(--sage-pale);
+      border-color: var(--sage-light);
+      color: var(--sage);
+      transform: translateY(-1px);
+    }
+
+    .download-list li a::before {
+      content: '📄';
+      flex-shrink: 0;
+    }
+
+    .download-list li.quiz a::before { content: '🧪'; }
+    .download-list li.refcard a::before { content: '📋'; }
+
+    /* ─── Help Note ─── */
+    .help-note {
+      margin-top: 40px;
+      padding: 20px 24px;
+      background: var(--cream-dark);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .help-note a {
+      color: var(--terracotta);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.75);
+      padding: 56px 24px 0;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .download-list { grid-template-columns: 1fr; }
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .footer-tagline {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+
+    .footer-col h5 {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-links { list-style: none; }
+    .footer-links li + li { margin-top: 10px; }
+    .footer-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: white; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.35);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/site/llc-badge-cream.jpg" alt="Little Lab Coats" style="height:52px; width:52px; object-fit:contain; mix-blend-mode:multiply;">
+        Little Lab Coats
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#sample-units">Products</a></li>
+        <li><a href="curriculum.html">Curriculum</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#founder">About</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+      <a href="store.html" class="btn btn-primary nav-cta">Buy Now</a>
+    </div>
+  </nav>
+
+  <div class="thankyou-hero">
+    <span class="hero-emoji">🎉</span>
+    <h1>Thank you for your purchase!</h1>
+    <p>Your Little Lab Coats curriculum is ready to download. All your links are below.</p>
+  </div>
+
+  <div class="content-section">
+
+    <div class="bookmark-notice">
+      <div class="icon">🔖</div>
+      <p>Bookmark this page — these are your permanent download links.
+        <span>No login required. Come back any time to re-open or reprint your lessons.</span>
+      </p>
+    </div>
+
+    <!-- Content injected by JS based on ?product= param -->
+    <div id="download-content">
+      <div id="product-not-found" style="display:none;">
+        <p style="font-size:1.1rem; font-weight:700; margin-bottom:12px;">Hmm, we couldn't find your product.</p>
+        <p>This usually means the link is missing a <code>?product=</code> parameter. Please check your confirmation email or contact us.</p>
+        <p style="margin-top:16px;"><a href="mailto:hello@littlelabcoats.co" style="color:var(--terracotta); font-weight:700; text-decoration:underline;">📧 hello@littlelabcoats.co</a></p>
+      </div>
+    </div>
+
+    <div class="help-note">
+      Having trouble? Email us at <a href="mailto:hello@littlelabcoats.co">hello@littlelabcoats.co</a> and we'll get you sorted right away. Please include your order confirmation number.
+    </div>
+
+  </div>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/site/llc-badge-cream.jpg" alt="LLC" style="height:32px; width:32px; object-fit:contain; mix-blend-mode:screen; opacity:0.85;">
+          Little Lab Coats
+        </div>
+        <p class="footer-tagline">Hands-on science curriculum designed and tested by a homeschooling PhD scientist. Real experiments. Beautiful materials. Zero screens.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Curriculum</h5>
+        <ul class="footer-links">
+          <li><a href="curriculum.html">Browse All Lessons</a></li>
+          <li><a href="store.html">Shop Bundles</a></li>
+          <li><a href="index.html#founder">About Serena</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Help</h5>
+        <ul class="footer-links">
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="mailto:hello@littlelabcoats.co">Contact Us</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Little Lab Coats. All rights reserved. All materials are for personal/family use only. Not for redistribution or resale.</span>
+      <span><a href="terms.html" style="color:rgba(255,255,255,0.4); font-family:'Lato',sans-serif; font-size:0.85rem;">Terms of Service</a></span>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product');
+    const container = document.getElementById('download-content');
+
+    const BASE = '/lesson-plans/';
+
+    const products = {
+      'k-bundle': {
+        title: 'Complete Kindergarten Bundle',
+        grade: 'Kindergarten',
+        units: [
+          {
+            label: 'K-PS2: Forces & Motion',
+            lessons: [
+              { file: 'unit1-lesson1-push-pull-sort.html', title: 'Push & Pull Sort' },
+              { file: 'unit1-lesson2-ramp-racers.html', title: 'Ramp Racers' },
+              { file: 'unit1-lesson3-strong-push-gentle-push.html', title: 'Strong Push, Gentle Push' },
+              { file: 'unit1-lesson4-magnet-magic.html', title: 'Magnet Magic' },
+              { file: 'unit1-lesson5-wind-wagon.html', title: 'Wind Wagon' },
+              { file: 'unit1-lesson6-marble-run.html', title: 'Marble Run' },
+            ]
+          },
+          {
+            label: 'K-LS1 Unit 2: Plants',
+            lessons: [
+              { file: 'k-ls1-unit2-lesson1-whats-inside-a-seed.html', title: "What's Inside a Seed?" },
+              { file: 'k-ls1-unit2-lesson2-planting-day.html', title: 'Planting Day' },
+              { file: 'k-ls1-unit2-lesson3-parts-of-a-plant.html', title: 'Parts of a Plant' },
+              { file: 'k-ls1-unit2-lesson4-sunlight-or-no-sunlight.html', title: 'Sunlight or No Sunlight?' },
+              { file: 'k-ls1-unit2-lesson5-seed-travelers.html', title: 'Seed Travelers' },
+              { file: 'k-ls1-unit2-lesson6-plant-life-cycle.html', title: 'Plant Life Cycle' },
+            ]
+          },
+          {
+            label: 'K-LS1 Unit 3: Animals',
+            lessons: [
+              { file: 'k-ls1-unit3-lesson1-what-do-animals-need.html', title: 'What Do Animals Need?' },
+              { file: 'k-ls1-unit3-lesson2-whats-for-dinner.html', title: "What's for Dinner?" },
+              { file: 'k-ls1-unit3-lesson3-breathing.html', title: 'Breathing' },
+              { file: 'k-ls1-unit3-lesson4-how-animals-drink.html', title: 'How Animals Drink' },
+              { file: 'k-ls1-unit3-lesson5-building-a-shelter.html', title: 'Building a Shelter' },
+              { file: 'k-ls1-unit3-lesson6-when-needs-arent-met.html', title: "When Needs Aren't Met" },
+            ]
+          },
+          {
+            label: 'K-PS3: Sun & Energy',
+            lessons: [
+              { file: 'k-ps3-unit2-lesson1-sun-warms-everything.html', title: 'The Sun Warms Everything' },
+              { file: 'k-ps3-unit2-lesson2-shadow-science.html', title: 'Shadow Science' },
+              { file: 'k-ps3-unit2-lesson3-dark-vs-light-surfaces.html', title: 'Dark vs Light Surfaces' },
+              { file: 'k-ps3-unit2-lesson4-melting-race.html', title: 'Melting Race' },
+              { file: 'k-ps3-unit2-lesson5-design-sun-shelter-plan.html', title: 'Design a Sun Shelter (Plan)' },
+              { file: 'k-ps3-unit2-lesson6-design-sun-shelter-build.html', title: 'Design a Sun Shelter (Build)' },
+            ]
+          },
+          {
+            label: 'K-ESS2: Weather',
+            lessons: [
+              { file: 'k-ess2-unit1-lesson1-what-is-weather.html', title: 'What Is Weather?' },
+              { file: 'k-ess2-unit1-lesson2-wind.html', title: 'Wind' },
+              { file: 'k-ess2-unit1-lesson3-water-cycle.html', title: 'The Water Cycle' },
+              { file: 'k-ess2-unit1-lesson4-four-seasons.html', title: 'The Four Seasons' },
+              { file: 'k-ess2-unit1-lesson5-animals-and-weather.html', title: 'Animals and Weather' },
+              { file: 'k-ess2-unit1-lesson6-weather-patterns.html', title: 'Weather Patterns' },
+            ]
+          },
+          {
+            label: 'K-ESS3: Earth Resources',
+            lessons: [
+              { file: 'k-ess3-unit2-lesson1-what-earth-gives-us.html', title: 'What Earth Gives Us' },
+              { file: 'k-ess3-unit2-lesson2-water-resource.html', title: 'Water as a Resource' },
+              { file: 'k-ess3-unit2-lesson3-soil.html', title: 'Soil' },
+              { file: 'k-ess3-unit2-lesson4-humans-change-earth.html', title: 'Humans Change Earth' },
+              { file: 'k-ess3-unit2-lesson5-weather-hazards.html', title: 'Weather Hazards' },
+              { file: 'k-ess3-unit2-lesson6-being-earths-helper.html', title: "Being Earth's Helper" },
+            ]
+          },
+          {
+            label: 'K-ETS1: Engineering Design',
+            lessons: [
+              { file: 'k-ets1-unit1-lesson1-what-is-a-problem.html', title: 'What Is a Problem?' },
+              { file: 'k-ets1-unit1-lesson2-ask-questions.html', title: 'Ask Questions' },
+              { file: 'k-ets1-unit1-lesson3-draw-your-idea.html', title: 'Draw Your Idea' },
+              { file: 'k-ets1-unit1-lesson4-build-it.html', title: 'Build It!' },
+              { file: 'k-ets1-unit1-lesson5-test-and-improve.html', title: 'Test and Improve' },
+              { file: 'k-ets1-unit1-lesson6-share-your-solution.html', title: 'Share Your Solution' },
+            ]
+          },
+          {
+            label: 'Quizzes',
+            type: 'quiz',
+            lessons: [
+              { file: 'k-ps2-unit1-quiz.html', title: 'K-PS2 Forces & Motion Quiz' },
+              { file: 'k-ls1-unit2-quiz.html', title: 'K-LS1 Plants Quiz' },
+              { file: 'k-ls1-unit3-quiz.html', title: 'K-LS1 Animals Quiz' },
+              { file: 'k-ps3-unit2-quiz.html', title: 'K-PS3 Sun & Energy Quiz' },
+              { file: 'k-ess2-unit1-quiz.html', title: 'K-ESS2 Weather Quiz' },
+              { file: 'k-ess3-unit2-quiz.html', title: 'K-ESS3 Earth Resources Quiz' },
+              { file: 'k-ets1-unit1-quiz.html', title: 'K-ETS1 Engineering Design Quiz' },
+            ]
+          },
+          {
+            label: 'Reference Cards',
+            type: 'refcard',
+            lessons: [
+              { file: 'k-ls1-unit3-refcard.html', title: 'K-LS1 Animals Reference Card' },
+            ]
+          },
+        ]
+      },
+
+      'gr1-bundle': {
+        title: 'Complete Grade 1 Bundle',
+        grade: 'Grade 1',
+        units: [
+          {
+            label: '1-PS4: Sound & Light',
+            lessons: [
+              { file: 'gr1-ps4-unit1-lesson1-sound-is-vibration.html', title: 'Sound Is Vibration' },
+              { file: 'gr1-ps4-unit1-lesson2-light-travels.html', title: 'Light Travels' },
+              { file: 'gr1-ps4-unit1-lesson3-mirrors-and-communication.html', title: 'Mirrors and Communication' },
+            ]
+          },
+          {
+            label: '1-LS1: Animal & Plant Structures',
+            lessons: [
+              { file: 'gr1-ls1-lesson1-animal-structures-biomimicry.html', title: 'Animal Structures & Biomimicry' },
+              { file: 'gr1-ls1-unit1-lesson2-plant-parts-functions.html', title: 'Plant Parts & Functions' },
+              { file: 'gr1-ls1-unit1-lesson3-animal-protection.html', title: 'Animal Protection' },
+              { file: 'gr1-ls1-unit1-lesson4-plants-attract-pollinators.html', title: 'Plants Attract Pollinators' },
+              { file: 'gr1-ls1-unit1-lesson5-structures-for-getting-food.html', title: 'Structures for Getting Food' },
+              { file: 'gr1-ls1-unit1-lesson6-structures-for-moving.html', title: 'Structures for Moving' },
+            ]
+          },
+          {
+            label: '1-LS3: Parent & Offspring',
+            lessons: [
+              { file: 'gr1-ls3-unit2-lesson1-you-look-like-your-parents.html', title: 'You Look Like Your Parents' },
+              { file: 'gr1-ls3-unit2-lesson2-baby-animals-and-needs.html', title: 'Baby Animals and Their Needs' },
+              { file: 'gr1-ls3-unit2-lesson3-parents-protect-offspring.html', title: 'Parents Protect Offspring' },
+              { file: 'gr1-ls3-unit2-lesson4-parents-teach-offspring.html', title: 'Parents Teach Offspring' },
+              { file: 'gr1-ls3-unit2-lesson5-plant-parenting.html', title: 'Plant Parenting' },
+              { file: 'gr1-ls3-unit2-lesson6-patterns-parent-offspring.html', title: 'Patterns: Parent & Offspring' },
+            ]
+          },
+          {
+            label: '1-ESS1: Sky & Space',
+            lessons: [
+              { file: 'gr1-ess1-unit1-lesson1-the-sun.html', title: 'The Sun' },
+              { file: 'gr1-ess1-unit1-lesson2-the-moon.html', title: 'The Moon' },
+              { file: 'gr1-ess1-unit1-lesson3-stars.html', title: 'Stars' },
+              { file: 'gr1-ess1-unit1-lesson4-daylight-and-seasons.html', title: 'Daylight and Seasons' },
+              { file: 'gr1-ess1-unit1-lesson5-sky-changes.html', title: 'Sky Changes' },
+              { file: 'gr1-ess1-unit1-lesson6-patterns-in-the-sky.html', title: 'Patterns in the Sky' },
+            ]
+          },
+          {
+            label: 'Quizzes',
+            type: 'quiz',
+            lessons: [
+              { file: 'gr1-ps4-unit1-quiz.html', title: '1-PS4 Sound & Light Quiz' },
+              { file: 'gr1-ls1-unit1-quiz.html', title: '1-LS1 Structures Quiz' },
+              { file: 'gr1-ls3-unit2-quiz.html', title: '1-LS3 Parent & Offspring Quiz' },
+              { file: 'gr1-ess1-unit1-quiz.html', title: '1-ESS1 Sky & Space Quiz' },
+            ]
+          },
+        ]
+      },
+
+      'gr5-chem': {
+        title: 'Kitchen Chemistry',
+        grade: 'Grade 5',
+        units: [
+          {
+            label: 'Kitchen Chemistry — Grade 5 Physical Science',
+            lessons: [
+              { file: 'gr5-ps1-lesson1.html', title: 'Kitchen Chemistry Lesson 1' },
+            ]
+          },
+          {
+            label: 'Quiz',
+            type: 'quiz',
+            lessons: [
+              { file: 'gr5-ps1-unit1-quiz.html', title: 'Kitchen Chemistry Quiz' },
+            ]
+          },
+          {
+            label: 'Reference Card',
+            type: 'refcard',
+            lessons: [
+              { file: 'gr5-ps1-refcard.html', title: 'Kitchen Chemistry Reference Card' },
+            ]
+          },
+        ]
+      }
+    };
+
+    const data = products[product];
+
+    if (!data) {
+      document.getElementById('product-not-found').style.display = 'block';
+      return;
+    }
+
+    let html = `
+      <div class="downloads-box">
+        <div class="downloads-header">
+          <h2>Your Downloads — ${data.title}</h2>
+          <p>${data.grade} · Click any link to open in a new tab, then use the Print button on the lesson page to print.</p>
+        </div>
+        <div class="downloads-body">
+    `;
+
+    data.units.forEach(function(unit) {
+      const unitType = unit.type || 'lesson';
+      html += `
+        <div class="unit-group">
+          <div class="unit-label">${unit.label}</div>
+          <ul class="download-list">
+      `;
+      unit.lessons.forEach(function(lesson) {
+        html += `
+          <li class="${unitType}">
+            <a href="${BASE}${lesson.file}" target="_blank" rel="noopener">${lesson.title}</a>
+          </li>
+        `;
+      });
+      html += `</ul></div>`;
+    });
+
+    html += `</div></div>`;
+    container.innerHTML = html;
+  })();
+  </script>
+
+</body>
+</html>
