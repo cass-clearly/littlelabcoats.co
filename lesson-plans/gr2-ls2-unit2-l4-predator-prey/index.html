@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predator and Prey: The Population Game — Grade 2 Life Science, Unit 2, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #2e7d32; padding-bottom: 10px; color: #2e7d32; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #a5d6a7; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #2e7d32; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1b5e20; border-bottom: 2px solid #a5d6a7; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e8f5e9; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #2e7d32; }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .vocab-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #fff; border: 2px solid #a5d6a7; border-radius: 10px; padding: 10px 12px; text-align: center; font-size: 10pt; }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 11pt; display: block; margin-bottom: 4px; }
+    .vocab-card .vocab-def { color: #444; font-size: 9pt; font-style: italic; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #1b5e20; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #2e7d32; border-radius: 10px; min-height: 160px; margin: 12px 0; padding: 10px; }
+    .fill-blank { background: #e8f5e9; border: 2px solid #a5d6a7; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1b5e20; min-width: 160px; margin: 0 4px; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #1b5e20; }
+    table.tally { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 11pt; }
+    table.tally th { background: #2e7d32; color: white; padding: 8px; text-align: center; }
+    table.tally td { border: 1px solid #a5d6a7; padding: 10px 8px; text-align: center; }
+    table.tally tr:nth-child(even) td { background: #f1f8e9; }
+    .graph-box { border: 2px solid #a5d6a7; border-radius: 10px; padding: 14px; margin: 12px 0; background: #fafff9; }
+    .graph-grid { display: grid; grid-template-columns: 30px repeat(5, 1fr); grid-template-rows: repeat(6, 30px); gap: 2px; margin: 10px 0; }
+    .graph-cell { border: 1px solid #ddd; background: #f9f9f9; }
+    .graph-label { display: flex; align-items: center; justify-content: center; font-size: 9pt; color: #555; font-weight: bold; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_Np1M1TEUGrg">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🦊 Predator and Prey: The Population Game</h1>
+  <p class="subtitle">Grade 2 Life Science, Unit 2 — Lesson 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Ecosystems</span>
+    <span>🌱 <strong>Unit:</strong> 2-LS2 Ecosystems</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🦊🐇🌿⚖️🌍</div>
+    <div class="caption">Predators and prey keep each other's populations in balance.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Understand the relationship between predators and prey</li>
+    <li>Observe how predator and prey populations affect each other over time</li>
+    <li>Recognize that these relationships help keep ecosystems in balance</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>10 small red paper scraps (or any colored cards) as "life cards"</li>
+      <li>Open space: living room, hallway, or yard</li>
+      <li>Pencil and tally sheet (Student Worksheet)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No specialty purchases needed — just paper scraps and open space!</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <span class="vocab-word">Predator</span>
+      <span class="vocab-def">An animal that hunts and eats other animals</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Prey</span>
+      <span class="vocab-def">An animal that is hunted and eaten by another animal</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Population</span>
+      <span class="vocab-def">The total number of one kind of animal living in an area</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Balance</span>
+      <span class="vocab-def">When predator and prey populations stay at healthy levels over time</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Reproduce</span>
+      <span class="vocab-def">To have babies and make more of your species</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Survive</span>
+      <span class="vocab-def">To stay alive despite challenges from predators or the environment</span>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>In every ecosystem, some animals eat other animals. The animal that hunts is called the predator. The animal being hunted is called the prey. Foxes hunt rabbits. Hawks hunt mice. Owls hunt voles. These relationships keep ecosystems healthy by preventing any one species from becoming too numerous.</p>
+
+  <p>Predator and prey populations are connected like a seesaw. When there are lots of rabbits (prey), foxes (predators) have plenty to eat and their population grows. But more foxes eat more rabbits, so rabbit numbers start to drop. With fewer rabbits, some foxes go hungry and fox numbers drop too. With fewer foxes, rabbits bounce back — and the cycle starts again.</p>
+
+  <p>This up-and-down cycle keeps ecosystems in balance. It is not cruel — it is the way ecosystems stay healthy. When humans remove predators from an ecosystem (such as by hunting wolves away from a forest), prey populations can explode, eat all the vegetation, and cause the ecosystem to collapse. Every predator plays a role, even the scary ones.</p>
+
+  <h2>🔬 Activity: Population Tag</h2>
+
+  <div class="tip-box">
+    💡 <strong>Setup:</strong> 1 player = fox (predator). All other players = rabbits (prey). Each rabbit starts with 2 red cards ("lives") held in their hands. This works great with just 2 people (one adult as fox, one child as rabbit) or a whole family!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Round Setup:</strong> Fox stands at one end of the room. Rabbits scatter in the space. Give each rabbit 2 red cards to hold.
+  </div>
+  <div class="procedure-step">
+    <strong>Play (1 minute each round):</strong> Fox chases rabbits and tags them. Each tag = fox takes 1 life card. A rabbit with 0 cards is "eaten" and sits down for that round.
+  </div>
+  <div class="procedure-step">
+    <strong>Count after each round:</strong> How many rabbits survived? How many were eaten? Write the numbers in your tally sheet.
+  </div>
+  <div class="procedure-step">
+    <strong>Reproduce:</strong> Each surviving rabbit gets 1 new card (they had a baby rabbit!). Fox stays in the game if they tagged at least 1 rabbit.
+  </div>
+  <div class="procedure-step">
+    <strong>Repeat for 5 rounds total.</strong> After Round 5, look at your numbers. Did the rabbit population go up and down in a pattern?
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What happened to the rabbit population over 5 rounds? Did it stay the same, or did it change?
+    <p class="discussion-hint">Suggested answer: Usually the population zigzags! When rabbits are plentiful, the fox catches many and rabbit numbers drop. When rabbit numbers drop, the fox struggles to catch enough — then rabbits recover. This is the natural predator-prey cycle. Even in a short 5-round game, students often see this balance develop.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> What would happen if we added 3 more foxes to the game?
+    <p class="discussion-hint">Suggested answer: More foxes would eat more rabbits faster, driving the rabbit population down quickly. With very few rabbits left, the many foxes would struggle to find food and some would "starve." Eventually the system might balance at a lower level — or collapse if the rabbits go extinct. This is why introducing or removing predators from an ecosystem has huge ripple effects.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> If all the rabbits disappeared from an ecosystem, what would happen to the foxes?
+    <p class="discussion-hint">Suggested answer: The foxes would lose their food source. Some might find other prey (mice, birds), but if rabbits were their main food, the fox population would shrink significantly. This shows that predators NEED their prey to survive — they are just as dependent on each other as plants and pollinators.</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🦊 Student Worksheet — Predator and Prey</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Population Tally Table</h3>
+    <p style="font-size:10pt; color:#555;">Record your data after each round of Population Tag.</p>
+    <table class="tally">
+      <tr>
+        <th>Round</th>
+        <th>🐇 Rabbits at Start</th>
+        <th>🦊 Rabbits Eaten</th>
+        <th>🐇 Rabbits Survive</th>
+        <th>🐇 After Reproduce</th>
+      </tr>
+      <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>Part 2 — Graph the Rabbit Population</h3>
+    <p style="font-size:10pt; color:#555;">Plot your rabbit "After Reproduce" number for each round. Connect the dots with a line. What shape does it make?</p>
+    <div class="graph-box">
+      <div style="display:flex; align-items:flex-end; gap:16px; height:160px; padding: 10px 10px 0 40px; position:relative;">
+        <div style="position:absolute; left:0; top:0; bottom:20px; display:flex; flex-direction:column; justify-content:space-between; font-size:9pt; color:#555;">
+          <span>10</span><span>8</span><span>6</span><span>4</span><span>2</span>
+        </div>
+        <div style="flex:1; height:140px; border-left:2px solid #2e7d32; border-bottom:2px solid #2e7d32; position:relative; background: repeating-linear-gradient(transparent, transparent 27px, #e8f5e9 27px, #e8f5e9 28px);">
+          <div style="display:flex; justify-content:space-around; position:absolute; bottom:-20px; width:100%; font-size:9pt; color:#555;">
+            <span>R1</span><span>R2</span><span>R3</span><span>R4</span><span>R5</span>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center; font-size:9pt; color:#777; margin-top:24px;">Round Number →</p>
+    </div>
+
+    <h3>Part 3 — Vocabulary Match</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line from each word to its definition.</p>
+    <div style="display:flex; gap:30px; margin:12px 0;">
+      <div style="flex:1;">
+        <p style="background:#e8f5e9; padding:8px; border-radius:6px; margin:6px 0; font-weight:bold;">Predator</p>
+        <p style="background:#e8f5e9; padding:8px; border-radius:6px; margin:6px 0; font-weight:bold;">Prey</p>
+        <p style="background:#e8f5e9; padding:8px; border-radius:6px; margin:6px 0; font-weight:bold;">Population</p>
+        <p style="background:#e8f5e9; padding:8px; border-radius:6px; margin:6px 0; font-weight:bold;">Balance</p>
+      </div>
+      <div style="flex:1;">
+        <p style="background:#fff8e1; border:1px solid #ffcc80; padding:8px; border-radius:6px; margin:6px 0;">An animal that is hunted</p>
+        <p style="background:#fff8e1; border:1px solid #ffcc80; padding:8px; border-radius:6px; margin:6px 0;">When populations stay at healthy levels</p>
+        <p style="background:#fff8e1; border:1px solid #ffcc80; padding:8px; border-radius:6px; margin:6px 0;">The total number of one kind of animal in an area</p>
+        <p style="background:#fff8e1; border:1px solid #ffcc80; padding:8px; border-radius:6px; margin:6px 0;">An animal that hunts other animals</p>
+      </div>
+    </div>
+
+    <h3>Part 4 — Reflection</h3>
+    <div class="fill-blank">
+      I noticed that when the fox population goes up, the rabbit population goes <span class="blank-line" style="min-width:100px;"></span>.<br><br>
+      This happens because <span class="blank-line" style="min-width:280px;"></span>.
+    </div>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Works great with just 2 people:</strong> One adult as fox, one child as rabbit (or vice versa). With more siblings, add more rabbits and possibly 2 foxes.</li>
+      <li><strong>No red cards?</strong> Use any 2 different colored paper scraps, or just have rabbits hold up 2 fingers as "lives." The mechanic is the same.</li>
+      <li><strong>The point is not who wins.</strong> The point is to notice the population numbers going up and down. Stop after each round to count and record — data collection IS the lesson.</li>
+      <li><strong>Real-world connection — Yellowstone wolves:</strong> When wolves were removed from Yellowstone in the 1920s, elk populations exploded and ate all the riverside vegetation. When wolves were reintroduced in 1995, elk moved around more, vegetation recovered, rivers changed course, and beaver populations returned. This "trophic cascade" is one of the most famous ecosystem stories in science. Share it if your student is captivated!</li>
+      <li><strong>Connection to Lesson 3:</strong> Predator-prey relationships ARE food chains in action. Connect back to the food chain mobile: the fox and rabbit are two links in a larger chain.</li>
+    </ul>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_Np1M1TEUGrg" data-content-selector="body"></script>
+</body>
+</html>

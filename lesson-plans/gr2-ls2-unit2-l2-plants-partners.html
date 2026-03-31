@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plants Need Partners — Grade 2 Life Science, Unit 2, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #2e7d32; padding-bottom: 10px; color: #2e7d32; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #a5d6a7; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #2e7d32; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1b5e20; border-bottom: 2px solid #a5d6a7; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e8f5e9; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #2e7d32; }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .vocab-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #fff; border: 2px solid #a5d6a7; border-radius: 10px; padding: 10px 12px; text-align: center; font-size: 10pt; }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 11pt; display: block; margin-bottom: 4px; }
+    .vocab-card .vocab-def { color: #444; font-size: 9pt; font-style: italic; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #1b5e20; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #2e7d32; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .fill-blank { background: #e8f5e9; border: 2px solid #a5d6a7; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1b5e20; min-width: 200px; margin: 0 4px; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #1b5e20; }
+    .sequence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
+    .seq-box { border: 2px solid #a5d6a7; border-radius: 8px; padding: 10px; text-align: center; background: #f9fff9; }
+    .seq-box .seq-num { background: #2e7d32; color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 10pt; margin-bottom: 6px; }
+    .seq-box .seq-draw { border: 1px dashed #aaa; border-radius: 6px; height: 60px; margin-top: 8px; }
+    .circle-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .circle-item { border: 2px solid #a5d6a7; border-radius: 20px; padding: 6px 14px; font-size: 11pt; background: #f9fff9; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_qRD5DYBlX3g">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🐝 Plants Need Partners</h1>
+  <p class="subtitle">Grade 2 Life Science, Unit 2 — Lesson 2</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Ecosystems</span>
+    <span>🌱 <strong>Unit:</strong> 2-LS2 Ecosystems</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌸🐝🦋🌻🍎</div>
+    <div class="caption">Without pollinators, most of our fruits and vegetables would not exist!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-2</strong> — Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Understand how pollination works and why it matters for plants</li>
+    <li>Identify animals that act as pollinators and seed dispersers</li>
+    <li>Build and use a simple model to show how pollen moves between flowers</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Small bowl of flour (pretend pollen)</li>
+      <li>3-4 drops of yellow food coloring (mix into the flour)</li>
+      <li>1 cotton ball (the "pollinator")</li>
+      <li>2 pieces of paper with a flower drawn on each (or 2 real flowers)</li>
+      <li>Paper and pencil for worksheet</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All household items — no specialty purchases needed!</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <span class="vocab-word">Pollination</span>
+      <span class="vocab-def">Moving pollen from one flower to another so the plant can make seeds</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Pollen</span>
+      <span class="vocab-def">A tiny yellow powder made by flowers that is needed to make seeds</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Pollinator</span>
+      <span class="vocab-def">An animal (like a bee or butterfly) that carries pollen between flowers</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Seed Dispersal</span>
+      <span class="vocab-def">Moving seeds away from the parent plant so they can grow in new places</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Nectar</span>
+      <span class="vocab-def">A sweet liquid made by flowers that attracts pollinators</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Fruit</span>
+      <span class="vocab-def">The part of a plant that holds seeds and often helps spread them</span>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Plants cannot walk around and find partners on their own. They depend on animals (and wind and water) to help them reproduce. Pollinators like bees, butterflies, and hummingbirds visit flowers to drink sweet nectar. While they feed, tiny pollen grains stick to their bodies — and get carried to the next flower.</p>
+
+  <p>When the pollinator flies to the next flower, some pollen rubs off, and that flower can now make seeds. This partnership is so important that 1 in every 3 bites of food you eat exists because of pollinators. Without them, most fruits, vegetables, and nuts would disappear from our world.</p>
+
+  <p>Plants also need their seeds to travel. Some seeds travel by wind (dandelions), some by water (coconuts), and some by hitching a ride on animals — in their fur, feathers, or even inside their digestive systems after being eaten in a fruit. Every apple you eat contains seeds that the tree hopes you (or a bird) will carry somewhere new.</p>
+
+  <h2>🔬 Activity: Pollinator Simulation</h2>
+  <p>In this activity, you will build a simple model of pollination using flour as pollen and a cotton ball as a bee.</p>
+
+  <div class="tip-box">
+    💡 <strong>Before you begin:</strong> Mix 3-4 drops of yellow food coloring into a small bowl of flour. Stir until the flour looks yellow. This is your pollen!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Draw a flower on each of 2 pieces of paper. Label them Flower 1 and Flower 2. Place them a few feet apart on a table or on the floor.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Gently dip the cotton ball into the yellow flour mixture. Look at the cotton ball — the yellow powder clings to it just like pollen clings to a bee's fuzzy body.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Touch your "pollinator" cotton ball to Flower 1. Press gently and lift. You have just visited the first flower for nectar!
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Now "fly" your cotton ball pollinator to Flower 2. Touch it gently to Flower 2 and press. Lift it up. Look at Flower 2 — can you see yellow pollen transferred to it?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5:</strong> That yellow flour on Flower 2 is pollination in action! You just modeled how a bee moves pollen from one plant to another, allowing the plant to make seeds.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Discuss together: What animal does the cotton ball represent? What does the flour represent? Why do bees visit flowers?
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What would happen to fruit and vegetables if there were no bees or butterflies?
+    <p class="discussion-hint">Suggested answer: Many fruits and vegetables would disappear because they need pollinators to reproduce. Apples, strawberries, cucumbers, almonds, and blueberries all depend on pollinators. Farmers actually rent beehives and bring them to orchards to make sure there are enough bees. Without pollinators, much of our food supply would collapse — roughly 1 in 3 bites of food depends on them.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> What other animals besides bees are pollinators?
+    <p class="discussion-hint">Suggested answer: Many animals pollinate! Butterflies, moths (at night), hummingbirds, some bats (they pollinate tropical flowers at night), beetles, wasps, and even some flies can all carry pollen. In the rainforest, some plants are only pollinated by one specific species — so if that species disappears, the plant does too.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Why do flowers make nectar and smell good? Who are they "trying to" attract?
+    <p class="discussion-hint">Suggested answer: Flowers make nectar and scents to attract pollinators! The bright colors say "look over here!" The scent says "food is here!" The nectar is the reward for visiting. Flowers and pollinators evolved together over millions of years, each benefiting from the other. Scientists call this mutualism — both partners benefit from the relationship.</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🐝 Student Worksheet — Plants Need Partners</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Pollination Sequence</h3>
+    <p style="font-size:10pt; color:#555;">Draw a picture in each box to show the steps of pollination.</p>
+    <div class="sequence-grid">
+      <div class="seq-box">
+        <div class="seq-num">1</div>
+        <p style="font-size:9pt;">Bee visits Flower 1</p>
+        <div class="seq-draw"></div>
+      </div>
+      <div class="seq-box">
+        <div class="seq-num">2</div>
+        <p style="font-size:9pt;">Pollen sticks to bee</p>
+        <div class="seq-draw"></div>
+      </div>
+      <div class="seq-box">
+        <div class="seq-num">3</div>
+        <p style="font-size:9pt;">Bee flies to Flower 2</p>
+        <div class="seq-draw"></div>
+      </div>
+      <div class="seq-box">
+        <div class="seq-num">4</div>
+        <p style="font-size:9pt;">Pollen transfers — seeds can grow!</p>
+        <div class="seq-draw"></div>
+      </div>
+    </div>
+
+    <h3>Part 2 — Draw Your Simulation</h3>
+    <p style="font-size:10pt; color:#555;">Draw your pollinator experiment below. Label: cotton ball, pollen, Flower 1, and Flower 2.</p>
+    <div class="draw-box">
+      <p style="color:#aaa; font-size:9pt; font-style:italic;">✏️ Draw here...</p>
+      <div style="height:140px;"></div>
+    </div>
+
+    <h3>Part 3 — Fill in the Blanks</h3>
+    <div class="fill-blank">
+      The <span class="blank-line" style="min-width:140px;"></span> carries pollen from flower to flower.
+    </div>
+    <div class="fill-blank">
+      Without pollinators, we would not have <span class="blank-line"></span>.
+    </div>
+
+    <h3>Part 4 — Circle the Pollinators!</h3>
+    <p style="font-size:10pt; color:#555;">Circle all the animals that can pollinate flowers:</p>
+    <div class="circle-list">
+      <span class="circle-item">🐝 Bee</span>
+      <span class="circle-item">🪨 Rock</span>
+      <span class="circle-item">🦋 Butterfly</span>
+      <span class="circle-item">🐦 Hummingbird</span>
+      <span class="circle-item">🚗 Car</span>
+      <span class="circle-item">🦟 Moth</span>
+      <span class="circle-item">🦇 Bat</span>
+      <span class="circle-item">✏️ Pencil</span>
+    </div>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Materials:</strong> Flour plus food coloring plus a cotton ball. If you do not have food coloring, plain flour still works — show kids how the powder clings to the cotton ball fibers.</li>
+      <li><strong>For a more dramatic effect:</strong> Use two different colors of food coloring for two different "flower species." This shows cross-pollination and species specificity more vividly.</li>
+      <li><strong>Real-world connection:</strong> If you have any flowering plants in your yard, watch for actual pollinators during the activity! Even in cities, bees and butterflies visit any flowering plant they can find.</li>
+      <li><strong>Seed dispersal extension:</strong> After the activity, go outside and find a dandelion that has gone to seed. Blow it gently. Each tiny seed has its own parachute. Ask: why does a dandelion make so many seeds? (Because most will not survive — making many seeds increases the odds.)</li>
+      <li><strong>NGSS connection:</strong> This lesson directly addresses 2-LS2-2: developing a simple model of pollination. The cotton ball simulation IS that model. Ask your student to explain how the model is similar to real pollination, and how it is different.</li>
+      <li><strong>Worksheet answer (circle the pollinators):</strong> Bee, butterfly, hummingbird, moth, and bat are all pollinators. Rock, car, and pencil are not living and cannot pollinate.</li>
+    </ul>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_qRD5DYBlX3g" data-content-selector="body"></script>
+</body>
+</html>

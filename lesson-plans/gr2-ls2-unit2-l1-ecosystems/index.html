@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is an Ecosystem? — Grade 2 Life Science, Unit 2, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #2e7d32; padding-bottom: 10px; color: #2e7d32; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #a5d6a7; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #2e7d32; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1b5e20; border-bottom: 2px solid #a5d6a7; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e8f5e9; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #2e7d32; }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .vocab-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #fff; border: 2px solid #a5d6a7; border-radius: 10px; padding: 10px 12px; text-align: center; font-size: 10pt; }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 11pt; display: block; margin-bottom: 4px; }
+    .vocab-card .vocab-def { color: #444; font-size: 9pt; font-style: italic; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #1b5e20; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #2e7d32; border-radius: 10px; min-height: 200px; margin: 12px 0; padding: 10px; position: relative; }
+    .fill-blank { background: #e8f5e9; border: 2px solid #a5d6a7; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1b5e20; min-width: 200px; margin: 0 4px; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #1b5e20; }
+    table.tally { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 11pt; }
+    table.tally th { background: #2e7d32; color: white; padding: 8px; text-align: left; }
+    table.tally td { border: 1px solid #a5d6a7; padding: 7px 10px; }
+    table.tally tr:nth-child(even) td { background: #f1f8e9; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_0W96LUQ-dtw">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌿 What Is an Ecosystem?</h1>
+  <p class="subtitle">Grade 2 Life Science, Unit 2 — Lesson 1</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Ecosystems</span>
+    <span>🌱 <strong>Unit:</strong> 2-LS2 Ecosystems</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌳🐛☀️💧🌱</div>
+    <div class="caption">Living and nonliving things working together — that is an ecosystem!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Identify the living and nonliving parts of an ecosystem</li>
+    <li>Understand that living things depend on their environment to survive</li>
+    <li>Recognize that all parts of an ecosystem are connected</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and pencil (for the Ecosystem Map)</li>
+      <li>Green and blue crayons or colored pencils</li>
+      <li>Window or outdoor access (a few minutes of looking outside)</li>
+      <li>Magnifying glass — optional but fun!</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No specialty purchases needed — paper and crayons only!</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <span class="vocab-word">Ecosystem</span>
+      <span class="vocab-def">All the living and nonliving things in one place, working together</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Living</span>
+      <span class="vocab-def">Something that grows, breathes, and needs food and water</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Nonliving</span>
+      <span class="vocab-def">Something that was never alive (rocks, water, sunlight)</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Habitat</span>
+      <span class="vocab-def">The place where an animal or plant lives and finds what it needs</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Environment</span>
+      <span class="vocab-def">Everything that surrounds a living thing: air, water, soil, other living things</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Depend</span>
+      <span class="vocab-def">To need something else in order to survive</span>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>An ecosystem is made up of all the living and nonliving things in one place. Trees, insects, birds, and soil bacteria are living parts. Rocks, sunlight, water, and air are nonliving parts. Everything in an ecosystem is connected — change one part and the whole ecosystem feels it.</p>
+
+  <p>Living things in an ecosystem depend on the nonliving parts to survive. Plants need sunlight and water to grow. Animals need clean air to breathe and fresh water to drink. When one part of an ecosystem changes (for example, if a drought stops the rain), all the living things are affected.</p>
+
+  <p>Ecosystems come in all sizes. A puddle can be a tiny ecosystem for bacteria and water insects. A rainforest is a giant ecosystem with millions of species. Even a backyard, a park, or a window box is an ecosystem you can explore today. No matter how small, every ecosystem has the same ingredients: living things, nonliving things, and the connections between them.</p>
+
+  <h2>🔬 Activity: Ecosystem Map</h2>
+  <p>In this activity, you will look carefully at the outdoor world around you and make a map of the ecosystem you can see.</p>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Look out a window or step outside for 5 minutes. Bring paper and pencil.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Draw a simple map of what you can see — trees, sky, soil, grass, sidewalk, birds, insects, rocks, puddles, and sunlight. It does not need to be perfect — just get everything you notice onto the paper.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Go back through your drawing and circle every <strong>living thing</strong> in green. Circle every <strong>nonliving thing</strong> in blue.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Count how many living things you found and how many nonliving things. Write the numbers at the bottom of your map.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5:</strong> Look at your map again. Draw a dotted arrow from one living thing to a nonliving thing it depends on. For example: draw an arrow from a tree to the sunlight, or from a bird to a tree.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Share your map and discuss: "What surprised you about how many connections you found?"
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> If the rain stopped falling for an entire year, which living things would be most affected first?
+    <p class="discussion-hint">Suggested answer: Plants would be affected first because they need water to grow. Without plants, plant-eating animals would lose their food. Then meat-eating animals would lose their food too. The whole ecosystem would change, starting with the plants — they are the foundation of most ecosystems.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Is a rock a living or nonliving thing? How do you know?
+    <p class="discussion-hint">Suggested answer: A rock is nonliving because it does not grow, breathe, eat, or reproduce. It was never alive. Soil is interesting though — it contains tiny living things called bacteria and fungi. The dirt itself is nonliving, but the organisms living inside it are alive. This shows that living and nonliving things are always mixed together.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Can a living thing survive without any nonliving things nearby?
+    <p class="discussion-hint">Suggested answer: No! Every living thing needs nonliving things. Plants need sunlight (nonliving), water (nonliving), and minerals in soil (nonliving). Animals need air (nonliving) and water (nonliving). Life and nonlife are always working together in every ecosystem on Earth.</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🌿 Student Worksheet — What Is an Ecosystem?</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — My Ecosystem Map</h3>
+    <p style="font-size:10pt; color:#555;">Draw everything you can see outside your window or yard. Circle living things in GREEN. Circle nonliving things in BLUE.</p>
+    <div class="draw-box">
+      <p style="color:#aaa; font-size:9pt; font-style:italic;">✏️ Draw your ecosystem map here...</p>
+      <div style="height: 200px;"></div>
+    </div>
+
+    <h3>Part 2 — What Did I Find?</h3>
+    <table class="tally">
+      <tr><th>🌿 Living Things I Found</th><th>💧 Nonliving Things I Found</th></tr>
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+    </table>
+    <p style="font-size:11pt;">Total living things: <span class="blank-line" style="min-width:60px;"></span> &nbsp;&nbsp; Total nonliving things: <span class="blank-line" style="min-width:60px;"></span></p>
+
+    <h3>Part 3 — Fill in the Blanks</h3>
+    <div class="fill-blank">
+      An ecosystem is made up of <span class="blank-line"></span> and <span class="blank-line"></span> things working together.
+    </div>
+    <div class="fill-blank">
+      One living thing in my ecosystem: <span class="blank-line"></span> depends on <span class="blank-line"></span> to survive.
+    </div>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>No materials to buy:</strong> Paper and crayons only. A magnifying glass adds excitement if you have one — even a cheap plastic one transforms the experience.</li>
+      <li><strong>If outdoor access is limited:</strong> Look out a window, or describe the ecosystem of a houseplant (soil, sunlight from window, the plant itself, and any bugs you might find). Even a kitchen windowsill is an ecosystem.</li>
+      <li><strong>Connection to prior learning:</strong> Students may have learned about animal needs (food, water, shelter, air). This lesson zooms out to show HOW animals get those needs met — from their ecosystem.</li>
+      <li><strong>Differentiation:</strong> Younger learners can sort picture cards into "living" and "nonliving" piles. Advanced learners can research a specific ecosystem (desert, ocean, rainforest) and compare it to their backyard.</li>
+      <li><strong>This lesson is the foundation for the whole unit.</strong> Spend extra time on the idea that everything is connected. The Ecosystem Map activity makes that connection visible and personal.</li>
+      <li><strong>Common misconception:</strong> Students sometimes think soil is nonliving. Soil contains billions of living microorganisms! The mineral particles are nonliving, but a teaspoon of healthy soil contains more living things than there are people on Earth.</li>
+    </ul>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_0W96LUQ-dtw" data-content-selector="body"></script>
+</body>
+</html>

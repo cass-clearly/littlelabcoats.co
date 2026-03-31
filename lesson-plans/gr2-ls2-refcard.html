@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystems Reference Card — Grade 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #e8f5e9;
+      color: #0d2012;
+      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media print {
+      @page { size: letter portrait; margin: 0; }
+      body { background: white; padding: 0; min-height: 0; height: 11in; }
+      .no-print { display: none !important; }
+      .page-card { width: 100%; max-width: 100%; box-shadow: none; border-radius: 0; height: 11in; page-break-after: avoid; }
+      .grid-section { flex: 1; min-height: 0; }
+      .tile { min-height: 0 !important; }
+    }
+
+    .page-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      width: 100%;
+      max-width: 8.5in;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .header-banner {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 28px 24px 22px;
+      flex-shrink: 0;
+    }
+
+    .header-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .header-banner .subtitle {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #a5d6a7;
+      text-transform: uppercase;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 24px;
+      text-align: center;
+      border: 3px solid rgba(255,255,255,0.6);
+      min-height: 260px;
+    }
+
+    .tile-eco      { background: #e8f5e9; }
+    .tile-food     { background: #fff8e1; }
+    .tile-poll     { background: #fce4ec; }
+    .tile-hab      { background: #e3f2fd; }
+
+    .tile-emoji { font-size: 3.5rem; line-height: 1; margin-bottom: 10px; }
+
+    .tile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #1b5e20;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .tile-food  .tile-name { color: #e65100; }
+    .tile-poll  .tile-name { color: #880e4f; }
+    .tile-hab   .tile-name { color: #0d47a1; }
+
+    .tile-bullets { list-style: none; width: 100%; }
+
+    .tile-bullets li {
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.4;
+      padding: 5px 0;
+      color: #1a1a1a;
+    }
+
+    .tile-bullets li + li { border-top: 1px solid rgba(0,0,0,0.08); }
+
+    .without-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #fff8e1;
+      border-top: 3px solid #ffe082;
+      flex-shrink: 0;
+    }
+
+    .without-tile {
+      padding: 14px 12px;
+      text-align: center;
+      border-right: 2px solid #ffe082;
+    }
+    .without-tile:last-child { border-right: none; }
+
+    .without-emoji { font-size: 1.8rem; margin-bottom: 6px; }
+
+    .without-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #e65100;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .without-text {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #5d4037;
+      line-height: 1.35;
+    }
+
+    .facts-strip {
+      background: #2e7d32;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 16px 20px;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .fact-pill {
+      background: rgba(255,255,255,0.18);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 9px 14px;
+      text-align: center;
+      flex: 1;
+      line-height: 1.3;
+    }
+
+    .footer {
+      background: #f1f8e9;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.85rem;
+      color: #555;
+      font-weight: 700;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    .print-btn {
+      margin-top: 20px;
+      padding: 12px 32px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+  </style>
+</head>
+<body data-doc-id="doc_fZhyYvwggsg">
+
+  <div class="page-card">
+
+    <!-- HEADER -->
+    <div class="header-banner">
+      <h1>🌿 Living Things Need Each Other</h1>
+      <div class="subtitle">Ecosystems &nbsp;·&nbsp; Food Chains &nbsp;·&nbsp; Habitats &nbsp;·&nbsp; Pollinators</div>
+    </div>
+
+    <!-- 2x2 GRID -->
+    <div class="grid-section">
+
+      <div class="tile tile-eco">
+        <div class="tile-emoji">🌍</div>
+        <div class="tile-name">ECOSYSTEMS</div>
+        <ul class="tile-bullets">
+          <li>Living + nonliving together</li>
+          <li>Plants, animals, soil, water</li>
+          <li>All parts are connected</li>
+          <li>Change one → change all</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-food">
+        <div class="tile-emoji">⛓️</div>
+        <div class="tile-name">FOOD CHAINS</div>
+        <ul class="tile-bullets">
+          <li>Energy flows from the sun</li>
+          <li>Sun → Plant → Herbivore → Carnivore</li>
+          <li>Arrows show energy direction</li>
+          <li>Remove one link → chain breaks</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-poll">
+        <div class="tile-emoji">🐝</div>
+        <div class="tile-name">POLLINATORS</div>
+        <ul class="tile-bullets">
+          <li>Move pollen between flowers</li>
+          <li>🐝 Bees &nbsp; 🦋 Butterflies &nbsp; 🐦 Hummingbirds</li>
+          <li>Without them: no fruit or seeds</li>
+          <li>1 in 3 bites of food needs pollinators</li>
+        </ul>
+      </div>
+
+      <div class="tile tile-hab">
+        <div class="tile-emoji">🏡</div>
+        <div class="tile-name">HABITATS</div>
+        <ul class="tile-bullets">
+          <li>Where an animal lives</li>
+          <li>Must have: food, water, shelter, space</li>
+          <li>🐟 Fish in water &nbsp; 🦅 Eagles in mountains</li>
+          <li>Destroy habitat → lose the animal</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- WITHOUT STRIP -->
+    <div class="without-strip">
+      <div class="without-tile">
+        <div class="without-emoji">☀️</div>
+        <div class="without-title">No Sun</div>
+        <div class="without-text">No plants, no food chain</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">🐝</div>
+        <div class="without-title">No Pollinators</div>
+        <div class="without-text">No fruit or seeds</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">🪱</div>
+        <div class="without-title">No Decomposers</div>
+        <div class="without-text">Dead things pile up</div>
+      </div>
+      <div class="without-tile">
+        <div class="without-emoji">💧</div>
+        <div class="without-title">No Clean Water</div>
+        <div class="without-text">Ecosystem collapses</div>
+      </div>
+    </div>
+
+    <!-- FUN FACTS -->
+    <div class="facts-strip">
+      <div class="fact-pill">🐛 One earthworm can eat half its body weight in soil daily</div>
+      <div class="fact-pill">🌻 A single oak tree supports 500+ species</div>
+      <div class="fact-pill">🦋 Monarch butterflies migrate 3,000 miles</div>
+      <div class="fact-pill">🐝 Bees can recognize human faces</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">Little Lab Coats 🥼 &nbsp;|&nbsp; Grade 2 &nbsp;|&nbsp; 2-LS2 Ecosystems</div>
+
+  </div>
+
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Print</button>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_fZhyYvwggsg" data-content-selector="body"></script>
+</body>
+</html>

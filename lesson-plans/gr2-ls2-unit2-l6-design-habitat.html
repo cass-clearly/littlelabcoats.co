@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design a Habitat — Grade 2 Life Science, Unit 2, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #2e7d32; padding-bottom: 10px; color: #2e7d32; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #a5d6a7; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #2e7d32; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1b5e20; border-bottom: 2px solid #a5d6a7; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e8f5e9; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #2e7d32; }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .vocab-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #fff; border: 2px solid #a5d6a7; border-radius: 10px; padding: 10px 12px; text-align: center; font-size: 10pt; }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 11pt; display: block; margin-bottom: 4px; }
+    .vocab-card .vocab-def { color: #444; font-size: 9pt; font-style: italic; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #1b5e20; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #2e7d32; border-radius: 10px; min-height: 200px; margin: 12px 0; padding: 10px; }
+    .fill-blank { background: #e8f5e9; border: 2px solid #a5d6a7; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1b5e20; min-width: 180px; margin: 0 4px; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #1b5e20; }
+    .animal-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0; }
+    .animal-card { border: 3px solid #a5d6a7; border-radius: 12px; padding: 14px 12px; background: #f9fff9; }
+    .animal-card .animal-emoji { font-size: 28pt; text-align: center; display: block; margin-bottom: 8px; }
+    .animal-card .animal-name { font-weight: bold; color: #1b5e20; font-size: 12pt; text-align: center; display: block; margin-bottom: 8px; border-bottom: 2px solid #a5d6a7; padding-bottom: 6px; }
+    .animal-card ul { font-size: 9pt; padding-left: 16px; }
+    .animal-card li { margin-bottom: 4px; }
+    table.needs { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    table.needs th { background: #2e7d32; color: white; padding: 8px; text-align: left; }
+    table.needs td { border: 1px solid #a5d6a7; padding: 10px 8px; }
+    table.needs tr:nth-child(even) td { background: #f1f8e9; }
+    table.materials { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    table.materials th { background: #2e7d32; color: white; padding: 8px; text-align: left; }
+    table.materials td { border: 1px solid #a5d6a7; padding: 10px 8px; }
+    table.materials tr:nth-child(even) td { background: #f1f8e9; }
+    .checklist-box { background: #fff; border: 2px solid #a5d6a7; border-radius: 10px; padding: 14px; margin: 12px 0; }
+    .check-item { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid #e8f5e9; font-size: 12pt; }
+    .check-item:last-child { border-bottom: none; }
+    .checkbox { width: 22px; height: 22px; border: 2px solid #2e7d32; border-radius: 4px; flex-shrink: 0; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card, .animal-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_bBiY7845V3U">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🏗️ Design a Habitat: Build a Home for a Creature</h1>
+  <p class="subtitle">Grade 2 Life Science, Unit 2 — Lesson 6 (Unit Culminating Project)</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 60+ minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Ecosystems</span>
+    <span>🌱 <strong>Unit:</strong> 2-LS2 Ecosystems — Culminating Project</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">📦🌿🐛🏡🔬</div>
+    <div class="caption">Every animal needs the right food, water, shelter, and space — can you build it?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-1</strong> + <strong>K-2-ETS1-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats AND ask questions, make observations, and gather information to define a simple problem and design a solution.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Engineer a model habitat that meets the needs of a chosen animal</li>
+    <li>Apply ecosystem knowledge from the whole unit to a real design challenge</li>
+    <li>Explain the purpose of each element in a habitat model</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>A shoebox or small cardboard box (the habitat container)</li>
+      <li>Soil or dirt from outside</li>
+      <li>Pebbles or small rocks</li>
+      <li>Grass clippings or dry leaves</li>
+      <li>A few small sticks or twigs</li>
+      <li>A bottle cap with a little water (for a water source)</li>
+      <li>Construction paper and markers (for labels and decorating)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All household or backyard materials — no specialty purchases!</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <span class="vocab-word">Engineer</span>
+      <span class="vocab-def">A person who designs and builds things to solve problems</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Model</span>
+      <span class="vocab-def">A small version of something real, used to study and test ideas</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Need</span>
+      <span class="vocab-def">Something a living thing must have to survive (food, water, shelter, space)</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Shelter</span>
+      <span class="vocab-def">A safe place that protects an animal from weather and predators</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Design</span>
+      <span class="vocab-def">A plan for how to build or make something to solve a problem</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Criteria</span>
+      <span class="vocab-def">The requirements a design must meet to be considered successful</span>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Every animal has a habitat that meets its needs. A habitat must provide food, clean water, shelter from predators and weather, and enough space. When scientists want to protect an endangered species, they first study its natural habitat and then try to create or preserve places that meet all those same needs.</p>
+
+  <p>Engineers design things to solve problems. When you design a habitat model, you are acting as both a scientist (understanding the animal's needs) and an engineer (building something to meet those needs). This kind of thinking — identifying needs, designing solutions, and testing and improving — is called the Engineering Design Process.</p>
+
+  <p>Today you will choose one small animal: an earthworm, a ladybug, or a snail. You will find out what it needs, then build a model habitat from everyday household materials. By the end, you will be able to explain why every part of your habitat is there and what animal need it meets.</p>
+
+  <h2>🐾 Know Your Animal</h2>
+  <p>Read the animal info card for your chosen animal before you start designing:</p>
+
+  <div class="animal-cards">
+    <div class="animal-card">
+      <span class="animal-emoji">🪱</span>
+      <span class="animal-name">EARTHWORM</span>
+      <ul>
+        <li><strong>Food:</strong> Dead leaves, decaying plant matter, soil particles</li>
+        <li><strong>Water:</strong> Moist (not soaking wet) soil</li>
+        <li><strong>Shelter:</strong> Underground tunnels in dark soil</li>
+        <li><strong>Space:</strong> A few square inches per worm</li>
+        <li><strong>Build tip:</strong> Damp soil + torn dry leaves on top for food</li>
+      </ul>
+    </div>
+    <div class="animal-card">
+      <span class="animal-emoji">🐞</span>
+      <span class="animal-name">LADYBUG</span>
+      <ul>
+        <li><strong>Food:</strong> Tiny aphids (plant pests) and some pollen</li>
+        <li><strong>Water:</strong> Dew or tiny water droplet</li>
+        <li><strong>Shelter:</strong> Under a leaf or bark, protected from rain</li>
+        <li><strong>Space:</strong> Very small — a few square inches</li>
+        <li><strong>Build tip:</strong> Leaf "roof" + small sticks to climb + grass for aphid habitat</li>
+      </ul>
+    </div>
+    <div class="animal-card">
+      <span class="animal-emoji">🐌</span>
+      <span class="animal-name">SNAIL</span>
+      <ul>
+        <li><strong>Food:</strong> Soft plant matter, algae, tender leaves</li>
+        <li><strong>Water:</strong> Moist environment — dries out in sun</li>
+        <li><strong>Shelter:</strong> Shady, cool corner (carries its own shell)</li>
+        <li><strong>Space:</strong> Small — but needs room to move</li>
+        <li><strong>Build tip:</strong> Mist with water + large leaves for shade and food + bottle-cap pond</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🔬 Activity: Design and Build Your Habitat</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Choose:</strong> Pick your animal: earthworm, ladybug, or snail. Write its name on your Student Worksheet.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2 — Research:</strong> Read the animal info card above. Fill in the needs chart on your Student Worksheet: what does your animal need for food, water, shelter, and space?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3 — Plan:</strong> On the design sketch page in your Student Worksheet, draw a top-down view of your habitat and label what you plan to include and where.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4 — Build:</strong> Gather your materials and build the habitat inside the shoebox. Add each element one at a time. As you add each piece, ask: "Which need does this meet: food, water, shelter, or space?"
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5 — Label:</strong> Make small flag labels (paper folded over a stick or pencil) for every part of your habitat. Each label should say what the element is AND which animal need it meets.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6 — Present:</strong> Explain your habitat to a family member. Tell them: what animal lives there, what each part provides, and how you know your animal could survive there.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What would happen to your animal if one part of the habitat was removed? Pick one part and explain.
+    <p class="discussion-hint">Suggested answer: Every part of the habitat serves a need. If you removed the water source, the snail or earthworm would dry out and die. If you removed the leaves, the earthworm would have nothing to eat. If you removed the shelter (the leaf roof), the ladybug would be exposed to predators and weather. Every element is there for a reason — this shows how fragile real habitats are when even one thing changes.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> How is your model habitat the same as a real habitat? How is it different?
+    <p class="discussion-hint">Suggested answer: The same: it provides food, water, shelter, and space. Different: it is much smaller, it does not have weather or seasons, it lacks predators and the community of other animals the real animal would interact with. A model is always a simplified version used to test ideas. Scientists use models all the time and always note their limitations — a model helps us understand without being as complex as reality.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> If you could add one more thing to improve your habitat, what would it be and why?
+    <p class="discussion-hint">Suggested answer: This is open-ended by design! Students might add more food, a better shelter, other species to make it more realistic, or more space. The key is that students justify their choice by linking it to a specific animal need. This is engineering iteration — engineers are always looking for ways to improve a design after testing it.</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🏗️ Student Worksheet — Design a Habitat</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — My Animal</h3>
+    <div class="fill-blank" style="font-size:13pt;">
+      I chose the: &nbsp;&nbsp; [ ] 🪱 Earthworm &nbsp;&nbsp;&nbsp; [ ] 🐞 Ladybug &nbsp;&nbsp;&nbsp; [ ] 🐌 Snail
+    </div>
+
+    <h3>Part 2 — Animal Needs Chart</h3>
+    <table class="needs">
+      <tr><th>Need</th><th>What my animal needs</th></tr>
+      <tr><td>🍃 Food</td><td style="height:36px;"></td></tr>
+      <tr><td>💧 Water</td><td style="height:36px;"></td></tr>
+      <tr><td>🏠 Shelter</td><td style="height:36px;"></td></tr>
+      <tr><td>📐 Space</td><td style="height:36px;"></td></tr>
+    </table>
+
+    <h3>Part 3 — My Habitat Design Sketch</h3>
+    <p style="font-size:10pt; color:#555;">Draw a top-down view of your habitat plan. Label what you will add and which need it meets.</p>
+    <div class="draw-box">
+      <p style="color:#aaa; font-size:9pt; font-style:italic;">✏️ Draw your habitat plan here. Label everything!</p>
+      <div style="height: 200px;"></div>
+    </div>
+
+  </div>
+
+  <div class="page-break">
+    <div class="worksheet-header">🏗️ Student Worksheet — Design a Habitat (continued)</div>
+    <p class="name-date">Name: ________________________________</p>
+
+    <h3>Part 4 — Materials List</h3>
+    <table class="materials">
+      <tr><th>Material I Used</th><th>Which Need It Meets</th></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+      <tr><td style="height:32px;"></td><td></td></tr>
+    </table>
+
+    <h3>Part 5 — Habitat Checklist</h3>
+    <p style="font-size:10pt; color:#555;">After building, check off each item:</p>
+    <div class="checklist-box">
+      <div class="check-item"><div class="checkbox"></div><span>My habitat has a food source for my animal</span></div>
+      <div class="check-item"><div class="checkbox"></div><span>My habitat has a water source</span></div>
+      <div class="check-item"><div class="checkbox"></div><span>My habitat has shelter (protection from weather or predators)</span></div>
+      <div class="check-item"><div class="checkbox"></div><span>My habitat has enough space for my animal to move</span></div>
+      <div class="check-item"><div class="checkbox"></div><span>Every part of my habitat is labeled with what need it meets</span></div>
+    </div>
+
+    <h3>Part 6 — Reflection</h3>
+    <div class="fill-blank" style="font-size:11pt; line-height:2.2;">
+      If I were a <span class="blank-line" style="min-width:120px;"></span>, I could survive in my habitat because <span class="blank-line"></span>.
+    </div>
+    <div class="fill-blank" style="font-size:11pt;">
+      One thing I would add or change to make my habitat better:<br>
+      <span style="display:block; border-bottom:2px solid #a5d6a7; height:30px; margin-top:10px;"></span>
+      <span style="display:block; border-bottom:2px solid #a5d6a7; height:30px; margin-top:10px;"></span>
+    </div>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is the UNIT CULMINATING PROJECT.</strong> Give it 60+ minutes and let the student truly own it. Ownership of the animal choice dramatically increases engagement.</li>
+      <li><strong>Let them choose:</strong> Earthworm for a child who likes dirt and digging; ladybug for a child interested in insects; snail for a child who likes careful, slow observation. All three options work with backyard materials.</li>
+      <li><strong>If you have the real animal nearby</strong> (earthworms in garden soil, ladybugs on plants), consider letting the student observe the real animal before building its model habitat. This connects the model to reality in a powerful way.</li>
+      <li><strong>Engineering Design Process:</strong> This lesson hits K-2-ETS1-1 directly. Students define the problem (what does the animal need), design a solution (plan and build the habitat), and evaluate it (does it meet the criteria checklist). Consider doing a brief "test" — if you can find the actual animal, place it in the habitat briefly and observe its behavior.</li>
+      <li><strong>Differentiation:</strong> For advanced students, have them research a more complex animal (a specific bird or amphibian) and add complexity. For younger siblings, have them help build while the 2nd grader plans and labels.</li>
+      <li><strong>Photography suggestion:</strong> Photograph the finished habitat! It makes a great portfolio piece and motivates students to do their best work. If printing this unit, the photo could be added to a student science portfolio.</li>
+      <li><strong>Unit synthesis connection:</strong> Ask students to name the ecosystem their animal is part of. What food chain includes their animal? What would pollinate the plants in their habitat? This lesson is the synthesis of the entire unit — draw connections back to Lessons 1-5.</li>
+    </ul>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_bBiY7845V3U" data-content-selector="body"></script>
+</body>
+</html>

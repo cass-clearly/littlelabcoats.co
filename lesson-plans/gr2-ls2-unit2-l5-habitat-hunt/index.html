@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habitat Hunt: Explorer's Field Journal — Grade 2 Life Science, Unit 2, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #2e7d32; padding-bottom: 10px; color: #2e7d32; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #a5d6a7; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #2e7d32; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1b5e20; border-bottom: 2px solid #a5d6a7; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e8f5e9; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #2e7d32; }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .vocab-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #fff; border: 2px solid #a5d6a7; border-radius: 10px; padding: 10px 12px; text-align: center; font-size: 10pt; }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 11pt; display: block; margin-bottom: 4px; }
+    .vocab-card .vocab-def { color: #444; font-size: 9pt; font-style: italic; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #1b5e20; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #2e7d32; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .fill-blank { background: #e8f5e9; border: 2px solid #a5d6a7; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1b5e20; min-width: 180px; margin: 0 4px; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #1b5e20; }
+    table.log { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 11pt; }
+    table.log th { background: #2e7d32; color: white; padding: 8px; text-align: left; }
+    table.log td { border: 1px solid #a5d6a7; padding: 10px 8px; }
+    table.log tr:nth-child(even) td { background: #f1f8e9; }
+    .sketch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0; }
+    .sketch-box { border: 3px dashed #2e7d32; border-radius: 10px; padding: 10px; }
+    .sketch-box .sketch-draw { min-height: 140px; }
+    .sketch-box .sketch-line { border-bottom: 1px solid #a5d6a7; margin: 6px 0; height: 24px; font-size: 9pt; color: #aaa; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_xIANYy91vLc">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🔍 Habitat Hunt: Explorer's Field Journal</h1>
+  <p class="subtitle">Grade 2 Life Science, Unit 2 — Lesson 5</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 min (20 outdoor + 25 journaling)</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Ecosystems</span>
+    <span>🌱 <strong>Unit:</strong> 2-LS2 Ecosystems</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🔍🐛🍃🐦🌱</div>
+    <div class="caption">Scientists observe carefully and write down everything they notice. Today, YOU are the scientist!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-LS2-1</strong> — Make observations of plants and animals to compare the diversity of life in different habitats.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Observe and record living and nonliving things in a local habitat</li>
+    <li>Practice careful scientific observation and field journaling</li>
+    <li>Connect real-world findings to ecosystem concepts from earlier lessons</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Clipboard or notebook (or this printed worksheet as your field journal)</li>
+      <li>Pencil</li>
+      <li>Outdoor access (yard, park, sidewalk, or any outdoor space)</li>
+      <li>Magnifying glass — optional but highly recommended!</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All household items — just a pencil and some outdoor time!</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <span class="vocab-word">Observation</span>
+      <span class="vocab-def">Looking carefully and describing exactly what you see, hear, or touch</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Habitat</span>
+      <span class="vocab-def">The specific place where an animal or plant lives and finds what it needs</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Species</span>
+      <span class="vocab-def">One kind of living thing (all dogs are one species; all robins are one species)</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Diversity</span>
+      <span class="vocab-def">Having many different kinds of living things in one place</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Micro-habitat</span>
+      <span class="vocab-def">A tiny habitat inside a bigger one (example: under a rock is a micro-habitat)</span>
+    </div>
+    <div class="vocab-card">
+      <span class="vocab-word">Field Journal</span>
+      <span class="vocab-def">A notebook where scientists write down what they observe in nature</span>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Scientists who study ecosystems spend a lot of time outdoors, looking carefully and writing down what they observe. This careful looking is called observation. A good field journal records what you see, where you saw it, the time, and the weather conditions. Even a small backyard or a crack in the sidewalk is full of living things waiting to be discovered.</p>
+
+  <p>Every habitat has a mix of living and nonliving things. Even a patch of concrete has nonliving things (concrete, sunlight, shadow) and living things (ants, weeds growing through cracks, maybe a bird landing for a moment). The richer the habitat — the more plants, soil types, and moisture it has — the more diverse the life you will find.</p>
+
+  <p>Scientists discover new species every year, even in places humans have lived for centuries. An acre of healthy soil contains billions of living things too small to see. One square foot of leaf litter can hold hundreds of insects and microorganisms. The world is full of life — you just have to slow down and look carefully.</p>
+
+  <h2>🔬 Activity: 20-Minute Habitat Hunt</h2>
+
+  <div class="tip-box">
+    💡 <strong>Before you go:</strong> Complete the "Predictions" section of your Student Worksheet. Predicting first helps you notice what was surprising when you come back inside.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Head outside with your field journal (Student Worksheet) and pencil. Set a timer for 20 minutes.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Go slowly. Look under rocks, in grass, on leaves, in soil, and around plants. The slower you move, the more you find.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Record every living thing you spot in your observation log. Write its name if you know it, or describe it: "small brown beetle with spots," "gray spider near web on fence."
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Record nonliving things too — types of soil, rocks, water sources (puddles, streams), sunlight, shadows.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5:</strong> Choose 2 things to sketch in detail. Take your time. Label the parts you notice (legs, wings, color, size, where found).
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Come back inside and count: how many total living things did you find? How many different types (species)? Compare your actual findings to your predictions — what surprised you?
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What did you find the most of? Was that what you expected?
+    <p class="discussion-hint">Suggested answer: Most students find insects (especially ants) are the most numerous, followed by plants. Most people are surprised by how much life is in a tiny area once they slow down and look carefully. What is common varies by habitat — a lawn has lots of grass and ants; a garden has more variety; a weedy area near a fence might have the most diversity of all.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Did you find any micro-habitats — tiny habitats within the bigger habitat?
+    <p class="discussion-hint">Suggested answer: Under a rock, under a log, in a crack in the sidewalk, inside a flower, or under a leaf — these are all micro-habitats. Each one has slightly different conditions (darker, moister, more protected) that suit different organisms. Scientists call these "microenvironments." Even a single flower is a habitat for tiny insects and spiders.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> What was the most surprising living thing you found? What do you think it needs to survive?
+    <p class="discussion-hint">Suggested answer: Guide students to think about what the organism needs: food, water, shelter, and the right temperature. Then ask: does this place provide those things? Why is this animal or plant here and not somewhere else? Every organism is in its habitat for a reason — because that specific place meets all of its needs.</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🔍 Field Journal — Habitat Hunt</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________ &nbsp;&nbsp; Time: ________ &nbsp;&nbsp; Weather: ____________</p>
+
+    <h3>Part 1 — My Predictions (Before I Go Outside)</h3>
+    <p style="font-size:10pt; color:#555;">Write 5 living things and 3 nonliving things you think you will find:</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:10px 0;">
+      <div>
+        <p style="font-weight:bold; color:#2e7d32;">Living things I predict:</p>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+      </div>
+      <div>
+        <p style="font-weight:bold; color:#1565c0;">Nonliving things I predict:</p>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+      </div>
+    </div>
+
+    <h3>Part 2 — Observation Log (While Outside)</h3>
+    <table class="log">
+      <tr><th>🌿 Living Thing Found</th><th>📍 Where I Found It</th></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+      <tr><td style="height:28px;"></td><td></td></tr>
+    </table>
+
+    <p style="font-size:11pt; margin:6px 0;"><strong>Nonliving things found:</strong></p>
+    <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+    <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+    <div style="border-bottom:1px solid #a5d6a7; height:26px; margin:6px 0;"></div>
+
+  </div>
+
+  <div class="page-break">
+    <div class="worksheet-header">🎨 Detailed Sketches</div>
+    <p class="name-date">Name: ________________________________</p>
+
+    <h3>Choose 2 things you found and sketch them carefully. Label the parts you notice.</h3>
+    <div class="sketch-grid">
+      <div class="sketch-box">
+        <p style="font-weight:bold; color:#2e7d32; margin:0 0 6px 0;">Sketch 1</p>
+        <div class="sketch-draw"></div>
+        <div class="sketch-line">Name:</div>
+        <div class="sketch-line">Where I found it:</div>
+      </div>
+      <div class="sketch-box">
+        <p style="font-weight:bold; color:#2e7d32; margin:0 0 6px 0;">Sketch 2</p>
+        <div class="sketch-draw"></div>
+        <div class="sketch-line">Name:</div>
+        <div class="sketch-line">Where I found it:</div>
+      </div>
+    </div>
+
+    <h3>Part 3 — Count and Reflect</h3>
+    <div class="fill-blank" style="font-size:11pt; line-height:2.2;">
+      Total living things I found: <span class="blank-line" style="min-width:60px;"></span> &nbsp;&nbsp;&nbsp;
+      Total different types (species): <span class="blank-line" style="min-width:60px;"></span>
+    </div>
+    <div class="fill-blank" style="font-size:11pt;">
+      The most surprising thing I found was <span class="blank-line"></span><br>
+      because <span class="blank-line"></span>.
+    </div>
+    <div class="fill-blank" style="font-size:11pt;">
+      One thing I predicted that I DID find: <span class="blank-line"></span><br>
+      One thing I did NOT expect to find: <span class="blank-line"></span>.
+    </div>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Any outdoor access works:</strong> A city sidewalk, a balcony with a potted plant, a park, or a driveway edge — anywhere living things can be found. If outdoor access is truly impossible, create an indoor "habitat hunt" using houseplants or a cup of soil from outside brought in to examine.</li>
+      <li><strong>Bring a magnifying glass:</strong> Even a cheap plastic one transforms this activity. The world under a magnifying glass is endlessly fascinating for children. Under 10x magnification, an ant becomes an alien, a leaf surface becomes a landscape.</li>
+      <li><strong>Best timing:</strong> Morning hours, when insects are active. Even 15 minutes outside is enough for this lesson.</li>
+      <li><strong>Taxonomy tip:</strong> Students will find things they cannot name. That is great! Scientists encounter unnamed things all the time. Describe the features carefully and look it up later using a field guide app like iNaturalist (free, works offline, identifies from photos).</li>
+      <li><strong>Photography extension:</strong> If your student has access to a tablet or phone camera, let them photograph their 2 detailed sketch subjects. This creates a digital field journal and often motivates more careful observation.</li>
+      <li><strong>Connection to Lesson 1:</strong> Ask students to connect what they found to the Ecosystem Map from Lesson 1. Did they find more living or nonliving things? What nonliving things did the living things depend on?</li>
+    </ul>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_xIANYy91vLc" data-content-selector="body"></script>
+</body>
+</html>
