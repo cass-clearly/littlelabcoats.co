@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Shapes the Land: Earth Science Unit 3, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia,'Times New Roman',serif; max-width:8.5in; margin:0 auto; padding:0.5in; font-size:11pt; line-height:1.4; color:#222; }
+    h1 { text-align:center; font-size:22pt; margin-bottom:5px; border-bottom:3px solid #e65100; padding-bottom:10px; color:#e65100; }
+    .subtitle { text-align:center; font-style:italic; margin-bottom:20px; color:#555; font-size:13pt; }
+    .meta { display:flex; justify-content:space-between; background:#fbe9e7; padding:10px 15px; border-radius:8px; margin-bottom:20px; font-size:10pt; border:1px solid #ffccbc; flex-wrap:wrap; gap:5px; }
+    h2 { font-size:14pt; background:#e65100; color:white; padding:8px 14px; margin:24px 0 12px 0; border-radius:6px; }
+    h3 { font-size:12pt; color:#e65100; border-bottom:2px solid #ffccbc; padding-bottom:4px; margin:18px 0 8px 0; }
+    ul,ol { margin:8px 0; padding-left:25px; } li { margin-bottom:5px; }
+    .hero { text-align:center; margin:16px 0; } .hero .emoji { font-size:72pt; line-height:1.2; } .hero .cap { font-size:9pt; color:#777; font-style:italic; margin-top:4px; }
+    .matbox { background:#fff8e1; border:2px solid #ffcc80; padding:14px 18px; border-radius:8px; margin:10px 0; } .matbox h3 { color:#e65100; border-color:#ffcc80; }
+    .step { background:#fbe9e7; padding:10px 15px; margin:8px 0; border-radius:6px; border-left:5px solid #e65100; } .step strong { color:#e65100; }
+    .qbox { background:#fbe9e7; border-left:5px solid #e65100; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; }
+    .discussion-hint { font-style:italic; color:#555; margin-top:6px; font-size:10pt; }
+    .tip { background:#e0f7fa; border-left:5px solid #00bcd4; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; font-size:10pt; }
+    .std { background:#f3e5f5; border:1px solid #ce93d8; border-radius:8px; padding:14px 18px; margin:10px 0; font-size:10pt; } .std strong { color:#7b1fa2; }
+    .ext { background:#e8eaf6; border:1px solid #9fa8da; border-radius:8px; padding:14px 18px; margin:10px 0; }
+    .tnote { background:#f5f5f5; border:2px dashed #999; border-radius:8px; padding:15px; margin:20px 0; font-size:10pt; color:#555; } .tnote strong { color:#333; }
+    .wshead { background:#e65100; color:white; padding:8px 14px; border-radius:6px; font-size:14pt; font-weight:bold; margin:0 0 12px 0; text-align:center; }
+    .namedate { text-align:center; margin-bottom:16px; font-size:12pt; }
+    .dbox { border:3px dashed #e65100; border-radius:10px; min-height:180px; margin:12px 0; padding:10px; } .dbox .dl { font-size:9pt; color:#aaa; font-style:italic; }
+    .fb { background:#fbe9e7; border:2px solid #ffccbc; border-radius:8px; padding:14px 18px; margin:12px 0; font-size:12pt; }
+    .bl { display:inline-block; border-bottom:2px solid #e65100; min-width:180px; margin:0 4px; }
+    .dt { width:100%; border-collapse:collapse; margin:12px 0; font-size:11pt; } .dt th { background:#e65100; color:white; padding:8px 12px; text-align:left; } .dt td { border:1px solid #ffccbc; padding:8px 12px; } .dt tr:nth-child(even) { background:#fbe9e7; }
+    .ak { background:#f5f5f5; border:3px dashed #999; border-radius:8px; padding:20px; margin:20px 0; } .ak h2 { background:#757575; text-align:center; }
+    @media print { body { padding:0.25in; font-size:10pt; } h2 { break-after:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact; } h3 { break-after:avoid; } .step,.qbox,.tnote,.ak,.matbox,.tip,.ext { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+    .pb { page-break-before:always; margin-top:20px; }
+    .print-btn { position:fixed; top:20px; right:20px; background:#e65100; color:white; border:none; padding:10px 18px; border-radius:8px; font-size:0.95rem; font-weight:600; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000; }
+    .print-btn:hover { opacity:0.88; } @media print { .print-btn { display:none; } }
+
+    .vocab-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:15px 0; }
+    .vocab-card { background:#fff3e0; border:2px solid #ffcc80; border-radius:10px; padding:12px 10px; text-align:center; }
+    .vocab-word { font-weight:bold; color:#e65100; font-size:12pt; display:block; margin-bottom:4px; }
+    .vocab-def { color:#555; font-size:9pt; line-height:1.4; display:block; }
+  </style>
+</head>
+<body data-document-id="doc_a42NrNaECzk">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>Water Shapes the Land</h1>
+  <p class="subtitle">Earth Science Unit 3, Lesson 3</p>
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 50 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science: Earth's Changes</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+  <div class="hero"><div class="emoji">💧🏔️🌊🏜️</div><div class="cap">Water is one of the most powerful forces on Earth! Even tiny raindrops can move mountains, slowly.</div></div>
+  <div class="std"><strong>📋 NGSS Standard:</strong><br><strong>2-ESS2-1</strong>: Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.</div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Define erosion as the movement of rock and soil by water (or wind).</li>
+    <li>Model water erosion by pouring water on a sand hill.</li>
+    <li>Observe how water carries sediment and deposits it elsewhere.</li>
+  </ul>
+  <h2>💡 Background</h2>
+  <p>Water is one of Earth's most powerful shapers. When rain falls or rivers flow, they carry tiny bits of rock and soil called sediment. This process of wearing away and moving material is called erosion. The Grand Canyon was carved by the Colorado River over millions of years! When sediment stops moving and settles, it is called deposition. Rivers, oceans, glaciers, and even wind all erode Earth's surface, and all of Earth's landforms have been shaped by these forces.</p>
+  <div class="tip">💡 <strong>Key vocabulary:</strong> erosion, weathering, sediment, deposition, runoff</div>
+  <h2>📦 Materials</h2>
+  <div class="matbox"><h3>🏠 What You Need</h3><ul>
+      <li>A baking pan or cookie sheet (to contain the mess)</li>
+      <li>Sand or dirt (about 2 to 3 cups)</li>
+      <li>Water in a small cup for pouring</li>
+      <li>A small container to collect the water that flows off</li>
+      <li>Optional: a straw for blowing (wind erosion demonstration)</li>
+  </ul><p style="font-size:10pt;color:#555;margin-top:8px;">✅ <em>All household items, nothing to buy!</em></p></div>
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card"><span class="vocab-word">erosion</span><span class="vocab-def">the process of water or wind wearing away and moving rock and soil</span></div>
+    <div class="vocab-card"><span class="vocab-word">weathering</span><span class="vocab-def">the breaking down of rock by water, wind, ice, or plants</span></div>
+    <div class="vocab-card"><span class="vocab-word">sediment</span><span class="vocab-def">small particles of rock, sand, or soil carried by water or wind</span></div>
+    <div class="vocab-card"><span class="vocab-word">deposition</span><span class="vocab-def">when sediment settles and builds up in a new location</span></div>
+    <div class="vocab-card"><span class="vocab-word">runoff</span><span class="vocab-def">water that flows over the surface of the land and does not soak in</span></div>
+  </div>
+  <h2>🔬 Procedure</h2>
+  <div class="step"><strong>Step 1 (5 min): Introduction:</strong> Ask: 'How do you think the Grand Canyon formed?' Show a picture if available. Introduce the word erosion.</div>
+  <div class="step"><strong>Step 2 (10 min): Build the Hill:</strong> Pile sand or dirt into a hill in the center of the baking pan. Pack it gently so it holds its shape.</div>
+  <div class="step"><strong>Step 3 (10 min): Simulate Rain:</strong> Hold the cup above the hill and slowly pour water. Observe: where does the water go? What happens to the sand? Does the hill change shape?</div>
+  <div class="step"><strong>Step 4 (10 min): Observe and Record:</strong> Where did the sediment go? (It should move downhill and deposit at the base or in the pan.) Draw the before and after in the worksheet.</div>
+  <div class="step"><strong>Step 5 (10 min): Wind Erosion:</strong> Let the sand dry slightly, then gently blow through a straw at the hill. Observe: wind also moves sediment! Compare wind erosion to water erosion.</div>
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="qbox"><strong>🗣️ Q1:</strong> Where did the sand go when water was poured on the hill? What does this tell us?<p class="discussion-hint">Suggested answer: The water carried the sand particles downhill and deposited them at the base of the hill (or flowed into the pan). This is erosion: water moved the sand from a high place to a lower place. The same thing happens when rivers carry sediment to the ocean.</p></div>
+  <div class="qbox"><strong>🗣️ Q2:</strong> How do you think people could protect a hillside from erosion?<p class="discussion-hint">Suggested answer: Planting grass or trees on a hillside helps! Plant roots hold soil in place, preventing water from washing it away. Retaining walls, rocks, and barriers also slow erosion. We will engineer an erosion solution in Lesson 6!</p></div>
+  <h2>🚀 Extensions</h2>
+  <div class="ext"><ul>
+      <li>🏔️ <strong>Grand Canyon Comparison:</strong> Look up photos of the Grand Canyon and discuss how the Colorado River carved it over millions of years.</li>
+      <li>🌱 <strong>Roots Hold Soil:</strong> Try the experiment again with a piece of grass sod (if available). Does grass slow the erosion?</li>
+      <li>📚 <strong>Book Connection:</strong> 'Rocks: Hard, Soft, Smooth, and Rough' by Natalie Myra Rosinsky</li>
+  </ul></div>
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="tnote"><ul>
+      <li><strong>Setup tip:</strong> Do this activity in the kitchen or outside to manage the mess. A cookie sheet with raised edges works great.</li>
+      <li><strong>Erosion vs. weathering:</strong> Weathering is the breaking down of rock in place. Erosion is the movement of those broken pieces. Both happen together.</li>
+      <li><strong>Real-world connection:</strong> Farmers plant cover crops and build terraces on hillsides to prevent soil erosion. Coastal engineers build seawalls to prevent ocean erosion.</li>
+  </ul></div>
+  <div class="pb">
+    <div class="wshead">🔬 Student Worksheet: Water Shapes the Land</div>
+    <p class="namedate">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0;">
+      <div class="dbox" style="min-height:150px;"><div class="dl">BEFORE: Draw the sand hill before water is poured.</div></div>
+      <div class="dbox" style="min-height:150px;"><div class="dl">AFTER: Draw the sand hill after water is poured. Show where the sediment went!</div></div>
+    </div>
+    <div class="fb">Erosion is when water or wind <span class="bl"></span> rock and soil.<br><br>The material carried by water is called <span class="bl"></span>.<br><br>When sediment settles in a new place, that is called <span class="bl"></span>.</div>
+    <p style="margin-top:12px;font-size:10pt;">In the space below, describe what happened when you poured water on your sand hill:</p>
+    <div style="border-bottom:1px solid #ccc;height:28px;margin:6px 0;"></div>
+    <div style="border-bottom:1px solid #ccc;height:28px;margin:6px 0;"></div>
+  </div>
+  <div class="pb">
+    <div class="ak"><h2>✂️ PARENT ANSWER KEY</h2>
+      <p>Fill-in: moves/wears away; sediment; deposition</p>
+    </div>
+  </div>
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="" data-content-selector="body"></script>
+</body>
+</html>

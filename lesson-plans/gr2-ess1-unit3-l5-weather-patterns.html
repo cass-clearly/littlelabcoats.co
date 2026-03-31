@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Patterns: Earth Science Unit 3, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia,'Times New Roman',serif; max-width:8.5in; margin:0 auto; padding:0.5in; font-size:11pt; line-height:1.4; color:#222; }
+    h1 { text-align:center; font-size:22pt; margin-bottom:5px; border-bottom:3px solid #e65100; padding-bottom:10px; color:#e65100; }
+    .subtitle { text-align:center; font-style:italic; margin-bottom:20px; color:#555; font-size:13pt; }
+    .meta { display:flex; justify-content:space-between; background:#fbe9e7; padding:10px 15px; border-radius:8px; margin-bottom:20px; font-size:10pt; border:1px solid #ffccbc; flex-wrap:wrap; gap:5px; }
+    h2 { font-size:14pt; background:#e65100; color:white; padding:8px 14px; margin:24px 0 12px 0; border-radius:6px; }
+    h3 { font-size:12pt; color:#e65100; border-bottom:2px solid #ffccbc; padding-bottom:4px; margin:18px 0 8px 0; }
+    ul,ol { margin:8px 0; padding-left:25px; } li { margin-bottom:5px; }
+    .hero { text-align:center; margin:16px 0; } .hero .emoji { font-size:72pt; line-height:1.2; } .hero .cap { font-size:9pt; color:#777; font-style:italic; margin-top:4px; }
+    .matbox { background:#fff8e1; border:2px solid #ffcc80; padding:14px 18px; border-radius:8px; margin:10px 0; } .matbox h3 { color:#e65100; border-color:#ffcc80; }
+    .step { background:#fbe9e7; padding:10px 15px; margin:8px 0; border-radius:6px; border-left:5px solid #e65100; } .step strong { color:#e65100; }
+    .qbox { background:#fbe9e7; border-left:5px solid #e65100; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; }
+    .discussion-hint { font-style:italic; color:#555; margin-top:6px; font-size:10pt; }
+    .tip { background:#e0f7fa; border-left:5px solid #00bcd4; padding:10px 15px; margin:10px 0; border-radius:0 6px 6px 0; font-size:10pt; }
+    .std { background:#f3e5f5; border:1px solid #ce93d8; border-radius:8px; padding:14px 18px; margin:10px 0; font-size:10pt; } .std strong { color:#7b1fa2; }
+    .ext { background:#e8eaf6; border:1px solid #9fa8da; border-radius:8px; padding:14px 18px; margin:10px 0; }
+    .tnote { background:#f5f5f5; border:2px dashed #999; border-radius:8px; padding:15px; margin:20px 0; font-size:10pt; color:#555; } .tnote strong { color:#333; }
+    .wshead { background:#e65100; color:white; padding:8px 14px; border-radius:6px; font-size:14pt; font-weight:bold; margin:0 0 12px 0; text-align:center; }
+    .namedate { text-align:center; margin-bottom:16px; font-size:12pt; }
+    .dbox { border:3px dashed #e65100; border-radius:10px; min-height:180px; margin:12px 0; padding:10px; } .dbox .dl { font-size:9pt; color:#aaa; font-style:italic; }
+    .fb { background:#fbe9e7; border:2px solid #ffccbc; border-radius:8px; padding:14px 18px; margin:12px 0; font-size:12pt; }
+    .bl { display:inline-block; border-bottom:2px solid #e65100; min-width:180px; margin:0 4px; }
+    .dt { width:100%; border-collapse:collapse; margin:12px 0; font-size:11pt; } .dt th { background:#e65100; color:white; padding:8px 12px; text-align:left; } .dt td { border:1px solid #ffccbc; padding:8px 12px; } .dt tr:nth-child(even) { background:#fbe9e7; }
+    .ak { background:#f5f5f5; border:3px dashed #999; border-radius:8px; padding:20px; margin:20px 0; } .ak h2 { background:#757575; text-align:center; }
+    @media print { body { padding:0.25in; font-size:10pt; } h2 { break-after:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact; } h3 { break-after:avoid; } .step,.qbox,.tnote,.ak,.matbox,.tip,.ext { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+    .pb { page-break-before:always; margin-top:20px; }
+    .print-btn { position:fixed; top:20px; right:20px; background:#e65100; color:white; border:none; padding:10px 18px; border-radius:8px; font-size:0.95rem; font-weight:600; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000; }
+    .print-btn:hover { opacity:0.88; } @media print { .print-btn { display:none; } }
+
+    .vocab-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:15px 0; }
+    .vocab-card { background:#fff3e0; border:2px solid #ffcc80; border-radius:10px; padding:12px 10px; text-align:center; }
+    .vocab-word { font-weight:bold; color:#e65100; font-size:12pt; display:block; margin-bottom:4px; }
+    .vocab-def { color:#555; font-size:9pt; line-height:1.4; display:block; }
+  </style>
+</head>
+<body data-document-id="doc_PO8uXL4poYI">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>Weather Patterns</h1>
+  <p class="subtitle">Earth Science Unit 3, Lesson 5</p>
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 5 days (15 min/day) + 30 min analysis</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science: Weather</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+  <div class="hero"><div class="emoji">☀️🌧️❄️🌤️📊</div><div class="cap">Scientists observe the sky every day to find weather patterns. You can too!</div></div>
+  <div class="std"><strong>📋 NGSS Standard:</strong><br><strong>2-ESS1-1</strong>: Use information from several sources to provide evidence that Earth events can occur quickly or slowly.</div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Record daily weather observations over five consecutive days.</li>
+    <li>Identify patterns in weather data (temperature trends, repeating conditions).</li>
+    <li>Distinguish between weather (daily conditions) and climate (typical long-term patterns).</li>
+  </ul>
+  <h2>💡 Background</h2>
+  <p>Weather is the condition of the atmosphere at a specific place and time: sunny, rainy, windy, hot, cold. Climate is the typical weather pattern for a region over many years. Meteorologists (weather scientists) observe and record weather data daily to find patterns and make predictions. Weather changes quickly from day to day. Climate changes very slowly. Scientists use weather data over many years to understand climate patterns and track long-term changes.</p>
+  <div class="tip">💡 <strong>Key vocabulary:</strong> weather, climate, pattern, data, temperature</div>
+  <h2>📦 Materials</h2>
+  <div class="matbox"><h3>🏠 What You Need</h3><ul>
+      <li>Paper folded into a 5-day weather journal (fold 5 sheets and staple)</li>
+      <li>Pencil and crayons</li>
+      <li>A window to observe the sky</li>
+      <li>Optional: an outdoor thermometer</li>
+  </ul><p style="font-size:10pt;color:#555;margin-top:8px;">✅ <em>All household items, nothing to buy!</em></p></div>
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card"><span class="vocab-word">weather</span><span class="vocab-def">the condition of the atmosphere on a specific day: temperature, clouds, wind, rain</span></div>
+    <div class="vocab-card"><span class="vocab-word">climate</span><span class="vocab-def">the typical weather patterns of a region over many years</span></div>
+    <div class="vocab-card"><span class="vocab-word">pattern</span><span class="vocab-def">something that repeats or follows a predictable sequence</span></div>
+    <div class="vocab-card"><span class="vocab-word">data</span><span class="vocab-def">information collected through observation or measurement</span></div>
+    <div class="vocab-card"><span class="vocab-word">temperature</span><span class="vocab-def">a measure of how hot or cold something is</span></div>
+  </div>
+  <h2>🔬 Procedure</h2>
+  <div class="step"><strong>Day 1 Setup (10 min):</strong> Make the weather journal. Label pages Day 1 through Day 5. Each day's page should have space for: date, sky conditions (clear/cloudy/partly cloudy), precipitation (none/rain/snow), estimated temperature (hot/warm/cool/cold), wind (none/gentle/strong), and a drawing of the sky.</div>
+  <div class="step"><strong>Days 1 to 5 (15 min each day):</strong> At the same time each day, observe the weather and record it. Look outside, feel the air (briefly if safe), note any rain, snow, or clouds.</div>
+  <div class="step"><strong>Day 5 Analysis (20 min):</strong> Look back at all 5 days. Create a simple summary chart. Did temperature go up or down? Were some days sunny and some cloudy? Were there patterns?</div>
+  <div class="step"><strong>Wrap-Up (10 min):</strong> Ask the discussion questions and complete the summary worksheet.</div>
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="qbox"><strong>🗣️ Q1:</strong> If it was sunny and warm for 4 days, then rainy on Day 5, does that mean the climate is 'rainy'?<p class="discussion-hint">Suggested answer: No! Climate is based on patterns over many years, not just a few days. Weather changes quickly from day to day. To know the climate of a place, scientists look at decades of weather data and find what is typical. Five days is too small a sample.</p></div>
+  <div class="qbox"><strong>🗣️ Q2:</strong> Why do you think weather forecasters sometimes get predictions wrong?<p class="discussion-hint">Suggested answer: Weather systems are very complex with millions of interacting factors: air pressure, temperature, moisture, wind, landforms. Even with supercomputers and satellites, small changes can lead to different outcomes. Long-range forecasts are harder because small errors grow over time.</p></div>
+  <h2>🚀 Extensions</h2>
+  <div class="ext"><ul>
+      <li>📈 <strong>Monthly Weather Chart:</strong> Continue the weather journal for a full month and graph the data.</li>
+      <li>🌡️ <strong>Thermometer Reading:</strong> If you have a thermometer, record the actual temperature each day at the same time.</li>
+      <li>📚 <strong>Book Connection:</strong> 'Weather Words and What They Mean' by Gail Gibbons</li>
+  </ul></div>
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="tnote"><ul>
+      <li><strong>Timing tip:</strong> Observe at the same time each day (such as 9 AM or right after breakfast) for the most consistent data.</li>
+      <li><strong>Weather vs. climate:</strong> An easy analogy: weather is what you wear today; climate is what kind of clothes you keep in your closet.</li>
+      <li><strong>Extensions across the unit:</strong> This lesson pairs well with keeping records across multiple units. Weather observation can continue all year.</li>
+  </ul></div>
+  <div class="pb">
+    <div class="wshead">🔬 Student Worksheet: Weather Patterns</div>
+    <p class="namedate">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <h3>5-Day Weather Summary</h3>
+    <table class="dt">
+      <tr><th>Day</th><th>Sky (sunny/cloudy/rainy)</th><th>Temperature (hot/warm/cool/cold)</th><th>Wind (none/gentle/strong)</th><th>Draw the sky</th></tr>
+      <tr><td>1</td><td></td><td></td><td></td><td style="height:50px;"></td></tr>
+      <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <div class="fb">Weather is the condition of the <span class="bl"></span> on a specific day.<br><br>Climate is the <span class="bl"></span> weather patterns of a region over <span class="bl"></span>.<br><br>A pattern I noticed in my weather data: <span class="bl"></span>.</div>
+  </div>
+  <div class="pb">
+    <div class="ak"><h2>✂️ PARENT ANSWER KEY</h2>
+      <p>Fill-in: atmosphere; typical; many years (decades); student's actual observation</p>
+    </div>
+  </div>
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="" data-content-selector="body"></script>
+</body>
+</html>
