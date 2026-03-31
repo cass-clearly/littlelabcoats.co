@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teaching — When Parents Show Offspring What to Do — Grade 1, Unit 2, Lesson 4</title>
+  <title>Teaching: When Parents Show What to Do — Parents and Offspring Unit, Lesson 4</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -63,8 +63,16 @@
       text-align: center;
       margin: 16px 0;
     }
-    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
-    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
     .materials-box {
       background: #fff8e1;
       border: 2px solid #ffcc80;
@@ -82,7 +90,7 @@
     }
     .procedure-step strong { color: #1b5e20; }
     .question-box {
-      background: #f1f8e9;
+      background: #e8f5e9;
       border-left: 5px solid #00B894;
       padding: 10px 15px;
       margin: 10px 0;
@@ -91,9 +99,8 @@
     .discussion-hint {
       font-style: italic;
       color: #555;
-      margin-top: 8px;
-      padding-left: 10px;
-      border-left: 3px solid #a5d6a7;
+      margin-top: 6px;
+      font-size: 10pt;
     }
     .tip-box {
       background: #e0f7fa;
@@ -112,13 +119,6 @@
       font-size: 10pt;
     }
     .standards-box strong { color: #7b1fa2; }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
     .teacher-note {
       background: #f5f5f5;
       border: 2px dashed #999;
@@ -129,318 +129,363 @@
       color: #555;
     }
     .teacher-note strong { color: #333; }
-    .two-col {
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .vocab-card {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 12pt; }
+    .vocab-card .vocab-def { font-size: 10pt; color: #333; margin-top: 4px; }
+    .behavior-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .behavior-item {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 10pt;
+    }
+    .behavior-item strong { color: #e65100; }
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .sorting-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin: 15px 0;
+      gap: 14px;
+      margin: 10px 0;
     }
-    .instinct-col {
-      background: #fff3e0;
-      border: 2px solid #ff9800;
-      border-radius: 10px;
-      padding: 14px;
-    }
-    .instinct-col h3 { color: #e65100; border-color: #ffcc80; }
-    .learned-col {
-      background: #e3f2fd;
-      border: 2px solid #2196f3;
-      border-radius: 10px;
-      padding: 14px;
-    }
-    .learned-col h3 { color: #1565c0; border-color: #90caf9; }
-    .sort-card {
-      border: 2px dashed #999;
+    .sorting-col {
+      border: 2px solid #a5d6a7;
       border-radius: 8px;
-      padding: 10px 8px;
-      text-align: center;
-      font-size: 10pt;
-      min-height: 72px;
+      padding: 10px;
+    }
+    .sorting-col h3 { text-align: center; }
+    .sorting-blank { border-bottom: 1px solid #aaa; margin: 8px 0; min-height: 22px; }
+    .ws-behavior-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 10px 0;
+    }
+    .ws-behavior-list li {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-    }
-    .sort-card .emoji { font-size: 22pt; }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    .answer-key h2 { background: #757575; text-align: center; }
-    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
-    .worksheet-box {
-      border: 3px solid #2e7d32;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    .worksheet-box h2 { background: #2e7d32; }
-    .cut-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin: 15px 0;
+      margin-bottom: 8px;
+      font-size: 10pt;
     }
+    .ws-bl-label {
+      border: 2px solid #2e7d32;
+      border-radius: 4px;
+      min-width: 32px;
+      text-align: center;
+      font-weight: bold;
+      color: #1b5e20;
+      padding: 2px 4px;
+    }
+    .bl-write {
+      border-bottom: 1px solid #aaa;
+      min-width: 40px;
+      display: inline-block;
+      text-align: center;
+    }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 180px;
+      margin: 0 4px;
+    }
+    .draw-box {
+      border: 3px dashed #2e7d32;
+      border-radius: 10px;
+      min-height: 130px;
+      margin: 12px 0;
+      padding: 8px;
+    }
+    .draw-box .draw-label {
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
     @media print {
       body { padding: 0.25in; font-size: 10pt; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
         break-inside: avoid; page-break-inside: avoid;
       }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
     }
-    .page-break { page-break-before: always; margin-top: 20px; }
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
-<body data-document-id="doc_WBm8mWK1DFA">
+<body data-document-id="" data-doc-id="">
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
-  <h1>🎓 Teaching — When Parents Show Offspring What to Do 🎓</h1>
-  <p class="subtitle">Life Science — Parents &amp; Offspring | Unit 2, Lesson 4 of 6</p>
+  <h1>🐦🦮🎓 Teaching: When Parents Show What to Do</h1>
+  <p class="subtitle">Parents and Offspring Unit, Lesson 4</p>
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 1st Grade</span>
     <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science — Parents &amp; Offspring</span>
-    <span>🏠 <strong>Materials:</strong> Household only</span>
+    <span>🔬 <strong>Subject:</strong> Life Science</span>
+    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🦁 🐒 🦅 👶</div>
-    <div class="caption">Some behaviors are built-in from birth. Others must be taught — or practiced — over time.</div>
+    <div class="emoji-hero">🐦🦮🎓</div>
+    <div class="caption">Some things animals just know. Other things they have to be taught. Can you tell the difference?</div>
   </div>
 
   <div class="standards-box">
     <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Use observations to describe patterns of what plants and animals (including humans) do to survive and how the behavior of parents helps offspring survive.
+    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>distinguish</em> between inherited behaviors (born knowing) and learned behaviors (taught or practiced), and <em>give</em> examples of each.</p>
-
-  <h2>🔬 The Big Idea</h2>
-  <p>Some behaviors come "pre-loaded" — animals are born knowing how to do them without ever being taught. These are called <strong>instincts</strong>. Other behaviors have to be learned by watching, practicing, and being taught. Parents play a huge role in passing on learned behaviors — that's a form of parenting too!</p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong> instinct, learned behavior, inherited behavior, teach, practice, culture
-  </div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Distinguish between <strong>inherited behaviors (instincts)</strong> and <strong>learned behaviors</strong>.</li>
+    <li>Recognize examples of parent animals teaching skills to offspring.</li>
+    <li>Connect the concept of learning to human experiences of being taught by parents.</li>
+  </ul>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
-    <h3>🏠 Household Items to Gather</h3>
+    <h3>🏠 What You Need (Household Only)</h3>
     <ul>
-      <li>Scissors to cut the behavior cards (worksheet page)</li>
-      <li>Glue stick or tape for sorting</li>
-      <li>Paper and crayons/pencil</li>
+      <li>Paper and pencil</li>
+      <li>Optional: a simple skill to practice "teaching" a younger sibling during the lesson (for example, stacking blocks or folding paper)</li>
     </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No materials to purchase.</em></p>
   </div>
 
-  <h2>🔬 Let's Get Started</h2>
-
-  <div class="procedure-step">
-    <strong>Step 1 — Warm-Up: Did You Learn That? (5 min)</strong><br>
-    Ask: <em>"Do you think a baby knows how to breathe when it's born, or does someone teach it?"</em> (Born knowing!)<br>
-    <em>"Do you think a baby knows how to ride a bike when it's born?"</em> (Learned!)<br>
-    Introduce the two categories: <strong>instincts</strong> (born knowing) and <strong>learned behaviors</strong> (taught or practiced).
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Examples Together (10 min)</strong><br>
-    Go through the examples. For each one, ask: <em>"Was this animal born knowing this, or did it have to learn it?"</em>
-
-    <div class="two-col" style="margin-top:12px;">
-      <div class="instinct-col">
-        <h3>🟠 Born Knowing (Instinct)</h3>
-        <ul>
-          <li>🐢 Baby sea turtle crawling to the ocean the moment it hatches — no parent to guide it</li>
-          <li>🕷️ Spider spinning a web — never watches another spider do it first</li>
-          <li>🦅 Bird flying south in fall (migration) — first-year birds do it without being shown</li>
-          <li>👶 Baby crying when hungry — no one teaches babies to cry</li>
-          <li>🐝 Bee doing a waggle dance to tell others where flowers are</li>
-        </ul>
-      </div>
-      <div class="learned-col">
-        <h3>🔵 Taught or Practiced (Learned)</h3>
-        <ul>
-          <li>🐒 Chimpanzee using a stick to fish termites out of a mound — taught by watching the mother</li>
-          <li>🐋 Orca using a specific hunting technique — taught by the pod</li>
-          <li>👶 Human language — no child is born knowing English or Spanish</li>
-          <li>🦁 Lion cubs learning to hunt — parents bring wounded prey for cubs to practice on</li>
-          <li>🚴 Riding a bike — learned through practice and guidance</li>
-        </ul>
-      </div>
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card">
+      <div class="vocab-word">⚡ Instinct</div>
+      <div class="vocab-def">A behavior an animal is born knowing how to do. No teaching needed.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">📚 Learned Behavior</div>
+      <div class="vocab-def">A behavior taught by a parent or gained through experience.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🎓 Teach</div>
+      <div class="vocab-def">To show someone how to do something they did not already know.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🧠 Behavior</div>
+      <div class="vocab-def">Something a living thing does (an action, not a physical trait).</div>
     </div>
   </div>
 
+  <h2>📚 Background (Read Aloud to Student)</h2>
+  <p>Did you know there are two very different kinds of behaviors in the animal world? The first kind is called an <strong>instinct</strong>. An instinct is a behavior an animal is born knowing how to do, without any teaching at all. A baby spider that has never met another spider will still spin a perfect web. A newly hatched salmon will swim upstream even though no one showed it how. These behaviors are built into the animal's biology, passed down from parent to offspring through their genes, just like physical traits are passed down.</p>
+
+  <p>The second kind is called a <strong>learned behavior</strong>. A learned behavior is something the animal picks up through experience or through being taught by a parent. A dog that knows how to "sit" on command was taught by a human. A parrot that talks was taught by hearing humans speak. These behaviors are not built in at birth. Without the right teacher or the right experiences, the animal would not develop them.</p>
+
+  <p>Sometimes the line between instinct and learned behavior can be tricky! Some behaviors are partly instinct and partly learned. A baby bird has the instinct to fly, but it still needs practice and a little encouragement from its parents before it can soar. As you go through today's sorting game, you will discover some surprising answers. Science is full of surprises!</p>
+
+  <div class="tip-box">
+    🕷️ <strong>Most surprising fact:</strong> Spider web spinning is instinct! A baby spider raised in complete isolation from all other spiders will still build a perfect, species-specific web on its very first try. It never needed a teacher.
+  </div>
+
+  <h2>🔬 Procedure</h2>
+
   <div class="procedure-step">
-    <strong>Step 3 — Behavior Sorting Game (10 min)</strong><br>
-    Cut out the behavior cards on the worksheet. Sort them into "Born Knowing" and "Taught/Learned" columns. Then glue them down.
+    <strong>Step 1 — Born Knowing It?</strong><br>
+    Ask your student: "What is something you knew how to do the moment you were born?" Guide them to think of: breathing, blinking, crying, sucking (for feeding as a newborn). These are human instincts!
   </div>
 
   <div class="procedure-step">
-    <strong>Step 4 — Connect to Yourself (10 min)</strong><br>
-    Ask: <em>"What did your parents teach you?"</em> — brainstorm: walking (well, practicing!), talking, riding a bike, cooking, reading, manners, songs.<br>
-    <em>"What did you 'just know' from birth?"</em> — breathing, crying, sucking, blinking, startling at loud noises.
+    <strong>Step 2 — Things Parents Teach</strong><br>
+    Ask: "What is something your parents had to teach you?" Examples: talking, using a spoon, riding a bike, reading, tying shoes. These are learned behaviors.
   </div>
 
   <div class="procedure-step">
-    <strong>Step 5 — Wrap-Up (5 min)</strong><br>
-    Ask: <em>"Is teaching a kind of parenting? Can you explain why?"</em><br>
-    Key idea: passing on knowledge and skills is one of the most important things parents do — especially for animals with complex behaviors like humans and chimps.
+    <strong>Step 3 — The Sorting Game 🃏</strong><br>
+    Read each of these 10 behaviors aloud, one at a time. For each one, make a prediction: is it instinct (Born Knowing) or learned?
+  </div>
+
+  <div class="behavior-grid">
+    <div class="behavior-item"><strong>(a)</strong> A duck swimming</div>
+    <div class="behavior-item"><strong>(b)</strong> A dog sitting on command</div>
+    <div class="behavior-item"><strong>(c)</strong> A spider spinning a web</div>
+    <div class="behavior-item"><strong>(d)</strong> A dog shaking hands (giving paw)</div>
+    <div class="behavior-item"><strong>(e)</strong> A bird building a nest</div>
+    <div class="behavior-item"><strong>(f)</strong> A cat using a litter box</div>
+    <div class="behavior-item"><strong>(g)</strong> A baby crying</div>
+    <div class="behavior-item"><strong>(h)</strong> A parrot talking</div>
+    <div class="behavior-item"><strong>(i)</strong> A salmon swimming upstream</div>
+    <div class="behavior-item"><strong>(j)</strong> A puppy learning to sit</div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Make the Chart</strong><br>
+    Draw two columns on paper: "Born Knowing It (Instinct)" and "Learned from Parent or People." Sort all 10 behaviors into the columns based on your predictions.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — The Reveal!</strong><br>
+    Check your answers against the answer key below. Discuss any surprises:
+    <ul style="margin-top:8px;">
+      <li>🕷️ <strong>Spider web spinning</strong> = Instinct! (Baby spiders spin perfectly with no teacher.)</li>
+      <li>🐦 <strong>Bird nest building</strong> = Mostly instinct! (Though some species improve with practice.)</li>
+      <li>🐱 <strong>Cat using a litter box</strong> = Learned! (Cats must be trained or shown by their mother.)</li>
+      <li>🦜 <strong>Parrot talking</strong> = Learned! (Parrots hear and mimic human speech over time.)</li>
+      <li>🐟 <strong>Salmon swimming upstream</strong> = Instinct! (They follow scent memories and natural drive.)</li>
+      <li>🦆 <strong>Duck swimming</strong> = Instinct! (Ducklings swim within hours of hatching.)</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 (Optional) — Be a Teacher!</strong><br>
+    If a younger sibling is present, choose a simple skill (like stacking blocks or folding a piece of paper) and practice teaching it. Reflect: Is this like what animal parents do? What is the same? What is different?
   </div>
 
   <h2>💬 Discussion Questions</h2>
 
   <div class="question-box">
-    <strong>🗣️ Talk about these together:</strong>
-    <ul>
-      <li>Why do you think baby sea turtles have to know how to crawl to the ocean <em>without</em> a parent showing them? (Their mother laid the eggs and left — no parent is there!)</li>
-      <li>Why is it important for orca pods to teach hunting to young orcas? (Different pods have different techniques for different prey — it's a local specialty!)</li>
-      <li>If you could only know 3 things from birth, what would you choose?</li>
-    </ul>
-    <hr>
-    <strong>🌟 Big Question:</strong> <em>"If a baby chimpanzee is raised by humans and never sees another chimp, can it learn chimp behaviors later?"</em>
-    <p class="discussion-hint">Partially. Basic chimp instincts (like a tendency to use tools) may still emerge. But complex social behaviors — like specific hunting techniques or communication signals learned from the group — would be absent or impaired. Studies of isolated chimps show they struggle with chimp social norms. This shows how much of animal "intelligence" is actually cultural: passed down through teaching, not genes.</p>
+    <strong>🗣️ Question 1:</strong> What is one thing you were born knowing how to do?
+    <p class="discussion-hint">Breathing, blinking, crying, sucking. All babies are born with these instincts. They are built into the body's programming from day one and do not require any learning or teaching.</p>
   </div>
 
-  <h2>🚀 Extensions</h2>
-  <div class="extension-box">
-    <ul>
-      <li>🎭 <strong>Teaching Game:</strong> Have your student teach you something they know how to do. Discuss: how did they learn it?</li>
-      <li>🐦 <strong>Bird Migration:</strong> Look up how young birds navigate on their first migration. Some use magnetic fields, star patterns, and learned landmarks!</li>
-      <li>📚 <strong>Read Aloud:</strong> <em>"Mama Built a Little Nest"</em> by Jennifer Ward — instincts in action.</li>
-    </ul>
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> What is one thing your parents had to teach you that you were not born knowing?
+    <p class="discussion-hint">Open-ended. Examples: talking, walking (partially learned), using a fork, reading, riding a bike, tying shoes. All of these took practice and guidance from a parent or teacher. A baby cannot just pick up a book and start reading on day one!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Is spider web spinning learned or instinct? How do you know?
+    <p class="discussion-hint">It is instinct! A baby spider that has never seen another spider still spins a web correctly on its very first try. No one teaches it. If it were learned, a spider raised alone would not know how to spin a web at all.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> Why would it be helpful for some behaviors to be instincts rather than learned?
+    <p class="discussion-hint">If an animal had to be taught everything, it might not survive long enough to learn. Instincts help animals survive right away, even without a parent around. A duckling needs to swim immediately after hatching. It cannot wait for swimming lessons!</p>
   </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
+    <strong>Full answer key for the sorting activity:</strong>
     <ul>
-      <li><strong>Gray area is good:</strong> Some behaviors have both instinct and learned components. Walking is instinct-driven (the wiring is there) but requires practice. Language has instinctive basis (babies are wired for language) but the specific language is learned. Embrace the nuance!</li>
-      <li><strong>Chimp discussion:</strong> Keep it age-appropriate — focus on the idea that some behaviors need to be passed down from older to younger members of a group, just like human families teach children.</li>
-      <li><strong>Assessment:</strong> Can the child sort at least 6 behaviors correctly? Can they name 1 instinct and 1 learned behavior from their own experience?</li>
+      <li>(a) Duck swimming = <strong>Instinct</strong></li>
+      <li>(b) Dog sitting on command = <strong>Learned</strong></li>
+      <li>(c) Spider spinning a web = <strong>Instinct</strong></li>
+      <li>(d) Dog shaking hands = <strong>Learned</strong></li>
+      <li>(e) Bird building a nest = <strong>Mostly Instinct</strong> (varies by species; some improve with practice)</li>
+      <li>(f) Cat using a litter box = <strong>Learned</strong></li>
+      <li>(g) Baby crying = <strong>Instinct</strong></li>
+      <li>(h) Parrot talking = <strong>Learned</strong></li>
+      <li>(i) Salmon swimming upstream = <strong>Instinct</strong></li>
+      <li>(j) Puppy learning to sit = <strong>Learned</strong></li>
     </ul>
+    <br>
+    <strong>On nuanced cases:</strong> Bird nest building is a fascinating gray area. Many birds build species-typical nests instinctively, but studies show they improve with practice and experience over multiple breeding seasons. If your student catches this nuance and asks "but don't they get better at it?", celebrate that observation! It shows sophisticated thinking.
+    <br><br>
+    <strong>Extension ideas:</strong> Look up videos of orca mothers teaching their calves to beach themselves to catch seals. This is one of the most documented examples of deliberate teaching in the wild. Chimpanzee mothers have also been observed showing young chimps how to use tools (rocks to crack nuts). These cross the line from instinct into genuine teaching.
+    <br><br>
+    <strong>Human parallel:</strong> Walking is an interesting human case. Babies have the instinct to put one foot in front of the other, but the coordination develops through months of practice and encouragement. It is both instinct and learned. This is a great discussion point for curious students.
   </div>
 
   <!-- ====================== STUDENT WORKSHEET ====================== -->
   <div class="page-break">
-    <div class="worksheet-box">
-      <h2>📋 Student Worksheet — Lesson 4</h2>
-      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <div class="worksheet-header">🧠 Student Worksheet — Learned vs. Born Knowing</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
-      <h3>Part 1: Behavior Sort</h3>
-      <p>Cut out the behavior cards below. Glue each one in the correct column!</p>
+    <h3>Sort the Behaviors!</h3>
+    <p style="font-size:10pt; color:#555;">Write B (Born Knowing) or L (Learned) on the line next to each behavior.</p>
 
-      <div class="two-col">
-        <div style="border:3px solid #ff9800; border-radius:10px; padding:14px; min-height:200px; background:#fff3e0;">
-          <h3 style="color:#e65100; border-color:#ffcc80; text-align:center;">🟠 Born Knowing<br><span style="font-size:9pt; font-weight:normal;">(Instinct)</span></h3>
-          <p style="font-size:9pt; color:#aaa; text-align:center;">Glue cards here</p>
-        </div>
-        <div style="border:3px solid #2196f3; border-radius:10px; padding:14px; min-height:200px; background:#e3f2fd;">
-          <h3 style="color:#1565c0; border-color:#90caf9; text-align:center;">🔵 Taught or Practiced<br><span style="font-size:9pt; font-weight:normal;">(Learned)</span></h3>
-          <p style="font-size:9pt; color:#aaa; text-align:center;">Glue cards here</p>
-        </div>
+    <ul class="ws-behavior-list">
+      <li><div class="ws-bl-label">a</div> A duck swimming <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">b</div> A dog sitting on command <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">c</div> A spider spinning a web <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">d</div> A dog shaking hands (giving paw) <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">e</div> A bird building a nest <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">f</div> A cat using a litter box <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">g</div> A baby crying <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">h</div> A parrot talking <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">i</div> A salmon swimming upstream <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+      <li><div class="ws-bl-label">j</div> A puppy learning to sit <span class="bl-write">&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+    </ul>
+
+    <h3>Sorting Chart</h3>
+    <div class="sorting-grid">
+      <div class="sorting-col">
+        <h3>⚡ Born Knowing It (Instinct)</h3>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
       </div>
-
-      <h3 style="margin-top:20px;">✂️ Cut Out These Behavior Cards</h3>
-      <div class="cut-cards-grid">
-        <div class="sort-card"><span class="emoji">🐢</span><span>Sea turtle crawling to ocean at birth</span></div>
-        <div class="sort-card"><span class="emoji">🕷️</span><span>Spider spinning a web</span></div>
-        <div class="sort-card"><span class="emoji">🐒</span><span>Chimp using a stick to get termites (taught by mom)</span></div>
-        <div class="sort-card"><span class="emoji">👶</span><span>Baby crying when hungry</span></div>
-        <div class="sort-card"><span class="emoji">🦅</span><span>Bird flying south in fall</span></div>
-        <div class="sort-card"><span class="emoji">💬</span><span>Learning to speak a language</span></div>
-        <div class="sort-card"><span class="emoji">🐋</span><span>Orca hunting technique (taught by pod)</span></div>
-        <div class="sort-card"><span class="emoji">🐝</span><span>Bee waggle dance</span></div>
-        <div class="sort-card"><span class="emoji">🚴</span><span>Riding a bicycle</span></div>
+      <div class="sorting-col">
+        <h3>📚 Learned from Parent or People</h3>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
       </div>
+    </div>
 
-      <h3>Part 2: About Me!</h3>
-      <p>List 2 things you were <strong>born knowing</strong> and 2 things you had to <strong>learn</strong>.</p>
-      <table style="width:100%; border-collapse:collapse; margin-top:10px;">
-        <tr>
-          <th style="background:#ff9800; color:white; padding:8px; width:50%;">🟠 I was born knowing...</th>
-          <th style="background:#2196f3; color:white; padding:8px; width:50%;">🔵 I had to learn...</th>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ccc; padding:8px; height:40px; vertical-align:top;">1.<br>2.</td>
-          <td style="border:1px solid #ccc; padding:8px; height:40px; vertical-align:top;">1.<br>2.</td>
-        </tr>
-      </table>
+    <div class="fill-blank">
+      An instinct is something an animal <span class="blank-line"></span> how to do.
+    </div>
+    <div class="fill-blank">
+      One behavior I learned from my parents is <span class="blank-line"></span>.
+    </div>
+
+    <h3>Draw It! ✏️</h3>
+    <p style="font-size:10pt; color:#555;">Draw an animal doing something it was born knowing how to do (an instinct).</p>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your animal here...</div>
+      <div style="height:90px;"></div>
     </div>
   </div>
 
-  <!-- ====================== ANSWER KEY ====================== -->
-  <div class="page-break">
-    <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
-
-      <h3>Part 1: Behavior Sort Answers</h3>
-      <div class="two-col">
-        <div style="background:#fff3e0; border:2px solid #ff9800; border-radius:8px; padding:14px;">
-          <h3 style="color:#e65100; border-color:#ffcc80;">🟠 Born Knowing (Instinct)</h3>
-          <ul>
-            <li>🐢 Sea turtle crawling to ocean at birth</li>
-            <li>🕷️ Spider spinning a web</li>
-            <li>👶 Baby crying when hungry</li>
-            <li>🦅 Bird flying south in fall</li>
-            <li>🐝 Bee waggle dance</li>
-          </ul>
-        </div>
-        <div style="background:#e3f2fd; border:2px solid #2196f3; border-radius:8px; padding:14px;">
-          <h3 style="color:#1565c0; border-color:#90caf9;">🔵 Taught or Practiced (Learned)</h3>
-          <ul>
-            <li>🐒 Chimp using a stick to get termites</li>
-            <li>💬 Learning to speak a language</li>
-            <li>🐋 Orca hunting technique</li>
-            <li>🚴 Riding a bicycle</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Part 2: Sample Answers</h3>
-      <p><strong>Born knowing:</strong> breathing, crying, sucking, blinking, startling at loud noises</p>
-      <p><strong>Had to learn:</strong> talking, walking (practice!), reading, riding a bike, cooking, using a fork</p>
-
-      <h3>💡 Notes on Tricky Cards</h3>
-      <ul>
-        <li><strong>Walking:</strong> Humans are wired to walk — but it still requires months of practice to develop the skill. It's both! Celebrate this nuance if a child raises it.</li>
-        <li><strong>Bird migration:</strong> The drive to migrate is instinct, but some navigation landmarks may be partially learned from flock members. Both answers are defensible.</li>
-      </ul>
-
-      <h3>✅ What Success Looks Like</h3>
-      <ul>
-        <li>Child correctly sorts at least 6 of 9 behavior cards.</li>
-        <li>Child can name 1 instinct and 1 learned behavior from their own life.</li>
-        <li>Child can explain why teaching is a form of parenting.</li>
-      </ul>
-    </div>
-  </div>
-
-<!-- Remarq Feedback Layer -->
-<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_WBm8mWK1DFA" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+  <script src="http://192.168.5.204:3334/feedback-layer.js"></script>
 </body>
 </html>

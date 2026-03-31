@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Animal Parents Protect Offspring — Grade 1, Unit 2, Lesson 3</title>
+  <title>How Animal Parents Protect Offspring — Parents and Offspring Unit, Lesson 3</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -63,8 +63,16 @@
       text-align: center;
       margin: 16px 0;
     }
-    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
-    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
     .materials-box {
       background: #fff8e1;
       border: 2px solid #ffcc80;
@@ -82,7 +90,7 @@
     }
     .procedure-step strong { color: #1b5e20; }
     .question-box {
-      background: #f1f8e9;
+      background: #e8f5e9;
       border-left: 5px solid #00B894;
       padding: 10px 15px;
       margin: 10px 0;
@@ -91,9 +99,8 @@
     .discussion-hint {
       font-style: italic;
       color: #555;
-      margin-top: 8px;
-      padding-left: 10px;
-      border-left: 3px solid #a5d6a7;
+      margin-top: 6px;
+      font-size: 10pt;
     }
     .tip-box {
       background: #e0f7fa;
@@ -112,13 +119,6 @@
       font-size: 10pt;
     }
     .standards-box strong { color: #7b1fa2; }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
     .teacher-note {
       background: #f5f5f5;
       border: 2px dashed #999;
@@ -129,301 +129,337 @@
       color: #555;
     }
     .teacher-note strong { color: #333; }
-    .animal-card {
-      background: white;
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .vocab-card {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 12pt; }
+    .vocab-card .vocab-def { font-size: 10pt; color: #333; margin-top: 4px; }
+    .bodyguard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .bodyguard-card {
+      background: #fff;
       border: 2px solid #a5d6a7;
       border-radius: 10px;
-      padding: 14px 16px;
-      margin: 10px 0;
+      padding: 12px;
     }
-    .animal-card .animal-header {
+    .bodyguard-card .animal-emoji { font-size: 28pt; }
+    .bodyguard-card .animal-name { font-weight: bold; color: #1b5e20; font-size: 11pt; margin: 4px 0; }
+    .bodyguard-card .protection-desc { font-size: 10pt; color: #333; }
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
       font-size: 14pt;
       font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .ws-bodyguard-card {
+      border: 2px dashed #2e7d32;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      min-height: 90px;
+    }
+    .ws-bodyguard-card .card-title {
+      font-weight: bold;
       color: #1b5e20;
+      font-size: 11pt;
       margin-bottom: 6px;
     }
-    .animal-card .protection-type {
-      display: inline-block;
-      background: #2e7d32;
-      color: white;
-      font-size: 8pt;
-      padding: 2px 8px;
-      border-radius: 10px;
-      margin-bottom: 8px;
+    .write-line {
+      border-bottom: 1px solid #aaa;
+      min-height: 22px;
+      margin: 4px 0;
     }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
+    .sorting-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 10px 0;
+    }
+    .sorting-col {
+      border: 2px solid #a5d6a7;
       border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 10px;
     }
-    .answer-key h2 { background: #757575; text-align: center; }
-    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
-    .worksheet-box {
-      border: 3px solid #2e7d32;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
+    .sorting-col h3 { text-align: center; }
+    .sorting-blank { border-bottom: 1px solid #aaa; margin: 8px 0; min-height: 22px; }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
     }
-    .worksheet-box h2 { background: #2e7d32; }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 160px;
+      margin: 0 4px;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
     @media print {
       body { padding: 0.25in; font-size: 10pt; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .animal-card {
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
         break-inside: avoid; page-break-inside: avoid;
       }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
     }
-    .page-break { page-break-before: always; margin-top: 20px; }
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
-<body data-document-id="doc_H9oUGxeyb0Y">
+<body data-document-id="" data-doc-id="">
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
-  <h1>🛡️ How Animal Parents Protect Offspring 🛡️</h1>
-  <p class="subtitle">Life Science — Parents &amp; Offspring | Unit 2, Lesson 3 of 6</p>
+  <h1>🐻🐧🦘 How Animal Parents Protect Offspring</h1>
+  <p class="subtitle">Parents and Offspring Unit, Lesson 3</p>
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 1st Grade</span>
     <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science — Parents &amp; Offspring</span>
-    <span>🏠 <strong>Materials:</strong> Household only</span>
+    <span>🔬 <strong>Subject:</strong> Life Science</span>
+    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🐊 🐧 🦘 🐺</div>
-    <div class="caption">Animal parents have amazing ways to keep their babies safe — each one fits exactly what that baby needs!</div>
+    <div class="emoji-hero">🐻🐧🦘</div>
+    <div class="caption">Every parent animal has its own special way of keeping babies safe. Some carry them, some huddle over them, some guard the nest.</div>
   </div>
 
   <div class="standards-box">
     <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Use observations to describe patterns of what plants and animals (including humans) do to survive and how the behavior of parents helps offspring survive.
+    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>describe</em> at least 3 ways animal parents protect offspring and <em>explain</em> how each behavior helps offspring survive.</p>
-
-  <h2>🔬 The Big Idea</h2>
-  <p>Animal parents don't all protect their babies the same way — but they all have the same goal: keeping their offspring alive long enough to grow up. Whether it's carrying babies in a mouth, a pouch, or standing guard on a hill, every behavior is a solution to a survival problem. The pattern is: <strong>parent behaviors that help offspring survive are passed on through generations.</strong></p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong> protect, predator, behavior, survive, offspring, adaptation
-  </div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Identify specific behaviors that animal parents use to <strong>protect their young</strong>.</li>
+    <li>Connect parental protection strategies to offspring <strong>survival</strong>.</li>
+    <li>Begin to distinguish between protection behaviors that use the parent's <strong>body</strong> vs. their <strong>actions</strong>.</li>
+  </ul>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
-    <h3>🏠 Household Items to Gather</h3>
+    <h3>🏠 What You Need (Household Only)</h3>
     <ul>
-      <li>Paper and pencil/crayons for the worksheet</li>
-      <li>Printed worksheet or blank paper to draw your own chart</li>
+      <li>Paper, pencil, and crayons</li>
     </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>Everything you need is already at home!</em></p>
   </div>
 
-  <h2>🔬 Let's Get Started</h2>
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card">
+      <div class="vocab-word">🛡️ Protection</div>
+      <div class="vocab-def">Keeping something safe from harm.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🐾 Behavior</div>
+      <div class="vocab-def">Something a living thing does (an action).</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">💪 Survival</div>
+      <div class="vocab-def">Staying alive.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🦁 Predator</div>
+      <div class="vocab-def">An animal that hunts other animals for food.</div>
+    </div>
+  </div>
+
+  <h2>📚 Background (Read Aloud to Student)</h2>
+  <p>Baby animals face many dangers. They may be too small to run away from predators. They may not know which foods are safe to eat. They may get too cold or too hot without help. This is why <strong>parental protection</strong> is so important. Parent animals that protect their young are more likely to have babies that survive, grow up, and have babies of their own. Over thousands of generations, animals have developed some remarkable ways to keep their young safe.</p>
+
+  <p>Different animals use very different strategies. A mother bear stays close to her cubs and will charge at anything that threatens them. A penguin huddles its chick under warm feathers. A kangaroo carries its joey in a built-in pouch until it is big enough to face the world. An alligator, despite looking fearsome, is actually a devoted parent who carries hatchlings gently in her mouth to bring them to water. Each strategy fits the animal's environment, body, and the dangers it faces.</p>
+
+  <p>The most fascinating thing about these behaviors is that most of them are <strong>instinctive</strong>. The mother bear does not need to be taught to protect her cubs. The penguin does not take a class on how to huddle. These behaviors are built into the animal from birth, passed down through generations just like physical traits are passed down. (In the next lesson, we will explore the difference between instincts and learned behaviors in more detail!)</p>
+
+  <h2>🔬 Procedure</h2>
 
   <div class="procedure-step">
-    <strong>Step 1 — Warm-Up: How Would YOU Protect a Baby? (5 min)</strong><br>
-    Ask: <em>"Imagine you are a small bird with a baby in a nest. A fox is nearby. What would you do to protect your baby?"</em><br>
-    Accept all answers — then explain that real animals have developed specific behaviors for exactly this problem.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Meet the Animal Protectors (20 min)</strong><br>
-    Read through each animal card together and discuss.
-  </div>
-
-  <div class="animal-card">
-    <div class="animal-header">🐊 Alligator Mom</div>
-    <span class="protection-type">Carrying</span>
-    <p>When alligator eggs hatch, the mother gently carries her babies in her mouth — the same jaws that can crush bone! She transports them safely to the water, protecting them from predators every step of the way. Baby alligators call out with tiny squeaks so mom knows where they are.</p>
-    <p><strong>How does this help offspring survive?</strong> Babies are too small to fight off predators. The mother's size and strength protects them during the most vulnerable time.</p>
-  </div>
-
-  <div class="animal-card">
-    <div class="animal-header">🐧 Emperor Penguin Dad</div>
-    <span class="protection-type">Warmth</span>
-    <p>In Antarctica — one of the coldest places on Earth — emperor penguin dads balance their single egg on top of their feet and cover it with a warm belly fold for two months. They huddle together in large groups to share warmth. They don't eat anything the entire time!</p>
-    <p><strong>How does this help offspring survive?</strong> Without warmth, the egg would freeze and the chick would die. The father's body heat is the only thing keeping the chick alive through Antarctic winter.</p>
-  </div>
-
-  <div class="animal-card">
-    <div class="animal-header">🦘 Kangaroo Mom</div>
-    <span class="protection-type">Pouch</span>
-    <p>A newborn kangaroo (called a joey) is only about the size of a jellybean when it's born! It crawls through its mother's fur and into her pouch, where it attaches to a teat and continues developing for 6–8 months. The pouch is warm, safe, and full of milk.</p>
-    <p><strong>How does this help offspring survive?</strong> The joey is born before it's fully developed. The pouch is like an external womb, giving the tiny joey time to grow with full protection.</p>
-  </div>
-
-  <div class="animal-card">
-    <div class="animal-header">🦡 Meerkat Sentinels</div>
-    <span class="protection-type">Watchkeeping</span>
-    <p>Meerkats live in family groups. While some adults forage for food, one adult stands on top of a high spot — a rock, a mound, or even another meerkat — and watches for predators. If danger approaches, the sentinel gives a warning call and everyone dives underground, including the pups.</p>
-    <p><strong>How does this help offspring survive?</strong> Pups are busy playing and learning — they can't watch for danger themselves. The sentinel system protects the whole group, including young ones.</p>
-  </div>
-
-  <div class="animal-card">
-    <div class="animal-header">🐺 Wolf Parents</div>
-    <span class="protection-type">Feeding</span>
-    <p>Wolf pups are too young and small to hunt. Adult wolves hunt prey, then carry the food in their stomachs back to the den. When pups lick an adult's mouth, the adult regurgitates (brings up food from the stomach) for the pups to eat. It sounds gross, but it's a perfectly designed delivery system!</p>
-    <p><strong>How does this help offspring survive?</strong> Pups need protein to grow and can't hunt themselves. The regurgitation system lets adults bring large amounts of food back without carrying it in their mouths.</p>
+    <strong>Step 1 — Opening Question</strong><br>
+    Ask your student: "What do you think would happen to baby animals if no parent ever protected them?" Give time to think and share. There are no wrong answers here. The goal is to build appreciation for why protection matters.
   </div>
 
   <div class="procedure-step">
-    <strong>Step 3 — Human Connection (5 min)</strong><br>
-    Ask: <em>"What do human parents do that fits these same categories?"</em>
-    <ul>
-      <li><em>Carrying:</em> parents carry babies in arms or baby carriers</li>
-      <li><em>Warmth:</em> blankets, clothing, heating the home</li>
-      <li><em>Pouch:</em> baby carriers/slings act like a "pouch"!</li>
-      <li><em>Watchkeeping:</em> parents watch children at the playground</li>
-      <li><em>Feeding:</em> parents prepare all food for young children</li>
+    <strong>Step 2 — Animal Bodyguard Cards 🃏</strong><br>
+    Create one card for each of 5 animals. Fold or cut paper into 5 sections. Title each card with the animal name and write or draw the parent-baby pair:
+    <ul style="margin-top:8px;">
+      <li>🐻 Bear (mother bear and cubs)</li>
+      <li>🐧 Penguin (parent penguin and chick)</li>
+      <li>🐊 Alligator (mother alligator and hatchlings)</li>
+      <li>🦘 Kangaroo (mother kangaroo and joey)</li>
+      <li>🐦 Bird (parent bird, nest, and chicks)</li>
     </ul>
   </div>
 
   <div class="procedure-step">
-    <strong>Step 4 — Worksheet (10 min)</strong><br>
-    Complete the worksheet: match each behavior to the animal and explain how it helps offspring survive.
+    <strong>Step 3 — Draw and Describe</strong><br>
+    For each card, draw the parent and baby together. Then write or dictate: "How does this parent protect its baby?"
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Animal Bodyguard Facts</strong><br>
+    Read each fact aloud together and add it to the correct card:
+    <ul style="margin-top:8px;">
+      <li>🐻 <strong>Bear:</strong> The mother keeps cubs close at all times and will charge at predators to defend them.</li>
+      <li>🐧 <strong>Penguin:</strong> Parent huddles the chick under warm feathers to keep it from freezing. Both parents take turns standing guard.</li>
+      <li>🐊 <strong>Alligator:</strong> The mother carries her hatchlings gently in her mouth to bring them to water safely. She also guards the nest.</li>
+      <li>🦘 <strong>Kangaroo:</strong> The joey lives in the mother's pouch, completely protected, until it is big enough to venture out.</li>
+      <li>🐦 <strong>Bird:</strong> Parents sit on eggs to keep them warm, then feed and shelter chicks in the nest until they can fly.</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Sort the Cards</strong><br>
+    Look at all 5 cards together. Sort them into two groups:<br>
+    <strong>Uses their BODY to protect</strong> (pouch, feathers, carrying in mouth)<br>
+    <strong>Uses their BEHAVIOR (actions) to protect</strong> (charging, standing guard, sitting on eggs)
+    <br><br>
+    Note: Some animals use both! That is a great discovery to discuss.
   </div>
 
   <h2>💬 Discussion Questions</h2>
 
   <div class="question-box">
-    <strong>🗣️ Talk about these together:</strong>
-    <ul>
-      <li>Why does the emperor penguin dad stand in the cold instead of leaving the egg and going to eat?</li>
-      <li>What would happen to a joey if it was born and there was no pouch?</li>
-      <li>The meerkat sentinel doesn't eat while it's on watch. Why might meerkats do this even though it means missing food?</li>
-      <li>Can you think of another animal that protects its young in an unusual way?</li>
-    </ul>
-    <hr>
-    <strong>🌟 Big Question:</strong> <em>"A crocodile carries its babies in its mouth. That seems terrifying! How does it not crush them?"</em>
-    <p class="discussion-hint">Crocodilians have incredibly precise bite control. The same jaws that can crush bone can also carry an egg without breaking it. Mother crocodiles are among the most attentive reptile parents — they guard nests, help babies hatch by gently rolling eggs in their mouths, and carry hatchlings to water. Over millions of years, crocodiles that were careful parents had more surviving babies and passed on their careful parenting behavior.</p>
+    <strong>🗣️ Question 1:</strong> What would happen to baby animals if parents did not protect them?
+    <p class="discussion-hint">Many babies would not survive. They would be eaten by predators, get too cold, or not find food. Parental protection is one of the most important things that helps offspring survive long enough to grow up and have babies of their own.</p>
   </div>
 
-  <h2>🚀 Extensions</h2>
-  <div class="extension-box">
-    <ul>
-      <li>🎭 <strong>Act It Out:</strong> Role-play being a meerkat sentinel! One person stands up and watches while others pretend to forage. Practice the warning signal.</li>
-      <li>🔍 <strong>Research:</strong> Look up "animal parents protecting babies" — find one more example to add to your collection.</li>
-      <li>📚 <strong>Read Aloud:</strong> <em>"Animal Parents"</em> or any National Geographic Kids book about animal families.</li>
-    </ul>
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Which animal protection behavior surprised you the most?
+    <p class="discussion-hint">Open-ended. Encourage discussion. The alligator carrying babies in its mouth is often the most surprising, because alligators seem dangerous! Yet she is being an incredibly careful and gentle parent. The kangaroo pouch is also a favorite.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> What do human parents do to protect babies?
+    <p class="discussion-hint">Keep them warm, feed them, hold them close, put them in a safe crib, watch them carefully, take them to the doctor, put car seats in the car. Humans use both body (holding, carrying) and behavior (watching, guarding) just like animals!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> Do all animals protect their young in the same way?
+    <p class="discussion-hint">No, every species has its own protection strategies based on the dangers they face and the tools their bodies give them. A kangaroo has a pouch. A penguin has warm feathers. A bear has size and strength. Each animal uses what it has.</p>
   </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
+    <strong>Background facts on each animal:</strong>
     <ul>
-      <li><strong>The "gross" factor:</strong> Wolf regurgitation might get a reaction — lean into it! The kids will remember it, and that's the point. Frame it as a clever solution, not gross behavior.</li>
-      <li><strong>Crocodile carrying:</strong> Emphasize the gentleness. The same jaw that is incredibly powerful can also be incredibly gentle. This is a beautiful example of how animals have fine motor control.</li>
-      <li><strong>Emperor penguins:</strong> The fact that males fast for 2 months is extraordinary. Connect it to: how long can you go without eating? (Most kids: about 3 hours!) This puts the sacrifice in perspective.</li>
-      <li><strong>Assessment:</strong> Can the student name 3 protection behaviors and explain why each one helps offspring survive?</li>
+      <li><strong>Bear:</strong> Mother bears are called sows. They have cubs every 2-3 years. The sow is fiercely protective and will not hesitate to charge much larger animals, including humans, to defend her cubs.</li>
+      <li><strong>Penguin:</strong> Emperor penguins huddle in groups of thousands in Antarctic winter. The father balances the egg on his feet under a warm fold of skin for 65 days in freezing temperatures while the mother hunts for food.</li>
+      <li><strong>Alligator:</strong> American alligator mothers are unusually attentive reptile parents. They guard the nest for about 65 days, then gently carry hatchlings in their mouth (a behavior that looks scary but is actually protective). They stay with offspring for 1-2 years.</li>
+      <li><strong>Kangaroo:</strong> A newborn joey is about the size of a jellybean. It crawls into the pouch immediately after birth and stays there for about 6-8 months, nursing and developing until it is ready to emerge.</li>
+      <li><strong>Bird:</strong> Most songbirds have both parents feeding chicks. Chicks are helpless at birth (called "altricial") and need constant feeding and warmth for weeks before they can leave the nest.</li>
     </ul>
+    <br>
+    <strong>Extension animals:</strong> You can add wolf (pack protects pups), dolphin (mother stays close, other females help), elephant (whole herd protects calves), or meerkat (assigned "sentry" stands guard while others forage).
+    <br><br>
+    <strong>Instinct preview:</strong> This lesson naturally leads to Lesson 4 on instinct vs. learned behavior. If students ask "Did the mother bear LEARN to protect her cubs?", you can say: "Great question! We will answer that in our next lesson. It is called an instinct."
   </div>
 
   <!-- ====================== STUDENT WORKSHEET ====================== -->
   <div class="page-break">
-    <div class="worksheet-box">
-      <h2>📋 Student Worksheet — Lesson 3</h2>
-      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <div class="worksheet-header">🛡️ Student Worksheet — Animal Bodyguard Cards</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
-      <h3>Part 1: Match the Protection Behavior</h3>
-      <p>Draw a line from the animal to what it does to protect its young.</p>
+    <h3>My Bodyguard Cards 🃏</h3>
+    <p style="font-size:10pt; color:#555;">Draw the parent and baby together. Write how the parent protects its baby.</p>
 
-      <table style="width:100%; border-collapse:collapse; margin:15px 0; font-size:11pt;">
-        <tr>
-          <td style="width:40%; padding:10px; vertical-align:top;">
-            <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">🐊 Alligator</div>
-            <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">🐧 Emperor Penguin</div>
-            <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">🦘 Kangaroo</div>
-            <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">🦡 Meerkat</div>
-            <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">🐺 Wolf</div>
-          </td>
-          <td style="width:20%; text-align:center; color:#ccc; font-size:22pt; vertical-align:middle;">↔</td>
-          <td style="width:40%; padding:10px; vertical-align:top;">
-            <div style="background:#fff9c4; border:2px dashed #f9a825; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">Keeps egg warm on feet for 2 months</div>
-            <div style="background:#fff9c4; border:2px dashed #f9a825; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">Carries babies in mouth to water</div>
-            <div style="background:#fff9c4; border:2px dashed #f9a825; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">Keeps tiny baby in a warm pouch</div>
-            <div style="background:#fff9c4; border:2px dashed #f9a825; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">Brings food back in stomach for pups</div>
-            <div style="background:#fff9c4; border:2px dashed #f9a825; border-radius:8px; padding:10px; margin:6px 0; text-align:center;">Stands guard to warn of predators</div>
-          </td>
-        </tr>
-      </table>
-
-      <h3>Part 2: Explain It!</h3>
-      <p>Choose 2 animals. For each one, explain <em>how</em> the parent's behavior helps the offspring survive.</p>
-
-      <div style="background:#f1f8e9; border:2px solid #a5d6a7; border-radius:8px; padding:12px; margin:8px 0;">
-        <strong>Animal 1:</strong> _________________<br>
-        <strong>What the parent does:</strong> ___________________________________________<br><br>
-        <strong>How this helps the baby survive:</strong> ___________________________________________ <br>&nbsp;
+    <div class="ws-bodyguard-card">
+      <div class="card-title">🐻 Bear</div>
+      <div style="display:flex; gap:10px;">
+        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
+        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
       </div>
+    </div>
 
-      <div style="background:#f1f8e9; border:2px solid #a5d6a7; border-radius:8px; padding:12px; margin:8px 0;">
-        <strong>Animal 2:</strong> _________________<br>
-        <strong>What the parent does:</strong> ___________________________________________<br><br>
-        <strong>How this helps the baby survive:</strong> ___________________________________________<br>&nbsp;
+    <div class="ws-bodyguard-card">
+      <div class="card-title">🐧 Penguin</div>
+      <div style="display:flex; gap:10px;">
+        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
+        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
       </div>
+    </div>
 
-      <h3>Part 3: Human Connection</h3>
-      <p>Name one thing a human parent does that is similar to one of the animals above. Which animal does it remind you of?</p>
-      <div style="border-bottom:2px solid #a5d6a7; height:36px; margin:6px 0;"></div>
-      <div style="border-bottom:2px solid #a5d6a7; height:36px; margin:6px 0;"></div>
+    <div class="ws-bodyguard-card">
+      <div class="card-title">🐊 Alligator</div>
+      <div style="display:flex; gap:10px;">
+        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
+        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
+      </div>
+    </div>
+
+    <div class="ws-bodyguard-card">
+      <div class="card-title">🦘 Kangaroo</div>
+      <div style="display:flex; gap:10px;">
+        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
+        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
+      </div>
+    </div>
+
+    <div class="ws-bodyguard-card">
+      <div class="card-title">🐦 Bird</div>
+      <div style="display:flex; gap:10px;">
+        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
+        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
+      </div>
+    </div>
+
+    <h3>Sort the Animals!</h3>
+    <p style="font-size:10pt;color:#555;">Write each animal name in the correct column. (Some animals might fit in both!)</p>
+    <div class="sorting-grid">
+      <div class="sorting-col">
+        <h3>Uses Body to Protect</h3>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+      </div>
+      <div class="sorting-col">
+        <h3>Uses Behavior (Actions) to Protect</h3>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+        <div class="sorting-blank"></div>
+      </div>
+    </div>
+
+    <div class="fill-blank">
+      The <span class="blank-line" style="min-width:120px;"></span> parent protects its baby by <span class="blank-line" style="min-width:160px;"></span>.
     </div>
   </div>
 
-  <!-- ====================== ANSWER KEY ====================== -->
-  <div class="page-break">
-    <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
-
-      <h3>Part 1: Matching Answers</h3>
-      <ul>
-        <li>🐊 Alligator → Carries babies in mouth to water</li>
-        <li>🐧 Emperor Penguin → Keeps egg warm on feet for 2 months</li>
-        <li>🦘 Kangaroo → Keeps tiny baby in a warm pouch</li>
-        <li>🦡 Meerkat → Stands guard to warn of predators</li>
-        <li>🐺 Wolf → Brings food back in stomach for pups</li>
-      </ul>
-
-      <h3>Part 2: Sample Explanations</h3>
-      <ul>
-        <li><strong>Alligator:</strong> Carries babies to water. This keeps babies safe from predators who might eat them on land during the journey.</li>
-        <li><strong>Emperor Penguin:</strong> Keeps egg on feet in the cold. Without body heat, the egg would freeze and the chick would die before hatching.</li>
-        <li><strong>Kangaroo:</strong> Keeps joey in pouch. The joey is born too undeveloped to survive on its own — the pouch provides warmth, milk, and protection.</li>
-        <li><strong>Meerkat:</strong> Stands watch. Pups playing can't watch for danger — the sentinel's warning call gives everyone time to hide safely.</li>
-        <li><strong>Wolf:</strong> Regurgitates food for pups. Pups can't hunt; parents deliver pre-processed food directly to the den.</li>
-      </ul>
-
-      <h3>✅ What Success Looks Like</h3>
-      <ul>
-        <li>Child correctly matches all 5 animals to behaviors.</li>
-        <li>Child can explain, in their own words, why at least 2 behaviors help offspring survive.</li>
-        <li>Child can connect an animal behavior to a human parenting behavior.</li>
-      </ul>
-    </div>
-  </div>
-
-<!-- Remarq Feedback Layer -->
-<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_H9oUGxeyb0Y" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+  <script src="http://192.168.5.204:3334/feedback-layer.js"></script>
 </body>
 </html>

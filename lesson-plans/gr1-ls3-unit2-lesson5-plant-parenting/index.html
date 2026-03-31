@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plant "Parenting" — Grade 1, Unit 2, Lesson 5</title>
+  <title>Plant Parenting — Parents and Offspring Unit, Lesson 5</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -63,8 +63,16 @@
       text-align: center;
       margin: 16px 0;
     }
-    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
-    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
     .materials-box {
       background: #fff8e1;
       border: 2px solid #ffcc80;
@@ -82,7 +90,7 @@
     }
     .procedure-step strong { color: #1b5e20; }
     .question-box {
-      background: #f1f8e9;
+      background: #e8f5e9;
       border-left: 5px solid #00B894;
       padding: 10px 15px;
       margin: 10px 0;
@@ -91,9 +99,8 @@
     .discussion-hint {
       font-style: italic;
       color: #555;
-      margin-top: 8px;
-      padding-left: 10px;
-      border-left: 3px solid #a5d6a7;
+      margin-top: 6px;
+      font-size: 10pt;
     }
     .tip-box {
       background: #e0f7fa;
@@ -112,13 +119,6 @@
       font-size: 10pt;
     }
     .standards-box strong { color: #7b1fa2; }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
     .teacher-note {
       background: #f5f5f5;
       border: 2px dashed #999;
@@ -129,322 +129,321 @@
       color: #555;
     }
     .teacher-note strong { color: #333; }
-    .seed-card {
-      background: white;
-      border: 2px solid #a5d6a7;
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin: 10px 0;
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0;
     }
-    .seed-card .seed-header {
+    .vocab-card {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 12pt; }
+    .vocab-card .vocab-def { font-size: 10pt; color: #333; margin-top: 4px; }
+    .seed-info-box {
+      background: #f1f8e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .seed-info-box h3 { color: #1b5e20; }
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
       font-size: 14pt;
       font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .seed-detective-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      font-size: 10pt;
+    }
+    .seed-detective-row.header {
+      font-weight: bold;
       color: #1b5e20;
-      margin-bottom: 6px;
+      background: #e8f5e9;
+      padding: 6px 8px;
+      border-radius: 4px;
     }
-    .strategy-badge {
-      display: inline-block;
-      background: #00B894;
-      color: white;
+    .seed-draw-box {
+      border: 2px dashed #2e7d32;
+      border-radius: 6px;
+      min-height: 60px;
+      padding: 4px;
+    }
+    .seed-draw-box .draw-label {
       font-size: 8pt;
-      padding: 2px 8px;
-      border-radius: 10px;
-      margin-bottom: 8px;
+      color: #aaa;
+      font-style: italic;
     }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
       border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
     }
-    .answer-key h2 { background: #757575; text-align: center; }
-    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
-    .worksheet-box {
-      border: 3px solid #2e7d32;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 160px;
+      margin: 0 4px;
     }
-    .worksheet-box h2 { background: #2e7d32; }
+    .journal-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .journal-box h3 { color: #e65100; border-color: #ffcc80; }
+    .journal-write-line {
+      border-bottom: 1px solid #bbb;
+      min-height: 24px;
+      margin: 6px 0;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
     @media print {
       body { padding: 0.25in; font-size: 10pt; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .seed-card {
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
         break-inside: avoid; page-break-inside: avoid;
       }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
     }
-    .page-break { page-break-before: always; margin-top: 20px; }
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
-<body data-document-id="doc_NFqqPItafdk">
+<body data-document-id="" data-doc-id="">
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
-  <h1>🌱 Plant "Parenting" 🌱</h1>
-  <p class="subtitle">Life Science — Parents &amp; Offspring | Unit 2, Lesson 5 of 6</p>
+  <h1>🌻🌱🍎 Plant Parenting</h1>
+  <p class="subtitle">Parents and Offspring Unit, Lesson 5</p>
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 1st Grade</span>
     <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science — Parents &amp; Offspring</span>
-    <span>🏠 <strong>Materials:</strong> Household only</span>
+    <span>🔬 <strong>Subject:</strong> Life Science</span>
+    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🌰 🍎 🌼 🌵</div>
-    <div class="caption">Plants can't walk, talk, or hug their babies — but they've built protection and care right into the seed!</div>
+    <div class="emoji-hero">🌻🌱🍎</div>
+    <div class="caption">Every seed holds a tiny recipe for a new plant, passed down from its parent. What will grow from yours?</div>
   </div>
 
   <div class="standards-box">
     <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Use observations to describe patterns of what plants and animals (including humans) do to survive and how the behavior of parents helps offspring survive.
+    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>explain</em> how plants "care for" offspring through seed structure and <em>compare</em> plant reproduction to animal parenting.</p>
-
-  <h2>🔬 The Big Idea</h2>
-  <p>Plants can't move to feed, protect, or teach their offspring — so they solve the problem a different way. They build everything the young plant needs directly <em>into</em> the seed, and they engineer special structures to send seeds as far as possible from the parent plant. No parent watching over the baby — but the baby comes fully equipped!</p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong> seed, dispersal, offspring, protect, nutrients, structure
-  </div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Recognize that plants also pass traits to offspring through <strong>seeds</strong>.</li>
+    <li>Observe that plant offspring resemble the parent plant in shape, color, and type.</li>
+    <li>Understand that seeds carry <strong>"instructions"</strong> (DNA) for growing a new plant just like the parent.</li>
+  </ul>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
-    <h3>🏠 Household Items to Look For</h3>
+    <h3>🏠 What You Need (Household Only)</h3>
     <ul>
-      <li>🍎 An apple (look at the seeds inside)</li>
-      <li>🌰 An acorn or walnut (if available)</li>
-      <li>🌼 A dandelion with seed puffs (find one outside or describe)</li>
-      <li>Any seed you can find in the kitchen: beans, sunflower seeds, popcorn kernel</li>
-      <li>Paper and crayons for the worksheet</li>
+      <li>2-3 different seeds from your kitchen (apple seeds, sunflower seeds from a snack bag, dried beans)</li>
+      <li>Paper plates (one per seed type)</li>
+      <li>Magnifying glass (optional, but fun!)</li>
+      <li>Paper and pencil</li>
+      <li>One small cup or container with soil (for planting one seed at the end)</li>
     </ul>
-    <p style="font-style:italic; color:#777; font-size:9.5pt;">Don't have these? That's fine — describe and draw each one instead. The lesson works either way!</p>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All seeds can come from your kitchen pantry! No purchasing required.</em></p>
   </div>
 
-  <h2>🔬 Let's Get Started</h2>
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card">
+      <div class="vocab-word">🌰 Seed</div>
+      <div class="vocab-def">A small structure that can grow into a new plant, made by the parent plant.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🔍 Trait</div>
+      <div class="vocab-def">An inherited feature passed from parent plant to offspring plant.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">📋 Instructions</div>
+      <div class="vocab-def">The information inside a seed that tells it how to grow. Scientists call this DNA. Think of it like a recipe!</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🌻 Parent Plant</div>
+      <div class="vocab-def">The plant that made the seed. The offspring plant will look like it.</div>
+    </div>
+  </div>
+
+  <h2>📚 Background (Read Aloud to Student)</h2>
+  <p>We have been learning that animal offspring look like their parents. But what about plants? Plants do not have babies the way animals do. Instead, they make <strong>seeds</strong>. Every seed is like a tiny package with two things inside: a baby plant (called an embryo) and a set of instructions for how to grow. Those instructions are called <strong>DNA</strong>, but you can think of them as a recipe. Just like a recipe for chocolate chip cookies will always make chocolate chip cookies, a sunflower seed's recipe will always grow a sunflower.</p>
+
+  <p>This is why, when you plant a sunflower seed, you get a sunflower, not a rose. The instructions in the seed are specific to the parent plant. The new plant (the offspring) will have the same traits as its parent: the same leaf shape, the same flower color, the same height, the same type of fruit. Traits are passed from the parent plant to the seed to the new plant, just like they are passed from parent animals to their offspring.</p>
+
+  <p>Here is something wonderful to discover today: if you carefully peel open a dried bean or a large seed, you can actually see the tiny baby plant waiting inside! This tiny plant is called the embryo, and it has everything it needs to start growing. All it needs is water, soil, and sunlight, and those hidden instructions will take over and build a brand new plant.</p>
+
+  <div class="tip-box">
+    🌱 <strong>Try it!</strong> Soak a dried bean in water overnight, then peel it open the next day. You can see the baby plant (embryo) inside with a tiny root and tiny leaf shapes already formed!
+  </div>
+
+  <h2>🔬 Procedure</h2>
 
   <div class="procedure-step">
-    <strong>Step 1 — Warm-Up: Can a Plant Hug? (5 min)</strong><br>
-    Ask: <em>"Can a plant walk to bring its baby food? Can a plant keep its baby warm at night? Can a plant protect its baby from a hungry bird?"</em><br>
-    (All no!) <em>"So how does a plant parent take care of its offspring?"</em><br>
-    Key answer to guide toward: <em>Plants build care into the seed before the baby even leaves!</em>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Meet the Seeds (20 min)</strong><br>
-    Examine each seed (real or described) and discuss what "parenting" the parent plant did.
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">🥥 Coconut</div>
-    <span class="strategy-badge">Protection + Dispersal</span>
-    <p>The thick, hard outer shell protects the seed from being crushed or eaten. The coconut is also filled with liquid and nutrients (coconut water and coconut meat) to feed the developing seedling. And coconuts can float on ocean water — the parent tree near a beach "sends" seeds to new islands!</p>
-    <p><strong>Parent's "gift" to offspring:</strong> armor, food, and a boat ride.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">🌰 Acorn</div>
-    <span class="strategy-badge">Protection + Food Storage</span>
-    <p>The hard shell protects the seed inside. Acorns contain tannins — bitter-tasting chemicals that deter some animals from eating them. Inside is a starchy nutrient supply that fuels the young oak tree until its roots can find water and its leaves can make food from sunlight.</p>
-    <p><strong>Parent's "gift" to offspring:</strong> protective shell, built-in bitter taste, and a packed lunch.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">🍎 Apple</div>
-    <span class="strategy-badge">Animal-Assisted Dispersal</span>
-    <p>The apple fruit is sweet and delicious — on purpose! Animals (including us) eat the fruit, travel far away, and eventually deposit the seeds in a new location with their droppings. The seeds themselves have a protective coat that survives the journey through an animal's digestive system.</p>
-    <p><strong>Parent's "gift" to offspring:</strong> a tasty package that gets the seed carried far away, and a seed coat tough enough to survive the trip.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">🌼 Dandelion</div>
-    <span class="strategy-badge">Wind Dispersal</span>
-    <p>Each dandelion seed has a tiny feathery "parachute" (called a pappus) attached to it. When the wind blows, seeds float through the air and land far from the parent plant. Each dandelion head can release over 100 seeds!</p>
-    <p><strong>Parent's "gift" to offspring:</strong> a built-in parachute for a free ride on the wind.</p>
-  </div>
-
-  <div class="seed-card">
-    <div class="seed-header">🌿 Burr</div>
-    <span class="strategy-badge">Animal-Hitchhiker Dispersal</span>
-    <p>Burrs have tiny hooks that catch on animal fur (or clothing, or socks!). The seed gets a free ride to a new location without the animal even knowing. Have you ever pulled a burr off your socks after a walk? You were a seed disperser!</p>
-    <p><strong>Parent's "gift" to offspring:</strong> tiny hooks that hitch rides to new locations.</p>
+    <strong>Step 1 — Gather and Observe Seeds</strong><br>
+    Collect 2-3 different seeds from your kitchen and place each type on its own paper plate. Look carefully at each seed before touching them. How are they different? Notice size, shape, color, and texture.
   </div>
 
   <div class="procedure-step">
-    <strong>Step 3 — What Did the Parent Plant Provide? (5 min)</strong><br>
-    For each seed, summarize: what did the parent plant give to its offspring <em>before</em> the seed left?<br>
-    Three categories: <strong>Protection</strong> (hard coats, bitter chemicals), <strong>Food</strong> (nutrients packed inside), <strong>Dispersal</strong> (ways to travel to a new place).
+    <strong>Step 2 — Seed Detective 🔍</strong><br>
+    For each seed, draw it on the left side of your paper. On the right side, draw the plant you predict will grow from it. Label each drawing with the seed name and plant name.
+    <ul style="margin-top:8px;">
+      <li>🍎 Apple seed grows into... an apple tree!</li>
+      <li>🌻 Sunflower seed grows into... a sunflower!</li>
+      <li>🫘 Dried bean grows into... a bean plant!</li>
+    </ul>
   </div>
 
   <div class="procedure-step">
-    <strong>Step 4 — Compare to Animal Parenting (5 min)</strong><br>
-    Ask: <em>"How is plant parenting different from animal parenting? How is it similar?"</em><br>
-    Both: offspring receive something from parents to help them survive.<br>
-    Different: plants can't actively care after the seed leaves; they prepare everything in advance.
+    <strong>Step 3 — Could It Grow Into Something Else?</strong><br>
+    Ask together: "If you plant a sunflower seed, could it ever grow into a rose? Why not?" Give the student time to reason through it. Then introduce the instructions idea: the seed only knows how to follow the sunflower recipe!
   </div>
 
   <div class="procedure-step">
-    <strong>Step 5 — Worksheet (10 min)</strong><br>
-    Complete the worksheet drawing and fill-in section.
+    <strong>Step 4 — The Instructions Inside</strong><br>
+    Introduce this idea: "Inside every seed is all the information it needs to make a new plant just like its parent. We call these instructions DNA, but you can think of them like a recipe. The seed always follows its own recipe."
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Seed Investigation (Magnifying Glass)</strong><br>
+    Look at each seed up close with a magnifying glass if available. Compare sizes and textures. Now carefully peel open a dried bean to see the tiny plant inside (the embryo). Look for the tiny root and leaf shapes. This is the baby plant!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Plant Your Seed! 🌱</strong><br>
+    Choose one seed and plant it in a small cup of soil. Water it lightly. Place it in a sunny spot. Record the date and your prediction in the seed journal on your worksheet. Check back in 2 weeks!
   </div>
 
   <h2>💬 Discussion Questions</h2>
 
   <div class="question-box">
-    <strong>🗣️ Talk about these together:</strong>
-    <ul>
-      <li>If you were a plant, which dispersal strategy would you choose? Why?</li>
-      <li>Why might it be good for seeds to land <em>far</em> from the parent plant? (Less competition for sunlight, water, and nutrients!)</li>
-      <li>What do you think is inside a bean or a peanut that helps the baby plant grow? (Stored food/nutrients — that's what we're eating when we eat those!)</li>
-    </ul>
-    <hr>
-    <strong>🌟 Big Question:</strong> <em>"A plant can't feed, protect, or teach its offspring the way an animal can. Is that a disadvantage?"</em>
-    <p class="discussion-hint">Not really — plants solved the problem differently. Instead of a few well-cared-for offspring, most plants produce thousands or millions of seeds. Most won't survive, but sheer numbers compensate. And plants do care in advance — packing nutrients into seeds (that's what we eat in a bean or nut!), building protective coats, and engineering dispersal mechanisms. Quality care versus quantity strategy — both approaches work!</p>
+    <strong>🗣️ Question 1:</strong> If you plant a sunflower seed, can you get a rose? Why not?
+    <p class="discussion-hint">No! The instructions inside the sunflower seed only know how to make a sunflower. The seed follows its recipe, and a sunflower recipe only makes sunflowers. It cannot follow a rose recipe because it does not have one!</p>
   </div>
 
-  <h2>🚀 Extensions</h2>
-  <div class="extension-box">
-    <ul>
-      <li>🌱 <strong>Seed Dissection:</strong> Open a bean (soak it in water overnight to soften) and find the tiny embryo plant inside. That's the offspring!</li>
-      <li>🌬️ <strong>Design a Parachute:</strong> Make a tiny parachute from tissue paper and a paper clip "seed." How far does it float compared to a bare paper clip?</li>
-      <li>🦔 <strong>Burr Collection:</strong> Go for a walk and collect whatever sticks to your socks or clothes. Each sticky thing is a seed dispersal strategy!</li>
-      <li>📚 <strong>Read Aloud:</strong> <em>"A Seed Is Sleepy"</em> by Dianna Hutts Aston — gorgeous and accurate.</li>
-    </ul>
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> What traits does a baby plant inherit from its parent plant?
+    <p class="discussion-hint">Leaf shape, flower color, height, the type of fruit it makes, the shape of its seeds. Everything about the plant comes from the instructions in the seed. The new plant is programmed to look like its parent before it even starts growing.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> How is a seed like an egg?
+    <p class="discussion-hint">Both contain a baby organism inside, protected by a shell or outer coat. Both have all the starting information and initial nutrition to begin growing. A seed even has a food supply inside (called the cotyledon) to feed the baby plant until it can make its own food from sunlight!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> Why might two sunflowers from the same parent plant look slightly different from each other?
+    <p class="discussion-hint">Just like human children from the same parents, plant offspring can have small variations. One might be a little taller, or have slightly different petal colors. This is what makes each living thing unique, and it is a normal part of inheritance.</p>
   </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
-    <ul>
-      <li><strong>Plant "parenting" is a metaphor:</strong> Plants don't have intentions or feelings. But the structures and strategies they've evolved serve the same functional purpose as parenting — increasing offspring survival. Use the word "parenting" with this caveat for older/curious students.</li>
-      <li><strong>Seeds as food connection:</strong> Everything we eat that is a seed (beans, nuts, grains, popcorn) is the nutrient store the parent plant packed for its offspring. This is a wonderful "aha" moment for kids.</li>
-      <li><strong>Assessment:</strong> Can the student name 3 types of plant "care" for offspring? Can they name one seed for each type?</li>
-    </ul>
+    <strong>Sourcing seeds from your pantry:</strong> Apple seeds (from a cut apple), dried kidney or pinto beans from the bag, sunflower seeds from a snack pack (raw, unroasted work best), or even popcorn kernels (a corn variety). Unroasted seeds are much more likely to germinate.
+    <br><br>
+    <strong>If seeds are unavailable:</strong> Have the student draw seeds and parent plants from memory or description. The observation steps can be done imaginatively: "Imagine you are holding a tiny sunflower seed. What do you notice?" The conceptual learning still happens.
+    <br><br>
+    <strong>Caring for the planted seed:</strong> Plant in a sunny window. Water when the top layer of soil feels dry (roughly every 2-3 days for a small cup). Beans sprout within 5-10 days. Sunflower seeds sprout in 7-14 days. Apple seeds take much longer and need cold stratification, so stick to beans and sunflower seeds for this activity.
+    <br><br>
+    <strong>Connecting to DNA for Grade 1:</strong> Use the "recipe" analogy consistently. You do not need to explain the chemistry. The key idea is: the instructions are inside the seed before it even touches soil, and those instructions were put there by the parent plant. That is inheritance.
+    <br><br>
+    <strong>The bean embryo dissection:</strong> Soak a dried bean in water for several hours or overnight before the lesson. When soft, it peels open easily to reveal the embryo inside. This is a genuinely magical moment for young students. Point out the two halves of the bean (cotyledons, the food supply) and the tiny plant tucked between them.
   </div>
 
   <!-- ====================== STUDENT WORKSHEET ====================== -->
   <div class="page-break">
-    <div class="worksheet-box">
-      <h2>📋 Student Worksheet — Lesson 5</h2>
-      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <div class="worksheet-header">🌱 Student Worksheet — Plant Parenting</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
-      <h3>Part 1: What Did the Parent Plant Give?</h3>
-      <p>For each seed, write or draw what the parent plant gave to help its offspring.</p>
+    <h3>Seed Detective! 🔍</h3>
+    <p style="font-size:10pt; color:#555;">For each seed, draw the seed AND the plant it will grow into. Then write your prediction!</p>
 
-      <table style="width:100%; border-collapse:collapse; margin:12px 0; font-size:10pt;">
-        <tr>
-          <th style="background:#2e7d32; color:white; padding:10px; width:20%;">Seed</th>
-          <th style="background:#2e7d32; color:white; padding:10px; width:40%;">What the parent gave</th>
-          <th style="background:#2e7d32; color:white; padding:10px; width:40%;">How it helps offspring survive</th>
-        </tr>
-        <tr>
-          <td style="border:1px solid #a5d6a7; padding:10px; text-align:center; font-size:22pt;">🥥</td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-        </tr>
-        <tr style="background:#e8f5e9;">
-          <td style="border:1px solid #a5d6a7; padding:10px; text-align:center; font-size:22pt;">🌰</td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-        </tr>
-        <tr>
-          <td style="border:1px solid #a5d6a7; padding:10px; text-align:center; font-size:22pt;">🍎</td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-        </tr>
-        <tr style="background:#e8f5e9;">
-          <td style="border:1px solid #a5d6a7; padding:10px; text-align:center; font-size:22pt;">🌼</td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-          <td style="border:1px solid #a5d6a7; padding:10px; height:55px;"></td>
-        </tr>
-      </table>
-
-      <h3>Part 2: Design Your Own Seed!</h3>
-      <p>Imagine you are a parent plant. Design a seed that will help your offspring survive. Draw your seed and label its special features!</p>
-      <div style="border:2px solid #a5d6a7; border-radius:8px; height:200px; margin:10px 0; padding:10px;">
-        <span style="font-size:9pt; color:#aaa;">Draw and label your seed design here:</span>
+    <div style="margin: 10px 0;">
+      <div class="seed-detective-row header">
+        <div>Seed Name</div>
+        <div>Draw the Seed</div>
+        <div>Draw the Parent Plant</div>
+        <div>What will grow?</div>
       </div>
+      <div class="seed-detective-row" style="margin-top:8px;">
+        <div>🍎 Apple Seed</div>
+        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
+        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
+        <div class="seed-draw-box"><span class="draw-label">Write/Draw</span></div>
+      </div>
+      <div class="seed-detective-row" style="margin-top:8px;">
+        <div>🌻 Sunflower Seed</div>
+        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
+        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
+        <div class="seed-draw-box"><span class="draw-label">Write/Draw</span></div>
+      </div>
+      <div class="seed-detective-row" style="margin-top:8px;">
+        <div>🫘 Dried Bean</div>
+        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
+        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
+        <div class="seed-draw-box"><span class="draw-label">Write/Draw</span></div>
+      </div>
+    </div>
 
-      <p>My seed is designed to:</p>
-      <div style="border-bottom:1px solid #bbb; height:30px; margin:5px 0;"></div>
-      <div style="border-bottom:1px solid #bbb; height:30px; margin:5px 0;"></div>
+    <div class="fill-blank">
+      A <span class="blank-line" style="min-width:120px;"></span> seed will grow into a <span class="blank-line" style="min-width:120px;"></span>.
+    </div>
+    <div class="fill-blank">
+      Seeds carry <span class="blank-line"></span> for making a new plant.
+    </div>
+
+    <div class="journal-box">
+      <h3>🌱 My Planted Seed Journal</h3>
+      <p style="font-size:10pt; color:#555;">Record what happens to your planted seed over the next two weeks!</p>
+      <div style="font-size:10pt; margin-bottom:4px;"><strong>Date planted:</strong> <span style="border-bottom:1px solid #aaa; display:inline-block; min-width:150px;">&nbsp;</span></div>
+      <div style="font-size:10pt; margin-bottom:4px;"><strong>Type of seed:</strong> <span style="border-bottom:1px solid #aaa; display:inline-block; min-width:150px;">&nbsp;</span></div>
+      <div style="font-size:10pt; margin-bottom:8px;"><strong>My prediction (what will happen):</strong></div>
+      <div class="journal-write-line"></div>
+      <div class="journal-write-line"></div>
+      <div style="font-size:10pt; margin:10px 0 4px;"><strong>2 weeks later (date: _____________), what do I see?</strong></div>
+      <div class="journal-write-line"></div>
+      <div class="journal-write-line"></div>
     </div>
   </div>
 
-  <!-- ====================== ANSWER KEY ====================== -->
-  <div class="page-break">
-    <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
-
-      <h3>Part 1: Seed Care Chart — Sample Answers</h3>
-      <table style="width:100%; border-collapse:collapse; font-size:10pt;">
-        <tr>
-          <th style="background:#757575; color:white; padding:8px; width:15%;">Seed</th>
-          <th style="background:#757575; color:white; padding:8px; width:40%;">What the parent gave</th>
-          <th style="background:#757575; color:white; padding:8px; width:45%;">How it helps offspring survive</th>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ccc; padding:8px; text-align:center;">🥥 Coconut</td>
-          <td style="border:1px solid #ccc; padding:8px;">Hard shell, liquid food inside, ability to float</td>
-          <td style="border:1px solid #ccc; padding:8px;">Protection from crushing; nutrients to grow; can travel to new islands</td>
-        </tr>
-        <tr style="background:#f5f5f5;">
-          <td style="border:1px solid #ccc; padding:8px; text-align:center;">🌰 Acorn</td>
-          <td style="border:1px solid #ccc; padding:8px;">Hard shell, bitter tannins, starchy food inside</td>
-          <td style="border:1px solid #ccc; padding:8px;">Deters some predators; feeds the seedling before it can make its own food</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ccc; padding:8px; text-align:center;">🍎 Apple</td>
-          <td style="border:1px solid #ccc; padding:8px;">Sweet, edible fruit; tough seed coat</td>
-          <td style="border:1px solid #ccc; padding:8px;">Animals carry seeds far away; seed coat protects seed through digestion</td>
-        </tr>
-        <tr style="background:#f5f5f5;">
-          <td style="border:1px solid #ccc; padding:8px; text-align:center;">🌼 Dandelion</td>
-          <td style="border:1px solid #ccc; padding:8px;">Feathery parachute structure</td>
-          <td style="border:1px solid #ccc; padding:8px;">Allows seed to float on wind to new location far from parent</td>
-        </tr>
-      </table>
-
-      <h3>Three Types of Plant "Care"</h3>
-      <ul>
-        <li><strong>Protection:</strong> Hard shells, bitter chemicals (acorn tannins)</li>
-        <li><strong>Food/Nutrients:</strong> Starch, oils, or liquids packed inside the seed</li>
-        <li><strong>Dispersal:</strong> Strategies to move seeds away from parent (wind, water, animals)</li>
-      </ul>
-
-      <h3>✅ What Success Looks Like</h3>
-      <ul>
-        <li>Child can name at least 3 types of plant "care" for offspring.</li>
-        <li>Child can name one seed example for each type of care.</li>
-        <li>Child can explain one key difference between plant and animal parenting.</li>
-      </ul>
-    </div>
-  </div>
-
-<!-- Remarq Feedback Layer -->
-<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_NFqqPItafdk" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+  <script src="http://192.168.5.204:3334/feedback-layer.js"></script>
 </body>
 </html>

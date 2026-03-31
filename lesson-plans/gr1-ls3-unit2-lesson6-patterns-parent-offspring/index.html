@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patterns of Parent and Offspring Behavior — Grade 1, Unit 2, Lesson 6</title>
+  <title>Patterns of Parent and Offspring Behavior — Parents and Offspring Unit, Lesson 6</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -63,8 +63,16 @@
       text-align: center;
       margin: 16px 0;
     }
-    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
-    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
     .materials-box {
       background: #fff8e1;
       border: 2px solid #ffcc80;
@@ -82,7 +90,7 @@
     }
     .procedure-step strong { color: #1b5e20; }
     .question-box {
-      background: #f1f8e9;
+      background: #e8f5e9;
       border-left: 5px solid #00B894;
       padding: 10px 15px;
       margin: 10px 0;
@@ -91,9 +99,8 @@
     .discussion-hint {
       font-style: italic;
       color: #555;
-      margin-top: 8px;
-      padding-left: 10px;
-      border-left: 3px solid #a5d6a7;
+      margin-top: 6px;
+      font-size: 10pt;
     }
     .tip-box {
       background: #e0f7fa;
@@ -112,13 +119,6 @@
       font-size: 10pt;
     }
     .standards-box strong { color: #7b1fa2; }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
     .teacher-note {
       background: #f5f5f5;
       border: 2px dashed #999;
@@ -129,415 +129,338 @@
       color: #555;
     }
     .teacher-note strong { color: #333; }
-    .unit-wrap-up {
-      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
-      color: white;
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin: 24px 0;
-      box-shadow: 0 4px 16px rgba(46,125,50,0.25);
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0;
     }
-    .unit-wrap-up h2 {
-      background: transparent;
-      color: white;
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      padding-bottom: 10px;
-      font-size: 18pt;
+    .vocab-card {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
     }
-    .unit-wrap-up p { color: rgba(255,255,255,0.92); line-height: 1.6; }
-    .unit-wrap-up ul { color: rgba(255,255,255,0.92); }
-    .unit-wrap-up .lesson-chip {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 9pt;
-      margin: 3px;
+    .vocab-card .vocab-word {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 12pt;
     }
-    .field-guide-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
+    .vocab-card .vocab-def {
       font-size: 10pt;
+      color: #333;
+      margin-top: 4px;
     }
-    .field-guide-table th {
-      background: #2e7d32;
+    .worksheet-header {
+      background: #1b5e20;
       color: white;
-      padding: 10px 8px;
-      border: 1px solid #1b5e20;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
       text-align: center;
     }
-    .field-guide-table td {
-      border: 1px solid #a5d6a7;
-      padding: 8px;
-      vertical-align: top;
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
     }
-    .field-guide-table tr:nth-child(even) td { background: #e8f5e9; }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
       border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
     }
-    .answer-key h2 { background: #757575; text-align: center; }
-    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
-    .worksheet-box {
-      border: 3px solid #2e7d32;
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 200px;
+      margin: 0 4px;
+    }
+    .ws-matching {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+      align-items: flex-start;
+    }
+    .ws-matching-col {
+      flex: 1;
+    }
+    .ws-matching-col h3 { text-align: center; }
+    .match-word {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+    .match-def {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+      color: #555;
+    }
+    .draw-box {
+      border: 3px dashed #2e7d32;
       border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
+      min-height: 200px;
+      margin: 12px 0;
+      padding: 10px;
     }
-    .worksheet-box h2 { background: #2e7d32; }
+    .draw-box .draw-label {
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .write-line {
+      border-bottom: 2px solid #a5d6a7;
+      margin: 10px 0;
+      min-height: 28px;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
     @media print {
       body { padding: 0.25in; font-size: 10pt; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .unit-wrap-up {
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card {
         break-inside: avoid; page-break-inside: avoid;
       }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
     }
-    .page-break { page-break-before: always; margin-top: 20px; }
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
-<body data-document-id="doc_ZxNWllzeQ3w">
+<body data-document-id="doc_ZxNWllzeQ3w" data-doc-id="doc_ZxNWllzeQ3w">
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
-  <h1>🔍 Patterns of Parent and Offspring Behavior 🔍</h1>
-  <p class="subtitle">Life Science — Parents &amp; Offspring | Unit 2, Lesson 6 of 6</p>
+  <h1>🌿🐾📖 Patterns of Parent and Offspring Behavior</h1>
+  <p class="subtitle">Parents and Offspring Unit, Lesson 6</p>
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 1st Grade</span>
     <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science — Parents &amp; Offspring</span>
-    <span>🏠 <strong>Materials:</strong> Household only</span>
+    <span>🔬 <strong>Subject:</strong> Life Science</span>
+    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🐦 🐟 🐘 🦋</div>
-    <div class="caption">Few offspring + intensive care, or many offspring + no care — both strategies work! Let's find the pattern.</div>
+    <div class="emoji-hero">🌿🐾📖</div>
+    <div class="caption">Across every living thing on Earth, the same pattern repeats: offspring resemble their parents, but are never exactly the same.</div>
   </div>
 
   <div class="standards-box">
     <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Use observations to describe patterns of what plants and animals (including humans) do to survive and how the behavior of parents helps offspring survive.
+    <strong>1-LS3-1</strong> Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>identify</em> patterns across multiple species in how parental behavior increases offspring survival, and <em>summarize</em> what they've learned across the unit.</p>
-
-  <h2>🔬 The Big Idea</h2>
-  <p>Across all of nature, there is a pattern: animals that have <em>few</em> offspring tend to provide <em>a lot</em> of care. Animals that have <em>many</em> offspring tend to provide <em>little or no</em> care. Both strategies result in enough offspring surviving to keep the species going. Scientists call this the <strong>quality vs. quantity tradeoff.</strong></p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong> pattern, offspring, parental care, survival, tradeoff, species
-  </div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Identify <strong>patterns</strong> across multiple species showing that offspring resemble their parents in important ways.</li>
+    <li>Synthesize unit concepts about inheritance, variation, protection, and learning to describe what all parents and offspring have in common.</li>
+  </ul>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
-    <h3>🏠 Household Items to Gather</h3>
+    <h3>🏠 What You Need</h3>
     <ul>
-      <li>Paper and pencil/crayons for the field guide</li>
-      <li>Printed worksheet pages (or create your own field guide pages)</li>
-      <li>Optional: colored markers to make the field guide look great</li>
+      <li>Paper</li>
+      <li>Pencil</li>
+      <li>Crayons</li>
     </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No materials to buy! Everything you need is already at home.</em></p>
   </div>
 
-  <h2>🔬 Let's Get Started</h2>
-
-  <div class="procedure-step">
-    <strong>Step 1 — Warm-Up: Big Family or Small Family? (5 min)</strong><br>
-    Ask: <em>"A fish can lay 1,000 eggs at once. An elephant has one baby every 4–5 years. Which one do you think takes better care of its baby? Why?"</em><br>
-    Take guesses, then explain that you're going to look at the pattern across many animals.
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card">
+      <div class="vocab-word">🔁 Pattern</div>
+      <div class="vocab-def">Something that repeats or happens in the same way across different examples.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🎁 Inherit</div>
+      <div class="vocab-def">To receive traits from a parent.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🌈 Variation</div>
+      <div class="vocab-def">Small differences even between closely related organisms.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🐣 Offspring</div>
+      <div class="vocab-def">The child or young of a parent.</div>
+    </div>
   </div>
 
-  <div class="procedure-step">
-    <strong>Step 2 — Build the Field Guide (20 min)</strong><br>
-    Complete the field guide on the worksheet for 6 different types of organisms.
+  <h2>📚 Background (Read Aloud to Student)</h2>
+  <p>One of the most important things scientists do is look for <strong>patterns</strong>. A pattern is something that repeats, something that shows up again and again in different places. Over this unit, we have looked at humans, animals, and plants. And everywhere we looked, we found the same pattern: <strong>offspring resemble their parents, but they are never exactly identical.</strong> That is not a coincidence. It is one of the most fundamental patterns in all of life.</p>
 
-    <table class="field-guide-table" style="margin-top:12px;">
-      <tr>
-        <th>Animal</th>
-        <th>How many offspring at once?</th>
-        <th>Do parents care for young? How?</th>
-        <th>How long does care last?</th>
-      </tr>
-      <tr>
-        <td>🐦 <strong>Robin</strong> (bird)</td>
-        <td>3–5 eggs</td>
-        <td>Yes — both parents feed chicks, keep them warm, defend the nest</td>
-        <td>About 2 weeks until chicks can fly</td>
-      </tr>
-      <tr>
-        <td>🐟 <strong>Salmon</strong> (fish)</td>
-        <td>2,000–10,000 eggs</td>
-        <td>Mother digs a gravel nest and covers eggs. Pacific salmon die after spawning. No ongoing care of hatched young.</td>
-        <td>Near zero — eggs and young are on their own</td>
-      </tr>
-      <tr>
-        <td>🐘 <strong>Elephant</strong> (mammal)</td>
-        <td>1 calf</td>
-        <td>Yes — whole herd helps, mother nurses for years, teaches behaviors</td>
-        <td>Years — calves stay with herd for life</td>
-      </tr>
-      <tr>
-        <td>🐊 <strong>Crocodile</strong> (reptile)</td>
-        <td>30–60 eggs</td>
-        <td>Yes — guards nest, carries hatchlings to water in mouth, watches over young</td>
-        <td>Several months — unusually long for a reptile</td>
-      </tr>
-      <tr>
-        <td>🦋 <strong>Butterfly</strong> (insect)</td>
-        <td>Dozens to hundreds of eggs</td>
-        <td>Minimal — mother lays eggs on plants that larvae will eat, then leaves</td>
-        <td>Near zero after laying</td>
-      </tr>
-      <tr>
-        <td>🌳 <strong>Oak Tree</strong> (plant)</td>
-        <td>Thousands of acorns per year</td>
-        <td>No active care — protection and nutrients packed into seed before it leaves</td>
-        <td>Care is built in at seed-making time; zero after dispersal</td>
-      </tr>
-    </table>
+  <p>Let us think about what we have learned. Traits are <strong>inherited</strong>, meaning offspring receive instructions from their parents for what to look like and how to grow. Basic needs like food, water, and shelter are shared across species. Parents protect their young in many different ways, from a bear guarding her cubs to a bird building a nest. Some behaviors are learned, like a dolphin calf watching its mother fish, and some are instincts, like a baby sea turtle running to the ocean the moment it hatches. Even plants pass on instructions: seeds carry the blueprint for the next generation, and each new plant will look like its parent while still being its own unique individual.</p>
+
+  <p>Now that we have seen this pattern across so many different living things, we can say something powerful: <strong>inheritance is universal.</strong> Whether you are a towering oak tree, a tiny sparrow, or a human child, you carry something forward from the parent that came before you. That is what makes you part of the great, connected story of life on Earth.</p>
+
+  <h2>🔬 Procedure</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Review Together</strong><br>
+    Begin by asking: "What have we learned about parents and offspring?" Let the student recall the main ideas from the unit. Encourage them to think back across all the lessons. What do they remember about traits, basic needs, protection, learned behaviors, and plants?
   </div>
 
   <div class="procedure-step">
-    <strong>Step 3 — Spot the Pattern (10 min)</strong><br>
-    Look at your completed field guide. Ask: <em>"What do you notice? Is there a pattern?"</em><br>
-    Guide students to discover:
-    <ul>
-      <li>Animals with <em>few</em> offspring → <em>lots</em> of parental care</li>
-      <li>Animals with <em>many</em> offspring → <em>little or no</em> parental care</li>
-      <li>Both strategies result in some offspring surviving</li>
-    </ul>
-    Introduce the terms: <em>quality strategy</em> (few, well-cared-for young) vs. <em>quantity strategy</em> (many, independent young).
+    <strong>Step 2 — Make a "Patterns Book"</strong><br>
+    Fold 2 sheets of paper in half together to create a mini book. You will have a cover plus 4 content pages. Crease the fold firmly so the book holds its shape.
   </div>
 
   <div class="procedure-step">
-    <strong>Step 4 — Complete the Worksheet (5 min)</strong><br>
-    Fill in the pattern summary sentence and the reflection questions.
+    <strong>Step 3 — Cover Page</strong><br>
+    On the front cover, write the title: <em>"Parents and Offspring: A Patterns Book."</em> Add the student's name and today's date. Decorate the cover with drawings of a plant, an animal, and a human family.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Page 1: Traits I Inherited</strong><br>
+    On Page 1, draw a picture of yourself. Label at least one trait that came from each parent (for example: "I got my curly hair from Mom" and "I got my brown eyes from Dad"). If the student is unsure, they can write what they think or what a family member has told them.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Page 2: An Animal Parent Protecting Its Baby</strong><br>
+    On Page 2, draw an animal parent with its offspring. Label the animal and describe (in words or pictures) how the parent protects the young. Examples: a mama bear, a penguin keeping its chick warm, a dog keeping her puppies close.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Page 3: Learned vs. Born</strong><br>
+    On Page 3, draw a line down the middle to split the page in half. On the left side, write or draw something you <strong>learned</strong> (from a person or by practicing). On the right side, write or draw something you were <strong>born knowing how to do</strong> (like breathing or crying when hungry).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Page 4: A Plant and Its Seed</strong><br>
+    On Page 4, draw a plant and its seed side by side. Write or complete this sentence: "The seed carries <span style="border-bottom: 1px solid #555; display: inline-block; min-width: 100px;">&nbsp;</span> to make a new plant." (The answer: instructions, or a blueprint for what the plant will look like.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 8 — Share the Book and Ask the Big Question</strong><br>
+    Have the student share their completed book and talk through each page. End with the big question: <em>"What is one thing ALL parents and offspring have in common, whether plant, animal, or human?"</em> Celebrate their thinking. There is no single right answer here (but great ones include: offspring resemble their parents, information is passed on, every offspring is unique).
   </div>
 
   <h2>💬 Discussion Questions</h2>
 
   <div class="question-box">
-    <strong>🗣️ Talk about these together:</strong>
-    <ul>
-      <li>Which strategy do you think is "better" — few babies with lots of care, or many babies with no care? (Trick question: both work!)</li>
-      <li>Why do you think elephants only have one calf at a time? (Raising a calf requires enormous energy — raising two would be nearly impossible.)</li>
-      <li>If a salmon could have only 10 eggs, what would need to change for the babies to survive? (Parents would need to provide a lot more care!)</li>
-      <li>Humans have few children and a very long childhood. Which strategy is that?</li>
-    </ul>
-    <hr>
-    <strong>🌟 Big Question:</strong> <em>"Why do animals with lots of offspring not take care of them? Isn't that bad parenting?"</em>
-    <p class="discussion-hint">It's a different strategy, not bad parenting! When you produce thousands of offspring, the odds are that some will survive by chance — finding food, avoiding predators, landing in the right place. The "investment" happens in making the eggs, not in raising young. Animals that evolved this way had enough offspring survive to pass the strategy on. Evolution doesn't judge strategies by our human standards — it only keeps what works!</p>
+    <strong>🗣️ Question 1:</strong> What is one thing ALL parents and offspring have in common, whether plant, animal, or human?
+    <p class="discussion-hint">Offspring always resemble their parents in some way. The instructions for what an organism looks like and how it behaves are passed from parent to offspring. This is the pattern of inheritance, and it shows up in every living thing we studied.</p>
   </div>
 
-  <h2>🚀 Extensions</h2>
-  <div class="extension-box">
-    <ul>
-      <li>📊 <strong>Bar Graph:</strong> Make a bar graph of "number of offspring" for each animal in your field guide. The pattern becomes very visible visually!</li>
-      <li>🔍 <strong>Add More Entries:</strong> Research 2 more animals and add them to your field guide. Does the pattern hold?</li>
-      <li>📚 <strong>Read Aloud:</strong> <em>"National Geographic Readers: Animal Families"</em> for additional examples.</li>
-    </ul>
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> We saw this pattern in humans, animals, AND plants. Why do you think this same pattern shows up in so many different living things?
+    <p class="discussion-hint">All living things pass on information to their offspring. This is a fundamental part of what it means to be alive and reproduce. Life has worked this way for billions of years. Every living thing we know of follows this same rule: something from the parent is passed to the next generation.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Can offspring be exactly identical to their parent?
+    <p class="discussion-hint">Usually not. Even identical twins have tiny differences. Variation is normal and healthy. It is what allows species to adapt over time. Offspring inherit the same general pattern from their parents, but small differences always appear.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> Now that you know what inherited traits are, what is one trait you would want to pass on to your own children someday?
+    <p class="discussion-hint">Open-ended and fun! This encourages personal reflection on the concept of inheritance. There are no wrong answers. Celebrate whatever the student shares and connect it back to the idea that parents pass things on to their offspring.</p>
   </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
+    <strong>How to fold the mini book:</strong> Stack two sheets of paper and fold them together in half (hamburger fold). You will get a booklet with 8 pages total. The front and back covers take 2 pages, leaving 6 inner pages. For this lesson, students use 4 content pages (Pages 1 through 4). The remaining pages can be left blank or used for extra drawings.
+    <br><br>
+    <strong>Using the book as a portfolio piece:</strong> The Patterns Book makes an excellent end-of-unit assessment. Each page corresponds to a major concept from the unit: inherited traits (Lesson 1), animal protection (Lesson 3), learned vs. born behaviors (Lesson 4), and plant seeds (Lesson 5). Look at each page to assess whether the student can recall and apply the key idea from that lesson.
+    <br><br>
+    <strong>Suggested discussion prompts for each page:</strong>
     <ul>
-      <li><strong>The crocodile exception:</strong> Crocodiles are unusually attentive for reptiles — they guard nests and carry hatchlings. But they still don't provide ongoing feeding. They sit in the middle of the spectrum.</li>
-      <li><strong>Don't say "better":</strong> Avoid implying that lots of parental care is "better." Evolution has produced both strategies because both work. This is an important scientific habit of mind.</li>
-      <li><strong>Note on lesson structure:</strong> The field guide table in Step 2 shows sample answers for your reference as teacher. The blank version for students is on the worksheet page — print just those pages for your student.</li>
-      <li><strong>Unit wrap-up:</strong> This is a great opportunity to review Lessons 1–5 and connect all the ideas: traits are inherited, young need parents, parents protect and teach, plants care in advance, and the big pattern is quality vs. quantity.</li>
-      <li><strong>Assessment:</strong> Can the student describe the quality vs. quantity pattern? Can they give one example of each? Can they name what they learned across the unit?</li>
+      <li><em>Page 1 (Traits):</em> "Which trait do you think you got from which parent? How do you know?"</li>
+      <li><em>Page 2 (Protection):</em> "Why does the parent animal protect its baby? What would happen if it did not?"</li>
+      <li><em>Page 3 (Learned vs. Born):</em> "How did you learn that skill? Who taught you? Do you think a baby animal had to learn the same thing?"</li>
+      <li><em>Page 4 (Plant and Seed):</em> "If you planted this seed in soil, what do you think would grow? Why?"</li>
     </ul>
-  </div>
-
-  <!-- UNIT WRAP-UP BOX -->
-  <div class="unit-wrap-up">
-    <h2>🎉 Unit 2 Wrap-Up — You Did It!</h2>
-    <p>You've completed all 6 lessons in <strong>Life Science Unit 2: Parents &amp; Offspring!</strong> Here's what you discovered:</p>
-    <ul>
-      <li><span class="lesson-chip">Lesson 1</span> Offspring inherit traits from parents — shape, color, structure.</li>
-      <li><span class="lesson-chip">Lesson 2</span> Baby animals need more parental help than adults — food, warmth, protection.</li>
-      <li><span class="lesson-chip">Lesson 3</span> Parents protect offspring in amazing ways: carrying, pouch, sentinel watch, feeding.</li>
-      <li><span class="lesson-chip">Lesson 4</span> Some behaviors are instincts (born knowing); others are learned from parents.</li>
-      <li><span class="lesson-chip">Lesson 5</span> Plants "care" for offspring by building protection, food, and dispersal into seeds.</li>
-      <li><span class="lesson-chip">Lesson 6</span> The big pattern: few offspring = lots of care; many offspring = little care. Both strategies work!</li>
-    </ul>
-    <p><strong>The Big Idea across the whole unit:</strong> Parent behaviors that help offspring survive are passed on through generations — because when parents successfully raise young, those young grow up to become parents themselves. That's how life keeps going.</p>
+    <strong>Connections to future science units:</strong> This lesson lays the groundwork for Grade 2 life cycles (plants and animals complete cycles of growth, reproduction, and offspring), and for later heredity concepts in upper elementary. The vocabulary introduced here (pattern, inherit, variation, offspring) will appear again in more formal genetics study.
+    <br><br>
+    <strong>This is the unit capstone:</strong> Lesson 6 is designed as a synthesis and wrap-up. Rather than introducing new content, it gives students a chance to make connections across everything they have learned. The goal is for the student to recognize the overarching pattern: inheritance is universal. Celebrate what they remember and what they notice on their own.
   </div>
 
   <!-- ====================== STUDENT WORKSHEET ====================== -->
   <div class="page-break">
-    <div class="worksheet-box">
-      <h2>📋 Student Worksheet — Lesson 6: My Parent Behavior Field Guide</h2>
-      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <div class="worksheet-header">📖 Student Worksheet — Patterns of Parent and Offspring</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
-      <h3>Field Guide: Parent and Offspring Patterns</h3>
-      <p>Fill in the chart for each animal.</p>
+    <h3>Unit Wrap-Up: Fill in the Blanks</h3>
+    <p style="font-size:10pt; color:#555;">Use the word bank to complete each sentence. Word bank: <strong>inherit, pattern, variation, offspring, parents</strong></p>
 
-      <table class="field-guide-table">
-        <tr>
-          <th style="width:18%;">Animal</th>
-          <th style="width:22%;">How many offspring at once?</th>
-          <th style="width:35%;">Do parents care for young? How?</th>
-          <th style="width:25%;">How long does care last?</th>
-        </tr>
-        <tr>
-          <td style="height:60px; font-size:18pt; text-align:center;">🐦<br><span style="font-size:8pt;">Bird</span></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="height:60px; font-size:18pt; text-align:center;">🐟<br><span style="font-size:8pt;">Fish</span></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="height:60px; font-size:18pt; text-align:center;">🐘<br><span style="font-size:8pt;">Mammal</span></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="height:60px; font-size:18pt; text-align:center;">🐊<br><span style="font-size:8pt;">Reptile</span></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="height:60px; font-size:18pt; text-align:center;">🦋<br><span style="font-size:8pt;">Insect</span></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="height:60px; font-size:18pt; text-align:center;">🌳<br><span style="font-size:8pt;">Plant</span></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-      </table>
-
-      <h3>The Pattern I Found</h3>
-      <p>Animals with <em>few</em> offspring tend to provide <strong>____________</strong> (more / less) parental care.</p>
-      <p>Animals with <em>many</em> offspring tend to provide <strong>____________</strong> (more / less) parental care.</p>
-
-      <h3>My Favorite Discovery from This Unit</h3>
-      <p>The most surprising thing I learned was:</p>
-      <div style="border-bottom:1px solid #bbb; height:30px; margin:5px 0;"></div>
-      <div style="border-bottom:1px solid #bbb; height:30px; margin:5px 0;"></div>
+    <div class="fill-blank">
+      1. A <span class="blank-line"></span> is something that repeats in the same way across many different examples.
     </div>
+
+    <div class="fill-blank">
+      2. Young animals and plants are called <span class="blank-line"></span>.
+    </div>
+
+    <div class="fill-blank">
+      3. Offspring <span class="blank-line"></span> traits from their parents, which means they receive them like a gift.
+    </div>
+
+    <div class="fill-blank">
+      4. Small differences between parents and their young are called <span class="blank-line"></span>.
+    </div>
+
+    <div class="fill-blank">
+      5. Offspring always look similar to their <span class="blank-line"></span>, but never exactly the same.
+    </div>
+
+    <h3>Matching: Word to Definition</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line from each word on the left to its definition on the right.</p>
+
+    <div class="ws-matching">
+      <div class="ws-matching-col">
+        <div class="match-word">trait</div>
+        <div class="match-word">offspring</div>
+        <div class="match-word">instinct</div>
+        <div class="match-word">seed</div>
+        <div class="match-word">variation</div>
+      </div>
+      <div class="ws-matching-col">
+        <div class="match-def">a behavior an animal is born knowing how to do</div>
+        <div class="match-def">small differences between related organisms</div>
+        <div class="match-def">an observable feature like eye color or leaf shape</div>
+        <div class="match-def">the young or child of a parent</div>
+        <div class="match-def">a tiny package that carries instructions for a new plant</div>
+      </div>
+    </div>
+
+    <h3>My Favorite Thing I Learned</h3>
+    <p style="font-size:10pt; color:#555;">Draw your favorite thing you learned in this unit in the box below.</p>
+
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw here...</div>
+      <div style="height: 150px;"></div>
+    </div>
+
+    <p style="font-size:10pt; color:#555; margin-top: 8px;">Write one sentence about your drawing:</p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
   </div>
 
-  <!-- ====================== ANSWER KEY ====================== -->
-  <div class="page-break">
-    <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
-
-      <h3>Field Guide — Sample Answers</h3>
-      <table style="width:100%; border-collapse:collapse; font-size:10pt;">
-        <tr>
-          <th style="background:#757575; color:white; padding:8px;">Animal</th>
-          <th style="background:#757575; color:white; padding:8px;">How many offspring?</th>
-          <th style="background:#757575; color:white; padding:8px;">How parents care</th>
-          <th style="background:#757575; color:white; padding:8px;">How long</th>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ccc; padding:8px;">🐦 Robin (Bird)</td>
-          <td style="border:1px solid #ccc; padding:8px;">3–5 eggs</td>
-          <td style="border:1px solid #ccc; padding:8px;">Both parents feed chicks, keep warm, defend nest</td>
-          <td style="border:1px solid #ccc; padding:8px;">~2 weeks</td>
-        </tr>
-        <tr style="background:#f5f5f5;">
-          <td style="border:1px solid #ccc; padding:8px;">🐟 Salmon (Fish)</td>
-          <td style="border:1px solid #ccc; padding:8px;">2,000–10,000 eggs</td>
-          <td style="border:1px solid #ccc; padding:8px;">Mother digs gravel nest, covers eggs; Pacific salmon die after spawning — no ongoing care of young</td>
-          <td style="border:1px solid #ccc; padding:8px;">Near zero</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ccc; padding:8px;">🐘 Elephant (Mammal)</td>
-          <td style="border:1px solid #ccc; padding:8px;">1 calf every 4–5 years</td>
-          <td style="border:1px solid #ccc; padding:8px;">Nursing, teaching, whole herd protection</td>
-          <td style="border:1px solid #ccc; padding:8px;">Years (calf stays with herd)</td>
-        </tr>
-        <tr style="background:#f5f5f5;">
-          <td style="border:1px solid #ccc; padding:8px;">🐊 Crocodile (Reptile)</td>
-          <td style="border:1px solid #ccc; padding:8px;">30–60 eggs</td>
-          <td style="border:1px solid #ccc; padding:8px;">Guards nest, carries hatchlings to water</td>
-          <td style="border:1px solid #ccc; padding:8px;">Several months</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ccc; padding:8px;">🦋 Butterfly (Insect)</td>
-          <td style="border:1px solid #ccc; padding:8px;">Dozens to hundreds</td>
-          <td style="border:1px solid #ccc; padding:8px;">Lays eggs on right food plants; then leaves</td>
-          <td style="border:1px solid #ccc; padding:8px;">Near zero</td>
-        </tr>
-        <tr style="background:#f5f5f5;">
-          <td style="border:1px solid #ccc; padding:8px;">🌳 Oak Tree (Plant)</td>
-          <td style="border:1px solid #ccc; padding:8px;">Thousands of acorns/year</td>
-          <td style="border:1px solid #ccc; padding:8px;">Protection and nutrients built into acorn</td>
-          <td style="border:1px solid #ccc; padding:8px;">Zero after dispersal</td>
-        </tr>
-      </table>
-
-      <h3>Pattern Answers</h3>
-      <ul>
-        <li>Animals with <em>few</em> offspring tend to provide <strong>more</strong> parental care.</li>
-        <li>Animals with <em>many</em> offspring tend to provide <strong>less</strong> parental care.</li>
-      </ul>
-
-      <h3>✅ What Success Looks Like</h3>
-      <ul>
-        <li>Child correctly identifies the quality vs. quantity pattern.</li>
-        <li>Child can give one example of each strategy.</li>
-        <li>Child can name at least 3 things they learned across the unit.</li>
-      </ul>
-
-      <h3>🏆 Unit 2 Completion Checklist</h3>
-      <ul>
-        <li>☐ Lesson 1: Can describe inherited traits with examples</li>
-        <li>☐ Lesson 2: Can compare what baby vs. adult animals need</li>
-        <li>☐ Lesson 3: Can name 3 ways parents protect offspring</li>
-        <li>☐ Lesson 4: Can sort instincts vs. learned behaviors</li>
-        <li>☐ Lesson 5: Can explain 3 types of plant "care" for seeds</li>
-        <li>☐ Lesson 6: Can describe the quality vs. quantity pattern</li>
-      </ul>
-    </div>
-  </div>
-
-<div style="background: linear-gradient(135deg, #2e7d32, #388e3c); border-radius: 14px; padding: 22px 26px; margin: 28px 0; text-align: center; color: white; box-shadow: 0 4px 12px rgba(46,125,50,0.3);">
-  <div style="font-size: 2rem; margin-bottom: 8px;">🎓 Unit 2 Complete!</div>
-  <p style="font-size: 1.05rem; margin: 0 0 16px 0; opacity: 0.9;">Ready to test what you know about Parents &amp; Offspring?</p>
-  <a href="gr1-ls3-unit2-quiz.html" style="display: inline-block; background: white; color: #2e7d32; font-weight: 700; font-size: 1.1rem; padding: 12px 28px; border-radius: 10px; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">📝 Take the Unit 2 Quiz →</a>
-</div>
-
-<!-- Remarq Feedback Layer -->
-<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_ZxNWllzeQ3w" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+  <script src="http://192.168.5.204:3334/feedback-layer.js"></script>
 </body>
 </html>

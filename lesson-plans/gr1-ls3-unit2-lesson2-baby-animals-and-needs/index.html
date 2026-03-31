@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby Animals and Their Needs — Grade 1, Unit 2, Lesson 2</title>
+  <title>Baby Animals and Their Needs — Parents and Offspring Unit, Lesson 2</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -63,8 +63,16 @@
       text-align: center;
       margin: 16px 0;
     }
-    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
-    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
     .materials-box {
       background: #fff8e1;
       border: 2px solid #ffcc80;
@@ -82,7 +90,7 @@
     }
     .procedure-step strong { color: #1b5e20; }
     .question-box {
-      background: #f1f8e9;
+      background: #e8f5e9;
       border-left: 5px solid #00B894;
       padding: 10px 15px;
       margin: 10px 0;
@@ -91,9 +99,8 @@
     .discussion-hint {
       font-style: italic;
       color: #555;
-      margin-top: 8px;
-      padding-left: 10px;
-      border-left: 3px solid #a5d6a7;
+      margin-top: 6px;
+      font-size: 10pt;
     }
     .tip-box {
       background: #e0f7fa;
@@ -112,13 +119,6 @@
       font-size: 10pt;
     }
     .standards-box strong { color: #7b1fa2; }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
     .teacher-note {
       background: #f5f5f5;
       border: 2px dashed #999;
@@ -129,292 +129,373 @@
       color: #555;
     }
     .teacher-note strong { color: #333; }
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-      font-size: 10pt;
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0;
     }
-    .comparison-table th {
-      padding: 10px;
-      border: 2px solid #1b5e20;
+    .vocab-card {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .vocab-card .vocab-word {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 12pt;
+    }
+    .vocab-card .vocab-def {
+      font-size: 10pt;
+      color: #333;
+      margin-top: 4px;
+    }
+    .animal-pair-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .animal-pair-card {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
       text-align: center;
     }
-    .comparison-table th.animal-col { background: #1b5e20; color: white; width: 20%; }
-    .comparison-table th.baby-col { background: #f9a825; color: white; }
-    .comparison-table th.adult-col { background: #2e7d32; color: white; }
-    .comparison-table td {
-      border: 1px solid #a5d6a7;
-      padding: 8px 10px;
-      vertical-align: top;
+    .animal-pair-card .emoji-row {
+      font-size: 28pt;
+      margin-bottom: 4px;
     }
-    .comparison-table tr:nth-child(even) td { background: #e8f5e9; }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
+    .animal-pair-card .animal-label {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 10pt;
+    }
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .ws-pair-row {
+      display: flex;
+      gap: 10px;
+      margin: 8px 0;
+      align-items: center;
+    }
+    .ws-pair-label {
+      font-weight: bold;
+      color: #1b5e20;
+      min-width: 90px;
+      font-size: 10pt;
+    }
+    .ws-draw-box {
+      border: 2px dashed #2e7d32;
+      border-radius: 6px;
+      min-height: 70px;
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      padding: 4px 6px;
+    }
+    .ws-draw-box .draw-label {
+      font-size: 8pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .ws-needs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .ws-needs-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 7px 10px;
+      text-align: center;
+      border: 2px dashed #a5d6a7;
+    }
+    .ws-needs-table td {
+      border: 2px dashed #a5d6a7;
+      padding: 9px;
+      text-align: center;
+    }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
       border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
     }
-    .answer-key h2 { background: #757575; text-align: center; }
-    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
-    .worksheet-box {
-      border: 3px solid #2e7d32;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 160px;
+      margin: 0 4px;
     }
-    .worksheet-box h2 { background: #2e7d32; }
-    .write-lines { margin: 6px 0; }
-    .write-lines p { border-bottom: 1px solid #bbb; height: 30px; margin: 4px 0; }
+    .circle-question {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 11pt;
+    }
+    .circle-options {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .circle-option {
+      border: 2px solid #2e7d32;
+      border-radius: 20px;
+      padding: 4px 18px;
+      font-size: 12pt;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
     @media print {
       body { padding: 0.25in; font-size: 10pt; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
         break-inside: avoid; page-break-inside: avoid;
       }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
     }
-    .page-break { page-break-before: always; margin-top: 20px; }
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
-<body data-document-id="doc_cYgdXPyqQoI">
+<body data-document-id="" data-doc-id="">
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
-  <h1>🐣 Baby Animals and Their Needs 🐣</h1>
-  <p class="subtitle">Life Science — Parents &amp; Offspring | Unit 2, Lesson 2 of 6</p>
+  <h1>🐣🐾🦆 Baby Animals and Their Needs</h1>
+  <p class="subtitle">Parents and Offspring Unit, Lesson 2</p>
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 1st Grade</span>
     <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science — Parents &amp; Offspring</span>
-    <span>🏠 <strong>Materials:</strong> Household only</span>
+    <span>🔬 <strong>Subject:</strong> Life Science</span>
+    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🐣 👶 🐕‍🦺 🐸</div>
-    <div class="caption">Baby animals need a lot of help! Parents do most of the work — until offspring can do it themselves.</div>
+    <div class="emoji-hero">🐣🐾🦆</div>
+    <div class="caption">Baby animals need the same things adult animals need. But they often need a lot more help getting them!</div>
   </div>
 
   <div class="standards-box">
     <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Use observations to describe patterns of what plants and animals (including humans) do to survive and how the behavior of parents helps offspring survive.
+    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>compare</em> the needs of baby animals versus adult animals, and <em>describe</em> what parents do to meet those needs.</p>
-
-  <h2>🔬 The Big Idea</h2>
-  <p>Baby animals cannot survive alone. They need food, warmth, and protection — and they rely on their parents to provide these things. As animals grow, they develop the skills and body parts they need to take care of themselves. The pattern is clear: <strong>the younger the animal, the more it needs its parents.</strong></p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong> needs, offspring, survive, protect, warmth, independent, dependent
-  </div>
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Identify that baby animals have the same <strong>basic needs</strong> as adults: food, water, shelter, and safety.</li>
+    <li>Recognize that parents help meet their offspring's needs, especially when babies are young and vulnerable.</li>
+    <li>Observe that some baby animals look very different from their parents (metamorphosis), yet still share the same needs.</li>
+  </ul>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
-    <h3>🏠 Household Items to Gather</h3>
+    <h3>🏠 What You Need (Household Only)</h3>
     <ul>
-      <li>Paper and pencil/crayons for the comparison chart</li>
-      <li>Printed worksheet (or create your own chart on blank paper)</li>
-      <li>Optional: a baby photo of your student to compare to now</li>
+      <li>Paper and crayons</li>
+      <li>Optional: a nature documentary description from the parent (no screen required)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All household items. Nothing to purchase.</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-grid">
+    <div class="vocab-card">
+      <div class="vocab-word">🍎 Needs</div>
+      <div class="vocab-def">Things a living thing must have to survive (food, water, shelter, safety).</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🐣 Offspring</div>
+      <div class="vocab-def">A baby animal (the young of a parent).</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🐻 Parent</div>
+      <div class="vocab-def">The adult animal that cares for the offspring.</div>
+    </div>
+    <div class="vocab-card">
+      <div class="vocab-word">🏠 Shelter</div>
+      <div class="vocab-def">A safe place to live and stay protected.</div>
+    </div>
+  </div>
+
+  <h2>📚 Background (Read Aloud to Student)</h2>
+  <p>Every living animal needs four basic things to survive: <strong>food, water, shelter, and safety</strong>. This is true for adult animals, and it is just as true for baby animals. In fact, baby animals need the same things, but they usually cannot get those things by themselves. That is where parents come in!</p>
+
+  <p>Most baby animals are born or hatched without the ability to find their own food, stay warm, or protect themselves from predators. A newborn kitten cannot hunt for mice. A newly hatched duckling cannot fly away from danger. These babies depend on their parents to meet their needs until they are old enough to care for themselves.</p>
+
+  <p>Here is something interesting: some baby animals look almost nothing like their parents. A tadpole does not look like a frog. A caterpillar does not look like a butterfly. These animals go through an amazing process called <strong>metamorphosis</strong>, where their body completely changes shape as they grow. But even though they look so different, they still have the same basic needs. A tadpole still needs water, food, and safety to survive, just like the frog it will become.</p>
+
+  <div class="tip-box">
+    🦋 <strong>Fun fact!</strong> The word "metamorphosis" comes from the Greek words for "change" and "form." A caterpillar changes its form to become a butterfly. This is one of the most dramatic changes in the animal kingdom!
+  </div>
+
+  <h2>🔬 Procedure</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — The Big Four</strong><br>
+    Before starting the drawing activity, discuss the 4 basic needs together: food, water, shelter, and safety. Ask: "Do you need these things? Does a cat? Does a tadpole?" Establish that all animals share these needs.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Baby Animal Match 🎨</strong><br>
+    Fold a piece of paper into 5 sections (fold it like a book and then cut or fold again). In each section, draw the baby animal AND its adult form as a pair:
+    <ul style="margin-top:8px;">
+      <li>🐱 Kitten and Cat</li>
+      <li>🐶 Puppy and Dog</li>
+      <li>🐥 Duckling and Duck</li>
+      <li>🐸 Tadpole and Frog</li>
+      <li>🦋 Caterpillar and Butterfly</li>
     </ul>
   </div>
 
-  <h2>🔬 Let's Get Started</h2>
-
   <div class="procedure-step">
-    <strong>Step 1 — Warm-Up: Baby You (5 min)</strong><br>
-    Ask: <em>"When you were a baby, what could you do? What couldn't you do?"</em><br>
-    Guide to: couldn't walk, couldn't feed yourself, couldn't talk, couldn't keep yourself warm.<br>
-    <em>"Who took care of you? What did they do?"</em>
+    <strong>Step 3 — Label the Needs</strong><br>
+    For each animal pair, write or dictate the answer to two questions: "What does the baby need?" and "How does the parent help meet that need?" Keep answers simple. One or two words per need is fine.
   </div>
 
   <div class="procedure-step">
-    <strong>Step 2 — Meet the Babies (10 min)</strong><br>
-    Discuss each baby animal. Ask: <em>"What does this baby need? Who provides it?"</em>
-    <ul>
-      <li>🐦 <strong>Baby robin:</strong> can't fly, can't find food, stays warm by sitting under parent's body in the nest. Parent brings insects directly to the baby's mouth.</li>
-      <li>🐶 <strong>Puppy:</strong> eyes closed for the first two weeks, drinks only mother's milk, needs warmth from mother's body.</li>
-      <li>👶 <strong>Human baby:</strong> cannot walk, cannot feed itself, cannot control body temperature. Needs a caregiver for everything.</li>
-      <li>🐸 <strong>Tadpole:</strong> hatches from an egg, swims right away, eats algae — but is very vulnerable to predators. Parent frogs may guard the eggs but not the tadpoles.</li>
-    </ul>
+    <strong>Step 4 — Circle the Shape-Changers</strong><br>
+    Look at all five pairs. Circle the ones where the baby looks VERY different from the adult. (Tadpole/frog and caterpillar/butterfly should be circled.)
   </div>
 
   <div class="procedure-step">
-    <strong>Step 3 — Comparison Chart (15 min)</strong><br>
-    Complete the comparison chart on the worksheet. For each animal, fill in: what the baby needs, what the adult can do on its own.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 4 — Spot the Pattern (10 min)</strong><br>
-    Look at your completed chart. Ask: <em>"What do you notice? What do all babies have in common? What do all adults have in common?"</em><br>
-    Guide to the pattern: <em>Young animals need more parental help; as they grow, they develop skills and body structures to meet their own needs.</em>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 5 — What If? (5 min)</strong><br>
-    Ask: <em>"What would happen to a baby bird if its parents didn't bring food? What would happen to a puppy if its mother wasn't there?"</em><br>
-    Key idea: parent behavior helps offspring <strong>survive.</strong>
+    <strong>Step 5 — The Big Question</strong><br>
+    Discuss together: "Even though a tadpole looks nothing like a frog, does it still have the same needs?" Work toward the answer: yes! The body may look different, but the needs stay the same.
   </div>
 
   <h2>💬 Discussion Questions</h2>
 
   <div class="question-box">
-    <strong>🗣️ Talk about these together:</strong>
-    <ul>
-      <li>What three things do all baby animals need to survive? (Food, warmth, protection)</li>
-      <li>How does a mother robin keep her chicks warm? (She sits on them in the nest.)</li>
-      <li>When do you think a puppy is ready to find its own food? What changes in its body?</li>
-      <li>Do tadpoles have parents that help them? (Mostly no — they're on their own. That's different!)</li>
-    </ul>
-    <hr>
-    <strong>🌟 Big Question:</strong> <em>"Human babies are among the most helpless newborns in the animal kingdom. Why might that be?"</em>
-    <p class="discussion-hint">Human babies are born "early" compared to other animals because our big brains make our heads too large to stay in the womb much longer. A foal can walk within hours of being born; a human takes about a year. Our helplessness is compensated by the most intensive parental care in the animal kingdom — and the longest childhood — which allows our massive brains to continue developing after birth.</p>
+    <strong>🗣️ Question 1:</strong> Which baby animals look the most different from their parents?
+    <p class="discussion-hint">Tadpoles look nothing like frogs, and caterpillars look nothing like butterflies. These animals go through a big change called metamorphosis. The puppy, kitten, and duckling look much more like their parents right away.</p>
   </div>
 
-  <h2>🚀 Extensions</h2>
-  <div class="extension-box">
-    <ul>
-      <li>🎥 <strong>Nature Documentary:</strong> Watch a short clip of animal parents caring for young (many free on YouTube — search "animal parent caring for babies").</li>
-      <li>📚 <strong>Read Aloud:</strong> <em>"Are You My Mother?"</em> by P.D. Eastman — classic and perfectly on topic!</li>
-      <li>📊 <strong>Timeline Chart:</strong> Create a timeline of what a puppy can do at 1 week, 4 weeks, 8 weeks, and 1 year.</li>
-    </ul>
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Why do tadpoles and caterpillars look so different from their parents?
+    <p class="discussion-hint">These animals go through metamorphosis, a process where their body completely changes shape as they grow. A tadpole is built for swimming in water, while the frog it becomes is built for both land and water. The body changes to match a new way of living.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Do baby animals that look different from their parents still have the same needs?
+    <p class="discussion-hint">Yes! Even though a tadpole looks different from a frog, it still needs water, food, and safety to survive. The shape of the body changes, but the basic needs of any living animal stay the same.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> How do parent animals help their babies survive?
+    <p class="discussion-hint">Parents provide food, warmth, protection from predators, and shelter. Without parental help, many baby animals would not survive long enough to grow up. A duckling stays close to its mother for warmth and protection for weeks before it can fend for itself.</p>
   </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
-    <ul>
-      <li><strong>Tadpoles as contrast:</strong> Tadpoles are a great exception — they hatch and are mostly independent. This shows that not all species care for their young the same way, which is a great observation to encourage.</li>
-      <li><strong>Human example:</strong> First graders love connecting to themselves. Use the baby photo activity for maximum engagement.</li>
-      <li><strong>Vocabulary to emphasize:</strong> "dependent" (needs others) vs. "independent" (can do it alone). These are powerful words for young learners.</li>
-      <li><strong>Assessment:</strong> Can the student name 2 things a baby animal needs that an adult doesn't? Can they name what a parent does to help?</li>
-    </ul>
+    <strong>Nature documentary clips:</strong> If you have access to nature content (YouTube, library DVDs, or a streaming service), clips of a mother duck with ducklings or a cat nursing kittens make this lesson come alive. However, the lesson works just as well with parent narration and imagination.
+    <br><br>
+    <strong>Explaining metamorphosis simply:</strong> You can say: "Some animals have two completely different bodies during their life. The caterpillar body is for eating and growing. Then it wraps itself in a cocoon and its body completely rebuilds itself into a butterfly body that is built for flying and finding mates. It is like the animal has a first life and a second life."
+    <br><br>
+    <strong>Extension activity:</strong> Help your student draw a lifecycle diagram for the frog (egg, tadpole, froglet, frog) and the butterfly (egg, caterpillar, chrysalis, butterfly). These are excellent visual summaries of metamorphosis and make a great addition to the student's science notebook.
+    <br><br>
+    <strong>The difference between tadpoles and frogs:</strong> Tadpoles breathe through gills (like fish) and live entirely in water. As they develop into froglets and then frogs, they grow legs, lose their tail, and develop lungs. This is complete metamorphosis. Point out that while the BODY changes, the NEED for food, water, and safety never changes.
   </div>
 
   <!-- ====================== STUDENT WORKSHEET ====================== -->
   <div class="page-break">
-    <div class="worksheet-box">
-      <h2>📋 Student Worksheet — Lesson 2</h2>
-      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <div class="worksheet-header">🐣 Student Worksheet — Baby Animals and Their Needs</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
-      <h3>Baby vs. Adult: What Can They Do?</h3>
-      <p>Fill in the chart. What does the baby need help with? What can the adult do on its own?</p>
+    <h3>Baby Animal Match 🎨</h3>
+    <p style="font-size:10pt; color:#555;">Draw the baby animal and the adult animal in the boxes. Label each one!</p>
 
-      <table class="comparison-table">
-        <tr>
-          <th class="animal-col">Animal</th>
-          <th class="baby-col">🐣 Baby Needs...</th>
-          <th class="adult-col">🦅 Adult Can...</th>
-        </tr>
-        <tr>
-          <td style="text-align:center; font-size:18pt;">🐦</td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center; font-size:18pt;">🐶</td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center; font-size:18pt;">👶</td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center; font-size:18pt;">🐸</td>
-          <td style="height:60px;"></td>
-          <td style="height:60px;"></td>
-        </tr>
-      </table>
+    <div style="margin: 8px 0;">
+      <div class="ws-pair-row">
+        <div class="ws-pair-label">🐱 Cat family:</div>
+        <div class="ws-draw-box"><div class="draw-label">Baby (Kitten)</div></div>
+        <div class="ws-draw-box"><div class="draw-label">Adult (Cat)</div></div>
+      </div>
+      <div class="ws-pair-row">
+        <div class="ws-pair-label">🐶 Dog family:</div>
+        <div class="ws-draw-box"><div class="draw-label">Baby (Puppy)</div></div>
+        <div class="ws-draw-box"><div class="draw-label">Adult (Dog)</div></div>
+      </div>
+      <div class="ws-pair-row">
+        <div class="ws-pair-label">🦆 Duck family:</div>
+        <div class="ws-draw-box"><div class="draw-label">Baby (Duckling)</div></div>
+        <div class="ws-draw-box"><div class="draw-label">Adult (Duck)</div></div>
+      </div>
+      <div class="ws-pair-row">
+        <div class="ws-pair-label">🐸 Frog family:</div>
+        <div class="ws-draw-box"><div class="draw-label">Baby (Tadpole)</div></div>
+        <div class="ws-draw-box"><div class="draw-label">Adult (Frog)</div></div>
+      </div>
+      <div class="ws-pair-row">
+        <div class="ws-pair-label">🦋 Butterfly:</div>
+        <div class="ws-draw-box"><div class="draw-label">Baby (Caterpillar)</div></div>
+        <div class="ws-draw-box"><div class="draw-label">Adult (Butterfly)</div></div>
+      </div>
+    </div>
 
-      <h3>The Pattern I Notice</h3>
-      <p>Complete the sentence:</p>
-      <p style="background:#e8f5e9; border-left:4px solid #2e7d32; padding:10px; border-radius:4px;">
-        Baby animals need <strong>_______________________</strong> help from parents than adults do. (more / less)<br><br>
-        As animals grow, they can __________________________________________________________.
-      </p>
+    <h3>Needs Chart</h3>
+    <p style="font-size:10pt; color:#555;">Think about a tadpole. Does it need each of these things? Check Yes or No!</p>
+    <table class="ws-needs-table">
+      <thead>
+        <tr>
+          <th>Basic Need</th>
+          <th>Does the tadpole need this? (Circle: Yes / No)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>🍎 Food</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
+        <tr><td>💧 Water</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
+        <tr><td>🏠 Shelter</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
+        <tr><td>🛡️ Safety</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
+      </tbody>
+    </table>
 
-      <h3>Draw It!</h3>
-      <p>Draw a baby animal with its parent. Show one thing the parent is doing to help the baby survive.</p>
-      <div style="border:2px solid #a5d6a7; border-radius:8px; height:180px; margin-top:8px; padding:10px;">
-        <span style="font-size:9pt; color:#aaa;">My drawing:</span>
+    <div class="fill-blank">
+      A baby <span class="blank-line" style="min-width:120px;"></span> needs <span class="blank-line" style="min-width:120px;"></span> to survive.
+    </div>
+
+    <div class="circle-question">
+      <strong>Circle it!</strong> Which animal changes shape the MOST as it grows?<br>
+      <div class="circle-options">
+        <div class="circle-option">cat</div>
+        <div class="circle-option">frog</div>
+        <div class="circle-option">dog</div>
       </div>
     </div>
   </div>
 
-  <!-- ====================== ANSWER KEY ====================== -->
-  <div class="page-break">
-    <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
-
-      <h3>Comparison Chart — Sample Answers</h3>
-      <table class="comparison-table">
-        <tr>
-          <th class="animal-col">Animal</th>
-          <th class="baby-col">🐣 Baby Needs...</th>
-          <th class="adult-col">🦅 Adult Can...</th>
-        </tr>
-        <tr>
-          <td style="text-align:center;">🐦 Robin</td>
-          <td>Food delivered, warmth from parent in nest, protection — can't fly</td>
-          <td>Find own food, fly away from danger, regulate own temperature</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">🐶 Puppy</td>
-          <td>Mother's milk, warmth from mother's body, eyes closed for 2 weeks</td>
-          <td>Find and eat solid food, walk and run, keep itself warm</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">👶 Human baby</td>
-          <td>Feeding (milk/formula), warmth (clothing/blankets), constant supervision — cannot walk</td>
-          <td>Prepare own food, regulate temperature, move independently</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;">🐸 Tadpole/Frog</td>
-          <td>Eats algae on its own — mostly independent from birth, but vulnerable to predators</td>
-          <td>Hunt insects, leap, breathe air — very different from tadpole stage</td>
-        </tr>
-      </table>
-
-      <h3>Sentence Answers</h3>
-      <ul>
-        <li>Baby animals need <strong>more</strong> help from parents than adults do.</li>
-        <li>As animals grow, they can (find their own food / keep themselves warm / move away from danger / etc.)</li>
-      </ul>
-
-      <h3>✅ What Success Looks Like</h3>
-      <ul>
-        <li>Child can name at least 2 things a baby needs that an adult doesn't.</li>
-        <li>Child identifies a parent behavior that helps offspring survive.</li>
-        <li>Child recognizes the pattern: more parental care = more dependent young.</li>
-      </ul>
-    </div>
-  </div>
-
-<!-- Remarq Feedback Layer -->
-<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_cYgdXPyqQoI" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+  <script src="http://192.168.5.204:3334/feedback-layer.js"></script>
 </body>
 </html>
