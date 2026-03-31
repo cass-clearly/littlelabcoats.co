@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystery Powders: What's in Your Kitchen? — Matter Unit, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #7B2FBE;
+      padding-bottom: 10px;
+      color: #7B2FBE;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #F3E8FF;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #7B2FBE;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #7B2FBE;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #F3E8FF;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #7B2FBE;
+    }
+    .procedure-step strong { color: #7B2FBE; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Powder reaction table */
+    .reaction-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10pt;
+    }
+    .reaction-table th {
+      background: #7B2FBE;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+      border: 1px solid #7B2FBE;
+    }
+    .reaction-table td {
+      padding: 7px 10px;
+      border: 1px solid #90caf9;
+      vertical-align: top;
+    }
+    .reaction-table tr:nth-child(even) td { background: #F3E8FF; }
+    .reaction-table tr:nth-child(odd) td { background: #f5f9ff; }
+    /* Wow badge */
+    .wow-badge {
+      display: inline-block;
+      background: #0288d1;
+      color: white;
+      font-size: 9pt;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    /* Worksheet */
+    .worksheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+    .worksheet-table th {
+      background: #7B2FBE;
+      color: white;
+      padding: 8px 10px;
+      text-align: center;
+      border: 2px solid #7B2FBE;
+      font-size: 10pt;
+    }
+    .worksheet-table td {
+      border: 2px solid #90caf9;
+      padding: 8px 10px;
+      height: 70px;
+      vertical-align: top;
+      background: #fff;
+    }
+    .worksheet-table .powder-label {
+      background: #F3E8FF;
+      font-weight: bold;
+      color: #7B2FBE;
+      text-align: center;
+      width: 80px;
+      vertical-align: middle;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #555;
+      min-width: 120px;
+      margin: 0 4px;
+    }
+    .blank-line-short {
+      display: inline-block;
+      border-bottom: 2px solid #555;
+      min-width: 60px;
+      margin: 0 4px;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-column h3 { font-size: 12pt; }
+    .ak-column ul { padding-left: 18px; }
+    .ak-column li { margin-bottom: 6px; }
+    .draw-box {
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      min-height: 160px;
+      margin: 10px 0;
+      background: #fff;
+      padding: 8px;
+      position: relative;
+    }
+    .draw-box .draw-prompt {
+      font-size: 9pt;
+      color: #90a4ae;
+      font-style: italic;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .reveal-box {
+      background: #F3E8FF;
+      border: 2px solid #0288d1;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 14px 0;
+    }
+    .science-sentence {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 14px 0;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .reaction-table,
+      .reveal-box, .science-sentence {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Mystery Powders: What's in Your Kitchen?</h1>
+  <p class="subtitle">Physical Science — Matter Unit, Lesson 1</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Matter &amp; Properties</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🧪 🥄 🫙</div>
+    <div class="caption">Four mystery powders, three tests, one big scientific discovery — all from your kitchen!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-PS1-1</strong> — Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>OBSERVE</strong> and <strong>RECORD</strong> the properties of 4 mystery powders using 3 different tests, and <strong>USE</strong> their data to identify each powder.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Scientists identify unknown substances by testing their <strong>properties</strong> — color, texture, and how they react with water, vinegar, and heat. You can do the same thing right in your kitchen! Today, your child becomes a real scientist investigating four mystery powders hidden in plain sight: things you probably cook with every week.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Every material has <strong>properties</strong> — characteristics you can observe and measure. Some properties you can see (color, shape) or feel (smooth, grainy, fluffy). Others only show up when you test the material — like whether it dissolves in water, or fizzes when vinegar touches it.</p>
+  <p>When a material reacts with something (like baking soda reacting with vinegar to make bubbles), that reaction is called a <strong>chemical reaction</strong>. The fizzing you see is carbon dioxide gas being released — the same gas in soda bubbles! Scientists use these reactions as tests to identify unknown materials.</p>
+  <p>One of today's powders — cornstarch mixed with water — creates something truly strange: a <strong>non-Newtonian fluid</strong>. It acts like a solid when you push or squeeze it quickly, but flows like a liquid when left alone. Scientists call this "oobleck," and it doesn't fit neatly into either the solid or liquid category. That's what makes science so exciting: nature always has surprises!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> property, observe, dissolve, react, solid, liquid, non-Newtonian fluid, chemical reaction
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 All From Your Kitchen Pantry</h3>
+    <ul>
+      <li>Baking soda</li>
+      <li>Salt (table salt)</li>
+      <li>Sugar (granulated white sugar)</li>
+      <li>Cornstarch</li>
+      <li>White vinegar</li>
+      <li>Water</li>
+    </ul>
+
+    <h3>🧰 Setup Supplies</h3>
+    <ul>
+      <li>4 small cups, plates, or muffin tin sections (labeled A, B, C, D with tape and marker)</li>
+      <li>Pipette, eyedropper, or small spoon for adding liquids</li>
+      <li>Paper for recording observations (or the student worksheet on page 3)</li>
+      <li>Pencil and crayons</li>
+      <li>Optional: 1 large bowl for the oobleck bonus activity</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Before You Begin — Setup (5 min, adult only)</strong><br>
+    Label 4 small cups or sections A, B, C, D with tape and a marker. Add a small amount (about 1 teaspoon) of each powder:
+    <ul>
+      <li><strong>Cup A</strong> = baking soda</li>
+      <li><strong>Cup B</strong> = salt</li>
+      <li><strong>Cup C</strong> = sugar</li>
+      <li><strong>Cup D</strong> = cornstarch</li>
+    </ul>
+    ⚠️ <strong>Do NOT tell your child what's in each cup.</strong> These are "mystery powders" — they will figure it out through testing!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce the Challenge (2 min)</strong><br>
+    Say: <em>"I have four mystery powders here. Your job is to figure out what each one is — but you can only use science! You'll do three tests and record your observations. At the end, you'll make your best guess for each powder."</em><br>
+    Give your child the student worksheet (page 3) and something to write with.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Test 1: Look &amp; Feel (5 min)</strong><br>
+    Ask your child to carefully observe each powder — <em>without tasting!</em> For each cup, record:
+    <ul>
+      <li>What color is it?</li>
+      <li>What does the texture look like? (smooth, grainy, fluffy, chunky?)</li>
+      <li>Does it clump together or stay loose?</li>
+    </ul>
+    Encourage them to gently touch each powder between two fingers to feel the texture. Record observations in the data table.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Test 2: Water Test (8 min)</strong><br>
+    Using a pipette, eyedropper, or small spoon, add a few drops of water to each powder. Watch carefully! Ask:
+    <ul>
+      <li>Does it dissolve (disappear into the water)?</li>
+      <li>Does it make a paste?</li>
+      <li>Does anything unusual happen?</li>
+    </ul>
+    Record observations for each powder. <span class="wow-badge">⭐ WOW MOMENT</span> — Watch what cornstarch does! It forms a thick paste that feels solid when pressed but flows like a liquid when still.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Test 3: Vinegar Test (8 min)</strong><br>
+    Add a few drops of white vinegar to each powder. Watch carefully!
+    <ul>
+      <li>Does anything happen immediately?</li>
+      <li>Do any bubbles form?</li>
+      <li>Is any reaction bigger than others?</li>
+    </ul>
+    Record observations. <span class="wow-badge">🎉 REVEAL MOMENT</span> — One powder will fizz dramatically! That fizzing is a chemical reaction — baking soda reacting with the acid in vinegar to make carbon dioxide gas (the same gas in soda bubbles!).
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Save the vinegar test for last — the baking soda reaction is the most dramatic and makes for a great reveal! Build the suspense.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Make Your Guesses (5 min)</strong><br>
+    After all three tests, ask: <em>"Based on your data, which powder do you think is which?"</em> Have your child fill in their guesses on the worksheet, then reveal the answers together. How many did they get right?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Bonus: Oobleck! (5–10 min)</strong><br>
+    Once they've identified the cornstarch, make oobleck in a bowl! Mix <strong>1 cup cornstarch + ½ cup water</strong>. Then:
+    <ul>
+      <li>Slap the surface quickly — it acts like a solid!</li>
+      <li>Let your hand rest in it — it flows like a liquid!</li>
+      <li>Pick up a handful and squeeze — it solidifies in your hand</li>
+      <li>Let go — it melts and drips away</li>
+    </ul>
+    This is a <strong>non-Newtonian fluid</strong> — it doesn't follow the normal rules of solids and liquids. Scientists are still studying materials like this!
+  </div>
+
+  <!-- Reference table for adult -->
+  <h3>📊 What to Expect — Reaction Guide (for adult reference)</h3>
+  <table class="reaction-table">
+    <thead>
+      <tr>
+        <th>Powder</th>
+        <th>Test 1: Look &amp; Feel</th>
+        <th>Test 2: Water</th>
+        <th>Test 3: Vinegar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>A — Baking Soda</strong></td>
+        <td>White, very fine and smooth, slightly fluffy, may clump</td>
+        <td>Dissolves slowly in plain water; no dramatic reaction</td>
+        <td><strong>FIZZES dramatically!</strong> Lots of bubbles — CO₂ gas released</td>
+      </tr>
+      <tr>
+        <td><strong>B — Salt</strong></td>
+        <td>White, grainy, chunky crystals, sparkly</td>
+        <td>Dissolves clearly and quickly; water looks clear</td>
+        <td>No reaction — nothing happens</td>
+      </tr>
+      <tr>
+        <td><strong>C — Sugar</strong></td>
+        <td>White, grainy (smaller grains than salt), slightly sparkly</td>
+        <td>Dissolves very quickly and clearly; water may look slightly sweet-smelling</td>
+        <td>No reaction — nothing happens</td>
+      </tr>
+      <tr>
+        <td><strong>D — Cornstarch</strong></td>
+        <td>White, very fine and silky-smooth, squeaky between fingers</td>
+        <td>Forms thick, gooey paste — feels solid when pressed, liquid when still! (Non-Newtonian fluid)</td>
+        <td>Slight thickening; no dramatic reaction</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "The baking soda fizzed when you added vinegar, but salt didn't. What does that tell you about these two powders?"
+    <p class="discussion-hint">Suggested answer: They have different chemical properties! Baking soda reacts with vinegar (an acid) to make carbon dioxide gas — that's the fizzing. Salt doesn't react with vinegar at all. Scientists use reactions like this to identify unknown substances — it's called a chemical test.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "The cornstarch and water mixture acts strange — it's solid when you squeeze it and liquid when you let go. Is it a solid or a liquid?"
+    <p class="discussion-hint">Suggested answer: It's actually BOTH — scientists call it a non-Newtonian fluid. It doesn't follow the normal rules of solids and liquids. This shows that some materials have unusual properties that don't fit neatly into categories — which is why scientists have to keep observing and testing!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🧪 <strong>Iodine Test:</strong> If you have iodine solution (available at pharmacies), add a drop to each powder. Iodine turns dark purple-black on starch — it will dramatically confirm cornstarch and give no reaction to the others!</li>
+      <li>🍰 <strong>Baking Connection:</strong> Baking soda in recipes reacts with acids (buttermilk, lemon juice, vinegar) to make baked goods rise — the same reaction you just observed! Try making simple soda bread together and watch it happen in real life.</li>
+      <li>🔍 <strong>Mystery #5:</strong> Try testing flour, baking powder, or powdered sugar. Can your child use the same three tests to identify a new mystery powder?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Is Matter?"</em> by Don L. Curry or <em>"Bartholomew and the Oobleck"</em> by Dr. Seuss (the origin of the word "oobleck"!)</li>
+      <li>🌡️ <strong>Heating Extension:</strong> With adult supervision, heat small amounts on a metal spoon over a candle or stove. Sugar will melt and caramelize; cornstarch will toast and smell nutty; salt and baking soda will not melt easily. This introduces the property of melting point!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Setup is key:</strong> Label cups A/B/C/D with tape and marker <em>before</em> your child arrives. Do NOT reveal what's in each — the mystery is the whole motivation!</li>
+      <li><strong>Save the vinegar test for last:</strong> The baking soda + vinegar reaction is dramatic and delightful. Building up to it makes the reveal more satisfying.</li>
+      <li><strong>Safety:</strong> All materials are food-safe kitchen ingredients, but encourage your child to stay in "scientist mode" — no tasting during the investigation!</li>
+      <li><strong>Oobleck tip:</strong> Mix 1 cup cornstarch + ½ cup water. Slap it — it's solid. Let it rest — it flows. Kids are genuinely amazed. Search "non-Newtonian fluid" online to find videos that explain the physics in fun ways.</li>
+      <li><strong>Salt vs. sugar:</strong> These two look very similar — both are white crystals that dissolve clearly. Salt crystals are generally larger and blockier; sugar crystals are finer. Kids may need to look very closely, and it's okay if they mix these up — that's real science! The discussion about how subtle differences matter is valuable.</li>
+      <li><strong>Vocabulary to reinforce:</strong> property, observe, dissolve, react, solid, liquid, non-Newtonian fluid</li>
+      <li><strong>Cross-subject connection:</strong> This lesson connects directly to cooking and baking! Baking soda in recipes reacts with acid ingredients to produce carbon dioxide, making baked goods rise. Same reaction, different context.</li>
+      <li><strong>Assessment:</strong> Can your child correctly identify at least 3 of 4 powders? Can they explain what property helped them figure it out? Can they describe the cornstarch-water mixture using the word "non-Newtonian fluid"? That's success!</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🔍 Mystery Powder Worksheet</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:14px;">You are a scientist today! Test each mystery powder and record what you observe. Then make your best guess!</p>
+
+    <h2>📊 My Data Table</h2>
+    <table class="worksheet-table">
+      <thead>
+        <tr>
+          <th style="width:80px;">Powder</th>
+          <th>👀 Look &amp; Feel<br><span style="font-weight:normal; font-size:9pt;">Color, texture, clumps?</span></th>
+          <th>💧 Water Test<br><span style="font-weight:normal; font-size:9pt;">What happens?</span></th>
+          <th>🧪 Vinegar Test<br><span style="font-weight:normal; font-size:9pt;">What happens?</span></th>
+          <th style="width:100px;">🤔 My Guess<br><span style="font-weight:normal; font-size:9pt;">What powder?</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="powder-label">A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="powder-label">B</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="powder-label">C</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="powder-label">D</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="reveal-box">
+      <strong>🎉 My Mystery Powder Guesses:</strong><br><br>
+      &nbsp;&nbsp; A = <span class="blank-line"></span> &nbsp;&nbsp;&nbsp;
+      B = <span class="blank-line"></span> &nbsp;&nbsp;&nbsp;
+      C = <span class="blank-line"></span> &nbsp;&nbsp;&nbsp;
+      D = <span class="blank-line"></span>
+      <br><br>
+      After the reveal: <strong>I was right about <span class="blank-line-short"></span> out of 4 powders!</strong>
+    </div>
+
+    <div class="science-sentence">
+      ✏️ <strong>Complete the science sentence:</strong><br><br>
+      "Scientists identify materials by testing their <span class="blank-line"></span>."
+    </div>
+
+    <h3>🎨 Draw the Most Interesting Reaction You Saw</h3>
+    <div class="draw-box">
+      <p class="draw-prompt">Draw it here:</p>
+      <br><br><br><br><br><br><br><br>
+    </div>
+    <p style="font-size:10.5pt;">What happened? Explain in your own words:<br>
+    <span style="border-bottom: 1px solid #bbb; display:block; height:28px; margin-top:6px;"></span>
+    <span style="border-bottom: 1px solid #bbb; display:block; height:28px; margin-top:6px;"></span>
+    <span style="border-bottom: 1px solid #bbb; display:block; height:28px; margin-top:6px;"></span>
+    </p>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to student</h2>
+
+      <div class="answer-key-grid">
+        <div class="ak-column">
+          <h3 style="color: #7B2FBE; border-bottom: 2px solid #90caf9; padding-bottom: 4px;">Mystery Powder Identities</h3>
+          <ul>
+            <li>✅ <strong>Powder A</strong> = Baking Soda</li>
+            <li>✅ <strong>Powder B</strong> = Salt</li>
+            <li>✅ <strong>Powder C</strong> = Sugar</li>
+            <li>✅ <strong>Powder D</strong> = Cornstarch</li>
+          </ul>
+        </div>
+        <div class="ak-column">
+          <h3 style="color: #7B2FBE; border-bottom: 2px solid #90caf9; padding-bottom: 4px;">Science Sentence Answer</h3>
+          <p>Scientists identify materials by testing their <strong>properties</strong>.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px; color: #7B2FBE; border-bottom: 2px solid #90caf9; padding-bottom:4px;">Key Identifying Properties</h3>
+      <ul>
+        <li><strong>Baking Soda (A):</strong> Very fine and smooth powder; fizzes dramatically with vinegar (CO₂ gas released); dissolves slowly in water.</li>
+        <li><strong>Salt (B):</strong> Coarse, blocky crystals; sparkling; dissolves clearly in water; <em>no reaction</em> with vinegar.</li>
+        <li><strong>Sugar (C):</strong> Fine crystals (smaller than salt); dissolves quickly and clearly in water; <em>no reaction</em> with vinegar. Sugar and salt look similar — texture difference is subtle.</li>
+        <li><strong>Cornstarch (D):</strong> Very silky, squeaky-smooth texture; forms thick non-Newtonian paste with water (solid when pressed, liquid when still); slight thickening with vinegar but no dramatic reaction.</li>
+      </ul>
+
+      <h3 style="margin-top:18px; color: #7B2FBE; border-bottom: 2px solid #90caf9; padding-bottom:4px;">💡 Teaching Notes</h3>
+      <ul>
+        <li><strong>Salt vs. Sugar:</strong> These are the trickiest pair — both white, both dissolve clearly in water, both show no reaction with vinegar. The main distinguishing property is crystal texture (salt is larger and blockier) and taste — though in a real scientist investigation, we don't taste! If your child mixes these up, discuss: this is exactly why scientists use multiple tests and look at subtle differences.</li>
+        <li><strong>Baking Soda with water:</strong> Baking soda dissolves slowly in plain water without dramatic fizzing. The fizzing only occurs with an acid — like vinegar. This is an important distinction: the dramatic fizzing with vinegar is the definitive test for baking soda. Plain water will not produce the same reaction.</li>
+        <li><strong>The Non-Newtonian Fluid moment:</strong> Cornstarch oobleck is the most memorable part of this lesson. When your child encounters it during the water test, you can just let them explore without explanation — save "non-Newtonian fluid" for the discussion after all tests are done.</li>
+      </ul>
+
+      <h3 style="margin-top:18px; color: #7B2FBE; border-bottom: 2px solid #90caf9; padding-bottom:4px;">✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can correctly identify at least 3 of 4 mystery powders using their recorded data.</li>
+        <li>Child can explain what property helped them figure out a specific powder (e.g., "the fizzing told me it was baking soda").</li>
+        <li>Child can describe the cornstarch-water mixture using words like "acts like a solid sometimes and a liquid sometimes."</li>
+        <li>Bonus: Child uses the word "properties" to describe what scientists test to identify materials.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_Q3nwQXzdtf8" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

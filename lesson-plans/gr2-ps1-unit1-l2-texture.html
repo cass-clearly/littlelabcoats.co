@@ -7,11 +7,11 @@
   <style>
     * { box-sizing: border-box; }
     body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
-    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #7B2FBE; padding-bottom: 10px; color: #7B2FBE; }
     .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
-    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
-    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
-    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    .meta { display: flex; justify-content: space-between; background: #F3E8FF; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #7B2FBE; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #7B2FBE; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
     ul, ol { margin: 8px 0; padding-left: 25px; }
     li { margin-bottom: 5px; }
     .hero-image { text-align: center; margin: 16px 0; }
@@ -20,28 +20,28 @@
     .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
     .materials-box h3 { color: #e65100; border-color: #ffcc80; }
     .vocab-cards { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
-    .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 130px; }
-    .vocab-card .term { font-weight: bold; color: #1565c0; font-size: 11pt; }
+    .vocab-card { background: #F3E8FF; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 130px; }
+    .vocab-card .term { font-weight: bold; color: #7B2FBE; font-size: 11pt; }
     .vocab-card .def { color: #444; font-size: 9pt; margin-top: 4px; }
-    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
-    .procedure-step strong { color: #0d47a1; }
-    .question-box { background: #e3f2fd; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .procedure-step { background: #F3E8FF; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #7B2FBE; }
+    .procedure-step strong { color: #7B2FBE; }
+    .question-box { background: #F3E8FF; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
     .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
     .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
     .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
     .standards-box strong { color: #7b1fa2; }
     .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
     .teacher-note strong { color: #333; }
-    .worksheet-header { background: #0d47a1; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .worksheet-header { background: #7B2FBE; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
     .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
-    .draw-box { border: 3px dashed #1565c0; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .draw-box { border: 3px dashed #7B2FBE; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
     .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
-    .fill-blank { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
-    .blank-line { display: inline-block; border-bottom: 2px solid #1565c0; min-width: 160px; margin: 0 4px; }
+    .fill-blank { background: #F3E8FF; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #7B2FBE; min-width: 160px; margin: 0 4px; }
     .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 9.5pt; }
-    .ws-table th { background: #1565c0; color: white; padding: 7px 5px; text-align: center; font-size: 9pt; }
+    .ws-table th { background: #7B2FBE; color: white; padding: 7px 5px; text-align: center; font-size: 9pt; }
     .ws-table td { border: 1px solid #90caf9; padding: 6px 5px; height: 36px; text-align: center; }
-    .ws-table .mat-col { font-weight: bold; background: #e3f2fd; text-align: left; }
+    .ws-table .mat-col { font-weight: bold; background: #F3E8FF; text-align: left; }
     .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
     .answer-key h2 { background: #757575; text-align: center; }
     @media print {
@@ -52,8 +52,8 @@
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
     .page-break { page-break-before: always; margin-top: 20px; }
-    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
-    .print-btn:hover { background: #0d47a1; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #7B2FBE; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn:hover { background: #7B2FBE; }
     @media print { .print-btn { display: none; } }
   </style>
 </head>
