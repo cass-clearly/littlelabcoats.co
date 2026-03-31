@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Design Quiz — K-ETS1 Unit 1 | Kindergarten</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f3e5f5;
+      margin: 0;
+      padding: 0;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    .quiz-header {
+      background: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 22px;
+    }
+    .quiz-header h1 {
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+    }
+    .quiz-header .subtitle {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin: 0;
+    }
+    .quiz-note {
+      background: #fff9c4;
+      border: 2px solid #f9a825;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .score-bar {
+      background: white;
+      border-bottom: 2px solid #ce93d8;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #6a1b9a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .quiz-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 10px 16px 60px;
+    }
+    .question-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 22px 0;
+      box-shadow: 0 2px 8px rgba(106,27,154,0.10);
+      border: 2px solid #ce93d8;
+    }
+    .question-card.answered-correct { border-color: #6a1b9a; background: #faf0ff; }
+    .question-card.answered-wrong   { border-color: #c62828; background: #fff3f3; }
+
+    .q-emoji { font-size: 2.6rem; display: block; text-align: center; margin-bottom: 10px; }
+    .q-num   { font-size: 0.85rem; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .q-text  { font-size: 1.15rem; font-weight: bold; margin-bottom: 16px; color: #4a148c; }
+
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option-btn {
+      background: #faf0ff;
+      border: 2px solid #ce93d8;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.15s, border-color 0.15s;
+      font-family: Georgia, serif;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #e1bee7;
+      border-color: #6a1b9a;
+    }
+    .option-btn.correct {
+      background: #c8e6c9;
+      border-color: #2e7d32;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+    .option-btn.wrong {
+      background: #ffcdd2;
+      border-color: #c62828;
+      color: #b71c1c;
+    }
+    .option-btn:disabled { cursor: default; }
+
+    .feedback-box {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+    .feedback-box.correct {
+      display: block;
+      background: #e8f5e9;
+      border-left: 5px solid #2e7d32;
+      color: #1b5e20;
+    }
+    .feedback-box.wrong {
+      display: block;
+      background: #f3e5f5;
+      border-left: 5px solid #6a1b9a;
+      color: #333;
+    }
+    .feedback-box .fb-label {
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    #results-section {
+      display: none;
+      background: white;
+      border-radius: 14px;
+      padding: 30px 24px;
+      margin: 30px 0;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(106,27,154,0.14);
+      border: 3px solid #6a1b9a;
+    }
+    #results-section .result-emoji  { font-size: 3rem; margin-bottom: 10px; display: block; }
+    #results-section .result-score  { font-size: 2rem; font-weight: bold; color: #6a1b9a; margin-bottom: 8px; }
+    #results-section .result-message{ font-size: 1.2rem; color: #333; margin-bottom: 20px; }
+    .restart-btn {
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: Georgia, serif;
+      margin-top: 10px;
+    }
+    .restart-btn:hover { background: #4a148c; }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #6a1b9a;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 500px) {
+      .quiz-header h1 { font-size: 1.4rem; }
+      .q-text { font-size: 1.05rem; }
+      .option-btn { font-size: 0.98rem; padding: 10px 14px; }
+    }
+    @media print { body { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_N0ZUEWGktYU">
+
+<div class="quiz-header">
+  <h1>🔧 Engineering Design Quiz</h1>
+  <p class="subtitle">Kindergarten &nbsp;·&nbsp; Engineering Design &nbsp;·&nbsp; K-ETS1 Unit 1</p>
+</div>
+
+<div class="quiz-body">
+  <div class="quiz-note">
+    📖 <strong>Ask a grown-up to read the questions to you!</strong><br>
+    Pick the best answer for each question. Think like an engineer! 🛠️
+  </div>
+
+  <div class="score-bar" id="scoreBar">Score: 0 / 0 answered</div>
+
+  <!-- Q1 -->
+  <div class="question-card" id="q1">
+    <span class="q-emoji">🪑</span>
+    <div class="q-num">Question 1 of 10</div>
+    <div class="q-text">Long ago, people sat on the hard ground. Then someone invented a chair! What is the chair a solution to?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(1, this, false)">A) People needed something to look at</button>
+      <button class="option-btn" onclick="answer(1, this, true)">B) People had a problem — they needed a comfortable way to rest without sitting on the hard ground</button>
+      <button class="option-btn" onclick="answer(1, this, false)">C) People wanted something colorful in their home</button>
+      <button class="option-btn" onclick="answer(1, this, false)">D) People wanted to be taller</button>
+    </div>
+    <div class="feedback-box" id="fb1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" id="q2">
+    <span class="q-emoji">🐕</span>
+    <div class="q-num">Question 2 of 10</div>
+    <div class="q-text">Your dog keeps escaping through a gap in the fence. What is the PROBLEM an engineer would solve?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(2, this, false)">A) The dog needs more food</button>
+      <button class="option-btn" onclick="answer(2, this, true)">B) The yard isn't secure — the dog can get out through the gap and could get hurt or lost</button>
+      <button class="option-btn" onclick="answer(2, this, false)">C) The fence is the wrong color</button>
+      <button class="option-btn" onclick="answer(2, this, false)">D) The dog doesn't like the yard</button>
+    </div>
+    <div class="feedback-box" id="fb2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" id="q3">
+    <span class="q-emoji">❓</span>
+    <div class="q-num">Question 3 of 10</div>
+    <div class="q-text">Before engineers start building, they ask lots of questions. Why is asking questions so important?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(3, this, false)">A) To show how smart they are</button>
+      <button class="option-btn" onclick="answer(3, this, false)">B) Because they don't know anything</button>
+      <button class="option-btn" onclick="answer(3, this, true)">C) The more you understand the problem, the better your solution will be</button>
+      <button class="option-btn" onclick="answer(3, this, false)">D) Questions slow everything down</button>
+    </div>
+    <div class="feedback-box" id="fb3"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" id="q4">
+    <span class="q-emoji">🧪</span>
+    <div class="q-num">Question 4 of 10</div>
+    <div class="q-text">Before building a tool to carry 10 objects, an engineer tests: "How many fit in my cupped hands?" What is this called?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(4, this, false)">A) Wasting time</button>
+      <button class="option-btn" onclick="answer(4, this, false)">B) Guessing</button>
+      <button class="option-btn" onclick="answer(4, this, true)">C) Gathering information — learning real facts before you design</button>
+      <button class="option-btn" onclick="answer(4, this, false)">D) Building the first version</button>
+    </div>
+    <div class="feedback-box" id="fb4"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" id="q5">
+    <span class="q-emoji">✏️</span>
+    <div class="q-num">Question 5 of 10</div>
+    <div class="q-text">Real engineers draw their design before they build it. What is this drawing called?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(5, this, false)">A) A painting</button>
+      <button class="option-btn" onclick="answer(5, this, true)">B) A blueprint or engineering sketch</button>
+      <button class="option-btn" onclick="answer(5, this, false)">C) A test</button>
+      <button class="option-btn" onclick="answer(5, this, false)">D) A result</button>
+    </div>
+    <div class="feedback-box" id="fb5"></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" id="q6">
+    <span class="q-emoji">🌉</span>
+    <div class="q-num">Question 6 of 10</div>
+    <div class="q-text">You're designing a paper bridge. Your drawing shows labels like "road surface" and "support legs." Why are labels helpful?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(6, this, false)">A) Labels make the drawing look fancy</button>
+      <button class="option-btn" onclick="answer(6, this, false)">B) Labels are only for teachers</button>
+      <button class="option-btn" onclick="answer(6, this, true)">C) Labels explain what each part does so others can understand your plan — and so YOU remember it when you build</button>
+      <button class="option-btn" onclick="answer(6, this, false)">D) You have to label everything or it doesn't count</button>
+    </div>
+    <div class="feedback-box" id="fb6"></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" id="q7">
+    <span class="q-emoji">🏗️</span>
+    <div class="q-num">Question 7 of 10</div>
+    <div class="q-text">You built your paper bridge but it looks different from your drawing. Is that a problem?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(7, this, false)">A) Yes — you did it wrong and have to start over</button>
+      <button class="option-btn" onclick="answer(7, this, false)">B) Yes — your drawing must have been wrong</button>
+      <button class="option-btn" onclick="answer(7, this, true)">C) No! The differences between your drawing and your built bridge are the most interesting part — they teach you how materials really work</button>
+      <button class="option-btn" onclick="answer(7, this, false)">D) Yes — you should always match your drawing exactly</button>
+    </div>
+    <div class="feedback-box" id="fb7"></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" id="q8">
+    <span class="q-emoji">📋</span>
+    <div class="q-num">Question 8 of 10</div>
+    <div class="q-text">You test your bridge and it collapses. An engineer would say:</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(8, this, false)">A) "I failed. I'm done."</button>
+      <button class="option-btn" onclick="answer(8, this, false)">B) "Building is too hard."</button>
+      <button class="option-btn" onclick="answer(8, this, true)">C) "Great — now I know what doesn't work! I can use this to make Version 2 better."</button>
+      <button class="option-btn" onclick="answer(8, this, false)">D) "The test was unfair."</button>
+    </div>
+    <div class="feedback-box" id="fb8"></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" id="q9">
+    <span class="q-emoji">🔄</span>
+    <div class="q-num">Question 9 of 10</div>
+    <div class="q-text">An engineer tests their design, finds a problem, makes one change, and tests again. What is this cycle called?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(9, this, false)">A) Giving up</button>
+      <button class="option-btn" onclick="answer(9, this, false)">B) Starting over from scratch every time</button>
+      <button class="option-btn" onclick="answer(9, this, true)">C) Iteration — Design → Build → Test → Improve → Repeat!</button>
+      <button class="option-btn" onclick="answer(9, this, false)">D) Guessing</button>
+    </div>
+    <div class="feedback-box" id="fb9"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" id="q10">
+    <span class="q-emoji">🎤</span>
+    <div class="q-num">Question 10 of 10</div>
+    <div class="q-text">You've finished your bridge and it works! What do real engineers do next to finish the process?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(10, this, false)">A) Throw the bridge away</button>
+      <button class="option-btn" onclick="answer(10, this, false)">B) Keep it a secret so no one copies it</button>
+      <button class="option-btn" onclick="answer(10, this, true)">C) Present and share their work — explain the problem, the design, the test results, and what they learned</button>
+      <button class="option-btn" onclick="answer(10, this, false)">D) Build three more exactly the same</button>
+    </div>
+    <div class="feedback-box" id="fb10"></div>
+  </div>
+
+  <!-- Results -->
+  <div id="results-section">
+    <span class="result-emoji" id="resultEmoji"></span>
+    <div class="result-score" id="resultScore"></div>
+    <div class="result-message" id="resultMessage"></div>
+    <button class="restart-btn" onclick="restartQuiz()">🔄 Try Again!</button>
+  </div>
+
+  <a class="back-link" href="k-ets1-unit1-lesson1-what-is-a-problem.html">← Back to Unit 1, Lesson 1</a>
+</div>
+
+<script>
+  const TOTAL = 10;
+  let answered = 0;
+  let correct = 0;
+
+  const feedbacks = {
+    1: {
+      right: "✅ Yes! Every invention starts with a problem. The chair solved the problem of needing a comfortable way to rest. Engineers are professional problem-solvers!",
+      wrong: "The correct answer is B. Every object around us was invented because someone had a problem. A chair was invented because people needed a comfortable way to rest — that's the problem it solves!"
+    },
+    2: {
+      right: "✅ Spot on! The problem is that the yard isn't secure and the dog could get hurt or lost. A good engineer would figure out what a solution needs to do — like: be secure, not hurt the dog, and let people in and out.",
+      wrong: "The correct answer is B. The real problem is that the yard isn't secure — the dog can escape and get hurt. Identifying the real problem is the first step for any engineer!"
+    },
+    3: {
+      right: "✅ Exactly right! Great engineers ask questions FIRST. The more you understand the problem — how big, how heavy, what are the limits — the better your solution will be.",
+      wrong: "The correct answer is C. Real engineers ask lots of questions before touching a single material. Understanding the problem deeply leads to much better solutions!"
+    },
+    4: {
+      right: "✅ That's right! Testing before building is called gathering information. You learned real facts — how many fit, how they move — that you couldn't just guess. This makes your design much better!",
+      wrong: "The correct answer is C. Testing before building is gathering information. Real engineers test and observe first so they design based on real facts, not guesses!"
+    },
+    5: {
+      right: "✅ You got it! A blueprint or engineering sketch is the drawing engineers make before building. It helps them see if their idea makes sense and plan what they need.",
+      wrong: "The correct answer is B. Engineers call their design drawing a blueprint or sketch. Before the Golden Gate Bridge was built, engineers spent years drawing and planning on paper first!"
+    },
+    6: {
+      right: "✅ Perfect! Labels tell you and others what each part of your design does. In a design review, you explain your labeled drawing so others can spot problems before you build — saving time and materials!",
+      wrong: "The correct answer is C. Labels explain what each part does. This helps you remember your plan when you build, and lets others understand your design — just like real engineering design reviews!"
+    },
+    7: {
+      right: "✅ Exactly! Engineers know that the first built version almost never looks exactly like the drawing. That's completely normal! The differences teach you things you couldn't learn any other way.",
+      wrong: "The correct answer is C. The differences between your drawing and your built bridge are the most valuable part! They show you how materials really behave — things you could only learn by building."
+    },
+    8: {
+      right: "✅ That's real engineering thinking! Engineers call this \"failing forward.\" A failed test isn't wasted time — it's data. It tells you exactly what to fix for Version 2!",
+      wrong: "The correct answer is C. Engineers say \"fail forward!\" A failed test gives you information you couldn't get any other way. It tells you what to change to make Version 2 better. That's not failure — that's science!"
+    },
+    9: {
+      right: "✅ You know the engineering cycle! Design → Build → Test → Improve → Repeat. This is called iteration. Every version gets better because you're using real information from the test before!",
+      wrong: "The correct answer is C. This is called iteration — the engineering cycle of Design, Build, Test, Improve, and Repeat. Version 2 is always better than Version 1 because it uses real test data!"
+    },
+    10: {
+      right: "✅ Real engineers share their work! Presenting your design — the problem, your process, your test results, and what you learned — is how engineering knowledge spreads and helps others.",
+      wrong: "The correct answer is C. Engineering doesn't end when you build something! Real engineers present their work — explaining the problem, their design, how they tested it, and what they learned. That's the engineering showcase!"
+    }
+  };
+
+  const tiers = [
+    { min: 9, emoji: "🏆", message: "Master Engineer! You understand the full design process — problem, questions, sketch, build, test, improve, and share. You're ready to build anything!" },
+    { min: 7, emoji: "🌟", message: "Excellent Engineer! You really understand how engineers think and solve problems. Keep building and designing!" },
+    { min: 5, emoji: "🔧", message: "Good work, Engineer! You're learning the design process. Keep asking questions and trying again!" },
+    { min: 3, emoji: "📐", message: "Nice effort! Go back and review the lessons — then come back and try again. Real engineers never stop learning!" },
+    { min: 0, emoji: "🛠️", message: "Every engineer starts somewhere! Review the lessons and try again — you've got this!" }
+  ];
+
+  function answer(qNum, btn, isCorrect) {
+    const card = document.getElementById('q' + qNum);
+    const fb   = document.getElementById('fb' + qNum);
+    if (card.classList.contains('answered-correct') || card.classList.contains('answered-wrong')) return;
+
+    card.querySelectorAll('.option-btn').forEach(b => {
+      b.disabled = true;
+      if (b === btn && isCorrect)  { b.classList.add('correct'); }
+      if (b === btn && !isCorrect) { b.classList.add('wrong'); }
+    });
+
+    if (!isCorrect) {
+      card.querySelectorAll('.option-btn').forEach(b => {
+        if (b.getAttribute('onclick').includes(', true)')) b.classList.add('correct');
+      });
+    }
+
+    const data = feedbacks[qNum];
+    if (isCorrect) {
+      card.classList.add('answered-correct');
+      fb.classList.add('correct');
+      fb.innerHTML = '<div class="fb-label">🎉 Correct!</div>' + data.right;
+      correct++;
+    } else {
+      card.classList.add('answered-wrong');
+      fb.classList.add('wrong');
+      fb.innerHTML = '<div class="fb-label">Not quite…</div>' + data.wrong;
+    }
+
+    answered++;
+    document.getElementById('scoreBar').textContent = 'Score: ' + correct + ' / ' + answered + ' answered';
+
+    if (answered === TOTAL) showResults();
+  }
+
+  function showResults() {
+    const section = document.getElementById('results-section');
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    const tier = tiers.find(t => correct >= t.min);
+    document.getElementById('resultEmoji').textContent   = tier.emoji;
+    document.getElementById('resultScore').textContent   = correct + ' out of ' + TOTAL + ' correct!';
+    document.getElementById('resultMessage').textContent = tier.message;
+  }
+
+  function restartQuiz() {
+    answered = 0; correct = 0;
+    document.getElementById('scoreBar').textContent = 'Score: 0 / 0 answered';
+    document.getElementById('results-section').style.display = 'none';
+
+    for (let i = 1; i <= TOTAL; i++) {
+      const card = document.getElementById('q' + i);
+      const fb   = document.getElementById('fb' + i);
+      card.classList.remove('answered-correct', 'answered-wrong');
+      fb.classList.remove('correct', 'wrong');
+      fb.innerHTML = '';
+      card.querySelectorAll('.option-btn').forEach(b => {
+        b.disabled = false;
+        b.classList.remove('correct', 'wrong');
+      });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_N0ZUEWGktYU" data-content-selector="body"></script>
+</body>
+</html>

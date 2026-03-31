@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design a Sun Shelter — Plan — K-PS3 Unit 2, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #0288d1;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #0d47a1; }
+    .engineering-box {
+      background: #fff3e0;
+      border: 2px solid #ff9800;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .engineering-box h3 { color: #e65100; border-color: #ffcc80; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .discussion-hint {
+      font-style: italic;
+      color: #0d47a1;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid #0288d1;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .worksheet-box {
+      border: 3px solid #1565c0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #fafafa;
+    }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .design-box {
+      border: 3px dashed #1565c0;
+      border-radius: 10px;
+      min-height: 240px;
+      background: white;
+      margin: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 10pt;
+      font-style: italic;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .materials-checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .mat-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid #90caf9;
+      border-radius: 8px;
+      padding: 10px;
+      background: white;
+      font-size: 11pt;
+    }
+    .checkbox {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #1565c0;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .engineering-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_ibIEzPFLmZw">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🏗️ Design a Sun Shelter — Part 1: Plan! 🏗️</h1>
+  <p class="subtitle">Physical Science — Sunshine &amp; Warmth — Unit 2, Lesson 5 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Sunshine &amp; Warmth</span>
+    <span>🔢 <strong>Lesson:</strong> 5 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">✏️ 📐 🏠</div>
+    <div class="caption">Every great building starts with a plan. Today we design — next lesson we build!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS3-2</strong> — Use tools and materials provided to design and build a structure that will reduce the warming effect of sunlight on an area
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>We've spent four lessons learning HOW sunlight warms surfaces. Now it's time to use that knowledge to <strong>solve a real problem</strong>! Scientists and engineers use what they know to design solutions. Today, students will think like engineers: identify the problem, gather ideas, choose materials, make a plan, and draw their design before they build it. <em>Planning before building leads to better results!</em></p>
+
+  <div class="engineering-box">
+    <h3>🔧 The Engineering Design Challenge</h3>
+    <p style="font-size:13pt; margin:0;"><strong>"Design a shelter that keeps a small toy animal cool on a hot sunny day."</strong></p>
+    <p style="margin:8px 0 0 0; font-size:10pt; color:#555;">Available building materials for Lesson 6: paper, cardboard, aluminum foil, fabric scraps, tape</p>
+  </div>
+
+  <h2>🔬 The Science Behind Good Design</h2>
+  <p>Everything we've learned applies to this challenge:</p>
+  <ul>
+    <li>🎨 <strong>Color:</strong> Light colors reflect sunlight; use white or silver (foil) on the outside</li>
+    <li>🔺 <strong>Shape:</strong> A pointed or sloped roof sheds heat and allows hot air to rise and escape</li>
+    <li>🌬️ <strong>Ventilation:</strong> Small gaps or openings let trapped hot air escape</li>
+    <li>🧱 <strong>Walls:</strong> Thick walls act as insulation, slowing heat transfer</li>
+    <li>🌿 <strong>Shade:</strong> The bigger the shadow your shelter casts, the cooler the area underneath</li>
+  </ul>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> design, engineer, shelter, reflect, insulate, ventilation, materials, plan, predict
+  </div>
+
+  <h2>📦 Materials for Planning Today</h2>
+  <div class="materials-box">
+    <h3>📝 What You Need for the Plan</h3>
+    <ul>
+      <li>Student worksheet / design sheet (included)</li>
+      <li>Pencils and crayons</li>
+      <li>Ruler (optional, for drawing straight lines)</li>
+    </ul>
+    <h3>🏗️ Building Materials Available for Lesson 6</h3>
+    <ul>
+      <li>Cardboard scraps (from cereal boxes, etc.)</li>
+      <li>White and colored paper</li>
+      <li>Aluminum foil</li>
+      <li>Fabric scraps</li>
+      <li>Tape (masking or clear)</li>
+      <li>Scissors</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Review What We've Learned (5 min)</strong><br>
+    Before designing, briefly review the key lessons:<br>
+    <ul>
+      <li><em>"What color works best to stay cool?"</em> → Light colors or shiny silver (reflects light)</li>
+      <li><em>"Does shade help?"</em> → Yes! Blocking direct sunlight is the most important thing</li>
+      <li><em>"Did foil keep the ice cool in Lesson 4?"</em> → Yes! Because it reflects sunlight</li>
+    </ul>
+    Use this knowledge in your design!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Brainstorm (5–10 min)</strong><br>
+    Ask: <em>"What shape should the shelter be? What color? What should it be made of?"</em><br>
+    Encourage them to think about:<br>
+    <ul>
+      <li>A roof that slopes (sheds heat, like a real house)</li>
+      <li>Light colors or foil on the outside surface</li>
+      <li>A design that would shade the toy animal completely</li>
+    </ul>
+    Let them sketch rough ideas first — even just shapes and colors.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Create the Design Plan (15–20 min)</strong><br>
+    Students draw their shelter design on the worksheet. They should:<br>
+    <ul>
+      <li>Draw the shelter from the side (side view)</li>
+      <li>Draw the toy animal inside it</li>
+      <li>Label or color the materials they'll use</li>
+      <li>Check off which building materials they want to use</li>
+      <li>Write or dictate a prediction: <em>"My shelter will work because ___"</em></li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Share &amp; Discuss (5 min)</strong><br>
+    Have each student share their design. Ask:<br>
+    <em>"Why did you choose that color? Why that shape?"</em><br>
+    Help them make connections to the science: <em>"Your foil roof will reflect sunlight — just like foil kept ice cool in our melting race!"</em>
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ "A white roof and a black roof are both in the sun. Which house do you think is cooler inside?"</strong>
+    <p class="discussion-hint">→ The white roof house! White reflects sunlight while black absorbs it, turning that light energy into heat that enters the building. That's why many buildings in hot climates (like in Greece, Spain, and the Middle East) have brilliant white roofs! Green roofs covered in plants work well too — plants use sunlight for photosynthesis instead of turning it all into heat, and water in the plants evaporates, cooling the area (just like our wet cloth in Lesson 1).</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌍 <strong>Real Architecture:</strong> Look up photos of houses in Santorini, Greece (white), or desert adobe homes (thick clay walls). How do their designs keep people cool?</li>
+      <li>🌿 <strong>Green Roofs:</strong> Search for "green roof buildings" — some city buildings have gardens on their roofs! Why would plants help keep buildings cool?</li>
+      <li>🏜️ <strong>Ancient Wisdom:</strong> Ancient people in hot deserts built thick-walled mud brick homes to stay cool. Why do thick walls help? (They slow heat transfer from outside to inside.)</li>
+      <li>✏️ <strong>Draw More Designs:</strong> Can you design two different shelters using different approaches? Which do you think would work better?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is a 2-part lesson:</strong> Lesson 5 = Plan, Lesson 6 = Build &amp; Test. Today's goal is fully fleshed-out design plans, not a complete shelter.</li>
+      <li><strong>Encourage creativity:</strong> There's no single right answer! A child who designs a white-roofed box with foil walls is applying science. So is one who designs a pointed tent-shape from white paper.</li>
+      <li><strong>Science-based reasoning:</strong> Gently push kids to connect their design choices to what they learned. "Why white?" "Why that shape?" The reasoning is as important as the design itself.</li>
+      <li><strong>Save the plans:</strong> They'll refer back to them in Lesson 6 when they actually build!</li>
+      <li><strong>Assessment:</strong> Can the child explain at least one design choice using science? (e.g., "I'm using foil because it reflects sun") That's K-PS3-2 in action.</li>
+    </ul>
+  </div>
+
+  <!-- WORKSHEET PAGE -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2 style="text-align:center; background:#1565c0;">🏗️ Student Worksheet</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>✏️ Draw Your Shelter Design:</h3>
+      <p style="font-size:10pt; color:#555;">Draw your shelter from the <em>side</em>. Show the toy animal inside. Color and label the materials you'll use!</p>
+      <div class="design-box">
+        <span style="font-size:24pt;">🏗️</span>
+        <span>Draw your shelter design here!</span>
+        <span>Show the toy animal inside 🧸</span>
+      </div>
+
+      <h3>🧰 Materials I Plan to Use:</h3>
+      <p style="font-size:10pt; color:#555;">Check all the materials you want to use to build your shelter:</p>
+      <div class="materials-checklist">
+        <div class="mat-check"><div class="checkbox"></div> 📦 Cardboard</div>
+        <div class="mat-check"><div class="checkbox"></div> 📄 White Paper</div>
+        <div class="mat-check"><div class="checkbox"></div> 🪩 Aluminum Foil</div>
+        <div class="mat-check"><div class="checkbox"></div> 🧶 Fabric Scraps</div>
+        <div class="mat-check"><div class="checkbox"></div> 🖍️ Colored Paper</div>
+        <div class="mat-check"><div class="checkbox"></div> 🖊️ Tape</div>
+      </div>
+
+      <h3>🔬 My Prediction:</h3>
+      <p style="font-size:12pt; line-height:2;">My shelter will keep the animal cool because: <span style="border-bottom:2px solid #1565c0; display:block; margin-top:4px; height:32px;">&nbsp;</span></p>
+      <p style="font-size:12pt; line-height:2; margin-top:10px;">The most important part of my design is: <span style="border-bottom:2px solid #1565c0; display:block; margin-top:4px; height:32px;">&nbsp;</span></p>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY PAGE -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Reference Guide</h2>
+
+      <h3>What Makes a Strong Design?</h3>
+      <p>There's no single "correct" design — but look for these science-based reasoning elements:</p>
+      <table style="width:100%; border-collapse:collapse; font-size:10pt;">
+        <tr style="background:#e3f2fd;">
+          <th style="border:2px solid #90caf9; padding:8px;">Design Feature</th>
+          <th style="border:2px solid #90caf9; padding:8px;">Why It Works (Science)</th>
+          <th style="border:2px solid #90caf9; padding:8px;">Materials That Help</th>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Light/white outer surface</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Reflects sunlight, absorbs less heat</td>
+          <td style="border:2px solid #90caf9; padding:8px;">White paper, foil</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Sloped or pointed roof</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Sheds heat, lets hot air rise and escape</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Any material shaped into a slope</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Foil lining</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Reflects radiant heat, great insulator</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Aluminum foil</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Good overall coverage</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Blocks all direct sunlight from reaching animal</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Cardboard, fabric, paper</td>
+        </tr>
+        <tr>
+          <td style="border:2px solid #90caf9; padding:8px;">Ventilation gaps</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Trapped hot air escapes, cool air enters</td>
+          <td style="border:2px solid #90caf9; padding:8px;">Leave small openings in design</td>
+        </tr>
+      </table>
+
+      <h3>💡 Engineering Notes for Parents</h3>
+      <p>The engineering design process has 5 stages: <strong>Ask → Imagine → Plan → Create → Improve</strong>. This lesson covers Ask, Imagine, and Plan. Lesson 6 covers Create and Improve. Expect designs to be imperfect — that's normal and valuable! The real learning happens when they test in Lesson 6 and have to improve their design.</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child produces a drawing of a shelter with the toy animal inside</li>
+        <li>Child can explain at least one design choice using science from previous lessons</li>
+        <li>Child has identified which materials they'll use</li>
+        <li>Child makes a testable prediction: "My shelter will work because..."</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_ibIEzPFLmZw" data-content-selector="body"></script>
+</body>
+</html>

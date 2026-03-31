@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunlight or No Sunlight? — Unit 2, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #81c784;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f9fbe7;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      margin-left: 10px;
+      display: block;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f1f8e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #1b5e20; }
+    .extension-box {
+      background: #e8f5e9;
+      border: 1px solid #81c784;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .vocab-tag {
+      display: inline-block;
+      background: #2e7d32;
+      color: white;
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 9.5pt;
+      margin: 2px 3px;
+      font-weight: bold;
+    }
+    /* Worksheet styles */
+    .worksheet-header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .plant-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .plant-box {
+      border: 3px solid #2e7d32;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .plant-box.sunny { background: #fffde7; border-color: #f9a825; }
+    .plant-box.dark  { background: #f5f5f5; border-color: #757575; }
+    .plant-box .plant-label {
+      font-size: 14pt;
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .plant-box.sunny .plant-label { color: #f57f17; }
+    .plant-box.dark  .plant-label { color: #424242; }
+    .drawing-area {
+      border: 2px dashed #bbb;
+      border-radius: 8px;
+      height: 200px;
+      background: white;
+      margin-top: 8px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 6px;
+    }
+    .drawing-area span {
+      font-size: 9pt;
+      color: #bbb;
+      font-style: italic;
+    }
+    .observation-section {
+      background: #e8f5e9;
+      border: 2px solid #81c784;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+    }
+    .observation-section h3 { color: #2e7d32; border-color: #a5d6a7; }
+    .write-line {
+      border-bottom: 1px solid #aaa;
+      height: 32px;
+      margin: 6px 0;
+    }
+    .circle-choice {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 14px 0;
+      font-size: 13pt;
+    }
+    .circle-option {
+      border: 3px solid #2e7d32;
+      border-radius: 40px;
+      padding: 8px 22px;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+    /* Answer Key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key h3 { color: #333; border-color: #bbb; }
+    .answer-key ul { list-style: none; padding-left: 0; }
+    .answer-key li { padding: 4px 0; }
+    .answer-key li::before { content: "✅ "; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .plant-compare {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_SUYaI9Y1EWw">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌞 Sunlight or No Sunlight? 🌱</h1>
+  <p class="subtitle">Life Science — Unit 2, Lesson 4 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌿 <strong>Subject:</strong> Life Science — Plants &amp; Seeds</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️🌿 🆚 🌑🌿</div>
+    <div class="caption">Two plants. Same water. But only one gets sunlight — what do you think will happen?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Plants are amazing — they make their own food! But to do that, they need <strong>sunlight</strong>. In this lesson, your kids will set up a simple experiment: one plant in a sunny spot, one in the dark. Over 3–5 days, they'll observe what happens and discover firsthand why sunlight is so important for plants.</p>
+
+  <div class="tip-box">
+    💡 <strong>Learning Objective:</strong> Students will observe what happens when a plant doesn't get sunlight and conclude that plants need light to survive.
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <p>Plants use sunlight, water, and air to make their own food — this process is called <strong>photosynthesis</strong>. It happens inside the green parts of a plant (the leaves!). When a plant doesn't get enough sunlight, it can't make food. It gets weak, pale, and stretched out — reaching desperately toward any light it can find.</p>
+  <p>A plant left in complete darkness will start to look very different from one in a sunny window: it turns pale yellow or white, grows tall and spindly (scientists call this <em>etiolated</em>), and eventually droops. It's not dead — but it's definitely not healthy.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong>
+    <span class="vocab-tag">photosynthesis</span>
+    <span class="vocab-tag">sunlight</span>
+    <span class="vocab-tag">energy</span>
+    <span class="vocab-tag">survive</span>
+    <span class="vocab-tag">observe</span>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🌱 Plants</h3>
+    <ul>
+      <li>Two small potted plants (roughly the same size) <em>or</em> use the bean sprouts from Lesson 2 if they've grown!</li>
+      <li>If using bean sprouts: pick two cups that look similar in size and health</li>
+    </ul>
+    <h3>🏠 Setup Supplies</h3>
+    <ul>
+      <li>A sunny windowsill or bright spot (Plant A)</li>
+      <li>A dark closet — or even better, a cardboard box with a lid (Plant B)</li>
+      <li>Water &amp; a small cup for watering</li>
+      <li>Observation journal or a blank notebook</li>
+      <li>Pencil and crayons for drawing observations</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Set Up the Experiment FIRST (5 min)</strong><br>
+    Before anything else, get the experiment going — it needs 3–5 days to work!
+    <ul>
+      <li>Label two plants (or cups): <strong>"Sunny"</strong> and <strong>"Dark"</strong></li>
+      <li>Place the "Sunny" plant on the brightest windowsill you have</li>
+      <li>Put the "Dark" plant in a closet, or better yet, inside a cardboard box with the lid closed</li>
+      <li>Water <em>both</em> plants the same amount right now</li>
+    </ul>
+    Say: <em>"We're going to let these plants sit for a few days and then see what happened. We're scientists making a prediction — what do you think will happen to the dark plant?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Make a Prediction (5 min)</strong><br>
+    In their observation journal, kids draw both plants as they look <em>right now</em> (they should look the same!). Ask:<br>
+    <em>"Draw what you think each plant will look like in 3 days. Will they be the same? Or different?"</em><br>
+    Write or dictate their prediction underneath.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Talk About What Plants Need (10 min)</strong><br>
+    While the experiment runs, discuss! Use the questions below. Cover the key ideas:
+    <ul>
+      <li>Plants need water, air, and <strong>sunlight</strong> to survive</li>
+      <li>Sunlight gives plants the energy to make their food (photosynthesis!)</li>
+      <li>Without sunlight, a plant can't make food — and gets weak</li>
+    </ul>
+    Try this: turn off the lights in the room for a moment. Say: <em>"Imagine living in the dark all the time — with no food. How would you feel? That's how the plant in the box feels!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Daily Check-Ins (over 3–5 days)</strong><br>
+    Each day, take a quick peek at the sunny plant and open the box for the dark plant. Ask kids:
+    <ul>
+      <li><em>"Has anything changed?"</em></li>
+      <li><em>"What color is it? Is it standing up straight or drooping?"</em></li>
+    </ul>
+    Draw a quick sketch in the observation journal each day. Water both plants the same amount.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Big Reveal: Side-by-Side Comparison (in Lesson 5 or 6)</strong><br>
+    After 3–5 days, bring both plants out and put them next to each other. Let the kids look closely. Then complete the Student Worksheet: draw both plants side by side and circle which one looks healthier.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Wrap Up (5 min)</strong><br>
+    Ask: <em>"So what do plants need that the dark plant wasn't getting?"</em> Guide kids to say: <strong>SUNLIGHT!</strong><br>
+    Introduce the word <em>photosynthesis</em>: <em>"Plants make their own food using sunlight — that's called photosynthesis. Pretty cool, right?"</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "The plant in the dark is still alive — but does it look healthy? What's different?"
+    <span class="discussion-hint">💬 <em>The dark plant looks pale and stretched out because it's reaching for light. Plants need sunlight to make their food through their leaves — that's photosynthesis. Without it, they get weak and can't stay healthy. They're still alive, but just barely hanging on!</em></span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "What would happen if all the clouds blocked the sun for a whole year?"
+    <span class="discussion-hint">💬 <em>Without sunlight, plants couldn't make their food and would die. Without plants, animals that eat plants would lose their food. Even meat-eating animals would eventually run out of food too. Everything in nature is connected — sunlight is the very beginning of almost all food on Earth! (This is called a food chain — a fun preview for later lessons.)</em></span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌀 <strong>Partial Light Test:</strong> Try a third plant — put it in a dim corner (not totally dark, not sunny). Where does it end up compared to the other two?</li>
+      <li>🌿 <strong>Leaf Rubbings:</strong> Place a leaf under paper and rub a crayon over it. Look at the veins — those carry water and sugars made by photosynthesis!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A Seed Is Sleepy"</em> by Dianna Hutts Aston or <em>"From Seed to Plant"</em> by Gail Gibbons</li>
+      <li>🎨 <strong>Color Sorting:</strong> Look at pictures of healthy plants (green, upright) and unhealthy plants (yellow, droopy). Sort them: "Enough sunlight" vs. "Not enough sunlight"</li>
+      <li>🔭 <strong>Grow Toward the Light:</strong> Put a plant near a window for a week and watch it lean toward the light. This is called <em>phototropism</em> — another bonus word for curious kids!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>⚡ Start the experiment FIRST:</strong> Do Step 1 at the very beginning of the lesson — the experiment takes 3–5 days to show results. Final observations happen in Lesson 5 or 6, so plan accordingly.</li>
+      <li><strong>📦 Box beats closet:</strong> A cardboard box with a lid works better than a closet — it's completely dark, stays the same temperature, and is easy for kids to peek inside without flooding the plant with light each time.</li>
+      <li><strong>🫘 Lesson 2 connection:</strong> Check on the 3-cup experiment from Lesson 2 (seed, no water, no soil). Which cups have sprouted? Compare notes — seeds need water to germinate, but plants need sunlight to keep growing.</li>
+      <li><strong>🔬 Introduce photosynthesis gently:</strong> Don't shy away from the big word! Say it a few times and make it fun: <em>"Photo means light, and synthesis means making — so photosynthesis means making food with light!"</em></li>
+      <li><strong>🌿 Fun bonus word:</strong> The pale, leggy, stretched-out look of a plant grown in the dark has a scientific name: <em>etiolated</em>. You don't need to teach it, but curious parents may enjoy knowing it!</li>
+      <li><strong>✅ Assessment:</strong> Can the child explain that plants need sunlight to stay healthy? Can they point to the healthier plant and say why it looks better? That's the win.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🌞 My Plant Observation 🌱</h1>
+    <p class="subtitle">Sunlight or No Sunlight? — Worksheet</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:12px;">After 3–5 days, draw what each plant looks like. Then answer the questions below!</p>
+
+    <div class="plant-compare">
+      <div class="plant-box sunny">
+        <span class="plant-label">☀️ Sunny Plant</span>
+        <p style="font-size:9.5pt; color:#888; margin:2px 0 6px 0;">This plant was on the windowsill</p>
+        <div class="drawing-area"><span>Draw here ✏️</span></div>
+      </div>
+      <div class="plant-box dark">
+        <span class="plant-label">🌑 Dark Plant</span>
+        <p style="font-size:9.5pt; color:#888; margin:2px 0 6px 0;">This plant was in the dark box</p>
+        <div class="drawing-area"><span>Draw here ✏️</span></div>
+      </div>
+    </div>
+
+    <div class="observation-section">
+      <h3>🔍 What did you notice?</h3>
+      <p style="font-size:10.5pt; margin-bottom:4px;">Write or tell one difference between the two plants:</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+
+      <p style="font-size:11pt; margin-top:16px; margin-bottom:8px;"><strong>Circle the plant that looks healthier:</strong></p>
+      <div class="circle-choice">
+        <div class="circle-option" style="border-color:#f9a825; color:#f57f17;">☀️ Sunny Plant</div>
+        <span style="font-size:13pt; color:#999;">or</span>
+        <div class="circle-option" style="border-color:#757575; color:#424242;">🌑 Dark Plant</div>
+      </div>
+
+      <p style="font-size:11pt; margin-top:16px; margin-bottom:4px;"><strong>Why does the plant need sunlight?</strong> (write, draw, or dictate)</p>
+      <div class="write-line"></div>
+      <div class="write-line"></div>
+    </div>
+
+    <div class="tip-box" style="margin-top:16px;">
+      🌿 <strong>Big word I learned today:</strong> &nbsp;
+      <span style="font-size:14pt; font-weight:bold; color:#2e7d32;">Photosynthesis</span>
+      &nbsp;— plants make their own food using sunlight! ☀️🍃
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>📋 PARENT / TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🌿 What to Look For After 3–5 Days</h3>
+      <ul>
+        <li>The <strong>Sunny Plant</strong> should look green, upright, and healthy — maybe even a little bigger</li>
+        <li>The <strong>Dark Plant</strong> will look pale (yellow or white), stretched tall and spindly, and possibly droopy or leaning</li>
+        <li>Both were watered equally — the only variable was sunlight</li>
+      </ul>
+
+      <h3>☀️ Why the Dark Plant Looks Different</h3>
+      <p style="font-size:10pt;">Without sunlight, the plant cannot perform <strong>photosynthesis</strong> — the process by which it makes its own food using light energy. The plant stretches toward any available light source (a behavior called <em>phototropism</em>), causing it to grow tall and thin. It loses its green color (chlorophyll breaks down without sunlight) and becomes pale. The plant is alive, but weak and unable to thrive.</p>
+
+      <h3>✅ Worksheet Expected Answers</h3>
+      <ul>
+        <li>One observed difference (any valid observation): "The dark plant is yellow," "The sunny plant is greener," "The dark plant is taller and droopy," "The sunny plant looks stronger"</li>
+        <li><strong>Circle the healthier plant:</strong> ☀️ Sunny Plant</li>
+        <li>Why does the plant need sunlight: "To make food" / "To stay green and strong" / "So it can grow"</li>
+      </ul>
+
+      <h3>💬 Discussion Question Answers</h3>
+      <p style="font-size:10pt;"><strong>Q1 — "The plant in the dark is still alive — but does it look healthy?"</strong><br>
+      Expected: No! The dark plant looks pale, stretched, and droopy. Plants need sunlight to make their food (photosynthesis), so without light they get weak even if they still have water.</p>
+      <p style="font-size:10pt; margin-top:8px;"><strong>Q2 — "What would happen if all the clouds blocked the sun for a whole year?"</strong><br>
+      Expected: Plants would die without sunlight. Then animals that eat plants would lose their food. Eventually all living things would be affected. Sunlight is the energy source at the base of almost all food chains on Earth.</p>
+
+      <h3>🔬 Vocabulary Check</h3>
+      <ul>
+        <li><strong>Photosynthesis:</strong> The process plants use to make food from sunlight, water, and air</li>
+        <li><strong>Sunlight / Energy:</strong> The source of power plants need to run photosynthesis</li>
+        <li><strong>Survive:</strong> To stay alive and healthy; what plants (and animals!) are trying to do</li>
+        <li><strong>Etiolated (bonus!):</strong> The scientific word for a pale, leggy plant grown without enough light</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can correctly identify the sunny plant as healthier</li>
+        <li>Child can describe at least one visible difference between the two plants</li>
+        <li>Child can say (in their own words) that plants need sunlight to survive</li>
+        <li>Bonus: Child can use (or recognize) the word "photosynthesis"</li>
+      </ul>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_SUYaI9Y1EWw" data-content-selector="body"></script>
+</body>
+</html>

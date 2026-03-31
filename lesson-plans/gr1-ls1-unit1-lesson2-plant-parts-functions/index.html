@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roots, Stems, Leaves, Flowers — What Each Part Does — Life Science Unit 1, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Plant part cards */
+    .part-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 15px 0;
+    }
+    .part-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+    .part-card .emoji { font-size: 34pt; display: block; margin-bottom: 6px; }
+    .part-card .part-name { font-weight: bold; color: #1b5e20; font-size: 12pt; }
+    .part-card .function { color: #333; font-size: 10pt; margin-top: 6px; line-height: 1.4; }
+    .part-card .fun-fact { color: #00B894; font-size: 9pt; margin-top: 6px; font-style: italic; }
+    /* Matching section */
+    .matching-section {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+      align-items: flex-start;
+    }
+    .matching-col { flex: 1; }
+    .matching-col h3 { text-align: center; }
+    .match-item {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .match-item .emoji { font-size: 22pt; display: block; margin-bottom: 4px; }
+    .match-item .label { font-weight: bold; color: #1b5e20; }
+    .match-problem {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .match-problem .label { color: #e65100; }
+    /* Design draw box */
+    .draw-box {
+      border: 3px dashed #2e7d32;
+      border-radius: 10px;
+      min-height: 200px;
+      margin: 12px 0;
+      padding: 10px;
+      position: relative;
+    }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .draw-box .draw-prompts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .draw-prompt-line {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin-top: 6px;
+      font-size: 9pt;
+      color: #aaa;
+    }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 200px;
+      margin: 0 4px;
+    }
+    /* Worksheet */
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .ak-box h3 { color: #1b5e20; border-color: #a5d6a7; text-align: center; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 4px 0; font-size: 10pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .part-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_9u7CrZd63gE">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌱 Roots, Stems, Leaves, Flowers — What Each Part Does 🌸</h1>
+  <p class="subtitle">Life Science Unit 1, Lesson 2</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plant Structures</span>
+    <span>📖 <strong>Lesson:</strong> 2 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌷🌿🌱🌺🍃</div>
+    <div class="caption">Every part of a plant has a job — and plants figured out how to survive without a mouth, stomach, or legs!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>1-LS1-1</strong> — Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>identify</strong> the four main plant parts and <strong>explain</strong> the survival function of each part.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Plants are survival experts — but they do everything differently than animals. They can't chase food, run from danger, or drink from a stream. Instead, each plant part is perfectly designed for a specific job. Together, these parts help the plant get water, make food, and make more plants.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> roots, stem, leaves, flower, photosynthesis, nutrients, absorb, pollinator, reproduce
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>A real houseplant, herb (basil, mint, parsley), or a weed from outside — <em>optional but great!</em></li>
+      <li>Paper and crayons (for the drawing activity)</li>
+      <li>A cup of water (for the stem demonstration — see Teacher Notes)</li>
+      <li>A celery stalk with leaves — <em>optional extension activity</em></li>
+      <li>Food coloring — <em>optional, for colored water celery demo</em></li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No plant? No problem — describe the parts from the drawings on this page!</em></p>
+  </div>
+
+  <h2>🔬 Part 1 — Meet the Four Plant Parts (15 min)</h2>
+  <p>Look at a real plant together, or study the descriptions below. For each part, ask: <em>"What job does this part do to help the plant survive?"</em></p>
+
+  <div class="part-cards">
+    <div class="part-card" style="border-color: #795548;">
+      <span class="emoji">🌰</span>
+      <span class="part-name">Roots</span>
+      <div class="function">
+        <strong>Two jobs:</strong><br>
+        (1) <em>Anchor</em> the plant in the soil so it doesn't blow away or fall over.<br>
+        (2) <em>Absorb water and minerals</em> from the soil — like drinking through a straw!
+      </div>
+      <div class="fun-fact">🌱 Root tip hairs are so tiny you need a magnifying glass to see them — but there can be millions!</div>
+    </div>
+    <div class="part-card" style="border-color: #8bc34a;">
+      <span class="emoji">🌿</span>
+      <span class="part-name">Stem</span>
+      <div class="function">
+        <strong>Two jobs:</strong><br>
+        (1) <em>Support</em> the plant — holds leaves up toward the sun.<br>
+        (2) <em>Transport</em> water and nutrients from roots up to leaves, like a highway inside the plant.
+      </div>
+      <div class="fun-fact">🚰 Tiny tubes inside the stem called <em>xylem</em> carry water up. That's what makes celery change color when you put it in dyed water!</div>
+    </div>
+    <div class="part-card" style="border-color: #4caf50;">
+      <span class="emoji">🍃</span>
+      <span class="part-name">Leaves</span>
+      <div class="function">
+        <strong>The plant's kitchen!</strong><br>
+        Leaves capture <em>sunlight</em> and use it — along with water from roots and carbon dioxide from air — to make <em>sugar</em> (food). This is called <em>photosynthesis</em>.
+      </div>
+      <div class="fun-fact">☀️ Tiny holes in leaves called <em>stomata</em> breathe in carbon dioxide and breathe out oxygen — the air we breathe!</div>
+    </div>
+    <div class="part-card" style="border-color: #e91e63;">
+      <span class="emoji">🌸</span>
+      <span class="part-name">Flowers</span>
+      <div class="function">
+        <strong>The plant's way of making babies!</strong><br>
+        Flowers <em>attract pollinators</em> (bees, butterflies, hummingbirds) with bright colors and sweet nectar. Pollinators carry pollen from flower to flower so new seeds can form.
+      </div>
+      <div class="fun-fact">🐝 A flower's bright colors are basically an advertisement — "Free nectar here!" — for insects and birds.</div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Discussion during Part 1:</strong><br>
+    For each part, ask:
+    <ul>
+      <li><em>"What would happen to the plant if it had no roots? No leaves? No stem?"</em></li>
+      <li><em>"Which part is doing the most important job? Can you decide?"</em> (Trick question — they all depend on each other!)</li>
+      <li><em>"What is the plant's 'kitchen'?"</em> (Leaves!)</li>
+    </ul>
+  </div>
+
+  <h2>🏗️ Part 2 — Plant Part Matching Activity (15 min)</h2>
+  <p>On the worksheet, students draw lines matching each plant part to its job. Then they label a plant diagram.</p>
+
+  <div class="procedure-step">
+    <strong>Step-by-Step Guide for Part 2:</strong>
+    <ol>
+      <li>Go over the four plant parts together using the cards above.</li>
+      <li>Hand out the worksheet. Read the matching activity aloud together.</li>
+      <li>Students draw lines connecting each plant part to its function.</li>
+      <li>In the "Draw Your Plant" section, students draw a simple plant and label: roots, stem, leaves, flower.</li>
+      <li>Extension: Go outside and gently pull a weed from loose soil. Observe the root system! How long are the roots compared to the part above ground?</li>
+    </ol>
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Big Question:</strong> "A plant has no mouth or stomach. How does it get the energy to grow?"
+    <p class="discussion-hint">Suggested answer: Plants make their own food using sunlight, water, and air — a process called photosynthesis. Leaves capture sunlight, roots absorb water from soil, and tiny pores in leaves take in carbon dioxide from the air. The plant combines these ingredients to make sugar, which is its food and energy. This is completely different from how animals eat — plants are more like solar-powered food factories than hungry hunters! This is why plants need sun and water, but animals need to eat other living things.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌈 <strong>Colored Celery:</strong> Put a celery stalk in a cup of water with several drops of food coloring. Wait 24 hours. Slice the stalk and look at the tiny colored dots — those are the <em>xylem</em> tubes that carry water up the stem!</li>
+      <li>🌱 <strong>Weed Excavation:</strong> Pull a weed gently from loose soil or a pot. How long is the root system? How does it compare to the plant's height?</li>
+      <li>☀️ <strong>Leaf Test:</strong> Cover part of a leaf with dark paper or foil for 3–5 days. The covered part will turn yellow because it can't get sunlight for photosynthesis. Uncovered parts stay green!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A Seed Is Sleepy"</em> by Dianna Hutts Aston, or <em>"From Seed to Plant"</em> by Gail Gibbons</li>
+      <li>🔍 <strong>Stomata Observation:</strong> Press clear tape onto the underside of a large leaf, peel it off, and stick it to a white paper. Look at it through a magnifying glass — can you see the tiny pores (stomata)?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Photosynthesis for Grade 1:</strong> You don't need to use the word "photosynthesis" unless your student enjoys big words. The core concept: "Leaves are the plant's kitchen — they use sunlight to make food." That's enough! If they're curious, add: the plant mixes sunlight + water + air to make sugar.</li>
+      <li><strong>Colored celery tip:</strong> Use blue or red food coloring for best visibility. This works beautifully in 1–2 days. Cut the stalk from the bottom at an angle for faster uptake. This is one of the most memorable plant biology demos — highly recommended!</li>
+      <li><strong>Why leaves are green:</strong> Plants are green because of chlorophyll, a molecule that absorbs red and blue light but reflects green light. The plant uses red and blue light for photosynthesis. This is fun to mention if your student asks, but not required for Grade 1.</li>
+      <li><strong>Roots — more depth for curious kids:</strong> Root hairs are single-cell extensions that dramatically increase surface area for water absorption. A single rye plant can have 14 billion root hairs! Taproots (like carrots) go deep; fibrous roots spread wide. Both strategies work — different environments favor different types.</li>
+      <li><strong>Flowers are not just for beauty:</strong> Remind students that flowers aren't there because they look nice to us — they evolved to attract specific animals. Their beauty is functional! (This connects to Lesson 4 on pollinators.)</li>
+      <li><strong>If you have no plants:</strong> Draw a simple plant on paper before the lesson, or use an image search. Even describing the parts from the cards on this page is enough for the activity.</li>
+      <li><strong>Connection to Lesson 4:</strong> This lesson introduces flowers and pollinators. Lesson 4 dives much deeper into how plant structures attract specific pollinators — a great "coming soon!"</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-header">🌱 Student Worksheet — Plant Parts and Their Jobs</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Matching: Plant Part to Its Job</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line from each plant part to what it does!</p>
+
+    <div class="matching-section">
+      <div class="matching-col">
+        <div class="match-item">
+          <span class="emoji">🌰</span>
+          <span class="label">Roots</span>
+        </div>
+        <div class="match-item">
+          <span class="emoji">🌿</span>
+          <span class="label">Stem</span>
+        </div>
+        <div class="match-item">
+          <span class="emoji">🍃</span>
+          <span class="label">Leaves</span>
+        </div>
+        <div class="match-item">
+          <span class="emoji">🌸</span>
+          <span class="label">Flower</span>
+        </div>
+      </div>
+      <div class="matching-col" style="padding-top: 8px;">
+        <div class="match-problem">
+          <span class="label">Attracts bees and butterflies to make seeds</span>
+        </div>
+        <div class="match-problem">
+          <span class="label">Captures sunlight to make food (the plant's kitchen!)</span>
+        </div>
+        <div class="match-problem">
+          <span class="label">Holds the plant up and carries water upward</span>
+        </div>
+        <div class="match-problem">
+          <span class="label">Soaks up water from soil and anchors the plant</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Part 2 — Label the Plant</h3>
+    <p style="font-size:10pt; color:#555;">Draw a plant below with all four parts. Label each part: <strong>roots, stem, leaves, flower</strong>.</p>
+
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your plant here — remember all four parts!</div>
+      <div style="height: 200px;"></div>
+    </div>
+
+    <h3>Part 3 — Fill in the Blanks</h3>
+    <div class="fill-blank">
+      1. The <span class="blank-line"></span> capture sunlight and make food for the plant.<br><br>
+      2. The <span class="blank-line"></span> drink up water from the soil.<br><br>
+      3. The <span class="blank-line"></span> carries water from roots up to the leaves.<br><br>
+      4. The <span class="blank-line"></span> attracts bees and butterflies to make new plants.
+    </div>
+
+    <h3>Part 4 — Think About It!</h3>
+    <div class="fill-blank" style="font-size: 11pt;">
+      A plant has no mouth or stomach. How does it eat?<br><br>
+      <span class="blank-line" style="min-width: 90%;"></span><br><br>
+      <span class="blank-line" style="min-width: 90%;"></span>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1 — Matching Answers</h3>
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>🌱 Plant Part → Job</h3>
+          <ul>
+            <li>🌰 Roots → <strong>Soaks up water from soil and anchors the plant</strong></li>
+            <li>🌿 Stem → <strong>Holds plant up and carries water upward</strong></li>
+            <li>🍃 Leaves → <strong>Captures sunlight to make food</strong></li>
+            <li>🌸 Flower → <strong>Attracts bees and butterflies to make seeds</strong></li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>💡 Fill in the Blanks</h3>
+          <ul>
+            <li>1. <strong>Leaves</strong> capture sunlight</li>
+            <li>2. <strong>Roots</strong> drink up water</li>
+            <li>3. <strong>Stem</strong> carries water upward</li>
+            <li>4. <strong>Flower</strong> attracts pollinators</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">Part 4 — Think About It! Accepted Answers</h3>
+      <ul>
+        <li>Plants make their own food using sunlight, water, and air (photosynthesis)</li>
+        <li>Accept any phrasing that mentions: leaves, sunlight, water — the plant makes its own food</li>
+        <li>"The leaves catch sunlight and use it to make sugar/food" is a full credit answer</li>
+      </ul>
+
+      <h3>Part 2 — Plant Drawing — What to Look For</h3>
+      <ul>
+        <li>Plant drawing includes roots below the ground line (or below soil)</li>
+        <li>Stem is visible connecting roots to the above-ground parts</li>
+        <li>Leaves are attached to stem</li>
+        <li>Flower (or at minimum a bud) is present at the top or on a branch</li>
+        <li>All four parts are labeled correctly</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student correctly matches all four parts to their functions</li>
+        <li>Student can explain: "Leaves make food using sunlight" (photosynthesis in student's own words)</li>
+        <li>Student's plant drawing includes all four labeled parts</li>
+        <li>Student understands that plant parts work together — roots get water, stem moves it, leaves use it</li>
+      </ul>
+
+      <div class="tip-box" style="margin-top: 14px;">
+        💡 <strong>Science accuracy note:</strong> Plants don't truly "eat" like animals — they <em>make</em> their food through photosynthesis. If your student says "leaves eat sunlight," gently redirect to "leaves use sunlight to make food." The distinction matters!
+      </div>
+    </div>
+  </div>
+
+
+<script
+  src="http://192.168.5.204:3334/feedback-layer.js"
+  data-api-url="http://192.168.5.204:3334"
+  data-content-selector="body"
+  data-document-uri="doc_9u7CrZd63gE"
+></script>
+</body>
+</html>

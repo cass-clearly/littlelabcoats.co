@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathing: Lungs, Gills, and More — Unit 3, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      display: block;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .concept-card {
+      display: inline-block;
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 6px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 160px;
+      vertical-align: top;
+    }
+    .concept-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .concept-card .label { font-weight: bold; color: #2e7d32; font-size: 12pt; }
+    .concept-card .desc { font-size: 9pt; color: #555; margin-top: 4px; }
+    .lungs-card { border-color: #42a5f5; background: #e3f2fd; }
+    .lungs-card .label { color: #1565c0; }
+    .gills-card { border-color: #26c6da; background: #e0f7fa; }
+    .gills-card .label { color: #00838f; }
+    .both-card { border-color: #66bb6a; background: #e8f5e9; }
+    .both-card .label { color: #2e7d32; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .worksheet-draw-box {
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      min-height: 180px;
+      margin: 10px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 10px;
+      background: #fff;
+    }
+    .worksheet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 12px 0;
+    }
+    .worksheet-grid h3 { text-align: center; font-size: 11pt; }
+    .fill-blank {
+      font-size: 12pt;
+      margin: 18px 0 8px 0;
+      text-align: center;
+    }
+    .fill-blank span {
+      display: inline-block;
+      border-bottom: 2px solid #2e7d32;
+      min-width: 120px;
+      margin: 0 4px;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .worksheet-draw-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_slZiyoUwCe0">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🫁 Breathing: Lungs, Gills, and More 🐟</h1>
+  <p class="subtitle">Life Science — Animal Needs &nbsp;|&nbsp; Unit 3, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Animal Needs</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🧍💨 🐟🌊</div>
+    <div class="caption">All animals need oxygen to survive — but not all animals breathe the same way!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>IDENTIFY</strong> that all animals need oxygen and <strong>DESCRIBE</strong> the difference between lungs and gills with at least one example of each.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Every animal alive needs <strong>oxygen</strong> — it's one of the most important things on the Animal Survival Checklist! But here's the cool part: animals get oxygen in different ways depending on where they live.</p>
+
+  <div style="text-align: center; margin: 16px 0;">
+    <div class="concept-card lungs-card">
+      <span class="emoji">🫁</span>
+      <span class="label">Lungs</span>
+      <div class="desc">Breathe <strong>air</strong><br>Humans, dogs, birds, whales</div>
+    </div>
+    <div class="concept-card gills-card">
+      <span class="emoji">🐟</span>
+      <span class="label">Gills</span>
+      <div class="desc">Extract oxygen <strong>from water</strong><br>Fish, tadpoles, crabs</div>
+    </div>
+    <div class="concept-card both-card">
+      <span class="emoji">🐸</span>
+      <span class="label">Both!</span>
+      <div class="desc">Gills as babies, lungs as adults<br>Frogs, salamanders</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary:</strong> lungs, gills, oxygen, breathe, inhale, exhale
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 All From the Kitchen — No Purchases Needed!</h3>
+    <ul>
+      <li>Clear glass or jar</li>
+      <li>Water</li>
+      <li>Food coloring (any color)</li>
+      <li>Turkey baster <em>(best tool!)</em> or a straw for gentle bubbling</li>
+      <li>Timer or clock</li>
+      <li>Paper and crayons</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Feel Your Lungs! (5 min)</strong><br>
+    Have your child place one hand flat on their chest. Take a big, slow, deep breath in.<br>
+    <em>"Do you feel that? That's your lungs expanding — filling up with air!"</em><br>
+    Now exhale slowly. Feel the chest fall.<br>
+    Use a timer: <strong>count how many breaths they take in one minute.</strong> Write the number down!<br>
+    <em>(Typical kindergartner: about 20–30 breaths per minute at rest.)</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — How Lungs Work (3 min)</strong><br>
+    Explain: <em>"When you breathe in, air rushes into your lungs. Your lungs grab the oxygen out of the air and send it into your blood. Then you breathe out the parts your body doesn't need."</em><br>
+    Practice the vocab together: <strong>inhale</strong> (breathe in) and <strong>exhale</strong> (breathe out).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Set Up the Fish Breathing Model (5 min)</strong><br>
+    Fill the clear glass with water. Add one drop of food coloring and stir gently — the color helps you see the water moving.<br>
+    <em>"Fish can't breathe air like we do. They breathe water! Their gills pull oxygen right out of the water as it flows through."</em><br>
+    Hand your child the turkey baster. Show them how to:<br>
+    <ol>
+      <li>Squeeze the bulb and dip it in the water</li>
+      <li>Release slowly — the water is pulled IN (like a fish's mouth opening)</li>
+      <li>Squeeze again — the water is pushed OUT (like water flowing over gills)</li>
+    </ol>
+    Watch the colored water move! <em>"That flowing water is how a fish gets its oxygen."</em>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Straw alternative:</strong> If no turkey baster, use a straw to gently stir and circulate the colored water — this shows how water flows over gills. (Avoid blowing out through the straw, which models exhalation rather than gill function. The goal is to show water <em>moving</em> over the gill surface to extract oxygen.)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Compare Side by Side (5 min)</strong><br>
+    <em>"Let's think about this together."</em>
+    <ul>
+      <li>Our <strong>lungs</strong> pull oxygen out of <strong>air</strong> → we breathe air in and out</li>
+      <li>Fish <strong>gills</strong> pull oxygen out of <strong>water</strong> → water flows in through the mouth and out over the gills</li>
+    </ul>
+    <strong>They do the same job — just with different stuff!</strong><br>
+    Ask: <em>"Have you ever seen a fish's mouth moving in a fish tank or at the store? That's the gills working!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Bonus: Spiracles! (2 min)</strong><br>
+    <em>"Here's a wild bonus fact. Insects — like ants, grasshoppers, and beetles — don't have lungs OR gills! They breathe through tiny little holes in the sides of their bodies called <strong>spiracles</strong>. Isn't that amazing?"</em><br>
+    Let them search for a bug outside (or look at a picture) and imagine where those tiny holes might be.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1: "Could a fish survive out of water? Why or why not?"</strong>
+    <span class="discussion-hint">Give them a moment to think before sharing the hint below.</span>
+    <p><strong>Suggested Answer:</strong> A fish can't survive out of water because its gills only work in water — they need water flowing over them to get oxygen. It's like if we tried to breathe underwater without any equipment — our lungs need air, not water!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2: "Can you think of an animal that can breathe BOTH in water and on land?"</strong>
+    <span class="discussion-hint">Hint: Think about an animal that starts life in a pond and grows up to hop on land…</span>
+    <p><strong>Suggested Answer:</strong> Frogs! Tadpoles breathe with gills, but adult frogs breathe with lungs AND can absorb some oxygen right through their damp skin. Turtles and crocodiles also breathe air but spend lots of time in water.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🐠 <strong>Fish Tank Watch:</strong> If you have a fish tank at home, observe the fish's mouth and gills moving — that's real breathing!</li>
+      <li>🐸 <strong>Frog Life Cycle:</strong> Draw or look up the frog life cycle. When does it switch from gills to lungs?</li>
+      <li>🔍 <strong>Bug Hunt:</strong> Go outside and find an insect. Explain to it (yes, really!) why its spiracles are cooler than lungs and gills.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do Animals Need?"</em> or any book about ocean animals and how they breathe.</li>
+      <li>🎨 <strong>Animal Sort:</strong> Draw or find pictures of animals and sort them: lungs, gills, or both!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>All materials from the kitchen</strong> — no purchases needed. The turkey baster is the best tool because pulling and pushing the water is very tactile, but a straw works fine (gently blow into the colored water).</li>
+      <li><strong>Fun connection:</strong> If they've ever seen a fish's mouth moving in a tank or at the store, point out that those are the gills at work — the mouth opens to let water flow in, and it exits over the gills.</li>
+      <li><strong>Don't skip the spiracles!</strong> Kids love the "no lungs, no gills, just holes" fact about insects. It broadens the concept beyond the binary.</li>
+      <li><strong>Frog is the star of the bonus:</strong> If your child is fascinated by frogs, this is a great segue into metamorphosis — coming up later in the unit!</li>
+      <li><strong>Vocab to reinforce:</strong> lungs, gills, oxygen, breathe, inhale, exhale, spiracles</li>
+      <li><strong>If they have a fish tank at home:</strong> this is a perfect time to pause and observe real gills in action before or after the activity.</li>
+      <li><strong>Assessment check:</strong> Can the child explain that all animals need oxygen? Can they name at least two ways animals breathe? That's success!</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>✏️ Student Worksheet — Breathing</h1>
+    <p class="subtitle">Life Science — Animal Needs &nbsp;|&nbsp; Unit 3, Lesson 3 of 6</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2>🎨 Draw It!</h2>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom: 10px;">Draw each animal breathing. Use arrows to show the air or water moving!</p>
+
+    <div class="worksheet-grid">
+      <div>
+        <h3>🧍 A Person Breathing Air</h3>
+        <p style="font-size:9pt; color:#777; text-align:center; margin:4px 0;">Draw arrows showing air going INTO the lungs</p>
+        <div class="worksheet-draw-box"></div>
+      </div>
+      <div>
+        <h3>🐟 A Fish Breathing in Water</h3>
+        <p style="font-size:9pt; color:#777; text-align:center; margin:4px 0;">Draw arrows showing water flowing OVER the gills</p>
+        <div class="worksheet-draw-box"></div>
+      </div>
+    </div>
+
+    <h2>📝 Fill It In!</h2>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:6px;">Write or dictate your answers. Use the Word Bank to help!</p>
+
+    <div class="fill-blank">
+      Lungs breathe <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.
+    </div>
+    <div class="fill-blank">
+      Gills extract oxygen from <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.
+    </div>
+
+    <div style="background:#e8f5e9; border:2px solid #a5d6a7; border-radius:8px; padding:10px 18px; margin: 14px 0; display:inline-block;">
+      <strong style="color:#2e7d32;">Word Bank:</strong> &nbsp; air &nbsp;|&nbsp; water
+    </div>
+
+    <h2>🌟 Bonus Question!</h2>
+    <div class="question-box">
+      <strong>Name an animal that can breathe BOTH in water AND on land!</strong><br>
+      <div class="worksheet-draw-box" style="min-height:80px; margin-top:8px;"></div>
+    </div>
+
+    <h2>🔢 My Breath Count</h2>
+    <p>How many breaths did you take in one minute?</p>
+    <div style="font-size:48pt; text-align:center; color:#2e7d32; border:3px solid #a5d6a7; border-radius:12px; padding:10px; width:140px; margin: 8px auto;">
+      &nbsp;
+    </div>
+    <p style="text-align:center; font-size:9pt; color:#777;">Write your number in the box!</p>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to student</h2>
+
+      <h3>📝 Fill-In Answers</h3>
+      <ul>
+        <li><strong>Lungs breathe</strong> → <em>air</em></li>
+        <li><strong>Gills extract oxygen from</strong> → <em>water</em></li>
+      </ul>
+
+      <h3>🌟 Bonus Question</h3>
+      <p><strong>Animals that can breathe in water AND on land:</strong></p>
+      <ul>
+        <li>🐸 <strong>Frogs</strong> — tadpoles breathe with gills; adult frogs breathe with lungs and can also absorb some oxygen through their damp skin</li>
+        <li>🐢 <strong>Turtles</strong> — breathe air with lungs but live near/in water</li>
+        <li>🐊 <strong>Crocodiles &amp; Alligators</strong> — breathe air with lungs, swim and hunt in water</li>
+        <li>🦎 <strong>Salamanders</strong> — similar to frogs; some can absorb oxygen through skin</li>
+      </ul>
+
+      <h3>🎨 Drawing Rubric — What to Look For</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:10pt; margin: 8px 0;">
+        <tr style="background:#2e7d32; color:white;">
+          <th style="padding:8px; text-align:left; border:1px solid #a5d6a7;">Drawing</th>
+          <th style="padding:8px; text-align:left; border:1px solid #a5d6a7;">Look For</th>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #ccc;">Person breathing air</td>
+          <td style="padding:8px; border:1px solid #ccc;">Arrows pointing toward nose/mouth or toward chest (lungs); chest area labeled or highlighted</td>
+        </tr>
+        <tr style="background:#f5f5f5;">
+          <td style="padding:8px; border:1px solid #ccc;">Fish breathing in water</td>
+          <td style="padding:8px; border:1px solid #ccc;">Arrows showing water moving through mouth and/or out the sides (gills); fish shown in water</td>
+        </tr>
+      </table>
+
+      <h3>💬 Discussion Answer Guide</h3>
+      <p><strong>Q1: Could a fish survive out of water?</strong><br>
+      No — gills only work when water is flowing over them. Out of water, gills can't grab oxygen and the fish can't breathe. Compare: it's like a person trying to breathe underwater — our lungs are built for air, not water.</p>
+
+      <p><strong>Q2: An animal that breathes BOTH in water and on land?</strong><br>
+      Best answer: Frogs. Tadpoles use gills in water → adult frogs use lungs on land and can absorb oxygen through moist skin. Accept any reasonable answer (turtles, crocodiles, salamanders).</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can state that all animals need oxygen (air).</li>
+        <li>Child can name lungs and gills as two ways animals breathe.</li>
+        <li>Child can correctly fill in: lungs breathe air, gills breathe water.</li>
+        <li>Child shows arrows on drawings pointing in the correct directions.</li>
+        <li><em>Bonus:</em> Child names a frog (or similar) as an animal that can do both.</li>
+      </ul>
+
+      <h3>🔢 Breath Count Reference</h3>
+      <p style="font-size:10pt;">Typical resting breath rate for kindergartners: <strong>20–30 breaths per minute</strong>. Any answer in this range is normal and healthy. If they count more after jumping around — great observation to discuss!</p>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_slZiyoUwCe0" data-content-selector="body"></script>
+</body>
+</html>

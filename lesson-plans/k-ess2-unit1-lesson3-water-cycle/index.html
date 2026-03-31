@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rain, Snow, and the Water Cycle — K-ESS2 Unit 1, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #5d4037;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fbe9e7;
+      border: 1px solid #ffab91;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #bf360c; }
+    .extension-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .demo-box {
+      background: #fff3e0;
+      border: 3px solid #e65100;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 12px 0;
+    }
+    .demo-box h3 { color: #e65100; border-color: #ffcc80; }
+    .cycle-diagram {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 15px 0;
+      padding: 16px;
+      background: #fff3e0;
+      border-radius: 12px;
+      border: 2px solid #ffcc80;
+    }
+    .cycle-step {
+      text-align: center;
+      background: white;
+      border: 2px solid #e65100;
+      border-radius: 10px;
+      padding: 10px 14px;
+      min-width: 100px;
+    }
+    .cycle-step .emoji { font-size: 28pt; display: block; }
+    .cycle-step .label { font-weight: bold; color: #e65100; font-size: 10pt; }
+    .cycle-step .desc { font-size: 9pt; color: #555; margin-top: 2px; }
+    .cycle-arrow { font-size: 20pt; color: #e65100; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .draw-box {
+      border: 2px solid #bf360c;
+      border-radius: 8px;
+      min-height: 160px;
+      margin: 8px 0;
+      background: #fffde7;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .demo-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+  </style>
+</head>
+<body data-document-id="doc_4vHLOhpY-ec">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌧️ Rain, Snow, and the Water Cycle 💧</h1>
+  <p class="subtitle">Earth Science — Weather &amp; Seasons</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Weather &amp; Seasons</span>
+    <span>🔢 <strong>Lesson:</strong> 3 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">💧 ☁️ 🌧️ ❄️</div>
+    <div class="caption">The same water has been cycling around Earth for billions of years!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS2-1</strong> — Use and share observations of local weather conditions to describe patterns over time.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>describe</em> the water cycle and <em>demonstrate</em> evaporation and condensation using simple household materials.</p>
+
+  <h2>🔬 The Big Idea: The Water Cycle</h2>
+  <p>Water on Earth is always moving in a big loop called the <strong>water cycle</strong>. It evaporates from oceans and lakes into the air, forms clouds, falls back down as rain or snow, and flows back to the ocean — then the cycle starts all over again. The same water molecules have been cycling around Earth for billions of years!</p>
+
+  <div class="cycle-diagram">
+    <div class="cycle-step">
+      <span class="emoji">🌊</span>
+      <span class="label">Evaporation</span>
+      <span class="desc">Water turns to vapor, rises into air</span>
+    </div>
+    <div class="cycle-arrow">→</div>
+    <div class="cycle-step">
+      <span class="emoji">☁️</span>
+      <span class="label">Condensation</span>
+      <span class="desc">Vapor cools &amp; forms clouds</span>
+    </div>
+    <div class="cycle-arrow">→</div>
+    <div class="cycle-step">
+      <span class="emoji">🌧️</span>
+      <span class="label">Precipitation</span>
+      <span class="desc">Rain or snow falls</span>
+    </div>
+    <div class="cycle-arrow">→</div>
+    <div class="cycle-step">
+      <span class="emoji">🏞️</span>
+      <span class="label">Collection</span>
+      <span class="desc">Water flows to rivers &amp; ocean</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> water cycle, evaporation, condensation, precipitation, water vapor, clouds
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>A piece of dark-colored paper (black or dark blue works best)</li>
+      <li>Water</li>
+      <li>Ice cubes</li>
+      <li>A glass or cup</li>
+      <li>A warm, sunny room (or a sunny window)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Two Mini-Experiments</h2>
+
+  <div class="demo-box">
+    <h3>💨 Step 1 — Evaporation: The Disappearing Handprint</h3>
+    <ol>
+      <li>Wet your hand with water</li>
+      <li>Press it firmly onto a piece of dark paper, making a handprint</li>
+      <li>Place the paper near a sunny window or in a warm spot</li>
+      <li>Watch and wait — where does the handprint go?</li>
+    </ol>
+    <p><strong>What's happening?</strong> The water turns into invisible water vapor and rises into the air. That's <em>evaporation</em>! This is exactly how water moves from oceans and puddles into the sky.</p>
+  </div>
+
+  <div class="demo-box">
+    <h3>🧊 Step 2 — Condensation: Water Appears From Nowhere!</h3>
+    <ol>
+      <li>Fill a glass with cold water and ice cubes</li>
+      <li>Set it on the table in a warm room and wait 5 minutes</li>
+      <li>Look at the <em>outside</em> of the glass — do you see water droplets forming?</li>
+      <li>Run your finger along the outside of the glass</li>
+    </ol>
+    <p><strong>What's happening?</strong> That water did NOT come from inside the glass — it came from the warm air around it! When warm air (carrying invisible water vapor) touches the cold glass, the vapor cools down and turns back into liquid water. That's <em>condensation</em>! This is exactly how clouds form in the sky.</p>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Connect the Dots (5 min)</strong><br>
+    After both demos, discuss:
+    <ul>
+      <li>"Where did the handprint water go?" → Into the air as vapor (evaporation)</li>
+      <li>"Where did the water on the outside of the glass come from?" → From the air (condensation)</li>
+      <li>"How is this like clouds and rain?" → Water evaporates into the air, rises, cools into clouds (condensation), and falls back down as rain!</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Draw the Water Cycle (5–10 min)</strong><br>
+    Use the worksheet on the next page to draw your own water cycle diagram. Label evaporation, condensation, and precipitation!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Have you ever seen a puddle dry up after rain? Where did the water go?</li>
+      <li>Why does a cold glass "sweat" on a warm day? Where does that water come from?</li>
+      <li>What's the difference between rain and snow? (They're both precipitation — rain is liquid, snow is frozen!)</li>
+      <li><strong>Big Question:</strong> Where does rain come from, and what happens to it after it lands?</li>
+    </ul>
+    <p class="discussion-hint">💡 <em>Suggested answer: Water evaporates from oceans, lakes, and puddles into the air. It forms clouds when it cools at altitude. When clouds have too much water, it falls as rain or snow. It soaks into the ground or flows into rivers and eventually back to the ocean — then the cycle starts again! This cycle has been running for billions of years.</em></p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌱 <strong>Bag Water Cycle:</strong> Draw a sun, clouds, and an ocean on a plastic zip-lock bag. Add a little water, seal it, and tape it to a sunny window. Watch the water cycle in action over a few days!</li>
+      <li>🌊 <strong>Puddle Watch:</strong> After rain, trace a puddle with chalk. Come back every hour. How long until it evaporates?</li>
+      <li>🏔️ <strong>Where Does Snow Come From?</strong> Look up how snowflakes form — each one starts as a tiny ice crystal around a speck of dust!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>A Drop of Water</em> by Walter Wick or <em>The Magic School Bus Wet All Over</em> by Patricia Relf</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Best conditions for Step 2:</strong> The condensation effect works best on a warm, humid day. If it's cold and dry, the effect may be less dramatic — try the experiment on a warm summer day.</li>
+      <li><strong>Step 1 timing:</strong> Dark paper dries faster in direct sunlight. On a cloudy day, it still works but takes longer. This is a great opportunity to talk about why!</li>
+      <li><strong>Common misconception:</strong> Kids often think the water on the outside of a cold glass "leaked through." Emphasize: touch the ice water — it's cold! The water on the outside came from the warm air around it.</li>
+      <li><strong>Rain vs. snow:</strong> Both are precipitation. Snow forms when water vapor freezes directly into ice crystals high in the atmosphere. Rain forms when water droplets in clouds get heavy enough to fall.</li>
+      <li><strong>Assessment:</strong> Can the child describe evaporation and condensation in simple terms? Can they trace a water droplet through the cycle: ocean → sky → cloud → rain → river → ocean?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>💧 Student Worksheet — The Water Cycle</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🖊️ Draw the Water Cycle</h3>
+    <p style="font-size:10pt; color:#555;">Draw a sun, clouds, rain, and a lake or ocean. Then add arrows to show how water moves. Label: EVAPORATION, CONDENSATION, PRECIPITATION!</p>
+    <div class="draw-box" style="min-height:220px; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:10pt;">
+      Draw your water cycle here! ☀️ ☁️ 🌧️ 💧
+    </div>
+
+    <h3>✅ Check Your Diagram — Did You Include…</h3>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
+      <label style="display:flex; align-items:center; gap:8px; font-size:11pt;">
+        <input type="checkbox" style="width:18px; height:18px;"> ☀️ The sun (heats the water)
+      </label>
+      <label style="display:flex; align-items:center; gap:8px; font-size:11pt;">
+        <input type="checkbox" style="width:18px; height:18px;"> ⬆️ Arrows showing water rising (evaporation)
+      </label>
+      <label style="display:flex; align-items:center; gap:8px; font-size:11pt;">
+        <input type="checkbox" style="width:18px; height:18px;"> ☁️ Clouds in the sky
+      </label>
+      <label style="display:flex; align-items:center; gap:8px; font-size:11pt;">
+        <input type="checkbox" style="width:18px; height:18px;"> 🌧️ Rain or snow falling (precipitation)
+      </label>
+      <label style="display:flex; align-items:center; gap:8px; font-size:11pt;">
+        <input type="checkbox" style="width:18px; height:18px;"> 🌊 Ocean, lake, or river
+      </label>
+      <label style="display:flex; align-items:center; gap:8px; font-size:11pt;">
+        <input type="checkbox" style="width:18px; height:18px;"> 🔄 Cycle arrows showing the loop
+      </label>
+    </div>
+
+    <h3>🔬 My Experiment Observations</h3>
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+      <tr>
+        <th style="background:#e65100; color:white; padding:10px; border:2px solid #bf360c; text-align:left;">Experiment</th>
+        <th style="background:#e65100; color:white; padding:10px; border:2px solid #bf360c; text-align:left;">What I saw happen</th>
+        <th style="background:#e65100; color:white; padding:10px; border:2px solid #bf360c; text-align:left;">This is like... (in nature)</th>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:10px; font-weight:bold;">👋 Wet Handprint on Dark Paper</td>
+        <td style="border:2px solid #ffcc80; padding:10px; height:60px;"></td>
+        <td style="border:2px solid #ffcc80; padding:10px;"></td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:10px; background:#fff3e0; font-weight:bold;">🧊 Ice Water Glass</td>
+        <td style="border:2px solid #ffcc80; padding:10px; background:#fff3e0; height:60px;"></td>
+        <td style="border:2px solid #ffcc80; padding:10px; background:#fff3e0;"></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Water Cycle Steps</h3>
+      <ol>
+        <li><strong>Evaporation</strong> — liquid water is heated by the sun and turns into invisible water vapor that rises into the air. (Step 1: the handprint dries up)</li>
+        <li><strong>Condensation</strong> — water vapor rises and cools, turning back into tiny water droplets that form clouds. (Step 2: droplets form on the cold glass)</li>
+        <li><strong>Precipitation</strong> — when clouds hold too much water, it falls as rain, snow, sleet, or hail</li>
+        <li><strong>Collection/Runoff</strong> — water flows into rivers and oceans, and soaks into the ground — then evaporation starts the cycle again</li>
+      </ol>
+
+      <h3>Experiment Explanations</h3>
+      <ul>
+        <li><strong>Wet Handprint:</strong> Water evaporated into the air as water vapor. This is like water evaporating from oceans and lakes. Expected observation: the handprint fades and disappears.</li>
+        <li><strong>Ice Water Glass:</strong> Water condensed on the outside from the warm air. The water on the glass came from humidity in the air that cooled when it touched the cold surface. Expected observation: water droplets appear on the outside of the glass.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name the 3 main stages: evaporation, condensation, precipitation</li>
+        <li>Child can explain where rain comes from (water evaporates, forms clouds, falls as rain)</li>
+        <li>Child's diagram shows a cycle (circular path with arrows)</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

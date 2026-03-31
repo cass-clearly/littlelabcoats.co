@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 Quiz — Forces & Motion 🚀</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e3f2fd;
+      min-height: 100vh;
+      padding: 20px;
+      color: #1a1a2e;
+    }
+    .page-header {
+      background: #1565c0;
+      color: white;
+      border-radius: 16px;
+      padding: 24px 28px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(21,101,192,0.3);
+    }
+    .page-header h1 { font-size: 2rem; margin-bottom: 6px; }
+    .page-header .subtitle { font-size: 1.1rem; opacity: 0.9; }
+    .read-aloud-note {
+      background: #fff9c4;
+      border: 3px solid #f9a825;
+      border-radius: 12px;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #e65100;
+      margin-bottom: 20px;
+    }
+    .score-bar {
+      background: white;
+      border: 3px solid #1565c0;
+      border-radius: 12px;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #1565c0;
+      margin-bottom: 24px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .question-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border: 2px solid #bbdefb;
+      transition: border-color 0.2s;
+    }
+    .question-card.answered { border-color: #90caf9; }
+    .q-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .q-emoji { font-size: 2.4rem; flex-shrink: 0; }
+    .q-num {
+      background: #1565c0;
+      color: white;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .q-text {
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1.4;
+      flex: 1;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 600px) {
+      .options-grid { grid-template-columns: 1fr; }
+    }
+    .option-btn {
+      background: #f5f9ff;
+      border: 2.5px solid #90caf9;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s;
+      color: #1a1a2e;
+      line-height: 1.3;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #e3f2fd;
+      border-color: #1565c0;
+      transform: translateY(-1px);
+    }
+    .option-btn:disabled { cursor: default; }
+    .option-btn.correct {
+      background: #e8f5e9;
+      border-color: #43a047;
+      color: #1b5e20;
+    }
+    .option-btn.wrong {
+      background: #ffebee;
+      border-color: #e53935;
+      color: #b71c1c;
+    }
+    .option-btn.reveal {
+      background: #e8f5e9;
+      border-color: #43a047;
+      color: #1b5e20;
+      animation: pulse-green 0.5s ease;
+    }
+    @keyframes pulse-green {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    .result-icon {
+      font-size: 1.3rem;
+      margin-right: 6px;
+    }
+    .explanation {
+      background: #e3f2fd;
+      border-left: 5px solid #1565c0;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #1a2e5a;
+      display: none;
+      margin-top: 4px;
+    }
+    .explanation.show { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .results-box {
+      background: white;
+      border: 4px solid #1565c0;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 32px;
+      display: none;
+      box-shadow: 0 8px 24px rgba(21,101,192,0.2);
+    }
+    .results-box.show { display: block; animation: fadeIn 0.5s ease; }
+    .results-box .big-emoji { font-size: 4rem; margin-bottom: 10px; }
+    .results-box h2 { font-size: 2rem; color: #1565c0; margin-bottom: 10px; }
+    .results-box .score-display {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #0d47a1;
+      margin: 12px 0;
+    }
+    .results-box .tier-msg {
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      background: #1565c0;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .back-link:hover { background: #0d47a1; }
+  </style>
+</head>
+<body data-document-id="doc__Zl2NB3sUq4">
+
+  <div class="page-header">
+    <h1>🚀 Forces &amp; Motion Quiz</h1>
+    <p class="subtitle">Unit 1 — Physical Science • Kindergarten</p>
+  </div>
+
+  <div class="read-aloud-note">
+    📖 Ask a grown-up to read the questions to you!
+  </div>
+
+  <div class="score-bar" id="scoreBar">
+    ⭐ Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-card" id="qcard1">
+    <div class="q-header">
+      <span class="q-emoji">👐</span>
+      <span class="q-num">1</span>
+      <span class="q-text">When you push something, which way does it move?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(1, this, false)">🔴 Toward you</button>
+      <button class="option-btn" onclick="answer(1, this, true)">🟢 Away from you</button>
+      <button class="option-btn" onclick="answer(1, this, false)">🔵 It stays still</button>
+      <button class="option-btn" onclick="answer(1, this, false)">🟡 It goes up</button>
+    </div>
+    <div class="explanation" id="exp1">
+      🔵 A <strong>push</strong> moves something <strong>away</strong> from you! When you push a toy car, it rolls away. A pull is different — that moves something toward you. Remember: push = away, pull = toward!
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" id="qcard2">
+    <div class="q-header">
+      <span class="q-emoji">🧲</span>
+      <span class="q-num">2</span>
+      <span class="q-text">What do we call it when a magnet pulls something toward it?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(2, this, false)">🔴 Repel</button>
+      <button class="option-btn" onclick="answer(2, this, false)">🔵 Push</button>
+      <button class="option-btn" onclick="answer(2, this, true)">🟢 Attract</button>
+      <button class="option-btn" onclick="answer(2, this, false)">🟡 Bounce</button>
+    </div>
+    <div class="explanation" id="exp2">
+      🧲 When a magnet pulls something toward it, we say it <strong>attracts</strong> it! Magnets attract iron and steel — like paperclips and metal spoons. If two magnets push each other away, that's called <strong>repel</strong>.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" id="qcard3">
+    <div class="q-header">
+      <span class="q-emoji">⛷️</span>
+      <span class="q-num">3</span>
+      <span class="q-text">When a ball rolls down a ramp, what force pulls it downward?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(3, this, false)">🔴 Wind</button>
+      <button class="option-btn" onclick="answer(3, this, true)">🟢 Gravity</button>
+      <button class="option-btn" onclick="answer(3, this, false)">🔵 A magnet</button>
+      <button class="option-btn" onclick="answer(3, this, false)">🟡 A push from your hand</button>
+    </div>
+    <div class="explanation" id="exp3">
+      🌍 <strong>Gravity</strong> is the force that pulls everything downward toward the Earth. When you put a ball at the top of a ramp, gravity pulls it down and it rolls! Without gravity, balls wouldn't roll anywhere.
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" id="qcard4">
+    <div class="q-header">
+      <span class="q-emoji">💪</span>
+      <span class="q-num">4</span>
+      <span class="q-text">If you give a ball a STRONG push, what happens compared to a gentle push?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(4, this, false)">🔴 It goes the same distance</button>
+      <button class="option-btn" onclick="answer(4, this, true)">🟢 It goes farther and faster</button>
+      <button class="option-btn" onclick="answer(4, this, false)">🔵 It goes slower</button>
+      <button class="option-btn" onclick="answer(4, this, false)">🟡 It goes backward</button>
+    </div>
+    <div class="explanation" id="exp4">
+      💪 A <strong>strong push</strong> makes things go <strong>farther and faster</strong> than a gentle push! The bigger the force, the more the object moves. That's why throwing a ball hard sends it much farther than a tiny tap.
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" id="qcard5">
+    <div class="q-header">
+      <span class="q-emoji">🪝</span>
+      <span class="q-num">5</span>
+      <span class="q-text">Opening a drawer is an example of what kind of force?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(5, this, false)">🔴 A push</button>
+      <button class="option-btn" onclick="answer(5, this, true)">🟢 A pull</button>
+      <button class="option-btn" onclick="answer(5, this, false)">🔵 Gravity</button>
+      <button class="option-btn" onclick="answer(5, this, false)">🟡 Wind</button>
+    </div>
+    <div class="explanation" id="exp5">
+      🪝 Opening a drawer is a <strong>pull</strong>! You grab the handle and pull it toward you. A pull moves things <em>toward</em> you. Closing a drawer is a push — you push it away from you!
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" id="qcard6">
+    <div class="q-header">
+      <span class="q-emoji">🎢</span>
+      <span class="q-num">6</span>
+      <span class="q-text">What happens to a marble on a ramp when the ramp is made STEEPER?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(6, this, false)">🔴 It slows down</button>
+      <button class="option-btn" onclick="answer(6, this, false)">🔵 It goes sideways</button>
+      <button class="option-btn" onclick="answer(6, this, true)">🟢 It goes faster</button>
+      <button class="option-btn" onclick="answer(6, this, false)">🟡 It stops at the top</button>
+    </div>
+    <div class="explanation" id="exp6">
+      🎢 A <strong>steeper ramp</strong> makes a marble roll <strong>faster</strong>! The steeper the angle, the more gravity pulls it down quickly. That's why slides at the playground that are very steep are more fun and fast!
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" id="qcard7">
+    <div class="q-header">
+      <span class="q-emoji">💨</span>
+      <span class="q-num">7</span>
+      <span class="q-text">Wind is moving air. What does wind DO to things in its path?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(7, this, true)">🟢 It pushes them</button>
+      <button class="option-btn" onclick="answer(7, this, false)">🔴 It pulls them</button>
+      <button class="option-btn" onclick="answer(7, this, false)">🔵 It melts them</button>
+      <button class="option-btn" onclick="answer(7, this, false)">🟡 It stops them</button>
+    </div>
+    <div class="explanation" id="exp7">
+      💨 Wind <strong>pushes</strong> things! When air moves fast and hits something — like a sail or a leaf — it pushes it. That's how sailboats move and how kites fly! Engineers use wind's push to make wind wagons and windmills.
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" id="qcard8">
+    <div class="q-header">
+      <span class="q-emoji">📎</span>
+      <span class="q-num">8</span>
+      <span class="q-text">Which of these things would a magnet attract (pick up)?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(8, this, false)">🔴 A wooden stick</button>
+      <button class="option-btn" onclick="answer(8, this, false)">🔵 A plastic spoon</button>
+      <button class="option-btn" onclick="answer(8, this, true)">🟢 A metal paperclip</button>
+      <button class="option-btn" onclick="answer(8, this, false)">🟡 A piece of paper</button>
+    </div>
+    <div class="explanation" id="exp8">
+      📎 Magnets attract <strong>metal paperclips</strong>! Magnets can pull iron and steel toward them. Wood, plastic, and paper are <em>not</em> magnetic — a magnet won't pick those up. Only certain metals work with magnets!
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" id="qcard9">
+    <div class="q-header">
+      <span class="q-emoji">🛠️</span>
+      <span class="q-num">9</span>
+      <span class="q-text">An engineer builds a wind wagon but it doesn't move far. What should she do NEXT?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(9, this, false)">🔴 Give up and stop</button>
+      <button class="option-btn" onclick="answer(9, this, true)">🟢 Try to improve her design</button>
+      <button class="option-btn" onclick="answer(9, this, false)">🔵 Make it smaller</button>
+      <button class="option-btn" onclick="answer(9, this, false)">🟡 Wait for it to move by itself</button>
+    </div>
+    <div class="explanation" id="exp9">
+      🛠️ Engineers always <strong>improve their designs</strong>! The Engineering Design Process says: Ask, Imagine, Plan, Create, Test — and then <strong>Improve</strong>! When something doesn't work perfectly, you figure out why and try again. That's how great inventions are made!
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" id="qcard10">
+    <div class="q-header">
+      <span class="q-emoji">🔴</span>
+      <span class="q-num">10</span>
+      <span class="q-text">Two magnets push each other AWAY. What word describes this?</span>
+    </div>
+    <div class="options-grid">
+      <button class="option-btn" onclick="answer(10, this, false)">🔴 Attract</button>
+      <button class="option-btn" onclick="answer(10, this, true)">🟢 Repel</button>
+      <button class="option-btn" onclick="answer(10, this, false)">🔵 Gravity</button>
+      <button class="option-btn" onclick="answer(10, this, false)">🟡 Friction</button>
+    </div>
+    <div class="explanation" id="exp10">
+      🧲 When two magnets push each other away, we say they <strong>repel</strong>! Opposite ends of a magnet (north and south) attract each other. But the same ends (north-north or south-south) repel — they push away from each other!
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="results-box" id="resultsBox">
+    <div class="big-emoji" id="resultsEmoji">🏆</div>
+    <h2>Quiz Complete!</h2>
+    <div class="score-display" id="finalScore">0 / 10</div>
+    <div class="tier-msg" id="tierMsg"></div>
+    <br>
+    <a href="unit1-lesson1-push-pull-sort.html" class="back-link">← Back to Lesson 1</a>
+  </div>
+
+  <script>
+    let score = 0;
+    let answered = 0;
+    const total = 10;
+
+    function answer(qNum, btn, isCorrect) {
+      const card = document.getElementById('qcard' + qNum);
+      const exp = document.getElementById('exp' + qNum);
+      const btns = card.querySelectorAll('.option-btn');
+
+      // Disable all buttons for this question
+      btns.forEach(b => b.disabled = true);
+
+      if (isCorrect) {
+        btn.classList.add('correct');
+        btn.innerHTML = '<span class="result-icon">✅</span>' + btn.innerHTML;
+        score++;
+      } else {
+        btn.classList.add('wrong');
+        btn.innerHTML = '<span class="result-icon">❌</span>' + btn.innerHTML;
+        // Highlight the correct answer
+        btns.forEach(b => {
+          if (b.onclick && b.onclick.toString().includes('true')) {
+            b.classList.add('reveal');
+          }
+        });
+      }
+
+      card.classList.add('answered');
+      exp.classList.add('show');
+      answered++;
+
+      // Update score bar
+      document.getElementById('scoreNum').textContent = score;
+
+      if (answered === total) {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      const box = document.getElementById('resultsBox');
+      document.getElementById('finalScore').textContent = score + ' / ' + total;
+      box.classList.add('show');
+
+      let emoji, msg;
+      if (score === 10) {
+        emoji = '🏆🌟';
+        msg = 'PERFECT SCORE! You are a Forces & Motion superstar! You know everything about pushes, pulls, magnets, and ramps. Amazing work!';
+      } else if (score >= 8) {
+        emoji = '🎉⭐';
+        msg = 'Excellent work! You really understand forces and motion. Go back and check the ones you missed — you\'re almost a perfect scientist!';
+      } else if (score >= 6) {
+        emoji = '😊👍';
+        msg = 'Great job! You know a lot about pushes, pulls, and magnets. Try reading back through your lessons to review the tricky parts!';
+      } else if (score >= 4) {
+        emoji = '🌱💪';
+        msg = 'Good try! Science takes practice. Go back and explore the lessons again — you\'ll be a forces expert in no time!';
+      } else {
+        emoji = '🔬📚';
+        msg = 'Keep exploring! Science is all about learning. Go back to the lessons, do the experiments again, and then try the quiz again!';
+      }
+
+      document.getElementById('resultsEmoji').textContent = emoji;
+      document.getElementById('tierMsg').textContent = msg;
+      box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc__Zl2NB3sUq4" data-content-selector="body"></script>
+</body>
+</html>

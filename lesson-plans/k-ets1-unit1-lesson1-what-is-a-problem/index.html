@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is a Problem? — K Engineering Design Unit 1, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #6a1b9a;
+      padding-bottom: 10px;
+      color: #6a1b9a;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f3e5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ce93d8;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #6a1b9a;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #4a148c;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #f3e5f5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #6a1b9a;
+    }
+    .procedure-step strong { color: #4a148c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #6a1b9a; }
+    .extension-box {
+      background: #ede7f6;
+      border: 1px solid #b39ddb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .problem-card {
+      background: #fff;
+      border: 2px solid #ce93d8;
+      border-radius: 12px;
+      padding: 15px 18px;
+      margin: 12px 0;
+    }
+    .problem-card .scenario {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #4a148c;
+      margin-bottom: 8px;
+    }
+    .problem-card .criteria-list {
+      background: #f3e5f5;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 8px;
+    }
+    .criteria-list strong { color: #6a1b9a; }
+    .worksheet-box {
+      border: 3px solid #6a1b9a;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .worksheet-box h2 {
+      margin-top: 0;
+    }
+    .write-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 36px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .discussion-hint { font-style: italic; color: #555; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px;
+      background: #6a1b9a; color: white; border: none;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #4a148c; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .problem-card, .worksheet-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_fo2v5gyB6qo">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🔍 What Is a Problem?</h1>
+  <p class="subtitle">Engineering Design — Build It! | Unit 1, Lesson 1 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔧 <strong>Subject:</strong> Engineering Design — Build It!</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🤔 ❓ 💡</div>
+    <div class="caption">Every invention starts with a problem. Engineers are professional problem-finders AND problem-solvers!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>K-2-ETS1-1</strong> — Ask questions, make observations, and gather information about a situation people want to change in order to define a simple problem that can be solved through the development of a new or improved object or tool.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Identify</em> a real problem from a described situation</li>
+    <li><em>Ask</em> clarifying questions about what makes a problem difficult</li>
+    <li><em>Explain</em> what a good solution needs to do (the criteria)</li>
+  </ul>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Before engineers can build anything, they have to understand the <em>problem</em> — really, truly understand it. What's going wrong? Who does it affect? What would make it better? An engineer who doesn't fully understand the problem is just guessing. Good engineers ask <em>lots</em> of questions first!</p>
+  <p>Today, students will play the <strong>"Spot the Problem" game</strong> — hearing about real-life situations, identifying the problem, and deciding what a good solution would need to do.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> problem, solution, criteria (what a solution needs to do), engineer, design
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Student worksheet (last pages of this lesson — one per student)</li>
+      <li>Pencil or crayons</li>
+      <li>Thinking caps! 🧢 (No special materials needed for the main activity)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Hook: Everything Was Once a Problem (5 min)</strong><br>
+    Hold up everyday objects one at a time: a cup, a pair of scissors, a chair. Ask: <em>"Before this was invented — what problem do you think people had?"</em><br>
+    <ul>
+      <li>Cup → People needed a way to drink water without cupping their hands every time</li>
+      <li>Scissors → People needed a way to cut things accurately and safely</li>
+      <li>Chair → People needed a way to rest without sitting on the hard ground</li>
+    </ul>
+    Key message: <strong>"Every object around us was invented because someone had a problem and figured out how to solve it. That person was an engineer!"</strong>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Introduce "Spot the Problem" (3 min)</strong><br>
+    Explain the game: <em>"I'm going to describe a situation. Your job is to find the problem — and then tell me what a good solution would need to do."</em><br>
+    A <strong>solution</strong> is the thing that fixes the problem. But not all solutions are equally good! A good solution has to meet certain requirements — we call those <strong>criteria</strong>.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Play "Spot the Problem" (15–20 min)</strong><br>
+    Work through each scenario below together. Read the situation, let students discuss, then review the criteria together.
+  </div>
+
+  <!-- SCENARIO CARDS -->
+
+  <div class="problem-card">
+    <div class="scenario">📚 Scenario 1: "Books keep falling off the shelf."</div>
+    <p><strong>What's the problem?</strong> The books won't stay on the shelf — they fall over and make a mess (and might get damaged).</p>
+    <div class="criteria-list">
+      <strong>A good solution needs to:</strong>
+      <ul>
+        <li>✅ <em>Hold</em> the books upright so they don't fall</li>
+        <li>✅ Be <em>easy to use</em> — kids should be able to get books out and put them back</li>
+        <li>✅ Not <em>damage</em> the books (no sharp edges, no bending)</li>
+      </ul>
+    </div>
+    <p><em>Discussion: What solutions can you think of? (Bookends, a box, a different shelf, leaning them against something…)</em></p>
+  </div>
+
+  <div class="problem-card">
+    <div class="scenario">☀️ Scenario 2: "It's too hot to sit in the backyard."</div>
+    <p><strong>What's the problem?</strong> There's no shade outside — it's uncomfortable and maybe even unsafe to sit out there in the heat.</p>
+    <div class="criteria-list">
+      <strong>A good solution needs to:</strong>
+      <ul>
+        <li>✅ <em>Block the sun</em> to create shade</li>
+        <li>✅ Be <em>portable</em> — you should be able to set it up where you want it</li>
+        <li>✅ Not cost too much or be too hard to make</li>
+      </ul>
+    </div>
+    <p><em>Discussion: What could work? (Umbrella, canopy, tent, tree, shade sail, cardboard…)</em></p>
+  </div>
+
+  <div class="problem-card">
+    <div class="scenario">🐕 Scenario 3: "The dog keeps escaping the yard."</div>
+    <p><strong>What's the problem?</strong> The yard isn't secure — the dog gets out and could get hurt or lost.</p>
+    <div class="criteria-list">
+      <strong>A good solution needs to:</strong>
+      <ul>
+        <li>✅ Be <em>secure</em> — the dog can't get through, under, or over it</li>
+        <li>✅ Not <em>hurt the dog</em> — no sharp parts, nothing painful</li>
+        <li>✅ <em>Let people in and out</em> — a gate or door that humans can use</li>
+      </ul>
+    </div>
+    <p><em>Discussion: What could work? (Taller fence, a latch on the gate, closing gaps in the fence…)</em></p>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Find YOUR Problem (10 min)</strong><br>
+    Now it's the student's turn! Ask them to think of <em>one</em> real problem in their own home or yard.<br>
+    Prompt questions:
+    <ul>
+      <li>Is there something that keeps breaking, falling, getting lost, or not working right?</li>
+      <li>Is there something that's hard to do because you're missing a tool?</li>
+      <li>Is there something messy, uncomfortable, or annoying?</li>
+    </ul>
+    Students write or draw their problem on the worksheet, then list what a solution would need to do.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What makes something a "problem" vs. just something you don't like?</li>
+      <li>Can a solution make the problem worse? (Yes! Bad designs do this — what's an example?)</li>
+      <li>Who has problems that engineers try to solve? (Everyone! All ages, all places)</li>
+      <li>What's the difference between a problem and a solution? Can you give an example of each?</li>
+      <li>Why is it important to understand a problem <em>before</em> trying to solve it?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🏠 <strong>Problem Walk:</strong> Walk through every room of your house and look for problems. Make a list! How many can you find in 10 minutes?</li>
+      <li>📰 <strong>News Hunt:</strong> Look at a newspaper or news website together. How many problems can you spot? What kinds of engineers are working on them?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do You Do With a Problem?"</em> by Kobi Yamada (about facing problems with curiosity instead of fear)</li>
+      <li>🎨 <strong>Problem Poster:</strong> Draw a "Wanted: Solution!" poster for a problem you found at home. Describe what the problem is and what a solution needs to do.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This lesson is <em>all</em> discussion</strong> — don't rush through the scenarios. The back-and-forth of identifying criteria is where the engineering thinking happens.</li>
+      <li><strong>Criteria vs. constraints:</strong> At this age, we don't need to use technical vocabulary, but the concept is there: criteria = what a solution must do. Constraints = limits (cost, materials, time). It's okay to point this out if it comes naturally.</li>
+      <li><strong>"Wrong" answers are gold:</strong> If a student suggests a solution that doesn't meet all the criteria, gently ask: "Does that solution [hold the books / block the sun / keep the dog safe]? Let's check each one."</li>
+      <li><strong>For younger learners:</strong> Focus on the first two scenarios. The dog scenario has more complexity (three criteria to balance).</li>
+      <li><strong>Assessment:</strong> Can the student identify a real problem and list at least two things a solution would need to do? That's success for Lesson 1.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2>📝 Student Worksheet — Lesson 1: What Is a Problem?</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>🔍 My Problem</h3>
+      <p>Think of <em>one</em> real problem you've noticed at home or outside. Draw a picture of it or write about it here:</p>
+      <div class="write-lines">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+
+      <h3>🎨 Draw the Problem</h3>
+      <div style="border: 2px solid #ce93d8; border-radius: 8px; height: 160px; margin: 10px 0; background: #fafafa;"></div>
+
+      <h3>✅ What Does a Good Solution Need to Do?</h3>
+      <p>List or draw at least <em>two</em> things a solution would need to do to fix your problem: <em>(It's OK to draw your answers!)</em></p>
+      <div class="write-lines">
+        <p style="padding-top: 4px;">1. A solution needs to: _______________________________________________</p>
+        <p style="padding-top: 4px;">2. A solution needs to: _______________________________________________</p>
+        <p style="padding-top: 4px;">3. (Bonus) It also needs to: __________________________________________</p>
+      </div>
+
+      <h3>💭 "Spot the Problem" Review</h3>
+      <p>Draw a line from each problem to one thing a solution needs to do: <em>(Or ask a grown-up to help you write.)</em></p>
+      <table style="width:100%; border-collapse: collapse; margin: 10px 0;">
+        <tr>
+          <th style="background: #6a1b9a; color: white; padding: 8px; text-align: left; border: 2px solid #4a148c;">Problem</th>
+          <th style="background: #6a1b9a; color: white; padding: 8px; text-align: left; border: 2px solid #4a148c;">One thing a solution needs to do</th>
+        </tr>
+        <tr style="background: #f3e5f5;">
+          <td style="padding: 10px; border: 1px solid #ce93d8;">📚 Books falling off the shelf</td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ce93d8;">☀️ Too hot in the backyard</td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+        </tr>
+        <tr style="background: #f3e5f5;">
+          <td style="padding: 10px; border: 1px solid #ce93d8;">🐕 Dog escaping the yard</td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>📝 "Spot the Problem" — Sample Criteria Answers</h3>
+      <ul>
+        <li><strong>📚 Books falling off the shelf:</strong> Solution needs to <em>hold</em> books upright / be easy to use / not damage books</li>
+        <li><strong>☀️ Too hot in backyard:</strong> Solution needs to <em>block</em> the sun / be portable / not cost too much</li>
+        <li><strong>🐕 Dog escaping:</strong> Solution needs to be <em>secure</em> / not hurt the dog / let people in and out</li>
+      </ul>
+
+      <h3>💡 Notes on the "My Problem" Section</h3>
+      <p class="discussion-hint">This is open-ended — there's no single right answer. Award full credit for any real problem with at least two genuine criteria. Praise creative thinking!</p>
+      <ul>
+        <li><strong>Look for:</strong> A problem that affects someone (not just "I want a toy"), with criteria that address the actual problem</li>
+        <li><strong>Watch for:</strong> Students listing solutions instead of criteria (e.g., "needs to have a bigger shelf" instead of "needs to hold more books")</li>
+        <li><strong>Coach toward:</strong> Criteria that describe what the solution does, not what it <em>is</em></li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can identify a real-world problem (not just a preference)</li>
+        <li>Student can list at least two criteria a solution must meet</li>
+        <li>Student can explain why each criterion matters</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

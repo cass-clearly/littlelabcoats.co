@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draw Your Idea — K Engineering Design Unit 1, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #6a1b9a;
+      padding-bottom: 10px;
+      color: #6a1b9a;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f3e5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ce93d8;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #6a1b9a;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #4a148c;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #f3e5f5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #6a1b9a;
+    }
+    .procedure-step strong { color: #4a148c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #6a1b9a; }
+    .extension-box {
+      background: #ede7f6;
+      border: 1px solid #b39ddb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .challenge-box {
+      background: #4a148c;
+      color: white;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 15px 0;
+      text-align: center;
+    }
+    .challenge-box .challenge-text { font-size: 15pt; font-weight: bold; margin-bottom: 8px; }
+    .engineer-fact {
+      background: #8e24aa;
+      color: white;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 10.5pt;
+    }
+    .engineer-fact strong { font-size: 11.5pt; }
+    .design-guidelines {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .guideline-card {
+      background: #fff;
+      border: 2px solid #ce93d8;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .guideline-card .g-emoji { font-size: 24pt; display: block; margin-bottom: 4px; }
+    .guideline-card strong { color: #6a1b9a; }
+    .worksheet-box {
+      border: 3px solid #6a1b9a;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .worksheet-box h2 { margin-top: 0; }
+    .draw-box {
+      border: 2px solid #ce93d8;
+      border-radius: 8px;
+      min-height: 200px;
+      margin: 10px 0;
+      background: #fafafa;
+      position: relative;
+    }
+    .draw-box .corner-label {
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      font-size: 9pt;
+      color: #aaa;
+      font-style: italic;
+    }
+    .write-lines p { border-bottom: 1px solid #bbb; height: 36px; margin: 0; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .discussion-hint { font-style: italic; color: #555; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px;
+      background: #6a1b9a; color: white; border: none;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #4a148c; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .challenge-box, .worksheet-box, .design-guidelines, .engineer-fact {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .print-btn { display: none; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_UbsbWd2o1E0">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>✏️ Draw Your Idea</h1>
+  <p class="subtitle">Engineering Design — Build It! | Unit 1, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔧 <strong>Subject:</strong> Engineering Design — Build It!</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">✏️ 📐 🌉</div>
+    <div class="caption">Real engineers draw their ideas before they build. A good sketch saves time, materials, and mistakes!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>K-2-ETS1-2</strong> — Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Create</em> a labeled sketch of a solution design</li>
+    <li><em>Label</em> each part of their design and explain what it does</li>
+    <li><em>Explain</em> their design to a parent/teacher before building</li>
+  </ul>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>Real engineers don't just start building and hope for the best. They draw their design first — this is called a <strong>blueprint</strong> or <strong>engineering drawing</strong>. By drawing first, engineers can:</p>
+  <ul>
+    <li>See if their idea makes sense before wasting materials</li>
+    <li>Explain their idea to others and get feedback</li>
+    <li>Plan exactly what they need to build</li>
+    <li>Notice problems before they become expensive mistakes</li>
+  </ul>
+
+  <div class="engineer-fact">
+    <strong>🏛️ Real Engineering Fact:</strong> Before the Golden Gate Bridge was built, engineers spent years drawing and planning. The design went through dozens of revisions on paper before a single piece of steel was put in place. Drawing first saved millions of dollars and thousands of hours of work!
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> sketch, blueprint, label, design, materials, structure, function
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🖊️ For Drawing (Required)</h3>
+    <ul>
+      <li>Paper (plain or the worksheet in this lesson)</li>
+      <li>Pencil</li>
+      <li>Crayons or colored markers</li>
+    </ul>
+    <h3>🌉 For Building (Optional — if time allows)</h3>
+    <ul>
+      <li>3–5 sheets of plain copy paper</li>
+      <li>12 inches of tape (masking or clear)</li>
+      <li>8–10 toothpicks <em>(adult supervision required — tips are sharp)</em></li>
+      <li>Small toy car OR a marble</li>
+      <li>A tray, container lid, or baking sheet filled with 1 inch of water (the "puddle")</li>
+    </ul>
+  </div>
+
+  <h2>🏆 The Challenge</h2>
+
+  <div class="challenge-box">
+    <div class="challenge-text">🌉 Design a bridge over a puddle that a toy car can drive across!</div>
+    <p style="font-size: 11pt; margin: 0;">Materials: Paper, tape, and toothpicks only. Bridge must span a small tray of water.</p>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Review the Challenge (5 min)</strong><br>
+    Re-read the challenge. Ask the Lesson 2 questions first:
+    <ul>
+      <li>How wide is the puddle? (Measure the tray/container)</li>
+      <li>How heavy is the car/marble?</li>
+      <li>What materials do we have?</li>
+      <li>What does the bridge HAVE to do? (Not touch the water, hold the car, let the car cross)</li>
+    </ul>
+    Write down the answers — these are your <strong>criteria</strong> (what the bridge must do) and <strong>constraints</strong> (what you're limited to).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — What Makes a Good Bridge? (5 min)</strong><br>
+    Look at (or think about) real bridges. What shapes do they use? Key observations:
+    <ul>
+      <li>Bridges have a flat surface for things to cross on</li>
+      <li>Bridges have supports underneath or on the sides to keep them up</li>
+      <li>Bridges have to span the gap without touching the middle</li>
+    </ul>
+    Ask: <em>"If you were making a bridge from paper, what would you do to make it strong?"</em>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Paper Engineering Hint:</strong> Flat paper is weak. But <em>folded</em> paper is surprisingly strong! Try folding paper into a long tube, an accordion fold, or a box shape. The shape changes how strong it is.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — DRAW First! (10–12 min)</strong><br>
+    <em>No touching the materials yet!</em> Students draw their bridge design on the worksheet.
+    <br><br>
+    Their drawing should include:
+    <ul>
+      <li>A top view OR a side view of the bridge (or both!)</li>
+      <li>Labels for each part: "this is the road surface," "these are the supports," "this is where the car enters"</li>
+      <li>Notes on materials: "this part is paper," "this part is tape"</li>
+    </ul>
+    It doesn't have to be perfect — just <em>clear enough that someone else could understand their plan.</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Explain Your Design (5 min)</strong><br>
+    Each student shows their drawing to a parent/teacher/sibling and explains:
+    <ol>
+      <li>What is this part? (Point to each labeled section)</li>
+      <li>What does it do? (How does it help the bridge work?)</li>
+      <li>Why did you choose this design?</li>
+    </ol>
+    <em>This is what real engineers do in "design reviews" — you explain your plan to others to catch problems before you build!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Build! (Optional — if time allows)</strong><br>
+    If there's time, build the bridge using only the allowed materials. Save the original drawing — you'll need it for Lesson 4 to compare your design vs. your actual bridge!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>What did drawing help you figure out that you wouldn't have noticed just by thinking?</li>
+      <li>Did your drawing change your plan at all? (It often does!)</li>
+      <li>When you explained your design, did the other person spot any problems you missed?</li>
+      <li>Can you think of things that need to be designed before they're built? (A house, a car, a toy…)</li>
+      <li>Why do labels matter on an engineering drawing?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>The drawing does NOT have to be good art:</strong> Engineering drawings are about communication, not beauty. A rough sketch with clear labels is better than a beautiful drawing with no labels.</li>
+      <li><strong>Enforce the rule: draw <em>before</em> touching materials.</strong> If students rush to build, gently stop them: "Real engineers always draw first. Let's see your plan."</li>
+      <li><strong>The "design review" in Step 4 is powerful:</strong> When students explain to an adult, they often notice gaps in their plan themselves. Let them talk it through without fixing it for them.</li>
+      <li><strong>Keep the drawing!</strong> Students will compare it to their actual bridge in Lesson 4. Having both documents side-by-side is a great learning moment.</li>
+      <li><strong>Assessment:</strong> Does the student have a drawing with at least two labeled parts? Can they explain what each part does? That's success for Lesson 3.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2>✏️ Student Worksheet — Lesson 3: Draw Your Bridge Design</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>📋 My Challenge Notes</h3>
+      <p>Before drawing, answer these:</p>
+      <table style="width:100%; border-collapse: collapse; margin: 8px 0;">
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ce93d8; width: 50%;"><strong>How wide is the puddle (tray)?</strong><br>_____________ inches/cm</td>
+          <td style="padding: 8px; border: 1px solid #ce93d8;"><strong>What materials can I use?</strong><br>Paper, tape, toothpicks</td>
+        </tr>
+        <tr style="background: #f3e5f5;">
+          <td style="padding: 8px; border: 1px solid #ce93d8;"><strong>What must the bridge do?</strong><br>1. ________________________________<br>2. ________________________________</td>
+          <td style="padding: 8px; border: 1px solid #ce93d8;"><strong>What must the bridge NOT do?</strong><br>1. ________________________________<br>2. ________________________________</td>
+        </tr>
+      </table>
+
+      <h3>🎨 My Bridge Design Drawing</h3>
+      <p style="font-size: 10pt; color: #555;">Draw your bridge below. Label every part — explain what it does! Use arrows to point to each part.</p>
+      <div class="draw-box" style="min-height: 240px;">
+        <span class="corner-label">Draw your bridge here — label each part!</span>
+      </div>
+
+      <h3>🏷️ Parts List</h3>
+      <p>List the parts of your bridge and what each one does: <em>(Ask a grown-up to help you write, or draw pictures of each part!)</em></p>
+      <table style="width:100%; border-collapse: collapse; margin: 8px 0;">
+        <tr>
+          <th style="background: #6a1b9a; color: white; padding: 8px; border: 2px solid #4a148c; text-align: left;">Part Name</th>
+          <th style="background: #6a1b9a; color: white; padding: 8px; border: 2px solid #4a148c; text-align: left;">What does it do?</th>
+          <th style="background: #6a1b9a; color: white; padding: 8px; border: 2px solid #4a148c; text-align: left;">Material</th>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ce93d8; height: 36px;"></td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+        </tr>
+        <tr style="background: #f3e5f5;">
+          <td style="padding: 10px; border: 1px solid #ce93d8; height: 36px;"></td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ce93d8; height: 36px;"></td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+          <td style="padding: 10px; border: 1px solid #ce93d8;"></td>
+        </tr>
+      </table>
+
+      <h3>🗣️ My Design Explanation</h3>
+      <p>After explaining to a parent/teacher, write one thing they noticed or suggested:</p>
+      <div class="write-lines">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>📋 Challenge Notes — Expected Answers</h3>
+      <ul>
+        <li><strong>What must the bridge do:</strong> Span the puddle without touching water / support the toy car / let the car roll across smoothly</li>
+        <li><strong>What must it NOT do:</strong> Touch the water / collapse under the car's weight / tip to one side</li>
+      </ul>
+
+      <h3>🎨 Design Drawing Rubric</h3>
+      <p class="discussion-hint">No single correct design! Evaluate the drawing based on:</p>
+      <ul>
+        <li>✅ Drawing shows a recognizable bridge shape (something that spans a gap)</li>
+        <li>✅ At least two parts are labeled with what they do</li>
+        <li>✅ Materials are noted somewhere on the drawing or parts list</li>
+        <li>✅ Student can explain each part verbally during Step 4</li>
+      </ul>
+
+      <h3>💡 Common Strong Design Elements to Look For</h3>
+      <ul>
+        <li>Folded paper for the deck (makes it stiffer than flat paper)</li>
+        <li>Supports along the sides or underneath</li>
+        <li>Toothpicks used as support beams or railings</li>
+        <li>Tape used at joints to strengthen connections</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Drawing was completed BEFORE touching building materials</li>
+        <li>At least two parts are labeled with their function</li>
+        <li>Student can explain their design to an adult</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

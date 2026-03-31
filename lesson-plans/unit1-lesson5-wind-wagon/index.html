@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wind Wagon Engineering Challenge — Unit 1, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .engineering-cycle {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+    .cycle-step {
+      text-align: center;
+      background: #fff9c4;
+      border: 2px solid #f57f17;
+      border-radius: 10px;
+      padding: 10px;
+      width: 22%;
+      min-width: 120px;
+      margin: 5px;
+    }
+    .cycle-step .emoji { font-size: 32pt; display: block; margin-bottom: 5px; }
+    .cycle-step .label { font-weight: bold; color: #f57f17; font-size: 10pt; }
+    .worksheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .worksheet-table th {
+      background: #ff6f00;
+      color: white;
+      padding: 10px;
+      border: 2px solid #333;
+      font-size: 11pt;
+    }
+    .worksheet-table td {
+      border: 2px solid #333;
+      padding: 10px;
+      vertical-align: top;
+      font-size: 10pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>💨 Wind Wagon Engineering Challenge 💨</h1>
+  <p class="subtitle">Physical Science + Engineering — Unit 1, Lesson 5</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces + Engineering</span>
+    <span>🎒 <strong>Kit Lesson</strong></span>
+  </div>
+
+  <div class="tip-box">
+    🎒 <strong>Kit Lesson</strong> — Specialty materials included in the physical kit
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">⛵ 💨 🛒</div>
+    <div class="caption">Can you design a wagon that moves using only the wind? Engineer it, test it, make it better!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-2-ETS1-1</strong> — Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool<br>
+    <strong>K-2-ETS1-2</strong> — Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem<br>
+    <strong>K-2-ETS1-3</strong> — Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Wind is just moving air — and moving air can <strong>push</strong>! Engineers use the wind's push to move sailboats, power wind turbines, and even fly kites. In this challenge, your kids will become engineers: they'll design, build, test, and improve a <strong>wind wagon</strong> — a wheeled vehicle that moves when pushed by wind from a fan (or your breath!). This is a full engineering design challenge using the Engineering Design Process: Ask, Imagine, Plan, Create, Test, and Improve!</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Wind is air that's moving fast, and when it hits something, it pushes it. The bigger the sail (the surface the wind hits), the stronger the push. Engineers design things by testing ideas, seeing what works, and making improvements. This is called the <strong>Engineering Design Process</strong>. You'll follow these steps today: Ask a question, Imagine solutions, Plan your design, Create it, Test it, and Improve it based on what you learned!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> engineer, design, sail, wind, push, improve, test, solution, problem
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧰 From Your Science Kit (per child)</h3>
+    <ul>
+      <li>Cardboard base (about 4" × 6" — cereal box works great!)</li>
+      <li>4 bottle caps or cardboard wheels</li>
+      <li>2 straws or wooden skewers (for axles)</li>
+      <li>Paper (for sails — different sizes/shapes)</li>
+      <li>Tape (masking or clear)</li>
+      <li>1 drinking straw (for sail mast)</li>
+    </ul>
+
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>Small electric fan (or hair dryer on cool setting)</li>
+      <li>Measuring tape or ruler (to measure distance traveled)</li>
+      <li>Smooth surface for testing (kitchen floor, table, smooth carpet)</li>
+      <li>Optional: markers/crayons to decorate wagons</li>
+    </ul>
+
+    <h3>📋 Printables</h3>
+    <ul>
+      <li>Student Worksheet (included at end of lesson)</li>
+      <li>Pencils/crayons for recording</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — The Engineering Design Process (5 min)</strong><br>
+    Introduce the challenge: <em>"Today you're not just scientists — you're <em>engineers</em>. Engineers solve problems by designing and building things."</em><br>
+    Show them the Engineering Design Cycle:<br>
+    <div class="engineering-cycle">
+      <div class="cycle-step"><span class="emoji">❓</span><span class="label">ASK</span></div>
+      <div class="cycle-step"><span class="emoji">💭</span><span class="label">IMAGINE</span></div>
+      <div class="cycle-step"><span class="emoji">📝</span><span class="label">PLAN</span></div>
+      <div class="cycle-step"><span class="emoji">🔨</span><span class="label">CREATE</span></div>
+      <div class="cycle-step"><span class="emoji">🧪</span><span class="label">TEST</span></div>
+      <div class="cycle-step"><span class="emoji">✨</span><span class="label">IMPROVE</span></div>
+    </div>
+    Say: <em>"Today's problem: Build a wagon that can move using <em>only</em> the wind."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — ASK: What's the Problem? (3 min)</strong><br>
+    <em>"What do we need our wind wagon to do?"</em><br>
+    <ul>
+      <li>It needs to roll on wheels</li>
+      <li>It needs to catch the wind</li>
+      <li>It needs to move forward when the fan blows on it</li>
+    </ul>
+    Write these "requirements" on their Student Worksheet (page 2).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — IMAGINE & PLAN: Design Your Wagon (5 min)</strong><br>
+    <ul>
+      <li>Each child draws their wagon design in the planning box</li>
+      <li>Ask: <em>"What shape sail will catch the most wind? Big or small? Tall or wide?"</em></li>
+      <li>Let them imagine wild ideas! No wrong answers yet</li>
+      <li>Siblings can share ideas with each other (but each builds their own)</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Sibling tip:</strong> Encourage teamwork in planning, but each child builds their own wagon. This way they can race them later and compare designs!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — CREATE: Build Time! (15 min)</strong><br>
+    <ul>
+      <li><strong>Build the chassis:</strong> Attach wheels to the cardboard base using straws as axles (poke straws through, add caps on ends, tape in place)</li>
+      <li><strong>Add the sail:</strong> Tape a straw (mast) standing upright on the wagon. Attach paper as the sail</li>
+      <li><strong>Test as you go:</strong> Does it roll smoothly? Is the sail attached?</li>
+      <li>Let kids experiment! If the wheel falls off, that's part of engineering — fix it and try again</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — TEST: Does It Work? (5 min)</strong><br>
+    <ul>
+      <li>Place wagons on a smooth surface</li>
+      <li>Turn on the fan behind the wagon (or blow on the sail)</li>
+      <li>Does it move? How far?</li>
+      <li>Measure distance traveled with a ruler (record in notebook)</li>
+      <li>Siblings can test at the same time — make it a race!</li>
+    </ul>
+    Key question: <em>"Did your wagon do what you wanted? Why or why not?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — IMPROVE: Make It Better (8 min)</strong><br>
+    <em>"Good engineers always try to make their designs <em>better</em>. What could you change?"</em><br>
+    Ideas to try:
+    <ul>
+      <li>Bigger sail? Smaller sail?</li>
+      <li>Move the sail forward or backward on the wagon?</li>
+      <li>Make the wagon lighter (cut holes in the base)?</li>
+      <li>Different sail shape (triangle, square, rectangle)?</li>
+    </ul>
+    Let kids make <em>one</em> change, then test again. Did it go farther? Record the new distance.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Share & Celebrate! (4 min)</strong><br>
+    <ul>
+      <li>Each child shows their final wagon</li>
+      <li>Explain: <em>"What did you change to make it better?"</em></li>
+      <li>Race the wagons side-by-side — which went farther?</li>
+      <li>Celebrate both designs! Each one teaches something</li>
+    </ul>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Is wind a push or a pull? How do you know?</li>
+      <li>What made your wagon go farther — a big sail or a small sail? Why?</li>
+      <li>What was the hardest part of building your wagon?</li>
+      <li>If you could build it again, what would you do differently?</li>
+      <li>Where do people use wind to push things in real life? (Sailboats, windmills, kites, wind turbines…)</li>
+      <li>What would happen if you put the sail on <em>backwards</em>? Let's try it.</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>💨 <strong>Different Wind Strengths:</strong> Test your wagon with a gentle breeze (blow softly) vs. strong wind (fan on high). How does force strength change motion?</li>
+      <li>⛰️ <strong>Uphill Challenge:</strong> Can your wind wagon go up a ramp? Build a small ramp from a book and test it!</li>
+      <li>🏁 <strong>Obstacle Course:</strong> Set up a course with tape lines. Can you steer your wagon through "gates" by angling the fan?</li>
+      <li>🎨 <strong>Decorate & Name:</strong> Give your wind wagon a name and decorate it with markers. Make it look like a pirate ship, race car, or spaceship!</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Most Magnificent Thing"</em> by Ashley Spires (great engineering growth mindset story!) or <em>"Rosie Revere, Engineer"</em> by Andrea Beaty</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Embrace failure:</strong> This is engineering. Wheels will fall off. Sails will flop over. That's <em>good</em>. Say: "Uh oh, what went wrong? How can we fix it?" Failure is data.</li>
+      <li><strong>Let them struggle (a little):</strong> Don't build it for them. Guide with questions: "What do you think would happen if…?" "How could you attach that differently?"</li>
+      <li><strong>Sibling dynamics:</strong> If one child's wagon works better, celebrate it but don't make it a competition. Say: "Wow, what did they do differently? Can we learn from that?"</li>
+      <li><strong>Wheels are tricky:</strong> Bottle caps on straws work, but they need to spin freely. If wagons don't roll, help debug: Are wheels stuck? Is tape blocking them? Is the surface too rough?</li>
+      <li><strong>Wind direction matters:</strong> Make sure the fan blows <em>from behind</em> the wagon. If kids point the fan at the sail from the front, it might blow the wagon backward.</li>
+      <li><strong>Time management:</strong> If you're short on time, skip the improvement step or let kids make their changes at the same time as testing.</li>
+      <li><strong>Assessment:</strong> Did each child complete a design, build something, test it, and explain one change they made? That's success. The wagon doesn't need to be perfect — the <em>process</em> is the learning.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== ENGINEERING DESIGN NOTEBOOK ====================== -->
+  <div class="page-break">
+
+    <h1>📓 Wind Wagon Engineering Design Notebook 📓</h1>
+    <p class="name-date">Engineer Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2 style="background:#ff6f00; font-size:13pt; padding:6px; text-align:center; color:white;">❓ ASK: What's the Problem?</h2>
+    <p style="font-size:10pt; margin:10px 0;"><strong>Challenge:</strong> Build a wagon that moves using <em>only</em> wind!</p>
+    <p style="font-size:10pt;"><strong>What must my wagon do?</strong></p>
+    <ul style="font-size:10pt;">
+      <li>Roll on wheels: ___________</li>
+      <li>Catch the wind: ___________</li>
+      <li>Move forward: ___________</li>
+    </ul>
+
+    <h2 style="background:#ff6f00; font-size:13pt; padding:6px; text-align:center; color:white; margin-top:20px;">💭 IMAGINE & 📝 PLAN: Draw Your Design</h2>
+    <div style="border:2px solid #333; height:240px; border-radius:8px; margin:10px 0; background:#fff;"></div>
+    <p style="font-size:9pt; color:#555; text-align:center; margin-top:5px;">Label your parts: wheels, sail, mast, body</p>
+
+    <h2 style="background:#ff6f00; font-size:13pt; padding:6px; text-align:center; color:white; margin-top:20px;">🧪 TEST: How Did It Do?</h2>
+    <table class="worksheet-table" style="margin-top:10px;">
+      <tr>
+        <th style="width:50%; background:#1976d2;">Test #1 (First Try)</th>
+        <th style="width:50%; background:#388e3c;">Test #2 (After Improvement)</th>
+      </tr>
+      <tr>
+        <td style="height:100px;">
+          <strong>Distance traveled:</strong><br><br>
+          ___________ inches/feet<br><br>
+          <strong>Did it work?</strong> YES / NO
+        </td>
+        <td style="height:100px;">
+          <strong>Distance traveled:</strong><br><br>
+          ___________ inches/feet<br><br>
+          <strong>Did it work better?</strong> YES / NO
+        </td>
+      </tr>
+    </table>
+
+    <h2 style="background:#ff6f00; font-size:13pt; padding:6px; text-align:center; color:white; margin-top:20px;">✨ IMPROVE: What Did You Change?</h2>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:30px; margin:8px 0;"></p>
+
+    <h2 style="background:#ff6f00; font-size:13pt; padding:6px; text-align:center; color:white; margin-top:20px;">🎉 Draw Your Final Wind Wagon!</h2>
+    <div style="border:2px solid #333; height:200px; border-radius:8px; margin:10px 0; background:#fff;"></div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🎯 What to Expect: Common Results & Challenges</h3>
+      
+      <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+        <tr>
+          <th style="padding:8px; border:1px solid #999; background:#e8f5e9;">✅ What Usually Works</th>
+          <th style="padding:8px; border:1px solid #999; background:#ffebee;">⚠️ Common Problems</th>
+        </tr>
+        <tr>
+          <td style="padding:10px; border:1px solid #999; vertical-align:top;">
+            <ul style="margin:0; padding-left:20px; font-size:10pt;">
+              <li><strong>Bigger sails</strong> catch more wind (but too big = falls over!)</li>
+              <li><strong>Lightweight wagons</strong> move farther with less resistance</li>
+              <li><strong>Wheels that spin freely</strong> — not taped too tight</li>
+              <li><strong>Smooth surfaces</strong> (tile, hardwood) work better than carpet</li>
+              <li><strong>Sail perpendicular to wind</strong> — facing the fan directly</li>
+            </ul>
+          </td>
+          <td style="padding:10px; border:1px solid #999; vertical-align:top;">
+            <ul style="margin:0; padding-left:20px; font-size:10pt;">
+              <li><strong>Wheels don't spin</strong> → Tape blocking them or straw too tight</li>
+              <li><strong>Wagon tips over</strong> → Sail too heavy/tall, or base too narrow</li>
+              <li><strong>Doesn't move</strong> → Sail too small, or surface too rough (carpet)</li>
+              <li><strong>Rolls backward/sideways</strong> → Wheels not aligned straight, or fan at wrong angle</li>
+              <li><strong>Sail falls off</strong> → Not enough tape, or mast too wobbly</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h3>💡 Troubleshooting Tips for Parents</h3>
+      <ul>
+        <li><strong>If wheels won't spin:</strong> Make sure the straw axle can rotate freely. Use a pencil to poke bigger holes if needed. Don't tape the wheels to the axle — tape the axle to the wagon body.</li>
+        <li><strong>If wagon tips over:</strong> Make the base wider, move the sail lower, or make the sail smaller. Physics lesson: low center of gravity = more stable!</li>
+        <li><strong>If it won't move at all:</strong> Check surface (smooth is better), check that fan is strong enough, or make the wagon lighter (cut weight from the base).</li>
+        <li><strong>Sail shape experiments:</strong> Square vs. triangle vs. rectangle — all work! Let kids discover that sail AREA matters more than shape.</li>
+        <li><strong>Improvement ideas:</strong> If they're stuck, suggest: "What if you made the sail bigger? What if you made the wagon lighter by cutting a hole in the middle?"</li>
+      </ul>
+
+      <h3>📐 Engineering Concepts Covered</h3>
+      <ul>
+        <li><strong>Force & Motion:</strong> Wind (moving air) pushes the sail, which pushes the wagon</li>
+        <li><strong>Iterative Design:</strong> Test → Learn → Improve → Test again (this is how real engineering works!)</li>
+        <li><strong>Variables:</strong> Changing one thing (sail size, weight, wheel alignment) affects performance</li>
+        <li><strong>Problem-Solving:</strong> When something doesn't work, debug and fix it</li>
+        <li><strong>Comparing Designs:</strong> Two kids, two wagons — which went farther? Why?</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can explain the problem (make a wagon move using wind)</li>
+        <li>Child draws a plan before building</li>
+        <li>Child builds a wagon with wheels and a sail (doesn't need to be perfect!)</li>
+        <li>Child tests the wagon and measures results</li>
+        <li>Child makes at least ONE improvement/change to the design</li>
+        <li>Child can explain: "Wind pushes the sail, and the sail pushes the wagon"</li>
+      </ul>
+
+      <h3>🎓 Extending the Learning</h3>
+      <p style="font-size:10pt;">If kids LOVED this challenge, try:</p>
+      <ul>
+        <li>Race wagons against each other — whose design is fastest?</li>
+        <li>Change the challenge: "Can you make your wagon go BACKWARDS using wind?" (Flip the sail!)</li>
+        <li>Build a wagon that carries cargo (small toy on top) — does it still move?</li>
+        <li>Research real sailboats or wind turbines — how do they use wind energy?</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

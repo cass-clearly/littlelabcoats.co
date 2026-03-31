@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seed Travelers: How Seeds Move — Unit 2, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #388e3c;
+      margin-top: 6px;
+      margin-bottom: 2px;
+      display: block;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Dispersal method cards */
+    .method-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .method-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 10pt;
+      vertical-align: top;
+    }
+    .method-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .method-card .label { font-weight: bold; color: #2e7d32; font-size: 11pt; }
+    .method-card .desc { margin-top: 4px; font-size: 9pt; color: #555; }
+    .wind-card { border-color: #b0bec5; background: #eceff1; }
+    .wind-card .label { color: #455a64; }
+    .water-card { border-color: #81d4fa; background: #e1f5fe; }
+    .water-card .label { color: #01579b; }
+    .animal-card { border-color: #ffcc80; background: #fff3e0; }
+    .animal-card .label { color: #e65100; }
+    .explode-card { border-color: #ef9a9a; background: #ffebee; }
+    .explode-card .label { color: #c62828; }
+    /* Worksheet styles */
+    .worksheet-title {
+      text-align: center;
+      font-size: 20pt;
+      color: #2e7d32;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 8px;
+      margin-bottom: 6px;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .matching-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    .matching-table th {
+      background: #2e7d32;
+      color: white;
+      padding: 10px 14px;
+      font-size: 12pt;
+      text-align: left;
+      border: 2px solid #1b5e20;
+    }
+    .matching-table td {
+      border: 2px solid #a5d6a7;
+      padding: 10px 14px;
+      font-size: 11pt;
+      vertical-align: middle;
+    }
+    .matching-table tr:nth-child(even) td { background: #f1f8e9; }
+    .matching-line {
+      display: inline-block;
+      width: 160px;
+      border-bottom: 2px solid #555;
+      vertical-align: bottom;
+      margin-left: 8px;
+    }
+    .drawing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 14px 0;
+    }
+    .drawing-box {
+      border: 3px solid #2e7d32;
+      border-radius: 10px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .drawing-box .box-label {
+      background: #2e7d32;
+      color: white;
+      padding: 6px 10px;
+      font-weight: bold;
+      font-size: 10pt;
+    }
+    .drawing-box .draw-area {
+      height: 160px;
+      background: #fafafa;
+    }
+    .drawing-box .box-prompt {
+      padding: 4px 8px 6px;
+      font-size: 9pt;
+      color: #555;
+      font-style: italic;
+    }
+    /* Bonus glue box */
+    .bonus-box {
+      border: 3px dashed #00B894;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 14px 0;
+      background: #f0fdf4;
+    }
+    .bonus-box .bonus-label {
+      font-weight: bold;
+      color: #00B894;
+      font-size: 12pt;
+      margin-bottom: 8px;
+    }
+    .seed-glue-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .seed-glue-cell {
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      text-align: center;
+      padding: 10px 6px;
+      background: white;
+      font-size: 9pt;
+    }
+    .seed-glue-cell .sc-emoji { font-size: 20pt; margin-bottom: 4px; }
+    .seed-glue-cell .sc-label { font-weight: bold; color: #2e7d32; font-size: 9pt; }
+    .seed-glue-cell .sc-area {
+      height: 50px;
+      border: 1px dashed #bbb;
+      border-radius: 4px;
+      margin-top: 6px;
+      background: #f9f9f9;
+      font-size: 8pt;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-col h3 { font-size: 12pt; text-align: center; }
+    .ak-col ul { list-style: none; padding-left: 0; }
+    .ak-col li { padding: 3px 0; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .method-card,
+      .drawing-box, .bonus-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_e0Tfg-gU0Zs">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌱 Seed Travelers: How Seeds Move 🌬️</h1>
+  <p class="subtitle">Life Science — Unit 2, Lesson 5 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌿 <strong>Subject:</strong> Life Science — Plants &amp; Seeds</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌼💨 🌊🐿️ 💥</div>
+    <div class="caption">Wind, water, animals, and even explosions — seeds are born to travel!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Seeds don't just fall straight down and stay there — they're built to <strong>travel</strong>! Plants have clever tricks for sending their seeds far away: riding the wind, floating on water, hitching a ride on animals, or even shooting out like tiny cannons. The farther a seed travels, the better its chances of finding a good spot to grow.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>When a seed lands too close to its parent plant, the two plants end up competing for the same water, sunlight, and space. That's a problem! Plants can't pick up and walk away, so over millions of years they developed incredible <strong>adaptations</strong> — special features that help seeds disperse (spread out) to new locations.</p>
+
+  <div class="method-cards">
+    <div class="method-card wind-card">
+      <span class="emoji">💨</span>
+      <span class="label">Wind</span>
+      <span class="desc">Feathery, papery, or winged seeds catch the breeze. Dandelion fluff, maple helicopters, cattail fluff.</span>
+    </div>
+    <div class="method-card water-card">
+      <span class="emoji">🌊</span>
+      <span class="label">Water</span>
+      <span class="desc">Buoyant seeds float downstream or in ocean currents. Coconuts are champion water travelers!</span>
+    </div>
+    <div class="method-card animal-card">
+      <span class="emoji">🐿️</span>
+      <span class="label">Animals</span>
+      <span class="desc">Sticky burrs hitch rides on fur &amp; socks. Tasty fruits get eaten and seeds come out far away!</span>
+    </div>
+    <div class="method-card explode-card">
+      <span class="emoji">💥</span>
+      <span class="label">Explosion</span>
+      <span class="desc">Some seed pods build up pressure and BURST open, flinging seeds through the air. Touch-me-nots!</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> dispersal, germination, adaptation, seed pod, buoyant, burr
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🌿 Seeds &amp; Nature Items</h3>
+    <ul>
+      <li>Dandelion puffs (or cotton balls with a few small seeds glued on)</li>
+      <li>Maple seeds / samaras ("helicopters") — or paper helicopter templates</li>
+      <li>Small burrs or sticky seeds (burdock, foxtail, etc.) — or small Velcro pieces</li>
+      <li>Assorted kitchen seeds: sunflower seeds, dried beans, apple seeds</li>
+    </ul>
+    <h3>🧰 Activity Supplies</h3>
+    <ul>
+      <li>One or two fuzzy socks (for the animal dispersal walk-around)</li>
+      <li>A bowl of water (for the float test)</li>
+      <li>Paper strip for making helicopter spinners (approx. 1" × 6")</li>
+      <li>Scissors, crayons, pencils</li>
+      <li>Glue stick (for bonus seed-gluing activity on worksheet)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Seed Hunt (5–10 min, outdoors if possible!)</strong><br>
+    Head outside to the yard or a nearby park. Challenge kids: <em>"How many different seeds can you find in 5 minutes?"</em><br>
+    Collect them in a cup or on a piece of tape. Look for dandelion puffs, burrs on socks/pant legs, acorns, berries, seed pods. When you come back inside, spread them on a table and look closely.<br>
+    Ask: <em>"Did any seeds come inside without you meaning to bring them? How did they travel?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Introduce the Four Travelers (5 min)</strong><br>
+    Hold up or point to examples of each travel method. Say the name and do a motion together:<br>
+    <ul>
+      <li>🌬️ <strong>Wind</strong> — blow on a dandelion puff or toss the maple helicopter up and watch it spin</li>
+      <li>🌊 <strong>Water</strong> — mime a seed floating downstream (arms out, drift sideways)</li>
+      <li>🐿️ <strong>Animals</strong> — stick a burr to your sleeve and say "Oops! Free ride!"</li>
+      <li>💥 <strong>Explosion</strong> — crouch tiny, then burst arms out and jump — POP!</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Wind Station (5 min)</strong><br>
+    Place a cotton ball "seed" or dandelion puff at one end of the table. Each child takes a turn blowing it as far as they can in one breath.<br>
+    Then drop a paper helicopter from shoulder height and watch it spin down. Try from a higher spot (standing on a step stool safely, or just dropping it from a higher floor if available).<br>
+    <em>"Why do you think maple seeds have those little wings?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Animal Dispersal Station (5 min)</strong><br>
+    Pull a fuzzy sock over one hand or foot. Drop a few small burrs (or tiny Velcro squares) on the floor/table. Walk your "sock foot" through them. Check what stuck!<br>
+    <em>"Imagine you're a deer walking through a field. Where might those seeds end up?"</em><br>
+    Carefully pull them off and examine them — most burrs have tiny hooks (nature's Velcro).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Water Float Test (5 min)</strong><br>
+    Fill a bowl with water. Drop in a variety of seeds: sunflower seeds, dried beans, apple seeds, a small piece of coconut shell if available, cotton ball.<br>
+    Observe: Which seeds float? Which sink? Record on fingers: <em>"Floaters could travel by water. Sinkers might use a different method."</em><br>
+    <em>"If a seed floated into a river and came out on a muddy bank 10 miles away — what would happen next?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Explosion Demo (3 min)</strong><br>
+    Show photos or a video of touch-me-not (Impatiens) seed pods popping, or squirt a ripe raspberry gently over a piece of white paper — seeds fly out!<br>
+    A water balloon popped at arm's length gives a great feel for the sudden force. Say: <em>"The pod builds up pressure inside, just like a balloon, until — POP! Seeds fly out in all directions!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Wrap Up &amp; Worksheet (10 min)</strong><br>
+    Come together and list the four dispersal methods from memory. Then move to the Student Worksheet — match seeds to their travel method, draw three types of seed travel, and (bonus) glue real seeds next to the correct label.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> "Why is it important for seeds to travel <em>away</em> from the parent plant?"
+    <span class="discussion-hint">💡 Suggested answer: If all the seeds fell right next to the parent plant, they'd be too crowded — fighting for water, sunlight, and space. Spreading out gives each seed a better chance to grow into a healthy plant.</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> "What do you think would happen if all the seeds from a big oak tree fell in exactly the same spot and none of them moved?"
+    <span class="discussion-hint">💡 Suggested answer: The seeds would all sprout in the same tiny area. The seedlings would grow so crowded that they'd compete for water, sunlight, and nutrients — and most of them would die. Only one or two might survive. Spreading out means more plants get to grow up healthy!</span>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Bonus question:</strong> "Can you think of any seeds that travel in more than one way?"
+    <span class="discussion-hint">💡 Suggested answer: Yes! Coconuts can float in the ocean (water) AND get moved by animals or people. Berries travel by animal (eating) but could also float in a stream. Some seeds are so light they can be blown by wind AND float on water. Plants often have "backup plans" for dispersal!</span>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔍 <strong>Microscope Burr:</strong> Look at a burr under a magnifying glass. Can you see the tiny hooks? Compare it to a piece of Velcro under the same magnification.</li>
+      <li>📏 <strong>Wind Distance Test:</strong> Mark a start line. Each child blows a cotton ball seed three times and measures how far it goes. Whose seed traveled farthest? What helped?</li>
+      <li>🎨 <strong>Seed Watercolor:</strong> Paint a seed journey — draw the seed at home on the parent plant, mid-travel (flying, floating, riding), and at its new home sprouting.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"A Seed Is Sleepy"</em> by Dianna Hutts Aston, or <em>"How a Seed Grows"</em> by Helene J. Jordan</li>
+      <li>🌱 <strong>Connect to Prior Lessons:</strong> Look back at your 3-cup water experiment and sunny/dark plant experiment — now that seeds have traveled to a new spot, what do they need to survive and grow?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Go outside first:</strong> This is a wonderful outdoor lesson — do the seed hunt in the yard or park first, then come inside for the stations. Kids who find their own seeds are far more engaged when you explain how those seeds travel.</li>
+      <li><strong>Best burrs for the sock activity:</strong> Burdock burrs (the classic "nature's Velcro") are ideal. Foxtail grass and cocklebur also work well. Pull them off carefully after — they can mat in hair. Alternatively, use small pieces of hook-side Velcro as a safe classroom substitute.</li>
+      <li><strong>Paper helicopter template:</strong> Cut a strip of paper about 1" wide and 6" long. Make a small cut about 2" down the middle from the top. Fold the two resulting flaps in opposite directions — one forward, one back. Drop it from height and it will spin! Add a small paper clip to the bottom for more realistic spinning. Compare to a real maple samara if available.</li>
+      <li><strong>Explosion dispersal demo:</strong> Squirting cucumbers, touch-me-nots (Impatiens), and witch hazel are great real-world examples. In the classroom, gently squeezing a ripe raspberry over paper dramatically shows seeds flying out. A popped water balloon also illustrates the explosive "pop" concept safely.</li>
+      <li><strong>Vocabulary focus for this lesson:</strong> <em>dispersal</em> (spreading seeds to new places), <em>germination</em> (when a seed starts to grow), <em>adaptation</em> (a special feature that helps a living thing survive). Use these words naturally throughout the lesson, not just at the end.</li>
+      <li><strong>Connect to previous lessons:</strong> Reference the 3-cup water experiment and the sunny/dark plant experiment from earlier in Unit 2 — once a seed travels to a new spot, it still needs water, light, and space (just like the experiments showed) to germinate and grow.</li>
+      <li><strong>Assessment:</strong> Can each child name at least three ways seeds travel? Can they match a seed type to its dispersal method? Can they explain in their own words why spreading out is good for seeds?</li>
+    </ul>
+  </div>
+
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1 class="worksheet-title">🌱 Seed Travelers — Student Worksheet</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h2>🔗 Part 1: Match the Seed to Its Travel Method</h2>
+    <p style="font-size:10pt; color:#555; margin-bottom:8px;">Draw a line from each seed to the way it travels. (Hint: some seeds might travel more than one way — pick the best match!)</p>
+
+    <table class="matching-table">
+      <tr>
+        <th>🌿 Seed / Plant</th>
+        <th>How does it travel?</th>
+      </tr>
+      <tr>
+        <td>🌼 Dandelion puff</td>
+        <td><span class="matching-line"></span></td>
+      </tr>
+      <tr>
+        <td>🍁 Maple seed (helicopter)</td>
+        <td><span class="matching-line"></span></td>
+      </tr>
+      <tr>
+        <td>🌰 Coconut</td>
+        <td><span class="matching-line"></span></td>
+      </tr>
+      <tr>
+        <td>🪢 Sticky burr</td>
+        <td><span class="matching-line"></span></td>
+      </tr>
+      <tr>
+        <td>🍓 Strawberry / berry</td>
+        <td><span class="matching-line"></span></td>
+      </tr>
+      <tr>
+        <td>💥 Touch-me-not seed pod</td>
+        <td><span class="matching-line"></span></td>
+      </tr>
+    </table>
+
+    <div style="margin: 6px 0 14px 0; display:flex; gap:18px; flex-wrap:wrap; font-size:11pt;">
+      <span>💨 <strong>Wind</strong></span>
+      <span>🌊 <strong>Water</strong></span>
+      <span>🐿️ <strong>Animals</strong></span>
+      <span>💥 <strong>Explosion</strong></span>
+    </div>
+
+    <h2>✏️ Part 2: Draw It!</h2>
+    <p style="font-size:10pt; color:#555; margin-bottom:8px;">Draw a seed traveling in each way below:</p>
+
+    <div class="drawing-grid">
+      <div class="drawing-box">
+        <div class="box-label">💨 Flying in the Wind</div>
+        <div class="draw-area"></div>
+        <div class="box-prompt">Draw a seed being carried by the wind!</div>
+      </div>
+      <div class="drawing-box">
+        <div class="box-label">🌊 Floating on Water</div>
+        <div class="draw-area"></div>
+        <div class="box-prompt">Draw a seed floating on a river or ocean!</div>
+      </div>
+      <div class="drawing-box">
+        <div class="box-label">🐿️ Hitching a Ride</div>
+        <div class="draw-area"></div>
+        <div class="box-prompt">Draw a seed stuck to an animal (or your sock!)!</div>
+      </div>
+    </div>
+
+    <div class="bonus-box">
+      <div class="bonus-label">⭐ BONUS: Glue Real Seeds!</div>
+      <p style="font-size:10pt; margin:0 0 8px 0;">Find real seeds and glue one in the correct box below. Which dispersal method does each seed use?</p>
+      <div class="seed-glue-grid">
+        <div class="seed-glue-cell">
+          <div class="sc-emoji">💨</div>
+          <div class="sc-label">Wind seed</div>
+          <div class="sc-area">glue here</div>
+        </div>
+        <div class="seed-glue-cell">
+          <div class="sc-emoji">🌊</div>
+          <div class="sc-label">Water seed</div>
+          <div class="sc-area">glue here</div>
+        </div>
+        <div class="seed-glue-cell">
+          <div class="sc-emoji">🐿️</div>
+          <div class="sc-label">Animal seed</div>
+          <div class="sc-area">glue here</div>
+        </div>
+        <div class="seed-glue-cell">
+          <div class="sc-emoji">💥</div>
+          <div class="sc-label">Explosion seed</div>
+          <div class="sc-area">glue here</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>🤔 Think &amp; Write</h2>
+    <p style="font-size:11pt;">What would happen if ALL the seeds from one plant fell in the exact same spot?</p>
+    <p style="border-bottom: 1.5px solid #aaa; height: 34px; margin: 8px 0;"></p>
+    <p style="border-bottom: 1.5px solid #aaa; height: 34px; margin: 8px 0;"></p>
+    <p style="border-bottom: 1.5px solid #aaa; height: 34px; margin: 8px 0;"></p>
+
+  </div>
+
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🗝️ PARENT / TEACHER ANSWER KEY — Remove before giving worksheet to students</h2>
+
+      <h3>Part 1: Matching Answers</h3>
+      <ul>
+        <li>🌼 <strong>Dandelion puff</strong> → 💨 <strong>Wind</strong> (feathery parachute catches air currents)</li>
+        <li>🍁 <strong>Maple seed (helicopter)</strong> → 💨 <strong>Wind</strong> (samara wing spins in the breeze, slows descent, drifts far)</li>
+        <li>🌰 <strong>Coconut</strong> → 🌊 <strong>Water</strong> (very buoyant husk; can float in ocean for months)</li>
+        <li>🪢 <strong>Sticky burr</strong> → 🐿️ <strong>Animals</strong> (tiny hooks latch onto fur, feathers, and clothing)</li>
+        <li>🍓 <strong>Strawberry / berry</strong> → 🐿️ <strong>Animals</strong> (fruit is eaten; seeds pass through digestive system unharmed and deposited elsewhere)</li>
+        <li>💥 <strong>Touch-me-not seed pod</strong> → 💥 <strong>Explosion</strong> (pod builds pressure; slightest touch triggers explosive seed ejection up to 6 feet away)</li>
+      </ul>
+
+      <h3 style="margin-top:14px;">💡 Notes on Tricky Answers</h3>
+      <ul>
+        <li><strong>Maple seeds:</strong> Primarily wind, but can also land in streams and float a short distance (bonus water travel!). Wind is the primary mechanism.</li>
+        <li><strong>Coconut:</strong> Primarily water — coconuts are famous ocean travelers. However, animals (including humans) also move coconuts.</li>
+        <li><strong>Berries:</strong> Animals eat them and deposit seeds far away. Some berries also fall in streams (water). Animal is primary.</li>
+        <li><strong>If a child picks "two methods" for any seed, that's excellent scientific thinking!</strong> Praise it and discuss that seeds often have more than one dispersal strategy as a backup.</li>
+      </ul>
+
+      <h3 style="margin-top:14px;">✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name at least <strong>three dispersal methods</strong> (wind, water, animal, explosion).</li>
+        <li>Child can correctly match at least <strong>four of six seeds</strong> to their travel method.</li>
+        <li>Drawing activity shows understanding of each dispersal concept (seed with wings blowing, seed on water, seed on animal fur).</li>
+        <li>Think &amp; Write response shows awareness that crowding is bad for plant survival. Look for ideas like: "they'd fight for water," "too crowded," "not enough sun," or "only one would grow."</li>
+      </ul>
+
+      <h3 style="margin-top:14px;">🌱 Think &amp; Write — Sample Strong Answer</h3>
+      <p style="font-style:italic; color:#444; font-size:10pt;">
+        "If all the seeds fell in the same spot, there would be too many plants in one place. They would fight for water and sunlight and most would die. Seeds need to spread out so each one has enough room and food to grow."
+      </p>
+    </div>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_e0Tfg-gU0Zs" data-content-selector="body"></script>
+</body>
+</html>

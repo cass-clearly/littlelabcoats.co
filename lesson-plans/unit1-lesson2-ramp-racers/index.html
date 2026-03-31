@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramp Racers — Forces & Motion Lab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+    }
+    .meta span {
+      white-space: nowrap;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .hero-emoji {
+      font-size: 80pt;
+      text-align: center;
+      margin: 16px 0 4px 0;
+      line-height: 1.1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .grade-section {
+      border: 2px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .grade-k { border-left: 5px solid #4caf50; background: #e8f5e9; }
+    .grade-older { border-left: 5px solid #ff9800; background: #fff3e0; }
+    .grade-label { font-weight: bold; font-size: 12pt; margin-bottom: 6px; }
+    .grade-k .grade-label { color: #2e7d32; }
+    .grade-older .grade-label { color: #e65100; }
+    .ramp-card {
+      display: inline-block;
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 130px;
+    }
+    .ramp-card .emoji { font-size: 22pt; display: block; margin-bottom: 4px; }
+    .ramp-card .name { font-weight: bold; color: #283593; }
+    .ramp-card .desc { font-size: 9pt; color: #555; }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .safety-box {
+      background: #fff3e0;
+      border: 2px solid #ff9800;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .safety-box h3 { color: #e65100; border-color: #ff9800; }
+    /* Instructor voice styling */
+    .instructor-voice {
+      background: #e0f2f1;
+      border-left: 4px solid #00897b;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      color: #00695c;
+      font-style: italic;
+    }
+    .instructor-voice::before {
+      content: "🗣️ Say: ";
+      font-style: normal;
+      font-weight: bold;
+    }
+    .instructor-voice.ask::before {
+      content: "🗣️ Ask: ";
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    /* Data tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #bbdefb;
+      font-weight: bold;
+      color: #0d47a1;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #e3f2fd; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #444;
+    }
+    .answer-key h2 {
+      background: #757575;
+      font-size: 13pt;
+    }
+    .answer-key .detach-line {
+      text-align: center;
+      font-size: 12pt;
+      font-weight: bold;
+      color: #c62828;
+      margin-bottom: 16px;
+      border-bottom: 2px dashed #c62828;
+      padding-bottom: 10px;
+    }
+    /* Worksheet drawing boxes */
+    .draw-box {
+      border: 3px dashed #90caf9;
+      border-radius: 12px;
+      min-height: 100px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 14pt;
+      background: #fafeff;
+    }
+    .draw-box.tall { min-height: 140px; }
+    .prediction-row {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin: 12px 0;
+      font-size: 13pt;
+    }
+    .prediction-row .option {
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 10px 16px;
+      min-width: 100px;
+      cursor: pointer;
+    }
+    .shoe-track {
+      display: flex;
+      gap: 2px;
+      margin: 4px 0;
+    }
+    .shoe-track .shoe {
+      width: 28px;
+      height: 22px;
+      border: 1.5px solid #999;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 10pt;
+      line-height: 20px;
+    }
+    /* Bar graph for worksheet */
+    .bar-graph-worksheet {
+      width: 90%;
+      margin: 10px auto;
+      border-collapse: collapse;
+    }
+    .bar-graph-worksheet td {
+      width: 33%;
+      text-align: center;
+      vertical-align: bottom;
+      padding: 0 8px;
+    }
+    .bar-cell {
+      border: 1.5px solid #ccc;
+      height: 22px;
+      width: 100%;
+    }
+    .shoe-axis {
+      font-size: 9pt;
+      color: #777;
+      text-align: right;
+      padding-right: 4px;
+      width: 30px;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .grade-section, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .instructor-voice {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🏎️ Ramp Racers 🏎️</h1>
+  <p class="subtitle">Unit 1, Lesson 2 — Forces & Motion: How Far Will It Go?</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces & Motion</span>
+  </div>
+
+  <div class="hero-emoji">🚗📐📚</div>
+  <p style="text-align:center; font-style:italic; color:#777; font-size:9pt;">Higher ramp = more speed = farther roll! Let's find out!</p>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS2-1</strong> — Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>When you let a toy car roll down a ramp, <strong>gravity pulls it down</strong>. A higher ramp means gravity pulls the car for longer, so it goes <strong>faster</strong> and rolls <strong>farther</strong>! In this experiment, you'll build ramps at different heights and discover how changing height changes how far things move.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Gravity is an invisible force that <em>pulls</em> things down toward the ground. When a car sits at the top of a ramp, gravity pulls it downward along the slope. The higher the ramp, the longer gravity pulls on the car as it rolls down — so the car is moving faster by the time it reaches the bottom, and it rolls farther across the floor. Scientists test ideas by changing one thing (like ramp height) and seeing what happens. That's exactly what you'll do today!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key Vocabulary:</strong><br>
+    👐 <strong>Push</strong> · 🧲 <strong>Pull</strong> · 💪 <strong>Force</strong> · 📐 <strong>Ramp</strong> · 📏 <strong>Height</strong> · ↔️ <strong>Distance</strong> · 🔮 <strong>Predict</strong> · 👀 <strong>Observe</strong> · 📊 <strong>Compare</strong>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧱 Ramp Building Supplies</h3>
+    <div style="text-align: center; margin: 10px 0;">
+      <div class="ramp-card"><span class="emoji">📚</span><span class="name">Books</span><span class="desc">3–5 hardcover books<br>(to stack for height)</span></div>
+      <div class="ramp-card"><span class="emoji">📦</span><span class="name">Cardboard</span><span class="desc">Flat piece, ~2–3 ft long<br>(cereal box, poster board)</span></div>
+      <div class="ramp-card"><span class="emoji">🚗</span><span class="name">Toy Cars</span><span class="desc">2 small cars<br>(one per kid!)</span></div>
+    </div>
+
+    <h3>📏 Measuring & Recording</h3>
+    <ul>
+      <li>👟 <strong>Shoes</strong> — kids will measure distance in shoe-lengths (no ruler needed!)</li>
+      <li>✏️ <strong>Pencil & crayons</strong> — for the Student Worksheet</li>
+      <li>📋 <strong>Student Worksheet</strong> (last page of this lesson)</li>
+      <li>🧱 <strong>Masking tape</strong> (optional) — to mark starting line and landing spots</li>
+    </ul>
+
+    <h3>🏠 Nice to Have</h3>
+    <ul>
+      <li>A smooth, hard floor (tile, wood, or laminate works best)</li>
+      <li>A second piece of cardboard for a different ramp comparison</li>
+      <li>Small blocks or LEGO to add extra height options</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Non-standard units are great for K!</strong> Measuring in shoe-lengths teaches the <em>concept</em> of measurement without requiring kids to read a ruler. Each child's shoe is a different size — and that's a bonus conversation about why scientists use standard units!
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="hero-image" style="margin-bottom: 16px;">
+    <img src="images/ramp-setup-diagram.png" alt="Diagram showing ramp setup: books stacked with cardboard leaning against them, toy car at top, tape marking start line on floor">
+    <div class="caption">Setup diagram — books, ramp, car at top, tape start line, clear floor ahead</div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Setup (5 minutes):</strong><br>
+    Clear a stretch of floor space — you need at least <strong>8–10 feet</strong> of open, smooth floor for cars to roll across. Set out the books, cardboard, and toy cars. Don't build the ramp yet — that's the kids' job! Print the <strong>Student Worksheet</strong> (one per child, last page). Grab crayons and a pencil.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Carpet slows cars down a LOT. If you only have carpet, use a long piece of cardboard on the floor as a runway too!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Wonder & Predict (5 min):</strong><br>
+    <div class="instructor-voice ask">"If you roll a car down a ramp, what makes it go far? What makes it go only a little?"</div>
+    Let them guess. Then ask:
+    <div class="instructor-voice ask">"What do you think will happen if we make the ramp <em>really</em> tall? Let's test YOUR prediction!"</div>
+    Have each child circle their prediction on the Student Worksheet — will a tall ramp or a short ramp make the car go farther?
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Build Ramp #1: LOW (5 min):</strong><br>
+    Together, stack <strong>1 book</strong> and lean the cardboard against it to make a LOW ramp.<br>
+    Place a piece of tape at the bottom of the ramp as the <strong>starting line</strong>. 🏁
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Race #1: LOW Ramp (5 min):</strong>
+    <div class="tip-box" style="margin: 8px 0; background: #fff3e0; border-left-color: #ff9800;">
+      ⚠️ <strong>Important — don't push the car!</strong> Place it at the top and <em>let go</em>. We want <em>gravity</em> to pull the car down, not our hands. If kids push, the experiment isn't fair — we're testing the ramp, not arm strength!
+    </div>
+    <ul>
+      <li>Each child places their car at the <strong>top</strong> of the ramp.</li>
+      <li><strong><em>Let go</em> — don't push!</strong> (We want gravity to pull the car down.)</li>
+      <li>Watch where the car stops.</li>
+      <li>Walk shoe-to-shoe from the starting line to the car. Count how many shoe-lengths it rolled! 👟</li>
+      <li>Record the shoe-lengths on the Student Worksheet. 📝</li>
+      <li><strong>Do it two times</strong> to make sure (scientists always repeat).</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Build Ramp #2: MEDIUM (3 min):</strong><br>
+    <div class="instructor-voice ask">"What do you think will happen if we make the ramp higher? Will the car go farther or not as far? Let's test YOUR prediction!"</div>
+    Stack <strong>3 books</strong>. Lean the same cardboard against the taller stack. Same starting line! 🏁
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Race #2: MEDIUM Ramp (5 min):</strong><br>
+    Same as before — let go from the top (don't push!), measure in shoes, record. Do it two times.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Build Ramp #3: HIGH (3 min):</strong><br>
+    Stack <strong>5 books</strong> (or as high as you can go!). Lean the cardboard against it. 🏔️
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Race #3: HIGH Ramp (5 min):</strong><br>
+    Let go, measure in shoes, record. Do it two times. <em>Did the car go farther this time? 👀</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 8 — Look at Your Data (5 min):</strong><br>
+    Help the kids compare their results.
+    <div class="instructor-voice ask">"Which ramp made the car go the <em>farthest</em>? Which one made it go the shortest distance?"</div>
+    Color in the bar graph on the Student Worksheet together. 🎨
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 9 — Wrap-Up & Big Idea (5 min):</strong><br>
+    <div class="instructor-voice">"Gravity <em>pulls</em> the car down the ramp. The higher the ramp, the longer gravity pulls, so the car goes faster and rolls farther. That's what scientists mean when they say forces can have <strong>different strengths</strong>!"</div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="grade-section grade-k">
+    <div class="grade-label">Core Questions (Kindergarten)</div>
+    <div class="question-box">
+      <strong>Which ramp made your car go the farthest?</strong> 🏆
+      <p class="discussion-hint">Look for: "The high ramp" or "the one with five books." Any phrasing that identifies the tallest ramp is correct.</p>
+    </div>
+    <div class="question-box">
+      <strong>Which ramp made your car go the shortest distance?</strong>
+      <p class="discussion-hint">Look for: "The low ramp" or "the one with one book."</p>
+    </div>
+    <div class="question-box">
+      <strong>What happens when the ramp gets higher? Does the car go farther or shorter?</strong>
+      <p class="discussion-hint">Look for: "It goes farther!" Help them connect: higher ramp → car goes farther.</p>
+    </div>
+    <div class="question-box">
+      <strong>Did your car go the same distance both times? Why might it be a little different?</strong>
+      <p class="discussion-hint">They might say: "It went a little different." That's great — talk about how even scientists get slightly different results each time.</p>
+    </div>
+    <div class="question-box">
+      <strong>What was pulling the car down the ramp? (Hint: you didn't push it!)</strong>
+      <p class="discussion-hint">Look for: "Gravity!" If they say "the ramp," guide them: "The ramp gives gravity a path — gravity is the force that pulls the car down."</p>
+    </div>
+    <div class="question-box">
+      <strong>What would happen if we made the ramp <em>even higher</em>? Like a mountain?</strong> 🏔️
+      <p class="discussion-hint">Look for: "It would go really far!" or "Super fast!" Accept enthusiastic predictions.</p>
+    </div>
+  </div>
+
+  <div class="grade-section grade-older">
+    <div class="grade-label">Challenge Questions (For Older Siblings!)</div>
+    <div class="question-box">
+      <strong>What would happen if we used a heavier car? A lighter one?</strong>
+      <p class="discussion-hint">They might say heavier goes farther (momentum), or lighter goes farther (less to move). Both show good thinking — test it!</p>
+    </div>
+    <div class="question-box">
+      <strong>What if the ramp was bumpy instead of smooth? How would that change things?</strong>
+      <p class="discussion-hint">Look for: "The car would go slower" or "not as far." Introduce the word <em>friction</em>.</p>
+    </div>
+    <div class="question-box">
+      <strong>Can you think of real-life ramps? (Slides, hills, skateboard ramps, wheelchair ramps)</strong>
+      <p class="discussion-hint">Accept any real-world example. Great ones: playground slides, hills, driveways, parking garages.</p>
+    </div>
+    <div class="question-box">
+      <strong>What other forces might slow the car down? (Hint: rub your hands together — feel that?)</strong>
+      <p class="discussion-hint">Look for: "Friction!" or "rubbing." The floor and the car's wheels create friction that slows it down.</p>
+    </div>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🧸 <strong>Different Objects:</strong> Roll a ball, a marker, a crayon, and a LEGO brick down the ramp. Which rolls farthest? Why?</li>
+      <li>🧱 <strong>Surface Test:</strong> Try rolling on tile, carpet, towel, and sandpaper. Which surface lets the car go farthest?</li>
+      <li>🎯 <strong>Target Game:</strong> Put a cup or box at a certain distance. Can you pick the right ramp height to make the car stop right at the target?</li>
+      <li>🏗️ <strong>Ramp Design Challenge:</strong> Build the <em>longest</em> possible ramp using only household items. How far can you make a car go?</li>
+      <li>📖 <strong>Read Aloud:</strong> Pair with <em>Motion: Push and Pull, Fast and Slow</em> by Darlene Stille or <em>Forces Make Things Move</em> by Kimberly Bradley</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Mess level:</strong> Low. This one is pretty clean. Just watch for cars flying off tables.</li>
+      <li><strong>Floor surface matters:</strong> Smooth, hard floors give the best results. Carpet adds friction and makes differences between ramp heights less obvious.</li>
+      <li><strong>Floor space:</strong> The high ramp can send cars 8 feet or more. Clear at least 8–10 feet of open floor.</li>
+      <li><strong>Measuring in shoes:</strong> Kindergartners measure in shoe-lengths — it's a <em>non-standard unit</em>, and that's perfect for K. Each child's shoe is different, which is a great conversation about why scientists use standard units later on.</li>
+      <li><strong>Why two trials:</strong> This teaches the concept of repeated testing. If the car lands in a different spot each time, it's a great chance to talk about why scientists test things more than once.</li>
+      <li><strong>If you don't have books:</strong> Use shoe boxes, couch cushions, canned goods — anything to create height. Creativity counts.</li>
+      <li><strong>Sibling fairness:</strong> Give each kid their own car and let them take turns. They can compare whose car went farther — and discuss why (different car weight, wheel friction, etc.).</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🏎️ Ramp Racers — Student Worksheet 🏎️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>🔮 My Prediction</h3>
+    <div class="question-box">
+      <strong>Which ramp will make the car go <em>farthest</em>?</strong> &nbsp; Circle one!<br><br>
+      <div class="prediction-row">
+        <div class="option">📚<br><strong>LOW</strong><br><span style="font-size:9pt;">(1 book)</span></div>
+        <div class="option">📚📚📚<br><strong>MEDIUM</strong><br><span style="font-size:9pt;">(3 books)</span></div>
+        <div class="option">📚📚📚📚📚<br><strong>HIGH</strong><br><span style="font-size:9pt;">(5 books)</span></div>
+      </div>
+    </div>
+
+    <h3>👟 How Far Did the Car Roll? (Count Your Shoes!)</h3>
+    <p style="font-size:10pt; color:#555;">Walk shoe-to-shoe from the start line to where the car stopped. Count your steps!</p>
+
+    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
+      <tr>
+        <td style="padding:10px; border:2px solid #90caf9; border-radius:8px; background:#e3f2fd; text-align:center; width:33%;">
+          <strong style="font-size:13pt;">📚 LOW</strong><br><span style="font-size:9pt;">(1 book)</span><br><br>
+          <span style="font-size:10pt;">Try 1:</span>
+          <div class="shoe-track" style="justify-content:center;">
+            <span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span>
+          </div>
+          <span style="font-size:9pt; color:#777;">Color in how many shoes!</span><br><br>
+          <span style="font-size:10pt;">Try 2:</span>
+          <div class="shoe-track" style="justify-content:center;">
+            <span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span>
+          </div>
+        </td>
+        <td style="padding:10px; border:2px solid #90caf9; border-radius:8px; background:#e3f2fd; text-align:center; width:33%;">
+          <strong style="font-size:13pt;">📚📚📚 MEDIUM</strong><br><span style="font-size:9pt;">(3 books)</span><br><br>
+          <span style="font-size:10pt;">Try 1:</span>
+          <div class="shoe-track" style="justify-content:center;">
+            <span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span>
+          </div>
+          <span style="font-size:9pt; color:#777;">Color in how many shoes!</span><br><br>
+          <span style="font-size:10pt;">Try 2:</span>
+          <div class="shoe-track" style="justify-content:center;">
+            <span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span>
+          </div>
+        </td>
+        <td style="padding:10px; border:2px solid #90caf9; border-radius:8px; background:#e3f2fd; text-align:center; width:33%;">
+          <strong style="font-size:13pt;">📚📚📚📚📚 HIGH</strong><br><span style="font-size:9pt;">(5 books)</span><br><br>
+          <span style="font-size:10pt;">Try 1:</span>
+          <div class="shoe-track" style="justify-content:center;">
+            <span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span>
+          </div>
+          <span style="font-size:9pt; color:#777;">Color in how many shoes!</span><br><br>
+          <span style="font-size:10pt;">Try 2:</span>
+          <div class="shoe-track" style="justify-content:center;">
+            <span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span><span class="shoe">👟</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <h3>🎨 How Did It Go? Circle one for each ramp!</h3>
+    <table style="width:100%; text-align:center; font-size:12pt; margin:8px 0;">
+      <tr>
+        <td style="width:33%;"><strong>LOW Ramp</strong></td>
+        <td style="width:33%;"><strong>MEDIUM Ramp</strong></td>
+        <td style="width:33%;"><strong>HIGH Ramp</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <span style="font-size:20pt;">😀</span> went FAR<br>
+          <span style="font-size:20pt;">😐</span> went a LITTLE<br>
+          <span style="font-size:20pt;">😕</span> didn't move
+        </td>
+        <td>
+          <span style="font-size:20pt;">😀</span> went FAR<br>
+          <span style="font-size:20pt;">😐</span> went a LITTLE<br>
+          <span style="font-size:20pt;">😕</span> didn't move
+        </td>
+        <td>
+          <span style="font-size:20pt;">😀</span> went FAR<br>
+          <span style="font-size:20pt;">😐</span> went a LITTLE<br>
+          <span style="font-size:20pt;">😕</span> didn't move
+        </td>
+      </tr>
+    </table>
+
+    <h3>📊 Color the Bar Graph!</h3>
+    <p style="font-size:10pt; color:#555;">Color each bar up to the number of shoes the car rolled. Taller bar = farther!</p>
+    <table style="width:85%; margin:0 auto; border-collapse:collapse;">
+      <tr><td class="shoe-axis">👟10</td><td style="border:1px solid #ccc; width:28%;"></td><td style="border:1px solid #ccc; width:28%;"></td><td style="border:1px solid #ccc; width:28%;"></td></tr>
+      <tr><td class="shoe-axis">👟9</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟8</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟7</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟6</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟5</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟4</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟3</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟2</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td class="shoe-axis">👟1</td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td><td style="border:1px solid #ccc;"></td></tr>
+      <tr><td></td><td style="text-align:center; font-weight:bold; padding-top:6px; font-size:10pt;">📚 LOW</td><td style="text-align:center; font-weight:bold; padding-top:6px; font-size:10pt;">📚📚📚 MED</td><td style="text-align:center; font-weight:bold; padding-top:6px; font-size:10pt;">📚📚📚📚📚 HIGH</td></tr>
+    </table>
+
+    <h3 style="margin-top: 20px;">🎨 Draw your favorite ramp!</h3>
+    <div class="draw-box tall">✏️ Draw here!</div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <div class="detach-line">✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</div>
+
+      <h2>🔑 Expected Results & Discussion Guide</h2>
+
+      <h3>📊 Expected Data Patterns</h3>
+      <ul>
+        <li><strong>LOW ramp (1 book):</strong> Car rolls the <strong>shortest distance</strong> — typically 1–3 shoe-lengths on a smooth floor.</li>
+        <li><strong>MEDIUM ramp (3 books):</strong> Car rolls a <strong>moderate distance</strong> — typically 3–6 shoe-lengths.</li>
+        <li><strong>HIGH ramp (5 books):</strong> Car rolls the <strong>farthest distance</strong> — typically 6–10 shoe-lengths (depending on floor surface, car weight, and shoe size).</li>
+      </ul>
+      <p><strong>Key pattern:</strong> Higher ramp = farther distance. Every time. If a trial doesn't match this pattern, discuss why (car went crooked, bumped into something, different release point, etc.).</p>
+
+      <h3>💬 Discussion Question Guidance</h3>
+      <p><strong>Q — Which ramp made the car go farthest?</strong><br>
+      Answer: The HIGH ramp (5 books). Accept any phrasing — "the tall one," "the big one," "the one with lots of books."</p>
+
+      <p><strong>Q — Why does a higher ramp make the car go farther?</strong><br>
+      Kindergarten-level answer: <em>"Gravity pulls the car down. The higher the ramp, the longer gravity pulls, so the car goes faster and rolls farther."</em><br>
+      Deeper (for curious kids): A higher ramp means the car falls a greater height, converting more potential energy into speed. More speed = more distance before friction stops it.</p>
+
+      <p><strong>Q — Was your prediction right?</strong><br>
+      No wrong answer here. If they predicted wrong, celebrate that — <em>"Scientists learn the <em>most</em> when their predictions are wrong!"</em></p>
+
+      <h3>⚠️ Common Issues & Fixes</h3>
+      <ul>
+        <li><strong>Car goes crooked:</strong> Add a "lane" using two rulers or books along the edges of the ramp.</li>
+        <li><strong>Results seem random:</strong> Make sure kids are releasing from the same spot each time, and NOT pushing. Mark the release point with tape.</li>
+        <li><strong>Car barely moves on low ramp:</strong> Normal! If the ramp is too flat, the car won't move much. That's good data!</li>
+        <li><strong>Results vary between tries:</strong> This is GREAT — it naturally teaches why scientists repeat experiments!</li>
+      </ul>
+
+      <h3>🧠 The Science (For Your Reference)</h3>
+      <p>This experiment demonstrates <strong>K-PS2-1</strong>: forces (pushes and pulls) can have different strengths. Gravity <em>pulls</em> the car down the ramp. A higher ramp means gravity pulls the car over a greater distance, converting more gravitational potential energy into kinetic energy — so the car moves faster at the bottom and rolls farther. For kindergartners, <em>"higher ramp = gravity pulls longer = car goes faster and farther"</em> is perfectly appropriate.</p>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_V2YKW4orYFA" data-content-selector="body"></script>
+</body>
+</html>

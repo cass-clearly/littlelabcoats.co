@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Your Knowledge — Kitchen Chemistry | Grade 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #f0f4ff;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .quiz-header {
+      background: linear-gradient(135deg, #1565c0, #0d47a1);
+      color: white;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .quiz-header h1 {
+      font-size: 2rem;
+      margin: 0 0 8px 0;
+    }
+    .quiz-header .subtitle {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin: 0;
+    }
+    .score-bar {
+      background: white;
+      border-bottom: 2px solid #e3f2fd;
+      padding: 14px 24px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1565c0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .quiz-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+    .question-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      border: 2px solid #e3f2fd;
+      transition: border-color 0.2s;
+    }
+    .question-card .q-number {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1565c0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .question-card .q-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .options-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .options-list li {
+      margin-bottom: 8px;
+    }
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      background: #f8f9ff;
+      border: 2px solid #e3f2fd;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #333;
+      font-family: inherit;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #e8eeff;
+      border-color: #90caf9;
+    }
+    .option-btn.correct {
+      background: #e8f5e9;
+      border-color: #4caf50;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .option-btn.wrong {
+      background: #ffebee;
+      border-color: #e53935;
+      color: #c62828;
+      font-weight: 600;
+    }
+    .option-btn.revealed-correct {
+      background: #e8f5e9;
+      border-color: #4caf50;
+      color: #2e7d32;
+    }
+    .option-icon {
+      font-size: 1.1rem;
+      min-width: 22px;
+      text-align: center;
+    }
+    .explanation {
+      display: none;
+      background: #f0f4ff;
+      border-left: 4px solid #1565c0;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .explanation.show { display: block; }
+    .results-section {
+      display: none;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      padding: 30px 28px;
+      margin: 24px 0;
+      text-align: center;
+      border: 3px solid #1565c0;
+    }
+    .results-section.show { display: block; }
+    .results-section .score-display {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #1565c0;
+      margin: 8px 0;
+    }
+    .results-section .encouragement {
+      font-size: 1.2rem;
+      color: #333;
+      margin: 10px 0 20px 0;
+      font-weight: 600;
+    }
+    .see-score-btn {
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto;
+    }
+    .see-score-btn:hover { background: #0d47a1; }
+    .back-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #1565c0;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .progress-bar-wrap {
+      background: #e3f2fd;
+      border-radius: 10px;
+      height: 8px;
+      margin: 0 auto 20px auto;
+      max-width: 400px;
+    }
+    .progress-bar-fill {
+      background: #1565c0;
+      height: 8px;
+      border-radius: 10px;
+      transition: width 0.3s;
+    }
+    @media (max-width: 600px) {
+      .quiz-header h1 { font-size: 1.4rem; }
+      .question-card { padding: 16px; }
+    }
+    @media print { body { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_WXGQq-cPJzg">
+
+<div class="quiz-header">
+  <h1>🧪 Test Your Knowledge — Kitchen Chemistry</h1>
+  <p class="subtitle">Grade 5 &middot; Matter &amp; Its Interactions &middot; 5-PS1-4</p>
+</div>
+
+<div class="score-bar">
+  Score: <span id="scoreDisplay">0</span> / <span id="answeredDisplay">0</span> correct &nbsp;|&nbsp; <span id="totalDisplay">10</span> questions
+</div>
+
+<div class="quiz-body">
+
+  <a href="gr5-ps1-lesson1-reactants-products-mixtures.html" class="back-link">← Back to Kitchen Chemistry Lesson</a>
+
+  <div id="questions-container" style="margin-top: 20px;"></div>
+
+  <button class="see-score-btn" onclick="showResults()">📊 See Your Score</button>
+
+  <div class="results-section" id="resultsBox">
+    <div style="font-size:2.5rem; margin-bottom: 4px;">🏆</div>
+    <div class="score-display" id="finalScore"></div>
+    <div class="encouragement" id="encouragementMsg"></div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+    </div>
+    <a href="gr5-ps1-lesson1-reactants-products-mixtures.html" class="back-link">← Back to Kitchen Chemistry Lesson</a>
+  </div>
+
+</div>
+
+<script>
+const questions = [
+  {
+    q: "What is a reactant?",
+    options: [
+      "A new substance formed during a reaction",
+      "A starting substance that enters a chemical reaction",
+      "Any substance that can be mixed with another",
+      "A substance that prevents reactions from happening"
+    ],
+    correct: 1,
+    explanation: "A reactant is a starting substance that enters a chemical reaction. It gets used up during the reaction to form new products. In the baking soda + vinegar experiment, both baking soda and vinegar are the reactants."
+  },
+  {
+    q: "Which observation is the BEST evidence that a chemical reaction has occurred?",
+    options: [
+      "Two substances are mixed together",
+      "The mixture becomes cloudy",
+      "A gas is produced and the temperature drops",
+      "One substance dissolves in another"
+    ],
+    correct: 2,
+    explanation: "Producing a gas AND a temperature change together are strong signs of a chemical reaction. Simply mixing things, getting cloudy, or dissolving can happen in mixtures too — but gas production and temperature change together strongly indicate new substances are forming."
+  },
+  {
+    q: "You mix salt into water and it disappears. What happened?",
+    options: [
+      "A chemical reaction occurred — the salt became water",
+      "The salt was destroyed by the water",
+      "The salt dissolved — it's still there, just mixed in (a mixture)",
+      "The water reacted with the salt to form a new substance"
+    ],
+    correct: 2,
+    explanation: "When salt dissolves in water, it's still salt — it just breaks into tiny particles too small to see. This is a mixture, not a reaction. You could get the salt back by evaporating the water. No new substance was formed."
+  },
+  {
+    q: "Baking soda + vinegar produces bubbles and the mixture gets cooler. What are the bubbles made of?",
+    options: [
+      "Hydrogen gas",
+      "Water vapor",
+      "Carbon dioxide gas",
+      "Oxygen gas"
+    ],
+    correct: 2,
+    explanation: "The bubbles are carbon dioxide (CO₂) gas — one of the products of the reaction. The word equation is: Baking Soda + Vinegar → Carbon Dioxide + Water + Sodium Acetate. The cooling happens because this is an endothermic reaction that absorbs heat energy."
+  },
+  {
+    q: "What makes the baking soda + vinegar reaction different from mixing salt + water?",
+    options: [
+      "Baking soda + vinegar produces heat; salt + water does not",
+      "Baking soda + vinegar forms a new substance that can't be separated back; salt + water can be separated",
+      "Salt + water is more dangerous",
+      "There is no difference — both are chemical reactions"
+    ],
+    correct: 1,
+    explanation: "The key difference is that baking soda + vinegar is a chemical reaction: new substances form (CO₂, water, sodium acetate) and you can't reverse it. Salt + water is a mixture: the salt just dissolves and you can get it back by evaporating the water."
+  },
+  {
+    q: "When vinegar is added to milk, a rubbery solid forms. What is this solid?",
+    options: [
+      "Curdled fat from the milk",
+      "Casein protein that changed shape permanently",
+      "A mixture of vinegar and milk powder",
+      "Sugar crystals from the milk"
+    ],
+    correct: 1,
+    explanation: "The rubbery solid is casein — a protein in milk that permanently changes shape (denatures) when it contacts the acid in vinegar. This is a chemical reaction: the casein has new properties and cannot be turned back into liquid milk."
+  },
+  {
+    q: "In a chemical reaction, what happens to the atoms?",
+    options: [
+      "Atoms are destroyed and new atoms are created",
+      "Atoms disappear into the products",
+      "Atoms rearrange into new molecules, but no atoms are created or destroyed",
+      "Atoms multiply to make more products than reactants"
+    ],
+    correct: 2,
+    explanation: "This is the law of conservation of mass: atoms are never created or destroyed in a chemical reaction. The same atoms that were in the reactants are still there in the products — they just rearrange into new combinations (new molecules)."
+  },
+  {
+    q: "Which of these is a MIXTURE (not a chemical reaction)?",
+    options: [
+      "Baking soda + vinegar → fizzing",
+      "Iron + oxygen → rust",
+      "Sand + water → sand settles to the bottom",
+      "Milk + vinegar → curds form"
+    ],
+    correct: 2,
+    explanation: "Sand and water is a mixture — the sand just settles out because it doesn't dissolve. You could filter or pour off the water to get the sand back. No new substance is formed. Rust, fizzing baking soda, and curds are all new substances formed by chemical reactions."
+  },
+  {
+    q: "A student adds water to a mystery powder and it fizzes. Then she adds vinegar and it fizzes even more. Which powder is it most likely?",
+    options: [
+      "Baking soda (sodium bicarbonate)",
+      "Baking powder (baking soda + cream of tartar)",
+      "Sugar",
+      "Salt"
+    ],
+    correct: 1,
+    explanation: "Baking powder fizzes with water alone because it already contains an acid (cream of tartar) inside it — adding water is enough to start the reaction. Plain baking soda won't fizz with just water; it needs an external acid. Fizzing with water = baking powder."
+  },
+  {
+    q: "What does \"conservation of mass\" mean in a chemical reaction?",
+    options: [
+      "Reactions always create more mass than they started with",
+      "Some mass is always lost as heat",
+      "The total mass of products equals the total mass of reactants",
+      "Mass is only conserved in mixtures, not reactions"
+    ],
+    correct: 2,
+    explanation: "Conservation of mass means the total amount of matter doesn't change in a chemical reaction. If you start with 10 grams of reactants, you end up with 10 grams of products — atoms are just rearranged, not created or lost. This is a fundamental law of chemistry."
+  }
+];
+
+let answered = {};
+
+function renderQuestions() {
+  const container = document.getElementById('questions-container');
+  questions.forEach((q, i) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.id = 'q-card-' + i;
+
+    const optionsHTML = q.options.map((opt, j) => `
+      <li>
+        <button class="option-btn" id="opt-${i}-${j}" onclick="selectAnswer(${i}, ${j})">
+          <span class="option-icon" id="icon-${i}-${j}">○</span>
+          <span>${opt}</span>
+        </button>
+      </li>
+    `).join('');
+
+    card.innerHTML = `
+      <div class="q-number">Question ${i + 1} of ${questions.length}</div>
+      <div class="q-text">${q.q}</div>
+      <ul class="options-list">${optionsHTML}</ul>
+      <div class="explanation" id="exp-${i}">${q.explanation}</div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function selectAnswer(qIndex, optIndex) {
+  const q = questions[qIndex];
+
+  // If previously answered, undo that score
+  if (answered[qIndex] !== undefined) {
+    // Reset all options for this question
+    for (let j = 0; j < q.options.length; j++) {
+      const btn = document.getElementById('opt-' + qIndex + '-' + j);
+      const icon = document.getElementById('icon-' + qIndex + '-' + j);
+      btn.className = 'option-btn';
+      icon.textContent = '○';
+    }
+  }
+
+  const isCorrect = optIndex === q.correct;
+  const selectedBtn = document.getElementById('opt-' + qIndex + '-' + optIndex);
+  const selectedIcon = document.getElementById('icon-' + qIndex + '-' + optIndex);
+
+  if (isCorrect) {
+    selectedBtn.className = 'option-btn correct';
+    selectedIcon.textContent = '✅';
+    answered[qIndex] = true;
+  } else {
+    selectedBtn.className = 'option-btn wrong';
+    selectedIcon.textContent = '❌';
+    answered[qIndex] = false;
+    // Reveal correct answer
+    const correctBtn = document.getElementById('opt-' + qIndex + '-' + q.correct);
+    const correctIcon = document.getElementById('icon-' + qIndex + '-' + q.correct);
+    correctBtn.className = 'option-btn revealed-correct';
+    correctIcon.textContent = '✅';
+  }
+
+  // Show explanation
+  document.getElementById('exp-' + qIndex).classList.add('show');
+
+  updateScore();
+}
+
+function updateScore() {
+  const correctCount = Object.values(answered).filter(v => v === true).length;
+  const totalAnswered = Object.keys(answered).length;
+  document.getElementById('scoreDisplay').textContent = correctCount;
+  document.getElementById('answeredDisplay').textContent = totalAnswered;
+}
+
+function showResults() {
+  updateScore();
+  const correctCount = Object.values(answered).filter(v => v === true).length;
+  const resultsBox = document.getElementById('resultsBox');
+  const finalScore = document.getElementById('finalScore');
+  const msg = document.getElementById('encouragementMsg');
+  const progressFill = document.getElementById('progressFill');
+
+  finalScore.textContent = correctCount + ' / 10';
+  progressFill.style.width = (correctCount * 10) + '%';
+
+  if (correctCount === 10) {
+    msg.textContent = "Perfect score! You're a chemistry genius! 🧪✨";
+  } else if (correctCount >= 8) {
+    msg.textContent = "Excellent work — you really know your chemistry! 🎉";
+  } else if (correctCount >= 6) {
+    msg.textContent = "Good job! Review the lesson and try again to master it.";
+  } else if (correctCount >= 4) {
+    msg.textContent = "Keep going! Read through the lesson again and you'll get there.";
+  } else {
+    msg.textContent = "Chemistry takes practice — go back to the lesson and try again!";
+  }
+
+  resultsBox.classList.add('show');
+  resultsBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+renderQuestions();
+</script>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

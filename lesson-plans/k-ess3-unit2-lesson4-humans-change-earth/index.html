@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humans Change the Earth — K-ESS3 Unit 2, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; background: #fffdf9; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #e65100; padding-bottom: 10px; color: #e65100; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+    .procedure-step strong { color: #bf360c; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; padding-left: 10px; border-left: 3px solid #ff8f00; }
+    .tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #fbe9e7; border: 1px solid #ffab91; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #bf360c; }
+    .extension-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .change-card { border-radius: 10px; padding: 14px 16px; margin: 10px 0; }
+    .bad-change { background: #ffebee; border: 2px solid #ef5350; }
+    .good-change { background: #e8f5e9; border: 2px solid #4caf50; }
+    .complex-change { background: #fff8e1; border: 2px solid #ff8f00; }
+    .change-card h4 { margin: 0 0 6px 0; font-size: 12pt; }
+    .bad-change h4 { color: #c62828; }
+    .good-change h4 { color: #2e7d32; }
+    .complex-change h4 { color: #e65100; }
+    .before-after { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: center; margin: 15px 0; }
+    .ba-box { border: 2px solid #ffcc80; border-radius: 8px; padding: 10px; text-align: center; min-height: 80px; background: #fff8e1; }
+    .ba-arrow { font-size: 24pt; color: #e65100; text-align: center; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #e65100; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; display: flex; align-items: center; gap: 6px; }
+    .print-btn:hover { background: #bf360c; }
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 0.25in; font-size: 10pt; background: white; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .change-card { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .draw-box { border: 2px solid #ffcc80; border-radius: 8px; height: 160px; margin: 10px 0; background: #fff8e1; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌍 Humans Change the Earth 🌍</h1>
+  <p class="subtitle">Earth Science — Earth &amp; Human Activity | Unit 2, Lesson 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🌍 <strong>Subject:</strong> Earth Science — Earth &amp; Human Activity</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌲 → 🏗️ → 🌳</div>
+    <div class="caption">Humans can tear down forests — but we can also plant new trees. Our choices matter!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-ESS3-3</strong> — Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Humans are incredibly powerful. We can cut down forests, drain swamps, dam rivers, and build cities where meadows once were. But we also have the intelligence and tools to fix problems — to plant trees, clean rivers, protect habitats, and restore what we damaged. Every human choice about land, water, and resources has a consequence. The good news: we can make better choices!</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Humans change the environment in many ways, both harmful and helpful:</p>
+  <ul>
+    <li><strong>Deforestation</strong> — cutting trees destroys animal habitats, increases flooding (trees absorb rain), and releases carbon dioxide</li>
+    <li><strong>Pollution</strong> — chemicals and trash in water harm fish and other water animals</li>
+    <li><strong>Development</strong> — building roads and buildings replaces natural land</li>
+    <li><strong>Farming</strong> — necessary to feed people, but replaces wild habitats</li>
+    <li><strong>Conservation</strong> — protecting and restoring natural areas</li>
+    <li><strong>Reforestation</strong> — planting new trees where forests were lost</li>
+    <li><strong>Clean-up efforts</strong> — removing pollution and trash from waterways and land</li>
+  </ul>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> environment, habitat, deforestation, pollution, conservation, restore, ecosystem, impact
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🖼️ For the Before/After Discussion</h3>
+    <ul>
+      <li>The three scenario descriptions below (or draw simple pictures together)</li>
+      <li>Paper for drawing</li>
+      <li>Crayons or markers</li>
+      <li>Worksheet (included)</li>
+    </ul>
+  </div>
+
+  <h2>🔬 The Three Scenarios — Before &amp; After</h2>
+
+  <div class="change-card bad-change">
+    <h4>🚗 Scenario 1: Forest → Parking Lot</h4>
+    <div class="before-after">
+      <div class="ba-box">🌲🌲🌲<br><strong>BEFORE</strong><br>Forest with deer, birds, and foxes</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-box">🚗🚗🚗<br><strong>AFTER</strong><br>Parking lot with no animals</div>
+    </div>
+    <strong>What happened?</strong> Animals lost their homes. Rain that used to soak into soil under trees now runs off pavement, causing more flooding. No trees = less oxygen, less shade, hotter temperatures nearby.
+    <br><strong>Is this helpful or harmful?</strong> 🔴 Harmful to wildlife and the environment.
+  </div>
+
+  <div class="change-card good-change">
+    <h4>🦦 Scenario 2: Polluted River → Clean River</h4>
+    <div class="before-after">
+      <div class="ba-box">🏭🐟<br><strong>BEFORE</strong><br>Factory dumping waste, fish dying</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-box">🦦💧🐟<br><strong>AFTER</strong><br>Clean river, fish return, otters come back</div>
+    </div>
+    <strong>What happened?</strong> When people stopped the pollution and cleaned the river, life returned! Fish populations recovered. Birds that eat fish came back. Otters returned. River cleanup is a powerful human action that helps nature.
+    <br><strong>Is this helpful or harmful?</strong> 🟢 Helpful — humans fixed what humans broke!
+  </div>
+
+  <div class="change-card complex-change">
+    <h4>🌾 Scenario 3: Prairie → Farm</h4>
+    <div class="before-after">
+      <div class="ba-box">🦬🌾🦅<br><strong>BEFORE</strong><br>Prairie with bison, prairie dogs, hawks</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-box">🚜🌽🥕<br><strong>AFTER</strong><br>Farm growing food for people</div>
+    </div>
+    <strong>What happened?</strong> This one is complicated! Farms feed people — that's important. But the farm replaced wild habitat. Prairie animals lost their home. This is called a <strong>trade-off</strong>: something good (food for people) came at a cost (habitat for wildlife).
+    <br><strong>Is this helpful or harmful?</strong> 🟡 Complex — it depends on who you are (a person or a prairie dog!).
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce the Three Scenarios (10 min)</strong><br>
+    Read and discuss each scenario with your students. For each one, ask: <em>"Who was helped? Who was hurt? Could humans have done it differently?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Draw Your Neighborhood (10 min)</strong><br>
+    Ask students: <em>"What was your neighborhood like before people built it? What was there before houses and roads?"</em> Help them imagine: maybe a forest, a meadow, wetlands, or a prairie. Have each student draw their neighborhood — then draw what they think it looked like before people changed it. (A simple two-panel drawing: BEFORE / NOW)
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Think of One Human Change That HELPED (5–8 min)</strong><br>
+    Challenge: <em>"Can you think of a way humans changed the environment for the BETTER near where you live?"</em> Use the discussion questions to prompt ideas. Then complete the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Complete the Worksheet (10 min)</strong><br>
+    Students evaluate the three scenarios and draw one way humans help the environment. They make a "thumbs up" or "thumbs down" judgment for each scenario (with space for "complicated"!).
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Name 3 ways humans change the Earth. Which ones are helpful? Which are harmful?</li>
+      <li>If a parking lot replaces a forest, where do the animals go?</li>
+      <li>Can you think of a way humans have changed the environment for the BETTER?</li>
+      <li>If you were building a town, what would you do to protect the animals that already live there?</li>
+      <li>Why do humans sometimes make choices that hurt the environment even when they know it's harmful?</li>
+    </ul>
+
+    <div class="discussion-hint">
+      <strong>💡 Suggested answer — humans changing the environment for the better:</strong>
+      Yes! There are many examples of humans helping nature. Wetland restoration returns drained swamps to life, filtering water and providing habitat. Planting trees (reforestation) restores forests lost to cutting. Creating wildlife corridors — green pathways between parks — lets animals travel safely between habitats. Cleaning up rivers and beaches brings back fish, birds, and other wildlife. Banning DDT (a chemical pesticide) saved the bald eagle from extinction in the 1970s. Creating national parks protects millions of acres of wild land. Humans cause problems, but we also have the intelligence and tools to fix them. The key is choosing to use those tools!
+    </div>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌳 <strong>Tree planting:</strong> Plant a tree or native plant in your yard. Talk about what habitat it will create for insects, birds, and other wildlife over time.</li>
+      <li>📸 <strong>Google Earth time-lapse:</strong> Look up your neighborhood on Google Earth and use the historical imagery feature to see how it's changed over decades.</li>
+      <li>🦅 <strong>Bald eagle story:</strong> Research how banning DDT saved the bald eagle. In 1963, only 417 nesting pairs remained in the US. Today there are over 9,000! This is a powerful story of humans fixing a human-caused problem.</li>
+      <li>📚 <strong>Read aloud:</strong> <em>"The Lorax"</em> by Dr. Seuss (classic environmental message) or <em>"The Tree Lady"</em> by H. Joseph Hopkins</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Age-appropriate complexity:</strong> Kindergartners can absolutely handle "this is harmful" and "this is helpful," but the farm scenario introduces nuance. It's okay to say "this is complicated — it helped people AND hurt animals." That's real science thinking.</li>
+      <li><strong>Avoid doom and gloom:</strong> While it's important for kids to know that humans cause environmental problems, the most important message is ALSO that humans can fix those problems. End every discussion on human agency and hope.</li>
+      <li><strong>Connection to K-ESS3-3:</strong> This standard asks students to communicate solutions that reduce human impact on the environment. The three scenarios directly address identifying human changes and evaluating their impact. The "HELPS / HURTS / COMPLICATED" exercise and the drawing of one helpful human action are the "communicate solutions" performance expectation in action.</li>
+      <li><strong>Local context:</strong> If possible, find a local example — a park that was restored, a river cleanup, or a community garden that replaced an empty lot. Local examples make the concept real and tangible.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌍 Student Worksheet — Humans Change the Earth</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>👍 or 👎 — Does This Help or Hurt the Environment?</h3>
+    <p style="font-size:10pt; color:#555;">For each change, circle: HELPS, HURTS, or COMPLICATED</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 15px 0; font-size: 10pt;">
+      <tr>
+        <th style="background: #e65100; color: white; padding: 8px; border: 1px solid #ffcc80; text-align: left;">Human Change</th>
+        <th style="background: #e65100; color: white; padding: 8px; border: 1px solid #ffcc80;">Your Vote</th>
+        <th style="background: #e65100; color: white; padding: 8px; border: 1px solid #ffcc80; text-align: left;">Who is affected?</th>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff8e1;">🌲→🚗 Forest turned into parking lot</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; text-align: center; background: #fff8e1;">HELPS &nbsp; HURTS &nbsp; COMPLICATED</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff8e1;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff3e0;">🏭→🦦 Cleaning up a polluted river</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; text-align: center; background: #fff3e0;">HELPS &nbsp; HURTS &nbsp; COMPLICATED</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff3e0;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff8e1;">🌾→🚜 Prairie turned into a farm</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; text-align: center; background: #fff8e1;">HELPS &nbsp; HURTS &nbsp; COMPLICATED</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff8e1;"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff3e0;">🌳 Planting trees in a neighborhood</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; text-align: center; background: #fff3e0;">HELPS &nbsp; HURTS &nbsp; COMPLICATED</td>
+        <td style="border: 1px solid #ffcc80; padding: 8px; background: #fff3e0;"></td>
+      </tr>
+    </table>
+
+    <h3>✏️ Draw One Way Humans <em>Help</em> the Environment</h3>
+    <div class="draw-box"></div>
+    <p style="font-size: 10pt; text-align: center; color: #777;">In my drawing, humans are helping by: _____________________________________________</p>
+
+    <h3>🏡 Before &amp; Now — My Neighborhood</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 10px 0;">
+      <div>
+        <p style="font-weight: bold; color: #bf360c; margin-bottom: 4px; font-size: 10pt;">BEFORE people built here:</p>
+        <div style="border: 2px solid #ffcc80; border-radius: 8px; height: 120px; background: #fff8e1;"></div>
+      </div>
+      <div>
+        <p style="font-weight: bold; color: #bf360c; margin-bottom: 4px; font-size: 10pt;">NOW:</p>
+        <div style="border: 2px solid #ffcc80; border-radius: 8px; height: 120px; background: #fff8e1;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Scenario Evaluations</h3>
+      <ul>
+        <li>🌲→🚗 <strong>Forest → Parking Lot:</strong> HURTS. Animals lose habitat. Water runoff increases (parking lots can't absorb rain like forests can). Less oxygen produced. More heat absorbed (asphalt gets very hot).</li>
+        <li>🏭→🦦 <strong>Cleaning up a polluted river:</strong> HELPS. Removing pollution allows fish, water insects, birds, and mammals (like otters and beavers) to return. Clean water is healthier for downstream communities too.</li>
+        <li>🌾→🚜 <strong>Prairie → Farm:</strong> COMPLICATED. Farms feed people — essential! But they replace wild prairie habitat. Bison, prairie dogs, grassland birds, and pollinators lose their home. The best answer acknowledges both sides.</li>
+        <li>🌳 <strong>Planting trees:</strong> HELPS. Trees provide habitat for birds and insects, absorb carbon dioxide, produce oxygen, provide shade (cooling), hold soil in place (preventing erosion), and absorb rainwater (reducing flooding).</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student can describe at least 3 ways humans change the Earth.</li>
+        <li>Student can evaluate whether each change is helpful, harmful, or complex — and explain why.</li>
+        <li>Student can name at least one way humans have helped the environment.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_5TyDQsDgCLs" data-content-selector="body"></script>
+</body>
+</html>

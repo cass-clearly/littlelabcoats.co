@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sun Warms Everything — K-PS3 Unit 2, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #0288d1;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #0d47a1; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .discussion-hint {
+      font-style: italic;
+      color: #0d47a1;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 3px solid #0288d1;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .worksheet-box {
+      border: 3px solid #1565c0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #fafafa;
+    }
+    .prediction-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .prediction-card {
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      background: white;
+      min-height: 140px;
+    }
+    .prediction-card .emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .prediction-card .item-label { font-weight: bold; color: #1565c0; font-size: 11pt; margin-bottom: 8px; }
+    .circle-row { display: flex; gap: 10px; justify-content: center; margin: 6px 0; font-size: 10pt; }
+    .circle-option { border: 2px solid #1565c0; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 9pt; cursor: pointer; }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .sentence-blank {
+      border-bottom: 2px solid #1565c0;
+      display: inline-block;
+      min-width: 120px;
+      margin: 0 4px;
+    }
+    .sentence-line {
+      font-size: 13pt;
+      margin: 14px 0;
+      line-height: 2;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_JRXdiMqFwok">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>☀️ The Sun Warms Everything ☀️</h1>
+  <p class="subtitle">Physical Science — Sunshine &amp; Warmth — Unit 2, Lesson 1 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Sunshine &amp; Warmth</span>
+    <span>🔢 <strong>Lesson:</strong> 1 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️ 🖤 🤍 💧 🧺</div>
+    <div class="caption">Which will get warmest in the sun? Let's find out!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS3-1</strong> — Make observations to determine the effect of sunlight on Earth's surface
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>The sun is a giant ball of energy — and that energy travels all the way to Earth as <strong>light</strong>. When sunlight hits something, it can warm it up! But not everything warms up at the same rate. <strong>Dark colors</strong> absorb (soak up) more sunlight and get warmer faster. <strong>Light colors</strong> reflect (bounce back) more sunlight and stay cooler. Wet things also behave differently than dry things in the sun.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Sunlight carries <strong>energy</strong>. When light hits a surface, some of that energy is absorbed (converted to heat) and some is reflected (bounced away). Dark-colored surfaces absorb more light energy, turning it into heat — which is why dark colors feel warmer. Light-colored surfaces reflect more light, so less energy is absorbed and they stay cooler. Wet surfaces use some of the sun's energy to evaporate water rather than just warming up, so they can feel cooler than dry surfaces.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> sunlight, energy, absorb, reflect, surface, warm, cool, predict, observe
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>1 piece of dark-colored paper (black or dark navy)</li>
+      <li>1 piece of white or light-colored paper</li>
+      <li>2 small cloth scraps (same fabric, neutral or light color \u2014 gray, beige, or unbleached cotton)</li>
+      <li>Water to wet one cloth</li>
+      <li>A sunny windowsill or outdoor spot</li>
+      <li>Timer (10 minutes)</li>
+      <li>Student worksheet (included)</li>
+      <li>Crayons or pencils</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce the Question (5 min)</strong><br>
+    Ask kids: <em>"If we leave these four things in the sun for 10 minutes, which do you think will feel the warmest? Which will feel the coolest?"</em><br>
+    Show them the dark paper, white paper, dry cloth, and wet cloth. Have them make predictions on their worksheet before you start.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Set Up the Experiment (3 min)</strong><br>
+    <ul>
+      <li>Wet one cloth with water (damp, not dripping)</li>
+      <li>Lay all 4 items flat in a sunny spot — same location, same sunlight exposure</li>
+      <li>Start the timer for 10 minutes</li>
+      <li>While waiting, talk about what sunlight is and where it comes from</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Observe &amp; Feel (5 min)</strong><br>
+    After 10 minutes, have each child gently place their hand on each item (1–2 seconds each).<br>
+    Ask: <em>"What do you notice? Which feels warmest? Which feels coolest?"</em><br>
+    Have them record their observations on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Share &amp; Discuss (10 min)</strong><br>
+    Use the discussion questions below. Guide kids to notice: dark paper felt warmest, white paper a bit less, dry cloth moderate, wet cloth coolest. Discuss why! Let them share their ideas first before you explain.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Complete the Worksheet (10 min)</strong><br>
+    Students complete the sentence frame: <em>"The ___ got warmest because ___."</em><br>
+    They can draw what they observed in the observation boxes.
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ "Why do you think dark colors get warmer in sunlight than light colors?"</strong>
+    <p class="discussion-hint">→ Dark colors absorb more light energy and convert it to heat. Light colors reflect light away, so less energy is absorbed. That's why wearing a black shirt on a hot summer day makes you feel hotter than wearing a white shirt!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ "Why did the wet cloth feel cooler than the dry cloth?"</strong>
+    <p class="discussion-hint">→ The sun's energy was used to evaporate the water instead of heating the cloth. Water soaks up heat energy as it evaporates — that's why sweating cools you down!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>☀️ <strong>Color Swap Challenge:</strong> Try more colors! Does red heat up more or less than black? Where does orange fall?</li>
+      <li>🌡️ <strong>Temperature Check:</strong> If you have a thermometer, measure the temperature of each surface before and after. Record the numbers!</li>
+      <li>🌊 <strong>Real-World Connection:</strong> On a hot day, touch a black car and a white car parked in the sun. What do you notice?</li>
+      <li>🧊 <strong>Think Ahead:</strong> If dark things absorb more heat, what would happen if you put ice on a dark plate vs. a white plate in the sun? (That's Lesson 4!)</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Best in strong sunlight:</strong> This works best on a sunny day. If it's cloudy, use a desk lamp positioned 6–8 inches from the items.</li>
+      <li><strong>Cloth color matters:</strong> Use neutral or light-colored cloth (gray, beige, or unbleached cotton) so the dry cloth ranks between the dark paper and white paper as expected. A dark cloth will warm like dark paper; a white cloth will rank like white paper — either will skew the results.</li>
+      <li><strong>Safety note:</strong> The items may be warm but should not be hot enough to burn. Paper and cloth in typical sunlight are safe to touch briefly.</li>
+      <li><strong>For younger kids:</strong> Let them just feel and describe — "warm," "warmer," "warmest." The ranking matters more than exact temperatures.</li>
+      <li><strong>Discussion tip:</strong> Many kids intuit that black gets hotter because they've felt it. Build on what they already know from experience!</li>
+      <li><strong>Assessment:</strong> Can the child identify which item got warmest and say something like "dark colors absorb more sun" in their own words? That's the target.</li>
+    </ul>
+  </div>
+
+  <!-- WORKSHEET PAGE -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2 style="text-align:center; background:#1565c0;">☀️ Student Worksheet</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>🔮 My Predictions — <em>Before</em> the experiment</h3>
+      <p style="font-size:10pt; color:#555;">Circle how warm you think each item will get after 10 minutes in the sun:</p>
+
+      <div class="prediction-grid">
+        <div class="prediction-card">
+          <span class="emoji">🖤</span>
+          <div class="item-label">Dark Paper</div>
+          <div class="circle-row">
+            <span>❄️ Cool</span> &nbsp;
+            <span>😐 Warm</span> &nbsp;
+            <span>🔥 Hot!</span>
+          </div>
+          <p style="font-size:9pt; color:#888; margin-top:8px;">Circle one ↑</p>
+        </div>
+        <div class="prediction-card">
+          <span class="emoji">🤍</span>
+          <div class="item-label">White Paper</div>
+          <div class="circle-row">
+            <span>❄️ Cool</span> &nbsp;
+            <span>😐 Warm</span> &nbsp;
+            <span>🔥 Hot!</span>
+          </div>
+          <p style="font-size:9pt; color:#888; margin-top:8px;">Circle one ↑</p>
+        </div>
+        <div class="prediction-card">
+          <span class="emoji">🧺</span>
+          <div class="item-label">Dry Cloth</div>
+          <div class="circle-row">
+            <span>❄️ Cool</span> &nbsp;
+            <span>😐 Warm</span> &nbsp;
+            <span>🔥 Hot!</span>
+          </div>
+          <p style="font-size:9pt; color:#888; margin-top:8px;">Circle one ↑</p>
+        </div>
+        <div class="prediction-card">
+          <span class="emoji">💧</span>
+          <div class="item-label">Wet Cloth</div>
+          <div class="circle-row">
+            <span>❄️ Cool</span> &nbsp;
+            <span>😐 Warm</span> &nbsp;
+            <span>🔥 Hot!</span>
+          </div>
+          <p style="font-size:9pt; color:#888; margin-top:8px;">Circle one ↑</p>
+        </div>
+      </div>
+
+      <h3>👀 My Observations — <em>After</em> the experiment</h3>
+      <p style="font-size:10pt; color:#555;">Draw a face in each box to show what you felt:</p>
+
+      <div class="prediction-grid">
+        <div class="prediction-card" style="min-height:120px;">
+          <span class="emoji">🖤</span>
+          <div class="item-label">Dark Paper</div>
+          <div style="height:60px; border-bottom:1px dashed #aaa; width:80%; margin:0 auto;"></div>
+          <p style="font-size:9pt; color:#888; margin-top:4px;">Draw how it felt ↑</p>
+        </div>
+        <div class="prediction-card" style="min-height:120px;">
+          <span class="emoji">🤍</span>
+          <div class="item-label">White Paper</div>
+          <div style="height:60px; border-bottom:1px dashed #aaa; width:80%; margin:0 auto;"></div>
+          <p style="font-size:9pt; color:#888; margin-top:4px;">Draw how it felt ↑</p>
+        </div>
+        <div class="prediction-card" style="min-height:120px;">
+          <span class="emoji">🧺</span>
+          <div class="item-label">Dry Cloth</div>
+          <div style="height:60px; border-bottom:1px dashed #aaa; width:80%; margin:0 auto;"></div>
+          <p style="font-size:9pt; color:#888; margin-top:4px;">Draw how it felt ↑</p>
+        </div>
+        <div class="prediction-card" style="min-height:120px;">
+          <span class="emoji">💧</span>
+          <div class="item-label">Wet Cloth</div>
+          <div style="height:60px; border-bottom:1px dashed #aaa; width:80%; margin:0 auto;"></div>
+          <p style="font-size:9pt; color:#888; margin-top:4px;">Draw how it felt ↑</p>
+        </div>
+      </div>
+
+      <h3>✏️ Finish the Sentence</h3>
+      <p class="sentence-line">The <span class="sentence-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> got warmest because <span class="sentence-blank" style="min-width:200px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.</p>
+    </div>
+  </div>
+
+  <!-- ANSWER KEY PAGE -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT/TEACHER ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Expected Results (Warmest → Coolest)</h3>
+      <ol>
+        <li>🔥 <strong>Dark paper</strong> — absorbs the most light energy, gets warmest</li>
+        <li>😐 <strong>Dry cloth</strong> — absorbs some light, moderate warmth</li>
+        <li>😐 <strong>White paper</strong> — reflects much of the light, noticeably cooler than dark paper</li>
+        <li>❄️ <strong>Wet cloth</strong> — coolest! Evaporation uses up heat energy</li>
+      </ol>
+
+      <h3>Sentence Frame — Sample Answers</h3>
+      <ul>
+        <li><em>"The dark paper got warmest because it absorbs more sunlight."</em></li>
+        <li><em>"The dark paper got warmest because dark colors soak up more energy from the sun."</em></li>
+      </ul>
+
+      <h3>💡 Science Explanation for Parents</h3>
+      <p>Dark surfaces absorb more electromagnetic radiation from the sun and convert it to thermal energy (heat). Light surfaces reflect more radiation. Wet surfaces lose thermal energy through evaporative cooling — the same process that makes sweating effective for cooling the body. This is the foundational concept behind K-PS3-1: sunlight warms Earth's surfaces.</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can rank the items from warmest to coolest (even approximately)</li>
+        <li>Child can explain "dark colors get more warm" in their own words</li>
+        <li>Child makes a connection to real life (black car, dark clothing, etc.)</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_JRXdiMqFwok" data-content-selector="body"></script>
+</body>
+</html>

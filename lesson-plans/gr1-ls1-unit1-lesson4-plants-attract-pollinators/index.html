@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Plants Attract Pollinators — Life Science Unit 1, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Pollinator match cards */
+    .pollinator-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .pollinator-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 16px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+    .pollinator-card .flower-emoji { font-size: 30pt; text-align: center; }
+    .pollinator-card .card-content {}
+    .pollinator-card .card-title { font-weight: bold; color: #1b5e20; font-size: 11pt; }
+    .pollinator-card .card-details { font-size: 10pt; color: #333; margin-top: 4px; }
+    .pollinator-card .pollinator-emoji { font-size: 30pt; text-align: center; }
+    /* Design box */
+    .design-box {
+      background: #e8f5e9;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+    .design-box h3 { color: #1b5e20; border-color: #a5d6a7; }
+    /* Draw box */
+    .draw-box {
+      border: 3px dashed #2e7d32;
+      border-radius: 10px;
+      min-height: 220px;
+      margin: 12px 0;
+      padding: 10px;
+    }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .draw-prompt-line {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin-top: 6px;
+      font-size: 9pt;
+      color: #aaa;
+    }
+    .label-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .label-item { font-size: 9pt; color: #777; }
+    .fill-blank {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
+    }
+    .blank-line {
+      display: inline-block;
+      border-bottom: 2px solid #1b5e20;
+      min-width: 200px;
+      margin: 0 4px;
+    }
+    /* Worksheet */
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    /* Matching */
+    .matching-section {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+      align-items: flex-start;
+    }
+    .matching-col { flex: 1; }
+    .match-item {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .match-item .emoji { font-size: 22pt; display: block; margin-bottom: 4px; }
+    .match-item .label { font-weight: bold; color: #1b5e20; }
+    .match-problem {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .match-problem .label { color: #e65100; }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .ak-box h3 { color: #1b5e20; border-color: #a5d6a7; text-align: center; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 4px 0; font-size: 10pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .design-box, .pollinator-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_3YjNHUg3X80">
+
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌸 How Plants Attract Pollinators 🐝</h1>
+  <p class="subtitle">Life Science Unit 1, Lesson 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plant Structures</span>
+    <span>📖 <strong>Lesson:</strong> 4 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌺🐝🦋🌼🐦</div>
+    <div class="caption">Flowers are nature's billboards — every color, shape, and smell is an advertisement aimed at a specific visitor!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>1-LS1-1</strong> — Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>explain</strong> how specific plant structures — color, smell, nectar, and shape — attract specific pollinators, and <strong>design</strong> their own "perfect flower" matched to a pollinator.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Flowers don't bloom to be beautiful for us — every feature of a flower evolved to attract a specific pollinator. Color, shape, scent, and the location of nectar are all structural features designed (by evolution) to lure exactly the right animal. When that animal visits, it picks up pollen and carries it to another flower — and new seeds can form. It's a partnership: the plant gets pollinated, the visitor gets food.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> pollinator, pollen, nectar, pollination, structure, attract, reproduce, seed
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and crayons or markers (for the flower design activity)</li>
+      <li>Colored pencils — <em>optional, for more detailed flower design</em></li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>This lesson is paper and crayons only — but the ideas are BIG!</em></p>
+  </div>
+
+  <h2>🔬 Part 1 — Plant-Pollinator Matching (15 min)</h2>
+  <p>Each flower type below has specific features that attract a specific pollinator. Study each pairing and discuss <em>why</em> the match works.</p>
+
+  <div class="pollinator-cards">
+    <div class="pollinator-card" style="border-color: #ef9a9a;">
+      <div class="flower-emoji">🌺</div>
+      <div class="card-content">
+        <div class="card-title">Red Tubular Flowers → Hummingbirds</div>
+        <div class="card-details">
+          <strong>Color:</strong> Bright red (hummingbirds can see red well — bees cannot!)<br>
+          <strong>Shape:</strong> Long, narrow tube fits a hummingbird's long beak perfectly<br>
+          <strong>Scent:</strong> Usually no smell — hummingbirds rely on sight, not smell<br>
+          <strong>Nectar:</strong> Deep inside the tube, where only a long beak can reach
+        </div>
+      </div>
+      <div class="pollinator-emoji">🐦</div>
+    </div>
+
+    <div class="pollinator-card" style="border-color: #f5f5f5;">
+      <div class="flower-emoji">🤍</div>
+      <div class="card-content">
+        <div class="card-title">White Night-Blooming Flowers → Moths</div>
+        <div class="card-details">
+          <strong>Color:</strong> White or very pale — highly visible in moonlight<br>
+          <strong>Shape:</strong> Often open and accessible<br>
+          <strong>Scent:</strong> Very strong, sweet fragrance released at night — moths navigate by smell<br>
+          <strong>Nectar:</strong> Available at night when moths are active
+        </div>
+      </div>
+      <div class="pollinator-emoji">🦋</div>
+    </div>
+
+    <div class="pollinator-card" style="border-color: #9fa8da;">
+      <div class="flower-emoji">💜</div>
+      <div class="card-content">
+        <div class="card-title">Blue and Purple Flat Flowers → Bees</div>
+        <div class="card-details">
+          <strong>Color:</strong> Blue or purple — bees see UV light and are especially attracted to these colors<br>
+          <strong>Shape:</strong> Wide, flat, or platform-shaped — bees need a landing spot<br>
+          <strong>Scent:</strong> Often sweet and pleasant<br>
+          <strong>Nectar:</strong> Easy to access from the center of the flat flower
+        </div>
+      </div>
+      <div class="pollinator-emoji">🐝</div>
+    </div>
+
+    <div class="pollinator-card" style="border-color: #bcaaa4;">
+      <div class="flower-emoji">🌼</div>
+      <div class="card-content">
+        <div class="card-title">Large Pale Flowers with Rotting Smell → Flies and Beetles</div>
+        <div class="card-details">
+          <strong>Color:</strong> Pale, brownish, or muddy — mimics rotting flesh<br>
+          <strong>Shape:</strong> Often large and deep — traps the insect briefly<br>
+          <strong>Scent:</strong> Smells like rotting meat or dung — attracts insects that normally visit carrion<br>
+          <strong>Nectar:</strong> Sometimes none — the flower tricks the insect!
+        </div>
+      </div>
+      <div class="pollinator-emoji">🪰</div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Discussion during Part 1:</strong>
+    <ul>
+      <li><em>"Why would a flower be red instead of blue? Who is it advertising to?"</em></li>
+      <li><em>"What would happen if a bee visited a hummingbird flower? Would it work?"</em></li>
+      <li><em>"Can you think of flowers you've seen outside? What pollinator do you think they attract?"</em></li>
+    </ul>
+  </div>
+
+  <h2>🏗️ Part 2 — Design Your Perfect Flower (20 min)</h2>
+
+  <div class="design-box">
+    <h3>🎨 Engineering Challenge: Design a Flower for a Pollinator!</h3>
+    <p>Pick <em>one</em> pollinator: 🐝 Bee, 🐦 Hummingbird, 🦋 Butterfly, 🦟 Mosquito, or 🪲 Beetle.</p>
+    <p style="margin-top: 10px;">Design your "perfect flower" that would attract <em>only</em> your chosen pollinator. Think carefully about:</p>
+    <ul>
+      <li>🎨 <strong>Color</strong> — What color is your flower? Why would your pollinator like that color?</li>
+      <li>📐 <strong>Shape</strong> — Is it a tube, a flat platform, a cup, a bell? Why does the shape suit your pollinator?</li>
+      <li>👃 <strong>Smell</strong> — What does your flower smell like? Sweet? Fruity? Rotting? Nothing?</li>
+      <li>🍯 <strong>Nectar location</strong> — Where is the nectar hidden? Can your pollinator reach it?</li>
+    </ul>
+    <p style="margin-top: 10px;"><strong>Draw your flower and label all four features!</strong></p>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step-by-Step Guide for Part 2:</strong>
+    <ol>
+      <li>Review the four pollinator-flower matchings together.</li>
+      <li>Student picks one pollinator and thinks about what would attract it most.</li>
+      <li>Draw the flower on the worksheet, making deliberate choices about color, shape, and smell.</li>
+      <li>Label: color, shape, smell, and nectar location.</li>
+      <li>Student explains their design: "I picked this color because… I made this shape because…"</li>
+    </ol>
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Big Question:</strong> "A flower that smells like rotting meat seems disgusting. What kind of pollinator would visit that?"
+    <p class="discussion-hint">Suggested answer: Flies and some beetles! The titan arum — nicknamed the "corpse flower" — is famous for this strategy. It heats itself up to near human body temperature <em>and</em> produces a powerful rotting flesh odor to attract carrion flies, which are insects that normally lay their eggs in dead animals. The flies enter the flower looking for a place to lay eggs, get dusted with pollen, and then leave disappointed (there's no actual meat) and carry the pollen to another corpse flower. Some orchids are even sneakier: they look and smell like female bees, tricking male bees into trying to mate with them — and picking up pollen in the process. Plants have evolved remarkable deception strategies to get pollinated without offering any reward at all!</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🐝 <strong>UV Flower Patterns:</strong> Bees can see ultraviolet light, which humans cannot. Many flowers have "nectar guides" — UV patterns that act like runway lights pointing toward the nectar. Search "flowers in UV light" to see images of flowers that look plain to us but have vivid bull's-eye patterns for bees!</li>
+      <li>🌺 <strong>Garden Survey:</strong> Walk outside and find 3–5 different flowers. For each one, guess: what pollinator is this flower "advertising to"? Check the color, shape, and smell. Then watch and see if you're right!</li>
+      <li>🍌 <strong>Bat Pollinators:</strong> Banana plants are pollinated by bats! Bat-pollinated flowers are usually pale (visible at night), produce very strong nectar, and bloom at night. Mangoes, figs, and durian also depend on bats.</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"The Bee Book"</em> by Charlotte Milner, or <em>"Flower Talk: How Plants Use Color to Communicate"</em> by Sara Levine</li>
+      <li>🎨 <strong>Bee Vision Art:</strong> Draw a flower the way a human sees it, then draw the same flower the way a bee would see it (with UV patterns visible). Think about what new features you'd add for the bee version!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Pollination basics for Grade 1:</strong> Pollen is a fine powder made by flowers. When it travels from one flower to another (carried by a pollinator), it allows a seed to form inside the flower. That seed can grow into a new plant. Pollinators get a meal of nectar (sugar water) or pollen (protein), and the plant gets its pollen delivered. It's a mutual benefit — usually!</li>
+      <li><strong>The deceptive flowers discussion:</strong> The corpse flower (titan arum) and bee orchids are fascinating but require care in presentation for Grade 1. The key idea: <em>some plants lie</em>. They offer a false promise (fake rotting meat, fake female bee) to trick an insect into carrying pollen. The insect gets nothing, but the plant's needs are met. This is a clever extension of the "advertisement" idea.</li>
+      <li><strong>Bees and UV light:</strong> Honeybees have three types of color receptors sensitive to UV, blue, and green — but not red! This is why red flowers typically don't attract bees (they look black or very dark to bees). Hummingbirds can see red, which is why hummingbird flowers are typically red or orange. This is a lovely example of how plant structures evolved to target specific visitors.</li>
+      <li><strong>Connecting to Lesson 2:</strong> Flowers were introduced in Lesson 2 as the "reproductive" part of the plant. This lesson deepens that — how exactly do flowers ensure their pollen travels? The answer is elaborate structural engineering aimed at specific visitors.</li>
+      <li><strong>Night-blooming flowers note:</strong> Moonflowers, evening primrose, night-blooming jasmine, and the queen of the night cactus are all moth-pollinated. Their scent is released at night when moths fly. Many are white because white reflects moonlight — another structure perfectly matched to function.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-header">🌸 Student Worksheet — Flowers and Their Pollinators</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 — Matching: Flower to Pollinator</h3>
+    <p style="font-size:10pt; color:#555;">Draw a line from each flower type to the pollinator it attracts!</p>
+
+    <div class="matching-section">
+      <div class="matching-col">
+        <div class="match-item">
+          <span class="emoji">🌺</span>
+          <span class="label">Red, long tubular flower</span>
+        </div>
+        <div class="match-item">
+          <span class="emoji">🤍</span>
+          <span class="label">White flower with strong night scent</span>
+        </div>
+        <div class="match-item">
+          <span class="emoji">💜</span>
+          <span class="label">Blue/purple flat flower</span>
+        </div>
+        <div class="match-item">
+          <span class="emoji">🌼</span>
+          <span class="label">Large pale flower, smells like rotting meat</span>
+        </div>
+      </div>
+      <div class="matching-col" style="padding-top: 8px;">
+        <div class="match-problem"><span class="label">🪰 Flies and beetles</span></div>
+        <div class="match-problem"><span class="label">🐝 Bees</span></div>
+        <div class="match-problem"><span class="label">🐦 Hummingbirds</span></div>
+        <div class="match-problem"><span class="label">🦋 Moths</span></div>
+      </div>
+    </div>
+
+    <h3>Part 2 — Design Your Perfect Flower</h3>
+    <p style="font-size:10pt; color:#555;">Pick a pollinator and design a flower just for it! Label all four features.</p>
+    <p style="font-size:10pt;"><strong>My pollinator is:</strong> ___________________________</p>
+
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your perfect flower here...</div>
+      <div style="height: 160px;"></div>
+      <div class="label-grid">
+        <div class="label-item">
+          🎨 Color — and why:<br>
+          <div class="draw-prompt-line"></div>
+        </div>
+        <div class="label-item">
+          📐 Shape — and why:<br>
+          <div class="draw-prompt-line"></div>
+        </div>
+        <div class="label-item">
+          👃 Smell — and why:<br>
+          <div class="draw-prompt-line"></div>
+        </div>
+        <div class="label-item">
+          🍯 Nectar location:<br>
+          <div class="draw-prompt-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Part 3 — Think About It!</h3>
+    <div class="fill-blank" style="font-size:11pt;">
+      Why do flowers come in so many different shapes and colors?<br><br>
+      <span class="blank-line" style="min-width:90%;"></span><br><br>
+      <span class="blank-line" style="min-width:90%;"></span>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1 — Matching Answers</h3>
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>🌸 Flower → Pollinator</h3>
+          <ul>
+            <li>🌺 Red tubular → <strong>Hummingbirds 🐦</strong></li>
+            <li>🤍 White night-blooming → <strong>Moths 🦋</strong></li>
+            <li>💜 Blue/purple flat → <strong>Bees 🐝</strong></li>
+            <li>🌼 Pale, rotting smell → <strong>Flies and beetles 🪰</strong></li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>💡 Part 3 — Think About It!</h3>
+          <ul>
+            <li>Different shapes and colors attract different pollinators</li>
+            <li>Each flower "advertises" to the specific animal that can best carry its pollen</li>
+            <li>Accept: "because different animals like different colors/smells"</li>
+            <li>Full credit answer: mentions that structure matches the pollinator</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">Part 2 — Design Challenge — What to Look For</h3>
+      <ul>
+        <li>Student identified a specific pollinator before designing</li>
+        <li>All four features are labeled: color, shape, smell, nectar location</li>
+        <li>Features are <em>consistent</em> with what would attract the chosen pollinator (e.g., if they chose "bee," blue/purple colors and flat shape make sense)</li>
+        <li>Student can explain the reasoning behind each choice</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Student correctly matches all four flower-pollinator pairs</li>
+        <li>Student's flower design shows intentional structural choices connected to the chosen pollinator</li>
+        <li>Student understands that flower features are "advertisements" targeted at specific visitors</li>
+        <li>Bonus: Student can explain why a hummingbird flower and a bee flower look different</li>
+      </ul>
+
+      <div class="tip-box" style="margin-top: 14px;">
+        💡 <strong>Extended discussion:</strong> Ask "If all the bees disappeared, what would happen to blue and purple flowers?" (They'd have trouble reproducing — fewer seeds. Over many generations, they might evolve to attract a different pollinator or go extinct.) This is why bee populations matter so much — they're partners in plant reproduction for hundreds of thousands of plant species!
+      </div>
+    </div>
+  </div>
+
+
+<script
+  src="http://192.168.5.204:3334/feedback-layer.js"
+  data-api-url="http://192.168.5.204:3334"
+  data-content-selector="body"
+  data-document-uri="doc_3YjNHUg3X80"
+></script>
+</body>
+</html>

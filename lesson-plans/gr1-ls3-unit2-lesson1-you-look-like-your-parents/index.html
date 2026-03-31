@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Look Like Your Parents — Grade 1, Unit 2, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 8px;
+      padding-left: 10px;
+      border-left: 3px solid #a5d6a7;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .matching-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .match-card {
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 11pt;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .match-card .emoji { font-size: 30pt; }
+    .match-card .label { font-weight: bold; margin-top: 4px; font-size: 10pt; }
+    .parent-card { background: #e8f5e9; border-color: #2e7d32; }
+    .baby-card { background: #fff9c4; border-color: #f9a825; }
+    .trait-chart {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 10pt;
+    }
+    .trait-chart th {
+      background: #2e7d32;
+      color: white;
+      padding: 10px;
+      border: 2px solid #1b5e20;
+    }
+    .trait-chart td {
+      border: 1px solid #a5d6a7;
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+    .trait-chart tr:nth-child(even) td { background: #e8f5e9; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #757575; text-align: center; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .worksheet-box {
+      border: 3px solid #2e7d32;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .worksheet-box h2 { background: #2e7d32; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_y0JK3ZgXR2E">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🐾 You Look Like Your Parents 🐾</h1>
+  <p class="subtitle">Life Science — Parents &amp; Offspring | Unit 2, Lesson 1 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Parents &amp; Offspring</span>
+    <span>🏠 <strong>Materials:</strong> Household only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐕 🐶 &nbsp; 🐈 🐱 &nbsp; 🐄 🐮</div>
+    <div class="caption">Baby animals look like their parents — but smaller! What traits did they inherit?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>1-LS3-1</strong> — Use observations to describe patterns of what plants and animals (including humans) do to survive and how the behavior of parents helps offspring survive.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <em>observe</em> and <em>describe</em> how offspring resemble parents in structure, and <em>explain</em> what inherited traits are.</p>
+
+  <h2>🔬 The Big Idea</h2>
+  <p>When animals have babies, their offspring look a lot like them! A puppy looks like a dog. A kitten looks like a cat. A calf looks like a cow. This is because babies <strong>inherit</strong> traits — features like fur color, body shape, and the number of legs — from their parents. These traits are passed down from parent to offspring, just like a gift from one generation to the next.</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> offspring, parent, inherited trait, observe, describe, structure
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>The matching cards printed from the worksheet pages (or draw your own)</li>
+      <li>Scissors ✂️ and a glue stick</li>
+      <li>Crayons or colored pencils</li>
+      <li>A family photo (optional) — of the student's own family to find similarities</li>
+      <li>A mirror (optional) — to look at their own face and identify features</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Warm-Up: Who's the Baby? (5 min)</strong><br>
+    Look at the emoji pairs below. Ask: <em>"Can you tell which one is the parent and which is the baby? How do you know?"</em><br>
+    🐕 and 🐶 &nbsp;|&nbsp; 🐈 and 🐱 &nbsp;|&nbsp; 🐄 and 🐮 &nbsp;|&nbsp; 🐴 and 🐎<br>
+    Key discussion: <em>"What makes them look the same? What makes them look different?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Parent-Offspring Matching (15 min)</strong><br>
+    Cut out the matching cards on the worksheet page. Sort them into pairs: baby animal with its parent.<br>
+    <ul>
+      <li>🐶 Puppy → 🐕 Dog</li>
+      <li>🐱 Kitten → 🐈 Cat</li>
+      <li>🐮 Calf → 🐄 Cow</li>
+      <li>🐑 Lamb → 🐏 Sheep</li>
+      <li>🐴 Foal → 🐎 Horse</li>
+      <li>🐥 Duckling → 🦆 Duck</li>
+    </ul>
+    For each pair, observe: <em>"What body parts look the same? Same type of legs? Same fur or feathers? Same face shape?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Trait Chart (10 min)</strong><br>
+    Fill in the trait chart on the worksheet. For each animal pair, note which body features the baby inherited from the parent.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Connect to Humans (10 min)</strong><br>
+    Look at a family photo (or draw one). Ask: <em>"What features do you have that look like your mom? Your dad?"</em><br>
+    Examples: eye color, hair color, nose shape, smile, ear shape.<br>
+    Introduce the vocabulary: <em>"These features that you got from your parents are called <strong>inherited traits</strong>."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Wrap-Up Drawing (5 min)</strong><br>
+    On the worksheet, draw a picture of yourself and circle one trait you inherited from a parent.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Why does a puppy look like a dog but not like a cat?</li>
+      <li>What body parts look the same between a baby bird and an adult bird?</li>
+      <li>Can you think of something a baby animal has that looks <em>different</em> from its parent? (Baby ducks are fluffier! Kittens have blue eyes at birth.)</li>
+      <li>Do you look exactly like one parent, or are you a mix of both?</li>
+    </ul>
+    <hr>
+    <strong>🌟 Big Question:</strong> <em>"You got some traits from your mom and some from your dad. Does that mean you're just a mix of them?"</em>
+    <p class="discussion-hint">Sort of, but it's more complex! Each parent passes on half their genetic information. Which half gets passed is partly random — that's why siblings look different even with the same parents. You might get your dad's eye color and your mom's nose, or combine them in a new way. That's why children resemble but don't look identical to either parent.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔍 <strong>Nature Walk:</strong> Look for a plant and its seeds or seedlings. Do they look like the parent plant?</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"Like a Windy Day"</em> or any book about animal families.</li>
+      <li>🎨 <strong>Family Portrait:</strong> Draw your whole family and circle shared traits between people.</li>
+      <li>📷 <strong>Photo Compare:</strong> Find old photos of parents as children. How do they compare to photos of yourself?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Age tip:</strong> First graders grasp the visual matching easily — keep the focus on observable features (color, shape, size), not genetics vocabulary.</li>
+      <li><strong>Sensitive families:</strong> If a child is adopted or doesn't have photos of biological family, redirect to the animal examples and have them draw a fictional animal family instead.</li>
+      <li><strong>Key concept to emphasize:</strong> Baby animals look like their parents, not like other species. A puppy will always grow up to look like a dog — never a cat.</li>
+      <li><strong>Assessment:</strong> Can the child match all 6 animal pairs? Can they name at least 2 inherited traits they observe? Can they use the word "inherited"?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-box">
+      <h2>📋 Student Worksheet — Lesson 1</h2>
+      <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+      <h3>Part 1: Match the Baby to Its Parent</h3>
+      <p>Draw a line to connect each baby animal to its parent. Then write one trait they share!</p>
+
+      <div class="matching-grid">
+        <div class="match-card baby-card">
+          <span class="emoji">🐶</span>
+          <span class="label">Puppy</span>
+        </div>
+        <div class="match-card" style="background:#fff; border:2px dashed #ccc; align-items:center; justify-content:center;">
+          <span style="font-size:9pt; color:#999;">Shared trait:<br>_____________</span>
+        </div>
+        <div class="match-card parent-card">
+          <span class="emoji">🐕</span>
+          <span class="label">Dog</span>
+        </div>
+
+        <div class="match-card baby-card">
+          <span class="emoji">🐱</span>
+          <span class="label">Kitten</span>
+        </div>
+        <div class="match-card" style="background:#fff; border:2px dashed #ccc; align-items:center; justify-content:center;">
+          <span style="font-size:9pt; color:#999;">Shared trait:<br>_____________</span>
+        </div>
+        <div class="match-card parent-card">
+          <span class="emoji">🐈</span>
+          <span class="label">Cat</span>
+        </div>
+
+        <div class="match-card baby-card">
+          <span class="emoji">🐮</span>
+          <span class="label">Calf</span>
+        </div>
+        <div class="match-card" style="background:#fff; border:2px dashed #ccc; align-items:center; justify-content:center;">
+          <span style="font-size:9pt; color:#999;">Shared trait:<br>_____________</span>
+        </div>
+        <div class="match-card parent-card">
+          <span class="emoji">🐄</span>
+          <span class="label">Cow</span>
+        </div>
+
+        <div class="match-card baby-card">
+          <span class="emoji">🐑</span>
+          <span class="label">Lamb</span>
+        </div>
+        <div class="match-card" style="background:#fff; border:2px dashed #ccc; align-items:center; justify-content:center;">
+          <span style="font-size:9pt; color:#999;">Shared trait:<br>_____________</span>
+        </div>
+        <div class="match-card parent-card">
+          <span class="emoji">🐏</span>
+          <span class="label">Sheep</span>
+        </div>
+
+        <div class="match-card baby-card">
+          <span class="emoji">🐴</span>
+          <span class="label">Foal</span>
+        </div>
+        <div class="match-card" style="background:#fff; border:2px dashed #ccc; align-items:center; justify-content:center;">
+          <span style="font-size:9pt; color:#999;">Shared trait:<br>_____________</span>
+        </div>
+        <div class="match-card parent-card">
+          <span class="emoji">🐎</span>
+          <span class="label">Horse</span>
+        </div>
+
+        <div class="match-card baby-card">
+          <span class="emoji">🐥</span>
+          <span class="label">Duckling</span>
+        </div>
+        <div class="match-card" style="background:#fff; border:2px dashed #ccc; align-items:center; justify-content:center;">
+          <span style="font-size:9pt; color:#999;">Shared trait:<br>_____________</span>
+        </div>
+        <div class="match-card parent-card">
+          <span class="emoji">🦆</span>
+          <span class="label">Duck</span>
+        </div>
+      </div>
+
+      <h3>Part 2: My Inherited Traits</h3>
+      <p>Write or draw one trait you inherited from each parent (or caregiver).</p>
+      <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+        <tr>
+          <td style="border:2px solid #a5d6a7; padding:10px; width:50%; height:120px; vertical-align:top;">
+            <strong style="color:#2e7d32;">From Mom/Parent 1:</strong><br><br>
+          </td>
+          <td style="border:2px solid #a5d6a7; padding:10px; width:50%; height:120px; vertical-align:top;">
+            <strong style="color:#2e7d32;">From Dad/Parent 2:</strong><br><br>
+          </td>
+        </tr>
+      </table>
+
+      <h3>Part 3: Complete the sentence</h3>
+      <p>Traits that are passed from parents to offspring are called <strong>__________________</strong> traits.</p>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Part 1: Matching Pairs &amp; Sample Shared Traits</h3>
+      <table class="trait-chart">
+        <tr>
+          <th>Baby Animal</th>
+          <th>Parent</th>
+          <th>Sample Shared Traits</th>
+        </tr>
+        <tr>
+          <td>🐶 Puppy</td>
+          <td>🐕 Dog</td>
+          <td>4 legs, fur, floppy ears, tail</td>
+        </tr>
+        <tr>
+          <td>🐱 Kitten</td>
+          <td>🐈 Cat</td>
+          <td>4 legs, fur, whiskers, pointed ears</td>
+        </tr>
+        <tr>
+          <td>🐮 Calf</td>
+          <td>🐄 Cow</td>
+          <td>4 legs, spots or solid color, hooves, tail</td>
+        </tr>
+        <tr>
+          <td>🐑 Lamb</td>
+          <td>🐏 Sheep</td>
+          <td>4 legs, woolly coat, hooves</td>
+        </tr>
+        <tr>
+          <td>🐴 Foal</td>
+          <td>🐎 Horse</td>
+          <td>4 legs, mane, tail, hooves, long face</td>
+        </tr>
+        <tr>
+          <td>🐥 Duckling</td>
+          <td>🦆 Duck</td>
+          <td>2 legs, bill/beak, wings, webbed feet</td>
+        </tr>
+      </table>
+
+      <h3>Part 3: Sentence Answer</h3>
+      <p>Traits that are passed from parents to offspring are called <strong>inherited</strong> traits.</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child correctly matches all 6 animal pairs.</li>
+        <li>Child can name at least 2 shared traits for any pair.</li>
+        <li>Child uses the word "inherited" correctly.</li>
+        <li>Child can identify at least 1 trait they share with a parent.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_y0JK3ZgXR2E" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

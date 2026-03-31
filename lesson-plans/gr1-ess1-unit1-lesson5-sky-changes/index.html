@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sky Changes — Morning, Day, and Night | Grade 1 Earth Science Unit 1, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #e65100; }
+    .safety-box {
+      background: #fff3e0;
+      border: 3px solid #bf360c;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 14px 0;
+    }
+    .safety-box h3 { color: #bf360c; border-color: #bf360c; font-size: 13pt; }
+    .extension-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .sky-journal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 14px 0;
+    }
+    .sky-journal-panel {
+      border: 2px solid #ffcc80;
+      border-radius: 10px;
+      padding: 12px;
+      background: white;
+    }
+    .sky-journal-panel .time-label {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #e65100;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .sky-journal-panel .sky-color-ref {
+      font-size: 9pt;
+      color: #888;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .sky-draw-area {
+      background: #f0f0f0;
+      border-radius: 6px;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-style: italic;
+      font-size: 9pt;
+    }
+    .sky-notes-lines {
+      margin-top: 8px;
+    }
+    .sky-notes-lines .note-line {
+      border-bottom: 1px solid #ffcc80;
+      height: 22px;
+      margin: 3px 0;
+    }
+    .sky-color-band {
+      display: flex;
+      height: 30px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 8px 0;
+    }
+    .color-block {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8pt;
+      font-weight: bold;
+      color: rgba(255,255,255,0.85);
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .safety-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_i8JT_50kkFs">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌅 The Sky Changes — Morning, Day &amp; Night</h1>
+  <p class="subtitle">Earth Science — Sun, Moon &amp; Stars | Unit 1, Lesson 5 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes + brief observations across one day</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Sun, Moon &amp; Stars</span>
+    <span>🏠 <strong>Materials:</strong> Household only</span>
+  </div>
+
+  <div class="safety-box">
+    <h3>⚠️ Sun Safety Reminder</h3>
+    <p>When observing the sky at sunrise or during the day, <strong>always look at the sky around the sun — not directly at the sun itself.</strong> You can observe sky colors, clouds, and position of light without ever looking at the sun directly. Keep this rule all day!</p>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌅 🌤️ 🌇 🌃</div>
+    <div class="caption">Sunrise, midday, sunset, night — the sky transforms completely across a single day</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong> <strong>1-ESS1-1</strong> — Use observations of the sun, moon, and stars to describe patterns that can be predicted.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Observe</em> and <em>record</em> how the sky's appearance changes from morning to night</li>
+    <li><em>Identify</em> patterns in sky color, light level, and object visibility at different times</li>
+    <li><em>Explain</em> why the sky is blue during the day and red/orange at sunrise and sunset</li>
+  </ul>
+
+  <h2>🔬 The Big Science Idea</h2>
+  <p>The sky is never the same twice — it changes constantly through the day. But these changes follow a <em>predictable pattern</em> that repeats every single day!</p>
+
+  <div class="tip-box">
+    🌅 <strong>Sunrise:</strong> The sky glows orange, pink, and red near the horizon. The sun rises in the east. Stars fade away as the sky brightens.<br>
+    🌤️ <strong>Midday:</strong> The sky is bright blue. The sun is highest. Shadows are shortest. No stars visible.<br>
+    🌇 <strong>Sunset:</strong> The sky turns orange, red, and purple again near the horizon. The sun sets in the west.<br>
+    🌃 <strong>Night:</strong> The sky is dark. Stars appear as Earth rotates away from the sun. The moon may be visible.
+  </div>
+
+  <p>Why does the sky change color? It's all about how sunlight travels through Earth's atmosphere. Sunlight contains <em>all the colors of the rainbow</em>. When sunlight enters the atmosphere, gas molecules scatter the shorter (blue) wavelengths in all directions — this scattered blue light is what makes the sky look blue during the day.</p>
+
+  <p>At sunrise and sunset, sunlight has to travel through much more atmosphere to reach your eyes (because the sun is near the horizon). By the time it arrives, most of the blue light has already scattered away. What's left are the longer red and orange wavelengths — giving us those gorgeous pink and orange skies!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> atmosphere, scatter, wavelength, Rayleigh scattering, sunrise, sunset, observation, pattern
+  </div>
+
+  <div style="background:#fff3e0; border:2px solid #ffcc80; border-radius:8px; padding:14px 18px; margin:10px 0;">
+    <h3 style="color:#bf360c; border-color:#ffcc80; margin-top:0;">🌈 Why the Sky Changes Color — A Visual</h3>
+    <div class="sky-color-band">
+      <div class="color-block" style="background:#ff7043;">Sunrise<br>🌅</div>
+      <div class="color-block" style="background:#42a5f5; color:white;">Midday<br>🌤️</div>
+      <div class="color-block" style="background:#ef6c00;">Sunset<br>🌇</div>
+      <div class="color-block" style="background:#1a1a2e; color:#aaa;">Night<br>🌃</div>
+    </div>
+    <p style="font-size:9pt; color:#777; font-style:italic; margin:6px 0 0 0;">At sunrise and sunset, light travels through more atmosphere → blue scatters away → orange/red remains. At midday, light travels through less atmosphere → blue dominates.</p>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You'll Need</h3>
+    <ul>
+      <li>This Sky Journal worksheet (printed)</li>
+      <li>Crayons (especially: blue, orange, yellow, pink, red, black, white)</li>
+      <li>A pencil for notes</li>
+      <li>A window with a view of the sky — or ability to briefly go outside at 4 different times</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;"><em>Best timing: Plan for a day when you can look at the sky right at sunrise/early morning, around midmorning (9–10am), afternoon (2–3pm), and after dark. Even just looking out a window works fine!</em></p>
+  </div>
+
+  <h2>🔬 The Sky Journal Activity</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Sunrise / Early Morning Observation</strong><br>
+    Go to a window or outside just before or just after sunrise. <em>Look at the sky — not the sun!</em> Notice: What color is the sky? What colors are near the horizon? Are there any clouds? Can you still see stars fading? Is the moon visible? Draw and record what you see.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Midmorning Observation (9–10am)</strong><br>
+    Look at the sky again around mid-morning. How has it changed from sunrise? The sky should be bright blue by now. Where is the sun positioned in the sky (low, medium, high)? Record your observations.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Afternoon Observation (2–3pm)</strong><br>
+    Look at the sky in the early afternoon. Is the sky still blue? Are there more or fewer clouds than before? Is the sun starting to lower in the west? Record your observations.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — After Dark Observation</strong><br>
+    Once it's fully dark, go outside or look out a window. What do you see? Stars? The moon? How many stars can you count? Which direction is the moon? Record and draw what you see.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Compare and Find Patterns</strong><br>
+    Look at all four drawings together. What changed? What stayed the same? What pattern did you notice? Fill in the reflection questions on the worksheet.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <p><strong>🗣️ Talk about these together:</strong></p>
+    <ul>
+      <li>Which time of day was your favorite sky? Why?</li>
+      <li>What was the biggest difference between the sunrise sky and the midday sky?</li>
+      <li>Can you predict what the sky will look like tomorrow at the same times? (Yes — because it follows a pattern!)</li>
+      <li>Why do you think sunsets look different depending on whether there are clouds or not?</li>
+    </ul>
+
+    <p><strong>🌟 Big Question: "Why is the sky blue during the day but orange and red at sunrise and sunset?"</strong></p>
+    <p class="discussion-hint">Sunlight contains all colors. When light travels through the atmosphere, gas molecules scatter shorter (blue) wavelengths in all directions — that scattered blue light is what we see as the blue sky. At sunrise and sunset, sunlight travels through much more atmosphere to reach your eyes. By then, most of the blue light has scattered away, leaving the longer red and orange wavelengths. So the same sunlight looks different depending on how much atmosphere it travels through.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌈 <strong>Cloud Types:</strong> While observing the sky, look up what different cloud types look like (cumulus, stratus, cirrus). Can you spot them during your observations?</li>
+      <li>📸 <strong>Photo Journal:</strong> Take a photo of the sky at each of the four times instead of (or in addition to) drawing. Compare the photos side by side!</li>
+      <li>🌊 <strong>Rayleigh Scattering Demo:</strong> Fill a clear glass with water and add a tiny drop of milk. Shine a flashlight through the side — the water looks bluish from the side (scattered blue light) but the transmitted light looks orange-red (like a sunset). This is the same effect!</li>
+      <li>🌍 <strong>Other Planets:</strong> On Mars, the sky is pinkish-tan because the atmosphere is mostly carbon dioxide with red dust particles. The sky color is determined by the atmosphere's composition!</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Safety at sunrise/sunset:</strong> When looking at orange and pink sky colors near the horizon, the sun may be very low and close to the field of view. Always remind the child to keep their eyes away from the sun itself — look at the sky color <em>around</em> it, not at the sun.</li>
+      <li><strong>Rayleigh scattering:</strong> This is the scientific term for why the sky is blue. Don't worry about having children memorize it — but if they're curious, the concept is "smaller molecules scatter shorter (blue) light, longer (red/orange) light passes through more." The milk-in-water demonstration is very effective at making this concrete.</li>
+      <li><strong>Night sky timing:</strong> How long after sunset before it's truly dark varies by season and latitude. In summer, it may be 9pm or later before stars are visible. Check dusk/dark times online if needed.</li>
+      <li><strong>What if the day is cloudy?</strong> Cloudy days work too! Have the child observe: What color is a cloudy sky vs. a clear sky? Why does overcast sky look gray? (Clouds scatter all wavelengths equally — so the light appears white/gray.)</li>
+      <li><strong>The science depth:</strong> For Grade 1, the key observations are: sky changes color throughout the day, there's a predictable pattern, and we can describe what those changes are. The Rayleigh scattering explanation is for curious families who want to go deeper.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🌅 Student Worksheet — Sky Journal</h1>
+    <p class="subtitle">Unit 1, Lesson 5 — The Sky Changes</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <p style="font-size:10pt; color:#555; margin-bottom:12px;"><em>Look at the sky 4 times today! Draw what you see and fill in the notes for each observation.</em></p>
+
+    <div class="sky-journal-grid">
+      <div class="sky-journal-panel">
+        <div class="time-label">🌅 Sunrise / Early Morning</div>
+        <div class="sky-color-ref">Sky color to try: orange, pink, yellow, purple</div>
+        <div class="sky-draw-area">Draw the sky here</div>
+        <div class="sky-notes-lines">
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Sky color: ________________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Clouds? ________________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Stars still visible? ________________</div>
+        </div>
+      </div>
+
+      <div class="sky-journal-panel">
+        <div class="time-label">🌤️ Midmorning (9–10am)</div>
+        <div class="sky-color-ref">Sky color to try: blue, white for clouds, yellow sun</div>
+        <div class="sky-draw-area">Draw the sky here</div>
+        <div class="sky-notes-lines">
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Sky color: ________________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Sun position (low/middle/high): ________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Clouds? ________________</div>
+        </div>
+      </div>
+
+      <div class="sky-journal-panel">
+        <div class="time-label">🌇 Afternoon / Sunset</div>
+        <div class="sky-color-ref">Sky color to try: orange, red, deep blue, gold</div>
+        <div class="sky-draw-area">Draw the sky here</div>
+        <div class="sky-notes-lines">
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Sky color: ________________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Sun position (low/middle/high): ________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Different from morning? ________________</div>
+        </div>
+      </div>
+
+      <div class="sky-journal-panel">
+        <div class="time-label">🌃 After Dark (night)</div>
+        <div class="sky-color-ref">Sky color to try: dark blue, black, yellow stars, white moon</div>
+        <div class="sky-draw-area">Draw the sky here</div>
+        <div class="sky-notes-lines">
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Moon visible? ________________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Stars visible? How many? ________</div>
+          <div class="note-line"></div>
+          <div style="font-size:8pt; color:#888;">Sky color: ________________</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>✏️ Reflection Questions</h3>
+    <ol>
+      <li style="margin-bottom:18px;">What was the biggest change you noticed between morning and night? ______________________</li>
+      <li style="margin-bottom:18px;">When was the sky <em>blue</em>? When was it <em>orange or red</em>? ______________________</li>
+      <li style="margin-bottom:18px;">Do you think tomorrow's sky will follow the same pattern? (circle) &nbsp; <strong>YES</strong> &nbsp; / &nbsp; <strong>NO</strong> &nbsp; — Why? ______________________</li>
+      <li style="margin-bottom:18px;">In your own words, why is the daytime sky blue? ______________________</li>
+    </ol>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🌅 Sky Journal — What to Expect</h3>
+      <ul>
+        <li><strong>Sunrise/Early Morning:</strong> Sky near the horizon will be orange/pink/red (or gray if cloudy). Stars may still be fading. Moon may be visible if it was a full or partial phase the night before.</li>
+        <li><strong>Midmorning:</strong> Sky is bright blue (clear day) or gray-white (overcast). Sun is medium height in the eastern to southern part of the sky. Stars not visible.</li>
+        <li><strong>Afternoon/Sunset:</strong> Sky begins to shift orange/gold near the horizon as the sun lowers. Blue sky still overhead. Stars appear as the sky darkens after sunset.</li>
+        <li><strong>Night:</strong> Dark sky with stars visible (if clear). Moon may be visible depending on phase. No blue sky visible.</li>
+      </ul>
+
+      <h3>✏️ Reflection Answers</h3>
+      <ol>
+        <li>Biggest change: color of the sky (blue during the day, dark at night with stars visible). Also: the sun moves across the sky and disappears, then stars appear.</li>
+        <li>The sky was blue <em>during the day</em> (midmorning through afternoon). It was orange or red <em>at sunrise and sunset</em>.</li>
+        <li><strong>Yes</strong> — the sky follows the same daily pattern predictably. Every day follows the same sequence (sunrise colors → blue day → sunset colors → dark night).</li>
+        <li>The daytime sky is blue because sunlight has all colors, and the atmosphere scatters blue light in all directions, making the whole sky appear blue. (Rayleigh scattering — great if they know this term!)</li>
+      </ol>
+
+      <h3>🌈 Rayleigh Scattering — Parent Background</h3>
+      <p>Lord Rayleigh (John William Strutt) described in 1871 why the sky is blue. Gas molecules in the atmosphere are much smaller than the wavelength of visible light. These tiny molecules interact more strongly with shorter wavelengths (blue/violet). This is Rayleigh scattering. Our eyes are slightly less sensitive to violet, and there's more blue in sunlight than violet, so we perceive the scattered light as blue.</p>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can describe at least 3 distinct sky appearances (morning, midday, night)</li>
+        <li>Child notices the pattern repeats daily and is therefore predictable</li>
+        <li>Child can explain that sky color changes because of how sunlight travels through the atmosphere</li>
+        <li>Child can describe when stars become visible and why (sun on other side of Earth → sky darkens)</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

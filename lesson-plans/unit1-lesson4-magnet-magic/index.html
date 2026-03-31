@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnet Magic — Unit 1, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .worksheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .worksheet-table th {
+      background: #9c27b0;
+      color: white;
+      padding: 10px;
+      border: 2px solid #333;
+      font-size: 12pt;
+    }
+    .worksheet-table td {
+      border: 2px solid #333;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 18pt;
+      height: 60px;
+    }
+    .worksheet-table .item-col {
+      width: 50%;
+      text-align: left;
+      font-size: 11pt;
+    }
+    .worksheet-table .result-col {
+      width: 25%;
+      background: #f5f5f5;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🧲 Magnet Magic 🧲</h1>
+  <p class="subtitle">Physical Science — Unit 1, Lesson 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces</span>
+    <span>🎒 <strong>Kit Lesson</strong></span>
+  </div>
+
+  <div class="tip-box">
+    🎒 <strong>Kit Lesson</strong> — Specialty materials included in the physical kit
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🧲 ✨ 📎</div>
+    <div class="caption">Invisible pushes and pulls — discover the magic of magnets!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS2-1</strong> — Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object<br>
+    <strong>K-PS2-2</strong> — Analyze data to determine if a design solution works as intended
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>You've learned that pushes and pulls make things move — but did you know some forces can work <strong>without touching</strong>? Magnets have a special power: they can <strong>pull</strong> some materials toward them and <strong>push</strong> other magnets away, all without touching! In this lesson, your kids will explore which materials are magnetic and which aren't, discovering that not all pushes and pulls require contact.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Magnets create an invisible force field around them. This magnetic force can pull certain metals (like iron) toward the magnet — we call this "attract." Magnets can also push other magnets away — we call this "repel." Not all materials are magnetic. Wood, plastic, paper, and fabric don't respond to magnets at all. Only certain metals (like iron and steel) are attracted to magnets. This invisible pulling and pushing force shows that forces don't always need to touch an object to move it!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> magnet, magnetic, attract, repel, force, invisible force, metal
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧰 From Your Science Kit</h3>
+    <ul>
+      <li>2 bar magnets or refrigerator magnets (one for each child)</li>
+      <li>Metal paperclips (at least 10)</li>
+      <li>Coins (pennies, nickels, dimes, quarters)</li>
+      <li>Metal spoon or fork</li>
+    </ul>
+
+    <h3>🏠 Household Items to Gather</h3>
+    <ul>
+      <li>Fabric scraps (felt, cotton cloth, etc.)</li>
+      <li>Plastic items (toy, bottle cap, plastic spoon)</li>
+      <li>Wooden items (popsicle stick, wooden spoon, pencil)</li>
+      <li>Aluminum foil (small piece)</li>
+      <li>Rubber band or eraser</li>
+      <li>Paper (sheet or napkin)</li>
+    </ul>
+
+    <h3>📋 Printables</h3>
+    <ul>
+      <li>Magnet Testing Student Worksheet (included at end of lesson)</li>
+      <li>Crayons or markers for recording results</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Magnet Introduction: Touch-Free Force (5 min)</strong><br>
+    Give each child a magnet. Say: <em>"This is a magnet. It has a special power — it can pull some things toward it <em>without</em> touching them."</em><br>
+    <ul>
+      <li>Hold a paperclip near the magnet (don't touch it). Watch it <em>jump</em> to the magnet!</li>
+      <li>Try to pull the paperclip off. Feel the magnet's pulling force?</li>
+      <li>Hold two magnets near each other. Sometimes they <em>pull</em> together, sometimes they <em>push</em> apart.</li>
+    </ul>
+    Key question: <em>"Can you see the force? No. But you can feel it."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Magnetic or Not? Make a Prediction! (5 min)</strong><br>
+    Gather all your test items in a pile. Show each one and ask: <em>"Do you think the magnet will pull this?"</em><br>
+    <ul>
+      <li>Kids make predictions: thumbs up for YES (magnetic), thumbs down for NO (not magnetic)</li>
+      <li>No wrong answers! This is just their guess</li>
+      <li>Write down a few predictions if they want to remember them</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Sibling tip:</strong> Have siblings make predictions separately, then compare. If they disagree, say: <em>"Great. Now we get to do an experiment to find out who's right."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — The Magnet Test! (15–20 min)</strong><br>
+    <ul>
+      <li>Give each child their Student Worksheet (page 2)</li>
+      <li>One item at a time, hold it near the magnet</li>
+      <li>Does it stick? Does it get pulled? → Draw a magnet emoji 🧲 in the "Magnetic" column</li>
+      <li>Does nothing happen? → Draw an X in the "Not Magnetic" column</li>
+      <li>Let siblings take turns testing. One tests while the other records, then switch!</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Pattern Detective (5 min)</strong><br>
+    After testing all items, look at the results together:<br>
+    <em>"Look at all the things that stuck to the magnet. What do they have in common?"</em><br>
+    Guide them to notice: <strong>Metal things are usually magnetic.</strong> (But not all metals — aluminum and copper are not magnetic.)<br>
+    <em>"What about the things that didn't stick?"</em> → Fabric, plastic, wood, paper — not magnetic.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Magnet Chain Challenge (5 min)</strong><br>
+    <ul>
+      <li>Stick one paperclip to the magnet.</li>
+      <li>Can you stick another paperclip to the <em>first</em> paperclip? Try it.</li>
+      <li>How many paperclips can you hang in a chain before they fall off?</li>
+      <li>Siblings compete: who can make the longest chain?</li>
+    </ul>
+    Explain: <em>"The magnet's force goes <em>through</em> the first paperclip and makes it magnetic too."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Push Away Magic (Optional, 3 min)</strong><br>
+    If you have two magnets:<br>
+    <ul>
+      <li>Try to stick them together. They <em>pull</em>.</li>
+      <li>Flip one magnet around. Now try to push them together. They <em>push</em> apart.</li>
+      <li>Hold one magnet and chase the other across the table without touching it.</li>
+    </ul>
+    Say: <em>"Magnets can <em>pull</em> or <em>push</em> — just like you learned before, but without touching."</em>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Talk about these together:</strong>
+    <ul>
+      <li>Can you see the magnet's force? How do you know it's there?</li>
+      <li>What kinds of materials stick to a magnet? What kinds don't?</li>
+      <li>Is a magnet a push or a pull? (Trick question — it can be <em>both</em>!)</li>
+      <li>Can a magnet work through paper? Through your hand? Let's test it.</li>
+      <li>Why do you think some things are magnetic and others aren't?</li>
+      <li>Where have you seen magnets at home? (Fridge, toys, closures on bags…)</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🧲 <strong>Magnet Hunt:</strong> Walk around the house with a magnet. Find 10 things that stick to it! (Careful not to put magnets near electronics or credit cards.)</li>
+      <li>🎨 <strong>Magnet Art:</strong> Put a paperclip on top of paper. Hold the magnet <em>under</em> the paper and move it around. The paperclip follows like magic. Try drawing a path with crayon and following it with the paperclip.</li>
+      <li>🔬 <strong>Stronger or Weaker?</strong> If you have different magnets, test which one is stronger. Which can hold more paperclips?</li>
+      <li>🧊 <strong>Ice Magnet Rescue:</strong> Freeze a paperclip in ice. Can the magnet still pull it through the ice? (Yes!)</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Makes a Magnet?"</em> by Franklyn M. Branley or <em>"Magnets Push, Magnets Pull"</em> by David A. Adler</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Safety first:</strong> Keep strong magnets away from electronics, pacemakers, and credit cards. Don't let kids swallow small magnets.</li>
+      <li><strong>Not all metals are magnetic:</strong> Aluminum foil and pennies (mostly zinc and copper) won't stick. This might surprise kids — use it as a teaching moment. "Not all metals are the same."</li>
+      <li><strong>Magnetic poles:</strong> If kids notice magnets push <em>and</em> pull, you can introduce the words "attract" (pull together) and "repel" (push away), but it's not required for kindergarten.</li>
+      <li><strong>Science is messy:</strong> Some items might surprise you. Stainless steel can be weakly magnetic or not at all, depending on the type. If results are inconsistent, say: "Great observation. Science is about noticing differences."</li>
+      <li><strong>For younger siblings:</strong> Let them feel the pull and push. They can draw smiley faces or scribbles instead of writing on the recording sheet.</li>
+      <li><strong>Assessment:</strong> Can each child correctly identify six or more items as magnetic or not? Can they explain that magnets pull metal? That's success.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== RECORDING SHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🧲 Magnet Magic Recording Sheet 🧲</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:10px;">Test each item with your magnet. Does it stick? Draw 🧲 for MAGNETIC or ✗ for NOT MAGNETIC!</p>
+
+    <table class="worksheet-table">
+      <tr>
+        <th>Item I Tested</th>
+        <th>🧲 Magnetic<br>(Sticks to magnet)</th>
+        <th>✗ Not Magnetic<br>(Doesn't stick)</th>
+      </tr>
+      <tr>
+        <td class="item-col">📎 Paperclip</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🪙 Coin (penny)</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🪙 Coin (nickel)</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🥄 Metal spoon or fork</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🧵 Fabric (cloth)</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🧴 Plastic item</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🪵 Wood (popsicle stick or pencil)</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">📄 Paper</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">🎀 Rubber band</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+      <tr>
+        <td class="item-col">📜 Aluminum foil</td>
+        <td class="result-col"></td>
+        <td class="result-col"></td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top:20px;">🔍 What I Noticed:</h3>
+    <p style="border-bottom:1px solid #bbb; height:35px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:35px; margin:8px 0;"></p>
+    <p style="border-bottom:1px solid #bbb; height:35px; margin:8px 0;"></p>
+
+    <h3 style="margin-top:20px;">✏️ Draw Your Favorite Magnet Experiment!</h3>
+    <div style="border:2px solid #333; height:200px; border-radius:8px; margin-top:10px;"></div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🧲 Expected Results (May vary by material type)</h3>
+      
+      <table style="width:100%; border-collapse:collapse; margin:15px 0;">
+        <tr style="background:#e8f5e9;">
+          <td style="padding:8px; border:1px solid #999;"><strong>🧲 MAGNETIC (Should stick)</strong></td>
+          <td style="padding:8px; border:1px solid #999;"><strong>✗ NOT MAGNETIC (Won't stick)</strong></td>
+        </tr>
+        <tr>
+          <td style="padding:8px; border:1px solid #999; vertical-align:top;">
+            <ul style="margin:0; padding-left:20px;">
+              <li>📎 Paperclip (steel)</li>
+              <li>🥄 Metal spoon/fork (if steel or iron)</li>
+              <li>Some coins may be weakly magnetic</li>
+            </ul>
+          </td>
+          <td style="padding:8px; border:1px solid #999; vertical-align:top;">
+            <ul style="margin:0; padding-left:20px;">
+              <li>🪙 Penny (copper/zinc)</li>
+              <li>🪙 Nickel (despite the name, not magnetic!)</li>
+              <li>🧵 Fabric</li>
+              <li>🧴 Plastic</li>
+              <li>🪵 Wood</li>
+              <li>📄 Paper</li>
+              <li>🎀 Rubber</li>
+              <li>📜 Aluminum foil</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h3>💡 Notes for Parents</h3>
+      <ul>
+        <li><strong>Coins can be tricky!</strong> Most U.S. coins are not magnetic. Some international coins may be. Pre-1982 pennies (copper) and post-1982 pennies (zinc) are both non-magnetic.</li>
+        <li><strong>Stainless steel varies.</strong> Some stainless steel utensils are weakly magnetic, others aren't. This is fine! Say: "Different types of metal behave differently."</li>
+        <li><strong>Aluminum foil:</strong> Kids often think this will stick because it's shiny metal. Great learning moment: not all metals are magnetic!</li>
+        <li><strong>Science through objects:</strong> If you test a paperclip through a piece of paper, it still works! The magnetic force goes through non-magnetic materials.</li>
+        <li><strong>Pattern recognition:</strong> The big idea is that <em>some metals</em> (iron, steel, nickel metal) are magnetic. Most other materials are not.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can correctly identify paperclips and steel items as magnetic</li>
+        <li>Child can explain: "Magnets pull metal things, but not everything"</li>
+        <li>Child understands magnets can push and pull without touching</li>
+        <li>Child can demonstrate the magnet chain (paperclips sticking to each other)</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

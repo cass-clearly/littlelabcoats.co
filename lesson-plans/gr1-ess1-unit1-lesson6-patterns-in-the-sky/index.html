@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patterns in the Sky | Grade 1 Earth Science Unit 1, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+    }
+    .tip-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #e65100; }
+    .extension-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Unit wrap-up box */
+    .unit-wrapup {
+      background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+      border: 3px solid #ff8f00;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .unit-wrapup h2 {
+      background: #ff8f00;
+      border-radius: 6px;
+      text-align: center;
+      margin-top: 0;
+    }
+    .unit-wrapup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .unit-concept-card {
+      background: white;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .unit-concept-card .concept-emoji { font-size: 28pt; display: block; margin-bottom: 6px; }
+    .unit-concept-card .concept-title { font-weight: bold; color: #e65100; font-size: 10pt; margin-bottom: 4px; }
+    .unit-concept-card .concept-desc { font-size: 9pt; color: #555; }
+    /* Sky patterns summary */
+    .sky-patterns-chart {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    .sky-patterns-chart th {
+      background: #e65100;
+      color: white;
+      padding: 8px 12px;
+      border: 2px solid #bf360c;
+      font-size: 10pt;
+    }
+    .sky-patterns-chart td {
+      border: 2px solid #ffcc80;
+      padding: 8px 12px;
+      vertical-align: top;
+      font-size: 10pt;
+    }
+    .sky-patterns-chart tr:nth-child(even) td { background: #fff8e1; }
+    /* Prediction challenge */
+    .prediction-scenario {
+      background: #fff3e0;
+      border: 2px solid #ff8f00;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .prediction-scenario h3 { color: #bf360c; border-color: #ff8f00; margin-top: 0; }
+    .draw-box {
+      border: 2px solid #ffcc80;
+      background: white;
+      border-radius: 8px;
+      min-height: 100px;
+      margin: 6px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      font-style: italic;
+      font-size: 9pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key,
+      .materials-box, .tip-box, .extension-box, .unit-wrapup, .prediction-scenario {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #e65100;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_U0kjSQGg4gg">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🔭 Patterns in the Sky</h1>
+  <p class="subtitle">Earth Science — Sun, Moon &amp; Stars | Unit 1, Lesson 6 of 6 ⭐ Final Lesson</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 1st Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Sun, Moon &amp; Stars</span>
+    <span>🏠 <strong>Materials:</strong> Household only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️ 🌙 ⭐</div>
+    <div class="caption">The sun, moon, and stars — three cosmic objects with patterns scientists can predict for centuries</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standards:</strong> <strong>1-ESS1-1</strong> — Use observations of the sun, moon, and stars to describe patterns that can be predicted. &nbsp;|&nbsp; <strong>1-ESS1-2</strong> — Make observations at different times of year to relate the amount of daylight to the time of year.
+  </div>
+
+  <h2>🎯 Learning Objectives</h2>
+  <p>By the end of this lesson, students will be able to:</p>
+  <ul>
+    <li><em>Summarize</em> the observable patterns of the sun, moon, and stars across different time periods</li>
+    <li><em>Predict</em> what the sky will look like at a given time based on known patterns</li>
+    <li><em>Connect</em> all unit concepts — daily sun motion, moon phases, star visibility, daylight seasons, sky color changes</li>
+  </ul>
+
+  <h2>🔬 What We've Learned: Sky Patterns Summary</h2>
+
+  <table class="sky-patterns-chart">
+    <tr>
+      <th>Object</th>
+      <th>Pattern Over a Day</th>
+      <th>Pattern Over a Month</th>
+      <th>Pattern Over a Year</th>
+    </tr>
+    <tr>
+      <td><strong>☀️ Sun</strong></td>
+      <td>Rises east, arcs across sky, sets west. Shadow moves and changes length.</td>
+      <td>Same daily pattern repeats</td>
+      <td>Higher in summer (more daylight), lower in winter (less daylight)</td>
+    </tr>
+    <tr>
+      <td><strong>🌙 Moon</strong></td>
+      <td>May rise and set at different times depending on phase</td>
+      <td>Goes through all 8 phases in ~29.5 days (new → crescent → quarter → gibbous → full → gibbous → quarter → crescent → new)</td>
+      <td>Cycle repeats ~12–13 times per year</td>
+    </tr>
+    <tr>
+      <td><strong>⭐ Stars</strong></td>
+      <td>Not visible in daytime (outshone by sun). Appear at dusk, move slowly through night.</td>
+      <td>Constellations shift position as Earth orbits, but patterns stay the same</td>
+      <td>Different constellations visible in different seasons (Earth's orbital position changes which stars face our night side)</td>
+    </tr>
+  </table>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You'll Need</h3>
+    <ul>
+      <li>This worksheet (printed)</li>
+      <li>Crayons or colored pencils</li>
+      <li>Today's moon phase (parent looks up or child knows from Moon Journal)</li>
+      <li>Today's season and approximate sunrise/sunset times</li>
+    </ul>
+  </div>
+
+  <h2>🔬 The Pattern Prediction Challenge</h2>
+
+  <p>Scientists don't just describe what they've seen — they use patterns to <em>predict</em> what will happen next. That's what you'll do today! Using what you know about sky patterns, you'll predict what the sky will look like at a specific time.</p>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Gather Your Information</strong><br>
+    Before predicting, you need data! Fill in:
+    <ul>
+      <li>Today's moon phase: _______________________</li>
+      <li>Today's season: _______________________</li>
+      <li>Today's approximate sunrise: _______ Sunset: _______</li>
+      <li>Time of year (month): _______________________</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Prediction Challenge A: Tonight at 9pm</strong><br>
+    Based on what you know, predict what the sky will look like tonight at 9pm. Consider:
+    <ul>
+      <li>Will the sun be visible? (Check sunset time!)</li>
+      <li>What phase is the moon in? Will it be visible?</li>
+      <li>Will stars be visible? (What season is it?)</li>
+      <li>What color will the sky be?</li>
+    </ul>
+    Draw your prediction in the prediction box on the worksheet!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Prediction Challenge B: 6 Months From Now</strong><br>
+    Think ahead 6 months. What season will it be? Will days be longer or shorter than now? What will the moon look like in 6 months? (Hint: in exactly 6 months the moon may be in approximately the opposite phase from now, or similar — it completes a full cycle every 29.5 days.) Make your prediction!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Check Tonight's Prediction!</strong><br>
+    Tonight at 9pm, go look at the sky. How did your prediction compare to reality? What did you get right? What surprised you? Fill in the "What I Actually Saw" section on the worksheet.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>This is real science!</strong> Astronomers use exactly this process — they observe patterns, build models, and make predictions. When predictions match reality, that's strong evidence the model is correct. When they don't match, scientists learn something new. Either way, science moves forward!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <p><strong>🗣️ Talk about these together:</strong></p>
+    <ul>
+      <li>Which pattern from this unit did you find most surprising? Why?</li>
+      <li>If a friend asked "Why does the moon change shape?", what would you tell them now?</li>
+      <li>Can you think of any way sky patterns affect your daily life? (Sleep time, when to play outside, farming, navigation...)</li>
+      <li>Ancient people figured out all these patterns by careful observation — without telescopes or computers. What do you think that took?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 What's Next in Earth Science?</h2>
+  <div class="extension-box">
+    <p>You've mastered <em>patterns in the sky</em> — one of the foundational ideas of Earth Science. Here are some directions to explore next:</p>
+    <ul>
+      <li>🌍 <strong>Earth's Place in Space:</strong> How does Earth compare to other planets in our solar system?</li>
+      <li>🌦️ <strong>Weather Patterns:</strong> How does the sun's energy drive weather on Earth?</li>
+      <li>🌊 <strong>Earth's Surface:</strong> How do land and water shapes affect our environment?</li>
+      <li>🔭 <strong>Telescopes &amp; Tools:</strong> How have tools like telescopes expanded our ability to observe the sky?</li>
+      <li>🚀 <strong>Space Exploration:</strong> What have astronauts and space probes discovered by going beyond Earth?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>This is a capstone lesson:</strong> The goal is synthesis and application, not new content. Help the child connect concepts across all 6 lessons. Ask "what does this remind you of from earlier?"</li>
+      <li><strong>The prediction activity is the heart of this lesson:</strong> Making a prediction and then checking it (Step 4 — going outside at 9pm to verify) is genuine scientific practice. Celebrate this even if the prediction isn't perfect.</li>
+      <li><strong>The "6 months from now" prediction:</strong> This is more abstract. Support the child by asking: "What season will it be in 6 months? Will days be longer or shorter? What do we know about those seasons?" Let them reason through it rather than telling them the answer.</li>
+      <li><strong>Celebrate what they've learned:</strong> This is the end of the unit! Review the Sky Patterns Summary chart together. Ask the child to explain each row to you in their own words — that's the best assessment.</li>
+      <li><strong>Unit assessment idea:</strong> Ask the child to draw the sky at three different times (morning, midday, night) and explain one pattern for each. Can they name the phase of the moon right now and predict what it will look like next week?</li>
+    </ul>
+  </div>
+
+  <!-- ====================== UNIT WRAP-UP ====================== -->
+  <div class="unit-wrapup">
+    <h2>🎉 Unit 1 Wrap-Up — Sun, Moon &amp; Stars!</h2>
+    <p style="text-align:center; font-size:11pt; margin-bottom:14px;">You just completed <strong>6 lessons of Earth Science!</strong> Let's review everything you've learned:</p>
+
+    <div class="unit-wrapup-grid">
+      <div class="unit-concept-card">
+        <span class="concept-emoji">☀️</span>
+        <div class="concept-title">Lesson 1 — The Sun</div>
+        <div class="concept-desc">Earth spins → sun appears to move. Shadows track the sun's position. Never look directly at the sun!</div>
+      </div>
+      <div class="unit-concept-card">
+        <span class="concept-emoji">🌙</span>
+        <div class="concept-title">Lesson 2 — The Moon</div>
+        <div class="concept-desc">Moon orbits Earth in 29.5 days. Phases show how much lit side we see. Moon reflects sunlight.</div>
+      </div>
+      <div class="unit-concept-card">
+        <span class="concept-emoji">⭐</span>
+        <div class="concept-title">Lesson 3 — Stars</div>
+        <div class="concept-desc">Stars are always there — the sun outshines them during the day. Every star is a distant sun.</div>
+      </div>
+      <div class="unit-concept-card">
+        <span class="concept-emoji">📅</span>
+        <div class="concept-title">Lesson 4 — Daylight</div>
+        <div class="concept-desc">Summer = more daylight, winter = less. Earth's tilt (not distance!) causes seasons.</div>
+      </div>
+      <div class="unit-concept-card">
+        <span class="concept-emoji">🌅</span>
+        <div class="concept-title">Lesson 5 — Sky Changes</div>
+        <div class="concept-desc">Sky color follows a daily pattern. Blue at midday, orange/red at sunrise and sunset (Rayleigh scattering).</div>
+      </div>
+      <div class="unit-concept-card">
+        <span class="concept-emoji">🔭</span>
+        <div class="concept-title">Lesson 6 — Patterns</div>
+        <div class="concept-desc">Scientists use patterns to make predictions! Sky patterns are reliable, repeating, and predictable.</div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:16px; padding:12px; background:white; border-radius:8px; border:2px solid #ffcc80;">
+      <p style="font-size:13pt; font-weight:bold; color:#e65100; margin:0;">🌟 Big Idea of the Unit 🌟</p>
+      <p style="font-size:11pt; margin:8px 0 0 0;">The sun, moon, and stars follow <em>predictable patterns</em> that scientists can observe, describe, and use to make accurate predictions. Understanding these patterns is one of humanity's oldest and most important scientific achievements.</p>
+    </div>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <h1>🔭 Student Worksheet — Pattern Prediction Challenge</h1>
+    <p class="subtitle">Unit 1, Lesson 6 — Patterns in the Sky</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>📋 My Sky Data (fill in before predicting!)</h3>
+    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; background:#fff8e1; width:50%;"><strong>Today's Moon Phase:</strong> _________________</td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; width:50%;"><strong>Today's Season:</strong> _________________</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; background:#fff8e1;"><strong>Today's Sunrise:</strong> _________________</td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px;"><strong>Today's Sunset:</strong> _________________</td>
+      </tr>
+    </table>
+
+    <h3>🌙 Prediction A: What will the sky look like tonight at 9pm?</h3>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0;">
+      <div>
+        <p style="font-weight:bold; color:#e65100; margin-bottom:6px;">My Prediction:</p>
+        <div class="draw-box" style="min-height:130px;">Draw the sky at 9pm here</div>
+        <p style="font-size:9pt; color:#777; font-style:italic;">Color, moon phase, stars, anything else?</p>
+        <p style="font-size:10pt; margin-top:8px;">Will the sun be visible at 9pm? ____</p>
+        <p style="font-size:10pt;">Will the moon be visible? ____</p>
+        <p style="font-size:10pt;">Will stars be visible? ____</p>
+        <p style="font-size:10pt;">Sky color: ____</p>
+      </div>
+      <div>
+        <p style="font-weight:bold; color:#4caf50; margin-bottom:6px;">What I Actually Saw at 9pm:</p>
+        <div class="draw-box" style="min-height:130px;">Draw what you really saw here</div>
+        <p style="font-size:9pt; color:#777; font-style:italic;">Go outside at 9pm tonight to check!</p>
+        <p style="font-size:10pt; margin-top:8px;">Sun visible? ____</p>
+        <p style="font-size:10pt;">Moon visible? ____</p>
+        <p style="font-size:10pt;">Stars visible? ____</p>
+        <p style="font-size:10pt;">Sky color: ____</p>
+      </div>
+    </div>
+
+    <h3>📅 Prediction B: What will the sky be like in 6 months?</h3>
+    <p style="font-size:10pt; color:#555; margin-bottom:10px;"><em>Think about: What season will it be? Will there be more or less daylight? What moon phase might we see?</em></p>
+    <p style="font-size:10pt;">In 6 months it will be: &nbsp; Season: _________________ &nbsp; Month: _________________</p>
+    <p style="font-size:10pt; margin-top:8px;">Will there be more or less daylight than today? (circle): &nbsp; <strong>MORE</strong> &nbsp; / &nbsp; <strong>LESS</strong> &nbsp; / &nbsp; <strong>ABOUT THE SAME</strong></p>
+    <p style="font-size:10pt; margin-top:8px;">Why? ______________________________________________________________________________________</p>
+    <div class="draw-box" style="min-height:100px; margin-top:10px;">Draw what you predict the sky will look like at 9pm in 6 months</div>
+
+    <h3>✅ Unit Review — What Do You Know?</h3>
+    <p style="font-size:10pt;"><em>Match each object with one true fact about it! Draw a line to connect them.</em></p>
+    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
+      <tr>
+        <th style="background:#e65100; color:white; padding:8px 12px; border:2px solid #bf360c; width:33%; text-align:left;">Object</th>
+        <th style="background:#e65100; color:white; padding:8px 12px; border:2px solid #bf360c; width:67%; text-align:left;">Fact</th>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; background:#fff8e1; font-size:15pt; text-align:center;">☀️</td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; font-size:10pt;">Reflects sunlight. Goes through phases in about 29.5 days.</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; font-size:15pt; text-align:center;">🌙</td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; font-size:10pt;">Always shining! Just too faint to see during the day because of the sun.</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; background:#fff8e1; font-size:15pt; text-align:center;">⭐</td>
+        <td style="border:2px solid #ffcc80; padding:8px 12px; font-size:10pt;">Appears to move east to west each day because Earth is rotating.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>🌙 Prediction A — Tonight at 9pm</h3>
+      <p>Answers will vary based on actual conditions. Guide the child to think through:</p>
+      <ul>
+        <li><strong>Sun:</strong> Not visible at 9pm (sun sets well before 9pm in most seasons)</li>
+        <li><strong>Moon:</strong> Depends on current phase. If full moon → bright and visible. If new moon → not visible. If quarter → visible part of the night.</li>
+        <li><strong>Stars:</strong> Visible (if sky is clear and 9pm is fully dark — check your location's dusk time)</li>
+        <li><strong>Sky color:</strong> Dark blue to black</li>
+      </ul>
+
+      <h3>📅 Prediction B — 6 Months From Now</h3>
+      <p>Answers depend on current month:</p>
+      <ul>
+        <li>If currently winter (Dec–Feb) → in 6 months it's summer → <em>more</em> daylight</li>
+        <li>If currently summer (Jun–Aug) → in 6 months it's winter → <em>less</em> daylight</li>
+        <li>If currently spring or fall → in 6 months it's the opposite equinox → <em>about the same</em> daylight</li>
+      </ul>
+
+      <h3>✅ Unit Review Matching Answers</h3>
+      <ul>
+        <li>☀️ Sun → "Appears to move east to west each day because Earth is rotating."</li>
+        <li>🌙 Moon → "Reflects sunlight. Goes through phases in about 29.5 days."</li>
+        <li>⭐ Stars → "Always shining! Just too faint to see during the day because of the sun."</li>
+      </ul>
+
+      <h3>🏆 Unit 1 — Full Success Criteria</h3>
+      <p>A child who has mastered this unit can:</p>
+      <ul>
+        <li>Explain why the sun appears to move from east to west (Earth's rotation)</li>
+        <li>Name at least 4 moon phases in correct order</li>
+        <li>Explain why stars are invisible during the day</li>
+        <li>State that summer has more daylight than winter</li>
+        <li>Describe at least 2 different sky appearances throughout a day</li>
+        <li>Make a prediction about the sky using known patterns</li>
+        <li>Apply the idea that patterns allow predictions — the heart of scientific thinking</li>
+      </ul>
+
+      <div style="background:#fff3e0; border:2px solid #ff8f00; border-radius:8px; padding:14px; margin-top:16px;">
+        <p style="font-weight:bold; color:#e65100; margin:0 0 6px 0;">🌟 Congratulations on completing Unit 1!</p>
+        <p style="font-size:10pt; margin:0;">Your child has explored the sky as a real scientist — making observations, identifying patterns, and using those patterns to make predictions. These skills are the foundation of all scientific thinking and will serve them across every subject they study.</p>
+      </div>
+
+      <div style="background:#e65100; color:white; border-radius:10px; padding:18px 20px; margin-top:20px; text-align:center;">
+        <p style="font-size:13pt; font-weight:bold; margin:0 0 8px 0;">🧪 Ready to test your knowledge?</p>
+        <p style="font-size:10pt; margin:0 0 14px 0; opacity:0.9;">Try the Unit 1 quiz — 10 questions covering everything from the sun's daily motion to moon phases and seasons!</p>
+        <a href="gr1-ess1-unit1-quiz.html" style="display:inline-block; background:white; color:#e65100; font-weight:bold; font-size:11pt; text-decoration:none; padding:10px 24px; border-radius:8px;">☀️🌙⭐ Take the Quiz →</a>
+      </div>
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

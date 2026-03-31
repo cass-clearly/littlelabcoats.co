@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Your Knowledge — Animal Needs | Kindergarten</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f1f8e9;
+      margin: 0;
+      padding: 0;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    .quiz-header {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 22px;
+    }
+    .quiz-header h1 {
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+    }
+    .quiz-header .subtitle {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin: 0;
+    }
+    .quiz-note {
+      background: #fff9c4;
+      border: 2px solid #f9a825;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .score-bar {
+      background: white;
+      border-bottom: 2px solid #a5d6a7;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #2e7d32;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .quiz-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 10px 16px 60px;
+    }
+    .question-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 22px 0;
+      box-shadow: 0 2px 8px rgba(46,125,50,0.09);
+      border: 2px solid #c8e6c9;
+    }
+    .question-card.answered-correct { border-color: #2e7d32; background: #f1f8e9; }
+    .question-card.answered-wrong { border-color: #c62828; background: #fff3f3; }
+
+    .q-emoji { font-size: 2.6rem; display: block; text-align: center; margin-bottom: 10px; }
+    .q-num { font-size: 0.85rem; color: #777; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .q-text { font-size: 1.15rem; font-weight: bold; margin-bottom: 16px; color: #1b5e20; }
+
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option-btn {
+      background: #f9fbe7;
+      border: 2px solid #aed581;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.15s, border-color 0.15s;
+      font-family: Georgia, serif;
+    }
+    .option-btn:hover:not(:disabled) {
+      background: #e8f5e9;
+      border-color: #2e7d32;
+    }
+    .option-btn.correct {
+      background: #c8e6c9;
+      border-color: #2e7d32;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+    .option-btn.wrong {
+      background: #ffcdd2;
+      border-color: #c62828;
+      color: #b71c1c;
+    }
+    .option-btn:disabled { cursor: default; }
+
+    .feedback-box {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+    .feedback-box.correct {
+      display: block;
+      background: #e8f5e9;
+      border-left: 5px solid #2e7d32;
+      color: #1b5e20;
+    }
+    .feedback-box.wrong {
+      display: block;
+      background: #fff3e0;
+      border-left: 5px solid #ef6c00;
+      color: #333;
+    }
+    .feedback-box .fb-label {
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    #results-section {
+      display: none;
+      background: white;
+      border-radius: 14px;
+      padding: 30px 24px;
+      margin: 30px 0;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(46,125,50,0.12);
+      border: 3px solid #2e7d32;
+    }
+    #results-section .result-emoji { font-size: 3rem; margin-bottom: 10px; display: block; }
+    #results-section .result-score { font-size: 2rem; font-weight: bold; color: #2e7d32; margin-bottom: 8px; }
+    #results-section .result-message { font-size: 1.2rem; color: #333; margin-bottom: 20px; }
+    .restart-btn {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: Georgia, serif;
+    }
+    .restart-btn:hover { background: #1b5e20; }
+
+    @media (max-width: 500px) {
+      .quiz-header h1 { font-size: 1.4rem; }
+      .q-text { font-size: 1.05rem; }
+      .option-btn { font-size: 0.98rem; padding: 10px 14px; }
+    }
+    @media print { body { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_f4XF_jaAIKM">
+
+<div class="quiz-header">
+  <h1>🧪 Test Your Knowledge — Animal Needs</h1>
+  <p class="subtitle">Kindergarten &nbsp;·&nbsp; Life Science &nbsp;·&nbsp; K-LS1-1</p>
+</div>
+
+<div class="quiz-body">
+  <div class="quiz-note">
+    📖 <strong>Ask a grown-up to read the questions to you!</strong><br>
+    Pick the best answer for each question. Take your time — you've got this! 🌟
+  </div>
+
+  <div class="score-bar" id="scoreBar">Score: 0 / 0 answered</div>
+
+  <!-- Q1 -->
+  <div class="question-card" id="q1">
+    <span class="q-emoji">🐶</span>
+    <div class="q-num">Question 1 of 10</div>
+    <div class="q-text">What does a dog need to stay alive? (pick the best answer)</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(1, this, false)">A) Toys</button>
+      <button class="option-btn" onclick="answer(1, this, true)">B) Food, water, air, and shelter</button>
+      <button class="option-btn" onclick="answer(1, this, false)">C) A warm sweater</button>
+      <button class="option-btn" onclick="answer(1, this, false)">D) Sunlight</button>
+    </div>
+    <div class="feedback-box" id="fb1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" id="q2">
+    <span class="q-emoji">🌊</span>
+    <div class="q-num">Question 2 of 10</div>
+    <div class="q-text">A fish lives in water. What does the fish breathe?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(2, this, false)">A) Air from above the water</button>
+      <button class="option-btn" onclick="answer(2, this, true)">B) Oxygen dissolved in the water</button>
+      <button class="option-btn" onclick="answer(2, this, false)">C) Fish don't need to breathe</button>
+      <button class="option-btn" onclick="answer(2, this, false)">D) Carbon dioxide</button>
+    </div>
+    <div class="feedback-box" id="fb2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" id="q3">
+    <span class="q-emoji">🏠</span>
+    <div class="q-num">Question 3 of 10</div>
+    <div class="q-text">Why do animals need shelter?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(3, this, false)">A) It looks nice</button>
+      <button class="option-btn" onclick="answer(3, this, true)">B) To stay safe, warm, and dry</button>
+      <button class="option-btn" onclick="answer(3, this, false)">C) To sleep only</button>
+      <button class="option-btn" onclick="answer(3, this, false)">D) Animals don't need shelter</button>
+    </div>
+    <div class="feedback-box" id="fb3"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" id="q4">
+    <span class="q-emoji">🌵</span>
+    <div class="q-num">Question 4 of 10</div>
+    <div class="q-text">A cactus plant lives in the desert with very little rain. Is a cactus living?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(4, this, false)">A) No — it doesn't move</button>
+      <button class="option-btn" onclick="answer(4, this, false)">B) No — it lives without water</button>
+      <button class="option-btn" onclick="answer(4, this, true)">C) Yes — it is a living thing that finds ways to get water</button>
+      <button class="option-btn" onclick="answer(4, this, false)">D) Only sometimes</button>
+    </div>
+    <div class="feedback-box" id="fb4"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" id="q5">
+    <span class="q-emoji">🐻</span>
+    <div class="q-num">Question 5 of 10</div>
+    <div class="q-text">A bear eats lots of food in summer and then sleeps all winter. Why?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(5, this, false)">A) Bears get bored in winter</button>
+      <button class="option-btn" onclick="answer(5, this, true)">B) Bears store energy from food to survive the cold winter months</button>
+      <button class="option-btn" onclick="answer(5, this, false)">C) Bears don't need food</button>
+      <button class="option-btn" onclick="answer(5, this, false)">D) Winter food tastes bad</button>
+    </div>
+    <div class="feedback-box" id="fb5"></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" id="q6">
+    <span class="q-emoji">🐠</span>
+    <div class="q-num">Question 6 of 10</div>
+    <div class="q-text">What would happen if a fish's water got too dirty?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(6, this, false)">A) Nothing — fish like dirty water</button>
+      <button class="option-btn" onclick="answer(6, this, true)">B) The fish might get sick or die because it can't get clean oxygen</button>
+      <button class="option-btn" onclick="answer(6, this, false)">C) The fish would clean the water itself</button>
+      <button class="option-btn" onclick="answer(6, this, false)">D) The fish would just move to a cleaner spot</button>
+    </div>
+    <div class="feedback-box" id="fb6"></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" id="q7">
+    <span class="q-emoji">🐣</span>
+    <div class="q-num">Question 7 of 10</div>
+    <div class="q-text">A baby bird hatches from an egg. What does it need RIGHT AWAY?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(7, this, false)">A) To learn to fly immediately</button>
+      <button class="option-btn" onclick="answer(7, this, true)">B) Food, warmth, and protection from its parent</button>
+      <button class="option-btn" onclick="answer(7, this, false)">C) Nothing — it can take care of itself</button>
+      <button class="option-btn" onclick="answer(7, this, false)">D) Only water</button>
+    </div>
+    <div class="feedback-box" id="fb7"></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" id="q8">
+    <span class="q-emoji">🌿</span>
+    <div class="q-num">Question 8 of 10</div>
+    <div class="q-text">A plant sits in a dark closet for two weeks. What will happen?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(8, this, false)">A) It will grow faster in the dark</button>
+      <button class="option-btn" onclick="answer(8, this, false)">B) Nothing will change</button>
+      <button class="option-btn" onclick="answer(8, this, true)">C) It will turn yellow and die without sunlight</button>
+      <button class="option-btn" onclick="answer(8, this, false)">D) It will sleep and wake up when the light comes back</button>
+    </div>
+    <div class="feedback-box" id="fb8"></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" id="q9">
+    <span class="q-emoji">🦅</span>
+    <div class="q-num">Question 9 of 10</div>
+    <div class="q-text">An eagle swoops down and catches a fish. What need is the eagle meeting?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(9, this, false)">A) Shelter</button>
+      <button class="option-btn" onclick="answer(9, this, false)">B) Water</button>
+      <button class="option-btn" onclick="answer(9, this, true)">C) Food</button>
+      <button class="option-btn" onclick="answer(9, this, false)">D) Air</button>
+    </div>
+    <div class="feedback-box" id="fb9"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" id="q10">
+    <span class="q-emoji">🌍</span>
+    <div class="q-num">Question 10 of 10</div>
+    <div class="q-text">If a forest was cut down and all the trees were gone, what would happen to the animals living there?</div>
+    <div class="options">
+      <button class="option-btn" onclick="answer(10, this, false)">A) Nothing — animals don't need trees</button>
+      <button class="option-btn" onclick="answer(10, this, true)">B) The animals would struggle because they lost their shelter and food source</button>
+      <button class="option-btn" onclick="answer(10, this, false)">C) The animals would be happy with more space</button>
+      <button class="option-btn" onclick="answer(10, this, false)">D) Only birds would be affected</button>
+    </div>
+    <div class="feedback-box" id="fb10"></div>
+  </div>
+
+  <!-- Results -->
+  <div id="results-section">
+    <span class="result-emoji" id="resultEmoji">🎉</span>
+    <div class="result-score" id="resultScore"></div>
+    <div class="result-message" id="resultMessage"></div>
+    <button class="restart-btn" onclick="restartQuiz()">🔄 Try Again!</button>
+  </div>
+
+</div><!-- end quiz-body -->
+
+<script>
+  const TOTAL = 10;
+  let answered = 0;
+  let correct = 0;
+
+  const explanations = {
+    1: "All animals — including dogs — need food, water, air, and shelter to survive. These are called their basic needs.",
+    2: "Fish breathe oxygen just like we do — but their gills pull oxygen that's dissolved in the water. That's why fish need clean water!",
+    3: "Shelter protects animals from weather, predators, and helps them raise their young. A bird's nest, a rabbit's burrow, and your house are all shelters!",
+    4: "Cacti are living things! They store water in their thick stems when rain comes, so they can survive long dry periods. All living things need water — cacti just save theirs up.",
+    5: "Bears hibernate — they slow down and sleep through winter when food is scarce. The food they ate in summer gives them the energy to survive. Their body uses stored fat while they sleep.",
+    6: "Fish need clean water with enough oxygen dissolved in it. Very dirty water doesn't have enough oxygen, and can also contain harmful things. That's why keeping water clean is so important for animals!",
+    7: "Baby birds hatch helpless. They need their parents to bring food, keep them warm, and protect them from predators until they're old enough to care for themselves.",
+    8: "Plants need sunlight to make their food through photosynthesis. Without light, they can't make food and will eventually die. Plants have needs just like animals!",
+    9: "The eagle is hunting for food! Getting enough food gives animals the energy they need to fly, grow, keep warm, and take care of their young.",
+    10: "Many animals depend on trees for shelter, nesting, and food. When forests disappear, animals lose their homes. This is why protecting habitats is so important for keeping animals alive."
+  };
+
+  function answer(qNum, btn, isCorrect) {
+    const card = document.getElementById('q' + qNum);
+    if (card.classList.contains('answered-correct') || card.classList.contains('answered-wrong')) return;
+
+    const fb = document.getElementById('fb' + qNum);
+    const allBtns = card.querySelectorAll('.option-btn');
+    allBtns.forEach(b => b.disabled = true);
+
+    if (isCorrect) {
+      btn.classList.add('correct');
+      card.classList.add('answered-correct');
+      correct++;
+      fb.className = 'feedback-box correct';
+      fb.innerHTML = '<div class="fb-label">✅ That\'s right!</div>' + explanations[qNum];
+    } else {
+      btn.classList.add('wrong');
+      card.classList.add('answered-wrong');
+      // Highlight correct answer
+      allBtns.forEach(b => {
+        if (b.onclick.toString().includes('true')) b.classList.add('correct');
+      });
+      fb.className = 'feedback-box wrong';
+      fb.innerHTML = '<div class="fb-label">❌ Not quite — keep going!</div>' + explanations[qNum];
+    }
+
+    answered++;
+    updateScore();
+
+    if (answered === TOTAL) {
+      setTimeout(showResults, 800);
+    }
+  }
+
+  function updateScore() {
+    document.getElementById('scoreBar').textContent = 'Score: ' + correct + ' / ' + answered + ' answered';
+  }
+
+  function showResults() {
+    const section = document.getElementById('results-section');
+    section.style.display = 'block';
+    document.getElementById('resultScore').textContent = correct + ' out of ' + TOTAL + ' correct!';
+
+    let emoji, msg;
+    if (correct === 10) {
+      emoji = '🦁⭐'; msg = 'Amazing! You\'re an Animal Expert!';
+    } else if (correct >= 8) {
+      emoji = '🐾'; msg = 'Wonderful job! You know a lot about animals!';
+    } else if (correct >= 6) {
+      emoji = '🌿'; msg = 'Great work! Keep learning about animals!';
+    } else if (correct >= 4) {
+      emoji = '🌟'; msg = 'Good try! Read the lessons again and try once more!';
+    } else {
+      emoji = '🐣'; msg = 'Keep going! Learning takes practice. You\'ve got this!';
+    }
+    document.getElementById('resultEmoji').textContent = emoji;
+    document.getElementById('resultMessage').textContent = msg;
+    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function restartQuiz() {
+    location.reload();
+  }
+</script>
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_f4XF_jaAIKM" data-content-selector="body"></script>
+</body>
+</html>

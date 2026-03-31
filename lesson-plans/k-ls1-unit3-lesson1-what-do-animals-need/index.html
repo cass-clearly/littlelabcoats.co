@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Do ALL Animals Need? — Unit 3, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      margin-left: 4px;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    /* Needs Cards */
+    .needs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .need-card {
+      background: #fff;
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 14px 8px;
+      text-align: center;
+    }
+    .need-card .emoji { font-size: 36pt; display: block; margin-bottom: 6px; }
+    .need-card .label { font-weight: bold; color: #1b5e20; font-size: 13pt; }
+    /* Sort Mat */
+    .sort-mat-2col {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .sort-mat-2col th {
+      padding: 14px;
+      font-size: 15pt;
+      border: 3px solid #333;
+      width: 50%;
+    }
+    .sort-mat-2col .need-header { background: #2e7d32; color: white; }
+    .sort-mat-2col .not-header { background: #757575; color: white; }
+    .sort-mat-2col td {
+      border: 3px solid #333;
+      padding: 10px;
+      height: 240px;
+      vertical-align: top;
+      font-size: 10pt;
+      color: #999;
+    }
+    /* Sorting cards */
+    .cut-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .cut-card {
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 10pt;
+      min-height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .cut-card .emoji { font-size: 28pt; }
+    .cut-card .label { font-weight: bold; margin-top: 4px; }
+    /* Worksheet 4-box grid */
+    .worksheet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .worksheet-box {
+      border: 3px solid #2e7d32;
+      border-radius: 10px;
+      min-height: 200px;
+      padding: 10px;
+      background: #fff;
+    }
+    .worksheet-box .box-label {
+      font-size: 14pt;
+      font-weight: bold;
+      color: #1b5e20;
+      text-align: center;
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #a5d6a7;
+    }
+    .worksheet-box .box-emoji { text-align: center; font-size: 28pt; display: block; margin-bottom: 4px; }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-column h3 { font-size: 12pt; text-align: center; }
+    .ak-need h3 { color: #1b5e20; border-color: #a5d6a7; }
+    .ak-not h3 { color: #555; border-color: #ccc; }
+    .ak-column ul { list-style: none; padding-left: 0; }
+    .ak-column li { padding: 3px 0; }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .need-card, .worksheet-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+
+    /* Science Reference Card */
+    .science-card-toggle {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 24px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .science-card-toggle:hover { background: #1b5e20; }
+    .science-ref-card { display: none; margin-top: 20px; }
+    .science-ref-card.open { display: block; }
+
+    .ref-card-inner {
+      border: 3px solid #2e7d32;
+      border-radius: 12px;
+      padding: 24px;
+      background: #fff;
+      max-width: 680px;
+      margin: 0 auto;
+      font-family: Georgia, serif;
+    }
+    .ref-card-inner h2 {
+      text-align: center;
+      font-size: 15pt;
+      color: #2e7d32;
+      background: none;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      margin: 0 0 16px 0;
+    }
+    .ref-card-vocab {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      border: 1px solid #a5d6a7;
+    }
+    .ref-card-vocab h3 {
+      font-size: 10pt;
+      text-transform: uppercase;
+      color: #1b5e20;
+      margin: 0 0 8px 0;
+      border: none;
+      padding: 0;
+      letter-spacing: 0.05em;
+    }
+    .ref-card-vocab dl { margin: 0; }
+    .ref-card-vocab dt { font-weight: bold; color: #1b5e20; margin-top: 4px; display: inline; }
+    .ref-card-vocab dd { display: inline; margin: 0; color: #333; }
+    .ref-card-vocab dd::after { content: '\A'; white-space: pre; }
+
+    .ref-card-needs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .ref-card-need {
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .ref-card-need.food { background: #fff9c4; border: 2px solid #f9a825; }
+    .ref-card-need.water { background: #e3f2fd; border: 2px solid #1976d2; }
+    .ref-card-need.shelter { background: #fce4ec; border: 2px solid #c62828; }
+    .ref-card-need.air { background: #e8f5e9; border: 2px solid #2e7d32; }
+    .ref-card-need .rc-emoji { font-size: 28pt; display: block; }
+    .ref-card-need .rc-label { font-weight: bold; font-size: 11pt; margin: 4px 0 2px; }
+    .ref-card-need .rc-desc { font-size: 9pt; color: #444; }
+
+    .ref-card-clue {
+      background: #fff8e1;
+      border: 2px solid #fbc02d;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 10pt;
+    }
+    .ref-card-clue strong { color: #e65100; }
+
+    .ref-card-print-btn {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      gap: 6px;
+    }
+    .ref-card-print-btn:hover { background: #1b5e20; }
+
+    @media print {
+      .science-card-toggle { display: none; }
+      .science-ref-card { display: none !important; }
+      .science-ref-card.print-mode { display: block !important; }
+      body.printing-card > *:not(.science-ref-card) { display: none !important; }
+      body.printing-card .science-ref-card { display: block !important; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_G7JJMYODtJM">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🐾 What Do ALL Animals Need? 🐾</h1>
+  <p class="subtitle">Life Science — Animal Needs &nbsp;|&nbsp; Unit 3, Lesson 1 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Animal Needs</span>
+    <span>🌿 <strong>Unit:</strong> Unit 3, Lesson 1 of 6</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🐶 🐠 🐦 🐘</div>
+    <div class="caption">From tiny fish to giant elephants — all animals share four basic needs to survive!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-LS1-1</strong> — Use observations to describe patterns of what plants and animals (including humans) need to survive.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <p>Students will <strong>NAME and DESCRIBE</strong> the four basic needs (food, water, air, and shelter) that all animals share, and give one example of each.</p>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Every animal on Earth — from the tiniest ant to the biggest blue whale — needs four things to <strong>survive</strong>. These needs are the same no matter where an animal lives or what it looks like:</p>
+
+  <div class="needs-grid">
+    <div class="need-card">
+      <span class="emoji">🍎</span>
+      <span class="label">Food</span>
+    </div>
+    <div class="need-card">
+      <span class="emoji">💧</span>
+      <span class="label">Water</span>
+    </div>
+    <div class="need-card">
+      <span class="emoji">🌬️</span>
+      <span class="label">Air</span>
+    </div>
+    <div class="need-card">
+      <span class="emoji">🏠</span>
+      <span class="label">Shelter</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> survive, needs, food, water, air, shelter
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Gather These Household Items</h3>
+    <ul>
+      <li>Bowl of water</li>
+      <li>Small snack (crackers or raisins)</li>
+      <li>A hand fan or piece of cardboard (to fan yourself and feel air — air is all around us, not stored in a container!)</li>
+      <li>Small box or container (represents shelter)</li>
+      <li>Stuffed animals or family pet</li>
+      <li>Paper and crayons</li>
+    </ul>
+    <h3>🎲 Distractor Items for the Sort</h3>
+    <ul>
+      <li>Toy car, crayon, coin, book, or any other household objects that are <em>not</em> survival needs</li>
+    </ul>
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Introduce the Big Question (5 min)</strong><br>
+    Hold up a stuffed animal (or point to the family pet). Ask: <em>"What does this animal need to stay alive? What would happen if it didn't have food for a week? What about water?"</em><br><br>
+    Let kids brainstorm freely. Write or draw their ideas on paper. Then reveal: <em>"Scientists have figured out that ALL animals need exactly four things to survive. Let's find out what they are!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Meet the Four Needs (5–8 min)</strong><br>
+    Gather your four items and introduce them one at a time:
+    <ul>
+      <li>🍎 <strong>Food</strong> — Hold up the snack. <em>"Animals need food for energy. Without energy, they can't move, grow, or do anything!"</em></li>
+      <li>💧 <strong>Water</strong> — Hold up the bowl. <em>"Every animal needs water. Even animals that live in deserts find ways to get water!"</em></li>
+      <li>🌬️ <strong>Air</strong> — Fan yourself or breathe gently on your hand. Ask: <em>"Can you feel that? What is it?"</em> → Air! <em>"Air is all around us — you can't hold it in a box, but you can feel it. Animals need air — specifically a gas called oxygen — to breathe."</em></li>
+      <li>🏠 <strong>Shelter</strong> — Hold up the small box. <em>"Shelter is a safe place to rest, stay warm, and hide from danger. It could be a den, a nest, a pond, or even a dog bed!"</em></li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    🌬️ <strong>Air is everywhere!</strong> Fan yourself with a piece of paper or a hand fan and ask "What do you feel?" (air / wind). Breathe gently on your child's hand — <em>"That's air! It's all around us — animals breathe it wherever they are, not from a container."</em> Great sensory hook for little learners.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Survival Sorting! (10–12 min)</strong><br>
+    Spread out all your items on the floor: the four survival items (snack, water bowl, hand fan/cardboard, box) AND the distractor items (toy car, crayon, coin, etc.).<br><br>
+    Call out items one at a time and ask: <em>"Does a dog need this to survive?"</em>
+    <ul>
+      <li>Bowl of water → ✅ YES — survival need (Water)</li>
+      <li>Crackers → ✅ YES — survival need (Food)</li>
+      <li>Fan/cardboard (wave it to feel air) → ✅ YES — survival need (Air — air is everywhere, we just used the fan to FEEL it!)</li>
+      <li>Box → ✅ YES — survival need (Shelter)</li>
+      <li>Toy car → ❌ Nope — fun, but not needed to survive!</li>
+      <li>Crayon → ❌ Nope — same!</li>
+      <li>Coin → ❌ Nope — animals don't use money 😄</li>
+    </ul>
+    Make two piles: <strong>NEEDS</strong> and <strong>NOT NEEDS</strong>.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Needs Hunt! (8–10 min)</strong><br>
+    Go on a "Needs Hunt" around the house! Look for evidence of where your pet (or stuffed animal) gets each need met:
+    <ul>
+      <li>🍎 <strong>Food</strong> — Where is the pet food bowl or food kept?</li>
+      <li>💧 <strong>Water</strong> — Where is the water bowl?</li>
+      <li>🌬️ <strong>Air</strong> — Open a window! Air is everywhere — animals breathe it wherever they are.</li>
+      <li>🏠 <strong>Shelter</strong> — Where does the pet sleep? Their bed, a tank, a cage?</li>
+    </ul>
+    If no pet: use a stuffed animal! <em>"Where would we put this animal's food bowl? Where would it sleep?"</em> Set it all up in a little pretend habitat corner.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Wrap-Up (3–5 min)</strong><br>
+    Point to each item on the floor and have kids shout out the four needs in order: <em>"FOOD! WATER! AIR! SHELTER!"</em><br>
+    Ask: <em>"Can you remember all four? Let's see if you can say them without looking!"</em>
+  </div>
+
+  <h2>💬 Discussion Question</h2>
+
+  <div class="question-box">
+    <strong>🐠 vs 🐕 — Think about this together:</strong><br><br>
+    <em>"Do you think a fish needs the same things as a dog?"</em>
+    <p class="discussion-hint">Give kids a moment to think and share their ideas before offering the answer below.</p>
+    <br>
+    <strong>💡 Suggested Answer:</strong> Yes! Both a fish and a dog need food, water, air, and shelter — but they get those things in <em>different ways</em>.<br><br>
+    A fish uses <strong>gills</strong> to pull the oxygen out of water — the same oxygen we breathe from air, just dissolved in water instead. A dog breathes air directly with <strong>lungs</strong> and might sleep in a cozy dog bed. Same four needs — very different methods!
+    <p class="discussion-hint">Follow-up: "Can you think of another animal? What does IT need?"</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🎨 <strong>Habitat Diorama:</strong> Build a mini habitat for a stuffed animal in a shoebox. Include all four needs: a tiny food bowl, a water cup, a toy "shelter," and air (it's already there — just name it!).</li>
+      <li>📚 <strong>Read Aloud:</strong> <em>"What Do Animals Need?"</em> by Lisa J. Amstutz or <em>"Living Things and Their Needs"</em> by Daniel Nunn.</li>
+      <li>🌿 <strong>Nature Walk:</strong> Go outside and try to spot evidence of animal needs in the wild — a bird's nest (shelter!), a puddle (water!), berries on a bush (food!)</li>
+      <li>🔢 <strong>Animal Matching Game:</strong> Name an animal, name one of its four needs, and describe how it meets that specific need. Take turns!</li>
+      <li>📖 <strong>Unit Preview:</strong> <em>"Next time, we're going to look at just ONE need up close — stay tuned!"</em> (Builds anticipation for Lesson 2.)</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>No materials to buy</strong> — everything needed is already in your home!</li>
+      <li><strong>Introducing "air":</strong> Fan your child's hand or breathe gently on it — ask "what do you feel?" Air is everywhere, not stored in a container. The key concept is that air is all around us; we don't need to capture it in something to show it exists.</li>
+      <li><strong>No pet?</strong> Use a stuffed animal as a stand-in. Set up a little "habitat corner" for it with a pretend food bowl, water cup, and bed.</li>
+      <li><strong>Introduce vocab:</strong> survive, needs, food, water, air, shelter. Keep coming back to these words throughout the lesson.</li>
+      <li><strong>This is the foundation lesson</strong> — all five other lessons in this unit build on these four needs. Getting kids fluent in "food, water, air, shelter" sets them up for everything that follows.</li>
+      <li><strong>Don't worry about perfect sorting</strong> — the discussion matters more than accuracy. If a child says "a toy car" is a need, ask them why! It's a window into their thinking.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🐾 My Animal Needs Worksheet 🐾</h1>
+    <p class="subtitle">Life Science — Animal Needs | Unit 3, Lesson 1 of 6</p>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:11pt; color:#444; margin-bottom:14px;">
+      <strong>In each box, draw one way your pet (or favorite animal) gets that need met!</strong>
+    </p>
+
+    <div class="worksheet-grid">
+      <div class="worksheet-box">
+        <span class="box-emoji">🍎</span>
+        <div class="box-label">Food</div>
+        <p style="font-size:9pt; color:#888; text-align:center; margin-top:6px;">Draw how your animal gets its food!</p>
+      </div>
+      <div class="worksheet-box">
+        <span class="box-emoji">💧</span>
+        <div class="box-label">Water</div>
+        <p style="font-size:9pt; color:#888; text-align:center; margin-top:6px;">Draw how your animal gets its water!</p>
+      </div>
+      <div class="worksheet-box">
+        <span class="box-emoji">🌬️</span>
+        <div class="box-label">Air</div>
+        <p style="font-size:9pt; color:#888; text-align:center; margin-top:6px;">Draw how your animal breathes!</p>
+      </div>
+      <div class="worksheet-box">
+        <span class="box-emoji">🏠</span>
+        <div class="box-label">Shelter</div>
+        <p style="font-size:9pt; color:#888; text-align:center; margin-top:6px;">Draw where your animal sleeps or hides!</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; background: #e8f5e9; border-radius: 8px; padding: 14px 18px; border: 1px solid #a5d6a7;">
+      <strong style="color:#1b5e20;">🌍 Bonus:</strong> Can you name ALL FOUR needs without looking at the boxes above?<br>
+      <div style="margin-top: 10px;">
+        <span style="display:inline-block; width:22%; border-bottom: 2px solid #2e7d32; margin-right:2%;">&nbsp;</span>
+        <span style="display:inline-block; width:22%; border-bottom: 2px solid #2e7d32; margin-right:2%;">&nbsp;</span>
+        <span style="display:inline-block; width:22%; border-bottom: 2px solid #2e7d32; margin-right:2%;">&nbsp;</span>
+        <span style="display:inline-block; width:22%; border-bottom: 2px solid #2e7d32;">&nbsp;</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====================== SURVIVAL SORTING MAT ====================== -->
+  <div class="page-break">
+
+    <h1>✂️ Survival Sorting Mat ✂️</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+    <p style="text-align:center; font-size:10pt; color:#555; margin-bottom:10px;">Cut out the item cards below. Sort each one: does an animal NEED it to survive, or is it just extra?</p>
+
+    <table class="sort-mat-2col">
+      <tr>
+        <th class="need-header">✅ SURVIVAL NEED<br><span style="font-size:10pt; font-weight:normal;">Animals need this to live!</span></th>
+        <th class="not-header">❌ NOT A NEED<br><span style="font-size:10pt; font-weight:normal;">Nice to have, but not required</span></th>
+      </tr>
+      <tr>
+        <td>Glue or place your NEED cards here</td>
+        <td>Glue or place your NOT A NEED cards here</td>
+      </tr>
+    </table>
+
+    <div style="margin-top: 16px;">
+      <h3>✂️ Item Cards — Cut These Out!</h3>
+      <p style="font-size:9pt; color:#777;">Cut along the dashed lines and sort onto the mat above.</p>
+      <div class="cut-cards">
+        <div class="cut-card">
+          <span class="emoji">🍎</span>
+          <span class="label">Apples (food)</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">💧</span>
+          <span class="label">Bowl of water</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🌬️</span>
+          <span class="label">Air (feel it — wave your hand!)</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🏠</span>
+          <span class="label">A cozy den (shelter)</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🚗</span>
+          <span class="label">Toy car</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🖍️</span>
+          <span class="label">Crayon</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🪙</span>
+          <span class="label">Coin</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🌿</span>
+          <span class="label">Grass (food for some!)</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🪺</span>
+          <span class="label">Bird's nest (shelter)</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">📱</span>
+          <span class="label">Phone</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🐟</span>
+          <span class="label">Fish food (flakes)</span>
+        </div>
+        <div class="cut-card">
+          <span class="emoji">🎁</span>
+          <span class="label">Gift box</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====================== SCIENCE REFERENCE CARD ====================== -->
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+    <button class="science-card-toggle" onclick="toggleScienceCard()">📄 View Science Reference Card</button>
+    <a href="http://192.168.5.204:8000/lesson-plans/k-ls1-unit3-refcard.html" target="_blank"
+       style="display:inline-block;background:#2e7d32;color:white;padding:9px 18px;border-radius:8px;font-weight:700;font-size:11pt;text-decoration:none;">
+      📄 View Reference Card (Full Poster)
+    </a>
+  </div>
+
+  <div class="science-ref-card" id="scienceRefCard">
+    <div class="ref-card-inner">
+      <h2>🔬 Science Reference Card — What Do Animals Need?</h2>
+
+      <div class="ref-card-vocab">
+        <h3>📖 Key Vocabulary</h3>
+        <dl>
+          <dt>needs</dt><dd> — things a living thing must have to survive</dd>
+          <dt>food</dt><dd> — gives animals the energy to move, grow, and stay alive</dd>
+          <dt>water</dt><dd> — keeps the body working properly</dd>
+          <dt>shelter</dt><dd> — a safe place to live, rest, and stay protected</dd>
+          <dt>air</dt><dd> — all animals breathe it to get the oxygen they need</dd>
+        </dl>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <strong style="color:#2e7d32; font-size:10pt; text-transform:uppercase; letter-spacing:0.05em;">🐾 The 4 Animal Needs</strong>
+      </div>
+      <div class="ref-card-needs-grid">
+        <div class="ref-card-need food">
+          <span class="rc-emoji">🍎</span>
+          <div class="rc-label">Food</div>
+          <div class="rc-desc">Animals eat food to get energy for everything they do.</div>
+        </div>
+        <div class="ref-card-need water">
+          <span class="rc-emoji">💧</span>
+          <div class="rc-label">Water</div>
+          <div class="rc-desc">Water keeps every part of an animal's body working right.</div>
+        </div>
+        <div class="ref-card-need shelter">
+          <span class="rc-emoji">🏠</span>
+          <div class="rc-label">Shelter</div>
+          <div class="rc-desc">A safe place to rest, stay warm, and hide from danger.</div>
+        </div>
+        <div class="ref-card-need air">
+          <span class="rc-emoji">💨</span>
+          <div class="rc-label">Air</div>
+          <div class="rc-desc">All animals breathe air — it's all around us everywhere!</div>
+        </div>
+      </div>
+
+      <div class="ref-card-clue">
+        <strong>🌱 Living vs. Non-Living Clue:</strong><br>
+        Living things <strong>NEED</strong> food, water, air, and shelter to survive.<br>
+        Non-living things <em>do not</em> have these needs.
+      </div>
+
+      <button class="ref-card-print-btn" onclick="printCard()">🖨️ Print This Card</button>
+    </div>
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✅ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <div class="answer-key-grid">
+        <div class="ak-column ak-need">
+          <h3>✅ SURVIVAL NEEDS</h3>
+          <ul>
+            <li>🍎 Apples — <em>Food</em></li>
+            <li>💧 Bowl of water — <em>Water</em></li>
+            <li>🌬️ Air — <em>Air (oxygen) — it's all around us, we can feel it!</em></li>
+            <li>🏠 A cozy den — <em>Shelter</em></li>
+            <li>🌿 Grass — <em>Food (for herbivores like rabbits, horses, cows)</em></li>
+            <li>🪺 Bird's nest — <em>Shelter</em></li>
+            <li>🐟 Fish food (flakes) — <em>Food (what you feed a pet fish — a clear survival need!)</em></li>
+          </ul>
+        </div>
+        <div class="ak-column ak-not">
+          <h3>❌ NOT SURVIVAL NEEDS</h3>
+          <ul>
+            <li>🚗 Toy car — fun for us, not for animals!</li>
+            <li>🖍️ Crayon — creative, but not survival</li>
+            <li>🪙 Coin — animals don't use money 😄</li>
+            <li>📱 Phone — no service in the wild!</li>
+            <li>🎁 Gift box — nice surprise, but not needed</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">💡 Discussion Hint Notes</h3>
+      <ul>
+        <li><strong>🌿 Grass card:</strong> Kids might say grass isn't food — great teaching moment! It IS food for many animals (herbivores). Encourage kids to think about who eats what.</li>
+        <li><strong>🪺 Bird's nest:</strong> Reinforce "shelter" — shelter doesn't have to be a house. It's any safe place to rest and stay protected. Nests, burrows, caves, and dens all count!</li>
+        <li><strong>🌬️ Air card:</strong> Air is everywhere — reinforce that animals don't get air "from a container." Fan your hand or breathe on it: <em>"That's air! It's all around us — animals breathe it wherever they are."</em></li>
+        <li><strong>Fish and water:</strong> Fish also need oxygen to survive — but instead of breathing air like we do, their gills extract dissolved oxygen directly from water. This connects to the Discussion Question about fish vs. dogs.</li>
+      </ul>
+
+      <h3>✅ What Success Looks Like</h3>
+      <ul>
+        <li>Child can name all four needs: food, water, air, shelter (with prompting is fine at this stage!)</li>
+        <li>Child can correctly sort at least 3 of the 4 survival need cards into the NEEDS column.</li>
+        <li>Child can say one thing about how their pet (or favorite animal) gets at least ONE need met.</li>
+        <li>Child can answer the discussion question: <em>"Yes, a fish and a dog need the same things — just differently!"</em></li>
+      </ul>
+
+      <h3>📚 Unit Preview (For Your Planning)</h3>
+      <p style="font-size:10pt; color:#555;">This is <strong>Lesson 1 of 6</strong> in Unit 3: Animal Needs. Every lesson builds on these four needs:</p>
+      <ul style="font-size:10pt; color:#555;">
+        <li>Lesson 2 — Food: What do different animals eat?</li>
+        <li>Lesson 3 — Breathing: How do different animals breathe?</li>
+        <li>Lesson 4 — How Animals Drink: How do animals find and use water?</li>
+        <li>Lesson 5 — Building a Shelter: What makes a good home?</li>
+        <li>Lesson 6 — When Needs Aren't Met: Putting it all together</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ====================== UNIT QUIZ LINK ====================== -->
+  <div style="margin: 32px 0 20px; text-align: center; background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 12px; padding: 20px;">
+    <div style="font-size: 1.4rem; margin-bottom: 8px;">🧠✅</div>
+    <div style="font-size: 1.1rem; font-weight: bold; color: #1b5e20; margin-bottom: 6px;">Ready to test what you learned?</div>
+    <div style="margin-bottom: 14px; color: #444; font-size: 0.95rem;">See how much you know about Animal Needs with the unit quiz!</div>
+    <a href="k-ls1-unit3-quiz.html" style="display:inline-block; background:#2e7d32; color:white; padding:12px 28px; border-radius:8px; font-weight:600; font-size:1rem; text-decoration:none;">→ Take the Unit Quiz</a>
+  </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_G7JJMYODtJM" data-content-selector="body"></script>
+<script>
+  function toggleScienceCard() {
+    const card = document.getElementById('scienceRefCard');
+    const btn = document.querySelector('.science-card-toggle');
+    card.classList.toggle('open');
+    btn.textContent = card.classList.contains('open') ? '📄 Hide Science Reference Card' : '📄 View Science Reference Card';
+  }
+
+  function printCard() {
+    document.body.classList.add('printing-card');
+    const card = document.getElementById('scienceRefCard');
+    card.classList.add('open');
+    window.print();
+    document.body.classList.remove('printing-card');
+  }
+</script>
+</body>
+</html>

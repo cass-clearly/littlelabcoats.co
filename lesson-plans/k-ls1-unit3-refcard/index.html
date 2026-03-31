@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Needs Reference Card — Kindergarten</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e8f5e9;
+      color: #0d2012;
+      padding: 12px;
+      min-height: 100vh;
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      @page { size: letter portrait; margin: 0.4in; }
+      body {
+        background: white;
+        padding: 0;
+        font-size: 9pt;
+      }
+      .print-btn { display: none !important; }
+      .page-card {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+      }
+      .needs-grid { grid-template-columns: repeat(4, 1fr) !important; }
+      .facts-strip { flex-wrap: nowrap !important; }
+    }
+
+    /* ─── SCREEN WRAPPER ─── */
+    .page-card {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(46,125,50,0.15);
+      overflow: hidden;
+      border: 3px solid #2e7d32;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 60%, #388e3c 100%);
+      color: white;
+      padding: 14px 20px 10px;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .header .grade-badge {
+      background: #fff3;
+      border: 2px solid #ffffff88;
+      border-radius: 30px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: 700;
+      color: white;
+      white-space: nowrap;
+    }
+    .big-idea {
+      margin-top: 8px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 8px 14px;
+    }
+    .big-idea .main-text {
+      font-size: 13pt;
+      font-weight: 800;
+      color: white;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .needs-banner {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .need-pill {
+      background: white;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 11pt;
+      font-weight: 800;
+      color: #1b5e20;
+      border: 2px solid #a5d6a7;
+    }
+
+    /* ─── BODY CONTENT ─── */
+    .card-body {
+      padding: 10px 14px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* ─── SECTION LABEL ─── */
+    .section-label {
+      font-size: 8pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2e7d32;
+      border-bottom: 2px solid #2e7d32;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    /* ─── 4 NEEDS GRID ─── */
+    .needs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .need-tile {
+      border-radius: 10px;
+      padding: 8px 6px;
+      text-align: center;
+      border: 2.5px solid;
+    }
+    .need-tile .n-emoji  { font-size: 26pt; display: block; line-height: 1; }
+    .need-tile .n-name   { font-size: 10pt; font-weight: 900; display: block; margin-top: 3px; }
+    .need-tile .n-what   { font-size: 7.5pt; display: block; margin: 3px 0; line-height: 1.3; }
+    .need-tile .n-exs    { font-size: 7pt; display: block; color: #333; line-height: 1.4; }
+
+    .need-tile.food    { background: #fff8e1; border-color: #fbc02d; }
+    .need-tile.food .n-name { color: #e65100; }
+    .need-tile.water   { background: #e3f2fd; border-color: #1976d2; }
+    .need-tile.water .n-name { color: #0d47a1; }
+    .need-tile.shelter { background: #fce4ec; border-color: #c2185b; }
+    .need-tile.shelter .n-name { color: #880e4f; }
+    .need-tile.air     { background: #e8f5e9; border-color: #388e3c; }
+    .need-tile.air .n-name { color: #1b5e20; }
+
+    /* ─── TWO-COL (comparison table + living/non-living) ─── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 10px;
+    }
+
+    /* ─── COMPARISON TABLE ─── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .compare-table th {
+      padding: 5px 7px;
+      font-weight: 800;
+      text-align: center;
+      font-size: 8pt;
+    }
+    .compare-table td {
+      padding: 5px 7px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 8pt;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .th-need   { background: #e8f5e9; color: #1b5e20; }
+    .compare-table .th-lion   { background: #fff8e1; color: #e65100; }
+    .compare-table .th-bird   { background: #e3f2fd; color: #0d47a1; }
+    .compare-table .th-fish   { background: #e8eaf6; color: #283593; }
+    .compare-table .th-bear   { background: #fce4ec; color: #880e4f; }
+    .compare-table tr:nth-child(even) td { background: #f9fbe7; }
+
+    /* ─── LIVING / NON-LIVING SPLIT ─── */
+    .split-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      height: 100%;
+    }
+    .living-panel {
+      background: #e8f5e9;
+      border: 2px solid #43a047;
+      border-radius: 10px;
+      padding: 7px;
+      flex: 1;
+    }
+    .nonliving-panel {
+      background: #f5f5f5;
+      border: 2px solid #9e9e9e;
+      border-radius: 10px;
+      padding: 7px;
+      flex: 1;
+    }
+    .panel-title {
+      font-size: 9.5pt;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .living-panel .panel-title  { color: #1b5e20; }
+    .nonliving-panel .panel-title { color: #424242; }
+    .panel-desc {
+      font-size: 7.5pt;
+      line-height: 1.5;
+      color: #333;
+    }
+    .panel-icons { font-size: 15pt; margin-top: 4px; letter-spacing: 2px; }
+
+    /* ─── WARNING TILES ─── */
+    .warning-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+    }
+    .warn-tile {
+      background: #fff3e0;
+      border: 2px solid #e65100;
+      border-radius: 10px;
+      padding: 7px 6px;
+      text-align: center;
+    }
+    .warn-tile .w-emoji  { font-size: 18pt; display: block; }
+    .warn-tile .w-no     { font-size: 9pt; font-weight: 900; color: #bf360c; display: block; margin: 2px 0; }
+    .warn-tile .w-result { font-size: 7.5pt; color: #444; display: block; line-height: 1.3; }
+
+    /* ─── FUN FACTS STRIP ─── */
+    .facts-strip {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      background: #1b5e20;
+      border-radius: 0 0 12px 12px;
+      padding: 9px 12px;
+      justify-content: center;
+    }
+    .fact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 8pt;
+      font-weight: 600;
+      color: #1b5e20;
+      border: 2px solid #a5d6a7;
+      flex: 1;
+      min-width: 140px;
+      max-width: 180px;
+      text-align: center;
+    }
+    .fact-card .f-emoji { font-size: 14pt; display: block; }
+
+    /* ─── BRANDING ─── */
+    .branding {
+      text-align: center;
+      font-size: 7.5pt;
+      color: #a5d6a7;
+      padding: 4px 0 0;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    /* ─── PRINT BUTTON ─── */
+    .print-btn {
+      display: block;
+      margin: 12px auto;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 30px;
+      font-size: 12pt;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(46,125,50,0.3);
+      transition: background 0.15s;
+    }
+    .print-btn:hover { background: #1b5e20; }
+  </style>
+</head>
+<body>
+
+  <button class="print-btn" onclick="window.print()">🖨️ Print This Card</button>
+
+  <div class="page-card">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-top">
+        <h1>🐾 Animal Needs Reference Card</h1>
+        <span class="grade-badge">Kindergarten · K-LS1</span>
+      </div>
+      <div class="big-idea">
+        <span class="main-text">🌟 All Animals Need 4 Things to Survive!</span>
+        <div class="needs-banner">
+          <span class="need-pill">🍎 Food</span>
+          <span class="need-pill">💧 Water</span>
+          <span class="need-pill">🏠 Shelter</span>
+          <span class="need-pill">💨 Air</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+
+      <!-- SECTION 1: 4 NEEDS GRID -->
+      <div>
+        <div class="section-label">🌿 The 4 Needs — What Each One Does</div>
+        <div class="needs-grid">
+          <div class="need-tile food">
+            <span class="n-emoji">🍎</span>
+            <span class="n-name">FOOD</span>
+            <span class="n-what">Gives energy to move, grow, and stay warm</span>
+            <span class="n-exs">Eagle hunts fish 🦅<br>Bear eats berries 🐻</span>
+          </div>
+          <div class="need-tile water">
+            <span class="n-emoji">💧</span>
+            <span class="n-name">WATER</span>
+            <span class="n-what">Keeps bodies working, helps digest food</span>
+            <span class="n-exs">Giraffe drinks from river 🦒<br>Fish breathes dissolved O₂ 🐠</span>
+          </div>
+          <div class="need-tile shelter">
+            <span class="n-emoji">🏠</span>
+            <span class="n-name">SHELTER</span>
+            <span class="n-what">Safe from weather and predators</span>
+            <span class="n-exs">Bird builds nest 🐦<br>Rabbit digs burrow 🐰</span>
+          </div>
+          <div class="need-tile air">
+            <span class="n-emoji">💨</span>
+            <span class="n-name">AIR</span>
+            <span class="n-what">All animals need oxygen to breathe</span>
+            <span class="n-exs">Dog breathes air 🐶<br>Fish uses gills 🐟</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: COMPARISON TABLE + LIVING/NON-LIVING -->
+      <div class="two-col">
+
+        <!-- Comparison Table -->
+        <div>
+          <div class="section-label">🔎 Different Animals, Same Needs!</div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th class="th-need">Need</th>
+                <th class="th-lion">🦁 Lion</th>
+                <th class="th-bird">🐦 Bird</th>
+                <th class="th-fish">🐠 Fish</th>
+                <th class="th-bear">🐻 Bear</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>🍎 Food</strong></td>
+                <td>Hunts prey</td>
+                <td>Worms/seeds</td>
+                <td>Smaller fish</td>
+                <td>Berries/salmon</td>
+              </tr>
+              <tr>
+                <td><strong>💧 Water</strong></td>
+                <td>Drinks at river</td>
+                <td>Rain/puddles</td>
+                <td>Lives in it!</td>
+                <td>Streams</td>
+              </tr>
+              <tr>
+                <td><strong>🏠 Shelter</strong></td>
+                <td>Cave/tall grass</td>
+                <td>Nest in tree</td>
+                <td>Coral reef</td>
+                <td>Cave/den</td>
+              </tr>
+              <tr>
+                <td><strong>💨 Air</strong></td>
+                <td>Breathes air</td>
+                <td>Breathes air</td>
+                <td>Gills in water</td>
+                <td>Breathes air</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Living vs Non-Living -->
+        <div>
+          <div class="section-label">🌱 Living vs. Non-Living</div>
+          <div class="split-panel">
+            <div class="living-panel">
+              <div class="panel-title">🌱 Living Things</div>
+              <div class="panel-desc">
+                ✅ Need food, water, air, shelter<br>
+                ✅ Grow and change<br>
+                ✅ Have babies
+              </div>
+              <div class="panel-icons">🌱🐱🦋🌳</div>
+            </div>
+            <div class="nonliving-panel">
+              <div class="panel-title">🪨 Non-Living Things</div>
+              <div class="panel-desc">
+                ❌ No needs at all<br>
+                ❌ Don't grow<br>
+                ❌ No babies
+              </div>
+              <div class="panel-icons">🪨🚗💺⭐</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECTION 3: WARNING TILES -->
+      <div>
+        <div class="section-label">⚠️ What Happens Without Each Need?</div>
+        <div class="warning-grid">
+          <div class="warn-tile">
+            <span class="w-emoji">🍎❌</span>
+            <span class="w-no">No Food</span>
+            <span class="w-result">Animal loses energy and weakens over time</span>
+          </div>
+          <div class="warn-tile">
+            <span class="w-emoji">💧❌</span>
+            <span class="w-no">No Water</span>
+            <span class="w-result">Body stops working properly</span>
+          </div>
+          <div class="warn-tile">
+            <span class="w-emoji">🏠❌</span>
+            <span class="w-no">No Shelter</span>
+            <span class="w-result">Exposed to weather and predators</span>
+          </div>
+          <div class="warn-tile">
+            <span class="w-emoji">💨❌</span>
+            <span class="w-no">No Air</span>
+            <span class="w-result">Most animals survive only minutes!</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end card-body -->
+
+    <!-- FUN FACTS STRIP + BRANDING -->
+    <div class="facts-strip">
+      <div class="fact-card">
+        <span class="f-emoji">🐪</span>
+        Camels store <strong>fat</strong>, not water — in their humps!
+      </div>
+      <div class="fact-card">
+        <span class="f-emoji">🐟</span>
+        Fish breathe <strong>dissolved oxygen</strong> through their gills
+      </div>
+      <div class="fact-card">
+        <span class="f-emoji">🐧</span>
+        Penguins <strong>huddle together</strong> for warmth in the cold
+      </div>
+      <div class="fact-card">
+        <span class="f-emoji">🐿️</span>
+        Squirrels <strong>bury food</strong> to eat during winter
+      </div>
+      <div class="branding">Little Lab Coats 🥼</div>
+    </div>
+
+  </div><!-- end page-card -->
+
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_yzsKmpTYuwU" data-content-selector="body"></script>
+</body>
+</html>

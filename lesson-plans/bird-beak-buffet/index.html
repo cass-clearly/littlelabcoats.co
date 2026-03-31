@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bird Beak Buffet: Adaptation Lab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image img {
+      max-width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div { flex: 1; }
+    .procedure-step {
+      background: #f1f8e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #4caf50;
+    }
+    .procedure-step strong { color: #2e7d32; }
+    .beak-card {
+      display: inline-block;
+      background: #e3f2fd;
+      border: 1px solid #90caf9;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 120px;
+    }
+    .beak-card .emoji { font-size: 20pt; display: block; margin-bottom: 4px; }
+    .beak-card .name { font-weight: bold; color: #1565c0; }
+    .beak-card .bird { font-style: italic; color: #555; font-size: 9pt; }
+    .food-station {
+      display: inline-block;
+      background: #fce4ec;
+      border: 1px solid #f48fb1;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 100px;
+    }
+    .food-station .emoji { font-size: 18pt; display: block; margin-bottom: 2px; }
+    .food-station .name { font-weight: bold; color: #c2185b; }
+    .food-station .item { font-size: 9pt; color: #555; }
+    .question-box {
+      background: #e3f2fd;
+      border-left: 5px solid #2196f3;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .grade-section {
+      border: 2px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .grade-3 { border-left: 5px solid #ff9800; background: #fff3e0; }
+    .grade-5 { border-left: 5px solid #9c27b0; background: #f3e5f5; }
+    .grade-label {
+      font-weight: bold;
+      font-size: 12pt;
+      margin-bottom: 6px;
+    }
+    .grade-3 .grade-label { color: #e65100; }
+    .grade-5 .grade-label { color: #7b1fa2; }
+    .habitat-change {
+      background: #fff3e0;
+      border: 2px solid #ff9800;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .habitat-change h3 { color: #e65100; border-color: #ff9800; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    /* Data tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #c8e6c9;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #f1f8e9; }
+    .best-table th { background: #bbdefb; color: #0d47a1; }
+    .round2-table th { background: #ffe0b2; color: #e65100; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #444;
+    }
+    .answer-key h2 {
+      background: #757575;
+      font-size: 13pt;
+      text-align: center;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 5px;
+      padding-left: 8px;
+    }
+    .answer-key .expected {
+      background: white;
+      border-left: 4px solid #2e7d32;
+      padding: 8px 14px;
+      margin: 8px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .grade-section, .teacher-note, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .hero-image img { max-height: 250px; }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐦 Bird Beak Buffet 🐦</h1>
+  <p class="subtitle">An Adaptation Lab: Which Beak Wins?</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grades:</strong> 3rd & 5th</span>
+    <span>⏱️ <strong>Duration:</strong> 60–90 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science: Adaptation</span>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/bird-beaks.png" alt="Different bird beak types illustrated">
+    <div class="caption">Different beaks for different jobs. Which one would <em>you</em> want?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>3-LS4-2</strong>: Use evidence to explain how characteristic variations provide survival advantages<br>
+    <strong>3-LS4-3</strong>: Argue that in a habitat, some organisms thrive while others struggle
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>Birds have differently shaped beaks, and each shape is <em>adapted</em> to eat certain types of food. In this lab, students become birds! They'll use kitchen utensils as "beaks" to compete for food and discover firsthand why beak shape matters for survival.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>In nature, animals with traits that help them survive are more likely to live long enough to have babies. Those babies inherit the helpful traits. Over many generations, this process (called <strong>natural selection</strong>) shapes species to fit their environment perfectly. A heron's long, thin beak is perfect for spearing fish in shallow water. A finch's short, strong beak can crack tough seeds. These aren't random; they're <strong>adaptations</strong>, traits that evolved because they helped birds survive and find food. In this activity, you'll experience firsthand why "the right tool for the right job" matters in the wild!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary (3rd grade):</strong> adaptation, habitat, variation, survival advantage<br>
+    💡 <strong>Key vocabulary (5th grade, add these):</strong> natural selection, population
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🦜 The "Beaks" (utensils)</h3>
+    <div style="text-align: center; margin: 10px 0;">
+      <div class="beak-card"><span class="emoji">🥢</span><span class="name">Chopsticks</span><span class="bird">Heron</span></div>
+      <div class="beak-card"><span class="emoji">📎</span><span class="name">Clothespin</span><span class="bird">Finch</span></div>
+      <div class="beak-card"><span class="emoji">🥄</span><span class="name">Spoon</span><span class="bird">Pelican</span></div>
+      <div class="beak-card"><span class="emoji">🔬</span><span class="name">Tweezers</span><span class="bird">Warbler</span></div>
+      <div class="beak-card"><span class="emoji">🍴</span><span class="name">Fork</span><span class="bird">Spoonbill</span></div>
+    </div>
+
+    <h3>🍽️ The "Foods"</h3>
+    <div style="text-align: center; margin: 10px 0;">
+      <div class="food-station"><span class="emoji">🪱</span><span class="name">Worms</span><span class="item">Rubber bands / gummy worms</span></div>
+      <div class="food-station"><span class="emoji">🐟</span><span class="name">Fish</span><span class="item">Large dried beans or grapes in water</span></div>
+      <div class="food-station"><span class="emoji">🌾</span><span class="name">Seeds</span><span class="item">Uncooked rice</span></div>
+      <div class="food-station"><span class="emoji">🐛</span><span class="name">Insects</span><span class="item">Raisins or small beads</span></div>
+      <div class="food-station"><span class="emoji">🌸</span><span class="name">Fluffy Seeds</span><span class="item">Cotton balls</span></div>
+      <div class="food-station"><span class="emoji">🌺</span><span class="name">Nectar</span><span class="item">Cotton balls in a cup (count each one moved)</span></div>
+    </div>
+
+    <h3>🧰 Other Supplies</h3>
+    <ul>
+      <li>1 cup per student (the "stomach" (to collect food into))</li>
+      <li>Plates or trays for each food station</li>
+      <li>A shallow bowl of water (for the fish station, with dried beans or grapes)</li>
+      <li>Timer (phone works great!)</li>
+      <li>Pencils & printed Student Worksheet (last page)</li>
+      <li>Paper towels for cleanup</li>
+    </ul>
+  </div>
+
+  <h2>🔧 Setup (5 minutes)</h2>
+  <div class="procedure-step">
+    <strong>1.</strong> Spread out <strong>6 food stations</strong> on a table; each plate or tray holds one food type. Space them out so students can move between them.
+  </div>
+  <div class="procedure-step">
+    <strong>2.</strong> Give each student a <strong>"stomach" cup</strong> and a <strong>Student Worksheet</strong>.
+  </div>
+  <div class="procedure-step">
+    <strong>3.</strong> Lay out the 5 beak tools where everyone can see them. Hold each one up and name the bird it represents.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Tip:</strong> Lay down newspaper or a tablecloth. The fish station can get splashy!
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="hero-image">
+    <img src="images/beak-buffet-activity.png" alt="Kids doing the bird beak activity">
+    <div class="caption">Time to eat! But you can <em>only</em> use your beak. No hands allowed!</div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1: Introduce the Challenge (5 min)</strong><br>
+    "You are birds! Each tool represents a different bird's beak. Your job is to figure out which beak is best for which food, and what happens when the environment changes."
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Match Beaks to Birds (3 min)</strong><br>
+    Hold up each utensil. Ask: "What kind of bird might have a beak like this?" Show them the beak cards above. Talk about how real herons stab fish, finches crack seeds, pelicans scoop, etc.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Round 1, Free Feeding (15–20 min)</strong>
+    <ul>
+      <li>Each student picks <strong>ONE beak tool</strong></li>
+      <li>Set a <strong>30-second timer</strong></li>
+      <li>Try to collect as much of ONE food type as possible into the stomach cup</li>
+      <li>⚠️ <em>Only use the beak.</em> No hands allowed!</li>
+      <li>Count items collected and record on the Student Worksheet</li>
+      <li>Empty the stomach cup, move to the next food station</li>
+      <li>After testing all 6 foods with that beak, swap tools with another student and repeat!</li>
+    </ul>
+    <p><strong>Example with 2 kids:</strong> Child A uses chopsticks and tests all 6 stations. Child B uses the clothespin and tests all 6 stations. Then they swap tools and repeat. Each child ends up with data for 2 beaks total (more if time allows).</p>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Record &amp; Compare (5 min)</strong><br>
+    Fill in the data table completely. Circle the <em>best</em> beak for each food type. Star the <em>worst</em>.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Discussion Round 1 (5–10 min)</strong><br>
+    Use the discussion questions below. Let students share their results and argue about which beak is "best."
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Round 2, Habitat Change! (10 min)</strong><br>
+    See the Habitat Change section below. 🌪️
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Wrap-Up (5 min)</strong><br>
+    Connect to the big idea: "Birds don't <em>choose</em> their beaks. Over thousands of generations, birds with beaks that worked best in their habitat survived and had babies. That's natural selection!"
+  </div>
+
+  <h2>🌪️ Habitat Change! (Bonus Round)</h2>
+  <div class="habitat-change">
+    <div class="hero-image">
+      <img src="images/habitat-change.png" alt="Birds facing environmental change" style="max-height: 200px;">
+      <div class="caption">When the environment changes, not every bird can keep up...</div>
+    </div>
+
+    <p><strong>After Round 1, announce a dramatic environmental change!</strong> Pick one (or make up your own):</p>
+    <ul>
+      <li>🏜️ <strong>"A drought has dried up the water!"</strong> → Remove the Fish and Nectar stations</li>
+      <li>❄️ <strong>"Winter is here (insects are gone!)"</strong> → Remove the Insects station</li>
+      <li>🌿 <strong>"An invasive plant covers everything in fluffy seeds!"</strong> → Double the cotton balls, remove the worms</li>
+    </ul>
+    <p>Students repeat 30-second trials with the <strong>remaining foods only</strong>. Then discuss:</p>
+    <ul>
+      <li>Which birds are in trouble now? Which ones are thriving?</li>
+      <li>What would happen to bird <em>populations</em> over many years?</li>
+      <li>Could a bird learn to use a different food? Or does change happen another way?</li>
+    </ul>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="grade-section grade-3">
+    <div class="grade-label">🟠 For 3rd Graders</div>
+    <ul>
+      <li>Which beak was the <em>best</em> for each food? Which was the <em>worst</em>?
+        <p class="discussion-hint">Expected: Chopsticks or tweezers for worms/insects; spoon for fish and nectar; clothespin for seeds; fork for fluffy seeds. Accept any answer supported by student data.</p>
+      </li>
+      <li>Why do you think each beak shape works better for certain foods?
+        <p class="discussion-hint">Expected: Shape matches the task: long thin beaks reach into crevices, scooping beaks collect small items, pinching beaks grip individual pieces.</p>
+      </li>
+      <li>If you were a bird with a spoon beak, where would you want to live? Why?
+        <p class="discussion-hint">Expected: Near water (ponds, lakes, coast) where there are fish and nectar-producing flowers in wetland habitats.</p>
+      </li>
+      <li>What would happen if a chopstick-beak bird lived somewhere with only rice?
+        <p class="discussion-hint">Expected: It would struggle to eat enough food, might starve or be forced to move to a habitat that has more of its preferred food.</p>
+      </li>
+      <li>Draw your favorite bird with its beak and the food it eats best!</li>
+    </ul>
+  </div>
+
+  <div class="grade-section grade-5">
+    <div class="grade-label">🟣 For 5th Graders (add these)</div>
+    <ul>
+      <li>Look at your data: which beak is the most <em>versatile</em>? Is being versatile better than being specialized? Why or why not?
+        <p class="discussion-hint">Expected: Spoon or clothespin typically performs adequately across multiple stations. Specialists (tweezers, chopsticks) excel at one food but fail at others. Neither is universally better; it depends on what foods are available in the habitat.</p>
+      </li>
+      <li>After the habitat change, which bird populations would grow? Shrink? Use your data as evidence.
+        <p class="discussion-hint">Expected: Students should cite specific numbers from their data to support claims. For example, if the drought scenario removed fish and nectar, spoon-beak birds would decline because their two best food sources disappeared.</p>
+      </li>
+      <li><strong>Write a claim:</strong> "The [beak] is best adapted for [habitat] because..." Support it with numbers from your data table.
+        <p class="discussion-hint">Example: "The spoon is best adapted for a wetland habitat because it collected the most fish (10 items) and is effective at nectar, which are common wetland food sources."</p>
+      </li>
+      <li>How does this connect to real evolution? Do individual birds change their beaks, or does something else happen over many generations?
+        <p class="discussion-hint">Expected: Individual birds do not change their beaks. Birds with better-suited beaks survive longer and reproduce more, passing beak traits to offspring. Over many generations, the population shifts toward the more successful beak type. This is natural selection.</p>
+      </li>
+      <li><strong>Graph challenge:</strong> Create a bar graph comparing all 5 beaks' performance on ONE food type. What pattern do you see?</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🔎 <strong>Real Bird Match:</strong> Look up photos of real birds and match them to the utensil beak. Try: hummingbird, toucan, eagle, flamingo, crossbill, spoonbill!</li>
+      <li>🛠️ <strong>Design Your Own Beak:</strong> Using household materials (tape, cardboard, rubber bands, paper clips), engineer a custom beak optimized for ONE food. Test it against the originals!</li>
+      <li>🌳 <strong>Outdoor Observation:</strong> Go outside for 15 minutes. Watch real birds. What beak shapes do you see? What are they eating? Sketch and record.</li>
+      <li>📊 <strong>Graph It (5th grade):</strong> Create bar graphs comparing beak performance. Which food has the biggest difference between best and worst beak?</li>
+      <li>🧬 <strong>Darwin's Finches:</strong> Research the Galápagos finches that inspired Darwin's theory of evolution. How do they connect to this experiment?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Mess level:</strong> Moderate. Newspaper or a tablecloth is your friend. The fish station (beans or grapes in water) is the splashiest station.</li>
+      <li><strong>For younger kids (3rd):</strong> Simplify the data table; use smiley faces (😊 = easy, 😐 = okay, 😣 = hard) instead of exact counts.</li>
+      <li><strong>For older kids (5th):</strong> Push the analysis hard. Have them write a paragraph using data as evidence. Connect to natural selection: the birds that eat best survive and reproduce.</li>
+      <li><strong>⚠️ Common misconception:</strong> Kids often think animals <em>choose</em> to adapt during their lifetime. Clarify: adaptation happens across <em>generations</em> through natural selection, not by individual effort.</li>
+      <li><strong>If you only have one or two kids:</strong> Each kid tests <em>all</em> five beaks, which gives more data per person. Makes for richer comparison. With one child: have the child run through all 5 beaks sequentially, or run one set yourself as the parent for comparison data.</li>
+      <li><strong>Substitutions:</strong> No tweezers? Bobby pin. No chopsticks? Two pencils held together. No gummy worms? Cut rubber bands work great. Creativity counts!</li>
+      <li><strong>Time saver:</strong> Pre-set all food stations before the lesson. Kids walk in and see the spread for instant excitement.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>🐦 Bird Beak Buffet: Student Worksheet 🐦</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>📊 Round 1: How many items did you collect in 30 seconds?</h3>
+    <table class="data-table">
+      <tr>
+        <th style="width:18%;">Beak (Bird)</th>
+        <th>🪱<br>Worms</th>
+        <th>🐟<br>Fish</th>
+        <th>🌾<br>Seeds</th>
+        <th>🐛<br>Insects</th>
+        <th>🌸<br>Fluffy Seeds</th>
+        <th>🌺<br>Nectar</th>
+      </tr>
+      <tr>
+        <td>🥢 Chopsticks<br><em style="font-size:9pt;">(Heron)</em></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>📎 Clothespin<br><em style="font-size:9pt;">(Finch)</em></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🥄 Spoon<br><em style="font-size:9pt;">(Pelican)</em></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🔬 Tweezers<br><em style="font-size:9pt;">(Warbler)</em></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🍴 Fork<br><em style="font-size:9pt;">(Woodpecker)</em></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+
+    <h3>⭐ Which beak was <em>best</em> for each food?</h3>
+    <table class="data-table best-table">
+      <tr>
+        <th>🪱 Worms</th>
+        <th>🐟 Fish</th>
+        <th>🌾 Seeds</th>
+        <th>🐛 Insects</th>
+        <th>🌸 Fluffy Seeds</th>
+        <th>🌺 Nectar</th>
+      </tr>
+      <tr>
+        <td style="height:44px; background:white;"></td>
+        <td style="background:white;"></td>
+        <td style="background:white;"></td>
+        <td style="background:white;"></td>
+        <td style="background:white;"></td>
+        <td style="background:white;"></td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top: 28px;">🌪️ Round 2: Habitat Change!</h3>
+    <p>What changed in the habitat? _______________________________________________________________</p>
+    <p style="font-size: 10pt; color: #555;"><em>Write the names of the food stations that are still available in the column headers below. Leave blank any columns you don't need.</em></p>
+    <table class="data-table round2-table" style="margin-top: 10px;">
+      <tr>
+        <th style="width:18%;">Beak (Bird)</th>
+        <th>Food 1:<br>_________</th>
+        <th>Food 2:<br>_________</th>
+        <th>Food 3:<br>_________</th>
+        <th>Food 4:<br>_________</th>
+      </tr>
+      <tr>
+        <td>🥢 Chopsticks</td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>📎 Clothespin</td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🥄 Spoon</td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🔬 Tweezers</td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🍴 Fork</td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+
+    <h3 style="margin-top: 28px;">🤔 Thinking Questions</h3>
+
+    <div class="question-box">
+      <strong>1. After the habitat change, which bird is in the <em>most</em> trouble? Why?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>2. Which bird is doing the <em>best</em> now? Use your data to explain.</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+    <div class="question-box">
+      <strong>3. If this habitat stayed changed for 1,000 years, what might happen to the bird populations?</strong>
+      <div class="notes-lines"><p></p><p></p><p></p></div>
+    </div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key (Detach before giving worksheet to students)</h2>
+
+      <h3>Expected Data Patterns</h3>
+      <p><strong>Note:</strong> Exact numbers will vary based on student dexterity, but these patterns should emerge:</p>
+
+      <div class="expected">
+        <strong>🪱 Worms (rubber bands/gummy worms):</strong><br>
+        <strong>Best:</strong> Chopsticks (can spear/pinch) or Tweezers (grip well)<br>
+        <strong>Worst:</strong> Spoon (worms slip off), Fork (can work but not ideal)<br>
+        Typical best score: 8–12 items
+      </div>
+
+      <div class="expected">
+        <strong>🐟 Fish (dried beans or grapes in water):</strong><br>
+        <strong>Best:</strong> Spoon (scoops bean/grape with water), Chopsticks (can grip grapes)<br>
+        <strong>Worst:</strong> Clothespin (struggles with wet round items), Fork (items slip through tines)<br>
+        Typical best score: 6–10 items
+      </div>
+
+      <div class="expected">
+        <strong>🌾 Seeds (rice):</strong><br>
+        <strong>Best:</strong> Spoon (scoops many at once) or Clothespin (can pinch groups)<br>
+        <strong>Worst:</strong> Chopsticks (one grain at a time), Tweezers (too precise, slow)<br>
+        Typical best score: 40–80 grains (or "full spoon")
+      </div>
+
+      <div class="expected">
+        <strong>🐛 Insects (raisins/beads):</strong><br>
+        <strong>Best:</strong> Tweezers (precision grip), Clothespin (pinch well)<br>
+        <strong>Worst:</strong> Spoon (raisins roll around), Chopsticks (okay but slower)<br>
+        Typical best score: 10–15 items
+      </div>
+
+      <div class="expected">
+        <strong>🌸 Fluffy Seeds (cotton balls):</strong><br>
+        <strong>Best:</strong> Fork (spears them), Tweezers (grip well), Chopsticks (can pinch)<br>
+        <strong>Worst:</strong> Spoon (cotton floats/falls off), Clothespin (too soft to grip)<br>
+        Typical best score: 8–12 items
+      </div>
+
+      <div class="expected">
+        <strong>🌺 Nectar (cotton balls in cup):</strong><br>
+        <strong>Best:</strong> Tweezers (precise grip), Chopsticks (can pinch cotton easily)<br>
+        <strong>Worst:</strong> Spoon (cotton slips off), Fork (catches on tines but inconsistent)<br>
+        Typical best score: 8–12 items
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+
+      <p><strong>For 3rd Graders:</strong></p>
+      <ul>
+        <li><strong>Which beak was best for each food?</strong> See expected patterns above. Students should cite their data.</li>
+        <li><strong>Why do beak shapes work better for certain foods?</strong> Shape matches the task: scoops for liquid/small items, spears for soft items, pinchers for gripping.</li>
+        <li><strong>If you were a spoon-beak bird, where would you want to live?</strong> Near water with fish and nectar (wetlands, coasts). Note: with the updated nectar station using cotton balls, discuss how spoonbill-type birds filter-feed in water rather than sip nectar.</li>
+        <li><strong>What if chopstick-beak lived with only rice?</strong> It would struggle to eat and might starve or have to move.</li>
+      </ul>
+
+      <p><strong>For 5th Graders (additional):</strong></p>
+      <ul>
+        <li><strong>Most versatile beak?</strong> Likely spoon or clothespin (worked okay on multiple food types). Versatility vs. specialization trade-off: specialists excel in one area but fail in others; generalists do "okay" everywhere.</li>
+        <li><strong>After habitat change, which populations grow/shrink?</strong> Depends on scenario. E.g., if insects removed, tweezers/clothespin birds decline; spoon birds (nectar/fish eaters) thrive.</li>
+        <li><strong>Claim example:</strong> "The spoon is best adapted for a wetland habitat because it collected the most fish (10) and nectar (8), which are common wetland foods."</li>
+        <li><strong>Evolution connection:</strong> Individual birds don't change, but birds with better-matched beaks survive longer, reproduce more, and pass beak traits to offspring. Over generations, populations shift.</li>
+      </ul>
+
+      <h3>Habitat Change Scenarios</h3>
+      <p><strong>If drought removed Fish & Nectar:</strong></p>
+      <ul>
+        <li>Spoon-beak birds (pelicans) are in serious trouble (their best foods are gone)</li>
+        <li>Tweezers/Clothespin birds (insect/seed eaters) thrive because their foods remain</li>
+        <li>Over time: spoon-beak population would shrink; tweezers/clothespin populations grow</li>
+      </ul>
+
+      <p><strong>If winter removed Insects:</strong></p>
+      <ul>
+        <li>Tweezers/Clothespin birds struggle</li>
+        <li>Spoon, Fork, Chopsticks birds adapt to remaining foods or migrate</li>
+      </ul>
+
+      <p><strong>If invasive plant doubled Fluffy Seeds, removed Worms:</strong></p>
+      <ul>
+        <li>Fork-beak birds (spoonbill-type, spear fluffy seeds) thrive</li>
+        <li>Chopstick-beak birds (heron-type, relied on worms) decline</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <ul>
+        <li>Students can identify the best beak for each food type and explain <em>why</em> using physical properties</li>
+        <li>Students understand that beak shape = adaptation for specific food sources</li>
+        <li>Students recognize that environmental change favors some organisms over others (NGSS 3-LS4-3)</li>
+        <li>5th graders can write a claim with data evidence and connect to natural selection across generations</li>
+      </ul>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>

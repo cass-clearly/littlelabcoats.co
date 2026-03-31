@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strong Push, Gentle Push — Forces Lab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1565c0;
+      padding-bottom: 10px;
+      color: #1565c0;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1565c0;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #0d47a1;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1565c0;
+    }
+    .procedure-step strong { color: #1565c0; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .vocab-card {
+      display: inline-block;
+      background: #fff3e0;
+      border: 2px solid #ff9800;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 130px;
+    }
+    .vocab-card .emoji { font-size: 22pt; display: block; margin-bottom: 4px; }
+    .vocab-card .word { font-weight: bold; color: #e65100; font-size: 12pt; }
+    .vocab-card .def { font-size: 9pt; color: #555; }
+    .object-card {
+      display: inline-block;
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 4px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 100px;
+    }
+    .object-card .emoji { font-size: 20pt; display: block; margin-bottom: 2px; }
+    .object-card .name { font-weight: bold; color: #283593; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .force-compare {
+      display: flex;
+      gap: 20px;
+      margin: 15px 0;
+    }
+    .force-box {
+      flex: 1;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+    .gentle { background: #e8f5e9; border: 2px solid #66bb6a; }
+    .gentle .label { color: #2e7d32; font-weight: bold; font-size: 13pt; }
+    .strong { background: #ffebee; border: 2px solid #ef5350; }
+    .strong .label { color: #c62828; font-weight: bold; font-size: 13pt; }
+    .force-box .emoji { font-size: 28pt; }
+    /* Worksheet */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 2px solid #333;
+      padding: 10px 8px;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .data-table th {
+      background: #bbdefb;
+      font-weight: bold;
+      color: #0d47a1;
+    }
+    .data-table td { min-height: 40px; height: 40px; }
+    .data-table td:first-child { text-align: left; font-weight: bold; background: #e3f2fd; }
+    .draw-box {
+      border: 2px solid #333;
+      border-radius: 8px;
+      min-height: 120px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+      font-style: italic;
+    }
+    .draw-row {
+      display: flex;
+      gap: 12px;
+      margin: 10px 0;
+    }
+    .draw-row > div { flex: 1; }
+    .draw-row .draw-label {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 11pt;
+    }
+    .gentle-label { color: #2e7d32; }
+    .strong-label { color: #c62828; }
+    .notes-lines p {
+      border-bottom: 1px solid #bbb;
+      height: 32px;
+      margin: 0;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    /* Answer key */
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .answer-key .expected {
+      background: white;
+      border-left: 4px solid #ff9800;
+      padding: 8px 14px;
+      margin: 8px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>💪 Strong Push, Gentle Push 🤏</h1>
+  <p class="subtitle">Unit 1, Lesson 3 — How Hard You Push Changes How Far Things Go!</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> Kindergarten</span>
+    <span>⏱️ <strong>Duration:</strong> 30–45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science — Forces</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🏎️💨 &nbsp; 🚗</div>
+    <div class="caption">A strong push sends things flying — a gentle push barely moves them!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>K-PS2-1</strong> — Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.
+  </div>
+
+  <h2>🎯 The Big Idea</h2>
+  <p>A <strong>push</strong> is a force that moves things away from you. But not all pushes are the same. A <strong>gentle push</strong> moves an object a little bit. A <strong>strong push</strong> moves it <em>a lot</em>. Today, we're going to test this with our own hands.</p>
+
+  <div class="force-compare">
+    <div class="force-box gentle">
+      <div class="emoji">🤏</div>
+      <div class="label">Gentle Push</div>
+      <p style="font-size:10pt; margin:4px 0;">A little bit of force<br>Object moves a <em>short</em> distance</p>
+    </div>
+    <div class="force-box strong">
+      <div class="emoji">💪</div>
+      <div class="label">Strong Push</div>
+      <p style="font-size:10pt; margin:4px 0;"><em>A lot</em> of force<br>Object moves a <em>long</em> distance</p>
+    </div>
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <p>Force is the strength of a push or pull. The harder you push something, the more force you use, and the farther it goes. A gentle push uses just a little force, so the object doesn't move very far. A strong push uses a lot of force, so the object moves much farther. When scientists study forces, they measure how much force is used and how far things move. You'll do this today by testing different push strengths!</p>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> push, force, gentle, strong, distance, far, near
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧪 Test Objects</h3>
+    <div style="text-align: center; margin: 10px 0;">
+      <div class="object-card"><span class="emoji">⚽</span><span class="name">Ball</span></div>
+      <div class="object-card"><span class="emoji">🚗</span><span class="name">Toy Car</span></div>
+      <div class="object-card"><span class="emoji">🧊</span><span class="name">Block / Box</span></div>
+    </div>
+
+    <h3>🧰 Other Supplies</h3>
+    <ul>
+      <li>Painter's tape or masking tape (for marking start line &amp; distances)</li>
+      <li>A long hallway, smooth floor, or tabletop</li>
+      <li>Pencils, crayons, or markers</li>
+      <li>Printed Student Worksheet (last pages)</li>
+      <li>Optional: ruler, yardstick, or measuring tape</li>
+      <li>Optional: a stuffed animal or pompom (extra test object!)</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Setup tip:</strong> A smooth, hard floor works best (wood, tile, laminate). Carpet adds too much friction and makes differences harder to see. A long hallway is ideal!
+  </div>
+
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Setup (5 minutes):</strong><br>
+    Put a strip of tape on the floor — this is the <strong>start line</strong>. 🏁 Clear a long path in front of the start line (at least six to eight feet). Gather all test objects and place them near the start line. Give each child a Student Worksheet, crayons, and a pencil.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Warm-Up Talk (5 min):</strong><br>
+    Ask: <em>"What is a push? Can you show me a push?"</em> Let both kids demonstrate pushing the air, pushing their hands together, gently pushing a toy. Then ask: <em>"What happens if you push something <em>really</em> hard vs. really softly?"</em> Let them guess.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Demonstrate (3 min):</strong><br>
+    Place the ball at the start line. Give it a <strong>gentle push</strong>. Mark where it stops with a small piece of tape. Now put it back and give it a <strong>strong push</strong>. Mark where THAT stops. Ask: <em>"Whoa! What happened? Why did it go farther the second time?"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Experiment Time! (15–20 min):</strong>
+    <ul>
+      <li>Kids take turns. One pushes, the other watches and marks where the object stops. Then switch!</li>
+      <li>For EACH object (ball, car, block):
+        <ol>
+          <li>Place it at the start line</li>
+          <li>Give a <strong>gentle push</strong> → mark where it stops with tape</li>
+          <li>Place it back at the start line</li>
+          <li>Give a <strong>strong push</strong> → mark where it stops with tape</li>
+        </ol>
+      </li>
+      <li>After each test, look at the two tape marks. Which one is farther from the start? 🤔</li>
+      <li>Record results on the Student Worksheet (draw or write!)</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Sibling teamwork:</strong> One child is the "Pusher" and the other is the "Marker" (places tape where the object stops). Swap roles for each object!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Compare &amp; Discuss (5–10 min):</strong><br>
+    Look at all the tape marks on the floor together. Ask the discussion questions below. Have kids share what they noticed.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Wrap-Up (5 min):</strong><br>
+    Say together: <em>"A strong push makes things go <em>far</em>. A gentle push makes things go <em>a little</em>."</em> High five — gently <em>and</em> strongly! 🖐️
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🟢 1.</strong> What happened when you pushed the ball gently? What about when you pushed it hard?
+  </div>
+  <div class="question-box">
+    <strong>🟢 2.</strong> Which push made the car go farther — the gentle push or the strong push?
+  </div>
+  <div class="question-box">
+    <strong>🟢 3.</strong> Did all three objects move the same distance with a strong push? Why or why not?
+  </div>
+  <div class="question-box">
+    <strong>🟢 4.</strong> What would happen if you pushed something with <em>no</em> force at all? (Zero push!)
+  </div>
+  <div class="question-box">
+    <strong>🟢 5.</strong> Can you think of a time in real life when you use a gentle push? A strong push?<br>
+    <em style="font-size:10pt; color:#666;">(Examples: closing a door gently vs. slamming it, rolling a bowling ball, pushing a friend on a swing)</em>
+  </div>
+  <div class="question-box">
+    <strong>🟢 6.</strong> Which object was hardest to push? Why do you think so?
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📐 <strong>Measure It:</strong> Use a ruler or measuring tape to measure actual distances. Write the numbers! Great early math connection.</li>
+      <li>🧸 <strong>More Objects:</strong> Try pushing a stuffed animal, a pompom, a book, a sock — do heavier/lighter things behave differently?</li>
+      <li>🔄 <strong>Try Pulls!</strong> Tie a string to a toy car. Pull gently, then pull hard. Same pattern?</li>
+      <li>⬆️ <strong>Ramps:</strong> Set up a ramp with a cutting board or book. Push a car gently from the top vs. strongly. What changes?</li>
+      <li>🎳 <strong>Bowling Game:</strong> Set up plastic cups as "pins." Roll the ball gently — how many fall? Roll it hard — how many now?</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Mess level:</strong> Low. This is a clean experiment. Just need floor space.</li>
+      <li><strong>Floor surface matters:</strong> Hard, smooth floors show the biggest difference between gentle and strong pushes. On carpet, objects stop quickly regardless of force.</li>
+      <li><strong>Let them be silly:</strong> Kindergartners will want to push things <em>really</em> hard. That's great — it proves the point. Just set boundaries (no pushing toward walls, pets, or breakable things).</li>
+      <li><strong>Language to reinforce:</strong> Use "force," "push," "gentle," "strong," "far," and "distance" often. These are the science words we want them to absorb.</li>
+      <li><strong>Don't worry about precision:</strong> The goal is the qualitative observation — strong push = farther. Exact measurements aren't needed (but are a great extension for kids who are ready).</li>
+      <li><strong>Sibling dynamics:</strong> Having them take turns as "Pusher" and "Marker" keeps both engaged and avoids fights over who pushes first.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+
+    <h1>💪 Strong Push, Gentle Push — Student Worksheet 🤏</h1>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>⚽ Test 1: Ball</h3>
+    <p>Push the ball gently. Then push it hard. Draw what happened!</p>
+    <div class="draw-row">
+      <div>
+        <div class="draw-label gentle-label">🤏 Gentle Push</div>
+        <div class="draw-box">Draw how far the ball went</div>
+      </div>
+      <div>
+        <div class="draw-label strong-label">💪 Strong Push</div>
+        <div class="draw-box">Draw how far the ball went</div>
+      </div>
+    </div>
+    <p>Which push made the ball go farther? &nbsp; <strong>Gentle</strong> &nbsp; / &nbsp; <strong>Strong</strong> &nbsp; (circle one)</p>
+
+    <h3>🚗 Test 2: Toy Car</h3>
+    <p>Push the car gently. Then push it hard. Draw what happened!</p>
+    <div class="draw-row">
+      <div>
+        <div class="draw-label gentle-label">🤏 Gentle Push</div>
+        <div class="draw-box">Draw how far the car went</div>
+      </div>
+      <div>
+        <div class="draw-label strong-label">💪 Strong Push</div>
+        <div class="draw-box">Draw how far the car went</div>
+      </div>
+    </div>
+    <p>Which push made the car go farther? &nbsp; <strong>Gentle</strong> &nbsp; / &nbsp; <strong>Strong</strong> &nbsp; (circle one)</p>
+
+    <h3>🧊 Test 3: Block / Box</h3>
+    <p>Push the block gently. Then push it hard. Draw what happened!</p>
+    <div class="draw-row">
+      <div>
+        <div class="draw-label gentle-label">🤏 Gentle Push</div>
+        <div class="draw-box">Draw how far the block went</div>
+      </div>
+      <div>
+        <div class="draw-label strong-label">💪 Strong Push</div>
+        <div class="draw-box">Draw how far the block went</div>
+      </div>
+    </div>
+    <p>Which push made the block go farther? &nbsp; <strong>Gentle</strong> &nbsp; / &nbsp; <strong>Strong</strong> &nbsp; (circle one)</p>
+
+    <h3 style="margin-top: 24px;">🤔 Big Question!</h3>
+    <div class="question-box">
+      <strong>What did you learn? Finish this sentence:</strong><br><br>
+      When I push something <strong>hard</strong>, it goes ________________________________.<br><br>
+      When I push something <strong>gently</strong>, it goes ________________________________.
+    </div>
+
+    <h3>🎨 Draw your favorite part of the experiment!</h3>
+    <div class="draw-box" style="min-height: 160px;">Draw here!</div>
+
+  </div>
+
+  <!-- ====================== PARENT ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+      <h3>Expected Observations</h3>
+
+      <div class="expected">
+        <strong>⚽ Ball:</strong> A gentle push should move the ball a short distance (a few inches to a foot). A strong push should send it rolling several feet. Kids should circle <strong>"Strong"</strong> as going farther.
+      </div>
+
+      <div class="expected">
+        <strong>🚗 Toy Car:</strong> Same pattern — gentle push moves it a short distance, strong push sends it much farther. Wheels make the difference especially dramatic on smooth floors. Circle <strong>"Strong."</strong>
+      </div>
+
+      <div class="expected">
+        <strong>🧊 Block / Box:</strong> A block without wheels requires more force to get moving. A gentle push may barely move it (especially on carpet). A strong push will slide it further but likely not as far as the ball or car. Circle <strong>"Strong."</strong>
+      </div>
+
+      <div class="expected">
+        <strong>🤔 Big Question — Expected answers:</strong><br>
+        "When I push something <strong>hard</strong>, it goes <strong>far / a long way / really far</strong>."<br>
+        "When I push something <strong>gently</strong>, it goes <strong>a little / not very far / a short way</strong>."<br>
+        <em>Accept any phrasing that shows they understand stronger push = more distance.</em>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Q1–Q2:</strong> Kids should describe that hard pushes = went farther, gentle = stayed close. Encourage them to use the word "force."</li>
+        <li><strong>Q3 (Different objects):</strong> Heavier/bulkier objects (block) don't go as far as lighter ones (ball) with the same push. This is a preview of mass concepts — you don't need to teach "mass" formally, but you can say "heavier things are harder to push far."</li>
+        <li><strong>Q4 (Zero push):</strong> Nothing happens! Objects stay still unless a force acts on them. (This previews Newton's First Law — no need to name it.)</li>
+        <li><strong>Q5 (Real life):</strong> Great answers include: closing a door softly vs. slamming, rolling a bowling ball, pushing a shopping cart, pushing a sibling on a swing (gentle = small swing, hard = big swing).</li>
+        <li><strong>Q6 (Hardest to push):</strong> The block/box is likely hardest because it has no wheels and more friction with the floor. The ball or car is easiest.</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <p>By the end, both kids should be able to say (in their own words): <strong>"If you push harder, things go farther."</strong> That's the core K-PS2-1 concept. Everything else is bonus! 🎉</p>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+</body>
+</html>
