@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mix It Up: Mixing and Separating Materials — Physical Science Unit, Lesson 4</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .vocab-cards { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 130px; }
+    .vocab-card .term { font-weight: bold; color: #1565c0; font-size: 11pt; }
+    .vocab-card .def { color: #444; font-size: 9pt; margin-top: 4px; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box { background: #e3f2fd; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .highlight-box { background: #fff3e0; border: 2px solid #ffb74d; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    .highlight-box strong { color: #e65100; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #0d47a1; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #1565c0; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .fill-blank { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1565c0; min-width: 180px; margin: 0 4px; }
+    .exp-box { background: #f9f9f9; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 16px; margin: 10px 0; }
+    .exp-box h3 { color: #1565c0; border-color: #90caf9; }
+    .exp-obs-line { border-bottom: 1px solid #ccc; min-height: 32px; margin: 6px 0; }
+    .sorting-activity { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .highlight-box, .exp-box { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_7svbZnDGAbE">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🧂 Mix It Up: Mixing and Separating Materials 💧🪣</h1>
+  <p class="subtitle">Physical Science Unit, Lesson 4</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 50 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science -- Mixing and Separating</span>
+    <span>🧰 <strong>Materials:</strong> Household items only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🧂💧🪣🪨🥄</div>
+    <div class="caption">Can you always get materials back after mixing them? Let's find out which changes are reversible!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-PS1-3</strong> -- Make observations to construct an evidence-based account of how an object made of a small set of pieces can be disassembled and put back together again.<br>
+    <strong>2-PS1-4</strong> -- Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Mix different materials and observe what happens</li>
+    <li>Distinguish between mixtures that can be separated and those that are harder to separate</li>
+    <li>Connect observations to the concept of reversible and irreversible changes</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need (All Household Items)</h3>
+    <ul>
+      <li>Table salt (about 2 tablespoons)</li>
+      <li>Water (2 clear cups)</li>
+      <li>Sand (about 2 tablespoons -- from outside, or a pinch of potting soil)</li>
+      <li>Gravel or small pebbles (about 1/4 cup)</li>
+      <li>A kitchen strainer or colander</li>
+      <li>A spoon for stirring</li>
+      <li>Paper and pencil for recording</li>
+    </ul>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <div class="term">Mixture</div>
+      <div class="def">Two or more materials combined -- each material keeps its own properties inside</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Dissolve</div>
+      <div class="def">When a solid breaks into tiny invisible pieces in a liquid</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Separate</div>
+      <div class="def">To take a mixture apart and get the original materials back</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Reversible</div>
+      <div class="def">A change that can be undone -- you can go back to how it was</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Irreversible</div>
+      <div class="def">A change that cannot be undone -- no going back!</div>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>A mixture is what you get when you combine two or more materials together. The interesting thing about most mixtures is that each material keeps its own properties even when mixed. Pour sand and gravel together -- the sand is still sand, the gravel is still gravel. They are just combined, not changed. With the right tool, you can get them apart again.</p>
+  <p>Some mixtures are easier to separate than others. Sand and gravel are easy to separate with a strainer because the gravel pieces are too big to fall through the holes, while the smaller sand particles fall through easily. Salt dissolved in water is trickier. When salt dissolves, it breaks into particles so tiny we cannot see them. You cannot filter them out with a regular strainer. But there is a way to get the salt back: evaporation. If you heat the saltwater (or let it sit in the sun), the water turns into vapor and escapes into the air, leaving the salt behind as white crystals.</p>
+  <p>Understanding mixtures and separation matters in real science and engineering. Water treatment plants separate dirt and bacteria from drinking water before it reaches your tap. Gold miners use flowing water to separate heavy gold flakes from lighter sand. Scientists in labs separate chemicals to identify what is in medicines or foods. Today, you will explore two classic mixing-and-separating challenges and decide which changes are reversible.</p>
+
+  <h2>🔬 Procedure: Two Mixing Experiments</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Set up two clear cups. Label one "Salt Water" and one "Sand + Gravel."
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2 -- Experiment 1 (Salt + Water):</strong> Pour 1/2 cup of water into the first cup. Add 1 tablespoon of salt. Stir for 30 seconds. Watch carefully. Where did the salt go?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Touch a clean finger to the surface of the water, then touch your finger to your tongue. What does it taste like? Is the salt gone, or is it still there but invisible?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Record your observations: Did the salt disappear, or is it hiding inside the water? The salt DISSOLVED -- it is still there in tiny invisible pieces.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5 -- Experiment 2 (Sand + Gravel):</strong> Mix the sand and gravel together in a cup. They are now a mixture. Look at it -- can you still see separate grains of sand and pebbles of gravel?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Hold the strainer over a bowl. Pour the sand-and-gravel mixture into the strainer. What happens? The gravel stays in the strainer; the sand falls through!
+  </div>
+  <div class="procedure-step">
+    <strong>Step 7:</strong> You just separated the mixture! Compare the two experiments: which was easy to separate, and which would be hard to separate?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 8:</strong> Discuss: Sand + gravel separation is reversible -- you got the same materials back. How would you get the salt back from the saltwater? (You would need to evaporate the water away by heating it!)
+  </div>
+
+  <div class="highlight-box">
+    <strong>🔑 Key Concept:</strong> Sand + gravel: easy to separate with a strainer (reversible!). Salt + water: hard to separate -- the salt dissolved into tiny invisible pieces. You CAN get the salt back by evaporating the water, but it takes extra work!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What would happen if you heated the salt water?
+    <p class="discussion-hint">Suggested answer: If you heated the saltwater, the water would slowly evaporate, turning into water vapor. The salt cannot evaporate -- it would be left behind as white crystals on the bottom and sides of the cup. This is exactly how sea salt is made commercially! Ocean water is collected in large flat pools and the sun evaporates the water, leaving pure salt crystals behind.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Why could you separate the sand and gravel with a strainer, but not the salt and water?
+    <p class="discussion-hint">Suggested answer: The strainer has holes. Gravel pieces are bigger than the holes, so they stay in the strainer. Sand particles are smaller and fall through. But salt that has dissolved in water breaks into particles so tiny that no regular strainer could catch them -- they are the size of individual molecules. To separate a dissolved solid from liquid, you need a different method: evaporation.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Is mixing salt into water reversible or irreversible?
+    <p class="discussion-hint">Suggested answer: It is reversible, but tricky! You can get the salt back by evaporating the water. The salt does not change chemically when it dissolves -- it just breaks into very tiny particles that mix with water molecules. When the water leaves (evaporates), the salt particles come back together as crystals. Compare this to cooking an egg -- once cooked, you cannot uncook it. That is irreversible.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> Can you think of a mixture from your kitchen that you could separate at home?
+    <p class="discussion-hint">Suggested answer: So many options! Italian salad dressing (oil and vinegar separate when you stop shaking -- oil floats on top). Cereal and milk (pour off the milk, cereal stays). A bowl of mixed nuts (sort by size or type by hand). Orange juice with pulp (strain it to remove pulp). Frozen peas and corn mixed together (sort by color).</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🔬 Student Worksheet -- Mix It Up!</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 -- Experiment Observations</h3>
+
+    <div class="exp-box">
+      <h3>Experiment 1: Salt + Water</h3>
+      <p style="font-size:10pt;">What did I do: <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:300px;"></span></p>
+      <p style="font-size:10pt; margin-top:8px;">What I saw: <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:310px;"></span></p>
+      <p style="font-size:10pt; margin-top:8px;">Reversible or irreversible? __________________ Why? <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:200px;"></span></p>
+    </div>
+
+    <div class="exp-box" style="margin-top:10px;">
+      <h3>Experiment 2: Sand + Gravel</h3>
+      <p style="font-size:10pt;">What did I do: <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:300px;"></span></p>
+      <p style="font-size:10pt; margin-top:8px;">What I saw: <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:310px;"></span></p>
+      <p style="font-size:10pt; margin-top:8px;">Reversible or irreversible? __________________ Why? <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:200px;"></span></p>
+    </div>
+
+    <h3>Part 2 -- Fill in the Blanks</h3>
+    <div class="fill-blank">
+      When salt dissolves in water, it <span class="blank-line"></span> but is still <span class="blank-line"></span>.<br><br>
+      A mixture is when two or more materials are <span class="blank-line"></span> together.
+    </div>
+
+    <h3>Part 3 -- Sort the Changes</h3>
+    <div class="sorting-activity">
+      <p><strong>Circle the REVERSIBLE changes (changes you can undo):</strong></p>
+      <p style="font-size:12pt; line-height:2.2;">
+        Baking bread &nbsp;&nbsp;&nbsp; Mixing sand and gravel &nbsp;&nbsp;&nbsp; Cooking an egg<br>
+        Melting ice &nbsp;&nbsp;&nbsp; Dissolving sugar in water &nbsp;&nbsp;&nbsp; Toasting bread
+      </p>
+    </div>
+
+    <h3>Part 4 -- Draw It!</h3>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw what happened to the salt when you stirred it into water. Show the salt disappearing!</div>
+      <div style="height: 130px;"></div>
+    </div>
+  </div>
+
+  <!-- PARENT/TEACHER NOTES -->
+  <div class="page-break">
+    <h2>👩‍🏫 Parent/Teacher Notes</h2>
+    <div class="teacher-note">
+      <ul>
+        <li><strong>Key NGSS concept:</strong> This lesson introduces reversible vs. irreversible changes -- use these terms explicitly throughout the activity. Every time you do a step, ask: "Is this reversible?"</li>
+        <li><strong>Salt water tasting:</strong> Completely safe with plain table salt and clean water. This reinforces that the salt is still in the water even when invisible -- a powerful observation for kids who think it "disappeared."</li>
+        <li><strong>Evaporation extension:</strong> If time allows, put the saltwater cup on a sunny windowsill for several days and watch for salt crystals to form. This is a wonderful multi-day connection activity.</li>
+        <li><strong>Sand sourcing:</strong> Sand from a sandbox or garden works fine. It does not need to be clean play sand -- slightly natural, gritty sand actually makes the separation more dramatic.</li>
+        <li><strong>Worksheet sorting answers (Reversible):</strong> Mixing sand and gravel (strainer separates them), melting ice (refreeze it), dissolving sugar in water (evaporate to get sugar back). Irreversible: baking bread, cooking an egg, toasting bread (chemical changes -- new substances form).</li>
+        <li><strong>Connection to real-world science:</strong> Mention that water treatment plants, salt producers, and gold miners all use separation science. Making these connections helps students see science as relevant to the world around them.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_7svbZnDGAbE" data-content-selector="body"></script>
+</body>
+</html>

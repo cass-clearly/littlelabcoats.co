@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build the Best Boat: Engineering with Foil — Physical Science Unit, Lesson 6</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .vocab-cards { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 120px; }
+    .vocab-card .term { font-weight: bold; color: #1565c0; font-size: 11pt; }
+    .vocab-card .def { color: #444; font-size: 9pt; margin-top: 4px; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box { background: #e3f2fd; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .challenge-box { background: #e8f5e9; border: 2px solid #66bb6a; border-radius: 10px; padding: 16px 18px; margin: 12px 0; }
+    .challenge-box h3 { color: #2e7d32; border-color: #a5d6a7; }
+    .highlight-box { background: #fff3e0; border: 2px solid #ffb74d; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    .highlight-box strong { color: #e65100; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #0d47a1; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #1565c0; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .design-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+    .design-card { border: 2px solid #90caf9; border-radius: 8px; padding: 12px; background: #f9f9f9; }
+    .design-card .design-label { font-weight: bold; color: #1565c0; font-size: 10pt; margin-bottom: 8px; }
+    .fill-blank { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1565c0; min-width: 120px; margin: 0 4px; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .highlight-box, .challenge-box { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_2eV50-Z4aOk">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🛥️ Build the Best Boat: Engineering with Foil 🪙🔬</h1>
+  <p class="subtitle">Physical Science Unit, Lesson 6 -- Engineering Challenge</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 60 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science -- Engineering Design</span>
+    <span>🧰 <strong>Materials:</strong> Household items only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🛥️🪙🏆🔬💡</div>
+    <div class="caption">This is the Unit 1 engineering challenge -- time to put everything you learned to work!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-PS1-2</strong> -- Analyze data obtained from testing different materials to determine which materials have the properties that are best suited for an intended purpose.<br>
+    <strong>K-2-ETS1-1</strong> -- Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Apply knowledge of material properties to make engineering design decisions</li>
+    <li>Design, test, and improve a foil boat to hold the maximum number of pennies</li>
+    <li>Practice the full engineering design process: design, build, test, analyze, improve</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need (All Household Items)</h3>
+    <ul>
+      <li>3 sheets of aluminum foil (about 12x12 inches each -- or tear from a roll)</li>
+      <li>20 pennies (or other coins of equal size)</li>
+      <li>A large bowl or pot of water</li>
+      <li>A pencil and paper for sketching your design</li>
+      <li>Optional: a ruler for measuring your boat</li>
+    </ul>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <div class="term">Engineer</div>
+      <div class="def">A person who uses science and math to design and build things that solve problems</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Design</div>
+      <div class="def">A plan or drawing that shows what you want to build</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Test</div>
+      <div class="def">To try out your design and observe what happens</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Improve</div>
+      <div class="def">To make changes to your design to make it work better</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Buoyancy</div>
+      <div class="def">The upward force water pushes on an object -- what makes things float</div>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Engineers solve problems using science. Today you are going to be an engineer! Your challenge: design and build a boat from aluminum foil that can hold as many pennies as possible before sinking. This uses everything you have learned about matter. Foil is a solid with specific properties -- flexible, waterproof, and shapeable. Water creates an upward force on floating objects (called buoyancy). The shape of your boat determines how much weight it can support before water comes over the sides.</p>
+  <p>What makes a foil boat hold more pennies? Three things matter: width (a wider boat spreads the weight over more water), depth (taller walls keep water from spilling over the sides as pennies are added), and leak prevention (even a tiny gap or hole lets water in, and the boat will slowly sink). Good engineers think about all three before they start building.</p>
+  <p>This lesson is your chance to be a real engineer. You have three sheets of foil, so you have room to try multiple designs or iterate on one great idea. Keep track of how many pennies each design holds and what you changed between versions. Engineers actually learn more from failure than from getting it right the first time. If your boat sinks on the first test, that is not a setback -- that is data! It tells you exactly what to fix on the next try.</p>
+
+  <div class="challenge-box">
+    <h3>🏆 The Challenge</h3>
+    <p><strong>Goal:</strong> Build a foil boat that holds as many pennies as possible before sinking.</p>
+    <p><strong>Rules:</strong> You may use only aluminum foil (no tape, no other materials). You must do at least TWO design iterations (try, improve, try again).</p>
+    <p><strong>Success:</strong> Your best penny count after improving your design!</p>
+  </div>
+
+  <h2>🔬 Procedure: Design, Build, Test, Improve!</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 -- DESIGN (5 minutes):</strong> Before touching the foil, sketch your boat design on paper. Think about shape, wall height, and base size. Consider: wider or narrower? Tall walls or short walls? Flat bottom or pointed bow? Label your sketch.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2 -- BUILD (10 minutes):</strong> Use your first sheet of foil to build your design. Take time folding the edges up to create walls. Make sure there are no gaps or holes at the corners -- those are where water sneaks in.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3 -- TEST 1:</strong> Gently place your boat on the water. If it floats, start adding pennies one by one. Place them carefully in the center of the boat first. Count how many pennies it holds before sinking!
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4 -- RECORD:</strong> Write down your Test 1 penny count. Make a quick sketch of your boat design and note its shape, wall height, and any issues you noticed.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5 -- ANALYZE:</strong> Why did your boat sink when it did? Were the walls too short (water came over the top)? Did it tip sideways (unstable, base too narrow)? Did it spring a leak at a corner? Each answer tells you what to fix.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6 -- IMPROVE (5 minutes):</strong> Based on what you observed, plan one or two specific changes to your design. Write them down. What are you changing and why?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 7 -- BUILD 2:</strong> Use your second sheet of foil to build the improved design. Apply your analysis from Step 5 to make the changes you planned.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 8 -- TEST 2:</strong> Float your improved boat and load pennies. Record your Test 2 penny count. Compare to Test 1 -- did the improvement help?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 9 (Bonus):</strong> If you have a third sheet of foil and time, make a third iteration. What is your personal best penny record?
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Penny loading tip:</strong> Place pennies in the very center of the boat first, then work outward evenly. This keeps the boat balanced and prevents it from tipping to one side.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What design features helped hold the most pennies? Why does a wider or deeper boat help?
+    <p class="discussion-hint">Suggested answer: Width spreads the weight over more water surface, which increases buoyancy. Deeper (taller) walls keep water from splashing over the sides as pennies are added. A flat bottom also distributes the penny weight more evenly. The combination of wide base plus tall walls is usually the winning approach!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> In Lesson 3, you learned that flat foil floats but a crumpled ball sinks. How did you use that information in your boat design?
+    <p class="discussion-hint">Suggested answer: The flat sheet works because it has lots of surface area in contact with water and traps air underneath. The boat should be flat on the bottom (large area) and have walls to create an air pocket inside. Keeping the foil as flat and even as possible, not crumpled or leaky, applies the same principle that makes a flat foil sheet float.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> If your first boat did not work well, how did you decide what to improve?
+    <p class="discussion-hint">Suggested answer: You watch carefully when it fails -- that is the key engineering insight. Did the boat tip sideways? Then make the base wider for stability. Did water spill over the walls? Then make the walls taller. Did it spring a leak? Then fold the corners more carefully. Each failure tells you exactly what to fix. A failure is not a mistake -- it is information!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> Could you build an even better boat if you used a different material? What properties would that material need?
+    <p class="discussion-hint">Suggested answer: The material would need to be waterproof (water cannot pass through it), flexible enough to be shaped into a boat, and strong enough not to tear. Foil works because it is waterproof and very flexible, but it is thin and can tear at corners. A thicker waterproof material (like a plastic bag or heavy plastic sheet) might hold even more pennies. Engineers always ask "is this the best material for the job?"</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🔬 Student Worksheet -- Build the Best Boat!</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Step 1 -- My First Boat Design</h3>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your first boat design here. Label the shape, walls, and bottom.</div>
+      <div style="height: 140px;"></div>
+    </div>
+
+    <div class="design-grid">
+      <div class="design-card">
+        <div class="design-label">Test 1 Results:</div>
+        <p style="font-size:10pt;">Pennies held: _______ pennies</p>
+        <p style="font-size:10pt; margin-top:6px;">Why did it sink? <span style="border-bottom:1px solid #ccc; display:inline-block; min-width:160px;"></span></p>
+      </div>
+      <div class="design-card">
+        <div class="design-label">What I will change for Test 2:</div>
+        <div style="border-bottom:1px solid #ccc; height:24px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #ccc; height:24px; margin:6px 0;"></div>
+        <p style="font-size:9pt; color:#777;">Why I'm making this change:</p>
+        <div style="border-bottom:1px solid #ccc; height:24px;"></div>
+      </div>
+    </div>
+
+    <h3>Step 2 -- My Improved Boat Design</h3>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw your improved boat design. Show what you changed from Test 1.</div>
+      <div style="height: 140px;"></div>
+    </div>
+
+    <div class="design-grid">
+      <div class="design-card">
+        <div class="design-label">Test 2 Results:</div>
+        <p style="font-size:10pt;">Pennies held: _______ pennies</p>
+        <p style="font-size:10pt; margin-top:6px;">Did the improvement help? Yes / No</p>
+      </div>
+      <div class="design-card">
+        <div class="design-label">My Best Design Tip for Next Time:</div>
+        <div style="border-bottom:1px solid #ccc; height:24px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #ccc; height:24px; margin:6px 0;"></div>
+        <div style="border-bottom:1px solid #ccc; height:24px;"></div>
+      </div>
+    </div>
+
+    <div class="fill-blank" style="margin-top:16px;">
+      My best penny count was <span class="blank-line" style="min-width:60px;"></span> pennies.<br><br>
+      The most important design feature was <span class="blank-line" style="min-width:220px;"></span> because <span class="blank-line" style="min-width:220px;"></span>.
+    </div>
+  </div>
+
+  <!-- PARENT/TEACHER NOTES -->
+  <div class="page-break">
+    <h2>👩‍🏫 Parent/Teacher Notes</h2>
+    <div class="teacher-note">
+      <ul>
+        <li><strong>This is the unit culminating engineering challenge.</strong> Encourage at least two full design-test-improve cycles. The iteration is the lesson -- not the penny count itself.</li>
+        <li><strong>Penny loading tip:</strong> Place pennies in the very center of the boat first, then work outward. This keeps the boat balanced. Dropping pennies from height or at an angle will cause splashing and premature sinking -- add them gently.</li>
+        <li><strong>Common mistakes to watch for and discuss:</strong> Gaps in foil corners (water seeps in), walls that are too low (water washes over), boat that is too narrow (tips sideways). Help students identify these through questioning -- do not just tell them the fix. Ask: "What do you notice? What might cause that?"</li>
+        <li><strong>Reframing failure:</strong> If a student gets frustrated after the first boat sinks, say: "That tells us so much -- now we know exactly what to fix. That is what engineers do." Model the language: "That's data, not failure."</li>
+        <li><strong>Typical results:</strong> First-attempt 2nd graders typically hold 5-15 pennies. With one thoughtful improvement (wider base or taller walls), 20-40+ pennies is very achievable.</li>
+        <li><strong>Third sheet opportunity:</strong> If time allows, the third sheet is a great bonus. Students who really understand the principles can sometimes hit 50+ pennies with a very wide, shallow boat with tall walls.</li>
+        <li><strong>For younger siblings:</strong> Let them add pennies and count along. They can participate meaningfully without building the boat themselves.</li>
+        <li><strong>Connecting to unit vocabulary:</strong> Ask students to use properties vocabulary: "The foil is _______ (flexible, waterproof) which makes it good for a boat because _______."</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_2eV50-Z4aOk" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot and Cold: How Heating and Cooling Change Matter — Physical Science Unit, Lesson 5</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .vocab-cards { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 120px; }
+    .vocab-card .term { font-weight: bold; color: #1565c0; font-size: 11pt; }
+    .vocab-card .def { color: #444; font-size: 9pt; margin-top: 4px; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box { background: #e3f2fd; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .highlight-box { background: #fff3e0; border: 2px solid #ffb74d; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    .highlight-box strong { color: #e65100; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #0d47a1; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #1565c0; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .fill-blank { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1565c0; min-width: 160px; margin: 0 4px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #1565c0; color: white; padding: 8px 6px; text-align: center; }
+    .ws-table td { border: 1px solid #90caf9; padding: 8px 6px; height: 40px; }
+    .ws-table .mat-col { font-weight: bold; background: #e3f2fd; text-align: left; padding-left: 8px; }
+    .sorting-activity { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .highlight-box { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_J_vYfKBnFS0">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🧊 Hot and Cold: How Heating and Cooling Change Matter 🔥🍞</h1>
+  <p class="subtitle">Physical Science Unit, Lesson 5</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science -- States and Changes</span>
+    <span>🧰 <strong>Materials:</strong> Household items only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🧊🧈🔥🍞💧</div>
+    <div class="caption">Some changes you can undo. Others? No going back! Can you tell which is which?</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-PS1-3</strong> -- Make observations to construct an evidence-based account of how an object made of a small set of pieces can be disassembled and put back together again.<br>
+    <strong>2-PS1-4</strong> -- Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Observe how heating and cooling change the state or appearance of matter</li>
+    <li>Distinguish between reversible changes (melting, freezing) and irreversible changes (cooking, toasting)</li>
+    <li>Build evidence-based arguments about why some changes can be undone and others cannot</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need (All Household Items)</h3>
+    <ul>
+      <li>A small pat of butter on a plate</li>
+      <li>An ice cube in a cup</li>
+      <li>A slice of bread</li>
+      <li>A toaster (adult use only)</li>
+      <li>Access to a freezer</li>
+      <li>Optional: microwave (adult use) to demonstrate butter melting</li>
+      <li>Paper and pencil for recording</li>
+    </ul>
+    <p style="font-size:10pt; color:#777; margin-top:8px;">⚠️ <em>Adult supervision required for toaster and any heating steps.</em></p>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <div class="term">Melt</div>
+      <div class="def">Heating a solid until it becomes a liquid</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Freeze</div>
+      <div class="def">Cooling a liquid until it becomes a solid</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Evaporate</div>
+      <div class="def">Heating a liquid until it becomes a gas (steam or vapor)</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Reversible</div>
+      <div class="def">A change you can undo -- the material goes back to its original form</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Irreversible</div>
+      <div class="def">A change you cannot undo -- the material permanently changed</div>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Heat is a form of energy, and it has the power to change matter. When you add heat to a solid, you give its particles more energy, which can cause the solid to melt and become a liquid. Remove that heat by cooling, and the liquid can freeze back into a solid. Butter melts on a warm pan -- that is adding heat. Put the melted butter in the fridge and it hardens again -- that is removing heat. This change goes both ways, so we call it reversible.</p>
+  <p>Some changes go all the way. When you toast bread, the heat does not just warm the bread -- it causes a chemical change inside. New substances form, the sugars in the bread turn brown through a process called caramelization, and the texture becomes permanently crispy. No amount of cooling will bring back the soft, white interior. This is an irreversible change.</p>
+  <p>This distinction matters in everyday life. If ice cream melts, you can put it back in the freezer and it will refreeze (reversible, though the texture may change slightly). But if you burn toast or bake a cake, no amount of cooling will undo what heat has done (irreversible). Simple state changes like melting and freezing are usually reversible. Chemical changes caused by high heat -- cooking, baking, burning -- are usually irreversible.</p>
+
+  <h2>🔬 Procedure: Three Heating and Cooling Experiments</h2>
+
+  <div class="procedure-step">
+    <strong>Experiment 1 -- Butter:</strong> Place a small pat of butter on a warm plate (or have an adult briefly warm it in the microwave for 10-15 seconds on low). Watch what happens. Is the butter a solid or a liquid now?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Put the melted butter in the fridge or set it outside in cold air. Wait 5-10 minutes. What happens? Did it go back to solid? Record your observation. This change is REVERSIBLE!
+  </div>
+  <div class="procedure-step">
+    <strong>Experiment 2 -- Ice Cube:</strong> Place an ice cube in a cup. Watch it over 10-15 minutes (or hold it in your warm hands to speed things up). Record changes as it transforms.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Observe the liquid water in the cup. Can you freeze it again? (Yes -- put it back in the freezer.) This change is REVERSIBLE! Water can go back and forth between solid and liquid many times.
+  </div>
+  <div class="procedure-step">
+    <strong>Experiment 3 -- Toast:</strong> With an adult's help, toast a slice of bread in the toaster. Observe carefully: the color changes to brown, it smells different, and the texture changes from soft to crispy.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Let the toast cool completely. Feel it. Did it become soft and white again? No! The change is IRREVERSIBLE -- the toast stays brown and crispy no matter how long you wait.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 7:</strong> Record all three experiments in a table: What happened / State changed? / Reversible or irreversible? / Your evidence (what you observed).
+  </div>
+  <div class="procedure-step">
+    <strong>Step 8 (Discussion):</strong> When you bake a cake or boil an egg, are those changes reversible or irreversible? (Irreversible! Cooking always involves chemical changes that cannot be undone.)
+  </div>
+
+  <div class="highlight-box">
+    <strong>🔑 Key Rule:</strong> Melting and freezing = REVERSIBLE (only the state changes, not the chemistry). Cooking, baking, and toasting = IRREVERSIBLE (the chemistry changes -- new substances form that you cannot uncreate).
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What other changes in cooking are irreversible?
+    <p class="discussion-hint">Suggested answer: Baking a cake -- the batter is permanently transformed into cake. Boiling an egg -- the egg proteins change permanently and no cooling will make a raw egg again. Grilling a hamburger, caramelizing onions, baking cookies. Cooking almost always causes irreversible chemical changes. This is actually very useful -- we want cooked food to stay cooked!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Why can water freeze and melt over and over, but bread cannot be untoasted?
+    <p class="discussion-hint">Suggested answer: Melting and freezing are physical changes -- only the state of matter changes, not the chemistry. Water molecules are still water molecules whether frozen or liquid. But toasting causes a chemical change -- new substances are actually created inside the bread. The chemistry cannot be reversed by simply removing the heat. New substances formed, and they are not the same as the original bread molecules.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> Steam rises from a boiling pot of water. Is that steam gone forever?
+    <p class="discussion-hint">Suggested answer: No! The steam is water in gas form. It can cool down and condense back into liquid water (you can see this on a cold window when steam hits it). This is the basis of the water cycle in nature. Water evaporates from oceans and lakes, rises as water vapor, cools in the atmosphere, and falls as rain or snow. Evaporation and condensation are reversible!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> A chocolate bar melts in your hand. Is that reversible or irreversible? How do you know?
+    <p class="discussion-hint">Suggested answer: Melting chocolate is reversible! If you chill it, it will harden back into solid chocolate. This is how chocolate candies are made: chocolate is melted, poured into molds, and then cooled to harden into the candy shape. However, once you eat the chocolate and your body digests it, THAT change is irreversible (digestion breaks chocolate down into completely different molecules).</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🔬 Student Worksheet -- Hot and Cold Changes</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 -- Experiment Results Table</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Experiment</th>
+        <th>What Happened</th>
+        <th>State Changed?</th>
+        <th>Reversible or Irreversible?</th>
+      </tr>
+      <tr>
+        <td class="mat-col">🧈 Butter</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">🧊 Ice Cube</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">🍞 Toast</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>Part 2 -- Reversible or Irreversible?</h3>
+    <div class="sorting-activity">
+      <p><strong>Write R (reversible) or I (irreversible) next to each change:</strong></p>
+      <p style="font-size:12pt; line-height:2.4;">
+        Melting ice _____&nbsp;&nbsp;&nbsp;&nbsp; Baking a cake _____&nbsp;&nbsp;&nbsp;&nbsp; Freezing juice into a popsicle _____<br>
+        Toasting bread _____&nbsp;&nbsp;&nbsp;&nbsp; Boiling water _____&nbsp;&nbsp;&nbsp;&nbsp; Cooking an egg _____
+      </p>
+    </div>
+
+    <h3>Part 3 -- Fill in the Blanks</h3>
+    <div class="fill-blank">
+      A <span class="blank-line"></span> change can be undone.<br><br>
+      An <span class="blank-line"></span> change cannot be undone.<br><br>
+      When butter melts, it changes from a <span class="blank-line"></span> to a <span class="blank-line"></span>.
+    </div>
+
+    <h3>Part 4 -- Draw It!</h3>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw the butter before heating (solid) and after cooling back down (solid again). Label both pictures!</div>
+      <div style="height: 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div style="text-align:center; padding-top: 90px; border-right: 1px dashed #ccc; font-size:10pt; color:#aaa;">Before heating (solid)</div>
+        <div style="text-align:center; padding-top: 90px; font-size:10pt; color:#aaa;">After cooling back down (solid again)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARENT/TEACHER NOTES -->
+  <div class="page-break">
+    <h2>👩‍🏫 Parent/Teacher Notes</h2>
+    <div class="teacher-note">
+      <ul>
+        <li><strong>Adult supervision required:</strong> Handle the toaster and microwave yourself. Have the child watch and observe carefully -- that is where the learning happens. Do not rush these steps.</li>
+        <li><strong>Key vocabulary to reinforce:</strong> Say "reversible" and "irreversible" constantly during each experiment. "Is this reversible? How do we know?" should be the recurring question throughout the lesson.</li>
+        <li><strong>Butter experiment timing:</strong> Butter melts quickly at room temperature on a warm day. For speed, a brief 10-15 second microwave burst on low works well. Be careful not to overheat -- you want melted butter, not splattered butter.</li>
+        <li><strong>Ice cube observation:</strong> If waiting for ice to melt fully takes too long, hold the ice in warm hands. It is a nice sensory experience too. The key is observing the state change from solid to liquid.</li>
+        <li><strong>Sorting answers (R/I):</strong> R = melting ice, freezing juice popsicle, boiling water (steam can re-condense). I = baking a cake, toasting bread, cooking an egg. Note: boiling water is reversible because steam condenses back to water.</li>
+        <li><strong>Gifted extension:</strong> Introduce the terms "physical change" (reversible, state only changes) and "chemical change" (irreversible, new substances form). This is 5th grade content, but advanced 2nd graders can grasp the core idea.</li>
+        <li><strong>Connection forward:</strong> This lesson builds directly toward the Lesson 6 engineering challenge -- students will apply their understanding of material properties to build a boat that uses foil's waterproof and flexible properties.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_J_vYfKBnFS0" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sink or Float? Testing Matter in Water — Physical Science Unit, Lesson 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .vocab-cards { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 130px; }
+    .vocab-card .term { font-weight: bold; color: #1565c0; font-size: 11pt; }
+    .vocab-card .def { color: #444; font-size: 9pt; margin-top: 4px; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box { background: #e3f2fd; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .highlight-box { background: #fff3e0; border: 2px solid #ffb74d; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    .highlight-box strong { color: #e65100; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #0d47a1; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #1565c0; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .fill-blank { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1565c0; min-width: 180px; margin: 0 4px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #1565c0; color: white; padding: 8px 6px; text-align: center; }
+    .ws-table td { border: 1px solid #90caf9; padding: 8px 6px; height: 36px; text-align: center; }
+    .ws-table .obj-col { font-weight: bold; background: #e3f2fd; text-align: left; padding-left: 8px; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .highlight-box { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_qbGYvzYd2tw">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🪣 Sink or Float? Testing Matter in Water 🍎🪙</h1>
+  <p class="subtitle">Physical Science Unit, Lesson 3</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science -- Matter Properties</span>
+    <span>🧰 <strong>Materials:</strong> Household items only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🪣🍎🪙🫐🪵</div>
+    <div class="caption">Why does a tiny coin sink while a giant apple floats? Let's find out!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-PS1-1</strong> -- Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Make predictions and test whether objects sink or float</li>
+    <li>Record results and compare them to predictions</li>
+    <li>Discover that shape (not just material) affects sinking and floating</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need (All Household Items)</h3>
+    <ul>
+      <li>A large bowl or pot filled with water</li>
+      <li>An apple</li>
+      <li>A coin (penny or quarter)</li>
+      <li>A grape</li>
+      <li>A wine bottle cork (or any natural cork piece)</li>
+      <li>A wooden pencil</li>
+      <li>A metal paper clip</li>
+      <li>A small plastic toy (any small figurine or toy piece)</li>
+      <li>A sheet of aluminum foil</li>
+      <li>Paper and pencil for recording</li>
+    </ul>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <div class="term">Predict</div>
+      <div class="def">To make a smart guess about what will happen before testing</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Observe</div>
+      <div class="def">To watch carefully and notice what actually happens</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Float</div>
+      <div class="def">To rest on top of water without sinking</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Density</div>
+      <div class="def">How much matter is packed into a space -- dense things tend to sink</div>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Have you ever wondered why a giant cruise ship floats but a tiny coin sinks? It seems backward! The secret is density. Density is how tightly packed the matter is inside an object. A coin is very dense -- lots of metal packed into a small space -- so it sinks. A cruise ship is mostly hollow inside, filled with air, so even though it is enormous, its overall density is lower than water, and it floats.</p>
+  <p>For 2nd graders, we can think of it this way: if an object is "heavier than water" for its size (meaning denser), it sinks. If it is "lighter than water" for its size (meaning less dense), it floats. Wood floats because wood has lots of tiny air pockets inside its fibers. Metal sinks because the atoms are packed very tightly together with no air gaps.</p>
+  <p>The most exciting discovery in this lesson is the aluminum foil experiment. A flat sheet of foil floats -- it traps air underneath and spreads its weight over a large area. But crumple the same foil into a tight ball, and it sinks! The amount of foil did not change, but the shape did. The flat sheet has more surface area touching the water, and the trapped air helps it float. The ball has no trapped air and is much denser in its compact form. Shape AND air both matter, not just what something is made of!</p>
+
+  <h2>🔬 Procedure: The Sink or Float Investigation</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Fill your large bowl with water. Set all objects beside it. Create a prediction chart with columns: Object | Prediction (sink/float) | Result (sink/float) | Correct? (yes/no).
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Before dropping each object in, make a prediction and write it down. Remember: a prediction is not cheating -- it is scientific thinking!
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Gently place the apple in the water. Did it sink or float? Record the result. Compare to your prediction.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Test the coin. Then the grape. Then the cork. Then the pencil. Then the paper clip. Then the plastic toy. Record each result.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5 (The Exciting Part):</strong> Lay one sheet of aluminum foil flat and gently place it on the water surface. Does it float? Observe carefully.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Take the foil out. Crumple it into a tight ball. Drop it in. What happens? Record your observation.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 7:</strong> Discuss: the foil is the exact same material both times. What changed? (The shape and the amount of trapped air changed!)
+  </div>
+  <div class="procedure-step">
+    <strong>Step 8 (Bonus):</strong> Can you shape the foil into a boat shape that floats AND holds a small object on top? Try it!
+  </div>
+
+  <div class="highlight-box">
+    <strong>🔑 Key Discovery:</strong> A flat sheet of foil floats because it has lots of surface area and traps air underneath. A crumpled foil ball sinks because it is compact and dense with no trapped air. SAME material, DIFFERENT behavior -- because the SHAPE changed!
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> The foil ball sinks but the flat sheet floats. What changed?
+    <p class="discussion-hint">Suggested answer: The amount of foil stayed the same, but the shape changed completely. The flat sheet traps air underneath it and spreads its weight over a large area. The crumpled ball has no trapped air and is very compact and dense. This shows that shape and air content matter for floating, not just what the material is made of.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Why does wood float but a metal coin sinks, even though the coin is much smaller?
+    <p class="discussion-hint">Suggested answer: It is about density, not size. Wood has tiny air pockets inside its fibers that make it less dense than water overall. Metal atoms are packed very tightly, making it denser than water. Even a tiny metal coin sinks while a large wooden log floats!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> How do ships float even though they are made of metal?
+    <p class="discussion-hint">Suggested answer: Ships are hollow inside! They are mostly filled with air. Even though the walls are made of dense metal, the overall density of the ship (metal walls plus all the air inside) is less than water. Engineers design ships to be mostly empty inside on purpose -- that is what allows them to float despite being enormous.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> What would happen if you put a ball of clay in the water? What if you shaped it into a bowl?
+    <p class="discussion-hint">Suggested answer: A ball of clay sinks because it is dense with no trapped air. But if you flatten it into a bowl or boat shape, it can trap enough air to float! This is the same principle as the foil experiment -- the shape creates a pocket of air that helps the object ride on top of the water.</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🔬 Student Worksheet -- Sink or Float?</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 -- Predictions and Results</h3>
+    <p style="font-size:10pt; color:#555;">Write S (sink) or F (float) for your prediction, then test and record the result!</p>
+    <table class="ws-table">
+      <tr>
+        <th>Object</th>
+        <th>My Prediction (S or F)</th>
+        <th>Result (S or F)</th>
+        <th>Was I right?</th>
+      </tr>
+      <tr><td class="obj-col">Apple</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Coin</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Grape</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Cork</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Wooden Pencil</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Paper Clip</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Plastic Toy</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Flat Foil Sheet</td><td></td><td></td><td></td></tr>
+      <tr><td class="obj-col">Foil Ball</td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>Part 2 -- The Foil Experiment</h3>
+    <div class="fill-blank">
+      The flat foil sheet floated because <span class="blank-line" style="min-width:250px;"></span>.<br><br>
+      The foil ball sank because <span class="blank-line" style="min-width:280px;"></span>.
+    </div>
+
+    <h3>Part 3 -- Draw It!</h3>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw the foil as a ball (sinking) and as a flat sheet (floating). Show the water level. Label each drawing.</div>
+      <div style="height: 150px;"></div>
+    </div>
+
+    <div class="fill-blank" style="margin-top: 16px;">
+      My most surprising result was: <span class="blank-line" style="min-width:300px;"></span>
+    </div>
+  </div>
+
+  <!-- PARENT/TEACHER NOTES -->
+  <div class="page-break">
+    <h2>👩‍🏫 Parent/Teacher Notes</h2>
+    <div class="teacher-note">
+      <ul>
+        <li><strong>The flat foil experiment is the highlight:</strong> Make sure to do it! If the flat foil sinks immediately, it may be touching the bowl edge. Try laying it very gently flat in the center of the water surface.</li>
+        <li><strong>Prediction charts:</strong> It is completely okay to be wrong! Emphasize that scientists make predictions based on what they know, then adjust based on evidence. Wrong predictions are how we learn.</li>
+        <li><strong>Density introduction:</strong> The word "density" is introduced at a very conceptual level here. Do not expect mastery -- just plant the seed. The key phrase to use: "denser things tend to sink."</li>
+        <li><strong>Paper clip trick:</strong> A paper clip placed very gently and flat on the water surface can actually float due to surface tension (not density). If this happens, it is a great bonus observation! Dropping it at an angle will make it sink normally.</li>
+        <li><strong>Apple note:</strong> Most apples float because they have air pockets inside. Try cutting one in half and you can see air spaces in the flesh!</li>
+        <li><strong>Missing cork substitution:</strong> If you do not have a natural cork, a wine bottle plastic stopper, a small piece of styrofoam, or even a crayon will float similarly.</li>
+        <li><strong>Connection to Lesson 6:</strong> The foil boat bonus at the end previews the Unit 6 engineering challenge. Let students experiment freely here -- it builds excitement for the final project.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_qbGYvzYd2tw" data-content-selector="body"></script>
+</body>
+</html>

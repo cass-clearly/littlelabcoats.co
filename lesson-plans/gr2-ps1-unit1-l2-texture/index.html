@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touch and Test: Texture, Hardness, and Flexibility — Physical Science Unit, Lesson 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .vocab-cards { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+    .vocab-card { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 10px 14px; flex: 1; min-width: 130px; }
+    .vocab-card .term { font-weight: bold; color: #1565c0; font-size: 11pt; }
+    .vocab-card .def { color: #444; font-size: 9pt; margin-top: 4px; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
+    .procedure-step strong { color: #0d47a1; }
+    .question-box { background: #e3f2fd; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .standards-box strong { color: #7b1fa2; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .teacher-note strong { color: #333; }
+    .worksheet-header { background: #0d47a1; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box { border: 3px dashed #1565c0; border-radius: 10px; min-height: 180px; margin: 12px 0; padding: 10px; }
+    .draw-box .draw-label { font-size: 9pt; color: #aaa; font-style: italic; }
+    .fill-blank { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 12pt; }
+    .blank-line { display: inline-block; border-bottom: 2px solid #1565c0; min-width: 160px; margin: 0 4px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 9.5pt; }
+    .ws-table th { background: #1565c0; color: white; padding: 7px 5px; text-align: center; font-size: 9pt; }
+    .ws-table td { border: 1px solid #90caf9; padding: 6px 5px; height: 36px; text-align: center; }
+    .ws-table .mat-col { font-weight: bold; background: #e3f2fd; text-align: left; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #757575; text-align: center; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box { break-inside: avoid; page-break-inside: avoid; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn:hover { background: #0d47a1; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_EU1U7bikLg4">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🪨 Touch and Test: Texture, Hardness, and Flexibility 🧽🪵</h1>
+  <p class="subtitle">Physical Science Unit, Lesson 2</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Physical Science -- Material Properties</span>
+    <span>🧰 <strong>Materials:</strong> Household items only</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🪨🧽🪵🪡🧻</div>
+    <div class="caption">Every material has unique properties -- and those properties determine what it is good for!</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>2-PS1-1</strong> -- Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Compare materials by observable properties: texture, hardness, and flexibility</li>
+    <li>Record observations in a simple chart</li>
+    <li>Connect material properties to real-world uses</li>
+  </ul>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need (All Household Items)</h3>
+    <ul>
+      <li>Fabric scrap (any old shirt or cloth)</li>
+      <li>A piece of aluminum foil (about 8 inches square)</li>
+      <li>A kitchen sponge</li>
+      <li>A rock or brick</li>
+      <li>A small piece of wood or a wooden spoon</li>
+      <li>A cotton ball</li>
+      <li>A rubber band</li>
+      <li>Paper and pencil for recording</li>
+    </ul>
+  </div>
+
+  <h2>📖 Vocabulary</h2>
+  <div class="vocab-cards">
+    <div class="vocab-card">
+      <div class="term">Texture</div>
+      <div class="def">How a surface feels: rough, smooth, bumpy, or scratchy</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Hardness</div>
+      <div class="def">How hard or soft a material is -- does it dent or scratch easily?</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Flexibility</div>
+      <div class="def">How easily a material bends without breaking</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Rigid</div>
+      <div class="def">Cannot bend easily -- stays stiff (like wood or rock)</div>
+    </div>
+    <div class="vocab-card">
+      <div class="term">Absorb</div>
+      <div class="def">To soak up liquid -- like a sponge soaks up water</div>
+    </div>
+  </div>
+
+  <h2>🌍 Background</h2>
+  <p>Every material has properties we can observe with our senses. A property is a describing word that tells us something about what a material is like. Texture tells us how a surface feels -- is it rough and scratchy like sandpaper, or smooth like glass? Hardness tells us how resistant a material is to being dented or scratched. Try pressing your fingernail into a rock -- you will not leave a mark. Press it into a soft piece of foam -- you will!</p>
+  <p>Flexibility is another important property. A rubber band stretches and bends easily -- we call that flexible. A wooden board barely bends at all -- we call that rigid. Flexibility matters a lot in engineering. A building that is completely rigid might crack in an earthquake, while some flexibility helps it survive. That is why modern skyscrapers are designed to sway slightly in the wind!</p>
+  <p>Why do properties matter? Because different jobs need different materials. You would not build a house out of cotton balls (not hard enough). You would not make a sponge out of rock (not absorbent enough). By observing and comparing properties, we can make smart choices about which material to use for each job. Today you will test seven materials and record what you find.</p>
+
+  <h2>🔬 Procedure: The Materials Properties Investigation</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Make a chart with these columns: Material | Texture (rough/smooth) | Hard or Soft | Flexible or Rigid | Other notes. You will fill in one row for each material.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Pick up the fabric scrap. Run your fingers across it. Is it rough or smooth? Can you bend it easily? Try to scratch it with your fingernail. Record your findings.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Test the aluminum foil. Scrunch it up into a ball. Flatten it back out. Is it rough or smooth? Hard or soft? Does it spring back or stay scrunched? Record.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Squeeze the sponge. Press your finger into it. Scratch the surface with your nail. What do you find for texture, hardness, and flexibility?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5:</strong> Test the rock. Try to bend it. Scratch it with your fingernail. Is it hard or soft? Rough or smooth? (The rock is very hard -- your nail will not leave a mark.)
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6:</strong> Test the piece of wood. Try to scratch it with your nail, try to bend it, and feel the surface. Record your observations.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 7:</strong> Squeeze and stretch the cotton ball. What texture does it have? Is it flexible or rigid? Is it heavy or light?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 8:</strong> Stretch the rubber band. Let it go. Bend it into a loop. Record your findings about texture, hardness, and flexibility.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 9:</strong> Look at your completed chart. Which material is the hardest? Which is the most flexible? Ask: which would you use to build a wall? Which would you use to clean a spill?
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> Why would a builder choose wood over fabric for a wall?
+    <p class="discussion-hint">Suggested answer: Wood is rigid and hard -- it holds its shape and supports weight. Fabric is soft and flexible -- it would not support a roof. Properties tell us what a material can and cannot do. This is why materials science is such an important field of engineering!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Why is rubber used for tires instead of wood?
+    <p class="discussion-hint">Suggested answer: Rubber is flexible -- it absorbs bumps and shocks from the road. It also grips the road surface due to its texture. Wood would be rigid and would crack from repeated impacts, and it would not grip wet roads well. The properties of rubber make it perfect for tires.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> What property would be most important for a raincoat? Why?
+    <p class="discussion-hint">Suggested answer: Waterproof (non-absorbent) is most important -- you do not want rain soaking through. But flexibility matters too, since you need to move your arms. This shows that real-world material choices often need to balance several properties at the same time.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 4:</strong> The aluminum foil is both flexible AND can hold its shape when crumpled. How is that possible?
+    <p class="discussion-hint">Suggested answer: Metals like aluminum can be bent without snapping (flexible), but they do not spring back to their original shape the way rubber does. The foil takes a new shape and keeps it. This is different from a rubber band, which is elastic and snaps back. Advanced students can learn this is called "plastic deformation."</p>
+  </div>
+
+  <!-- STUDENT WORKSHEET -->
+  <div class="page-break">
+    <div class="worksheet-header">🔬 Student Worksheet -- Touch and Test</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 -- Materials Properties Chart</h3>
+    <p style="font-size:10pt; color:#555;">Test each material and record what you find. Circle the correct word in each column.</p>
+    <table class="ws-table">
+      <tr>
+        <th>Material</th>
+        <th>Texture</th>
+        <th>Hardness</th>
+        <th>Flexibility</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td class="mat-col">Fabric</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">Foil</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">Sponge</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">Rock</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">Wood</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">Cotton Ball</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="mat-col">Rubber Band</td>
+        <td>rough / smooth</td>
+        <td>hard / soft</td>
+        <td>flexible / rigid</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>Part 2 -- Choose and Explain</h3>
+    <div class="fill-blank">
+      Which material would you use to build a toy boat? Circle one: <strong>wood / fabric / sponge / rubber band</strong><br><br>
+      Why? <span class="blank-line" style="min-width:350px;"></span>
+    </div>
+
+    <h3>Part 3 -- Draw It!</h3>
+    <div class="draw-box">
+      <div class="draw-label">✏️ Draw the most flexible material you tested. Write its name below your drawing.</div>
+      <div style="height: 140px;"></div>
+      <p style="text-align:center; font-size:10pt; color:#666;">Material name: ________________________________</p>
+    </div>
+  </div>
+
+  <!-- PARENT/TEACHER NOTES -->
+  <div class="page-break">
+    <h2>👩‍🏫 Parent/Teacher Notes</h2>
+    <div class="teacher-note">
+      <ul>
+        <li><strong>Hands-on observation is the heart of this lesson:</strong> Do not rush the testing. Let students really press, bend, and scratch each material. The chart is secondary to the physical experience.</li>
+        <li><strong>Hardness tip:</strong> The fingernail scratch test works well for relative comparisons. A fingernail cannot scratch rock or wood but can dent clay or foam. This is actually a simplified version of the Mohs hardness scale used by geologists!</li>
+        <li><strong>Flexibility vs. elasticity:</strong> Rubber snaps back (elastic), foil stays crumpled (flexible but not elastic). Advanced students can explore this distinction. A rubber band is both flexible AND elastic.</li>
+        <li><strong>For the chart:</strong> Accept any reasonable descriptions. Texture is somewhat subjective -- rough to one person might be smooth to another. Focus on the process of careful observation, not on getting one "right" answer.</li>
+        <li><strong>Real-world connection:</strong> Bring out a raincoat, a sponge, and a wooden spoon and ask why each is made of the material it is. This grounds the lesson in everyday engineering decisions.</li>
+        <li><strong>Boat building choice:</strong> Wood is the best answer because it is rigid (holds shape), hard (will not compress), and (if sealed) waterproof. Students may also argue for the rubber band (waterproof, flexible) -- accept with discussion!</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_EU1U7bikLg4" data-content-selector="body"></script>
+</body>
+</html>
