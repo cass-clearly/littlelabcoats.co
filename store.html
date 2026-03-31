@@ -14,27 +14,25 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:             #FAF7F2;
-      --cream-dark:        #F0EAE0;
-      --sage:              #5C7A5E;
-      --sage-light:        #8AAF8C;
-      --sage-pale:         #EDF4EE;
-      --terracotta:        #C2580C;
-      --terracotta-light:  #E07840;
-      --terracotta-pale:   #FDF0E8;
-      --navy:              #1A2744;
-      --navy-light:        #2D3F6E;
-      --brown:             #5C3D2E;
-      --brown-light:       #7A5342;
-      --gold:              #D4893A;
-      --gold-light:        #E8A85C;
-      --gold-pale:         #FDF5E8;
+      --cream:             #F9FFFE;        /* very light teal-white base */
+      --cream-dark:        #E8F8F6;        /* soft teal tint */
+      --teal:              #4ECDC4;        /* primary — replaces sage */
+      --teal-dark:         #35B8AF;        /* darker teal */
+      --teal-pale:         #D4F5F3;        /* very light teal */
+      --coral:             #FF6B6B;        /* accent — replaces terracotta */
+      --coral-light:       #FF8E8E;        /* lighter coral */
+      --coral-pale:        #FFE8E8;        /* very light coral */
+      --navy:              #2B3A67;        /* deep navy — keep for text/contrast */
+      --navy-light:        #3D4F8A;        /* slightly lighter navy */
+      --yellow:            #FFE66D;        /* sunny yellow accent */
+      --yellow-pale:       #FFF9D6;        /* very light yellow */
+      --blue-light:        #E0F4FF;        /* light sky blue background */
       --white:             #FFFFFF;
-      --border:            #E0D8CC;
-      --text-muted:        #7A6A5A;
-      --shadow-sm:  0 2px 8px rgba(26,39,68,0.07);
-      --shadow-md:  0 8px 32px rgba(26,39,68,0.10);
-      --shadow-lg:  0 20px 60px rgba(26,39,68,0.14);
+      --border:            #C8F0ED;        /* soft teal border */
+      --text-muted:        #5A7A78;        /* muted teal-grey */
+      --shadow-sm:  0 2px 8px rgba(43,58,103,0.07);
+      --shadow-md:  0 8px 32px rgba(43,58,103,0.10);
+      --shadow-lg:  0 20px 60px rgba(43,58,103,0.14);
       --radius-sm:  8px;
       --radius-md:  14px;
       --radius-lg:  22px;
@@ -61,7 +59,7 @@
     p {
       font-family: 'Lato', sans-serif;
       line-height: 1.75;
-      color: var(--brown);
+      color: var(--navy);
     }
 
     a { text-decoration: none; color: inherit; }
@@ -90,22 +88,22 @@
     }
 
     .btn-primary {
-      background: var(--terracotta);
+      background: var(--coral);
       color: var(--white);
-      box-shadow: 0 4px 16px rgba(194,88,12,0.28);
+      box-shadow: 0 4px 16px rgba(255,107,107,0.28);
     }
     .btn-primary:hover {
       background: #A84A09;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(194,88,12,0.38);
+      box-shadow: 0 8px 24px rgba(255,107,107,0.38);
     }
 
-    .btn-sage {
-      background: var(--sage);
+    .btn-teal {
+      background: var(--teal);
       color: var(--white);
-      box-shadow: 0 4px 16px rgba(92,122,94,0.28);
+      box-shadow: 0 4px 16px rgba(78,205,196,0.28);
     }
-    .btn-sage:hover {
+    .btn-teal:hover {
       background: #4A6550;
       transform: translateY(-2px);
     }
@@ -157,7 +155,7 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
     .nav-cta { margin-left: 8px; }
 
     @media (max-width: 768px) {
@@ -249,8 +247,8 @@
 
     .badge-k {
       background: #EFF6EB;
-      color: var(--sage);
-      border: 1px solid rgba(92,122,94,0.25);
+      color: var(--teal);
+      border: 1px solid rgba(78,205,196,0.25);
     }
 
     .badge-gr1 {
@@ -260,14 +258,14 @@
     }
 
     .badge-gr5 {
-      background: var(--terracotta-pale);
-      color: var(--terracotta);
-      border: 1px solid rgba(194,88,12,0.25);
+      background: var(--coral-pale);
+      color: var(--coral);
+      border: 1px solid rgba(255,107,107,0.25);
     }
 
     .badge-free {
-      background: var(--gold-pale);
-      color: var(--gold);
+      background: var(--yellow-pale);
+      color: var(--yellow);
       border: 1px solid rgba(212,137,58,0.25);
     }
 
@@ -298,7 +296,7 @@
     .card-contents li {
       font-family: 'Lato', sans-serif;
       font-size: 0.9rem;
-      color: var(--brown);
+      color: var(--navy);
       padding: 5px 0;
       padding-left: 20px;
       position: relative;
@@ -308,7 +306,7 @@
       content: '✓';
       position: absolute;
       left: 0;
-      color: var(--sage);
+      color: var(--teal);
       font-weight: 700;
       font-size: 0.85rem;
     }
@@ -326,7 +324,7 @@
     }
 
     .price-main.free {
-      color: var(--sage);
+      color: var(--teal);
     }
 
     .price-original {
@@ -379,7 +377,7 @@
     .trust-item {
       font-family: 'Lato', sans-serif;
       font-size: 0.9rem;
-      color: var(--brown);
+      color: var(--navy);
       display: flex;
       align-items: center;
       gap: 8px;

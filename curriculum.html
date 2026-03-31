@@ -13,38 +13,29 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:             #FAF7F2;
-      --cream-dark:        #F0EAE0;
-      --sage:              #5C7A5E;
-      --sage-light:        #8AAF8C;
-      --sage-pale:         #EDF4EE;
-      --terracotta:        #C2580C;
-      --terracotta-light:  #E07840;
-      --terracotta-pale:   #FDF0E8;
-      --navy:              #1A2744;
-      --navy-light:        #2D3F6E;
-      --brown:             #5C3D2E;
-      --brown-light:       #7A5342;
-      --gold:              #D4893A;
-      --gold-light:        #E8A85C;
-      --gold-pale:         #FDF5E8;
+      --cream:             #F9FFFE;        /* very light teal-white base */
+      --cream-dark:        #E8F8F6;        /* soft teal tint */
+      --teal:              #4ECDC4;        /* primary — replaces sage */
+      --teal-dark:         #35B8AF;        /* darker teal */
+      --teal-pale:         #D4F5F3;        /* very light teal */
+      --coral:             #FF6B6B;        /* accent — replaces terracotta */
+      --coral-light:       #FF8E8E;        /* lighter coral */
+      --coral-pale:        #FFE8E8;        /* very light coral */
+      --navy:              #2B3A67;        /* deep navy — keep for text/contrast */
+      --navy-light:        #3D4F8A;        /* slightly lighter navy */
+      --yellow:            #FFE66D;        /* sunny yellow accent */
+      --yellow-pale:       #FFF9D6;        /* very light yellow */
+      --blue-light:        #E0F4FF;        /* light sky blue background */
       --white:             #FFFFFF;
-      --border:            #E0D8CC;
-      --text-muted:        #7A6A5A;
-      --shadow-sm:  0 2px 8px rgba(26,39,68,0.07);
-      --shadow-md:  0 8px 32px rgba(26,39,68,0.10);
+      --border:            #C8F0ED;        /* soft teal border */
+      --text-muted:        #5A7A78;        /* muted teal-grey */
+      --shadow-sm:  0 2px 8px rgba(43,58,103,0.07);
+      --shadow-md:  0 8px 32px rgba(43,58,103,0.10);
+      --shadow-lg:  0 20px 60px rgba(43,58,103,0.14);
       --radius-sm:  8px;
       --radius-md:  14px;
       --radius-lg:  22px;
-
-      --ps-color: #1565c0;
-      --ps-pale:  #e3f2fd;
-      --ls-color: #2e7d32;
-      --ls-pale:  #e8f5e9;
-      --es-color: #e65100;
-      --es-pale:  #fff3e0;
-      --et-color: #6a1b9a;
-      --et-pale:  #f3e5f5;
+      --radius-xl:  32px;
     }
 
     html { scroll-behavior: smooth; }
@@ -64,7 +55,7 @@
       color: var(--navy);
     }
 
-    p { font-family: 'Lato', sans-serif; line-height: 1.75; color: var(--brown); }
+    p { font-family: 'Lato', sans-serif; line-height: 1.75; color: var(--navy); }
     a { text-decoration: none; color: inherit; }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -91,7 +82,7 @@
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
       font-size: 1.2rem;
-      color: var(--sage);
+      color: var(--teal);
       display: flex;
       align-items: center;
       gap: 10px;
@@ -106,10 +97,10 @@
       font-family: 'Lato', sans-serif;
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--brown);
+      color: var(--navy);
       transition: color 0.2s;
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
     .nav-cta { margin-left: 8px; }
 
     .btn {
@@ -124,10 +115,10 @@
       border: none;
     }
     .btn-primary {
-      background: var(--terracotta);
+      background: var(--coral);
       color: white;
     }
-    .btn-primary:hover { background: var(--terracotta-light); }
+    .btn-primary:hover { background: var(--coral-light); }
 
     /* ─── Hero ─── */
     .curriculum-hero {
@@ -149,13 +140,13 @@
     }
     .curriculum-hero .print-note {
       font-size: 0.9rem;
-      color: var(--gold-light);
+      color: var(--yellow);
       margin-bottom: 0;
     }
 
     /* ─── Stats bar ─── */
     .stats-bar {
-      background: var(--sage);
+      background: var(--teal);
       padding: 14px 24px;
       text-align: center;
     }
@@ -203,11 +194,11 @@
       font-family: 'Lato', sans-serif;
       font-weight: 700;
       font-size: 0.88rem;
-      color: var(--brown);
+      color: var(--navy);
       cursor: pointer;
       transition: all 0.18s;
     }
-    .filter-btn:hover { border-color: var(--sage); color: var(--sage); }
+    .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
     .filter-btn.active {
       background: var(--navy);
       border-color: var(--navy);
@@ -277,7 +268,7 @@
 
     .unit-card-header {
       padding: 16px 18px;
-      border-left: 5px solid var(--sage);
+      border-left: 5px solid var(--teal);
       display: flex;
       align-items: flex-start;
       gap: 12px;
@@ -346,7 +337,7 @@
       flex: 1;
       transition: color 0.15s;
     }
-    .lesson-item a:hover { color: var(--sage); }
+    .lesson-item a:hover { color: var(--teal); }
 
     .lesson-num {
       font-family: 'Lato', sans-serif;
@@ -359,10 +350,10 @@
     .lesson-icon { font-size: 0.9rem; }
 
     /* Quiz / refcard rows */
-    .lesson-item.quiz-row { background: rgba(26,39,68,0.03); }
+    .lesson-item.quiz-row { background: rgba(43,58,103,0.03); }
     .lesson-item.quiz-row a { color: var(--navy-light); }
-    .lesson-item.quiz-row a:hover { color: var(--sage); }
-    .lesson-item.refcard-row { background: rgba(92,122,94,0.05); }
+    .lesson-item.quiz-row a:hover { color: var(--teal); }
+    .lesson-item.refcard-row { background: rgba(78,205,196,0.05); }
 
     /* ─── Coming soon ─── */
     .coming-soon-card {
@@ -416,7 +407,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--gold-light);
+      color: var(--yellow);
       margin-bottom: 16px;
     }
     .footer-links { list-style: none; }
