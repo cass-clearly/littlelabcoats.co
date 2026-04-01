@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Impact: How We Change Earth -- Earth Science Unit, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #e65100;
+      padding-bottom: 10px;
+      color: #e65100;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #fff3e0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ffcc80;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #e65100;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #bf360c;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #fff3e0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #e65100;
+    }
+    .procedure-step strong { color: #bf360c; }
+    .question-box {
+      background: #fff3e0;
+      border-left: 5px solid #ff8f00;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .story-box {
+      background: #fff3e0;
+      border: 2px solid #ffb74d;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .story-box strong { color: #e65100; }
+    .impact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .impact-card {
+      background: #fff;
+      border: 2px solid #ffcc80;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 10pt;
+    }
+    .impact-card .card-title { font-weight: bold; color: #e65100; font-size: 11pt; margin-bottom: 4px; }
+    .impact-card .card-emoji { font-size: 22pt; margin-bottom: 4px; display: block; }
+    .impact-card .card-cause { color: #555; font-size: 9pt; margin-top: 4px; }
+    .impact-card .card-solution { color: #2e7d32; font-size: 9pt; margin-top: 4px; font-style: italic; }
+    .worksheet-header {
+      background: #bf360c;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .audit-table th {
+      background: #e65100;
+      color: white;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .audit-table td {
+      border: 1px solid #ffcc80;
+      padding: 8px 10px;
+      height: 32px;
+      vertical-align: top;
+    }
+    .audit-table tr:nth-child(even) td { background: #fff8f0; }
+    .pledge-box {
+      background: #fff3e0;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 12pt;
+    }
+    .pledge-line {
+      border-bottom: 1.5px solid #e65100;
+      height: 30px;
+      margin-bottom: 8px;
+    }
+    .short-answer-box {
+      margin: 14px 0;
+    }
+    .short-answer-box .q-label { font-weight: bold; color: #bf360c; margin-bottom: 6px; font-size: 11pt; }
+    .answer-line {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin-bottom: 4px;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #ffcc80;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .ak-box h3 { color: #bf360c; border-color: #ffcc80; text-align: center; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 4px 0; font-size: 10pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .story-box, .impact-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #e65100; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #bf360c; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_BKunILWKVVY">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌍 Human Impact: How We Change Earth ♻️</h1>
+  <p class="subtitle">5-ESS3 Earth and Human Activity -- Unit 1, Lesson 1</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 5th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45-60 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science -- Human Activity</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🏭🌊🌲💨🌱</div>
+    <div class="caption">Humans are the only species that can deliberately change their own impact on the planet -- the question is whether we will.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>5-ESS3-1</strong> -- Obtain and combine information about ways individual communities use science ideas to protect Earth's resources and environment.
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Identify ways humans affect Earth's resources and environment</li>
+    <li>Evaluate solutions that reduce human impact</li>
+    <li>Understand the concept of sustainability</li>
+  </ul>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Humans have lived on Earth for hundreds of thousands of years, but in the last 200 years our impact on the planet has grown dramatically. The industrial revolution, modern agriculture, and population growth have transformed land, water, and air in ways that affect every ecosystem on Earth. Scientists study these changes to understand what is happening and find solutions.</p>
+
+  <p>Some human impacts are obvious -- cutting down forests, building cities, or dumping waste. Others are less visible. Burning fossil fuels releases carbon dioxide that traps heat in the atmosphere, changing global climate patterns. Agricultural chemicals wash into rivers and affect aquatic ecosystems. Even light pollution from cities disrupts the behavior of nocturnal animals.</p>
+
+  <div class="story-box">
+    <strong>🌱 The Good News:</strong> Humans can also solve problems we create. Renewable energy, habitat restoration, water conservation, and sustainable farming are all examples of real solutions that are working right now. Scientists, engineers, and everyday citizens all play a role. Understanding the problem is the first step -- and you are taking it today.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> sustainability, deforestation, pollution, fossil fuels, renewable energy, habitat destruction, conservation, carbon footprint, biodiversity, watershed
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and pencil</li>
+      <li>3 clear cups of water</li>
+      <li>1 drop of food coloring (any color)</li>
+      <li>1 coffee filter</li>
+      <li>Newspaper or magazine -- optional (for the impact audit warm-up)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>The pollution simulation uses only water, food coloring, and a coffee filter -- all easy to find at home!</em></p>
+  </div>
+
+  <h2>🔬 Part 1 -- Pollution Simulation (15 min)</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Line up 3 clear cups on the table. Fill each one about halfway with clean water. Label them Cup 1, Cup 2, and Cup 3.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Add one drop of food coloring to Cup 1. This represents pollution entering a water source -- a factory dumping chemicals, fertilizer washing off a farm, or oil spilling into a river.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Pour Cup 1 into Cup 2. Watch how the pollution spreads and dilutes. This is what happens as polluted water moves through a watershed -- from a stream to a river, from a river to a lake.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Place the coffee filter over Cup 3. Slowly pour Cup 2 through the filter. Does the water look completely clean on the other side?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5 -- Discuss:</strong> The filter might remove some color, but the water is not truly clean. What does this show us about how easy (or hard) it is to remove pollution once it enters a water system? Is prevention more effective than cleanup?
+  </div>
+
+  <h2>📋 Part 2 -- Impact Audit (20 min)</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> On paper (or use the worksheet), list 10 things you used today: electricity, food items, water, packaging, transportation, clothing, devices, etc.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> For each item, write: (1) one natural resource it uses, and (2) one environmental impact of making or using it.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Pick ONE item from your list. Brainstorm or research: what is one specific way to reduce its environmental impact? (For example: reusable bags instead of plastic, biking instead of driving, buying local food instead of imported.)
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> As a family, write a 3-sentence "Sustainability Pledge" -- one realistic change your household could make this week, this month, or this year. Be specific!
+  </div>
+
+  <h2>🌐 Examples: Human Impacts and Solutions</h2>
+  <div class="impact-cards">
+    <div class="impact-card">
+      <span class="card-emoji">🌲</span>
+      <div class="card-title">Deforestation</div>
+      <div class="card-cause">Cause: Cutting forests for farming, cities, and wood products destroys habitat and releases stored carbon.</div>
+      <div class="card-solution">Solution: Sustainable forestry, reforestation projects, reducing paper waste.</div>
+    </div>
+    <div class="impact-card">
+      <span class="card-emoji">🏭</span>
+      <div class="card-title">Air Pollution</div>
+      <div class="card-cause">Cause: Burning fossil fuels (coal, oil, gas) releases CO2 and other gases that trap heat and harm air quality.</div>
+      <div class="card-solution">Solution: Solar and wind energy, electric vehicles, energy efficiency.</div>
+    </div>
+    <div class="impact-card">
+      <span class="card-emoji">💧</span>
+      <div class="card-title">Water Pollution</div>
+      <div class="card-cause">Cause: Agricultural chemicals, plastic waste, and industrial discharge contaminate rivers, lakes, and oceans.</div>
+      <div class="card-solution">Solution: Water treatment, reducing plastic use, buffer zones around waterways.</div>
+    </div>
+    <div class="impact-card">
+      <span class="card-emoji">🦋</span>
+      <div class="card-title">Habitat Destruction</div>
+      <div class="card-cause">Cause: Expanding cities and farms fragments habitats, pushing species toward extinction.</div>
+      <div class="card-solution">Solution: Wildlife corridors, protected areas, native plant landscaping.</div>
+    </div>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> Why is it harder to clean up pollution than to prevent it?
+    <p class="discussion-hint">Suggested answer: Once pollution enters a system -- air, water, or soil -- it spreads, dilutes, and mixes with everything around it. The coffee filter experiment showed this: even a simple water filter could not fully remove the food coloring. In real watersheds, pollutants travel hundreds of miles, accumulate in fish and wildlife, and sink into groundwater. Prevention costs a fraction of what cleanup costs -- and some damage, like species extinction, can never be undone at all.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> What is one thing your family could do this week to reduce your environmental footprint?
+    <p class="discussion-hint">Suggested answer: Open-ended -- accept all reasonable, specific responses. Encourage specificity over vagueness. "Eat less meat" is good; "replace Tuesday dinner with a plant-based meal" is better. "Use less electricity" is good; "turn off the lights when leaving a room for the next 7 days" is better. Specific pledges are more likely to happen. All thoughtful answers are correct.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> If everyone on Earth lived like Americans, how many Earths would we need?
+    <p class="discussion-hint">Suggested answer: About 5 Earths. Americans use natural resources at roughly 5 times the rate Earth can regenerate them. This concept is called "ecological overshoot" -- we are spending Earth's savings account, not just its interest. If everyone consumed at the global average, we would need about 1.7 Earths. This does not mean we should feel guilty -- it means we have real, meaningful choices about how we consume, and those choices add up when millions of people make them.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🚶 <strong>Neighborhood Walk:</strong> Walk around your neighborhood and identify human impacts: litter, stormwater drains, paved surfaces that prevent water absorption, invasive plants, etc. How many can you count in one block?</li>
+      <li>🏢 <strong>Local Conservation:</strong> Research one local conservation organization and what they do. What problem are they working on? What have they accomplished? Could your family volunteer or support them?</li>
+      <li>📊 <strong>Carbon Footprint Calculator:</strong> Use a free online carbon footprint calculator (EPA or Nature Conservancy) to estimate your household's annual CO2 output. Compare it to the national average. What are your biggest sources?</li>
+      <li>🌱 <strong>Grow Something:</strong> Plant a native plant, herb, or vegetable at home. Growing food locally reduces transportation emissions and teaches stewardship. Even a small pot on a windowsill counts.</li>
+      <li>📚 <strong>Read:</strong> "The Lorax" by Dr. Seuss (classic), "Braiding Sweetgrass for Young Adults" by Robin Wall Kimmerer, or "We Are the Weather Savers" by Greta Thunberg.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Pollution simulation notes:</strong> The coffee filter will reduce color but not eliminate it -- that is intentional and the key teaching moment. Real water treatment is more sophisticated but still has limits. Some pollutants (like pharmaceuticals or certain pesticides) are nearly impossible to fully remove from water supplies. If you have a Brita or similar filter at home, compare the filtered water to the unfiltered water -- great extension.</li>
+      <li><strong>Emotional tone:</strong> This topic can feel heavy or guilt-inducing for kids. Emphasize agency and solutions throughout. The goal is not environmental anxiety but environmental literacy and stewardship. Every lesson should end on what IS being done and what the student CAN do.</li>
+      <li><strong>"5 Earths" context:</strong> The Global Footprint Network (footprintnetwork.org) publishes Earth Overshoot Day each year -- the date when humanity has used up the year's resource budget. In 2023, it fell on August 2. This is a tangible, memorable statistic for older students.</li>
+      <li><strong>Watershed concept:</strong> A watershed is all the land that drains into a common water body (river, lake, ocean). Everything that lands or spills on that land eventually reaches the water -- including fertilizer, pet waste, road salt, and litter. Ask students: "What watershed do we live in?" (Many local water authorities publish this information and it is a great local connection.)</li>
+      <li><strong>Impact audit scaffolding:</strong> Younger or reluctant writers can just do 5 items instead of 10. The goal is not completeness but the habit of connecting daily choices to resource use. Even 3 thoughtful items is a success.</li>
+      <li><strong>NGSS connection:</strong> 5-ESS3-1 centers on obtaining and evaluating information, which this lesson directly addresses through the simulation, the audit, and the research/brainstorm step. The sustainability pledge gives students a chance to apply their knowledge in a personally meaningful way.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-header">🌍 Student Worksheet -- Human Impact: How We Change Earth</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 -- Impact Audit: 10 Things I Used Today</h3>
+    <p style="font-size:10pt; color:#555;">List 10 things you used today. For each one, name the resource it uses and one environmental impact.</p>
+
+    <table class="audit-table">
+      <thead>
+        <tr>
+          <th style="width:30%;">Thing I Used</th>
+          <th style="width:35%;">Natural Resource It Uses</th>
+          <th style="width:35%;">Environmental Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Part 2 -- One Change I Could Make</h3>
+    <p style="font-size:10pt; color:#555;">Pick one item from your Impact Audit. What is one specific way to reduce its impact?</p>
+    <p><strong>Item I chose:</strong> <span style="display:inline-block; border-bottom:1.5px solid #e65100; min-width:280px;">&nbsp;</span></p>
+    <p><strong>One way to reduce its impact:</strong></p>
+    <div class="answer-line"></div>
+    <div class="answer-line"></div>
+    <div class="answer-line"></div>
+
+    <h3>Part 3 -- Our Sustainability Pledge</h3>
+    <p style="font-size:10pt; color:#555;">Write a 3-sentence pledge for your household. Be specific about what you will do and when!</p>
+
+    <div class="pledge-box">
+      <strong>Our family will...</strong><br><br>
+      <div class="pledge-line"></div>
+      <div class="pledge-line"></div>
+      <div class="pledge-line"></div>
+      <br>
+      <p style="font-size:10pt; color:#777; margin:0;">Signed: ________________________________ &nbsp;&nbsp; Date: ________________</p>
+    </div>
+
+    <h3>Part 4 -- Reflection Question</h3>
+    <div class="short-answer-box">
+      <div class="q-label">The pollution experiment showed that food coloring does not fully filter out of water. What does this tell us about pollution prevention versus pollution cleanup?</div>
+      <div><div class="answer-line"></div><div class="answer-line"></div><div class="answer-line"></div></div>
+    </div>
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY -- Detach before giving worksheet to students</h2>
+
+      <h3>Part 1 -- Impact Audit: Sample Answers</h3>
+      <p style="font-size:10pt;">Students' answers will vary. Here are some examples to help guide evaluation:</p>
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>✅ Strong Example Answers</h3>
+          <ul>
+            <li>Electricity -- coal/natural gas -- air pollution and CO2</li>
+            <li>Plastic water bottle -- petroleum -- plastic waste in oceans</li>
+            <li>Hamburger for lunch -- water, land, grain -- methane from cattle, deforestation</li>
+            <li>School bus/car ride -- gasoline -- CO2 emissions, air pollution</li>
+            <li>Cotton T-shirt -- water, land -- large water use and pesticide runoff in growing cotton</li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>💡 What to Look For</h3>
+          <ul>
+            <li>Student connects the item to a specific natural resource (not just "nature")</li>
+            <li>Impact is specific (not just "bad for environment")</li>
+            <li>Student shows awareness that ordinary daily items have resource costs</li>
+            <li>Variety across their list (not all electricity-related)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:18px;">Part 2 -- One Change: What to Look For</h3>
+      <ul>
+        <li>Change is specific and actionable (not vague like "use less")</li>
+        <li>Change is realistic for the student's household</li>
+        <li>Student can explain the connection between the change and the impact it reduces</li>
+        <li>Accept all thoughtful, good-faith answers -- there is no single correct solution</li>
+      </ul>
+
+      <h3>Part 3 -- Sustainability Pledge: What to Look For</h3>
+      <ul>
+        <li>Three sentences (not just bullet points)</li>
+        <li>Specific (names actual behavior, not just values)</li>
+        <li>Realistic (something the family could genuinely do)</li>
+        <li>At least one sentence includes a timeframe (this week, this month, starting Monday)</li>
+      </ul>
+
+      <h3>Part 4 -- Reflection Answer (Model)</h3>
+      <p style="font-size:10pt;">The experiment showed that even a filter cannot fully remove food coloring from water -- and food coloring is a simple, visible substance. Real pollutants (chemicals, heavy metals, pharmaceuticals) are much harder to remove. This tells us that prevention is far more effective than cleanup: once something enters a water system, it spreads and cannot be fully taken back. It is always better -- and cheaper -- to keep pollution out in the first place than to try to clean it up after the fact.</p>
+
+      <div class="tip-box" style="margin-top: 14px;">
+        💡 <strong>What success looks like:</strong> Student fills in 8-10 items with reasonable resource and impact answers. Pledge is specific and signed. Reflection answer shows understanding that cleanup is harder than prevention. Celebrate creativity in the "one change" section -- there is no wrong answer if it is thoughtful and specific.
+      </div>
+    </div>
+  </div>
+
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key -- for every lesson in the K-5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock -- $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var allH2 = document.querySelectorAll('h2');
+    var lastGoalsH2 = null;
+
+    allH2.forEach(function(h2) {
+      var text = h2.textContent.toLowerCase();
+      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lastGoalsH2 = h2;
+      }
+    });
+
+    if (!lastGoalsH2) {
+      var lockSelectors = [
+        '[class*="material"]', '[id*="material"]',
+        '[class*="procedure"]', '[id*="procedure"]',
+        '[class*="discussion"]', '[id*="discussion"]',
+        '[class*="worksheet"]', '[id*="worksheet"]',
+        '[class*="teacher"]', '[id*="teacher"]',
+        '[class*="answer"]', '[id*="answer"]',
+        '[class*="extension"]', '[id*="extension"]',
+        '[class*="question"]', '[id*="question"]',
+        '[class*="page-break"]', '[id*="page-break"]'
+      ];
+      lockSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.display = 'none';
+        });
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    var foundGoals = false;
+    var lockFrom = null;
+    allH2.forEach(function(h2) {
+      if (h2 === lastGoalsH2) { foundGoals = true; return; }
+      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    });
+
+    if (!lockFrom) {
+      var sibling = lastGoalsH2.nextElementSibling;
+      while (sibling) {
+        sibling.style.display = 'none';
+        sibling = sibling.nextElementSibling;
+      }
+    } else {
+      var el = lockFrom;
+      while (el) {
+        el.style.display = 'none';
+        el = el.nextElementSibling;
+      }
+    }
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Webs: Energy in Ecosystems -- Life Science Unit, Lesson 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .hero-image .emoji-hero {
+      font-size: 72pt;
+      line-height: 1.2;
+    }
+    .hero-image .caption {
+      font-size: 9pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      margin-top: 6px;
+      font-size: 10pt;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .organism-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .organism-card {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 10pt;
+    }
+    .organism-card .emoji { font-size: 30pt; display: block; margin-bottom: 6px; }
+    .organism-card .org-name { font-weight: bold; color: #1b5e20; font-size: 11pt; }
+    .organism-card .role { color: #555; font-size: 9pt; margin-top: 4px; }
+    .organism-card .trophic { color: #2e7d32; font-size: 9pt; margin-top: 4px; font-style: italic; }
+    .story-box {
+      background: #fff3e0;
+      border: 2px solid #ffb74d;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+    }
+    .story-box strong { color: #e65100; }
+    .worksheet-header {
+      background: #1b5e20;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .name-date {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 12pt;
+    }
+    .food-web-grid {
+      border: 3px dashed #2e7d32;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 12px 0;
+      min-height: 300px;
+    }
+    .fw-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+    .fw-box {
+      background: #e8f5e9;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-align: center;
+      font-size: 10pt;
+      min-width: 90px;
+    }
+    .fw-box .fw-emoji { font-size: 20pt; display: block; }
+    .fw-box .fw-label { font-weight: bold; color: #1b5e20; font-size: 9pt; }
+    .fw-arrow-hint { font-size: 9pt; color: #aaa; font-style: italic; text-align: center; margin-bottom: 8px; }
+    .short-answer-box {
+      margin: 14px 0;
+    }
+    .short-answer-box .q-label { font-weight: bold; color: #1b5e20; margin-bottom: 6px; font-size: 11pt; }
+    .answer-lines { margin-top: 6px; }
+    .answer-line {
+      border-bottom: 1px solid #bbb;
+      height: 28px;
+      margin-bottom: 4px;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 {
+      background: #757575;
+      text-align: center;
+    }
+    .ak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 12px;
+    }
+    .ak-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .ak-box h3 { color: #1b5e20; border-color: #a5d6a7; text-align: center; }
+    .ak-box ul { list-style: none; padding-left: 0; }
+    .ak-box li { padding: 4px 0; font-size: 10pt; }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      h2 {
+        break-after: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .story-box, .organism-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
+      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000; display: flex; align-items: center; gap: 6px;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    @media print { .print-btn { display: none; } }
+  </style>
+</head>
+<body data-document-id="doc_jn5uBv_FDO8">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌿 Food Webs: Energy in Ecosystems 🦅</h1>
+  <p class="subtitle">4-LS1 Structure, Function, and Information Processing -- Unit 1, Lesson 1</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 4th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45-60 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science -- Ecosystems</span>
+    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">☀️🌿🦗🐭🐍🦅</div>
+    <div class="caption">Energy flows from the sun through every living thing -- each connection is one thread in the web of life.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>4-LS1-1</strong> -- Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction. (Applied here through food web construction and ecosystem function.)
+  </div>
+
+  <h2>🎯 Learning Goals</h2>
+  <ul>
+    <li>Construct a food web showing how energy flows through an ecosystem</li>
+    <li>Distinguish food webs from food chains</li>
+    <li>Identify producers, consumers (primary, secondary, tertiary), and decomposers</li>
+  </ul>
+
+  <h2>💡 The Big Idea</h2>
+  <p>A food chain shows one path that energy takes through an ecosystem. But in the real world, most animals eat more than one thing -- and are eaten by more than one predator. A food web shows all of those connections at once. Food webs are a more accurate picture of how energy flows through nature.</p>
+
+  <p>Energy in an ecosystem starts with the sun. Plants capture solar energy through photosynthesis and become the foundation of every food web. When a herbivore eats a plant, it takes in some of that energy. When a carnivore eats the herbivore, it takes in some of that energy too. At each step, energy is lost as heat -- which is why ecosystems can support far more plants than animals.</p>
+
+  <div class="story-box">
+    <strong>🍄 The Hidden Heroes:</strong> Decomposers like fungi, bacteria, and earthworms break down dead organisms and return nutrients to the soil, allowing plants to grow again. Without decomposers, nutrients would be locked in dead matter and ecosystems would collapse. Every organism in a food web plays a role -- even the ones you can't see.
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong> food web, food chain, producer, consumer, decomposer, predator, prey, energy flow, trophic level, apex predator
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 What You Need</h3>
+    <ul>
+      <li>Paper and pencil</li>
+      <li>Scissors</li>
+      <li>10 index cards or paper scraps</li>
+      <li>Crayons or markers</li>
+      <li>String or yarn -- optional (to connect cards physically!)</li>
+    </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>Most of these are likely already at home. String is optional but makes the web activity extra tactile and memorable!</em></p>
+  </div>
+
+  <h2>🔬 Part 1 -- Meet the Organisms (10 min)</h2>
+  <p>Write each organism on a separate index card. Read the role card aloud and talk about where each one fits in the ecosystem before starting the web activity.</p>
+
+  <div class="organism-cards">
+    <div class="organism-card">
+      <span class="emoji">☀️</span>
+      <span class="org-name">The Sun</span>
+      <span class="role">Source of all energy in the ecosystem</span>
+      <span class="trophic">Energy source (not a living organism)</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🌿</span>
+      <span class="org-name">Grass</span>
+      <span class="role">Captures sunlight and makes its own food</span>
+      <span class="trophic">Producer (1st trophic level)</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🦗</span>
+      <span class="org-name">Grasshopper</span>
+      <span class="role">Eats grass and plants</span>
+      <span class="trophic">Primary consumer (2nd level)</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🐭</span>
+      <span class="org-name">Mouse</span>
+      <span class="role">Eats seeds, grass, and insects</span>
+      <span class="trophic">Primary consumer (2nd level)</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🐇</span>
+      <span class="org-name">Rabbit</span>
+      <span class="role">Eats grass and leafy plants</span>
+      <span class="trophic">Primary consumer (2nd level)</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🐍</span>
+      <span class="org-name">Snake</span>
+      <span class="role">Eats mice, grasshoppers, and rabbits</span>
+      <span class="trophic">Secondary consumer (3rd level)</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🦊</span>
+      <span class="org-name">Fox</span>
+      <span class="role">Eats rabbits, mice, and birds</span>
+      <span class="trophic">Secondary/tertiary consumer</span>
+    </div>
+    <div class="organism-card">
+      <span class="emoji">🦅</span>
+      <span class="org-name">Hawk</span>
+      <span class="role">Eats mice, snakes, rabbits, and small birds</span>
+      <span class="trophic">Apex predator (top of the web)</span>
+    </div>
+    <div class="organism-card" style="border-color: #ce93d8; background: #f3e5f5;">
+      <span class="emoji">🍄</span>
+      <span class="org-name">Mushroom</span>
+      <span class="role">Breaks down dead plants and animals</span>
+      <span class="trophic" style="color: #7b1fa2;">Decomposer (all levels)</span>
+    </div>
+  </div>
+
+  <h2>🕸️ Part 2 -- Build the Food Web (20 min)</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1:</strong> Lay all organism cards on a table or the floor. Place the Sun card at the top, Grass below it, then the consumers in rows below. Put the Mushroom card off to the side for now.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 2:</strong> Draw arrows (on paper, or lay string) showing who eats who. Arrows point FROM the food TO the eater. Start with: Grass feeds Grasshopper, Grass feeds Mouse, Grass feeds Rabbit.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 3:</strong> Add the next level: Snake eats Mouse, Snake eats Grasshopper, Snake eats Rabbit. Fox eats Rabbit, Fox eats Mouse. Hawk eats Snake, Hawk eats Mouse, Hawk eats Rabbit.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 4:</strong> Notice what is forming -- not a chain anymore, but a web! Count how many connections each organism has. Which organism has the most arrows pointing to it?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 5:</strong> Now add the Mushroom. Draw an arrow from every dead organism card to the Mushroom, and an arrow from Mushroom back to Grass (nutrients return to soil). How does this change the picture?
+  </div>
+  <div class="procedure-step">
+    <strong>Step 6 -- The Collapse Test:</strong> Remove the Grass card. What happens? Which organisms would be immediately affected? Which would be affected later? Discuss: this is what happens when a key species disappears from an ecosystem.
+  </div>
+  <div class="procedure-step">
+    <strong>Step 7:</strong> Draw your completed food web on paper. Place the Sun at the top, Grass below, then consumers in layers. Draw all the arrows you mapped out. Label the apex predator, producers, and decomposers.
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>🗣️ Question 1:</strong> What would happen if all the snakes disappeared from this ecosystem?
+    <p class="discussion-hint">Suggested answer: Mice and rabbits would have one fewer predator, so their populations would grow. More mice and rabbits eating grass would put pressure on the grass supply. Grass would decline. Hawks and foxes might then struggle because their prey (snakes) are gone, but they could shift to more rabbits and mice. Real ecosystems show this domino effect -- removing one species ripples outward.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 2:</strong> Why are there always more plants than animals in an ecosystem?
+    <p class="discussion-hint">Suggested answer: Energy is lost at each trophic level -- only about 10% of energy transfers from one level to the next. The rest is lost as heat. So a field needs 1,000 units of grass energy to support 100 units of grasshoppers, which can support only 10 units of snakes, which can support only 1 unit of hawk. Fewer animals at the top is not random -- it is a result of thermodynamics!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>🗣️ Question 3:</strong> What role do decomposers play, and what would happen without them?
+    <p class="discussion-hint">Suggested answer: Decomposers break down dead matter and return nutrients to the soil, completing the nutrient cycle. Without them, dead organisms would pile up and nutrients would stay locked inside them forever. Plants would not be able to grow -- and the entire food web would collapse from the bottom up. Decomposers are often overlooked but are absolutely essential.</p>
+  </div>
+
+  <h2>🚀 Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🌍 <strong>Local Ecosystem:</strong> Look up a local ecosystem (prairie, forest, wetland) and research the real food web. How many organisms can you find? How does it compare to the one we built?</li>
+      <li>🦠 <strong>Invasive Species:</strong> What happens when an invasive species (one that does not belong) enters a food web? Research the brown tree snake in Guam or Asian carp in the Great Lakes as examples.</li>
+      <li>🎨 <strong>Food Web Art:</strong> Draw your food web as a piece of nature art -- make it beautiful and scientific at the same time. Use color coding for each trophic level.</li>
+      <li>📏 <strong>10% Rule Math:</strong> If there are 10,000 calories worth of grass in a meadow, how many calories do the grasshoppers get? How many does the hawk ultimately get? Do the math through all four levels.</li>
+      <li>📚 <strong>Read:</strong> "What's Eating You? Parasites -- The Inside Story" by Nicola Davies, or "The Magic School Bus Gets Eaten: A Book About Food Chains" by Patricia Relf.</li>
+    </ul>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>String variation:</strong> For a hands-on twist, tape organism cards to the wall and use string to connect them. Have students hold the string at their organism card while connections are made. Then remove "Grass" from the web -- pull on that card -- and see how many strings go slack. Students physically feel the collapse.</li>
+      <li><strong>The 10% rule:</strong> Only about 10% of energy transfers from one trophic level to the next; the rest is lost as heat (metabolic processes). This is why food pyramids have wide bases and narrow tops -- energy availability limits population size at each level.</li>
+      <li><strong>Apex predator note:</strong> The hawk is the apex predator in this simplified web. In nature, apex predators often have cascading effects when removed -- this is called a trophic cascade. The reintroduction of wolves in Yellowstone is the most famous example: wolves reduced deer grazing, rivers recovered, beavers returned, and the entire ecosystem changed.</li>
+      <li><strong>Decomposers vs. scavengers:</strong> If students ask about vultures or crows, those are scavengers (eat dead animals but do not fully break them down). Decomposers (fungi, bacteria) chemically break organic matter into nutrients. Both are important!</li>
+      <li><strong>Extension -- invasive species:</strong> Asian carp in the Great Lakes eat so much plankton that native fish starve. Brown tree snakes on Guam wiped out most native bird species within decades of arrival. These examples show how disrupting a food web has permanent consequences.</li>
+      <li><strong>NGSS connection:</strong> This lesson builds toward 4-LS1-1 (structures and function in living things) and also lays groundwork for MS-LS2 (ecosystems: interactions, energy, and dynamics) in middle school.</li>
+    </ul>
+  </div>
+
+  <!-- ====================== STUDENT WORKSHEET ====================== -->
+  <div class="page-break">
+    <div class="worksheet-header">🕸️ Student Worksheet -- Food Webs: Energy in Ecosystems</div>
+    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+
+    <h3>Part 1 -- Build Your Food Web</h3>
+    <p style="font-size:10pt; color:#555;">Use the organisms below to draw a food web. Draw arrows FROM the food TO the eater. Add the Sun at the top and the Mushroom (decomposer) on the side returning nutrients to the Grass.</p>
+
+    <div class="food-web-grid">
+      <div class="fw-arrow-hint">✏️ Draw arrows between the organisms to show who eats who. Arrows point FROM food TO eater.</div>
+      <div class="fw-row">
+        <div class="fw-box"><span class="fw-emoji">☀️</span><span class="fw-label">Sun</span></div>
+      </div>
+      <div class="fw-row">
+        <div class="fw-box"><span class="fw-emoji">🌿</span><span class="fw-label">Grass</span></div>
+      </div>
+      <div class="fw-row">
+        <div class="fw-box"><span class="fw-emoji">🦗</span><span class="fw-label">Grasshopper</span></div>
+        <div class="fw-box"><span class="fw-emoji">🐭</span><span class="fw-label">Mouse</span></div>
+        <div class="fw-box"><span class="fw-emoji">🐇</span><span class="fw-label">Rabbit</span></div>
+      </div>
+      <div class="fw-row">
+        <div class="fw-box"><span class="fw-emoji">🐍</span><span class="fw-label">Snake</span></div>
+        <div class="fw-box"><span class="fw-emoji">🦊</span><span class="fw-label">Fox</span></div>
+      </div>
+      <div class="fw-row">
+        <div class="fw-box"><span class="fw-emoji">🦅</span><span class="fw-label">Hawk</span></div>
+      </div>
+      <div style="text-align:center; margin-top:8px;">
+        <div class="fw-box" style="display:inline-block; border-color:#ce93d8; background:#f3e5f5;"><span class="fw-emoji">🍄</span><span class="fw-label" style="color:#7b1fa2;">Mushroom (Decomposer)</span></div>
+      </div>
+    </div>
+
+    <h3>Part 2 -- Label the Roles</h3>
+    <p style="font-size:10pt; color:#555;">Write each organism in the correct category below.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px; margin:10px 0;">
+      <div style="background:#e8f5e9; border:2px solid #a5d6a7; border-radius:8px; padding:10px;">
+        <div style="font-weight:bold; color:#1b5e20; text-align:center; margin-bottom:6px;">Producers</div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+      <div style="background:#e8f5e9; border:2px solid #a5d6a7; border-radius:8px; padding:10px;">
+        <div style="font-weight:bold; color:#1b5e20; text-align:center; margin-bottom:6px;">Consumers</div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+      <div style="background:#f3e5f5; border:2px solid #ce93d8; border-radius:8px; padding:10px;">
+        <div style="font-weight:bold; color:#7b1fa2; text-align:center; margin-bottom:6px;">Decomposers</div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+    </div>
+
+    <h3>Part 3 -- Short Answer Questions</h3>
+
+    <div class="short-answer-box">
+      <div class="q-label">1. What is the difference between a food chain and a food web?</div>
+      <div class="answer-lines">
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+    </div>
+
+    <div class="short-answer-box">
+      <div class="q-label">2. If all the grass disappeared, what would happen to the rest of the food web? Explain in 2-3 sentences.</div>
+      <div class="answer-lines">
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+    </div>
+
+    <div class="short-answer-box">
+      <div class="q-label">3. Describe what decomposers do and explain why they are important to the food web.</div>
+      <div class="answer-lines">
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+        <div class="answer-line"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ====================== ANSWER KEY ====================== -->
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY -- Detach before giving worksheet to students</h2>
+
+      <h3>Part 2 -- Label the Roles</h3>
+      <div class="ak-grid">
+        <div class="ak-box">
+          <h3>🌿 Producers</h3>
+          <ul>
+            <li>Grass (the only producer in this web)</li>
+            <li>Also: any plant that captures sunlight</li>
+          </ul>
+        </div>
+        <div class="ak-box">
+          <h3>🦗 Consumers</h3>
+          <ul>
+            <li><strong>Primary:</strong> Grasshopper, Mouse, Rabbit</li>
+            <li><strong>Secondary:</strong> Snake, Fox</li>
+            <li><strong>Apex:</strong> Hawk (tertiary/apex)</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:10px; background:#f3e5f5; border:2px solid #ce93d8; border-radius:8px; padding:10px;">
+        <strong style="color:#7b1fa2;">Decomposers:</strong> Mushroom (and by extension, bacteria and earthworms -- accept any of these)
+      </div>
+
+      <h3 style="margin-top:18px;">Part 3 -- Short Answer Model Answers</h3>
+      <ul>
+        <li><strong>Question 1:</strong> A food chain shows one straight path of energy (e.g., Grass - Mouse - Snake - Hawk). A food web shows all the connections at once, including animals that eat multiple things. A food web is a more complete and realistic picture of how energy moves through an ecosystem.</li>
+        <li><strong>Question 2:</strong> If all the grass disappeared, the grasshoppers, mice, and rabbits would have no food and their populations would crash. Without those animals, the snakes, foxes, and hawks would also run out of food and populations would decline. The decomposers would temporarily break down dead organisms but would also eventually have less to work with. The whole food web would collapse from the bottom up.</li>
+        <li><strong>Question 3:</strong> Decomposers break down dead plants and animals and return nutrients to the soil. This allows plants to grow and continue producing food for the whole ecosystem. Without decomposers, nutrients would stay locked inside dead matter forever and plants could not survive -- which would collapse the entire food web.</li>
+      </ul>
+
+      <h3>Food Web -- Correct Arrow Connections</h3>
+      <ul>
+        <li>Sun --&gt; Grass (energy flows to producer)</li>
+        <li>Grass --&gt; Grasshopper, Mouse, Rabbit (primary consumers)</li>
+        <li>Grasshopper --&gt; Snake</li>
+        <li>Mouse --&gt; Snake, Fox, Hawk</li>
+        <li>Rabbit --&gt; Snake, Fox, Hawk</li>
+        <li>Snake --&gt; Hawk</li>
+        <li>All organisms --&gt; Mushroom (decomposer receives dead matter)</li>
+        <li>Mushroom --&gt; Grass (nutrients returned to soil)</li>
+      </ul>
+
+      <div class="tip-box" style="margin-top: 14px;">
+        💡 <strong>What success looks like:</strong> Student draws at least 8 correct arrows, correctly labels grass as producer, hawk as apex predator, and mushroom as decomposer. Short answers should show understanding that removing one species affects the entire web -- not just its direct neighbors.
+      </div>
+    </div>
+  </div>
+
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key -- for every lesson in the K-5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock -- $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    // Fallback: lock from 3rd h2 if all early ones look like goals
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      // No h2 at all — fall back to hiding body overflow after 600px
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk body's direct children; hide everything from the child
+    // that IS or CONTAINS lockFromH2 onwards (skip paywall overlay itself)
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>
