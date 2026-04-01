@@ -108,6 +108,27 @@
       transform: translateY(-2px);
     }
 
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-sage {
+      background: var(--teal-pale);
+      color: var(--navy);
+    }
+    .btn-sage:hover {
+      background: var(--teal);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
     /* ─── Nav ─── */
     nav {
       position: sticky;
@@ -403,9 +424,133 @@
       padding-bottom: 40px;
     }
 
+    /* ─── Pricing Section ─── */
+    #pricing {
+      padding: 80px 24px;
+      background: var(--cream-dark);
+    }
+
+    .pricing-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pricing-section-label {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 12px;
+    }
+
+    .pricing-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .pricing-section-sub {
+      font-family: 'Lato', sans-serif;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: left;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 1px var(--teal), var(--shadow-lg);
+      transform: scale(1.03);
+    }
+
+    .pricing-card.featured:hover { transform: scale(1.03) translateY(-5px); }
+
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--teal);
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+
+    .pricing-icon { font-size: 2rem; display: block; margin-bottom: 12px; }
+    .pricing-tier-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .pricing-tagline { font-family: 'Lato', sans-serif; font-size: 0.92rem; color: var(--text-muted); margin-bottom: 16px; }
+
+    .p-price-main { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1; }
+    .p-price-alt { font-family: 'Lato', sans-serif; font-size: 0.88rem; color: var(--text-muted); margin-top: 4px; }
+
+    .pricing-divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+    .pricing-features { list-style: none; padding: 0; margin: 0 0 24px; }
+    .pricing-features li {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--navy);
+      padding: 5px 0 5px 32px;
+      position: relative;
+    }
+    .feature-check {
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--coral);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      top: 6px;
+    }
+    .pricing-card.featured .feature-check { background: var(--teal); }
+
     @media (max-width: 768px) {
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
       .store-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card.featured { transform: none; }
+      .pricing-card.featured:hover { transform: translateY(-5px); }
     }
 
     .footer-logo {
@@ -608,6 +753,67 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ─── Pricing ─── -->
+  <section id="pricing">
+    <div class="pricing-inner">
+      <span class="pricing-section-label">Simple pricing</span>
+      <h2 class="pricing-section-title">Choose what works for your family.</h2>
+      <p class="pricing-section-sub">Buy a single unit to try it out, or unlock the full library for a year.</p>
+
+      <div class="pricing-grid">
+
+        <!-- Tier 1: Single Unit -->
+        <div class="pricing-card">
+          <span class="pricing-icon">📄</span>
+          <div class="pricing-tier-name">Single Unit</div>
+          <div class="pricing-tagline">Try one unit before committing</div>
+          <div>
+            <div class="p-price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">one-time</small></div>
+            <div class="p-price-alt">Per unit · PDF download</div>
+            <div style="color:#16a34a; font-size:0.85rem; font-weight:600; margin-top:6px;">✓ One-time payment · No subscription required</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✓</span>Instant PDF download</li>
+            <li><span class="feature-check">✓</span>Full unit (6 lessons)</li>
+            <li><span class="feature-check">✓</span>Student worksheets (all grade levels)</li>
+            <li><span class="feature-check">✓</span>Parent answer key</li>
+            <li><span class="feature-check">✓</span>Discussion questions with guided answers</li>
+            <li><span class="feature-check">✓</span>Unit reference card</li>
+            <li><span class="feature-check">✓</span>Unit quiz</li>
+            <li><span class="feature-check">✓</span>Print as many times as you need</li>
+          </ul>
+          <a href="#" class="btn btn-secondary" style="width:100%; text-align:center;">Buy a Unit</a>
+        </div>
+
+        <!-- Tier 2: Full Library (Featured) -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <span class="pricing-icon">🥼</span>
+          <div class="pricing-tier-name">Full Library</div>
+          <div class="pricing-tagline">Every lesson, every grade, all year</div>
+          <div>
+            <div class="p-price-main"><span style="text-decoration:line-through; color:var(--text-muted); font-size:1.1rem; font-weight:400;">$124</span> <strong>$99</strong> <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/year</small></div>
+            <div class="p-price-alt">Introductory price · Cancel anytime</div>
+            <div style="color:#b45309; font-size:0.85rem; font-weight:600; margin-top:6px;">🐣 Early bird — lock in this rate forever</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✓</span>All 80+ lessons across K–5</li>
+            <li><span class="feature-check">✓</span>All grades: Kindergarten through Grade 5</li>
+            <li><span class="feature-check">✓</span>Every unit, refcard, and quiz</li>
+            <li><span class="feature-check">✓</span>New lessons added regularly</li>
+            <li><span class="feature-check">✓</span>Printable PDFs for all lessons</li>
+            <li><span class="feature-check">✓</span>Multi-child household use</li>
+            <li><span class="feature-check">✓</span>Cancel anytime</li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="width:100%; text-align:center;">Subscribe — $99/yr</a>
+        </div>
+
+      </div>
     </div>
   </section>
 

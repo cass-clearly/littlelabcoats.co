@@ -855,10 +855,13 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-top: 16px;
       align-items: start;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .pricing-card {
@@ -972,7 +975,6 @@
 
     .pricing-card:nth-child(1) .feature-check { background: var(--coral); color: white; }
     .pricing-card.featured .feature-check     { background: var(--teal); color: white; }
-    .pricing-card:nth-child(3) .feature-check { background: var(--navy); color: white; }
 
     /* ─── Founder ─── */
     #founder {
@@ -1491,6 +1493,7 @@
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
 
+      .pricing-grid { grid-template-columns: 1fr; }
       .pricing-card.featured { transform: none; }
       .pricing-card.featured:hover { transform: translateY(-5px); }
 
@@ -2474,81 +2477,54 @@
       <h2 class="section-title">Choose what works for your family.</h2>
       <p class="section-sub">Buy individual units as you go, or save with a yearly subscription. All plans include the full lesson — nothing locked behind upgrades.</p>
 
-      <!-- Early Bird Banner -->
-      <div style="background: linear-gradient(135deg, #b45309, #d97706); color: white; border-radius: 12px; padding: 18px 24px; margin-bottom: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-        <span style="font-size: 1.6rem;">🐣</span>
-        <div>
-          <div style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700;">Early Bird Pricing — First 50 Subscribers</div>
-          <div style="font-size: 0.95rem; opacity: 0.92; margin-top: 4px;">Get <strong>25% off all subscription plans</strong> as a founding member. Limited spots — lock in your rate forever.</div>
-        </div>
-        <div style="margin-left: auto; background: rgba(255,255,255,0.2); border-radius: 8px; padding: 8px 16px; font-weight: 700; font-size: 1rem; white-space: nowrap;">Limited Time</div>
-      </div>
-
       <div class="pricing-grid">
 
-        <!-- Tier 1: Digital -->
+        <!-- Tier 1: Single Unit -->
         <div class="pricing-card">
           <span class="pricing-icon">📄</span>
-          <div class="pricing-tier-name">Digital</div>
-          <div class="pricing-tagline">Perfect for trying it out</div>
+          <div class="pricing-tier-name">Single Unit</div>
+          <div class="pricing-tagline">Try one unit before committing</div>
           <div class="pricing-price">
-            <div class="price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/ unit</small></div>
-            <div class="price-alt">or <span style="text-decoration:line-through;">$89</span> <strong style="color:#b45309;">$67</strong>/year · <span style="color:#b45309;">🐣 early bird</span></div>
+            <div class="price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">one-time</small></div>
+            <div class="price-alt">Per unit · PDF download</div>
+            <div style="color:#16a34a; font-size:0.85rem; font-weight:600; margin-top:6px;">✓ One-time payment · No subscription required</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
             <li><span class="feature-check">✓</span>Instant PDF download</li>
-            <li><span class="feature-check">✓</span>Full lesson plan with experiment</li>
+            <li><span class="feature-check">✓</span>Full unit (6 lessons)</li>
             <li><span class="feature-check">✓</span>Student worksheets (all grade levels)</li>
             <li><span class="feature-check">✓</span>Parent answer key</li>
             <li><span class="feature-check">✓</span>Discussion questions with guided answers</li>
+            <li><span class="feature-check">✓</span>Unit reference card</li>
+            <li><span class="feature-check">✓</span>Unit quiz</li>
             <li><span class="feature-check">✓</span>Print as many times as you need</li>
           </ul>
-          <a href="store.html" class="btn btn-secondary" style="width:100%; text-align:center;">Get Digital</a>
+          <a href="store.html" class="btn btn-secondary" style="width:100%; text-align:center;">Buy a Unit</a>
         </div>
 
-        <!-- Tier 2: Digital + Kit (Featured) -->
+        <!-- Tier 2: Full Library (Featured) -->
         <div class="pricing-card featured">
           <div class="pricing-badge">Most Popular</div>
-          <span class="pricing-icon">📦</span>
-          <div class="pricing-tier-name">Digital + Kit</div>
-          <div class="pricing-tagline">Everything included — just open and teach</div>
+          <span class="pricing-icon">🥼</span>
+          <div class="pricing-tier-name">Full Library</div>
+          <div class="pricing-tagline">Every lesson, every grade, all year</div>
           <div class="pricing-price">
-            <div class="price-main">$49 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/ unit</small></div>
-            <div class="price-alt">or <span style="text-decoration:line-through;">$249</span> <strong style="color:#b45309;">$187</strong>/year · <span style="color:#b45309;">🐣 early bird</span></div>
+            <div class="price-main"><span style="text-decoration:line-through; color:var(--text-muted); font-size:1.1rem; font-weight:400;">$124</span> <strong>$99</strong> <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/year</small></div>
+            <div class="price-alt">Introductory price · Cancel anytime</div>
+            <div style="color:#b45309; font-size:0.85rem; font-weight:600; margin-top:6px;">🐣 Early bird — lock in this rate forever</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>Everything in Digital</li>
-            <li><span class="feature-check">✓</span>Pre-assembled materials kit</li>
-            <li><span class="feature-check">✓</span>All experiment supplies included</li>
-            <li><span class="feature-check">✓</span>Shipped to your door</li>
-            <li><span class="feature-check">✓</span>Zero supply hunting required</li>
-            <li><span class="feature-check">✓</span>Open the box, start the lesson</li>
+            <li><span class="feature-check">✓</span>All 80+ lessons across K–5</li>
+            <li><span class="feature-check">✓</span>All grades: Kindergarten through Grade 5</li>
+            <li><span class="feature-check">✓</span>Every unit, refcard, and quiz</li>
+            <li><span class="feature-check">✓</span>New lessons added regularly</li>
+            <li><span class="feature-check">✓</span>Printable PDFs for all lessons</li>
+            <li><span class="feature-check">✓</span>Multi-child household use</li>
+            <li><span class="feature-check">✓</span>Cancel anytime</li>
           </ul>
-          <a href="store.html" class="btn btn-teal" style="width:100%; text-align:center;">Get Kit + Digital</a>
-        </div>
-
-        <!-- Tier 3: Subscription -->
-        <div class="pricing-card">
-          <span class="pricing-icon">✨</span>
-          <div class="pricing-tier-name">Subscription</div>
-          <div class="pricing-tagline">Full library access, best value</div>
-          <div class="pricing-price">
-            <div class="price-main"><span style="text-decoration:line-through; color:var(--text-muted); font-size:1.1rem; font-weight:400;">$124</span> <strong style="color:#b45309;">$99</strong> <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/ year</small></div>
-            <div class="price-alt">Unlock every current + future unit</div>
-            <div style="color:#b45309; font-size:0.85rem; font-weight:600; margin-top:4px;">🐣 Introductory price — lock it in before it goes up</div>
-          </div>
-          <hr class="pricing-divider" />
-          <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>Access to entire unit library</li>
-            <li><span class="feature-check">✓</span>All grade levels K–5</li>
-            <li><span class="feature-check">✓</span>New units added regularly</li>
-            <li><span class="feature-check">✓</span>Instant download for everything</li>
-            <li><span class="feature-check">✓</span>Priority access to new releases</li>
-            <li><span class="feature-check">✓</span>Best value for active homeschoolers</li>
-          </ul>
-          <a href="store.html" class="btn btn-navy" style="width:100%; text-align:center;">Subscribe &amp; Save</a>
+          <a href="store.html" class="btn btn-primary" style="width:100%; text-align:center;">Subscribe — $99/yr</a>
         </div>
 
       </div>
