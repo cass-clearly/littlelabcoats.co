@@ -2791,5 +2791,182 @@
   })();
   </script>
 
+<!-- ═══ EMAIL SIGNUP POPUP ═══ -->
+<style>
+  .llc-popup-overlay {
+    position: fixed; inset: 0;
+    background: rgba(59,31,107,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .llc-popup-overlay.active { opacity: 1; pointer-events: auto; }
+  .llc-popup {
+    background: #fff;
+    border-radius: 18px;
+    max-width: 460px;
+    width: 90%;
+    padding: 40px 32px 32px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 24px 80px rgba(59,31,107,0.25);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  .llc-popup-overlay.active .llc-popup { transform: translateY(0); }
+  .llc-popup-close {
+    position: absolute; top: 14px; right: 18px;
+    background: none; border: none; font-size: 1.4rem;
+    color: #999; cursor: pointer; line-height: 1;
+  }
+  .llc-popup-close:hover { color: #3B1F6B; }
+  .llc-popup-emoji { font-size: 2.8rem; margin-bottom: 12px; display: block; }
+  .llc-popup-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: #3B1F6B; margin-bottom: 10px;
+  }
+  .llc-popup-sub {
+    font-size: 0.95rem; color: #5A7A78;
+    line-height: 1.55; margin-bottom: 22px;
+  }
+  .llc-popup-form {
+    display: flex; gap: 8px;
+    max-width: 380px; margin: 0 auto;
+  }
+  .llc-popup-form input[type="email"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #D4F5F3;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .llc-popup-form input[type="email"]:focus {
+    border-color: #4ECDC4;
+  }
+  .llc-popup-form button {
+    background: #FF6B6B;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-popup-form button:hover {
+    background: #e05555;
+    transform: translateY(-1px);
+  }
+  .llc-popup-fine {
+    font-size: 0.75rem; color: #999;
+    margin-top: 14px;
+  }
+  .llc-popup-success {
+    display: none;
+    padding: 8px 0;
+  }
+  .llc-popup-success .check { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+  .llc-popup-success p {
+    font-size: 1rem; color: #3B1F6B; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .llc-popup { padding: 32px 20px 24px; }
+    .llc-popup-form { flex-direction: column; }
+    .llc-popup-form button { width: 100%; }
+  }
+</style>
+
+<div class="llc-popup-overlay" id="llcEmailPopup">
+  <div class="llc-popup">
+    <button class="llc-popup-close" id="llcPopupClose">&times;</button>
+    <div id="llcPopupForm">
+      <span class="llc-popup-emoji">🧪🥼</span>
+      <div class="llc-popup-title">Coming Soon</div>
+      <p class="llc-popup-sub">Want to be the first to try the new curriculum at a deep discount? Sign up and we'll let you know the moment it's ready.</p>
+      <form class="llc-popup-form" id="llcSignupForm" action="https://formsubmit.co/serenasalvato1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New early-access signup from littlelabcoats.co">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://littlelabcoats.co">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Count Me In</button>
+      </form>
+      <p class="llc-popup-fine">No spam, ever. Just a heads-up when it's launch time.</p>
+    </div>
+    <div class="llc-popup-success" id="llcPopupSuccess">
+      <span class="check">✅</span>
+      <p>You're on the list! We'll be in touch soon.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var STORAGE_KEY = 'llc_email_popup_dismissed';
+  var overlay = document.getElementById('llcEmailPopup');
+  var closeBtn = document.getElementById('llcPopupClose');
+  var form = document.getElementById('llcSignupForm');
+
+  // Don't show if already dismissed or signed up
+  if (localStorage.getItem(STORAGE_KEY)) return;
+
+  // Show after 8 seconds or 40% scroll, whichever comes first
+  var shown = false;
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    overlay.classList.add('active');
+  }
+
+  setTimeout(showPopup, 8000);
+
+  window.addEventListener('scroll', function() {
+    var scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrollPct > 0.4) showPopup();
+  });
+
+  function dismiss() {
+    overlay.classList.remove('active');
+    localStorage.setItem(STORAGE_KEY, '1');
+  }
+
+  closeBtn.addEventListener('click', dismiss);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) dismiss();
+  });
+
+  // Handle form submission
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = form.querySelector('input[type="email"]').value;
+    
+    // Submit via fetch to formsubmit.co
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: email, _subject: 'New early-access signup from littlelabcoats.co' })
+    }).then(function() {
+      document.getElementById('llcPopupForm').style.display = 'none';
+      document.getElementById('llcPopupSuccess').style.display = 'block';
+      localStorage.setItem(STORAGE_KEY, 'signed_up');
+      setTimeout(dismiss, 2500);
+    }).catch(function() {
+      // Fallback: just submit normally
+      form.submit();
+    });
+  });
+})();
+</script>
+<!-- ═══ END EMAIL POPUP ═══ -->
+
 </body>
 </html>
