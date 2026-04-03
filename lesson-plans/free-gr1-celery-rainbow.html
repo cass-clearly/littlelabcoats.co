@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celery Rainbow — 1st Grade Plant Structures &amp; Water Transport</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .procedure-step {
+      background: #E8F8F5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #00B894;
+    }
+    .procedure-step strong {
+      color: #00876A;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .drawing-area {
+      border: 2px dashed #aaa;
+      min-height: 160px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body {
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 {
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌈 Celery Rainbow 🥬</h1>
+  <p class="subtitle">A Free 1st Grade Lesson — How Plants Drink Water</p>
+
+  <div class="meta">
+    <span><strong>Grade:</strong> 1st Grade</span>
+    <span><strong>Duration:</strong> 45–60 minutes + overnight observation</span>
+    <span><strong>Subject:</strong> Life Science — Plant Structures</span>
+  </div>
+
+  <!-- ═══ PARENT/TEACHER NOTES ═══ -->
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> This is one of the most satisfying science experiments for young learners — the results are dramatic, colorful, and <em>visible</em>. All you need is celery, cups, food coloring, and patience. The "wow moment" comes when you slice the stalk open and see rainbow tubes inside!
+    <ul style="margin: 8px 0;">
+      <li>Read "The Science" section aloud with your child before setting up (5–8 min)</li>
+      <li><strong>Timing tip:</strong> Set up in the morning, check at lunch, check before bed, and see full results the next morning. The waiting builds anticipation!</li>
+      <li>Use celery stalks with <em>leaves still attached</em> — you'll see color travel all the way to the leaf tips</li>
+      <li>Fresh celery from the inner part of the bunch works best (pale green, crispy stalks)</li>
+      <li>The parent-only step is cutting the stalk open with a knife — everything else is kid-safe</li>
+      <li>Total prep: under 10 minutes. Total active lesson time: 45–60 minutes spread across the day</li>
+    </ul>
+  </div>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #00B894 0%, #00796B 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: How Do Plants Drink Water?</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">Plants don't have mouths. They don't have cups. They don't have hands to pick up a glass of water. So how does water get from the ground all the way up to the tippy-top of a tall tree? Today, you're going to find out — and you'll <em>see it happening</em> with your own eyes using colored water and a celery stalk!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #56ab2f 0%, #a8e063 100%); color: white; padding: 12px; border-radius: 8px;">🥤 Plants Have Built-In Straws!</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p><strong>Imagine this:</strong> Inside every plant stem, there are <em>hundreds of teeny-tiny tubes</em> running from the roots all the way up to the leaves. These tubes are called <strong>xylem</strong> (say: ZY-lem).</p>
+
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>Think of xylem like a bundle of tiny straws:</strong></p>
+
+    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; margin: 15px 0; align-items: center; text-align: center;">
+      <div style="background: #e8f5e9; border-radius: 8px; padding: 12px;">
+        <div style="font-size: 40px;">🥤</div>
+        <strong>A Drinking Straw</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Water goes UP the straw from your glass to your mouth</p>
+      </div>
+      <div style="font-size: 36px; color: #00B894;">≈</div>
+      <div style="background: #e8f5e9; border-radius: 8px; padding: 12px;">
+        <div style="font-size: 40px;">🌱</div>
+        <strong>Xylem Tubes</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Water goes UP the stem from the roots to the leaves</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 The Key Idea:</strong> Plants have tiny tubes (xylem) that carry water from the roots, up the stem, and out to every leaf. It's like the plant has hundreds of invisible straws running through its whole body!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">💧 Capillary Action: Water That Climbs!</h3>
+
+  <div style="background: #e1f5fe; border: 3px solid #03a9f4; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>But wait — water falls <em>down</em>, right?</strong> If you pour water on the floor, it doesn't climb up the wall! So how does water go <em>up</em> a plant stem?</p>
+
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>The answer: Capillary Action!</strong></p>
+
+    <div style="background: white; border: 3px solid #333; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="text-align: center; font-size: 12pt; margin-bottom: 15px;"><strong>How water climbs up a tiny tube:</strong></p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center;">
+        <div style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border-radius: 12px; padding: 15px;">
+          <div style="font-size: 36px; margin-bottom: 8px;">1️⃣</div>
+          <strong>Water is "sticky"</strong>
+          <p style="font-size: 10pt; margin: 5px 0;">Water molecules love to grab onto things — especially the walls of tiny tubes</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border-radius: 12px; padding: 15px;">
+          <div style="font-size: 36px; margin-bottom: 8px;">2️⃣</div>
+          <strong>Water is "clingy"</strong>
+          <p style="font-size: 10pt; margin: 5px 0;">Water molecules also grab onto <em>each other</em> — they stick together like a chain!</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border-radius: 12px; padding: 15px;">
+          <div style="font-size: 36px; margin-bottom: 8px;">3️⃣</div>
+          <strong>Water climbs up!</strong>
+          <p style="font-size: 10pt; margin: 5px 0;">The front water molecules pull up the ones behind them. Up, up, up through the tube!</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🧽 Try this:</strong> Dip just the <em>corner</em> of a paper towel into a cup of water. Watch the water crawl upward! That's capillary action too — the water grabs onto the tiny fibers in the paper towel and pulls itself up. The same thing happens inside plant stems!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">🌿 Why Do Leaves Need Water?</h3>
+
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>Plants need water for the same reason you do — to stay alive!</strong> But plants also use water for something extra special:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🍽️</div>
+        <strong>Making Food</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Leaves use water + sunlight to make their own food (photosynthesis!)</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">💪</div>
+        <strong>Standing Tall</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Water fills up plant cells and keeps stems stiff — without water, plants wilt!</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🚚</div>
+        <strong>Carrying Nutrients</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Water carries dissolved minerals from the soil up to every part of the plant</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 That's why:</strong> When you forget to water a houseplant, it gets droopy and sad. The tubes are empty! Give it a drink and watch it perk right back up — the xylem fills up and the plant stands tall again.</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 12px; border-radius: 8px;">🔬 What You'll See Inside the Celery</h3>
+
+  <div style="background: white; border: 3px solid #333; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <p style="text-align: center; font-size: 12pt; margin-bottom: 15px;"><strong>The Big Reveal: Cut the stalk open!</strong></p>
+    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; text-align: center;">
+      <div style="background: linear-gradient(135deg, #b8e6ff 0%, #64b5f6 100%); border-radius: 15px; padding: 20px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <div style="font-size: 48px; margin-bottom: 10px;">🥬</div>
+        <strong style="font-size: 13pt;">Outside</strong>
+        <p style="margin: 8px 0; font-size: 11pt;">Looks like normal green celery</p>
+      </div>
+
+      <div style="font-size: 40px; color: #00B894;">
+        <div>🔪</div>
+        <div style="font-size: 11pt; margin: 8px 0; color: #333;">Slice it open!</div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%); border-radius: 15px; padding: 20px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <div style="font-size: 48px; margin-bottom: 10px;">🌈</div>
+        <strong style="font-size: 13pt;">Inside</strong>
+        <p style="margin: 8px 0; font-size: 11pt;">Colored dots and lines! Those are the xylem tubes full of colored water!</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; padding: 15px; background: #fff3e0; border-left: 5px solid #ff9800; border-radius: 5px;">
+      <p style="margin: 0; font-size: 11pt;"><strong>🤩 The wow moment:</strong> When you slice the celery across, you'll see tiny <span style="color: #e74c3c; font-weight: bold;">colored dots</span> — those are the cross-sections of the xylem tubes! If you slice it lengthwise, you'll see <span style="color: #1976d2; font-weight: bold;">colored lines</span> running all the way up. The food coloring traveled through these tubes — just like it does in every plant on Earth!</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 16pt;">✨ Ready to See a Plant Drink a Rainbow? ✨</h3>
+    <p style="font-size: 12pt; color: white; margin: 0;">Grab your celery — it's time to be a plant scientist!</p>
+  </div>
+
+  <!-- ═══ KEY VOCABULARY ═══ -->
+  <div style="background: linear-gradient(135deg, #00B894 0%, #00796B 100%); border-radius: 10px; padding: 20px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 14pt;">📖 Key Vocabulary</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🌿 Xylem</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">(ZY-lem) Tiny tubes inside a plant that carry water upward from roots to leaves</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>💧 Capillary Action</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The way water "climbs" up tiny tubes — even going against gravity!</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🧽 Absorb</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">To soak up or take in — like a sponge soaking up water</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🥬 Stem</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The main part of a plant that holds it up and carries water between roots and leaves</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🍎 Nutrients</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Healthy things plants (and people!) need to grow — minerals from the soil dissolved in water</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🚚 Transport</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">To carry something from one place to another — the stem transports water!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NGSS STANDARDS ═══ -->
+  <div style="background: #f3e5f5; border: 2px solid #ce93d8; border-radius: 8px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #7c3aed; border: none;">📋 NGSS Standard:</h3>
+    <p><strong>1-LS1-1</strong> — Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.</p>
+    <p style="margin-top: 8px;"><strong>1-LS1-2</strong> (supporting) — Read texts and use media to determine patterns in behavior of parents and offspring that help offspring survive. <em>(Extended here to plant structures — students observe how stems function to transport water needed for survival.)</em></p>
+    <p style="margin-top: 8px;"><strong>Science &amp; Engineering Practices:</strong> Planning and carrying out investigations; Constructing explanations from evidence</p>
+    <p style="margin-top: 8px;"><strong>Crosscutting Concept:</strong> Structure and Function — The shape and structure of the stem (xylem tubes) is directly related to its function (transporting water).</p>
+  </div>
+
+  <!-- ═══ LEARNING GOALS ═══ -->
+  <h2>📚 Learning Goals</h2>
+
+  <div style="border: 1px solid #00B894; border-left: 4px solid #00B894; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Explain how plants get water</strong>: Describe how water travels from roots, up through the stem, and out to the leaves through tiny tubes (xylem)</li>
+      <li><strong>Identify plant structures</strong>: Point to and name the roots, stem, and leaves and explain each one's job</li>
+      <li><strong>Observe over time</strong>: Track how colored water moves up the celery stalk at different time intervals</li>
+      <li><strong>Make and check predictions</strong>: Guess which color will travel fastest and whether the color will reach the leaves, then compare with actual results</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>xylem, absorb, stem, transport, capillary action, nutrients</em></li>
+      <li><strong>Identify evidence</strong>: Explain that the colored dots visible in a sliced stalk are xylem tubes filled with colored water</li>
+    </ul>
+  </div>
+
+  <!-- ═══ MATERIALS ═══ -->
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3 style="color: #e65100;">🏠 Household Items to Gather</h3>
+      <ul>
+        <li><span class="checkbox"></span>3–4 celery stalks with leaves attached (fresher is better!)</li>
+        <li><span class="checkbox"></span>3–4 clear cups or jars (so you can see the colored water)</li>
+        <li><span class="checkbox"></span>Food coloring — at least 3 colors (red, blue, and yellow work great)</li>
+        <li><span class="checkbox"></span>Water</li>
+        <li><span class="checkbox"></span>Knife (parent use only — for trimming stalks and the big reveal slice!)</li>
+        <li><span class="checkbox"></span>Paper towels (for cleanup and optional capillary action demo)</li>
+        <li><span class="checkbox"></span>Cutting board</li>
+      </ul>
+      <h3 style="color: #e65100;">✨ Optional / Nice to Have</h3>
+      <ul>
+        <li><span class="checkbox"></span>White carnations or daisies (stunning extension — flowers turn colors too!)</li>
+        <li><span class="checkbox"></span>Magnifying glass (to look closely at the xylem dots)</li>
+        <li><span class="checkbox"></span>Extra celery stalk for the two-color split experiment (see Extensions)</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes</h3>
+      <ul>
+        <li><strong>Knife safety:</strong> Only the parent/teacher handles the knife for cutting celery — no exceptions</li>
+        <li>Food coloring stains — place cups on paper towels and wear old clothes</li>
+        <li>The colored water is non-toxic but will stain hands, clothes, and counters</li>
+        <li>Don't drink the colored water (it's safe but tastes like food coloring!)</li>
+        <li>Wash hands after handling food coloring</li>
+      </ul>
+      <h3>💡 Setup Tip</h3>
+      <p style="font-size: 10pt;">Choose a spot where the cups can sit <em>undisturbed</em> for 24 hours — a kitchen counter, windowsill, or table edge works great. Place paper towels underneath in case of drips. A sunny spot may speed up results slightly!</p>
+    </div>
+  </div>
+
+  <!-- ═══ PROCEDURE ═══ -->
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Prepare the Colored Water (5 min)</strong><br>
+    Fill each cup about halfway with water. Add 8–10 drops of food coloring to each cup — use a different color for each one. The darker the water, the more vivid your results! Stir gently.
+    <br><em>Suggested: one red cup, one blue cup, one yellow cup. Add a fourth green or purple if you like!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Prepare the Celery (5 min — parent handles knife)</strong><br>
+    <strong>Parent step:</strong> Trim about ½ inch off the bottom of each celery stalk to expose a fresh cut. This helps the celery absorb water faster. Choose stalks with plenty of leaves still attached — the leaves are where you'll see color appear!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Make Predictions! (5 min)</strong><br>
+    Before placing the celery, ask your scientist:
+    <ul style="margin: 5px 0;">
+      <li><em>"What do you think will happen when we put the celery in the colored water?"</em></li>
+      <li><em>"Will the color stay at the bottom or travel up?"</em></li>
+      <li><em>"Which color do you think will travel the fastest?"</em></li>
+      <li><em>"Will the color reach all the way to the leaves?"</em></li>
+    </ul>
+    Record predictions on the worksheet!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Place the Celery! 🌈 (2 min)</strong><br>
+    Have your child place one celery stalk into each cup of colored water. Make sure the cut end is submerged. Stand them up straight — you can lean them against a wall if they're wobbly. Now the waiting begins!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: First Check — 2 Hours Later 🕑</strong><br>
+    Come back and look closely! Can you see any color changes? Check the leaves — are the edges starting to change? Look at the stem — can you see faint colored lines? Record your observations on the worksheet. <em>Don't worry if changes are subtle — the magic is still happening!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Second Check — 4–6 Hours Later 🕓</strong><br>
+    The color should be more visible now! Look at the leaves — you should see color on the leaf edges and veins. Compare the colors side by side: did one color travel faster? Look at the stems — can you see colored streaks? Record everything!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: The Big Reveal — Next Morning! 🌅 (15 min)</strong><br>
+    After sitting overnight (12–24 hours), the results should be dramatic. The leaves will show vivid color, and the stems will have visible colored streaks.
+    <br><br>
+    <strong>🔪 Now for the best part (parent handles knife):</strong>
+    <ul style="margin: 5px 0;">
+      <li>Take a stalk out of the water and pat it dry with a paper towel</li>
+      <li>Cut a <strong>cross-section</strong> (slice straight across the stalk) — look at the dots! Those colored dots are the xylem tubes!</li>
+      <li>Cut a <strong>lengthwise section</strong> (slice it down the middle) — see the colored lines running up? That's the path the water traveled!</li>
+      <li>Use a magnifying glass to get a really close look</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 8: Discuss! (10 min)</strong><br>
+    Use the discussion questions below while the evidence is right in front of you. Have kids hold the sliced celery, point to the xylem tubes, and explain what happened in their own words. This is the moment it all clicks!
+  </div>
+
+  <!-- ═══ DISCUSSION QUESTIONS ═══ -->
+  <h2>❓ Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>Q: What happened to the celery after sitting in colored water overnight?</strong>
+    <p class="discussion-hint">Look for: The leaves changed color! The color traveled up the stem and into the leaves. They might say the celery "drank" the colored water — that's a great way to describe it.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: How did the color get from the cup all the way up to the leaves?</strong>
+    <p class="discussion-hint">Look for: The water traveled up through tiny tubes (xylem) inside the stem. It's like the celery has built-in straws! The water went up, up, up through the tubes to the leaves.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: When you look at the sliced celery, what do you see? What are those colored dots?</strong>
+    <p class="discussion-hint">Look for: Colored dots and lines! The dots are the xylem tubes — the tiny "straws" inside the stem. They're full of colored water, which is why you can see them.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What do you think would happen if a real plant in the ground couldn't get water?</strong>
+    <p class="discussion-hint">Look for: The plant would wilt, droop, and eventually die. Without water, the xylem tubes are empty, and the plant can't make food or stay strong. That's why we have to water plants!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Did one color seem to travel faster or farther than the others? Why do you think that is?</strong>
+    <p class="discussion-hint">They might notice differences! Red food coloring tends to show up more vividly because of the dye concentration. Accept any observation — the point is that they're <em>comparing</em> and <em>thinking</em> about why.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: If you put a celery stalk in plain water (no food coloring), would water still travel up? How would you know?</strong>
+    <p class="discussion-hint">Yes! Water always travels up through xylem. We just can't <em>see</em> it because water is clear. The food coloring is like a "detective tool" that lets us see something that's normally invisible!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What parts of a plant work together to get water from the ground to the leaves?</strong>
+    <p class="discussion-hint">Look for: Roots absorb water from the soil, the stem carries it upward through xylem tubes, and the leaves receive the water to make food. All three parts work as a team!</p>
+  </div>
+
+  <!-- ═══ EXTENSIONS ═══ -->
+  <h2>🚀 Extensions</h2>
+
+  <div style="background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 15px; margin: 15px 0;">
+    <ul>
+      <li><strong>🌸 White Flower Wow:</strong> Place white carnations or daisies in colored water. The petals will turn vivid colors within hours — a stunning result! White roses work too.</li>
+      <li><strong>🎨 Two-Color Split Stalk:</strong> Have the parent carefully split a celery stalk halfway up the middle (lengthwise). Place one half in red water and the other half in blue water. The leaves will turn <em>two colors</em> — half red, half blue! This shows that different xylem tubes serve different parts of the leaf.</li>
+      <li><strong>🏃 Speed Race:</strong> Put one stalk in warm water and another in cold water (both with the same color). Does warm water travel faster? (Spoiler: yes, usually! Warm water moves more easily because the molecules move faster.)</li>
+      <li><strong>🔬 Paper Towel Capillary Action:</strong> Roll up a paper towel and dip one end in a cup of colored water with the other end hanging into an empty cup. Over several hours, the water will "climb" the paper towel and drip into the empty cup! Same principle as xylem.</li>
+      <li><strong>🌳 Nature Walk:</strong> Go outside and look at real plants. Find stems, roots poking out of the ground, and leaves. Can your child point to where the xylem would be? Break a small twig — can they see the tubes inside?</li>
+    </ul>
+  </div>
+
+  <!-- ═══ STUDENT WORKSHEET ═══ -->
+  <div class="page-break">
+    <h2>📊 Student Worksheet</h2>
+    <p style="text-align: center; font-size: 12pt;"><strong>Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h3>🤔 My Predictions</h3>
+    <p><strong>What do you think will happen to the celery in colored water?</strong></p>
+    <div class="notes-area" style="min-height: 50px;"></div>
+
+    <p><strong>Which color do you think will travel the fastest?</strong> ___________________________</p>
+
+    <p><strong>Will the color reach the leaves?</strong> &nbsp; Yes ☐ &nbsp; No ☐ &nbsp; Maybe ☐</p>
+
+    <h3>👀 My Observations Over Time</h3>
+    <table class="data-table">
+      <tr>
+        <th>Time</th>
+        <th>What does the stem look like?</th>
+        <th>What do the leaves look like?</th>
+        <th>How far did the color travel?</th>
+      </tr>
+      <tr>
+        <td><strong>Start</strong> (0 hours)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>2 hours</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>4–6 hours</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Overnight</strong> (next day!)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>🎨 Color Comparison</h3>
+    <table class="data-table">
+      <tr>
+        <th>Color</th>
+        <th>Did it reach the leaves? (yes/no)</th>
+        <th>How vivid was it? (faint / medium / bright)</th>
+      </tr>
+      <tr>
+        <td>🔴 Red</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🔵 Blue</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🟡 Yellow</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Other: ________</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>✏️ Draw What You Saw!</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+      <div>
+        <p style="text-align: center; font-weight: bold;">BEFORE (start)</p>
+        <div class="drawing-area" style="min-height: 150px;">(draw the celery before)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold;">AFTER (next morning)</p>
+        <div class="drawing-area" style="min-height: 150px;">(draw the celery after)</div>
+      </div>
+    </div>
+
+    <h3>🔍 The Big Reveal: Inside the Celery!</h3>
+    <p>After the parent sliced the celery, draw what you saw inside:</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+      <div>
+        <p style="text-align: center; font-weight: bold;">Cross-Section (sliced across)</p>
+        <div class="drawing-area" style="min-height: 120px;">(draw the dots you see)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold;">Lengthwise (sliced down the middle)</p>
+        <div class="drawing-area" style="min-height: 120px;">(draw the lines you see)</div>
+      </div>
+    </div>
+
+    <h3>💬 What I Learned</h3>
+    <p><strong>How does water get from the ground to a plant's leaves?</strong></p>
+    <div class="notes-area" style="min-height: 60px;"></div>
+  </div>
+
+  <!-- ═══ PARENT ANSWER KEY ═══ -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Expected Observation Results</h3>
+      <table class="data-table">
+        <tr>
+          <th>Time</th>
+          <th>Stem</th>
+          <th>Leaves</th>
+          <th>Color Travel</th>
+        </tr>
+        <tr>
+          <td><strong>Start</strong></td>
+          <td>Normal, pale green</td>
+          <td>Normal green</td>
+          <td>None — just placed in water</td>
+        </tr>
+        <tr>
+          <td><strong>2 hours</strong></td>
+          <td>Faint colored lines may be visible near the bottom</td>
+          <td>May see very faint color on edges of some leaves</td>
+          <td>Color has moved 1–3 inches up</td>
+        </tr>
+        <tr>
+          <td><strong>4–6 hours</strong></td>
+          <td>Colored streaks clearly visible along the length</td>
+          <td>Leaf edges and veins showing color</td>
+          <td>Color has reached most of the way up; leaves beginning to change</td>
+        </tr>
+        <tr>
+          <td><strong>Overnight</strong></td>
+          <td>Vivid colored lines throughout the stalk</td>
+          <td>Leaves clearly tinted, especially edges and veins</td>
+          <td>Color has reached the top; leaves are colored</td>
+        </tr>
+      </table>
+      <p style="font-style: italic; color: #666; margin-top: 8px;">Note: Results vary based on celery freshness, food coloring concentration, temperature, and time. Fresh, pale inner stalks show the most dramatic results. If results are faint after overnight, leave them for another 12–24 hours.</p>
+
+      <h3>Expected Color Comparison Results</h3>
+      <div style="background: white; border-left: 4px solid #00B894; padding: 12px; margin: 12px 0;">
+        <ul>
+          <li><strong>Red:</strong> Usually the most vivid and visible result. Red food coloring dye is highly concentrated and shows up well against the green celery.</li>
+          <li><strong>Blue:</strong> Very visible, especially on the leaves. Often produces a beautiful blue-green tint where it mixes with the natural green of the celery.</li>
+          <li><strong>Yellow:</strong> Typically the faintest and hardest to see, since yellow is a lighter color against the pale celery. May need more drops or more time.</li>
+        </ul>
+        <p style="margin-top: 8px;">All colors should eventually reach the leaves if given enough time (24+ hours). The speed is roughly the same — it's the <em>visibility</em> that differs, not the actual speed of transport.</p>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Q: What happened to the celery?</strong><br>
+        A: The leaves changed color and the stem shows colored streaks. The celery absorbed the colored water and transported it upward. Accept: "The celery drank the water," "The color went up," etc.</li>
+
+        <li><strong>Q: How did the color get to the leaves?</strong><br>
+        A: Through tiny tubes called xylem inside the stem. These tubes are like built-in straws that carry water upward. If your child says "through the straws inside," that's perfect for 1st grade!</li>
+
+        <li><strong>Q: What are those colored dots in the sliced stalk?</strong><br>
+        A: Those are the xylem tubes cut in cross-section. Each dot is one tube — now visible because it's full of colored water. Normally you can't see them because water is clear.</li>
+
+        <li><strong>Q: What if a plant can't get water?</strong><br>
+        A: It wilts, droops, and eventually dies. Water keeps cells full and firm, and the plant needs water to make food through photosynthesis. Accept any answer about the plant being "sad" or "droopy" — that's perfect 1st-grade language.</li>
+
+        <li><strong>Q: Did one color travel faster?</strong><br>
+        A: They all travel at roughly the same speed — but red and blue are <em>easier to see</em> than yellow. This is a great lesson about the difference between what actually happened vs. what we can observe. If your child thinks red was "faster," explain that it might just be easier to see.</li>
+
+        <li><strong>Q: What about celery in plain water?</strong><br>
+        A: Water still travels up! We just can't see it because water is clear. The food coloring is our detective tool. This is a key science concept: sometimes we need tools to see things that are normally invisible.</li>
+
+        <li><strong>Q: What parts work together?</strong><br>
+        A: Roots (absorb water), stem (transport water upward through xylem), and leaves (receive water for photosynthesis). All three parts are essential — it's a team effort.</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>Color isn't showing up:</strong> Add more food coloring (15–20 drops per cup). Use fresh celery from the inner part of the bunch. Make sure the bottom was freshly trimmed. Give it more time — some stalks take 24+ hours.</li>
+        <li><strong>Leaves are wilting instead of coloring:</strong> The celery may have been out of water too long before the experiment. Wilted celery still works — it may actually absorb water <em>faster</em> because it's thirsty!</li>
+        <li><strong>Can't see dots when cut:</strong> Cut a thinner cross-section (⅛ inch). Look in good light. Use a magnifying glass. The dots are small but should be clearly colored.</li>
+        <li><strong>Celery tips over in cup:</strong> Use a taller, narrower cup or jar. You can also use rubber bands to gently prop stalks against each other.</li>
+        <li><strong>Food coloring stained the counter:</strong> Wipe immediately with a damp cloth and a bit of baking soda paste. White vinegar also helps remove food coloring stains.</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>1st Grade:</strong></p>
+        <ul>
+          <li>Can explain that water travels up through the stem to reach the leaves</li>
+          <li>Can identify xylem as "tiny tubes" and point to the colored dots as evidence</li>
+          <li>Can name the three main plant parts (roots, stem, leaves) and describe each one's job</li>
+          <li>Can use at least two vocabulary words correctly (xylem, absorb, stem, transport)</li>
+          <li>Made predictions and compared them with actual results</li>
+          <li>Completed the observation table with entries at multiple time intervals</li>
+          <li>Drew a before/after comparison showing the color change</li>
+        </ul>
+      </div>
+
+      <h3>The Real Science (For Curious Parents)</h3>
+      <div style="background: white; border-left: 4px solid #7c3aed; padding: 12px; margin: 12px 0;">
+        <p>Water transport in plants relies on three main mechanisms working together:</p>
+        <ol>
+          <li><strong>Capillary action:</strong> Water's adhesion (sticking to tube walls) and cohesion (sticking to itself) allow it to climb narrow xylem vessels against gravity.</li>
+          <li><strong>Transpiration pull:</strong> As water evaporates from leaf surfaces (transpiration), it creates a "pull" that draws water up from below — like sucking on a straw. This is the primary driving force in tall plants.</li>
+          <li><strong>Root pressure:</strong> Osmosis in root cells pushes water into the xylem from below, especially at night when transpiration slows.</li>
+        </ol>
+        <p style="margin-top: 10px;">Xylem vessels are dead cells arranged end-to-end, forming continuous hollow tubes. In celery, the vascular bundles (containing xylem and phloem) are the "strings" you feel when eating celery — and the colored dots you see in the cross-section!</p>
+        <p style="margin-top: 10px;">You don't need to teach all this to your 1st grader — "water travels up tiny tubes called xylem" is perfect for this age. But if they ask "but HOW does it go up?" you can say: "Water is really sticky — it sticks to the tube walls and pulls itself up, kind of like how water creeps up a paper towel. And the leaves help pull it up by letting a tiny bit of water escape into the air, which makes room for more water to come up from below!"</p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>

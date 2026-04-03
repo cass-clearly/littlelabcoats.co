@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizzy Color Explosions — Kindergarten Chemical Reactions &amp; Color Mixing</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .answer {
+      color: #7B2FBE;
+      font-style: italic;
+      margin-top: 5px;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .procedure-step {
+      background: #FFF0F0;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #FF6B6B;
+    }
+    .procedure-step strong {
+      color: #c0392b;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .drawing-area {
+      border: 2px dashed #aaa;
+      min-height: 160px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body {
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 {
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌋 Fizzy Color Explosions 🌈</h1>
+  <p class="subtitle">A Free Kindergarten Lesson — Chemical Reactions &amp; Color Mixing</p>
+
+  <div class="meta">
+    <span><strong>Grade:</strong> Kindergarten</span>
+    <span><strong>Duration:</strong> 30–45 minutes</span>
+    <span><strong>Subject:</strong> Physical Science — Matter &amp; Changes</span>
+  </div>
+
+  <!-- ═══ PARENT/TEACHER NOTES ═══ -->
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> This lesson is pure magic for little scientists. All you need is baking soda, vinegar, food coloring, and something to contain the mess. The colorful intro below is designed to be read WITH your child — point at the pictures, ask the questions, and let their curiosity lead. Tips:
+    <ul style="margin: 8px 0;">
+      <li>Set up outdoors or on a large tray/baking sheet — this WILL get messy (that's the fun!)</li>
+      <li>Read "The Science" section aloud together (5–7 min) before starting the experiment</li>
+      <li>Let kids squeeze, pour, and mix freely — open-ended exploration is the goal</li>
+      <li>If you have multiple kids, the sibling competition element ("Who makes the biggest fizz?") adds excitement</li>
+      <li>Total prep time: under 10 minutes with common kitchen items</li>
+    </ul>
+  </div>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #FF6B6B 0%, #ee5a24 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: Why Does It Fizz?!</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">Today you're going to make tiny volcanoes ERUPT with color! You'll mix two things together and watch something totally new appear — fizzy, foamy, bubbly explosions! But here's the secret: what comes out <em>isn't</em> what went in. That's called a <strong>chemical reaction</strong>, and it's one of the coolest things in science!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">🧪 What's a Chemical Reaction?</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p><strong>Imagine this:</strong> When you mix some things together, something <em>completely new</em> appears! That's a <strong>chemical reaction</strong>.</p>
+
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>Think of it like baking a cake:</strong></p>
+
+    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; margin: 15px 0; align-items: center; text-align: center;">
+      <div style="background: #ffeaa7; border-radius: 8px; padding: 12px;">
+        <div style="font-size: 36px;">🥚🥛🧈</div>
+        <strong>Ingredients</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Eggs, flour, butter, sugar — all separate things</p>
+      </div>
+      <div style="font-size: 36px;">➡️🔥➡️</div>
+      <div style="background: #ffeaa7; border-radius: 8px; padding: 12px;">
+        <div style="font-size: 36px;">🎂</div>
+        <strong>Cake!</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Something totally new! You can't un-bake it back into eggs.</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 The Key Idea:</strong> In a chemical reaction, you start with some things and end up with <em>different</em> things. You can't undo it! The new stuff wasn't there before.</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%); color: #333; padding: 12px; border-radius: 8px;">🌋 Vinegar + Baking Soda = FIZZ!</h3>
+
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>Here's what happens when vinegar meets baking soda:</strong></p>
+
+    <div style="background: white; border: 3px solid #333; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: center; text-align: center;">
+        <div style="background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%); border-radius: 15px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+          <div style="font-size: 40px;">⬜</div>
+          <strong>Baking Soda</strong>
+          <p style="font-size: 10pt; margin: 5px 0;">(a white powder)</p>
+        </div>
+        <div style="font-size: 36px; color: #e17055;">
+          <div>+</div>
+        </div>
+        <div style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); border-radius: 15px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+          <div style="font-size: 40px;">🫗</div>
+          <strong>Vinegar</strong>
+          <p style="font-size: 10pt; margin: 5px 0;">(a sour liquid)</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 15px 0; font-size: 36px;">⬇️</div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; text-align: center;">
+        <div style="background: #dfe6e9; border-radius: 10px; padding: 10px;">
+          <div style="font-size: 30px;">💧</div>
+          <strong>Water</strong>
+        </div>
+        <div style="background: #ffeaa7; border-radius: 10px; padding: 10px;">
+          <div style="font-size: 30px;">🧂</div>
+          <strong>A New Salt</strong>
+          <p style="font-size: 9pt;">(not table salt!)</p>
+        </div>
+        <div style="background: #b8e6ff; border-radius: 10px; padding: 10px;">
+          <div style="font-size: 30px;">🫧</div>
+          <strong>CO₂ Gas</strong>
+          <p style="font-size: 9pt;">(the bubbles!)</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🫧 Those fizzy bubbles?</strong> That's a <em>brand new gas</em> called <strong>carbon dioxide</strong> (CO₂) escaping into the air! It wasn't in the vinegar. It wasn't in the baking soda. The chemical reaction <em>made</em> it. That's why you see all those bubbles pushing up and overflowing!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 12px; border-radius: 8px;">🎨 Color Mixing Magic!</h3>
+
+  <div style="background: #f3e5f5; border: 3px solid #ce93d8; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>Here's where it gets REALLY fun:</strong> We're adding food coloring to each cup of baking soda. When the fizz erupts and colors flow together, you'll see brand-new colors appear!</p>
+
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>🔴🔵🟡 The three primary colors can make almost ANY color:</strong></p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: linear-gradient(135deg, #e74c3c 0%, #3498db 100%); border-radius: 10px; padding: 12px; text-align: center; color: white;">
+        <div style="font-size: 30px;">🔴 + 🔵</div>
+        <strong style="font-size: 14pt;">=&nbsp;🟣 Purple!</strong>
+      </div>
+      <div style="background: linear-gradient(135deg, #e74c3c 0%, #f1c40f 100%); border-radius: 10px; padding: 12px; text-align: center; color: white;">
+        <div style="font-size: 30px;">🔴 + 🟡</div>
+        <strong style="font-size: 14pt;">=&nbsp;🟠 Orange!</strong>
+      </div>
+      <div style="background: linear-gradient(135deg, #3498db 0%, #f1c40f 100%); border-radius: 10px; padding: 12px; text-align: center; color: white;">
+        <div style="font-size: 30px;">🔵 + 🟡</div>
+        <strong style="font-size: 14pt;">=&nbsp;🟢 Green!</strong>
+      </div>
+    </div>
+
+    <div style="background: white; border-radius: 8px; padding: 15px; margin-top: 15px; border: 2px dashed #ce93d8;">
+      <p style="margin: 0;"><strong>🤔 Prediction time!</strong> If you put <span style="color: #e74c3c; font-weight: bold;">red</span> baking soda next to <span style="color: #3498db; font-weight: bold;">blue</span> baking soda, and the fizz spills over and they mix together… what color will you see? <em>Make your guess before you try it!</em></p>
+    </div>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">🔍 How Do Scientists Know a Chemical Reaction Happened?</h3>
+
+  <div style="background: #e0f7fa; border: 3px solid #00bcd4; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>Scientists look for clues!</strong> Here are the signs that a chemical reaction is happening:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🫧</div>
+        <strong>Bubbles or Gas</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">You see fizzing and bubbling! A new gas is being made.</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🌡️</div>
+        <strong>Temperature Change</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">It might feel warm or cool! Touch the outside of the cup.</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🎨</div>
+        <strong>Color Change</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Colors mixing and changing is a clue!</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">✨</div>
+        <strong>New Stuff Appears</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Something that wasn't there before — like foam or fizz!</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 Your job today:</strong> Watch for ALL of these clues during your fizzy explosions! How many can you spot?</p>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #ff9a9e 0%, #fecfef 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: #333; border: none; font-size: 16pt;">✨ Ready to Make Some Fizzy Explosions? ✨</h3>
+    <p style="font-size: 12pt; color: #333; margin: 0;">Grab your supplies — it's time to be a scientist!</p>
+  </div>
+
+  <!-- ═══ KEY VOCABULARY ═══ -->
+  <div style="background: linear-gradient(135deg, #FF6B6B 0%, #ee5a24 100%); border-radius: 10px; padding: 20px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 14pt;">📖 Key Vocabulary</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🧪 Chemical Reaction</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">When two things mix and make something totally new!</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🫧 Carbon Dioxide (CO₂)</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The invisible gas that makes all those fizzy bubbles</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🔴🔵🟡 Primary Colors</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Red, blue, and yellow — the three colors that make all other colors</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🟣🟠🟢 Secondary Colors</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Purple, orange, and green — made by mixing two primary colors</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>👀 Observe</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">To look closely and notice what's happening</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🤔 Predict</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">To make your best guess about what will happen next</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NGSS STANDARDS ═══ -->
+  <div style="background: #f3e5f5; border: 2px solid #ce93d8; border-radius: 8px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #7c3aed; border: none;">📋 NGSS Standard:</h3>
+    <p><strong>K-PS1-2</strong> — Analyze data obtained from testing different materials to determine which materials have the properties that are best suited for an intended purpose.</p>
+    <p style="margin-top: 8px;"><strong>K-PS1-1</strong> (supporting) — Make observations to determine the effect of sunlight on Earth's surface. <em>(Extended here to general observation of matter and changes — students observe how mixing materials produces new properties.)</em></p>
+    <p style="margin-top: 8px;"><strong>Science &amp; Engineering Practices:</strong> Planning and carrying out investigations; Analyzing and interpreting data</p>
+    <p style="margin-top: 8px;"><strong>Crosscutting Concept:</strong> Cause and Effect — Students observe that mixing specific materials causes observable changes (fizzing, color changes).</p>
+  </div>
+
+  <!-- ═══ LEARNING GOALS ═══ -->
+  <h2>📚 Learning Goals</h2>
+
+  <div style="border: 1px solid #FF6B6B; border-left: 4px solid #FF6B6B; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Observe a chemical reaction</strong>: Describe what happens when vinegar and baking soda mix (fizzing, bubbling, overflowing)</li>
+      <li><strong>Identify signs of a reaction</strong>: Recognize bubbles, temperature change, and new substances as evidence that something new was created</li>
+      <li><strong>Predict color outcomes</strong>: Guess what color two primary colors will make when they mix together</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>chemical reaction, predict, observe, primary color, secondary color</em></li>
+      <li><strong>Record observations</strong>: Draw or describe what they see during the experiment</li>
+    </ul>
+  </div>
+
+  <!-- ═══ MATERIALS ═══ -->
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3 style="color: #e65100;">🏠 Household Items to Gather</h3>
+      <ul>
+        <li><span class="checkbox"></span>Baking soda (about ½ cup total)</li>
+        <li><span class="checkbox"></span>White vinegar (about 1 cup)</li>
+        <li><span class="checkbox"></span>Food coloring (red, blue, and yellow at minimum)</li>
+        <li><span class="checkbox"></span>Muffin tin <em>or</em> 6 small cups/bowls</li>
+        <li><span class="checkbox"></span>Spoons, droppers, or squeeze bottles for adding vinegar</li>
+        <li><span class="checkbox"></span>Large baking sheet or tray (to catch the mess!)</li>
+        <li><span class="checkbox"></span>Newspaper or old towels under the tray</li>
+      </ul>
+      <h3 style="color: #e65100;">✨ Optional / Nice to Have</h3>
+      <ul>
+        <li><span class="checkbox"></span>Dish soap (a drop per cup makes EXTRA foamy eruptions!)</li>
+        <li><span class="checkbox"></span>Glitter (for sparkly explosions)</li>
+        <li><span class="checkbox"></span>Extra cups for mixing fizzy colors together</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes</h3>
+      <ul>
+        <li>Vinegar is safe but stings if it gets in eyes — keep hands away from face</li>
+        <li>Food coloring <em>stains</em> — wear old clothes or a smock</li>
+        <li>Don't taste the mixture (it's safe but yucky!)</li>
+        <li>Supervise closely — little hands love to splash</li>
+        <li>Do this outside or on an easy-to-clean surface</li>
+      </ul>
+      <h3>💡 Mess Management Tip</h3>
+      <p style="font-size: 10pt;">Place the muffin tin inside a large baking sheet or storage bin lid. Lay newspaper underneath. The fizz <em>will</em> overflow — that's the fun part! Cleanup is easy with a quick wipe or hose-down.</p>
+    </div>
+  </div>
+
+  <!-- ═══ PROCEDURE ═══ -->
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Set Up Your Lab (5 min)</strong><br>
+    Place the muffin tin (or cups) on a large tray. Put about 1 tablespoon of baking soda into each cup. You'll want at least six cups — one for each color you want to try!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Add the Colors (3 min)</strong><br>
+    Squeeze 3–5 drops of food coloring into each cup of baking soda. Use the primary colors (red, blue, yellow) and try mixing drops to make secondary colors too. Stir gently with a spoon so the baking soda looks colorful.
+    <br><em>Suggested layout: Red, Yellow, Blue, Orange (red + yellow drops), Green (blue + yellow drops), Purple (red + blue drops)</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Make Your Predictions! (3 min)</strong><br>
+    Before adding vinegar, ask: <em>"What do you think will happen when we add vinegar?"</em> Then ask: <em>"If the red fizz and the blue fizz spill into each other, what color will it make?"</em> Have your child write or draw their predictions on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: FIZZ TIME! 🌋 (10–15 min)</strong><br>
+    Using a dropper, spoon, or squeeze bottle, slowly add vinegar to one cup at a time. Watch it ERUPT! Let your child add as much or as little as they want. The more vinegar, the bigger the fizz!
+    <br><br>
+    <strong>🏆 Sibling Competition:</strong> Each kid picks a cup. Everyone adds vinegar at the same time — who makes the BIGGEST eruption? The TALLEST fizz? The most OVERFLOW? Award silly titles: "Supreme Fizz Champion," "Bubble Boss," "Eruption Expert!"
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Color Mixing Exploration (5–10 min)</strong><br>
+    Now the real magic! Tilt the tray gently so the fizzy colors flow into each other. Or use a spoon to scoop fizz from one cup into another.
+    <ul style="margin: 5px 0;">
+      <li>Pour red fizz into blue fizz — what color do you see?</li>
+      <li>Mix yellow and blue — what happens?</li>
+      <li>What about ALL the colors mixed together?</li>
+    </ul>
+    <em>Pro tip:</em> Add a tiny drop of dish soap to a cup before adding vinegar for extra-foamy, slow-motion eruptions!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Observe and Record (5 min)</strong><br>
+    While the fizzing happens, ask your child to describe what they see, hear, and feel (touch the outside of the cup — is it cool?). Fill in the worksheet together. Draw pictures of their favorite eruptions!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Discuss and Clean Up (5 min)</strong><br>
+    Use the discussion questions below while the excitement is still fresh. Then rinse everything off — baking soda and vinegar clean up easily with water!
+  </div>
+
+  <!-- ═══ DISCUSSION QUESTIONS ═══ -->
+  <h2>❓ Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>Q: What happened when you added vinegar to the baking soda?</strong>
+    <p class="discussion-hint">Look for: It fizzed, bubbled, foamed up, and overflowed! The mixture got bubbly and exciting. They might say it "exploded" — that's great enthusiasm!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Where did all those bubbles come from? Were the bubbles already in the vinegar or the baking soda?</strong>
+    <p class="discussion-hint">Look for: The bubbles weren't there before! They were made NEW when the vinegar and baking soda mixed together. That's a chemical reaction — it made a new gas (carbon dioxide) that we can see as bubbles.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What color did you get when red and blue mixed together?</strong>
+    <p class="discussion-hint">They should say purple! If they noticed a slightly different shade, that's fine — the exact shade depends on how much of each color mixed. Ask: "Was your prediction right?"</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What happened when you mixed ALL the colors together?</strong>
+    <p class="discussion-hint">They might say brown or dark gray/black. That's what happens when you mix lots of colors — they get muddy! This is a great observation.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Could you put the fizz back into the cup and turn it back into baking soda and vinegar?</strong>
+    <p class="discussion-hint">No! Once a chemical reaction happens, you can't undo it. The baking soda and vinegar are gone — they turned into new things (water, a salt, and gas bubbles). The gas floated away into the air!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: How is this different from just stirring food coloring into water?</strong>
+    <p class="discussion-hint">Stirring coloring into water just mixes them — no bubbles, no fizz, no new stuff. With baking soda and vinegar, something NEW was made. Mixing is different from a chemical reaction!</p>
+  </div>
+
+  <!-- ═══ EXTENSIONS ═══ -->
+  <h2>🚀 Extensions</h2>
+
+  <div style="background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 15px; margin: 15px 0;">
+    <ul>
+      <li><strong>Volume Challenge:</strong> Try adding different <em>amounts</em> of vinegar — 1 teaspoon vs. 1 tablespoon vs. 2 tablespoons. Does more vinegar make a bigger eruption? What about more baking soda?</li>
+      <li><strong>Dish Soap Experiment:</strong> Add a drop of dish soap to one cup and none to another. Compare the fizz! The soap traps the CO₂ in bubbles, making a foamy, slow eruption.</li>
+      <li><strong>Ice Tray Mini-Volcanoes:</strong> Try the same experiment in an ice cube tray for tiny micro-eruptions. Can you make a rainbow row?</li>
+      <li><strong>Color Wheel Challenge:</strong> Can you make ALL six colors of the rainbow (red, orange, yellow, green, blue, purple) using only red, blue, and yellow food coloring? Try it!</li>
+      <li><strong>Art Extension:</strong> Lay a piece of white paper in the tray under the cups. Let the colorful fizz drip onto it to create "eruption art." Let it dry for a unique science painting!</li>
+    </ul>
+  </div>
+
+  <!-- ═══ STUDENT WORKSHEET ═══ -->
+  <div class="page-break">
+    <h2>📊 Student Worksheet</h2>
+    <p style="text-align: center; font-size: 12pt;"><strong>Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h3>🤔 My Predictions</h3>
+    <p><strong>What do you think will happen when vinegar touches baking soda?</strong></p>
+    <div class="notes-area" style="min-height: 50px;"></div>
+
+    <p><strong>Color Mixing Predictions — What color will these make?</strong></p>
+    <table class="data-table">
+      <tr>
+        <th>I mixed…</th>
+        <th>My Prediction</th>
+        <th>What Actually Happened</th>
+      </tr>
+      <tr>
+        <td>🔴 Red + 🔵 Blue</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🔴 Red + 🟡 Yellow</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🔵 Blue + 🟡 Yellow</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🔴 + 🔵 + 🟡 All three!</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>👀 What I Observed</h3>
+    <table class="data-table">
+      <tr>
+        <th>Sense</th>
+        <th>What did you notice?</th>
+      </tr>
+      <tr>
+        <td>👀 I saw…</td>
+        <td style="min-height: 30px;"></td>
+      </tr>
+      <tr>
+        <td>👂 I heard…</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>🤚 I felt… (touch outside of cup)</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>🎨 Draw Your Favorite Eruption!</h3>
+    <div class="drawing-area" style="min-height: 180px;">(draw here)</div>
+
+    <h3>🏆 Fizz Competition Results</h3>
+    <table class="data-table">
+      <tr>
+        <th>Scientist Name</th>
+        <th>Biggest Fizz? (yes/no)</th>
+        <th>Silly Title Earned</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ═══ PARENT ANSWER KEY ═══ -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Expected Color Mixing Results</h3>
+      <table class="data-table">
+        <tr>
+          <th>Mix</th>
+          <th>Expected Result</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Red + Blue</td>
+          <td><strong>Purple</strong></td>
+          <td>Shade varies based on ratio; more red = reddish purple, more blue = violet</td>
+        </tr>
+        <tr>
+          <td>Red + Yellow</td>
+          <td><strong>Orange</strong></td>
+          <td>More red = red-orange; more yellow = golden orange</td>
+        </tr>
+        <tr>
+          <td>Blue + Yellow</td>
+          <td><strong>Green</strong></td>
+          <td>More blue = teal; more yellow = lime green</td>
+        </tr>
+        <tr>
+          <td>All three</td>
+          <td><strong>Brown / dark gray</strong></td>
+          <td>Mixing all primary colors creates a muddy, dark color. This is normal!</td>
+        </tr>
+      </table>
+
+      <h3>Expected Observation Table Answers</h3>
+      <div style="background: white; border-left: 4px solid #FF6B6B; padding: 12px; margin: 12px 0;">
+        <ul>
+          <li><strong>I saw:</strong> Fizzing, bubbling, foam rising up, colors mixing, overflow</li>
+          <li><strong>I heard:</strong> Hissing, fizzing, popping, sizzling sounds</li>
+          <li><strong>I felt:</strong> The outside of the cup may feel slightly cool (the reaction absorbs a small amount of heat). Accept "wet" or "bubbly" too!</li>
+        </ul>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+
+      <ul>
+        <li><strong>Q: What happened with vinegar + baking soda?</strong><br>
+        A: It fizzed and overflowed! Accept any description of the reaction: bubbles, foam, eruption. The key idea is that something <em>new</em> happened — it didn't just sit there.</li>
+
+        <li><strong>Q: Where did the bubbles come from?</strong><br>
+        A: The chemical reaction created a new gas (carbon dioxide / CO₂). It wasn't hiding in either ingredient — it was <em>made</em> by the reaction. If your child says "the reaction made them," that's excellent for Kindergarten.</li>
+
+        <li><strong>Q: Color mixing results?</strong><br>
+        A: See table above. Any reasonable description of the resulting color is correct. The exact shade depends on proportions.</li>
+
+        <li><strong>Q: All colors mixed?</strong><br>
+        A: Brown, dark gray, or "muddy" — all correct. This is a great teachable moment about why you can't just keep mixing colors forever.</li>
+
+        <li><strong>Q: Can you undo it?</strong><br>
+        A: No! This is a key concept. The gas escaped into the air, and the baking soda and vinegar became new substances. Unlike mixing sand and water (which you can separate), a chemical reaction makes permanent changes.</li>
+
+        <li><strong>Q: How is this different from stirring color into water?</strong><br>
+        A: Stirring food coloring into water is just <em>mixing</em> — no new substances are created, no bubbles, no gas. The vinegar + baking soda reaction created something new (CO₂ gas). That's the difference between mixing and a chemical reaction.</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>Not much fizz:</strong> Add more vinegar! Or the baking soda might be old (test a fresh box). A tablespoon of baking soda per cup is the sweet spot.</li>
+        <li><strong>Colors are murky:</strong> Use more food coloring drops (5–8 per cup) for vivid results. White baking soda dilutes the color.</li>
+        <li><strong>Too much mess:</strong> Use a deeper tray or storage bin. Doing it outside is ideal. A cheap plastic tablecloth under everything helps.</li>
+        <li><strong>Reaction stops too fast:</strong> The baking soda gets "used up." Add more baking soda to the cup and try again!</li>
+        <li><strong>Food coloring stains:</strong> Wipe surfaces immediately with a damp cloth. On skin, wash with soap and water or use a paste of baking soda (ironic, right?).</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>Kindergarten:</strong></p>
+        <ul>
+          <li>Can describe what happened (fizzing, bubbling) in their own words</li>
+          <li>Understands that mixing vinegar and baking soda made "something new" (bubbles/gas)</li>
+          <li>Can predict and verify at least one color combination (red + blue = purple)</li>
+          <li>Can tell the difference between "just mixing" and "a reaction"</li>
+          <li>Shows curiosity and excitement about experimenting</li>
+        </ul>
+      </div>
+
+      <h3>The Real Science (For Curious Parents)</h3>
+      <div style="background: white; border-left: 4px solid #7c3aed; padding: 12px; margin: 12px 0;">
+        <p>Baking soda (sodium bicarbonate, NaHCO₃) is a <em>base</em>. Vinegar (acetic acid, CH₃COOH) is an <em>acid</em>. When they meet, they undergo an acid-base reaction:</p>
+        <p style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px; margin: 8px 0;">NaHCO₃ + CH₃COOH → CO₂↑ + H₂O + CH₃COONa</p>
+        <p>The carbon dioxide gas (CO₂) creates all the bubbles and fizz. The reaction also produces water and sodium acetate (a harmless salt). The reaction is mildly endothermic — it absorbs a tiny bit of heat, which is why the cup might feel slightly cool.</p>
+        <p>You don't need to teach this to your Kindergartner! But if they ask "why," you can say: "The vinegar and baking soda traded tiny pieces of themselves and made a brand-new gas called carbon dioxide. That gas is what makes the bubbles!"</p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    // Fallback: lock from 3rd h2 if all early ones look like goals
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      // No h2 at all — fall back to hiding body overflow after 600px
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk body's direct children; hide everything from the child
+    // that IS or CONTAINS lockFromH2 onwards (skip paywall overlay itself)
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>
