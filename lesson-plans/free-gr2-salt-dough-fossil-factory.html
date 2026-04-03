@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salt Dough Fossil Factory — 2nd Grade Fossils &amp; Earth History</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .procedure-step {
+      background: #FEF9E7;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #F39C12;
+    }
+    .procedure-step strong {
+      color: #b7770a;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .drawing-area {
+      border: 2px dashed #aaa;
+      min-height: 160px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body {
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 {
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🦴 Salt Dough Fossil Factory 🦕</h1>
+  <p class="subtitle">A Free 2nd Grade Lesson — How Fossils Form</p>
+
+  <div class="meta">
+    <span><strong>Grade:</strong> 2nd Grade</span>
+    <span><strong>Duration:</strong> 45–60 minutes + baking time</span>
+    <span><strong>Subject:</strong> Earth Science — Fossils &amp; Earth History</span>
+  </div>
+
+  <!-- ═══ PARENT/TEACHER NOTES ═══ -->
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> This lesson turns your kitchen into a paleontology lab! Kids make salt dough from three pantry staples, press objects into it to create "fossils," then bake or air-dry their creations. The science intro below explains how <em>real</em> fossils form over millions of years — and our dough is a hands-on shortcut through deep time.
+    <ul style="margin: 8px 0;">
+      <li>Read "The Science" section aloud together (5–8 min) — the analogies are designed for 7-year-olds</li>
+      <li><strong>Collect pressing objects beforehand:</strong> Shells, leaves, toy dinosaurs, fern fronds, coins, keys — anything with texture works great</li>
+      <li>Baking is 200°F for 2–3 hours (low and slow prevents cracking). Air-drying works too but takes 2–3 days</li>
+      <li>The parent handles the oven — everything else is kid-safe</li>
+      <li>Painting the cooled fossils is optional but makes them museum-worthy display pieces</li>
+      <li>Total hands-on time: 45–60 minutes. Baking is passive (set a timer and walk away!)</li>
+    </ul>
+  </div>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #F39C12 0%, #d68910 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: How Do We Know About Animals That Lived Millions of Years Ago?</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">Dinosaurs disappeared about 66 <em>million</em> years ago. Nobody had cameras. Nobody had phones. So how do we know they existed? The answer: <strong>fossils!</strong> Fossils are like nature's photographs — except they're made of rock, and they last for millions and millions of years. Today, you're going to make your own fossils and learn how the real ones form!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f39c12 0%, #f8c471 100%); color: white; padding: 12px; border-radius: 8px;">🪨 What Is a Fossil?</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p><strong>A fossil is evidence of a living thing from long, long ago</strong> that has been <strong>preserved</strong> — saved and protected — in rock over millions of years.</p>
+
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>Think of it like pressing your hand into wet cement:</strong></p>
+
+    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; margin: 15px 0; align-items: center; text-align: center;">
+      <div style="background: #fdebd0; border-radius: 8px; padding: 12px;">
+        <div style="font-size: 40px;">🤚</div>
+        <strong>You press your hand in</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The wet cement is soft enough to hold the shape</p>
+      </div>
+      <div style="font-size: 36px; color: #F39C12;">➡️</div>
+      <div style="background: #fdebd0; border-radius: 8px; padding: 12px;">
+        <div style="font-size: 40px;">✋🪨</div>
+        <strong>The cement dries hard</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Your handprint is <em>preserved</em> forever — even after you walk away!</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 The Key Idea:</strong> Fossils work the same way! An animal or plant gets buried in soft mud or sand. Over millions of years, that mud hardens into rock — and the shape of the living thing is preserved inside forever. That's our evidence!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%); color: #333; padding: 12px; border-radius: 8px;">⏳ How Real Fossils Form (Millions of Years in 4 Steps!)</h3>
+
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 10px 0;">
+      <div style="background: white; border: 3px solid #F39C12; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #F39C12; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-weight: bold; font-size: 16pt;">1</div>
+        <div style="font-size: 36px;">🦕💀</div>
+        <strong>An Animal Dies</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A dinosaur, a fish, or a plant falls into soft mud, sand, or silt near a river or ocean.</p>
+      </div>
+      <div style="background: white; border: 3px solid #F39C12; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #F39C12; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-weight: bold; font-size: 16pt;">2</div>
+        <div style="font-size: 36px;">🏔️</div>
+        <strong>It Gets Buried</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">More mud, sand, and dirt pile on top — layer after layer after layer, for thousands of years.</p>
+      </div>
+      <div style="background: white; border: 3px solid #F39C12; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #F39C12; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-weight: bold; font-size: 16pt;">3</div>
+        <div style="font-size: 36px;">🪨</div>
+        <strong>It Turns to Rock</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">All that weight and pressure squeezes the mud into solid rock. The shape of the animal is locked inside!</p>
+      </div>
+      <div style="background: white; border: 3px solid #F39C12; border-radius: 12px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #F39C12; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-weight: bold; font-size: 16pt;">4</div>
+        <div style="font-size: 36px;">👩‍🔬🔍</div>
+        <strong>Scientists Find It!</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Millions of years later, wind or rain wears away the rock, and a <strong>paleontologist</strong> discovers the fossil!</p>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 15px;">
+      <strong>🕰️ How long does this take?</strong> Real fossils take <em>millions</em> of years to form. That's so long it's hard to even imagine! But today, we're going to speed things up — our "mud" is salt dough, and our "millions of years" is a couple of hours in the oven. Same idea, just faster!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">🧩 Two Types of Fossils: Mold &amp; Cast</h3>
+
+  <div style="background: #f3e5f5; border: 3px solid #ce93d8; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>Not all fossils are the same!</strong> Today you'll make one type, and in the Extensions you can try the other:</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border: 3px solid #F39C12; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 48px; margin-bottom: 5px;">👣</div>
+        <strong style="font-size: 14pt; color: #F39C12;">Mold Fossil</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">(What you're making today!)</p>
+        <p style="font-size: 10pt; margin: 5px 0;">An <strong>imprint</strong> — the shape left behind <em>after</em> the object is removed. Like a footprint in sand!</p>
+        <div style="background: #FEF9E7; padding: 8px; border-radius: 6px; margin-top: 8px; font-size: 10pt;">
+          <strong>Your version:</strong> Press a shell into dough → remove it → the dent left behind is the mold!
+        </div>
+      </div>
+      <div style="background: white; border: 3px solid #8e44ad; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 48px; margin-bottom: 5px;">🐚</div>
+        <strong style="font-size: 14pt; color: #8e44ad;">Cast Fossil</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">(Try this in the Extensions!)</p>
+        <p style="font-size: 10pt; margin: 5px 0;">A <strong>filled-in</strong> mold — minerals fill the empty space and harden into the <em>exact shape</em> of the original object!</p>
+        <div style="background: #f5eef8; padding: 8px; border-radius: 6px; margin-top: 8px; font-size: 10pt;">
+          <strong>Your version:</strong> Press fresh dough INTO a mold fossil → it takes on the shape of the original!
+        </div>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 12px; border-radius: 8px; margin-top: 10px; border: 2px dashed #ce93d8;"><strong>🤔 Think about it:</strong> A mold is like a dent or a hole. A cast is like a copy that fills the hole. Together, a mold and a cast give scientists a complete picture of what the original animal or plant looked like!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">🔍 What Can Fossils Tell Us?</h3>
+
+  <div style="background: #e0f7fa; border: 3px solid #00bcd4; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>Scientists called <em>paleontologists</em></strong> (PAL-ee-un-TALL-uh-jists) study fossils to answer amazing questions:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🦴</div>
+        <strong>What did it look like?</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Bone fossils show us the size and shape of ancient animals</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🍖</div>
+        <strong>What did it eat?</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Tooth fossils show sharp teeth (meat eater!) or flat teeth (plant eater!)</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🌍</div>
+        <strong>Where did it live?</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Fish fossils found on mountains tell us that area was once underwater!</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">📅</div>
+        <strong>When did it live?</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Deeper layers of rock = older fossils! Top layers = newer fossils.</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 Mind-blowing fact:</strong> Scientists have found fossils of tropical plants in <em>Antarctica!</em> That tells us Antarctica was once warm — millions of years ago, it wasn't covered in ice at all!</p>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #F8C471 0%, #F39C12 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 16pt;">✨ Ready to Become a Paleontologist? ✨</h3>
+    <p style="font-size: 12pt; color: white; margin: 0;">Time to open the Fossil Factory — grab your apron and let's dig in!</p>
+  </div>
+
+  <!-- ═══ KEY VOCABULARY ═══ -->
+  <div style="background: linear-gradient(135deg, #F39C12 0%, #d68910 100%); border-radius: 10px; padding: 20px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 14pt;">📖 Key Vocabulary</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🦴 Fossil</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Evidence of a plant or animal from long ago, preserved in rock</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>👣 Mold</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The imprint or shape left behind in rock after an object is gone</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🐚 Cast</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A fossil formed when minerals fill in a mold and harden into a copy</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>✋ Imprint</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A mark or dent left by pressing something into a soft surface</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>👩‍🔬 Paleontologist</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A scientist who studies fossils to learn about ancient life</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🪨 Sediment</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Tiny bits of sand, mud, and dirt that settle in layers over time</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px); grid-column: span 2; text-align: center;">
+        <strong>🛡️ Preserved</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Kept safe and protected from damage — fossils are ancient life preserved in stone!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NGSS STANDARDS ═══ -->
+  <div style="background: #f3e5f5; border: 2px solid #ce93d8; border-radius: 8px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #7c3aed; border: none;">📋 NGSS Standard:</h3>
+    <p><strong>2-ESS1-1</strong> — Use information from several sources to provide evidence that Earth events can occur quickly or slowly.</p>
+    <p style="margin-top: 8px;"><em>This lesson focuses on slow Earth processes: fossil formation occurs over millions of years as sediment builds and hardens into rock. Students model this slow process in a compressed timeframe.</em></p>
+    <p style="margin-top: 8px;"><strong>Science &amp; Engineering Practices:</strong> Developing and using models; Constructing explanations from evidence</p>
+    <p style="margin-top: 8px;"><strong>Crosscutting Concept:</strong> Stability and Change — Earth's surface changes slowly over time; fossils are evidence of organisms that once lived and the environments in which they existed.</p>
+  </div>
+
+  <!-- ═══ LEARNING GOALS ═══ -->
+  <h2>📚 Learning Goals</h2>
+
+  <div style="border: 1px solid #F39C12; border-left: 4px solid #F39C12; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Explain how fossils form</strong>: Describe the basic process — an organism gets buried in sediment that slowly hardens into rock</li>
+      <li><strong>Distinguish mold from cast</strong>: Identify a mold fossil (imprint/dent) and explain how a cast (filled copy) is different</li>
+      <li><strong>Understand deep time</strong>: Recognize that fossil formation takes millions of years, and our dough model is a fast version of a slow process</li>
+      <li><strong>Explain why fossils matter</strong>: Describe how scientists use fossils to learn about animals and plants that no longer exist</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>fossil, mold, cast, imprint, paleontologist, sediment, preserved</em></li>
+      <li><strong>Create a model</strong>: Make a salt dough mold fossil that clearly shows the shape and texture of the original object</li>
+    </ul>
+  </div>
+
+  <!-- ═══ MATERIALS ═══ -->
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3 style="color: #e65100;">🏠 Household Items to Gather</h3>
+      <ul>
+        <li><span class="checkbox"></span>1 cup all-purpose flour</li>
+        <li><span class="checkbox"></span>½ cup table salt</li>
+        <li><span class="checkbox"></span>½ cup warm water</li>
+        <li><span class="checkbox"></span>Mixing bowl and spoon</li>
+        <li><span class="checkbox"></span>Rolling pin (or a smooth glass/cup to roll with)</li>
+        <li><span class="checkbox"></span>Baking sheet lined with parchment paper or foil</li>
+        <li><span class="checkbox"></span>Newspaper or old towels (to protect the table)</li>
+      </ul>
+      <h3 style="color: #e65100;">🦕 Objects to Press (find around the house!)</h3>
+      <ul>
+        <li><span class="checkbox"></span>Seashells</li>
+        <li><span class="checkbox"></span>Leaves and ferns (fresh, with visible veins)</li>
+        <li><span class="checkbox"></span>Small toy dinosaurs or plastic animals</li>
+        <li><span class="checkbox"></span>Coins, keys, buttons</li>
+        <li><span class="checkbox"></span>Anything with interesting texture!</li>
+      </ul>
+      <h3 style="color: #e65100;">✨ Optional / Nice to Have</h3>
+      <ul>
+        <li><span class="checkbox"></span>Acrylic paint and brushes (for after baking — makes them look ancient!)</li>
+        <li><span class="checkbox"></span>Toothpick (for adding fine details)</li>
+        <li><span class="checkbox"></span>Cooking spray (helps objects release cleanly from dough)</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes</h3>
+      <ul>
+        <li><strong>Oven is parent-only!</strong> Only the adult handles putting trays in/out of the oven</li>
+        <li>The dough is not for eating — it's super salty and not food (even though it's made of food ingredients!)</li>
+        <li>Wash hands before and after working with dough</li>
+        <li>If pressing leaves, check for poison ivy or other irritating plants first</li>
+        <li>Small objects (coins, buttons) can be a choking hazard for younger siblings — supervise carefully</li>
+      </ul>
+      <h3>💡 Dough Tips</h3>
+      <p style="font-size: 10pt;">If the dough is too sticky, add a little more flour. If it's too dry and crumbly, add water a teaspoon at a time. The recipe makes enough dough for 4–6 good-sized fossils. Double the recipe if you have multiple kids!</p>
+    </div>
+  </div>
+
+  <!-- ═══ PROCEDURE ═══ -->
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Mix the "Sediment" — Make Your Dough! (10 min)</strong><br>
+    In a mixing bowl, combine 1 cup flour and ½ cup salt. Stir them together. Slowly add ½ cup warm water, mixing as you go. Knead the dough with your hands until it's smooth and firm — like Play-Doh! If it sticks to your fingers, add a pinch more flour.
+    <br><em>Tell your child: "This dough represents the layers of mud and sand (sediment) that buried animals and plants millions of years ago!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Roll and Flatten (3 min)</strong><br>
+    Divide the dough into 4–6 pieces (one for each fossil). Roll each piece into a ball, then flatten it with a rolling pin or smooth cup to about ½ inch thick. You want a nice flat, thick disc — thick enough to hold a good deep impression.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Make Predictions! (3 min)</strong><br>
+    Before pressing anything, hold up the objects and ask:
+    <ul style="margin: 5px 0;">
+      <li><em>"Which object do you think will make the most detailed fossil?"</em></li>
+      <li><em>"Will the leaf show its veins? Will we see the dinosaur's tiny claws?"</em></li>
+      <li><em>"What do you think the imprint will look like — will it stick up or press down?"</em></li>
+    </ul>
+    Record predictions on the worksheet!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Press Your Fossils! 🦴 (10–15 min)</strong><br>
+    This is the fun part! Take each object and press it firmly and evenly into a disc of dough. Push it in about halfway — deep enough to leave a clear imprint, but not all the way through. Hold it for a moment, then <em>carefully</em> peel it out. You should see a detailed impression!
+    <br><br>
+    <strong>💡 Technique tips:</strong>
+    <ul style="margin: 5px 0;">
+      <li>Press straight down, don't wiggle — wiggling blurs the details</li>
+      <li>A light mist of cooking spray on the object helps it release cleanly</li>
+      <li>Leaves work best if you press them in, then leave them and peel them off after baking</li>
+      <li>For toy dinosaurs, press the <em>side</em> in so you get the full shape</li>
+    </ul>
+    <br>
+    <strong>🏆 Sibling Competition — Most Realistic Fossil Challenge:</strong> Each kid makes their best fossils. After baking, everyone votes on the "Most Realistic Fossil" — the one that looks most like the real thing! Award titles: "Master Paleontologist," "Fossil Artist," "Keeper of Ancient Secrets!" Extra points for fine details like leaf veins or dinosaur teeth.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Bake Your Fossils (Parent Step — 2–3 hours passive)</strong><br>
+    <strong>Parent handles the oven!</strong> Place the dough fossils on a parchment-lined baking sheet. Bake at <strong>200°F</strong> for 2–3 hours. Low and slow is key — high heat causes cracking and bubbling! Check after 2 hours; they should be fully hard and dry.
+    <br><em>Alternative: Air-dry for 2–3 days, flipping once. Slower but no oven needed!</em>
+    <br><br><em>Tell your child: "In real life, fossils take millions of years of heat and pressure to form. Our oven is like fast-forwarding through time!"</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Paint &amp; Examine (Optional — 15 min)</strong><br>
+    Once the fossils are cool, paint them! Earth tones (browns, tans, grays) make them look like real rock. Or go wild with colors — it's your museum!
+    <br><br>
+    <strong>🔍 Now examine your fossils:</strong>
+    <ul style="margin: 5px 0;">
+      <li>Can you see the shape clearly? That's your <strong>mold fossil!</strong></li>
+      <li>Can you see tiny details like leaf veins, shell ridges, or dinosaur skin texture?</li>
+      <li>Compare the fossil to the original object — what details were captured? What was lost?</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Discuss! (10 min)</strong><br>
+    Use the discussion questions below. Have kids hold their fossils, compare them to the originals, and explain the process in their own words. This is where the real learning clicks!
+  </div>
+
+  <!-- ═══ DISCUSSION QUESTIONS ═══ -->
+  <h2>❓ Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>Q: What happened when you pressed the shell (or leaf, or dinosaur) into the dough?</strong>
+    <p class="discussion-hint">Look for: It left a shape / dent / imprint behind in the dough. The dough was soft enough to hold the shape. They might say "it made a picture" or "it left its mark" — both great!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Is the imprint in the dough a mold fossil or a cast fossil?</strong>
+    <p class="discussion-hint">A mold! It's the shape left behind after the object was removed — like a footprint in sand. The actual object is gone, but its shape is preserved. If they say "mold" they've got it.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: How is making our dough fossils similar to how real fossils form? How is it different?</strong>
+    <p class="discussion-hint">Similar: Something gets pressed into a soft material, and the material hardens to preserve the shape. Different: Real fossils take millions of years, ours took hours. Real fossils form in mud/sediment under pressure, ours used dough in an oven. Accept any reasonable comparison!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What does the dough represent in our model? What does the oven represent?</strong>
+    <p class="discussion-hint">The dough = layers of mud and sediment. The oven = millions of years of heat and pressure underground. The pressing = the animal or plant getting buried. Great question for connecting the model to reality.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Why are fossils important? What can scientists learn from them?</strong>
+    <p class="discussion-hint">Look for: Fossils tell us about animals and plants that lived long ago, what they looked like, what they ate, and where they lived. They help us understand how the Earth has changed. Accept: "They tell us about dinosaurs!" as a starting point and build from there.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: If you found a fossil of a fish on top of a mountain, what would that tell you about that place?</strong>
+    <p class="discussion-hint">That the mountain was once underwater! The land has changed over millions of years. This is a great "whoa!" moment for kids. Earth's surface changes very slowly over deep time.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Which object made the best fossil? Why do you think some objects make better fossils than others?</strong>
+    <p class="discussion-hint">Objects with deep, clear textures (shells, leaves with veins, coins) usually make the best imprints. Smooth or very flexible objects don't leave as much detail. This mirrors real life — hard shells and bones fossilize better than soft tissue!</p>
+  </div>
+
+  <!-- ═══ EXTENSIONS ═══ -->
+  <h2>🚀 Extensions</h2>
+
+  <div style="background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 15px; margin: 15px 0;">
+    <ul>
+      <li><strong>🧩 Make a Cast Fossil:</strong> Once your mold fossil is baked and cool, press fresh dough <em>into</em> the mold. Carefully pop it out — you've made a cast! Now you have a mold AND a matching cast, just like real paleontologists find. Compare them: the mold is "pushed in" and the cast "pops out."</li>
+      <li><strong>🏛️ Fossil Museum:</strong> Set up a display table with all the fossils. Make labels with the "species name," "age" (make it up — "47 million years old!"), and where it was "discovered." Invite family members for a museum tour! Each child can be the tour guide for their fossils.</li>
+      <li><strong>🔎 Real Fossil Research:</strong> Pick one real fossil (trilobite, ammonite, T. rex tooth) and look it up online or at the library. How old is it? Where was it found? What does it tell us? Write a mini-report.</li>
+      <li><strong>📏 Layer Cake Geology:</strong> Stack different colors of Play-Doh in layers (each color = a different time period). Hide tiny objects between layers. Trade with a sibling and "excavate" from the top down — what do you find at each layer? Deeper = older!</li>
+      <li><strong>🌿 Nature Press:</strong> Go outside and find five natural objects with interesting textures (bark, pinecones, rocks, flowers). Predict which will make the best fossil, then test them all. Which surprised you?</li>
+    </ul>
+  </div>
+
+  <!-- ═══ STUDENT WORKSHEET ═══ -->
+  <div class="page-break">
+    <h2>📊 Student Worksheet</h2>
+    <p style="text-align: center; font-size: 12pt;"><strong>Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h3>🤔 My Predictions</h3>
+    <p><strong>Which object do you think will make the BEST fossil imprint? Why?</strong></p>
+    <div class="notes-area" style="min-height: 50px;"></div>
+
+    <h3>🦴 My Fossil Log</h3>
+    <table class="data-table">
+      <tr>
+        <th>Object I Pressed</th>
+        <th>What details did I see in the imprint?</th>
+        <th>How realistic? ⭐⭐⭐⭐⭐</th>
+      </tr>
+      <tr>
+        <td style="min-height: 30px;"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>✏️ Draw Your Best Fossil!</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+      <div>
+        <p style="text-align: center; font-weight: bold;">The Original Object</p>
+        <div class="drawing-area" style="min-height: 140px;">(draw here)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold;">My Fossil Imprint (Mold)</p>
+        <div class="drawing-area" style="min-height: 140px;">(draw here)</div>
+      </div>
+    </div>
+
+    <h3>📋 Paleontologist Report</h3>
+    <div style="background: #FEF9E7; border: 2px solid #F39C12; border-radius: 8px; padding: 15px; margin: 10px 0;">
+      <p><strong>Fossil discovered by:</strong> ___________________________________________</p>
+      <p><strong>Object that made this fossil:</strong> ___________________________________________</p>
+      <p><strong>This is a</strong> &nbsp; ☐ Mold fossil &nbsp; ☐ Cast fossil</p>
+      <p><strong>Details I can see in my fossil:</strong></p>
+      <div class="notes-area" style="min-height: 50px;"></div>
+      <p><strong>How is my dough fossil similar to a real fossil?</strong></p>
+      <div class="notes-area" style="min-height: 50px;"></div>
+      <p><strong>How is it different from a real fossil?</strong></p>
+      <div class="notes-area" style="min-height: 50px;"></div>
+    </div>
+
+    <h3>🏆 Fossil Competition Results</h3>
+    <table class="data-table">
+      <tr>
+        <th>Paleontologist Name</th>
+        <th>Best Fossil Object</th>
+        <th>Title Earned</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ═══ PARENT ANSWER KEY ═══ -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Expected Fossil Quality by Object</h3>
+      <table class="data-table">
+        <tr>
+          <th>Object</th>
+          <th>Expected Detail Level</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td><strong>Seashells</strong></td>
+          <td>⭐⭐⭐⭐⭐ Excellent</td>
+          <td>Deep ridges and spiral patterns show up beautifully. One of the best objects for this activity.</td>
+        </tr>
+        <tr>
+          <td><strong>Leaves</strong></td>
+          <td>⭐⭐⭐⭐ Great</td>
+          <td>Veins and edges show well. Thick, fresh leaves work best. Dried or fragile leaves may crumble.</td>
+        </tr>
+        <tr>
+          <td><strong>Toy Dinosaurs</strong></td>
+          <td>⭐⭐⭐⭐ Great</td>
+          <td>Press the side in for the best silhouette. Some skin texture may show. Very motivating for kids!</td>
+        </tr>
+        <tr>
+          <td><strong>Coins</strong></td>
+          <td>⭐⭐⭐⭐⭐ Excellent</td>
+          <td>Fine detail transfers well — you can often read the text! Good for showing "evidence" concept.</td>
+        </tr>
+        <tr>
+          <td><strong>Keys</strong></td>
+          <td>⭐⭐⭐ Good</td>
+          <td>Shape shows well; tooth pattern of the key is visible. Good for unique shapes.</td>
+        </tr>
+        <tr>
+          <td><strong>Buttons</strong></td>
+          <td>⭐⭐⭐ Good</td>
+          <td>Holes and edge pattern show. Good for younger kids who need easier pressing.</td>
+        </tr>
+      </table>
+
+      <h3>Expected Paleontologist Report Answers</h3>
+      <div style="background: white; border-left: 4px solid #F39C12; padding: 12px; margin: 12px 0;">
+        <ul>
+          <li><strong>This is a:</strong> Most students will check "Mold fossil" — the imprint/dent is a mold. If they made a cast (Extension), they might check both for different fossils.</li>
+          <li><strong>Similar to real fossil:</strong> Both preserve the shape of an original object. Both start in a soft material that hardens. Both show details of the surface. Accept any valid comparison.</li>
+          <li><strong>Different from real fossil:</strong> Real fossils take millions of years (ours took hours). Real fossils form in sedimentary rock, not dough. Real fossils are found underground, not in an oven. The scale of time is vastly different.</li>
+        </ul>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Q: What happened when you pressed the object?</strong><br>
+        A: It left an imprint/shape in the dough. Accept any description of the impression — "a dent," "a mark," "a picture." The key is that the shape was <em>transferred</em> from the object to the dough.</li>
+
+        <li><strong>Q: Mold or cast?</strong><br>
+        A: Mold! It's the dent/impression. The object was removed and the shape stayed. A cast would be something that <em>fills</em> the mold. If your child is confused, use the footprint analogy: the footprint in sand is the mold; if you poured plaster into it, the plaster foot would be the cast.</li>
+
+        <li><strong>Q: Similar/different to real fossils?</strong><br>
+        A: See table above. The most important concept: our model compressed millions of years into hours. Everything else is secondary. If your child says "ours is pretend and real ones are in rocks," that's valid — guide them to the time difference as the key insight.</li>
+
+        <li><strong>Q: What does dough/oven represent?</strong><br>
+        A: Dough = sediment (mud, sand, silt). Oven = millions of years of heat and pressure. This is the "model" concept — we used something simple to represent something complex. This is what real scientists do all the time!</li>
+
+        <li><strong>Q: Why are fossils important?</strong><br>
+        A: They're our only evidence of life from millions of years ago. Without fossils, we'd never know dinosaurs existed! They tell us about how Earth and its living things have changed over time. Accept: "So we know about dinosaurs!" and build on it.</li>
+
+        <li><strong>Q: Fish fossil on a mountain?</strong><br>
+        A: That area was once underwater (ocean floor or lake). The land rose up over millions of years. This is a key 2nd-grade concept: Earth's surface changes over very long periods. A "whoa" moment — lean into it!</li>
+
+        <li><strong>Q: Which object made the best fossil?</strong><br>
+        A: Usually shells and coins, because they have deep, clear textures. In real life, hard parts (bones, shells, teeth) fossilize much better than soft parts (skin, organs, feathers). This mirrors the experiment — harder, more textured objects leave better imprints.</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>Dough is too sticky:</strong> Add flour, a tablespoon at a time, and knead until smooth.</li>
+        <li><strong>Dough is too crumbly:</strong> Add water, a teaspoon at a time. It should feel like Play-Doh.</li>
+        <li><strong>Object sticks to dough:</strong> Lightly spray the object with cooking spray, or dust it with flour before pressing.</li>
+        <li><strong>Imprint isn't deep enough:</strong> Roll dough thicker (¾ inch), and press harder. Let the child push with both hands.</li>
+        <li><strong>Fossils cracked during baking:</strong> Oven was too hot. Keep it at 200°F. Thicker spots take longer — if edges are done but the center is soft, keep baking at 200°F.</li>
+        <li><strong>Fossils puffed up:</strong> Too much water in the dough, or oven too hot. They'll still work — the imprint is usually preserved even if the dough puffed slightly.</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>2nd Grade:</strong></p>
+        <ul>
+          <li>Can explain the basic process of fossil formation (organism buried → sediment hardens → fossil preserved)</li>
+          <li>Can identify their imprint as a <em>mold</em> fossil and explain why</li>
+          <li>Understands that real fossils take millions of years vs. their model which took hours</li>
+          <li>Can explain at least one thing scientists learn from fossils</li>
+          <li>Uses at least three vocabulary words correctly (fossil, mold, imprint, paleontologist, sediment, preserved)</li>
+          <li>Created a clear fossil imprint showing detail from the original object</li>
+          <li>Completed the Paleontologist Report with thoughtful comparisons</li>
+        </ul>
+      </div>
+
+      <h3>The Real Science (For Curious Parents)</h3>
+      <div style="background: white; border-left: 4px solid #7c3aed; padding: 12px; margin: 12px 0;">
+        <p>Fossils form through several processes, but the most common for impression/mold fossils:</p>
+        <ol>
+          <li><strong>Burial:</strong> An organism (or part of one) is rapidly buried by sediment — mud, volcanic ash, sandstorm deposits, or river silt. Rapid burial is key because it prevents decomposition and scavenger damage.</li>
+          <li><strong>Compression and lithification:</strong> Over millions of years, more sediment accumulates. The weight of upper layers compresses the lower layers. Minerals dissolved in groundwater cement the grains together, turning sediment into sedimentary rock (lithification).</li>
+          <li><strong>Mineralization:</strong> For body fossils, original organic material is often replaced molecule-by-molecule with minerals (permineralization). For mold fossils, the original organism dissolves away, leaving an empty cavity in the rock.</li>
+          <li><strong>Exposure:</strong> Erosion, tectonic uplift, or human excavation brings the fossil to the surface.</li>
+        </ol>
+        <p style="margin-top: 10px;">The salt dough activity models mold fossil formation specifically. The dough represents unconsolidated sediment; pressing represents burial; the oven represents diagenesis (the heat and pressure that convert sediment to rock). It's a legitimate scientific model — just dramatically accelerated!</p>
+        <p style="margin-top: 10px;">You don't need to teach all of this to your 2nd grader. The core concept is: "Living things can leave marks in soft ground, and over millions of years that ground turns to rock and keeps the marks forever." If they ask deeper questions, you can mention that real fossils are made of minerals, not dough — the original material slowly gets replaced by rock.</p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    // Fallback: lock from 3rd h2 if all early ones look like goals
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      // No h2 at all — fall back to hiding body overflow after 600px
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    // Walk body's direct children; hide everything from the child
+    // that IS or CONTAINS lockFromH2 onwards (skip paywall overlay itself)
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>

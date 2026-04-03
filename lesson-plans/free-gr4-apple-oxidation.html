@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Apple Browning Experiment — 4th Grade Chemical Reactions &amp; Experimental Design</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .procedure-step {
+      background: #E8F4FD;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #0984E3;
+    }
+    .procedure-step strong {
+      color: #0766b5;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .drawing-area {
+      border: 2px dashed #aaa;
+      min-height: 160px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body {
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 {
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍏 The Great Apple Browning Experiment 🍏</h1>
+  <p class="subtitle">A Free 4th Grade Lesson — Oxidation, Chemical Reactions, &amp; Experimental Design</p>
+
+  <div class="meta">
+    <span><strong>Grade:</strong> 4th Grade</span>
+    <span><strong>Duration:</strong> 30 min setup + 2–3 hours observation</span>
+    <span><strong>Subject:</strong> Physical Science — Chemical Reactions</span>
+  </div>
+
+  <!-- ═══ PARENT/TEACHER NOTES ═══ -->
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> This is a genuine science-fair-quality experiment using nothing but an apple and kitchen liquids. It teaches the scientific method — hypothesis, variables, controls, data collection, and conclusions — while also giving kids a practical life skill (how to stop fruit from browning!). And yes, they eat the evidence at the end.
+    <ul style="margin: 8px 0;">
+      <li>Read "The Science" section together (5–8 min) before slicing the apple</li>
+      <li><strong>Timing:</strong> Set up in 20–30 minutes, then check every 30 minutes for 2–3 hours. The observation intervals are perfect for a homeschool day — set a timer and come back!</li>
+      <li>Parent handles all knife work — everything else is kid-safe</li>
+      <li>One apple makes 6 slices (one per test liquid + control). Use two apples if you have multiple kids</li>
+      <li>This lesson is a powerful introduction to <strong>fair testing</strong> — keeping everything the same except the ONE thing you're changing (the coating)</li>
+      <li>The "eat the winners" ending is a surprisingly motivating hook for reluctant scientists!</li>
+    </ul>
+  </div>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #0984E3 0%, #74B9FF 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: Why Do Apples Turn Brown?</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">You've seen it happen: you bite into an apple, set it down, come back ten minutes later, and — <em>ew!</em> — it's turned brown and mushy-looking. But why? Is it rotting? Is it going bad? Actually, it's something much cooler than that — it's a <strong>chemical reaction</strong> happening right before your eyes. Today, you're going to figure out what's causing it and how to stop it!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #0984E3 0%, #74B9FF 100%); color: white; padding: 12px; border-radius: 8px;">🧪 Oxidation: When Oxygen Attacks!</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p>That brown color is caused by a chemical reaction called <strong>oxidation</strong>. Here's what happens, step by step:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: white; border: 3px solid #0984E3; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #0984E3; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">1</div>
+        <div style="font-size: 36px;">🔪</div>
+        <strong>You cut the apple</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The knife breaks open cells inside the fruit, releasing <strong>enzymes</strong> (tiny chemical helpers)</p>
+      </div>
+      <div style="background: white; border: 3px solid #0984E3; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #0984E3; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">2</div>
+        <div style="font-size: 36px;">💨</div>
+        <strong>Oxygen meets the enzymes</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Oxygen from the air reaches the exposed fruit and reacts with those enzymes</p>
+      </div>
+      <div style="background: white; border: 3px solid #0984E3; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #0984E3; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">3</div>
+        <div style="font-size: 36px;">🟤</div>
+        <strong>A new substance forms!</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The chemical reaction creates <strong>melanin</strong> — a brown pigment. That's the brown color you see!</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 Key Idea:</strong> The apple isn't rotting. It's <em>reacting</em>. Oxygen + enzymes in the apple = a brand-new brown substance (melanin). This is a <strong>chemical reaction</strong> — the starting materials (oxygen + enzymes) make something new (brown pigment) that wasn't there before.</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">🔗 Oxidation Is Everywhere!</h3>
+
+  <div style="background: #fce4ec; border: 3px solid #e91e63; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>Browning apples and rusty bikes are actually the <em>same type</em> of chemical reaction!</strong></p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 48px;">🍏➡️🟤</div>
+        <strong>Apple Browning</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Oxygen + apple enzymes → brown melanin</p>
+        <p style="font-size: 10pt; margin: 5px 0;"><em>Takes minutes</em></p>
+      </div>
+      <div style="background: white; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 48px;">🚲➡️🟫</div>
+        <strong>Metal Rust</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Oxygen + iron → rust (iron oxide)</p>
+        <p style="font-size: 10pt; margin: 5px 0;"><em>Takes weeks or months</em></p>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🤯 Same science!</strong> Both are <strong>oxidation</strong> — oxygen reacting with a substance and changing it into something new. An apple "rusts" in minutes; a bike rusts over months. Speed is different, but the chemistry is the same!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">🛡️ How Do You Stop Oxidation?</h3>
+
+  <div style="background: #e0f7fa; border: 3px solid #00bcd4; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>If oxygen is the "attacker," then we need to either block the oxygen or disable the enzymes!</strong></p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border: 3px solid #00bcd4; border-radius: 10px; padding: 15px; text-align: center;">
+        <div style="font-size: 40px;">🛡️🍋</div>
+        <strong style="color: #00838f;">Strategy 1: Add Acid</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">Acids (like lemon juice or vinegar) change the environment so the enzymes <em>can't work</em>. No working enzymes = no reaction = no browning!</p>
+      </div>
+      <div style="background: white; border: 3px solid #00bcd4; border-radius: 10px; padding: 15px; text-align: center;">
+        <div style="font-size: 40px;">🛡️🫙</div>
+        <strong style="color: #00838f;">Strategy 2: Block the Air</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">Coating the surface with something (honey, oil, plastic wrap) blocks oxygen from reaching the enzymes. No oxygen = no reaction!</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 Your experiment today:</strong> You'll test different kitchen liquids to see which strategy works best! Some are acids, some are barriers, some are both — and one (the control) gets nothing at all.</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 12px; border-radius: 8px;">🔬 What Makes This a REAL Experiment?</h3>
+
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>This isn't just a fun activity — it's a properly designed scientific experiment.</strong> Here's why:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">🎯</div>
+        <strong>Variable</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The ONE thing you change: which liquid coats each slice</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">⚖️</div>
+        <strong>Control</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The slice with NOTHING on it — your "what happens normally" baseline</p>
+      </div>
+      <div style="background: white; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px;">📏</div>
+        <strong>Fair Test</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Same apple, same size, same time, same spot — only the coating changes!</p>
+      </div>
+    </div>
+
+    <p style="background: white; border: 2px dashed #4caf50; padding: 12px; border-radius: 8px; margin-top: 10px;"><strong>🧠 Why does the control matter?</strong> Without the untreated slice, you wouldn't know if the apple would have browned on its own! The control is your comparison — it shows you what "normal" looks like so you can measure how much each coating helped.</p>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #74B9FF 0%, #0984E3 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 16pt;">✨ Ready to Stop Browning in Its Tracks? ✨</h3>
+    <p style="font-size: 12pt; color: white; margin: 0;">Grab an apple and your kitchen chemistry kit — let's experiment!</p>
+  </div>
+
+  <!-- ═══ KEY VOCABULARY ═══ -->
+  <div style="background: linear-gradient(135deg, #0984E3 0%, #0766b5 100%); border-radius: 10px; padding: 20px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 14pt;">📖 Key Vocabulary</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🟤 Oxidation</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A chemical reaction where oxygen reacts with a substance and changes it</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>⚙️ Enzyme</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A tiny chemical helper inside living things that speeds up reactions</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🧪 Chemical Reaction</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">When substances combine and create something new that wasn't there before</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🍋 Acid</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A sour substance (lemon juice, vinegar) that can slow down or stop enzyme reactions</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🎯 Variable</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The ONE thing you change in an experiment to test its effect</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>⚖️ Control</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The untreated test subject — your "normal" baseline for comparison</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px); grid-column: span 2; text-align: center;">
+        <strong>🤔 Hypothesis</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Your prediction about what will happen AND why — a testable educated guess!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NGSS STANDARDS ═══ -->
+  <div style="background: #f3e5f5; border: 2px solid #ce93d8; border-radius: 8px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #7c3aed; border: none;">📋 NGSS Standard:</h3>
+    <p><strong>4-PS1-2</strong> — Make observations and measurements to identify materials based on their properties.</p>
+    <p style="margin-top: 8px;"><em>Students observe changes in the properties of apple slices (color change) resulting from a chemical reaction (oxidation) and compare how different coatings affect the rate of that reaction.</em></p>
+    <p style="margin-top: 8px;"><strong>3-5-ETS1-3</strong> — Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.</p>
+    <p style="margin-top: 8px;"><strong>Science &amp; Engineering Practices:</strong> Planning and carrying out investigations; Analyzing and interpreting data; Constructing explanations from evidence</p>
+    <p style="margin-top: 8px;"><strong>Crosscutting Concept:</strong> Cause and Effect — Different coatings (cause) produce different amounts of browning (effect). Students identify which coatings are most effective and explain why.</p>
+  </div>
+
+  <!-- ═══ LEARNING GOALS ═══ -->
+  <h2>📚 Learning Goals</h2>
+
+  <div style="border: 1px solid #0984E3; border-left: 4px solid #0984E3; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Explain oxidation</strong>: Describe what causes apple browning (oxygen + enzymes = melanin) and why it's a chemical reaction</li>
+      <li><strong>Connect oxidation to real life</strong>: Explain how apple browning and metal rust are the same type of reaction</li>
+      <li><strong>Design a fair experiment</strong>: Identify the variable (coating), the control (no coating), and what must stay the same for a fair test</li>
+      <li><strong>Write a hypothesis</strong>: Make a prediction about which coating will work best and explain <em>why</em></li>
+      <li><strong>Collect and analyze data</strong>: Observe and rate browning at regular intervals, compare results across test groups</li>
+      <li><strong>Draw evidence-based conclusions</strong>: Explain which coatings worked, which didn't, and why, using their data as evidence</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>oxidation, enzyme, chemical reaction, acid, variable, control, hypothesis</em></li>
+    </ul>
+  </div>
+
+  <!-- ═══ MATERIALS ═══ -->
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3 style="color: #e65100;">🏠 Household Items to Gather</h3>
+      <ul>
+        <li><span class="checkbox"></span>1 apple (any variety — Granny Smith shows browning well!)</li>
+        <li><span class="checkbox"></span>Knife and cutting board (parent use only)</li>
+        <li><span class="checkbox"></span>Large plate, tray, or baking sheet</li>
+        <li><span class="checkbox"></span>Lemon juice (bottled is fine — about 2 tablespoons)</li>
+        <li><span class="checkbox"></span>White vinegar (about 2 tablespoons)</li>
+        <li><span class="checkbox"></span>Water (about 2 tablespoons)</li>
+        <li><span class="checkbox"></span>Milk (about 2 tablespoons)</li>
+        <li><span class="checkbox"></span>Honey <em>or</em> olive oil (about 1 tablespoon)</li>
+        <li><span class="checkbox"></span>Small bowls or cups (one per liquid, for dipping)</li>
+        <li><span class="checkbox"></span>Paper labels, tape, or sticky notes (to label each slice)</li>
+        <li><span class="checkbox"></span>Timer (phone timer works great)</li>
+      </ul>
+      <h3 style="color: #e65100;">✨ Optional / Nice to Have</h3>
+      <ul>
+        <li><span class="checkbox"></span>Camera or phone (to photograph slices at each interval — great for comparison!)</li>
+        <li><span class="checkbox"></span>Extra apple for a second trial or for siblings to each run their own</li>
+        <li><span class="checkbox"></span>Colored pencils (for the worksheet browning drawings)</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes</h3>
+      <ul>
+        <li><strong>Knife safety:</strong> Only the parent/teacher handles the knife — no exceptions</li>
+        <li>Apple slices treated with lemon juice and vinegar are safe to eat afterward</li>
+        <li>Do NOT eat the milk-coated slice if it's been sitting for more than two hours at room temperature</li>
+        <li>Wash hands before handling food</li>
+        <li>Check for food allergies (dairy/milk) before starting</li>
+      </ul>
+      <h3>💡 Setup Tip</h3>
+      <p style="font-size: 10pt;">Cut all slices from the <em>same apple</em> at the <em>same time</em>. Place them in a row on a plate with labels. This ensures a fair test — same apple, same air exposure, same starting point. A sunny counter will speed browning slightly; a shaded spot is fine too.</p>
+    </div>
+  </div>
+
+  <!-- ═══ PROCEDURE ═══ -->
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Set Up Your Labels (3 min)</strong><br>
+    Make six labels for your plate: <strong>Lemon Juice</strong>, <strong>Vinegar</strong>, <strong>Water</strong>, <strong>Milk</strong>, <strong>Honey (or Oil)</strong>, and <strong>Control (Nothing)</strong>. Arrange them in a row on your tray. This is your experiment station!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Prepare the Liquids (3 min)</strong><br>
+    Pour about 2 tablespoons of each liquid into separate small bowls or cups. For honey, warm it slightly so it's easy to spread (10 seconds in the microwave). Label each bowl to match your plate labels.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Slice the Apple (Parent Step — 3 min) 🔪</strong><br>
+    <strong>Parent handles the knife!</strong> Cut the apple into six roughly equal slices. Work quickly — the clock starts ticking the moment the flesh is exposed to air! Place each slice in its labeled spot immediately.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Write Your Hypothesis (5 min) 📝</strong><br>
+    Before applying any coatings, write your hypothesis on the worksheet:
+    <br><br>
+    <em>"I think _________________ will prevent browning the best because _________________."</em>
+    <br><br>
+    Also predict: <strong>Which slice will brown the MOST?</strong> (Hint: it should be the control — but why?)
+    <br>And rank all six from "least browning" to "most browning" on your prediction chart!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Apply Coatings — GO FAST! (5 min) 🏃</strong><br>
+    Work quickly to keep the test fair! For each slice:
+    <ul style="margin: 5px 0;">
+      <li><strong>Lemon Juice:</strong> Dip or brush both cut sides generously</li>
+      <li><strong>Vinegar:</strong> Dip or brush both cut sides</li>
+      <li><strong>Water:</strong> Dip or brush both cut sides</li>
+      <li><strong>Milk:</strong> Dip or brush both cut sides</li>
+      <li><strong>Honey/Oil:</strong> Spread a thin layer on both cut sides with a spoon</li>
+      <li><strong>Control:</strong> Don't touch it! Leave it completely bare</li>
+    </ul>
+    Place all slices back on the tray, cut side up. <strong>Start your timer!</strong>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Observe at 30 Minutes 🕐</strong><br>
+    Come back after 30 minutes. Look at each slice carefully. Rate the browning on a scale of 1–5:
+    <div style="background: white; border: 1px solid #ccc; border-radius: 5px; padding: 8px; margin: 8px 0; font-size: 10pt;">
+      <strong>Browning Scale:</strong> &nbsp;
+      1 = No browning (still white/green) &nbsp;|&nbsp;
+      2 = Slight browning at edges &nbsp;|&nbsp;
+      3 = Moderate browning &nbsp;|&nbsp;
+      4 = Mostly brown &nbsp;|&nbsp;
+      5 = Completely brown
+    </div>
+    Record your ratings on the worksheet. Take a photo if you can!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Observe at 1 Hour, 2 Hours, and 3 Hours 🕑🕒🕓</strong><br>
+    Repeat your observations at each interval. Rate the browning, note any changes, and record everything. By hour two or three, the differences should be dramatic!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 8: Analyze Your Results (10 min) 📊</strong><br>
+    Look at your data table. Answer these questions:
+    <ul style="margin: 5px 0;">
+      <li>Which coating prevented browning the best?</li>
+      <li>Which coating was the worst (besides the control)?</li>
+      <li>Was the control slice the brownest? (It should be!)</li>
+      <li>Was your hypothesis correct?</li>
+    </ul>
+    Write your conclusion on the worksheet.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 9: Eat the Evidence! 🍎😋 (5 min)</strong><br>
+    The best part — taste the winning slices! The lemon juice and vinegar slices are safe and delicious (slightly tangy!). The honey slice tastes great too. Compare: does the browning affect the taste? (Spoiler: barely! Brown apples taste almost the same, but the texture changes slightly.)
+    <br><em>Skip the milk slice if it's been sitting for more than two hours.</em>
+  </div>
+
+  <!-- ═══ DISCUSSION QUESTIONS ═══ -->
+  <h2>❓ Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>Q: What caused the apple slices to turn brown?</strong>
+    <p class="discussion-hint">Look for: Oxidation — oxygen from the air reacted with enzymes inside the apple, creating a brown substance called melanin. It's a chemical reaction, not rotting. Accept: "The air made it brown" and guide them to be more specific about oxygen + enzymes.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Which coating prevented browning the best? Why do you think it worked?</strong>
+    <p class="discussion-hint">Lemon juice usually wins because it's the most acidic. The acid changes the conditions so the enzymes can't do their job. If they say "the lemon juice blocked the air," that's partially right — but the main reason is the acid deactivating the enzymes. Vinegar is the runner-up for the same reason.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Why did we include a control slice with nothing on it?</strong>
+    <p class="discussion-hint">So we have something to compare against! Without the control, we wouldn't know what "normal browning" looks like. The control shows us the baseline — how much the apple would brown with no treatment. Every good experiment needs a control.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What is the "variable" in this experiment? What did we keep the same?</strong>
+    <p class="discussion-hint">Variable (the thing we changed): the coating on each slice. Kept the same: same apple, same slice size, same time sitting out, same temperature, same location. Changing only ONE thing makes it a fair test — otherwise you wouldn't know which change caused the result.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: How is an apple turning brown similar to a bike rusting?</strong>
+    <p class="discussion-hint">Both are oxidation! In both cases, oxygen from the air reacts with a substance and creates something new (brown melanin on the apple, reddish iron oxide on the bike). Same type of chemical reaction, different materials, different speeds.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Based on your results, how would you keep apple slices fresh in a lunchbox?</strong>
+    <p class="discussion-hint">Squeeze lemon juice on them! It's the most effective, safe, and tasty option. Other strategies: keep them in a sealed bag (less oxygen), or dip in water with a splash of lemon juice. This is real-world science they can use every day!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Was your hypothesis correct? If not, what did you learn?</strong>
+    <p class="discussion-hint">Either answer is great! If correct: "My data supported my hypothesis." If wrong: "My hypothesis was disproven, which is also useful — now I know something I didn't before." Emphasize that a "wrong" hypothesis is still good science, as long as you learned from it.</p>
+  </div>
+
+  <!-- ═══ EXTENSIONS ═══ -->
+  <h2>🚀 Extensions</h2>
+
+  <div style="background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 15px; margin: 15px 0;">
+    <ul>
+      <li><strong>🍌 Try Other Fruits:</strong> Do bananas, pears, and avocados brown the same way? Repeat the experiment with different fruits. Do the same coatings work? (Spoiler: yes — the same enzymes are present in most fruits!)</li>
+      <li><strong>🍋 Acid Strength Test:</strong> Compare different acids: lemon juice vs. lime juice vs. orange juice vs. pineapple juice vs. vinegar. Which is the most effective? This tests whether the <em>strength</em> of the acid matters.</li>
+      <li><strong>🌡️ Temperature Variable:</strong> Put one set of slices in the fridge and another at room temperature (both with the same coating). Does cold slow down oxidation? (Yes! Cold slows chemical reactions.)</li>
+      <li><strong>📊 Science Fair Project:</strong> This experiment is perfect for a science fair! Add multiple trials (repeat three times), calculate averages, and create a bar graph comparing the coatings. Add a research section about enzymatic browning.</li>
+      <li><strong>🧑‍🍳 Kitchen Hack Challenge:</strong> Now that you know the science, can you invent the BEST anti-browning solution? Try combinations: lemon juice + honey? Cold water + vinegar? Design your own formula and test it!</li>
+    </ul>
+  </div>
+
+  <!-- ═══ STUDENT WORKSHEET ═══ -->
+  <div class="page-break">
+    <h2>📊 Student Worksheet — Lab Report</h2>
+    <p style="text-align: center; font-size: 12pt;"><strong>Scientist's Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h3>🤔 My Hypothesis</h3>
+    <p><strong>I think _____________________________ will prevent browning the BEST because:</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+    <p><strong>I think _____________________________ will prevent browning the LEAST because:</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+
+    <h3>🏆 My Browning Prediction (rank 1 = least browning, 6 = most browning)</h3>
+    <table class="data-table">
+      <tr>
+        <th>Coating</th>
+        <th>My Predicted Rank (1–6)</th>
+      </tr>
+      <tr><td>Lemon Juice</td><td></td></tr>
+      <tr><td>Vinegar</td><td></td></tr>
+      <tr><td>Water</td><td></td></tr>
+      <tr><td>Milk</td><td></td></tr>
+      <tr><td>Honey / Oil</td><td></td></tr>
+      <tr><td>Control (Nothing)</td><td></td></tr>
+    </table>
+
+    <h3>👀 Observation Table — Browning Scale (1 = no browning → 5 = completely brown)</h3>
+    <table class="data-table">
+      <tr>
+        <th>Coating</th>
+        <th>30 min</th>
+        <th>1 hour</th>
+        <th>2 hours</th>
+        <th>3 hours</th>
+        <th>Final Rank<br>(1 = least brown)</th>
+      </tr>
+      <tr>
+        <td>🍋 Lemon Juice</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🫗 Vinegar</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>💧 Water</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🥛 Milk</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>🍯 Honey / Oil</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>⚖️ Control (Nothing)</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+
+    <h3>✏️ Draw What You See at 3 Hours</h3>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">🍋 Lemon Juice</p>
+        <div class="drawing-area" style="min-height: 80px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">🫗 Vinegar</p>
+        <div class="drawing-area" style="min-height: 80px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">💧 Water</p>
+        <div class="drawing-area" style="min-height: 80px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">🥛 Milk</p>
+        <div class="drawing-area" style="min-height: 80px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">🍯 Honey / Oil</p>
+        <div class="drawing-area" style="min-height: 80px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">⚖️ Control</p>
+        <div class="drawing-area" style="min-height: 80px;">(draw)</div>
+      </div>
+    </div>
+
+    <h3>📝 My Conclusion</h3>
+    <p><strong>Which coating prevented browning best?</strong> _____________________________________</p>
+    <p><strong>Which showed the most browning?</strong> _____________________________________</p>
+    <p><strong>Was my hypothesis correct?</strong> &nbsp; Yes ☐ &nbsp; No ☐ &nbsp; Partially ☐</p>
+    <p><strong>Explain your results — WHY did the winning coating work best?</strong></p>
+    <div class="notes-area" style="min-height: 60px;"></div>
+    <p><strong>What is ONE real-world way you'd use this science?</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+  </div>
+
+  <!-- ═══ PARENT ANSWER KEY ═══ -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Expected Results (Typical Browning at 3 Hours)</h3>
+      <table class="data-table">
+        <tr>
+          <th>Coating</th>
+          <th>30 min</th>
+          <th>1 hour</th>
+          <th>2 hours</th>
+          <th>3 hours</th>
+          <th>Why</th>
+        </tr>
+        <tr>
+          <td><strong>🍋 Lemon Juice</strong></td>
+          <td>1</td>
+          <td>1</td>
+          <td>1–2</td>
+          <td>1–2</td>
+          <td><strong>WINNER.</strong> Citric acid deactivates the polyphenol oxidase enzyme and lowers pH below the enzyme's functional range (~pH 3).</td>
+        </tr>
+        <tr>
+          <td><strong>🫗 Vinegar</strong></td>
+          <td>1</td>
+          <td>1–2</td>
+          <td>2</td>
+          <td>2</td>
+          <td><strong>Runner-up.</strong> Acetic acid also lowers pH and inhibits the enzyme, though slightly less effectively than citric acid.</td>
+        </tr>
+        <tr>
+          <td><strong>🍯 Honey / Oil</strong></td>
+          <td>1–2</td>
+          <td>2</td>
+          <td>2–3</td>
+          <td>3</td>
+          <td>Creates a physical barrier blocking oxygen. Honey also contains some acids. Moderately effective.</td>
+        </tr>
+        <tr>
+          <td><strong>💧 Water</strong></td>
+          <td>1–2</td>
+          <td>2–3</td>
+          <td>3–4</td>
+          <td>4</td>
+          <td>Provides a temporary barrier (water film) but evaporates. Once dry, browning resumes. Minimal long-term protection.</td>
+        </tr>
+        <tr>
+          <td><strong>🥛 Milk</strong></td>
+          <td>2</td>
+          <td>2–3</td>
+          <td>3–4</td>
+          <td>4</td>
+          <td>Milk is nearly neutral pH — doesn't deactivate enzymes. Protein film provides a slight physical barrier but dries quickly.</td>
+        </tr>
+        <tr>
+          <td><strong>⚖️ Control</strong></td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>4–5</td>
+          <td><strong>Most browning.</strong> Nothing to stop the enzyme + oxygen reaction. This is the baseline.</td>
+        </tr>
+      </table>
+      <p style="font-style: italic; color: #666; margin-top: 8px;">Note: Results vary by apple variety, temperature, humidity, and freshness. Granny Smith apples tend to brown faster than Red Delicious. Warmer rooms speed browning. The <em>relative ranking</em> should be consistent even if exact scores differ.</p>
+
+      <h3>Expected Ranking (Least to Most Browning)</h3>
+      <div style="background: white; border-left: 4px solid #0984E3; padding: 12px; margin: 12px 0;">
+        <ol>
+          <li><strong>Lemon Juice</strong> — best protection (strong acid, deactivates enzymes)</li>
+          <li><strong>Vinegar</strong> — good protection (acid, but slightly less effective than citric acid)</li>
+          <li><strong>Honey / Oil</strong> — moderate (physical barrier + mild acidity in honey)</li>
+          <li><strong>Water</strong> — poor (temporary barrier, evaporates)</li>
+          <li><strong>Milk</strong> — poor (neutral pH, thin barrier)</li>
+          <li><strong>Control (Nothing)</strong> — worst (no protection at all)</li>
+        </ol>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Q: What caused browning?</strong><br>
+        A: Oxidation — oxygen reacted with enzymes (polyphenol oxidase) released from broken apple cells, producing melanin (brown pigment). It's a chemical reaction: new substances were formed. Accept "oxygen made it brown" and build toward "oxygen + enzymes = brown stuff."</li>
+
+        <li><strong>Q: Why did lemon juice win?</strong><br>
+        A: Lemon juice is highly acidic (pH ~2). The acid changes the environment inside the apple so the enzyme (PPO) can't function — it "turns off" the enzyme. No working enzyme = no reaction = no browning. If your child says "it blocked the air," acknowledge that acids <em>also</em> form a barrier, but the main mechanism is enzyme deactivation.</li>
+
+        <li><strong>Q: Why have a control?</strong><br>
+        A: The control is the baseline. Without it, you wouldn't know how much browning is "normal." You compare every coated slice against the control to measure how much each coating helped. Every good experiment needs a control. Ask: "If all the slices had coatings, how would you know if any of them actually worked?"</li>
+
+        <li><strong>Q: What's the variable?</strong><br>
+        A: The independent variable (what you change) is the coating. The dependent variable (what you measure) is the browning. The controlled variables (what stays the same) are the apple type, slice size, time, temperature, and location. If your child can name all three types, that's outstanding for 4th grade.</li>
+
+        <li><strong>Q: Apple browning vs. rust?</strong><br>
+        A: Both are oxidation. Apple: O₂ + enzymes → melanin. Metal: O₂ + iron → iron oxide (rust). Both involve oxygen reacting with a material to produce a new substance. The apple reaction is faster because enzymes speed it up; metal rusting is slower because there's no enzyme catalyst.</li>
+
+        <li><strong>Q: Lunchbox tip?</strong><br>
+        A: Squeeze lemon juice on cut fruit, or dip in water with a splash of lemon juice. You can also keep slices in a sealed bag to reduce oxygen exposure. This is real, practical kitchen science!</li>
+
+        <li><strong>Q: Was the hypothesis correct?</strong><br>
+        A: Either answer is valid. A correct hypothesis is confirmed by the data. An incorrect hypothesis is also valuable — it means the student learned something unexpected. Emphasize: "A disproven hypothesis is NOT a failed experiment. It's a discovery."</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>Browning isn't visible after 30 minutes:</strong> Normal for some apple varieties. Wait until the 1-hour mark. Granny Smith and Fuji tend to brown faster than Red Delicious.</li>
+        <li><strong>All slices look the same:</strong> The coatings may be too thin. At the next observation, reapply a heavier layer and see if that changes results. Also check: are you looking at the cut surface (not the peel side)?</li>
+        <li><strong>Lemon juice slice browned anyway:</strong> The coating may have been too light. One quick brush isn't enough — it needs a generous coat. Try dipping the slice fully into lemon juice.</li>
+        <li><strong>Water slice didn't brown much:</strong> If it's humid, the water film takes longer to evaporate. Wait until the 2–3 hour mark for clear differences.</li>
+        <li><strong>Child's hypothesis was wrong:</strong> Celebrate it! Ask: "What did you expect? What actually happened? What does this tell you?" A wrong prediction that leads to understanding is better than a lucky guess.</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>4th Grade:</strong></p>
+        <ul>
+          <li>Can explain oxidation as a chemical reaction (oxygen + enzymes = new brown substance)</li>
+          <li>Can connect apple browning to metal rust as examples of the same type of reaction</li>
+          <li>Correctly identifies the variable (coating), control (nothing), and constants (same apple, time, etc.)</li>
+          <li>Wrote a hypothesis with both a prediction AND an explanation ("because…")</li>
+          <li>Collected browning data at multiple time intervals using the 1–5 scale</li>
+          <li>Can explain why lemon juice works (acid deactivates the enzyme)</li>
+          <li>Drew an evidence-based conclusion connecting results to the hypothesis</li>
+          <li>Uses vocabulary correctly: oxidation, enzyme, chemical reaction, acid, variable, control, hypothesis</li>
+        </ul>
+      </div>
+
+      <h3>The Real Science (For Curious Parents)</h3>
+      <div style="background: white; border-left: 4px solid #7c3aed; padding: 12px; margin: 12px 0;">
+        <p>Apple browning is caused by <strong>enzymatic oxidation</strong>, specifically:</p>
+        <ol>
+          <li><strong>Cell damage:</strong> Cutting the apple ruptures cell walls, releasing polyphenol oxidase (PPO) enzymes that were previously compartmentalized within the cell.</li>
+          <li><strong>Enzyme + substrate contact:</strong> PPO encounters phenolic compounds (naturally present in the apple's cytoplasm) that it was previously separated from.</li>
+          <li><strong>Oxidation reaction:</strong> PPO catalyzes the oxidation of phenols to quinones in the presence of oxygen (O₂).</li>
+          <li><strong>Polymerization:</strong> The quinones rapidly polymerize into melanin — the brown pigment visible on the apple's surface.</li>
+        </ol>
+        <p style="margin-top: 10px;"><strong>Why acids work:</strong> PPO has an optimal pH range of about 5–7. Citric acid (lemon juice, pH ~2) and acetic acid (vinegar, pH ~2.5) drop the local pH well below the enzyme's functional range, effectively deactivating it. Additionally, ascorbic acid (vitamin C, also present in lemon juice) acts as an antioxidant — it reduces the quinones back to phenols before they can polymerize into melanin.</p>
+        <p style="margin-top: 10px;"><strong>Why physical barriers work (somewhat):</strong> Honey and oil create hydrophobic films that slow oxygen diffusion to the surface. However, they don't deactivate the enzyme, so any oxygen that penetrates will still cause browning — just more slowly.</p>
+        <p style="margin-top: 10px;">You don't need to teach this level of detail to your 4th grader! The kid-friendly version — "acids turn off the enzyme, and the enzyme is what causes browning" — is accurate and age-appropriate.</p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>

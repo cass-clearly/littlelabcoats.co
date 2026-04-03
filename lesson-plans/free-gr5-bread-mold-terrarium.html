@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bread Mold Terrarium — 5th Grade Decomposition &amp; Microorganisms</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .procedure-step {
+      background: #E8F4FD;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #0984E3;
+    }
+    .procedure-step strong {
+      color: #0766b5;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .drawing-area {
+      border: 2px dashed #aaa;
+      min-height: 160px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body {
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 {
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍞 Bread Mold Terrarium 🔬</h1>
+  <p class="subtitle">A Free 5th Grade Lesson — Decomposition, Fungi, &amp; Experimental Design</p>
+
+  <div class="meta">
+    <span><strong>Grade:</strong> 5th Grade</span>
+    <span><strong>Duration:</strong> 30 min setup + 5–7 days observation</span>
+    <span><strong>Subject:</strong> Life Science — Decomposition &amp; Microorganisms</span>
+  </div>
+
+  <!-- ═══ PARENT/TEACHER NOTES ═══ -->
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> This experiment is gloriously gross — and that's exactly why 5th graders love it. Kids set up bread slices under different conditions, seal them in bags, and watch mold colonize over a week. The "ew" factor is the hook; the science of decomposition, nutrient cycling, and experimental design is the payload.
+    <ul style="margin: 8px 0;">
+      <li>Read "The Science" section together (8–10 min) before setup — the connections to penicillin and composting are fascinating</li>
+      <li><strong>Critical safety rule: NEVER open the sealed bags.</strong> All observations are made through the plastic. Mold spores can trigger allergies and asthma. Dispose of sealed bags directly in outdoor trash when done</li>
+      <li><strong>Best bread:</strong> White bread without preservatives molds fastest. Bakery bread or homemade bread works great. Highly preserved store brands may take much longer</li>
+      <li>Setup takes 20–30 minutes. Daily observations take 5–10 minutes each. The payoff comes around days 3–5</li>
+      <li>This is a multi-day experiment — great for teaching patience and long-term data collection</li>
+      <li>If your child has mold allergies, this experiment can still be done — the sealed bags keep spores contained. But dispose of bags promptly and wash hands after handling sealed bags</li>
+    </ul>
+  </div>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #0984E3 0%, #00b894 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: What Would Happen If Nothing Ever Rotted?</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">Imagine a world where dead leaves never decayed. Where fallen trees stayed forever. Where every animal that ever died was still lying on the ground. The planet would be buried under miles of dead stuff! Luckily, that doesn't happen — because of <strong>decomposers</strong>. And one of the most important decomposers on Earth is something that grows on your old bread: <strong>mold.</strong></p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #00b894 0%, #55efc4 100%); color: white; padding: 12px; border-radius: 8px;">🍄 What IS Mold, Anyway?</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p><strong>Mold is a type of <em>fungus</em></strong> — and fungi are their own kingdom of life, separate from plants AND animals!</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: #e8f5e9; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 36px;">🌱</div>
+        <strong>Plants</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Make their own food from sunlight (photosynthesis)</p>
+      </div>
+      <div style="background: #fce4ec; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 36px;">🐾</div>
+        <strong>Animals</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Eat other organisms for food</p>
+      </div>
+      <div style="background: #f3e5f5; border: 3px solid #ce93d8; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 36px;">🍄</div>
+        <strong>Fungi</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Absorb nutrients from <em>dead or decaying</em> material</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 Key Idea:</strong> Mold doesn't eat like you do (no mouth, no stomach!). Instead, it releases chemicals called <strong>enzymes</strong> that break down the food around it, and then it <em>absorbs</em> the dissolved nutrients right through its surface. It's digesting your bread from the outside in!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #6c5ce7 0%, #a29bfe 100%); color: white; padding: 12px; border-radius: 8px;">🌀 The Life Cycle of Mold: From Invisible to "Ewww!"</h3>
+
+  <div style="background: #f3e5f5; border: 3px solid #ce93d8; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 10px 0;">
+      <div style="background: white; border: 3px solid #6c5ce7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6c5ce7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">1</div>
+        <div style="font-size: 28px;">💨</div>
+        <strong>Spores Float</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">Invisible mold spores are <em>always</em> in the air around you — you're breathing them right now!</p>
+      </div>
+      <div style="background: white; border: 3px solid #6c5ce7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6c5ce7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">2</div>
+        <div style="font-size: 28px;">🍞</div>
+        <strong>Spores Land</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">A spore lands on food (bread!). If conditions are right — warm, moist, dark — it starts to grow.</p>
+      </div>
+      <div style="background: white; border: 3px solid #6c5ce7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6c5ce7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">3</div>
+        <div style="font-size: 28px;">🕸️</div>
+        <strong>Hyphae Spread</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">The spore sends out thread-like roots called <em>hyphae</em> that burrow into the bread, digesting it.</p>
+      </div>
+      <div style="background: white; border: 3px solid #6c5ce7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6c5ce7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">4</div>
+        <div style="font-size: 28px;">🟢⚫🔵</div>
+        <strong>New Spores!</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">The mold makes millions of new spores (the colorful fuzzy stuff you see!) and releases them into the air. Cycle repeats!</p>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🤯 Mind-blowing:</strong> There are mold spores in the air <em>right now</em>, everywhere. They're on your bread the moment you open the bag. They're just too small to see. But give them the right conditions — warmth, moisture, food — and they'll grow into the fuzzy, colorful colonies you'll observe in this experiment!
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">♻️ Decomposers: Nature's Recycling Crew</h3>
+
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>Mold isn't just gross — it's <em>essential</em> for life on Earth.</strong></p>
+
+    <div style="background: white; border: 3px solid #333; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="text-align: center; font-size: 12pt; margin-bottom: 15px;"><strong>The Nutrient Cycle: How Matter Moves Through Ecosystems</strong></p>
+      <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: center; text-align: center;">
+        <div style="background: linear-gradient(135deg, #00b894 0%, #55efc4 100%); border-radius: 12px; padding: 12px; color: white;">
+          <div style="font-size: 32px;">🌱</div>
+          <strong>Plants grow</strong>
+          <p style="font-size: 9pt; margin: 3px 0;">Using nutrients from soil</p>
+        </div>
+        <div style="font-size: 24px;">➡️</div>
+        <div style="background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%); border-radius: 12px; padding: 12px; color: white;">
+          <div style="font-size: 32px;">🐾</div>
+          <strong>Animals eat plants</strong>
+          <p style="font-size: 9pt; margin: 3px 0;">Nutrients move into animals</p>
+        </div>
+        <div style="font-size: 24px;">➡️</div>
+        <div style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); border-radius: 12px; padding: 12px; color: white;">
+          <div style="font-size: 32px;">🍄</div>
+          <strong>Decomposers break it down</strong>
+          <p style="font-size: 9pt; margin: 3px 0;">When things die, fungi &amp; bacteria return nutrients to the soil</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 10px; font-size: 20px;">🔄 <em style="font-size: 11pt;">Nutrients return to the soil → plants grow again → cycle continues forever!</em></div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 The Big Idea:</strong> Matter isn't created or destroyed — it's <em>recycled</em>. Decomposers like mold are the recycling crew. They break dead things down into nutrients that go back into the soil, so new plants can grow. Without them, the cycle stops and life grinds to a halt.</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">💊 Mold Changed the World: The Penicillin Story</h3>
+
+  <div style="background: #e0f7fa; border: 3px solid #00bcd4; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 10px 0;">
+      <div style="background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px; text-align: center;">🧑‍🔬</div>
+        <strong>In 1928, Alexander Fleming</strong> left a petri dish of bacteria uncovered by accident. A mold spore drifted in and started growing. But something strange happened — the bacteria <em>near the mold were dying!</em>
+      </div>
+      <div style="background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="font-size: 36px; text-align: center;">💊</div>
+        <strong>That mold was making <em>penicillin</em></strong> — a chemical that kills bacteria. It became the world's first antibiotic and has saved <em>hundreds of millions</em> of lives. All because of a fuzzy spot of mold on a forgotten dish!
+      </div>
+    </div>
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🧠 Think about it:</strong> The same kind of mold growing on your bread experiment is a cousin of the mold that gave us one of the most important medicines in human history. Gross? Yes. Important? <em>Incredibly.</em>
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 12px; border-radius: 8px;">🧪 What Makes This a Real Experiment?</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>You're testing TWO variables today:</strong> moisture and light. Here's how the science works:</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border: 3px solid #0984E3; border-radius: 10px; padding: 15px; text-align: center;">
+        <div style="font-size: 40px;">💧</div>
+        <strong style="color: #0984E3;">Variable 1: Moisture</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">Does mold need water to grow? Compare wet bread vs. dry bread.</p>
+      </div>
+      <div style="background: white; border: 3px solid #f39c12; border-radius: 10px; padding: 15px; text-align: center;">
+        <div style="font-size: 40px;">☀️</div>
+        <strong style="color: #f39c12;">Variable 2: Light</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">Does mold prefer light or dark? Compare a sunny window vs. a dark cupboard.</p>
+      </div>
+    </div>
+
+    <div style="background: white; border: 2px dashed #4caf50; padding: 12px; border-radius: 8px; margin-top: 10px;">
+      <p style="margin: 0;"><strong>⚖️ The Control:</strong> One bag gets <em>normal room conditions</em> — no extra water, no special placement. It shows you what happens with <em>no intervention</em>, so you can measure how much your variables actually change things. Without a control, you're guessing!</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #00b894 0%, #0984E3 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 16pt;">✨ Ready to Grow Some Seriously Gross Science? ✨</h3>
+    <p style="font-size: 12pt; color: white; margin: 0;">Grab your bread and bags — it's time to become a microbiologist!</p>
+  </div>
+
+  <!-- ═══ KEY VOCABULARY ═══ -->
+  <div style="background: linear-gradient(135deg, #0984E3 0%, #00b894 100%); border-radius: 10px; padding: 20px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 14pt;">📖 Key Vocabulary</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>♻️ Decomposer</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">An organism that breaks down dead material and returns nutrients to the soil</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🍄 Fungus (plural: Fungi)</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A kingdom of life that includes mold, mushrooms, and yeast — not plants, not animals!</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>💨 Spore</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A tiny reproductive cell released by fungi — like a seed, but microscopic and airborne</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🔬 Microorganism</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A living thing too small to see without a microscope — bacteria, some fungi, protists</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🤔 Hypothesis</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A testable prediction about what will happen and why</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🎯 Variable</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The factor you change (independent) or measure (dependent) in an experiment</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>⚖️ Control</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The untreated test group — your baseline for comparison</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🔄 Nutrient Cycle</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The path nutrients take from soil → plants → animals → decomposers → back to soil</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NGSS STANDARDS ═══ -->
+  <div style="background: #f3e5f5; border: 2px solid #ce93d8; border-radius: 8px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #7c3aed; border: none;">📋 NGSS Standard:</h3>
+    <p><strong>5-LS2-1</strong> — Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.</p>
+    <p style="margin-top: 8px;"><em>Students observe decomposition firsthand — mold (a decomposer) breaks down bread (organic matter), demonstrating how matter cycles through living systems.</em></p>
+    <p style="margin-top: 8px;"><strong>5-PS1-4</strong> (supporting) — Conduct an investigation to determine whether the mixing of two or more substances results in new substances. <em>(Students observe that mold growth transforms bread into new substances — visible mold colonies, changed texture, and different smell.)</em></p>
+    <p style="margin-top: 8px;"><strong>Science &amp; Engineering Practices:</strong> Planning and carrying out investigations; Analyzing and interpreting data; Developing and using models; Constructing explanations from evidence</p>
+    <p style="margin-top: 8px;"><strong>Crosscutting Concept:</strong> Systems and System Models — Decomposers are a critical component of ecosystem nutrient cycling. Matter is conserved as it moves through the system.</p>
+  </div>
+
+  <!-- ═══ LEARNING GOALS ═══ -->
+  <h2>📚 Learning Goals</h2>
+
+  <div style="border: 1px solid #0984E3; border-left: 4px solid #0984E3; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Explain decomposition</strong>: Describe how fungi break down dead organic matter and return nutrients to the ecosystem</li>
+      <li><strong>Identify mold as a fungus</strong>: Explain that fungi are their own kingdom — not plants, not animals — and describe how mold grows and reproduces via spores</li>
+      <li><strong>Describe the nutrient cycle</strong>: Trace how matter moves from soil → plants → animals → decomposers → back to soil</li>
+      <li><strong>Design a controlled experiment</strong>: Identify independent variables (moisture, light), dependent variable (mold growth), and the control group</li>
+      <li><strong>Collect long-term data</strong>: Make systematic daily observations over 5–7 days and record them in a structured log</li>
+      <li><strong>Draw evidence-based conclusions</strong>: Analyze data to determine which conditions promote mold growth and explain the underlying science</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>decomposer, fungus, spore, microorganism, hypothesis, variable, control, nutrient cycle</em></li>
+    </ul>
+  </div>
+
+  <!-- ═══ MATERIALS ═══ -->
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3 style="color: #e65100;">🏠 Household Items to Gather</h3>
+      <ul>
+        <li><span class="checkbox"></span>5 slices of white bread (preservative-free is best — bakery or homemade ideal)</li>
+        <li><span class="checkbox"></span>5 ziplock bags (quart or sandwich size)</li>
+        <li><span class="checkbox"></span>Spray bottle with water <em>or</em> a teaspoon and water</li>
+        <li><span class="checkbox"></span>Masking tape or sticky labels</li>
+        <li><span class="checkbox"></span>Permanent marker</li>
+        <li><span class="checkbox"></span>Access to a dark cupboard or closet</li>
+        <li><span class="checkbox"></span>Access to a sunny windowsill</li>
+        <li><span class="checkbox"></span>Paper towels (for initial setup moisture)</li>
+      </ul>
+      <h3 style="color: #e65100;">✨ Optional / Nice to Have</h3>
+      <ul>
+        <li><span class="checkbox"></span>Magnifying glass (for close-up observation through the bag)</li>
+        <li><span class="checkbox"></span>Ruler (to measure mold colony diameter)</li>
+        <li><span class="checkbox"></span>Camera or phone (daily photos are great for comparison!)</li>
+        <li><span class="checkbox"></span>Colored pencils (for drawing observations)</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes — READ CAREFULLY</h3>
+      <ul>
+        <li><strong style="color: #c62828;">🚫 NEVER open the sealed bags!</strong> All observations are made THROUGH the plastic. This is the #1 safety rule</li>
+        <li>Mold spores can trigger allergies and asthma — sealed bags keep them contained</li>
+        <li><strong>Dispose of sealed bags directly in outdoor trash</strong> when the experiment is complete. Don't open them "for one last look"</li>
+        <li>Wash hands with soap after handling the sealed bags</li>
+        <li>If anyone in the house has severe mold allergies, consult a doctor before starting, or keep bags in a garage or enclosed porch</li>
+      </ul>
+      <h3>💡 Bread Selection Tip</h3>
+      <p style="font-size: 10pt;">Commercial white bread often contains calcium propionate (a preservative that inhibits mold). For best results, use bakery bread, homemade bread, or organic bread without preservatives. Check the ingredient list! If you must use preserved bread, the experiment still works — it just takes longer (7–10 days instead of 5).</p>
+    </div>
+  </div>
+
+  <!-- ═══ PROCEDURE ═══ -->
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Label Your Bags (5 min) 🏷️</strong><br>
+    Use the marker to label each ziplock bag clearly:
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 8px 0; font-size: 9pt; text-align: center;">
+      <div style="background: #e3f2fd; border: 2px solid #0984E3; border-radius: 6px; padding: 6px;"><strong>Bag A</strong><br>💧🌑<br>Wet + Dark</div>
+      <div style="background: #e3f2fd; border: 2px solid #0984E3; border-radius: 6px; padding: 6px;"><strong>Bag B</strong><br>💧☀️<br>Wet + Light</div>
+      <div style="background: #e3f2fd; border: 2px solid #0984E3; border-radius: 6px; padding: 6px;"><strong>Bag C</strong><br>🏜️🌑<br>Dry + Dark</div>
+      <div style="background: #e3f2fd; border: 2px solid #0984E3; border-radius: 6px; padding: 6px;"><strong>Bag D</strong><br>🏜️☀️<br>Dry + Light</div>
+      <div style="background: #fff3e0; border: 2px solid #ff9800; border-radius: 6px; padding: 6px;"><strong>Bag E</strong><br>⚖️<br>Control<br>(normal room)</div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Write Your Hypothesis (5 min) 📝</strong><br>
+    Before touching the bread, write your predictions on the worksheet:
+    <ul style="margin: 5px 0;">
+      <li><em>"Which bag will grow the MOST mold? Why do you think so?"</em></li>
+      <li><em>"Which bag will grow the LEAST mold? Why?"</em></li>
+      <li><em>"Does mold need moisture to grow? Does it prefer light or dark?"</em></li>
+    </ul>
+    Write a formal hypothesis: <em>"I think Bag ___ will grow the most mold because ___."</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Prepare the Bread Slices (10 min) 🍞</strong><br>
+    Handle bread with clean hands (this actually helps — your hands add spores and bacteria!).
+    <ul style="margin: 5px 0;">
+      <li><strong>Bags A &amp; B (wet):</strong> Lightly mist the bread slice with 5–6 sprays of water (or sprinkle about 1 teaspoon). The bread should be damp, not soaking</li>
+      <li><strong>Bags C &amp; D (dry):</strong> Place the bread in as-is — no water added</li>
+      <li><strong>Bag E (control):</strong> Place the bread in as-is — no water, no special treatment</li>
+    </ul>
+    <strong>Seal each bag tightly!</strong> Press out most of the air, but leave a small air pocket (mold needs some oxygen). Double-check every seal.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Place the Bags in Their Locations (5 min) 📍</strong><br>
+    <ul style="margin: 5px 0;">
+      <li><strong>Bag A (Wet + Dark):</strong> Place in a dark cupboard, closet, or drawer</li>
+      <li><strong>Bag B (Wet + Light):</strong> Place on a sunny windowsill</li>
+      <li><strong>Bag C (Dry + Dark):</strong> Place in the same dark cupboard as Bag A</li>
+      <li><strong>Bag D (Dry + Light):</strong> Place on the same sunny windowsill as Bag B</li>
+      <li><strong>Bag E (Control):</strong> Place on a counter or table in normal room light and temperature</li>
+    </ul>
+    <em>Note the date and time on your worksheet. The experiment officially begins!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Daily Observations — Days 1–7 🔍 (5–10 min each day)</strong><br>
+    Every day at roughly the same time, check <em>each</em> bag. <strong>Do NOT open the bags!</strong> Observe through the plastic. For each bag, record:
+    <ul style="margin: 5px 0;">
+      <li><strong>Visible mold?</strong> (yes/no) — look for fuzzy spots, discoloration, or dark dots</li>
+      <li><strong>Mold color(s):</strong> white, green, blue, black, yellow, orange?</li>
+      <li><strong>Mold coverage:</strong> Rate 0–5 (0 = none, 1 = tiny spot, 2 = a few spots, 3 = several colonies, 4 = most of the slice, 5 = completely covered)</li>
+      <li><strong>Bread changes:</strong> Is the bread still firm? Soft? Soggy? Dry? Crumbling? Discolored?</li>
+    </ul>
+    Use a magnifying glass for close-up observation through the bag! Take photos each day for a side-by-side comparison.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Draw What You See — Days 1, 4, and 7 🎨</strong><br>
+    On your worksheet, sketch each bag on Day 1 (should be mostly clean), Day 4 (should show some growth), and Day 7 (should show dramatic differences). Color your drawings to match the mold colors you observe!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Analyze and Conclude (15 min on final day) 📊</strong><br>
+    Look at your full week of data. Answer these questions:
+    <ul style="margin: 5px 0;">
+      <li>Which bag grew the most mold? The least?</li>
+      <li>Did moisture matter? Compare A vs. C (both dark) and B vs. D (both light)</li>
+      <li>Did light matter? Compare A vs. B (both wet) and C vs. D (both dry)</li>
+      <li>Was your hypothesis correct?</li>
+    </ul>
+    Write your conclusion on the worksheet. Then — <strong>dispose of all sealed bags in the outdoor trash!</strong>
+  </div>
+
+  <!-- ═══ DISCUSSION QUESTIONS ═══ -->
+  <h2>❓ Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>Q: Which bag grew the most mold? Which grew the least? Why?</strong>
+    <p class="discussion-hint">Look for: Bag A (wet + dark) typically grows the most — mold thrives in warm, moist, dark conditions. Bags C and D (dry) grow the least — without moisture, spores can't germinate. The key insight is that moisture is the most important factor, more than light.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Based on your results, what conditions does mold need to grow?</strong>
+    <p class="discussion-hint">Look for: Moisture (essential), warmth (helps), food source (the bread), oxygen (small amount), and darkness (preferred but not required). Moisture is the #1 factor. Accept "warm and wet" as a good summary.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Where did the mold come from? You didn't add any mold to the bread — so how did it get there?</strong>
+    <p class="discussion-hint">Spores! Mold spores are floating in the air all around us, all the time. They landed on the bread when it was exposed to air (during handling and before sealing). The ones that landed in favorable conditions (wet, dark) grew. The ones in dry conditions couldn't germinate.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Why do we keep bread in a pantry and NOT in the bathroom?</strong>
+    <p class="discussion-hint">Bathrooms are warm and humid (moisture from showers!) — perfect mold conditions. Pantries are cooler and drier. This is a direct application of their experimental results! Real-world science in action.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What role do decomposers like mold play in ecosystems? What would happen without them?</strong>
+    <p class="discussion-hint">Decomposers break down dead organisms and return nutrients to the soil, completing the nutrient cycle. Without them, dead plants and animals would pile up, nutrients would be trapped in dead matter, soil would become depleted, and new plants couldn't grow. The whole food web would eventually collapse.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Is mold a plant, an animal, or something else? How do you know?</strong>
+    <p class="discussion-hint">It's a fungus — its own kingdom! It's not a plant because it doesn't make food from sunlight (no photosynthesis). It's not an animal because it doesn't eat food with a mouth. It absorbs nutrients from dead material by digesting it externally. Fungi are unique!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: How did mold accidentally lead to one of the most important medicines ever?</strong>
+    <p class="discussion-hint">Alexander Fleming noticed that mold growing on his bacteria dish was killing the bacteria nearby. That mold produced penicillin — the first antibiotic. It's saved hundreds of millions of lives. This teaches that even "gross" things in nature can be incredibly valuable to science and medicine.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: In this experiment, what was the independent variable? The dependent variable? The control?</strong>
+    <p class="discussion-hint">Independent variables (what you changed): moisture level and light exposure. Dependent variable (what you measured): amount of mold growth. Control: Bag E with normal room conditions and no treatment. Constants (what stayed the same): same type of bread, same bag type, same start date, same observation schedule.</p>
+  </div>
+
+  <!-- ═══ EXTENSIONS ═══ -->
+  <h2>🚀 Extensions</h2>
+
+  <div style="background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 15px; margin: 15px 0;">
+    <ul>
+      <li><strong>🍞 Bread Type Comparison:</strong> Repeat the experiment with white bread vs. whole wheat vs. homemade vs. store-brand (with preservatives). Does the type of bread affect how fast mold grows? (Spoiler: preservative-free bread molds much faster!)</li>
+      <li><strong>🧀 Other Foods:</strong> Try cheese, strawberries, or a damp paper towel instead of bread. Do different food sources grow different-looking mold? (Yes — you'll likely see different species and colors!)</li>
+      <li><strong>🌡️ Temperature Variable:</strong> Place identical wet-bread bags in three locations: the fridge, room temperature, and near a heating vent. Does temperature affect growth speed? (Yes — warmth accelerates it, cold slows it dramatically.)</li>
+      <li><strong>🧪 Preservative Investigation:</strong> Compare bread with preservatives (check the ingredient list for "calcium propionate") vs. without. This directly shows how food science uses chemistry to slow decomposition!</li>
+      <li><strong>📷 Time-Lapse Project:</strong> Take a photo of each bag at the same time every day. Arrange the photos in sequence to create a visual time-lapse of mold growth. Present it as a science fair display!</li>
+    </ul>
+  </div>
+
+  <!-- ═══ STUDENT WORKSHEET ═══ -->
+  <div class="page-break">
+    <h2>📊 Student Worksheet — Microbiologist's Lab Report</h2>
+    <p style="text-align: center; font-size: 12pt;"><strong>Scientist's Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp; <strong>Start Date:</strong> _______________</p>
+
+    <h3>🤔 My Hypothesis</h3>
+    <p><strong>I think Bag ______ will grow the MOST mold because:</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+    <p><strong>I think Bag ______ will grow the LEAST mold because:</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+
+    <h3>📋 My Bag Setup</h3>
+    <table class="data-table" style="font-size: 10pt;">
+      <tr>
+        <th>Bag</th>
+        <th>Moisture</th>
+        <th>Light</th>
+        <th>Location</th>
+      </tr>
+      <tr><td><strong>A</strong></td><td>💧 Wet</td><td>🌑 Dark</td><td></td></tr>
+      <tr><td><strong>B</strong></td><td>💧 Wet</td><td>☀️ Light</td><td></td></tr>
+      <tr><td><strong>C</strong></td><td>🏜️ Dry</td><td>🌑 Dark</td><td></td></tr>
+      <tr><td><strong>D</strong></td><td>🏜️ Dry</td><td>☀️ Light</td><td></td></tr>
+      <tr><td><strong>E</strong></td><td>Normal</td><td>Normal</td><td></td></tr>
+    </table>
+
+    <h3>👀 Daily Observation Log — Mold Coverage (0–5 scale)</h3>
+    <p style="font-size: 9pt;">0 = none | 1 = tiny spot | 2 = a few spots | 3 = several colonies | 4 = most of slice | 5 = fully covered</p>
+    <table class="data-table" style="font-size: 10pt;">
+      <tr>
+        <th>Bag</th>
+        <th>Day 1</th>
+        <th>Day 2</th>
+        <th>Day 3</th>
+        <th>Day 4</th>
+        <th>Day 5</th>
+        <th>Day 6</th>
+        <th>Day 7</th>
+      </tr>
+      <tr><td><strong>A</strong> 💧🌑</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>B</strong> 💧☀️</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>C</strong> 🏜️🌑</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>D</strong> 🏜️☀️</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>E</strong> ⚖️</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>🎨 Detailed Observation Notes (describe colors, textures, smells through the bag)</h3>
+    <table class="data-table" style="font-size: 10pt;">
+      <tr>
+        <th>Bag</th>
+        <th>Mold Colors</th>
+        <th>Bread Texture Changes</th>
+        <th>Other Observations</th>
+      </tr>
+      <tr><td><strong>A</strong></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>B</strong></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>C</strong></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>D</strong></td><td></td><td></td><td></td></tr>
+      <tr><td><strong>E</strong></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>✏️ Draw What You See</h3>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">Day 1 — Bag with MOST growth</p>
+        <div class="drawing-area" style="min-height: 100px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">Day 4 — Bag with MOST growth</p>
+        <div class="drawing-area" style="min-height: 100px;">(draw)</div>
+      </div>
+      <div>
+        <p style="text-align: center; font-weight: bold; font-size: 9pt;">Day 7 — Bag with MOST growth</p>
+        <div class="drawing-area" style="min-height: 100px;">(draw)</div>
+      </div>
+    </div>
+
+    <h3>📝 Decomposer Detective Report</h3>
+    <div style="background: #E8F4FD; border: 2px solid #0984E3; border-radius: 8px; padding: 15px; margin: 10px 0;">
+      <p><strong>Which bag grew the most mold?</strong> _______ <strong>The least?</strong> _______</p>
+      <p><strong>Does mold need moisture to grow?</strong> &nbsp; Yes ☐ &nbsp; No ☐ &nbsp; <strong>Evidence:</strong></p>
+      <div class="notes-area" style="min-height: 35px;"></div>
+      <p><strong>Does mold prefer light or dark?</strong> &nbsp; Light ☐ &nbsp; Dark ☐ &nbsp; No difference ☐ &nbsp; <strong>Evidence:</strong></p>
+      <div class="notes-area" style="min-height: 35px;"></div>
+      <p><strong>Was my hypothesis correct?</strong> &nbsp; Yes ☐ &nbsp; No ☐ &nbsp; Partially ☐</p>
+      <p><strong>My conclusion — What conditions cause the most mold growth, and WHY?</strong></p>
+      <div class="notes-area" style="min-height: 50px;"></div>
+      <p><strong>Why are decomposers important for ecosystems?</strong></p>
+      <div class="notes-area" style="min-height: 50px;"></div>
+    </div>
+  </div>
+
+  <!-- ═══ PARENT ANSWER KEY ═══ -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Expected Results (Typical Growth Over 7 Days)</h3>
+      <table class="data-table" style="font-size: 10pt;">
+        <tr>
+          <th>Bag</th>
+          <th>Conditions</th>
+          <th>Day 2–3</th>
+          <th>Day 4–5</th>
+          <th>Day 6–7</th>
+          <th>Expected Outcome</th>
+        </tr>
+        <tr>
+          <td><strong>A</strong></td>
+          <td>💧🌑 Wet + Dark</td>
+          <td>First spots appear (white/green fuzz)</td>
+          <td>Multiple colonies, spreading fast</td>
+          <td>Heavy coverage, multiple colors</td>
+          <td><strong>🥇 MOST growth.</strong> Ideal mold conditions: moisture + darkness + food.</td>
+        </tr>
+        <tr>
+          <td><strong>B</strong></td>
+          <td>💧☀️ Wet + Light</td>
+          <td>Some spots beginning</td>
+          <td>Moderate colonies growing</td>
+          <td>Significant coverage</td>
+          <td><strong>🥈 Second most.</strong> Moisture is the key driver. Light slows growth slightly (UV can inhibit some mold).</td>
+        </tr>
+        <tr>
+          <td><strong>E</strong></td>
+          <td>⚖️ Control</td>
+          <td>Possibly nothing visible yet</td>
+          <td>Small spots may appear</td>
+          <td>Light to moderate growth</td>
+          <td><strong>Middle of the pack.</strong> Normal ambient moisture and light. Baseline comparison.</td>
+        </tr>
+        <tr>
+          <td><strong>C</strong></td>
+          <td>🏜️🌑 Dry + Dark</td>
+          <td>Likely nothing visible</td>
+          <td>Possibly tiny spots</td>
+          <td>Minimal growth, if any</td>
+          <td><strong>Very little.</strong> Dark is favorable, but without moisture, spores can't germinate well.</td>
+        </tr>
+        <tr>
+          <td><strong>D</strong></td>
+          <td>🏜️☀️ Dry + Light</td>
+          <td>Likely nothing visible</td>
+          <td>Likely nothing visible</td>
+          <td>Minimal to none</td>
+          <td><strong>🥉 LEAST growth.</strong> Dry + light is the worst combination for mold. Bread may get stale/hard instead.</td>
+        </tr>
+      </table>
+      <p style="font-style: italic; color: #666; margin-top: 8px;">Note: Results vary significantly based on bread type (preservatives!), ambient humidity, temperature, and local mold spore populations. Preservative-free bread molds much faster. In very dry climates, even wet bags may be slower. The <em>relative ranking</em> (wet > dry, dark ≥ light) should be consistent.</p>
+
+      <h3>Key Findings (What Students Should Conclude)</h3>
+      <div style="background: white; border-left: 4px solid #0984E3; padding: 12px; margin: 12px 0;">
+        <ol>
+          <li><strong>Moisture is THE most important factor.</strong> Wet bags consistently outgrow dry bags regardless of light conditions. Mold spores need water to germinate and grow hyphae.</li>
+          <li><strong>Darkness helps, but isn't essential.</strong> Dark bags usually grow slightly more mold than light bags with the same moisture level. UV light can inhibit some mold species, but many molds grow fine in light. Moisture trumps light as a growth factor.</li>
+          <li><strong>The control validates the experiment.</strong> Bag E shows that bread in normal conditions does eventually mold, but slower than the optimized wet+dark setup. This proves the added moisture in Bags A/B actually accelerated growth.</li>
+        </ol>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Q: Most/least mold?</strong><br>
+        A: Most = Bag A (wet + dark). Least = Bag D (dry + light). The key explanation is moisture: mold spores need water to germinate. Darkness helps because UV light can damage mold cells, but moisture is far more important.</li>
+
+        <li><strong>Q: What conditions does mold need?</strong><br>
+        A: Moisture (most critical), warmth, a food source (organic matter), some oxygen, and darkness is preferred. The acronym FATTOM (Food, Acidity, Temperature, Time, Oxygen, Moisture) is used in food science, but for 5th grade, "warm, wet, dark, with food" covers it perfectly.</li>
+
+        <li><strong>Q: Where did the mold come from?</strong><br>
+        A: Spores in the air. This is the key insight — mold reproduces by releasing microscopic spores that float through the air everywhere. They're on every surface, in every breath. The spores were already on the bread before sealing. Conditions determine whether they grow.</li>
+
+        <li><strong>Q: Pantry vs. bathroom?</strong><br>
+        A: Bathrooms are humid (showers, sinks) and often warm — perfect for mold. Pantries are dry and cool — mold grows slowly. This is a direct application of their experimental findings! You can extend: "Why do we refrigerate food?" (Cold slows mold growth.)</li>
+
+        <li><strong>Q: Role of decomposers?</strong><br>
+        A: They break down dead organisms, returning nutrients (carbon, nitrogen, phosphorus) to the soil. This completes the nutrient cycle. Without decomposers, nutrients would be permanently locked in dead organic matter, soil would become depleted, and new plant growth would slow and eventually stop. The entire ecosystem depends on decomposition.</li>
+
+        <li><strong>Q: Is mold a plant or animal?</strong><br>
+        A: Neither — it's a fungus (Kingdom Fungi). Not a plant: no chlorophyll, no photosynthesis. Not an animal: no mouth, no internal digestion, no movement. Fungi absorb nutrients externally. This is a key classification concept for 5th grade.</li>
+
+        <li><strong>Q: Penicillin story?</strong><br>
+        A: In 1928, Alexander Fleming accidentally grew mold (Penicillium notatum) on a bacterial culture. He noticed the mold produced a substance that killed surrounding bacteria. This led to the development of penicillin, the first antibiotic, which has saved hundreds of millions of lives. It shows that "gross" organisms can have extraordinary value.</li>
+
+        <li><strong>Q: Variables and control?</strong><br>
+        A: Independent variables: moisture (wet vs. dry) and light (light vs. dark). Dependent variable: mold growth (amount, speed, coverage). Control: Bag E (normal conditions, no manipulation). Constants: bread type, bag type, start date, observation schedule. If your child can identify all four types, that's outstanding for 5th grade.</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>No mold after 5 days:</strong> The bread likely contains preservatives. Check the ingredient label for calcium propionate or potassium sorbate. Switch to bakery or homemade bread. Alternatively, wait longer — preserved bread can take 10+ days.</li>
+        <li><strong>ALL bags grew mold equally:</strong> If ambient humidity is very high, even "dry" bags may have enough moisture. Try placing dry bags near a dehumidifier or in an air-conditioned room. Also verify the bags were actually sealed.</li>
+        <li><strong>Mold in dry bags before wet bags:</strong> Unusual but possible if the "dry" bread had higher initial moisture content, or if the spore population happened to be higher on those slices. Discuss this as a variable they didn't control!</li>
+        <li><strong>Weird colors (orange, pink, bright yellow):</strong> Normal! Different mold species produce different pigments. Common bread molds include Rhizopus (black), Penicillium (blue-green), Aspergillus (green/yellow), and Mucor (white/gray). Multiple species often colonize the same slice.</li>
+        <li><strong>Child accidentally opens a bag:</strong> Reseal immediately. Wash hands thoroughly. The brief exposure isn't dangerous for most people, but avoid this with allergy-prone individuals. Remind them: observe through the plastic!</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>5th Grade:</strong></p>
+        <ul>
+          <li>Can explain that mold is a fungus (decomposer) that breaks down dead organic matter and returns nutrients to the ecosystem</li>
+          <li>Can describe the mold life cycle: spores float → land on food → germinate in favorable conditions → hyphae grow → produce new spores</li>
+          <li>Can explain the nutrient cycle: soil → plants → animals → decomposers → back to soil</li>
+          <li>Correctly identifies moisture as the primary factor for mold growth, with darkness as a secondary factor</li>
+          <li>Can identify the independent variables, dependent variable, control, and constants in their experiment</li>
+          <li>Wrote a hypothesis before starting and evaluated it against actual results</li>
+          <li>Collected systematic daily observation data over 5–7 days</li>
+          <li>Drew an evidence-based conclusion connecting their data to the underlying science</li>
+          <li>Uses vocabulary correctly: decomposer, fungus, spore, microorganism, variable, control, hypothesis, nutrient cycle</li>
+        </ul>
+      </div>
+
+      <h3>The Real Science (For Curious Parents)</h3>
+      <div style="background: white; border-left: 4px solid #7c3aed; padding: 12px; margin: 12px 0;">
+        <p>Bread mold growth involves several fascinating biological processes:</p>
+        <ol>
+          <li><strong>Spore germination:</strong> Mold spores are dormant cells with extremely low metabolic rates. When they land on a suitable substrate with sufficient moisture (water activity ≥ 0.80), they swell, rupture their protective coat, and begin extending a germ tube that develops into a hypha.</li>
+          <li><strong>Hyphal growth and extracellular digestion:</strong> Hyphae secrete enzymes (amylases, proteases, cellulases) that break down the bread's starch, protein, and cellulose into simple sugars, amino acids, and other small molecules. These are absorbed through the hyphal walls. This is "extracellular digestion" — the opposite of how animals digest food internally.</li>
+          <li><strong>Colony formation:</strong> A network of hyphae is called a mycelium. The visible "fuzzy" mold is the aerial mycelium — hyphae that grow upward into the air. The colorful parts are sporangia (spore-producing structures) filled with millions of spores ready for dispersal.</li>
+          <li><strong>Ecological significance:</strong> Fungi (along with bacteria) are responsible for decomposing virtually all dead organic matter on Earth. They're the primary recyclers of carbon, nitrogen, and phosphorus in terrestrial ecosystems. Without fungal decomposition, forests would bury themselves in undecayed leaf litter within decades.</li>
+        </ol>
+        <p style="margin-top: 10px;"><strong>Why moisture matters most:</strong> All enzymatic reactions require water as a solvent. Spore germination requires water uptake to initiate metabolic activity. Hyphal growth requires water for turgor pressure (the force that drives hyphal tip extension). Without adequate moisture, mold simply cannot grow — the spores remain dormant indefinitely.</p>
+        <p style="margin-top: 10px;">You don't need to teach this level of detail. The 5th-grade version — "Mold is a fungus that breaks down dead stuff and sends nutrients back to the soil. It grows best when it's warm, wet, and dark. It spreads by floating spores" — is accurate and complete for this level.</p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>

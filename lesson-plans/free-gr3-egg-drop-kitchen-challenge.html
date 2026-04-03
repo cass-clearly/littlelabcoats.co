@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egg Drop Kitchen Challenge — 3rd Grade Engineering &amp; Forces</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #333;
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      margin: 20px 0 10px 0;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin: 15px 0 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 25px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column > div {
+      flex: 1;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 1px solid #ffcc80;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .safety-box {
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .question-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 10px 15px;
+      margin: 10px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .procedure-step {
+      background: #F0EDFF;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #6C5CE7;
+    }
+    .procedure-step strong {
+      color: #5a3dbf;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f5f5f5;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #333;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .notes-area {
+      border: 1px solid #ccc;
+      min-height: 80px;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+    .drawing-area {
+      border: 2px dashed #aaa;
+      min-height: 160px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f0f0f0;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    @media print {
+      body {
+        padding: 0.25in;
+        font-size: 10pt;
+      }
+      h2 {
+        break-after: avoid;
+        color: black !important;
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h3 {
+        break-after: avoid;
+        color: black !important;
+        background: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .procedure-step, .question-box, .materials-box, .tip-box, .extension-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .teacher-note {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      div[style*="background"], div[style*="border"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🥚 Egg Drop Kitchen Challenge 🥚</h1>
+  <p class="subtitle">A Free 3rd Grade Lesson — Engineering Design, Forces, &amp; Energy Absorption</p>
+
+  <div class="meta">
+    <span><strong>Grade:</strong> 3rd Grade</span>
+    <span><strong>Duration:</strong> 45–60 minutes</span>
+    <span><strong>Subject:</strong> Engineering — Forces &amp; Design</span>
+  </div>
+
+  <!-- ═══ PARENT/TEACHER NOTES ═══ -->
+  <div class="teacher-note">
+    <strong>👩‍🏫 Parent/Teacher Notes:</strong> This is one of the most iconic hands-on science activities for a reason — it's thrilling, messy, and teaches engineering thinking better than almost any textbook. Kids design a protective device for a raw egg, test it with a real drop, and then <em>redesign</em> based on failure. The redesign loop is where the deepest learning happens, so don't skip it!
+    <ul style="margin: 8px 0;">
+      <li>Read "The Science" section aloud together (5–8 min) before the design phase</li>
+      <li><strong>Do this outside or over a trash bag!</strong> Cracked eggs are part of the fun, but not on your kitchen floor</li>
+      <li>Have at least 2–3 eggs per child (initial drop + redesign attempts)</li>
+      <li>The sibling competition element is the <em>hook</em> — lean into it! Whose egg survives?</li>
+      <li><strong>Failure is the point.</strong> If every egg survives on the first try, raise the drop height. Engineers learn the most from failure</li>
+      <li>Total time: ~15 min science intro + ~15 min design/build + ~15 min test/discuss + ~15 min redesign</li>
+    </ul>
+  </div>
+
+  <!-- ═══ THE SCIENCE ═══ -->
+  <h2>🔬 The Science</h2>
+
+  <div style="background: linear-gradient(135deg, #6C5CE7 0%, #a29bfe 100%); border-radius: 12px; padding: 20px; margin: 20px 0; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 18pt;">🤔 The Big Question: Can You Outsmart Gravity?</h3>
+    <p style="font-size: 12pt; line-height: 1.6;">Here's the challenge: Drop a raw egg from counter height. It cracks, right? <em>Obviously.</em> But what if you could build something to protect it? What if you could design a device so clever that the egg lands without even a scratch? That's exactly what engineers do — they solve problems by designing, testing, and improving. Today, <strong>you</strong> are the engineer!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #6C5CE7 0%, #a29bfe 100%); color: white; padding: 12px; border-radius: 8px;">🍎 Gravity: The Force That Pulls Everything Down</h3>
+
+  <div style="background: #fff3e0; border: 3px solid #ff9800; border-radius: 10px; padding: 15px; margin: 15px 0;">
+    <p><strong>Gravity</strong> is an invisible <strong>force</strong> that pulls everything toward the ground. It's the reason you don't float off into space. It's the reason a ball comes back down when you throw it up. And it's the reason your egg will fall when you let go.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0;">
+      <div style="background: #fdebd0; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 36px;">🏀</div>
+        <strong>Balls fall down</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Toss it up — gravity pulls it back</p>
+      </div>
+      <div style="background: #fdebd0; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 36px;">🍂</div>
+        <strong>Leaves fall down</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Off the tree — gravity pulls them to the ground</p>
+      </div>
+      <div style="background: #fdebd0; border-radius: 8px; padding: 12px; text-align: center;">
+        <div style="font-size: 36px;">🥚</div>
+        <strong>Eggs fall down</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Let go — gravity pulls it to the floor. CRACK!</p>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 10px; border-radius: 5px; margin-top: 10px;"><strong>💡 Key Idea:</strong> You can't turn off gravity. You can't make the egg lighter. So the question isn't <em>"how do I stop it from falling?"</em> — it's <em>"how do I make the landing safe?"</em></p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px; border-radius: 8px;">💥 Impact: What Happens When It Hits the Ground?</h3>
+
+  <div style="background: #ffebee; border: 3px solid #ef5350; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>When the egg hits the ground, it <em>stops</em> very suddenly.</strong> All the energy it picked up while falling has to go somewhere. If it goes into the egg all at once — <strong>CRACK!</strong></p>
+
+    <p style="font-size: 13pt; margin: 15px 0;"><strong>Think of it like jumping off a step:</strong></p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+      <div style="background: white; border: 3px solid #ef5350; border-radius: 10px; padding: 15px; text-align: center;">
+        <div style="font-size: 40px;">🦵💢</div>
+        <strong style="color: #ef5350;">Land with stiff, straight legs</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">OUCH! Your body stops instantly. All the force hits your joints at once. That <em>hurts!</em></p>
+      </div>
+      <div style="background: white; border: 3px solid #4caf50; border-radius: 10px; padding: 15px; text-align: center;">
+        <div style="font-size: 40px;">🦵✨</div>
+        <strong style="color: #4caf50;">Land with bent, bendy knees</strong>
+        <p style="font-size: 10pt; margin: 8px 0;">Your legs bend and absorb the impact slowly. Spreads the force over time. Much better!</p>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🥚 Your job:</strong> Build something that acts like "bendy knees" for your egg! You need materials that <strong>absorb</strong> the impact — that slow the egg down gently instead of letting it stop all at once.
+    </p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 12px; border-radius: 8px;">🧽 Energy Absorption: Soft vs. Hard</h3>
+
+  <div style="background: #e0f7fa; border: 3px solid #00bcd4; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p><strong>Why do soft things protect better than hard things?</strong> Because soft materials squish, crumple, and bend — and that takes time. The longer it takes for the egg to stop, the less force it feels at any single moment.</p>
+
+    <div style="background: white; border: 3px solid #333; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="text-align: center; font-size: 12pt; margin-bottom: 15px;"><strong>The same egg dropped from the same height:</strong></p>
+      <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; text-align: center;">
+        <div style="background: linear-gradient(135deg, #ef5350 0%, #e53935 100%); border-radius: 15px; padding: 15px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+          <div style="font-size: 40px; margin-bottom: 8px;">🪨</div>
+          <strong style="font-size: 13pt;">Onto a Hard Floor</strong>
+          <p style="margin: 8px 0; font-size: 10pt;">Egg stops in 0.001 seconds</p>
+          <p style="margin: 8px 0; font-size: 10pt;">ALL the force hits at once</p>
+          <div style="background: rgba(255,255,255,0.3); padding: 8px; border-radius: 8px; margin-top: 8px;">
+            <strong style="font-size: 14pt;">💥 CRACK!</strong>
+          </div>
+        </div>
+
+        <div style="font-size: 14pt; color: #333;">vs.</div>
+
+        <div style="background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%); border-radius: 15px; padding: 15px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+          <div style="font-size: 40px; margin-bottom: 8px;">🧸</div>
+          <strong style="font-size: 13pt;">Onto a Soft Pillow</strong>
+          <p style="margin: 8px 0; font-size: 10pt;">Egg stops over 0.5 seconds</p>
+          <p style="margin: 8px 0; font-size: 10pt;">Force is spread out over time</p>
+          <div style="background: rgba(255,255,255,0.3); padding: 8px; border-radius: 8px; margin-top: 8px;">
+            <strong style="font-size: 14pt;">✅ SAFE!</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="background: white; padding: 12px; border-radius: 5px; margin-top: 15px;"><strong>🚗 Real-world connection:</strong> This is exactly how <strong>crumple zones</strong> work in cars! The front of a car is designed to crumple slowly during a crash — absorbing energy and protecting the people inside. Same science, bigger scale!</p>
+  </div>
+
+  <h3 style="background: linear-gradient(90deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 12px; border-radius: 8px;">🔁 The Engineering Design Process</h3>
+
+  <div style="background: #e8f5e9; border: 3px solid #4caf50; border-radius: 10px; padding: 20px; margin: 15px 0;">
+    <p style="font-size: 12pt;"><strong>Real engineers don't get it right on the first try.</strong> They follow a process — and the most important step is learning from what went wrong!</p>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 15px 0;">
+      <div style="background: white; border: 3px solid #6C5CE7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6C5CE7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">1</div>
+        <div style="font-size: 28px;">📝</div>
+        <strong>Plan</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">Sketch your idea. What materials? How will it work?</p>
+      </div>
+      <div style="background: white; border: 3px solid #6C5CE7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6C5CE7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">2</div>
+        <div style="font-size: 28px;">🔨</div>
+        <strong>Build</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">Construct your prototype with the materials you have</p>
+      </div>
+      <div style="background: white; border: 3px solid #6C5CE7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6C5CE7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">3</div>
+        <div style="font-size: 28px;">🧪</div>
+        <strong>Test</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">Drop it! Did the egg survive?</p>
+      </div>
+      <div style="background: white; border: 3px solid #6C5CE7; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="background: #6C5CE7; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: bold; font-size: 14pt;">4</div>
+        <div style="font-size: 28px;">🔄</div>
+        <strong>Redesign</strong>
+        <p style="font-size: 9pt; margin: 5px 0;">What broke? Fix it. Improve it. Try again!</p>
+      </div>
+    </div>
+
+    <p style="background: #fff9c4; padding: 12px; border-radius: 8px; border: 2px solid #fbc02d; margin-top: 10px;">
+      <strong>🌟 The most important rule of engineering:</strong> <em>Failure is not the opposite of success — it's part of the process!</em> Every cracked egg teaches you something. The Wright Brothers crashed dozens of planes before they flew. Rockets explode before they reach space. Today, a cracked egg isn't a loss — it's data!
+    </p>
+  </div>
+
+  <div style="background: linear-gradient(90deg, #a29bfe 0%, #6C5CE7 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 16pt;">✨ Ready to Engineer Your Egg's Survival? ✨</h3>
+    <p style="font-size: 12pt; color: white; margin: 0;">Grab your materials — the Egg Drop Challenge starts NOW!</p>
+  </div>
+
+  <!-- ═══ KEY VOCABULARY ═══ -->
+  <div style="background: linear-gradient(135deg, #6C5CE7 0%, #a29bfe 100%); border-radius: 10px; padding: 20px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0; color: white; border: none; font-size: 14pt;">📖 Key Vocabulary</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🍎 Gravity</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The invisible force that pulls everything toward the ground</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>💪 Force</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A push or pull that acts on an object — gravity is a force!</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>💥 Impact</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The moment when a falling object hits a surface — the sudden stop</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🧽 Absorb</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">To soak up energy — soft materials absorb impact and slow things down</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🔧 Engineering</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">Using science and creativity to design solutions to real problems</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🏗️ Prototype</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">The first version of a design — it's for testing, not perfection!</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🔄 Redesign</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">To change and improve a design based on what you learned from testing</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.2); border-radius: 8px; padding: 12px; backdrop-filter: blur(10px);">
+        <strong>🚧 Constraint</strong>
+        <p style="font-size: 10pt; margin: 5px 0;">A rule or limit you have to work within (like "only kitchen materials")</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NGSS STANDARDS ═══ -->
+  <div style="background: #f3e5f5; border: 2px solid #ce93d8; border-radius: 8px; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0; color: #7c3aed; border: none;">📋 NGSS Standard:</h3>
+    <p><strong>3-5-ETS1-1</strong> — Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.</p>
+    <p style="margin-top: 8px;"><strong>3-5-ETS1-2</strong> — Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.</p>
+    <p style="margin-top: 8px;"><strong>3-5-ETS1-3</strong> — Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.</p>
+    <p style="margin-top: 8px;"><strong>Science &amp; Engineering Practices:</strong> Defining problems; Designing solutions; Planning and carrying out investigations; Analyzing data</p>
+    <p style="margin-top: 8px;"><strong>Crosscutting Concept:</strong> Cause and Effect — The design of the protector (cause) determines whether the egg survives the drop (effect). Identifying which design features cause success or failure is the core analysis.</p>
+  </div>
+
+  <!-- ═══ LEARNING GOALS ═══ -->
+  <h2>📚 Learning Goals</h2>
+
+  <div style="border: 1px solid #6C5CE7; border-left: 4px solid #6C5CE7; padding: 15px; margin: 10px 0; border-radius: 5px;">
+    <p><em>Students will be able to:</em></p>
+    <ul>
+      <li><strong>Explain gravity and impact</strong>: Describe how gravity pulls objects down and why sudden stops cause damage</li>
+      <li><strong>Understand energy absorption</strong>: Explain why soft, cushioning materials protect better than hard ones</li>
+      <li><strong>Follow the engineering design process</strong>: Plan, build, test, and redesign a solution to a defined problem</li>
+      <li><strong>Work within constraints</strong>: Solve the problem using only the allowed materials</li>
+      <li><strong>Analyze failure productively</strong>: Identify <em>why</em> a design failed and make specific improvements</li>
+      <li><strong>Use scientific vocabulary</strong>: Correctly use: <em>gravity, force, impact, absorb, prototype, redesign, constraint</em></li>
+    </ul>
+  </div>
+
+  <!-- ═══ MATERIALS ═══ -->
+  <h2>📦 Materials</h2>
+
+  <div class="two-column">
+    <div class="materials-box">
+      <h3 style="color: #e65100;">🏠 Household Items to Gather</h3>
+      <p style="font-size: 10pt; font-style: italic; margin-bottom: 8px;">Each engineer gets the SAME materials — that's the constraint!</p>
+      <ul>
+        <li><span class="checkbox"></span>2–3 raw eggs per child (for retesting!)</li>
+        <li><span class="checkbox"></span>Paper towels (4–6 sheets)</li>
+        <li><span class="checkbox"></span>Aluminum foil (about 12 inches)</li>
+        <li><span class="checkbox"></span>Plastic grocery bags or sandwich bags (2–3)</li>
+        <li><span class="checkbox"></span>Rubber bands (5–6)</li>
+        <li><span class="checkbox"></span>Newspaper (2–3 sheets)</li>
+        <li><span class="checkbox"></span>Tape (masking or clear — about 24 inches per child)</li>
+        <li><span class="checkbox"></span>Cotton balls (handful, if available)</li>
+        <li><span class="checkbox"></span>Drinking straws (4–6, if available)</li>
+        <li><span class="checkbox"></span>Cardboard scraps (cereal box, paper towel tube, etc.)</li>
+      </ul>
+      <h3 style="color: #e65100;">✨ Optional / Nice to Have</h3>
+      <ul>
+        <li><span class="checkbox"></span>Bubble wrap (small piece)</li>
+        <li><span class="checkbox"></span>String or yarn</li>
+        <li><span class="checkbox"></span>Ruler or measuring tape (to measure drop height)</li>
+      </ul>
+    </div>
+    <div class="safety-box">
+      <h3>⚠️ Safety Notes</h3>
+      <ul>
+        <li><strong>Raw eggs carry salmonella risk</strong> — wash hands thoroughly with soap after handling eggs and any surfaces eggs touch</li>
+        <li>Do the drop test <strong>outside</strong>, over a <strong>trash bag</strong>, or over a <strong>tiled floor</strong> — NOT over carpet!</li>
+        <li>Clean up broken eggs immediately with soap and water</li>
+        <li>No throwing eggs — straight drops only, released gently</li>
+        <li>Parent supervises the drop (standing on a chair for extra height is optional but NOT required)</li>
+      </ul>
+      <h3>💡 Mess Management</h3>
+      <p style="font-size: 10pt;">Lay a trash bag or old shower curtain on the ground under the drop zone. Even successful drops can leak! Keep paper towels nearby. If doing this indoors, a bathroom or laundry room with tile floor is ideal.</p>
+    </div>
+  </div>
+
+  <!-- ═══ PROCEDURE ═══ -->
+  <h2>🔬 Let's Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1: Define the Challenge (5 min)</strong><br>
+    Announce the mission: <em>"Your job is to build a device that protects a raw egg from cracking when dropped from counter height (about 3 feet). You may ONLY use the materials on the table. You have 15 minutes to plan and build."</em>
+    <br><br>
+    <strong>🚧 The Constraints (rules!):</strong>
+    <ul style="margin: 5px 0;">
+      <li>You may ONLY use the approved materials — no sneaking extra supplies!</li>
+      <li>You must be able to get the egg out afterward (no permanent sealing)</li>
+      <li>Build time: 15 minutes</li>
+      <li>The egg must be a <em>raw</em> egg (no hard-boiling allowed!)</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2: Plan — Sketch Your Design (5 min) 📝</strong><br>
+    Before touching ANY materials, each engineer sketches their idea on the worksheet. Label the materials you'll use and explain <em>why</em>. This is how real engineers work — design first, build second!
+    <br><br>
+    <strong>💡 Strategy hints (read aloud):</strong>
+    <ul style="margin: 5px 0;">
+      <li><em>Cushioning:</em> What soft materials can surround the egg?</li>
+      <li><em>Wrapping:</em> How many layers can you put between the egg and the ground?</li>
+      <li><em>Structure:</em> Can you build a frame or cage that takes the hit instead of the egg?</li>
+      <li><em>Crumple zone:</em> Can part of your device be designed to crumple and absorb the impact?</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3: Build — Construct Your Prototype! (15 min) 🔨</strong><br>
+    Set a timer for 15 minutes. Engineers build their egg protectors using only the approved materials. The parent can help younger kids with tricky tape or rubber bands, but the <em>design decisions</em> are the child's.
+    <br><br>
+    <strong>🏆 Sibling Competition Rules:</strong> Each kid works independently — no copying! No peeking at each other's designs until the drop. Build in separate rooms if the rivalry gets intense!
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4: Test — The Big Drop! 🥚💨 (5 min)</strong><br>
+    This is the moment of truth! Head outside (or to your drop zone).
+    <ol style="margin: 5px 0;">
+      <li>Each engineer holds their device at <strong>counter height</strong> (about 3 feet / waist height for an adult)</li>
+      <li>Announce: <em>"3… 2… 1… DROP!"</em></li>
+      <li>Let go — <strong>don't throw!</strong> Just release.</li>
+      <li>After it lands, carefully open the device and check the egg</li>
+      <li>Record on the worksheet: Survived? Cracked? Totally smashed?</li>
+    </ol>
+    <br>
+    <strong>🏆 Competition scoring:</strong> Egg survived = 3 points. Cracked but not broken open = 1 point. Total splat = 0 points (but you get respect for trying!).
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5: Evaluate — What Happened and Why? (5 min) 🔍</strong><br>
+    Whether the egg survived or not, ask:
+    <ul style="margin: 5px 0;">
+      <li><em>"Where did the device hit the ground? Was that a strong or weak spot?"</em></li>
+      <li><em>"Did the cushioning do its job? What would you change?"</em></li>
+      <li><em>"If the egg cracked, where exactly did it crack? What was touching it at that spot?"</em></li>
+    </ul>
+    Record observations on the worksheet. <strong>This analysis is the most important learning moment!</strong>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6: Redesign — Try Again! 🔄 (15 min)</strong><br>
+    Now comes the real engineering! Based on what you learned, <strong>redesign</strong> your protector. You can:
+    <ul style="margin: 5px 0;">
+      <li>Add more cushioning where the weak spot was</li>
+      <li>Reinforce the structure</li>
+      <li>Start completely over with a new idea</li>
+      <li>Borrow a strategy you saw from a sibling's design (collaboration is also engineering!)</li>
+    </ul>
+    Build the improved version, load a new egg, and drop again!
+    <br><br>
+    <em>If time and eggs allow, do a third round too. Each iteration should be better than the last!</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7: Discuss and Crown the Champion! (10 min) 🏆</strong><br>
+    Use the discussion questions below. Compare designs — which strategies worked? Which didn't? Award titles:
+    <ul style="margin: 5px 0;">
+      <li><strong>🥇 Egg Protector Supreme</strong> — egg survived the highest drop</li>
+      <li><strong>🧠 Best Engineer</strong> — most impressive redesign improvement</li>
+      <li><strong>💥 Most Spectacular Failure</strong> — biggest splat (celebrated, not mocked!)</li>
+      <li><strong>🎨 Most Creative Design</strong> — most unusual or inventive approach</li>
+    </ul>
+  </div>
+
+  <!-- ═══ DISCUSSION QUESTIONS ═══ -->
+  <h2>❓ Discussion Questions</h2>
+
+  <div class="question-box">
+    <strong>Q: Why does an egg crack when you drop it on a hard floor?</strong>
+    <p class="discussion-hint">Look for: Gravity pulls the egg down. When it hits the hard floor, it stops very suddenly — all the force from falling hits the eggshell at once, and the shell isn't strong enough to handle it. Accept: "It hit too hard" and guide toward the idea that <em>sudden stops</em> cause the damage.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What did your protector do to keep the egg safe (or what should it have done)?</strong>
+    <p class="discussion-hint">Look for: It cushioned the egg / absorbed the impact / slowed down the stop. Soft materials squish, which makes the egg stop gradually instead of instantly. The key concept is <em>spreading the force over more time</em>.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: If your egg cracked, why do you think your design failed? What was the weak spot?</strong>
+    <p class="discussion-hint">Answers will vary! Common issues: not enough cushioning on one side, a gap in the padding, the device landed on a corner where the egg was exposed. The goal here is <em>specific</em> analysis, not just "it didn't work." Push for detail: "WHERE did it crack? WHAT was touching it there?"</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What did you change in your redesign? Did the change help?</strong>
+    <p class="discussion-hint">Look for a specific improvement connected to a specific failure: "The egg cracked on the bottom, so I added more cotton balls there. It worked the second time!" This is the engineering design process in action — identifying a problem and designing a targeted fix.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: Why are soft materials (cotton balls, paper towels) better protectors than hard materials (cardboard alone)?</strong>
+    <p class="discussion-hint">Soft materials compress and absorb energy over time. Hard materials transfer the force straight to the egg. Best answer: "Soft things squish, and that gives the egg more time to stop." This is the concept of <em>energy absorption</em>.</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: How is your egg protector similar to safety features in real life?</strong>
+    <p class="discussion-hint">Look for connections to: car crumple zones, airbags, bike helmets, bubble wrap in shipping packages, padding in a phone case, gymnastics mats. All of these absorb impact by deforming slowly rather than stopping suddenly. Any real-world connection counts!</p>
+  </div>
+
+  <div class="question-box">
+    <strong>Q: What does the word "constraint" mean? What were your constraints today?</strong>
+    <p class="discussion-hint">A constraint is a rule or limit you have to follow. Today's constraints: only approved materials, 15 minutes to build, egg must be raw, must be able to retrieve the egg. Real engineers have constraints too — budgets, deadlines, available materials, safety regulations.</p>
+  </div>
+
+  <!-- ═══ EXTENSIONS ═══ -->
+  <h2>🚀 Extensions</h2>
+
+  <div style="background: #e8eaf6; border: 2px solid #9fa8da; border-radius: 8px; padding: 15px; margin: 15px 0;">
+    <ul>
+      <li><strong>📏 Height Challenge:</strong> If the egg survived counter height, go higher! Try from the top of a step stool, then a deck railing, then a second-story window (parent drops!). How high can your design handle before it fails?</li>
+      <li><strong>⚖️ Weight Limit:</strong> Add a constraint — your protector can't weigh more than 50 grams (weigh on a kitchen scale). Now you can't just use ALL the materials. This teaches engineers about efficiency!</li>
+      <li><strong>🚫 No-Tape Challenge:</strong> Build a protector using NO tape at all. This forces creative structural thinking — folding, wrapping, rubber-banding, nesting.</li>
+      <li><strong>📐 Parachute Addition:</strong> Can you add a parachute (plastic bag + string) to slow the fall? Test with and without the parachute — does it actually help?</li>
+      <li><strong>📊 Data Collection:</strong> Drop from five different heights (1 foot, 2 feet, 3 feet, 4 feet, 5 feet). Record survive/crack for each height. What's the maximum height your design can handle? Graph your results!</li>
+    </ul>
+  </div>
+
+  <!-- ═══ STUDENT WORKSHEET ═══ -->
+  <div class="page-break">
+    <h2>📊 Student Worksheet — Engineering Notebook</h2>
+    <p style="text-align: center; font-size: 12pt;"><strong>Engineer's Name:</strong> _______________________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _______________</p>
+
+    <h3>📝 Design Phase — My Plan</h3>
+    <p><strong>Sketch your egg protector design below. Label the materials and explain why you chose them.</strong></p>
+    <div class="drawing-area" style="min-height: 180px;">(sketch your design here — label the materials!)</div>
+
+    <p><strong>Materials I'm using and WHY:</strong></p>
+    <table class="data-table">
+      <tr>
+        <th>Material</th>
+        <th>How I'm using it</th>
+        <th>Why I think it'll help</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>🤔 My Prediction</h3>
+    <p><strong>Will the egg survive the drop?</strong> &nbsp; Yes ☐ &nbsp; No ☐ &nbsp; Maybe ☐</p>
+    <p><strong>Why do you think so?</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+
+    <h3>🧪 Test Results</h3>
+    <table class="data-table">
+      <tr>
+        <th>Drop #</th>
+        <th>Height</th>
+        <th>Egg survived? (yes/cracked/smashed)</th>
+        <th>What happened?</th>
+      </tr>
+      <tr>
+        <td><strong>Drop 1</strong> (original design)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Drop 2</strong> (redesign #1)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Drop 3</strong> (redesign #2)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>🔄 Redesign Notes</h3>
+    <p><strong>What went wrong with my first design?</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+    <p><strong>What did I change for my redesign, and why?</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+    <p><strong>Sketch my redesigned protector:</strong></p>
+    <div class="drawing-area" style="min-height: 140px;">(sketch your improved design here)</div>
+
+    <h3>💬 Reflection</h3>
+    <p><strong>What was the #1 most important thing that protected (or would have protected) my egg?</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+    <p><strong>What's one real-world product that uses the same science as my egg protector?</strong></p>
+    <div class="notes-area" style="min-height: 40px;"></div>
+
+    <h3>🏆 Competition Results</h3>
+    <table class="data-table">
+      <tr>
+        <th>Engineer</th>
+        <th>Drop 1 Result</th>
+        <th>Drop 2 Result</th>
+        <th>Total Points</th>
+        <th>Title Earned</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ═══ PARENT ANSWER KEY ═══ -->
+  <div class="page-break">
+    <div class="teacher-note" style="background: #f5f5f5; border: 3px dashed #999; padding: 20px;">
+      <h2 style="background: #757575; color: white; text-align: center; padding: 10px; border-radius: 6px;">✂️ PARENT ANSWER KEY</h2>
+      <p style="font-weight: bold; color: #c62828; text-align: center; margin-bottom: 20px;">Detach before giving worksheet to students</p>
+
+      <h3>Strategies That Tend to Work</h3>
+      <div style="background: white; border-left: 4px solid #4caf50; padding: 12px; margin: 12px 0;">
+        <ul>
+          <li><strong>Maximum cushioning:</strong> Wrapping the egg in many layers of soft material (cotton balls, crumpled paper towels, crumpled newspaper). This is the most reliable approach for a counter-height drop.</li>
+          <li><strong>Suspension system:</strong> Placing the egg in a bag with rubber bands stretched inside so the egg "floats" in the middle without touching the walls. Effective but harder to build.</li>
+          <li><strong>Crumple zone:</strong> Surrounding the egg in loosely crumpled newspaper or foil that compresses on impact. The crumpling absorbs energy before it reaches the egg.</li>
+          <li><strong>Nest + cushion combo:</strong> A cardboard tube or foil "nest" holding the egg in place, surrounded by soft padding. Combines structure with absorption.</li>
+        </ul>
+      </div>
+
+      <h3>Common Failure Points</h3>
+      <div style="background: white; border-left: 4px solid #ef5350; padding: 12px; margin: 12px 0;">
+        <ul>
+          <li><strong>Uneven padding:</strong> Lots of cushioning on top but not on the bottom or sides. The device often lands unpredictably.</li>
+          <li><strong>Too rigid:</strong> Wrapping in tight foil without soft material inside. The foil doesn't compress, so it transfers force straight to the egg.</li>
+          <li><strong>Too loose:</strong> Egg rattles inside a large container. On impact, the egg keeps moving and hits the wall of the container.</li>
+          <li><strong>Weight imbalance:</strong> Heavy on one side, causing the device to flip and land on the unprotected side.</li>
+        </ul>
+      </div>
+
+      <h3>Discussion Question Guidance</h3>
+      <ul>
+        <li><strong>Q: Why does an egg crack?</strong><br>
+        A: Gravity accelerates the egg downward. When it hits the floor, it decelerates extremely quickly. The force of that sudden stop concentrates on the eggshell at the point of contact, exceeding the shell's structural strength. Key concept: sudden stop = concentrated force = crack.</li>
+
+        <li><strong>Q: What did your protector do?</strong><br>
+        A: It increased the time over which the egg decelerated. Instead of stopping in 0.001 seconds on a hard floor, the cushioning compressed over ~0.1 seconds. Same energy, more time = less force at any given instant. If your child says "it made it softer" or "it absorbed the hit," they're on the right track.</li>
+
+        <li><strong>Q: Why did it fail?</strong><br>
+        A: Answers vary — the important thing is <em>specificity</em>. Push past "it didn't work" toward "the padding was thin on the left side" or "the egg shifted and hit the foil directly." This analytical skill is more valuable than the design itself.</li>
+
+        <li><strong>Q: What did you change in the redesign?</strong><br>
+        A: Look for a direct link between the failure analysis and the design change: "It cracked on the bottom → I added more cotton balls to the bottom." This cause-and-effect reasoning is the heart of engineering.</li>
+
+        <li><strong>Q: Soft vs. hard materials?</strong><br>
+        A: Soft materials deform (compress, crumple, squish). Deformation takes time. Time reduces force. Hard materials don't deform, so they transfer force directly. A great analogy: jumping onto a trampoline vs. jumping onto concrete — same height, very different experience!</li>
+
+        <li><strong>Q: Real-world connections?</strong><br>
+        A: Car crumple zones, airbags, bike helmets (foam crushes on impact), bubble wrap in shipping, phone cases, gymnasium mats, football padding, parachutes. ALL work on the same principle: extend the duration of the stop to reduce peak force.</li>
+
+        <li><strong>Q: What does constraint mean?</strong><br>
+        A: A limitation you have to work within. Today: specific materials, time limit, must use a raw egg. Real engineers face constraints constantly: budget, weight limits, safety codes, deadlines, available technology. Constraints make engineering challenging and creative.</li>
+      </ul>
+
+      <h3>Troubleshooting Common Issues</h3>
+      <ul>
+        <li><strong>Every egg survived on the first try:</strong> Great news, but raise the bar! Increase the drop height to 5 feet, then 8 feet. Or add constraints: no tape, or maximum weight limit. Challenge drives deeper learning.</li>
+        <li><strong>Every egg smashed:</strong> Drop from a lower height (2 feet). Demonstrate by wrapping an egg in a big wad of paper towels and dropping it gently — show that enough cushioning <em>does</em> work. Then let them try again with more material.</li>
+        <li><strong>Child frustrated by failure:</strong> Emphasize that the Wright Brothers, NASA, and SpaceX all have spectacular failures on the path to success. A cracked egg is data, not defeat. Ask: "What did you learn from this crack?" Reframe failure as a science discovery.</li>
+        <li><strong>Sibling fight over who "won":</strong> Award multiple categories (see Step 7). Make sure "Most Spectacular Failure" is celebrated as much as "Egg Protector Supreme." Every engineer gets a title.</li>
+        <li><strong>Egg is stuck inside protector:</strong> Help gently disassemble. For next round, remind kids: you need to be able to get the egg out to check it!</li>
+        <li><strong>Running out of eggs:</strong> You can do a "bonus round" with a water balloon or a small tomato instead. Same physics, reusable materials!</li>
+      </ul>
+
+      <h3>What Success Looks Like</h3>
+      <div style="background: #e8f5e9; border: 2px solid #4caf50; padding: 12px; border-radius: 6px; margin-top: 15px;">
+        <p><strong>3rd Grade:</strong></p>
+        <ul>
+          <li>Can explain that gravity pulls the egg down and the sudden stop on impact causes it to crack</li>
+          <li>Can describe how soft materials absorb impact by slowing the stop over more time</li>
+          <li>Followed the engineering design process: planned → built → tested → redesigned</li>
+          <li>Can identify specific failure points and connect them to specific design improvements</li>
+          <li>Makes at least one real-world connection (helmets, airbags, crumple zones, etc.)</li>
+          <li>Uses vocabulary correctly: gravity, force, impact, absorb, prototype, redesign, constraint</li>
+          <li>Completed the engineering notebook with sketches, materials rationale, test results, and redesign notes</li>
+        </ul>
+      </div>
+
+      <h3>The Real Science (For Curious Parents)</h3>
+      <div style="background: white; border-left: 4px solid #7c3aed; padding: 12px; margin: 12px 0;">
+        <p>The physics behind the egg drop is rooted in Newton's Second Law (F = ma) and the impulse-momentum theorem:</p>
+        <ul>
+          <li><strong>Impulse = Force × Time.</strong> The change in momentum (impulse) is fixed for a given drop height. If you <em>increase the time</em> over which the stop occurs (by using compressible materials), the <em>force</em> at any instant decreases proportionally.</li>
+          <li><strong>Energy dissipation:</strong> The kinetic energy at impact must be converted to other forms. Hard surfaces convert it almost entirely to deformation of the egg (cracking). Soft materials convert it to deformation of the padding (compression, crumpling), thermal energy (friction between material fibers), and sound.</li>
+          <li><strong>Stress distribution:</strong> Cushioning distributes the contact force over a larger surface area of the eggshell, reducing the stress (force per unit area) at any single point. Since eggshells fail at a critical stress threshold, spreading the load below that threshold prevents cracking.</li>
+        </ul>
+        <p style="margin-top: 10px;">You don't need to teach this to your 3rd grader! The kid-friendly version — "soft things squish and give the egg more time to stop" — captures the essential physics beautifully. If they ask "but WHY does more time help?" you can say: "Imagine someone pushing you really hard in one second vs. pushing you gently over ten seconds — same total push, but the fast one knocks you over!"</p>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Remarq Feedback Layer -->
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-content-selector="body"></script>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Goals. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+
+  function isUnlocked() {
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
+  }
+
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+
+    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
+      }
+    }
+
+    // Fallback: lock from 3rd h2 if all early ones look like goals
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
+    });
+
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!isUnlocked()) {
+      lockLesson();
+    }
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+</body>
+</html>
