@@ -340,15 +340,29 @@ li { margin-bottom: 5px; }
     var bodyChildren = Array.from(document.body.children);
     var hiding = false;
     bodyChildren.forEach(function(child) {
+      if (child.id === 'llcPaywall') {
+        return;
+      }
       if (child === lockFromH2 || child.contains(lockFromH2)) {
         hiding = true;
       }
-      if (hiding && child.id !== 'llcPaywall') {
+      if (hiding) {
         child.style.display = 'none';
+      } else {
+        child.style.display = '';
       }
     });
 
-    document.getElementById('llcPaywall').style.display = 'block';
+    var paywall = document.getElementById('llcPaywall');
+    if (paywall) {
+      paywall.style.display = 'block';
+      paywall.style.position = 'relative';
+      paywall.style.bottom = 'auto';
+      paywall.style.left = 'auto';
+      paywall.style.right = 'auto';
+      paywall.style.margin = '24px auto';
+      paywall.style.maxWidth = '720px';
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function() {
