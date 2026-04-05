@@ -153,10 +153,10 @@
     <strong>Step 6:</strong> Now sort the wooden block and ice cube. Where does each belong? (Both are solids -- they hold their shape.)
   </div>
   <div class="procedure-step">
-    <strong>Step 7:</strong> For each object, write or draw 2 properties next to it: one about how it looks, one about how it feels. For example: rock = gray, rough.
+    <strong>Step 7:</strong> For each object, write or draw 2 properties next to it: one about how it looks, one about how it feels. For example: rock = gray, rough. Ask: <em>"What did you observe that helped you decide where it belongs?"</em>
   </div>
   <div class="procedure-step">
-    <strong>Step 8 (Bonus Challenge):</strong> Hold an ice cube in your warm hand. Watch what happens. The solid slowly turns into a liquid! Can ice be both a solid AND a liquid? Talk about it.
+    <strong>Step 8 (Bonus Challenge):</strong> Hold an ice cube in your warm hand. Watch what happens. The solid slowly turns into a liquid! Ask: <em>"What changed, and what do we call it now?"</em>
   </div>
 
   <h2>💬 Discussion Questions</h2>
@@ -224,6 +224,7 @@
         <li><strong>For younger or struggling learners:</strong> Focus just on solid vs. liquid first. Gas can be a stretch concept -- the balloon is the best concrete anchor. Ask: "What is inside this balloon?" (Air. Air is a gas.)</li>
         <li><strong>Mass:</strong> Introduced but does not need deep explanation at this level. It is simply "how much stuff is in it." Weight works as an informal equivalent for now.</li>
         <li><strong>Fill-in-the-blank answers:</strong> Matter takes up space / has mass / shape / container / expand (or spread out).</li>
+        <li><strong>Model sentence to listen for:</strong> “I know water is a liquid because it changed shape to fit the cup, but the rock stayed the same shape, so it is a solid.”</li>
         <li><strong>Gifted extension:</strong> Ask "Is fire a state of matter?" (No -- it is a chemical reaction producing light and heat, not a state of matter itself. But it is a great conversation starter!)</li>
         <li><strong>For the matter sort table:</strong> Any valid examples work. Encourage students to think of items not used in the lesson.</li>
       </ul>
@@ -298,73 +299,55 @@
   }
 
   function lockLesson() {
-    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
-    var allH2 = document.querySelectorAll('h2');
-    var lastGoalsH2 = null;
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
 
-    // Find the last h2 that matches a "goals/objective" keyword
-    allH2.forEach(function(h2) {
-      var text = h2.textContent.toLowerCase();
-      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
-        lastGoalsH2 = h2;
+    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
       }
-    });
+    }
 
-    if (!lastGoalsH2) {
-      // Fallback: hide by class/id keywords
-      var lockSelectors = [
-        '[class*="material"]', '[id*="material"]',
-        '[class*="procedure"]', '[id*="procedure"]',
-        '[class*="discussion"]', '[id*="discussion"]',
-        '[class*="worksheet"]', '[id*="worksheet"]',
-        '[class*="teacher"]', '[id*="teacher"]',
-        '[class*="answer"]', '[id*="answer"]',
-        '[class*="extension"]', '[id*="extension"]',
-        '[class*="question"]', '[id*="question"]',
-        '[class*="page-break"]', '[id*="page-break"]'
-      ];
-      lockSelectors.forEach(function(sel) {
-        document.querySelectorAll(sel).forEach(function(el) {
-          el.style.display = 'none';
-        });
-      });
+    // Fallback: lock from 3rd h2 if all early ones look like goals
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      // No h2 at all — fall back to hiding body overflow after 600px
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
       document.getElementById('llcPaywall').style.display = 'block';
       return;
     }
 
-    // Walk siblings/cousins after the goals section and hide them
-    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
-    // containing top-level element (or after the next h2 that follows it)
-
-    // Find the next h2 after lastGoalsH2 — everything from there is locked
-    var foundGoals = false;
-    var lockFrom = null;
-    allH2.forEach(function(h2) {
-      if (h2 === lastGoalsH2) { foundGoals = true; return; }
-      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    // Walk body's direct children; hide everything from the child
+    // that IS or CONTAINS lockFromH2 onwards (skip paywall overlay itself)
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
     });
-
-    if (!lockFrom) {
-      // No further h2 found; lock everything after the goals h2 paragraph
-      // Hide siblings that follow lastGoalsH2
-      var sibling = lastGoalsH2.nextElementSibling;
-      while (sibling) {
-        sibling.style.display = 'none';
-        sibling = sibling.nextElementSibling;
-      }
-    } else {
-      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
-      var el = lockFrom;
-      while (el) {
-        el.style.display = 'none';
-        el = el.nextElementSibling;
-      }
-    }
 
     document.getElementById('llcPaywall').style.display = 'block';
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
     if (!isUnlocked()) {
       lockLesson();
     }
@@ -372,5 +355,8 @@
 })();
 </script>
 <!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
 </body>
 </html>

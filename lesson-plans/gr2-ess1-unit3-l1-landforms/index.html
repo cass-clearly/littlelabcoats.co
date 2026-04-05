@@ -71,7 +71,7 @@ li { margin-bottom: 5px; }
 @media print { .print-btn { display: none; } }
 </style>
 </head>
-<body data-document-id="">
+<body data-document-id="doc_gjkH3_rScv4">
 
 <button class="print-btn" onclick="window.print()">&#x1F5A8;&#xFE0F; Print Lesson</button>
 
@@ -92,7 +92,7 @@ li { margin-bottom: 5px; }
 <h2>&#x1F3AF; Learning Goals</h2>
 <ul>
   <li>Name and describe at least 4 common landforms (mountain, valley, plain, island)</li>
-  <li>Use playdough to model different landforms</li>
+  <li>Use playdough to build models that show the shape of different landforms</li>
   <li>Compare where on Earth different landforms are found</li>
 </ul>
 
@@ -159,7 +159,7 @@ li { margin-bottom: 5px; }
   <strong>Step 6:</strong> Build an island: shape playdough into a mound and place it in the "ocean" (blue bowl or on blue paper surrounded by blue space).
 </div>
 <div class="procedure-step">
-  <strong>Step 7:</strong> Make small paper flags: cut tiny rectangles, fold them over a toothpick or pencil tip, and label each landform with its name.
+  <strong>Step 7:</strong> Make small paper flags: cut tiny rectangles, fold them over a toothpick or pencil tip, and label each landform with its name. If that feels too fiddly, just write the labels on scrap paper and place them beside each model.
 </div>
 <div class="procedure-step">
   <strong>Step 8:</strong> Look at all 4 landforms together. Discuss: Which is tallest? Which is lowest? Which is surrounded by water?
@@ -204,11 +204,15 @@ li { margin-bottom: 5px; }
 <h3>2. Fill in the blank</h3>
 <p>A landform that is completely surrounded by water is called a(n) ___________________.</p>
 
-<h3>3. Circle the right answer</h3>
+<h3>3. How did your model show shape?</h3>
+<p>Choose one landform model and explain how its shape helped show what it was.</p>
+<div class="draw-box" style="min-height: 90px;"></div>
+
+<h3>4. Circle the right answer</h3>
 <p>Where would you most likely find a river?</p>
 <p style="margin-left: 20px;">(a) In a valley &nbsp;&nbsp;&nbsp; (b) On a mountain peak &nbsp;&nbsp;&nbsp; (c) In the middle of a plain</p>
 
-<h3>4. Draw a simple map</h3>
+<h3>5. Draw a simple map</h3>
 <p>Draw a map that includes: 1 mountain, 1 valley, and 1 ocean. Color the water blue.</p>
 <div class="draw-box" style="min-height: 180px;"></div>
 
@@ -303,73 +307,55 @@ li { margin-bottom: 5px; }
   }
 
   function lockLesson() {
-    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
-    var allH2 = document.querySelectorAll('h2');
-    var lastGoalsH2 = null;
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
 
-    // Find the last h2 that matches a "goals/objective" keyword
-    allH2.forEach(function(h2) {
-      var text = h2.textContent.toLowerCase();
-      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
-        lastGoalsH2 = h2;
+    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) {
+        lockFromIndex = i;
+        break;
       }
-    });
+    }
 
-    if (!lastGoalsH2) {
-      // Fallback: hide by class/id keywords
-      var lockSelectors = [
-        '[class*="material"]', '[id*="material"]',
-        '[class*="procedure"]', '[id*="procedure"]',
-        '[class*="discussion"]', '[id*="discussion"]',
-        '[class*="worksheet"]', '[id*="worksheet"]',
-        '[class*="teacher"]', '[id*="teacher"]',
-        '[class*="answer"]', '[id*="answer"]',
-        '[class*="extension"]', '[id*="extension"]',
-        '[class*="question"]', '[id*="question"]',
-        '[class*="page-break"]', '[id*="page-break"]'
-      ];
-      lockSelectors.forEach(function(sel) {
-        document.querySelectorAll(sel).forEach(function(el) {
-          el.style.display = 'none';
-        });
-      });
+    // Fallback: lock from 3rd h2 if all early ones look like goals
+    if (lockFromIndex === -1 || lockFromIndex === 0) {
+      lockFromIndex = Math.min(2, allH2.length - 1);
+    }
+
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      // No h2 at all — fall back to hiding body overflow after 600px
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
       document.getElementById('llcPaywall').style.display = 'block';
       return;
     }
 
-    // Walk siblings/cousins after the goals section and hide them
-    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
-    // containing top-level element (or after the next h2 that follows it)
-
-    // Find the next h2 after lastGoalsH2 — everything from there is locked
-    var foundGoals = false;
-    var lockFrom = null;
-    allH2.forEach(function(h2) {
-      if (h2 === lastGoalsH2) { foundGoals = true; return; }
-      if (foundGoals && !lockFrom) { lockFrom = h2; }
+    // Walk body's direct children; hide everything from the child
+    // that IS or CONTAINS lockFromH2 onwards (skip paywall overlay itself)
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) {
+        hiding = true;
+      }
+      if (hiding && child.id !== 'llcPaywall') {
+        child.style.display = 'none';
+      }
     });
-
-    if (!lockFrom) {
-      // No further h2 found; lock everything after the goals h2 paragraph
-      // Hide siblings that follow lastGoalsH2
-      var sibling = lastGoalsH2.nextElementSibling;
-      while (sibling) {
-        sibling.style.display = 'none';
-        sibling = sibling.nextElementSibling;
-      }
-    } else {
-      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
-      var el = lockFrom;
-      while (el) {
-        el.style.display = 'none';
-        el = el.nextElementSibling;
-      }
-    }
 
     document.getElementById('llcPaywall').style.display = 'block';
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
     if (!isUnlocked()) {
       lockLesson();
     }
@@ -377,5 +363,9 @@ li { margin-bottom: 5px; }
 })();
 </script>
 <!-- ═══ END PAYWALL ═══ -->
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_gjkH3_rScv4" data-content-selector="body"></script>
 </body>
 </html>

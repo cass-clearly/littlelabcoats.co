@@ -153,10 +153,10 @@
     <strong>Step 6:</strong> Now sort the wooden block and ice cube. Where does each belong? (Both are solids -- they hold their shape.)
   </div>
   <div class="procedure-step">
-    <strong>Step 7:</strong> For each object, write or draw 2 properties next to it: one about how it looks, one about how it feels. For example: rock = gray, rough.
+    <strong>Step 7:</strong> For each object, write or draw 2 properties next to it: one about how it looks, one about how it feels. For example: rock = gray, rough. Ask: <em>"What did you observe that helped you decide where it belongs?"</em>
   </div>
   <div class="procedure-step">
-    <strong>Step 8 (Bonus Challenge):</strong> Hold an ice cube in your warm hand. Watch what happens. The solid slowly turns into a liquid! Can ice be both a solid AND a liquid? Talk about it.
+    <strong>Step 8 (Bonus Challenge):</strong> Hold an ice cube in your warm hand. Watch what happens. The solid slowly turns into a liquid! Ask: <em>"What changed, and what do we call it now?"</em>
   </div>
 
   <h2>💬 Discussion Questions</h2>
@@ -224,6 +224,7 @@
         <li><strong>For younger or struggling learners:</strong> Focus just on solid vs. liquid first. Gas can be a stretch concept -- the balloon is the best concrete anchor. Ask: "What is inside this balloon?" (Air. Air is a gas.)</li>
         <li><strong>Mass:</strong> Introduced but does not need deep explanation at this level. It is simply "how much stuff is in it." Weight works as an informal equivalent for now.</li>
         <li><strong>Fill-in-the-blank answers:</strong> Matter takes up space / has mass / shape / container / expand (or spread out).</li>
+        <li><strong>Model sentence to listen for:</strong> “I know water is a liquid because it changed shape to fit the cup, but the rock stayed the same shape, so it is a solid.”</li>
         <li><strong>Gifted extension:</strong> Ask "Is fire a state of matter?" (No -- it is a chemical reaction producing light and heat, not a state of matter itself. But it is a great conversation starter!)</li>
         <li><strong>For the matter sort table:</strong> Any valid examples work. Encourage students to think of items not used in the lesson.</li>
       </ul>
@@ -343,6 +344,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
     if (!isUnlocked()) {
       lockLesson();
     }
