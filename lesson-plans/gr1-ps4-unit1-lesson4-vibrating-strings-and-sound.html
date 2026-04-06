@@ -128,15 +128,19 @@
     .compare-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin: 14px 0;
+      gap: 10px;
+      margin: 12px 0 18px 0;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
     .compare-card {
       border: 2px solid #90caf9;
       border-radius: 8px;
-      padding: 12px;
+      padding: 10px 12px;
       background: #fafafa;
       text-align: center;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
     .compare-card h3 { margin-top: 0; }
     .worksheet-section { margin: 18px 0; }
@@ -306,6 +310,7 @@
     </div>
   </div>
 
+  <div class="page-break"></div>
   <div class="procedure-step">
     <strong>Step 5 — Make a Pattern of Sounds (5 min)</strong><br>
     Pluck three different bands in order: high, low, high — or low, high, low. Have your child repeat the pattern and describe which band makes which sound.
@@ -486,7 +491,7 @@
   function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
   function lockLesson() {
     var allH2 = Array.from(document.querySelectorAll('h2'));
-    var lockKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
+    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
     var lockFromIndex = -1;
     for (var i = 0; i < allH2.length; i++) {
       var text = allH2[i].textContent.toLowerCase();
