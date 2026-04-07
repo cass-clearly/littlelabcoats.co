@@ -13,38 +13,29 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:             #FAF7F2;
-      --cream-dark:        #F0EAE0;
-      --sage:              #5C7A5E;
-      --sage-light:        #8AAF8C;
-      --sage-pale:         #EDF4EE;
-      --terracotta:        #C2580C;
-      --terracotta-light:  #E07840;
-      --terracotta-pale:   #FDF0E8;
-      --navy:              #1A2744;
-      --navy-light:        #2D3F6E;
-      --brown:             #5C3D2E;
-      --brown-light:       #7A5342;
-      --gold:              #D4893A;
-      --gold-light:        #E8A85C;
-      --gold-pale:         #FDF5E8;
+      --cream:             #F9FFFE;        /* very light teal-white base */
+      --cream-dark:        #E8F8F6;        /* soft teal tint */
+      --teal:              #4ECDC4;        /* primary — replaces sage */
+      --teal-dark:         #35B8AF;        /* darker teal */
+      --teal-pale:         #D4F5F3;        /* very light teal */
+      --coral:             #FF6B6B;        /* accent — replaces terracotta */
+      --coral-light:       #FF8E8E;        /* lighter coral */
+      --coral-pale:        #FFE8E8;        /* very light coral */
+      --navy:              #3B1F6B;        /* deep navy — keep for text/contrast */
+      --navy-light:        #5A3490;        /* slightly lighter navy */
+      --yellow:             #F59E0B;        /* amber accent */
+      --yellow-pale:        #FEF3C7;        /* light amber */
+      --blue-light:        #F3E8FF;        /* light sky blue background */
       --white:             #FFFFFF;
-      --border:            #E0D8CC;
-      --text-muted:        #7A6A5A;
-      --shadow-sm:  0 2px 8px rgba(26,39,68,0.07);
-      --shadow-md:  0 8px 32px rgba(26,39,68,0.10);
+      --border:            #C8F0ED;        /* soft teal border */
+      --text-muted:        #5A7A78;        /* muted teal-grey */
+      --shadow-sm:  0 2px 8px rgba(43,58,103,0.07);
+      --shadow-md:  0 8px 32px rgba(43,58,103,0.10);
+      --shadow-lg:  0 20px 60px rgba(43,58,103,0.14);
       --radius-sm:  8px;
       --radius-md:  14px;
       --radius-lg:  22px;
-
-      --ps-color: #7B2FBE;
-      --ps-pale:  #F3E8FF;
-      --ls-color: #2e7d32;
-      --ls-pale:  #e8f5e9;
-      --es-color: #e65100;
-      --es-pale:  #fff3e0;
-      --et-color: #6a1b9a;
-      --et-pale:  #f3e5f5;
+      --radius-xl:  32px;
     }
 
     html { scroll-behavior: smooth; }
@@ -64,7 +55,7 @@
       color: var(--navy);
     }
 
-    p { font-family: 'Lato', sans-serif; line-height: 1.75; color: var(--brown); }
+    p { font-family: 'Lato', sans-serif; line-height: 1.75; color: var(--navy); }
     a { text-decoration: none; color: inherit; }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -91,7 +82,7 @@
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
       font-size: 1.2rem;
-      color: var(--sage);
+      color: var(--teal);
       display: flex;
       align-items: center;
       gap: 10px;
@@ -106,10 +97,10 @@
       font-family: 'Lato', sans-serif;
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--brown);
+      color: var(--navy);
       transition: color 0.2s;
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
     .nav-cta { margin-left: 8px; }
 
     .btn {
@@ -124,10 +115,10 @@
       border: none;
     }
     .btn-primary {
-      background: var(--terracotta);
+      background: var(--coral);
       color: white;
     }
-    .btn-primary:hover { background: var(--terracotta-light); }
+    .btn-primary:hover { background: var(--coral-light); }
 
     /* ─── Hero ─── */
     .curriculum-hero {
@@ -149,13 +140,13 @@
     }
     .curriculum-hero .print-note {
       font-size: 0.9rem;
-      color: var(--gold-light);
+      color: var(--yellow);
       margin-bottom: 0;
     }
 
     /* ─── Stats bar ─── */
     .stats-bar {
-      background: var(--sage);
+      background: var(--teal);
       padding: 14px 24px;
       text-align: center;
     }
@@ -195,6 +186,17 @@
       letter-spacing: 0.05em;
       margin-right: 4px;
     }
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+      flex-wrap: nowrap;
+      margin-bottom: 32px;
+    }
+    .filter-row::-webkit-scrollbar { display: none; }
     .filter-btn {
       padding: 7px 18px;
       border-radius: 50px;
@@ -203,11 +205,12 @@
       font-family: 'Lato', sans-serif;
       font-weight: 700;
       font-size: 0.88rem;
-      color: var(--brown);
+      color: var(--navy);
       cursor: pointer;
       transition: all 0.18s;
+      flex-shrink: 0;
     }
-    .filter-btn:hover { border-color: var(--sage); color: var(--sage); }
+    .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
     .filter-btn.active {
       background: var(--navy);
       border-color: var(--navy);
@@ -277,7 +280,7 @@
 
     .unit-card-header {
       padding: 16px 18px;
-      border-left: 5px solid var(--sage);
+      border-left: 5px solid var(--teal);
       display: flex;
       align-items: flex-start;
       gap: 12px;
@@ -346,7 +349,7 @@
       flex: 1;
       transition: color 0.15s;
     }
-    .lesson-item a:hover { color: var(--sage); }
+    .lesson-item a:hover { color: var(--teal); }
 
     .lesson-num {
       font-family: 'Lato', sans-serif;
@@ -359,10 +362,10 @@
     .lesson-icon { font-size: 0.9rem; }
 
     /* Quiz / refcard rows */
-    .lesson-item.quiz-row { background: rgba(26,39,68,0.03); }
+    .lesson-item.quiz-row { background: rgba(43,58,103,0.03); }
     .lesson-item.quiz-row a { color: var(--navy-light); }
-    .lesson-item.quiz-row a:hover { color: var(--sage); }
-    .lesson-item.refcard-row { background: rgba(92,122,94,0.05); }
+    .lesson-item.quiz-row a:hover { color: var(--teal); }
+    .lesson-item.refcard-row { background: rgba(78,205,196,0.05); }
 
     /* ─── Coming soon ─── */
     .coming-soon-card {
@@ -416,7 +419,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--gold-light);
+      color: var(--yellow);
       margin-bottom: 16px;
     }
     .footer-links { list-style: none; }
@@ -460,10 +463,11 @@
       <ul class="nav-links">
         <li><a href="index.html#sample-units">Products</a></li>
         <li><a href="curriculum.html" class="active">Curriculum</a></li>
+        <li><a href="store.html">Shop</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="index.html#founder">About</a></li>
       </ul>
-      <a href="https://littlelabcoats.gumroad.com/" class="btn btn-primary nav-cta">Buy Now</a>
+      <a href="store.html" class="btn btn-primary nav-cta">Buy Now</a>
     </div>
   </nav>
 
@@ -476,8 +480,8 @@
   </div>
 
   <div class="stats-bar">
-    <span>63+ Lessons</span>
-    <span>11 Units</span>
+    <span>81+ Lessons</span>
+    <span>14 Units</span>
     <span>Kindergarten–Grade 5</span>
     <span>All NGSS-Aligned</span>
     <span>Household Materials Only</span>
@@ -486,33 +490,20 @@
   <div class="filter-bar">
     <div class="filter-inner">
       <span class="filter-label">Grade:</span>
-      <button class="filter-btn active" data-grade="all">All Grades</button>
-      <button class="filter-btn" data-grade="k">Kindergarten</button>
+      <div class="filter-row">
+      <button class="filter-btn" data-grade="all">All Grades</button>
+      <button class="filter-btn active" data-grade="k">Kindergarten</button>
       <button class="filter-btn" data-grade="1">Grade 1</button>
       <button class="filter-btn" data-grade="2">Grade 2</button>
       <button class="filter-btn" data-grade="3">Grade 3</button>
+      <button class="filter-btn" data-grade="4">Grade 4</button>
       <button class="filter-btn" data-grade="5">Grade 5</button>
+      </div>
     </div>
   </div>
 
   <div class="curriculum-main">
     <div class="container">
-
-      <div class="grade-section" id="free-lesson-spotlights">
-        <div class="grade-header">
-          <div class="grade-badge">★</div>
-          <h2 class="grade-title">Free Lesson Spotlights</h2>
-          <span class="grade-count">K–5 sampler</span>
-        </div>
-        <div class="unit-grid">
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#FF6B6B;"><span class="unit-icon">🥛</span><div class="unit-card-info"><div class="unit-card-name">Kindergarten — Milk Magic</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Physical Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">K</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-milk-magic.html" target="_blank">Open Milk Magic</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#2e7d32;"><span class="unit-icon">🌈</span><div class="unit-card-info"><div class="unit-card-name">Grade 1 — Celery Rainbow</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Life Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr1-celery-rainbow.html" target="_blank">Open Celery Rainbow</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#e65100;"><span class="unit-icon">🦴</span><div class="unit-card-info"><div class="unit-card-name">Grade 2 — Salt Dough Fossil Factory</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Earth Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank">Open Salt Dough Fossil Factory</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#1976d2;"><span class="unit-icon">🥚</span><div class="unit-card-info"><div class="unit-card-name">Grade 3 — Egg Drop Kitchen Challenge</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Engineering</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank">Open Egg Drop Kitchen Challenge</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#8d6e63;"><span class="unit-icon">🍏</span><div class="unit-card-info"><div class="unit-card-name">Grade 4 — Apple Browning Experiment</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Chemical Reactions</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr4-apple-oxidation.html" target="_blank">Open Apple Browning Experiment</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#7B2FBE;"><span class="unit-icon">🍞</span><div class="unit-card-info"><div class="unit-card-name">Grade 5 — Bread Mold Terrarium</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Life Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank">Open Bread Mold Terrarium</a></li></ul></div></div>
-        </div>
-      </div>
 
       <!-- ═══════════════ KINDERGARTEN ═══════════════ -->
       <div class="grade-section" data-grade="k">
@@ -523,12 +514,17 @@
         </div>
         <div class="unit-grid">
 
+          <!-- ⚡ Physical Science -->
+          <div class="domain-header phys" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#e3f0ff 0%,#f8faff 100%); border-left: 5px solid var(--ps-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ps-color);">
+            <span>⚡</span> Physical Science
+          </div>
+
           <!-- K-PS2 Forces & Motion -->
           <div class="unit-card" style="--unit-color: var(--ps-color);">
             <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
               <span class="unit-icon">⚡</span>
               <div class="unit-card-info">
-                <div class="unit-card-name">Forces & Motion</div>
+                <div class="unit-card-name">Forces &amp; Motion</div>
                 <div class="unit-card-meta">
                   <span class="unit-tag">K-PS2</span>
                   <span>Physical Science</span>
@@ -548,6 +544,38 @@
                 <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/k-ps2-unit1-quiz.html" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
               </ul>
             </div>
+          </div>
+
+          <!-- K-PS3 Sunshine & Warmth -->
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">☀️</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Sunshine &amp; Warmth</div>
+                <div class="unit-card-meta">
+                  <span class="unit-tag">K-PS3</span>
+                  <span>Physical Science</span>
+                  <span>6 lessons</span>
+                </div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html" target="_blank">The Sun Warms Everything</a></li>
+                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson2-shadow-science.html" target="_blank">Shadow Science</a></li>
+                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html" target="_blank">Dark vs. Light Surfaces</a></li>
+                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson4-melting-race.html" target="_blank">The Melting Race</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html" target="_blank">Design a Sun Shelter (Plan)</a></li>
+                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html" target="_blank">Design a Sun Shelter (Build &amp; Test)</a></li>
+                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/k-ps3-unit2-quiz.html" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 🌱 Life Science -->
+          <div class="domain-header life" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#e8f5e9 0%,#f8fff8 100%); border-left: 5px solid var(--ls-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ls-color);">
+            <span>🌱</span> Life Science
           </div>
 
           <!-- K-LS1 Unit 2: Plants & Seeds -->
@@ -605,31 +633,9 @@
             </div>
           </div>
 
-          <!-- K-PS3 Sunshine & Warmth -->
-          <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">☀️</span>
-              <div class="unit-card-info">
-                <div class="unit-card-name">Sunshine &amp; Warmth</div>
-                <div class="unit-card-meta">
-                  <span class="unit-tag">K-PS3</span>
-                  <span>Physical Science</span>
-                  <span>6 lessons</span>
-                </div>
-              </div>
-              <span class="unit-toggle">▼</span>
-            </div>
-            <div class="unit-card-body">
-              <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html" target="_blank">The Sun Warms Everything</a></li>
-                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson2-shadow-science.html" target="_blank">Shadow Science</a></li>
-                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html" target="_blank">Dark vs. Light Surfaces</a></li>
-                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson4-melting-race.html" target="_blank">The Melting Race</a></li>
-                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html" target="_blank">Design a Sun Shelter (Plan)</a></li>
-                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html" target="_blank">Design a Sun Shelter (Build &amp; Test)</a></li>
-                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/k-ps3-unit2-quiz.html" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
-              </ul>
-            </div>
+          <!-- 🌍 Earth Science -->
+          <div class="domain-header earth" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#fff8e1 0%,#fffdf5 100%); border-left: 5px solid var(--es-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--es-color);">
+            <span>🌍</span> Earth Science
           </div>
 
           <!-- K-ESS2 Weather & Seasons -->
@@ -686,6 +692,11 @@
             </div>
           </div>
 
+          <!-- 🔧 Engineering -->
+          <div class="domain-header eng" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#fce4ec 0%,#fff8fa 100%); border-left: 5px solid var(--et-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--et-color);">
+            <span>🔧</span> Engineering
+          </div>
+
           <!-- K-ETS1 Engineering Design -->
           <div class="unit-card">
             <div class="unit-card-header" style="border-left-color: var(--et-color);" onclick="toggleUnit(this)">
@@ -713,20 +724,39 @@
             </div>
           </div>
 
-        </div><!-- /unit-grid -->
+                </div><!-- /unit-grid -->
       </div><!-- /grade-section K -->
 
       <!-- ═══════════════ GRADE 1 ═══════════════ -->
-      <div class="grade-section" data-grade="1">
+      <div class="grade-section" data-grade="1" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">1</div>
           <h2 class="grade-title">Grade 1</h2>
-          <span class="grade-count">4 units · 21 lessons</span>
+          <span class="grade-count">5 units · 30 lessons</span>
         </div>
         <div class="unit-grid">
 
-          <!-- Gr1 PS4 Sound & Light -->
           <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🌈</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 1</span><span>Life Science</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🌈</span><a href="lesson-plans/free-gr1-celery-rainbow.html" target="_blank">Free Sample — Celery Rainbow</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="domain-header phys" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#e3f0ff 0%,#f8faff 100%); border-left: 5px solid var(--ps-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ps-color);">
+            <span>⚡</span> Physical Science
+          </div>
+
+          <div class="unit-card" style="--unit-color: var(--ps-color);">
             <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
               <span class="unit-icon">🔊</span>
               <div class="unit-card-info">
@@ -734,7 +764,7 @@
                 <div class="unit-card-meta">
                   <span class="unit-tag">1-PS4</span>
                   <span>Physical Science</span>
-                  <span>3 lessons</span>
+                  <span>6 lessons</span>
                 </div>
               </div>
               <span class="unit-toggle">▼</span>
@@ -744,13 +774,19 @@
                 <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html" target="_blank">Sound Is Vibration</a></li>
                 <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ps4-unit1-lesson2-light-travels.html" target="_blank">Light Travels</a></li>
                 <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ps4-unit1-lesson3-mirrors-and-communication.html" target="_blank">Mirrors &amp; Communication</a></li>
+                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ps4-unit1-lesson4-vibrating-strings-and-sound.html" target="_blank">Vibrating Strings &amp; Sound</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ps4-unit1-lesson5-sound-through-solids-liquids-gases.html" target="_blank">Sound Through Solids, Liquids &amp; Gases</a></li>
+                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ps4-unit1-lesson6-design-a-sound-sender.html" target="_blank">Design a Sound Sender</a></li>
                 <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr1-ps4-unit1-quiz.html" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- Gr1 LS1 Plant & Animal Structures -->
-          <div class="unit-card">
+          <div class="domain-header ls" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#ecfdf3 0%,#f8fffb 100%); border-left: 5px solid var(--ls-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ls-color);">
+            <span>🌿</span> Life Science
+          </div>
+
+          <div class="unit-card" style="--unit-color: var(--ls-color);">
             <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
               <span class="unit-icon">🦋</span>
               <div class="unit-card-info">
@@ -776,8 +812,7 @@
             </div>
           </div>
 
-          <!-- Gr1 LS3 Parents & Offspring -->
-          <div class="unit-card">
+          <div class="unit-card" style="--unit-color: var(--ls-color);">
             <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
               <span class="unit-icon">👨‍👧</span>
               <div class="unit-card-info">
@@ -796,15 +831,18 @@
                 <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ls3-unit2-lesson2-baby-animals-and-needs.html" target="_blank">Baby Animals and Their Needs</a></li>
                 <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ls3-unit2-lesson3-parents-protect-offspring.html" target="_blank">How Animal Parents Protect Offspring</a></li>
                 <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ls3-unit2-lesson4-parents-teach-offspring.html" target="_blank">Teaching — When Parents Show What to Do</a></li>
-                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html" target="_blank">Plant "Parenting"</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html" target="_blank">Plant &quot;Parenting&quot;</a></li>
                 <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ls3-unit2-lesson6-patterns-parent-offspring.html" target="_blank">Patterns of Parent &amp; Offspring Behavior</a></li>
                 <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr1-ls3-unit2-quiz.html" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- Gr1 ESS1 Sun, Moon & Stars -->
-          <div class="unit-card">
+          <div class="domain-header es" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#fff4e5 0%,#fffaf5 100%); border-left: 5px solid var(--es-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--es-color);">
+            <span>🌍</span> Earth Science
+          </div>
+
+          <div class="unit-card" style="--unit-color: var(--es-color);">
             <div class="unit-card-header" style="border-left-color: var(--es-color);" onclick="toggleUnit(this)">
               <span class="unit-icon">🌙</span>
               <div class="unit-card-info">
@@ -830,47 +868,99 @@
             </div>
           </div>
 
-        </div>
-      </div><!-- /grade-section 1 -->
+          <div class="domain-header et" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#f3e8ff 0%,#fbf7ff 100%); border-left: 5px solid var(--et-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--et-color);">
+            <span>🛠️</span> Engineering Design
+          </div>
 
-      <!-- ═══════════════ GRADE 2 ═══════════════ -->
-      <div class="grade-section" data-grade="2">
-        <div class="grade-header">
-          <div class="grade-badge">2</div>
-          <h2 class="grade-title">Grade 2</h2>
-          <span class="grade-count">2 units · 7 lessons</span>
-        </div>
-        <div class="unit-grid">
-
-          <!-- Gr2 PS1 Mystery Powders -->
-          <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">🔬</span>
+          <div class="unit-card" style="--unit-color: var(--et-color);">
+            <div class="unit-card-header" style="border-left-color: var(--et-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🛠️</span>
               <div class="unit-card-info">
-                <div class="unit-card-name">Mystery Powders</div>
+                <div class="unit-card-name">Engineering Design</div>
                 <div class="unit-card-meta">
-                  <span class="unit-tag">2-PS1</span>
-                  <span>Physical Science</span>
-                  <span>Standalone lesson</span>
+                  <span class="unit-tag">1-ETS1</span>
+                  <span>Engineering</span>
+                  <span>6 lessons</span>
                 </div>
               </div>
               <span class="unit-toggle">▼</span>
             </div>
             <div class="unit-card-body">
               <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ps1-lesson1-mystery-powders.html" target="_blank">Mystery Powders</a></li>
+                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html" target="_blank">What Problem Can We Solve?</a></li>
+                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ets1-unit1-lesson2-look-at-animal-solutions.html" target="_blank">Look at Animal Solutions</a></li>
+                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ets1-unit1-lesson3-plan-a-nature-inspired-tool.html" target="_blank">Plan a Nature-Inspired Tool</a></li>
+                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ets1-unit1-lesson4-build-your-first-model.html" target="_blank">Build Your First Model</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ets1-unit1-lesson5-test-and-improve-your-design.html" target="_blank">Test and Improve Your Design</a></li>
+                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr1-ets1-unit1-lesson6-share-your-final-design.html" target="_blank">Share Your Final Design</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- Gr2 LS2 Plants, Pollinators & Ecosystems -->
+        </div>
+      </div><!-- /grade-section 1 -->
+
+      <!-- ═══════════════ GRADE 2 ═══════════════ -->
+      <div class="grade-section" data-grade="2" style="display:none;">
+        <div class="grade-header">
+          <div class="grade-badge">2</div>
+          <h2 class="grade-title">Grade 2</h2>
+          <span class="grade-count">3 units · 18 lessons</span>
+        </div>
+        <div class="unit-grid">
+
           <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">🌸</span>
+            <div class="unit-card-header" style="border-left-color: var(--es-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🦴</span>
               <div class="unit-card-info">
-                <div class="unit-card-name">Plants, Pollinators &amp; Ecosystems</div>
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 2</span><span>Earth Science</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🦴</span><a href="lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank">Free Sample — Salt Dough Fossil Factory</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gr2 PS1 Matter & Its Properties -->
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: #7B2FBE;" onclick="toggleUnit(this)">
+              <span class="unit-icon">⚗️</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Matter &amp; Its Properties</div>
                 <div class="unit-card-meta">
-                  <span class="unit-tag">2-LS2 + 2-LS4</span>
+                  <span class="unit-tag">2-PS1 Unit 1</span>
+                  <span>Physical Science</span>
+                  <span>6 lessons</span>
+                </div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ps1-unit1-l1-matter/" target="_blank">What Is Matter?</a></li>
+                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ps1-unit1-l2-texture/" target="_blank">Texture &amp; Hardness</a></li>
+                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ps1-unit1-l3-sink-float/" target="_blank">Sink or Float?</a></li>
+                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ps1-unit1-l4-mixing/" target="_blank">Mixing &amp; Separating</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ps1-unit1-l5-heating-cooling/" target="_blank">Heating &amp; Cooling Changes</a></li>
+                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ps1-unit1-l6-boat-engineering/" target="_blank">Engineering: Build the Best Boat</a></li>
+                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="/lesson-plans/gr2-ps1-unit1-quiz/" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
+                <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="/lesson-plans/gr2-ps1-refcard/" target="_blank">Reference Card — Printable Poster</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gr2 LS2 Ecosystems -->
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: #2e7d32;" onclick="toggleUnit(this)">
+              <span class="unit-icon">🌿</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Ecosystems</div>
+                <div class="unit-card-meta">
+                  <span class="unit-tag">2-LS2 Unit 2</span>
                   <span>Life Science</span>
                   <span>6 lessons</span>
                 </div>
@@ -879,12 +969,42 @@
             </div>
             <div class="unit-card-body">
               <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html" target="_blank">What Do Plants Need?</a></li>
-                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html" target="_blank">Pollinators</a></li>
-                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ls2-unit1-lesson3-seed-dispersal.html" target="_blank">Seed Dispersal</a></li>
-                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ls2-unit1-lesson4-food-chains.html" target="_blank">Food Chains</a></li>
-                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ls2-unit1-lesson5-habitats.html" target="_blank">Habitats</a></li>
-                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr2-ls2-unit1-lesson6-ecosystems-under-threat.html" target="_blank">Ecosystems Under Threat</a></li>
+                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ls2-unit2-l1-ecosystems/" target="_blank">What Is an Ecosystem?</a></li>
+                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ls2-unit2-l2-plants-partners/" target="_blank">Plants Need Partners</a></li>
+                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ls2-unit2-l3-food-chains/" target="_blank">Food Chains</a></li>
+                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ls2-unit2-l4-predator-prey/" target="_blank">Predator &amp; Prey</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ls2-unit2-l5-habitat-hunt/" target="_blank">Habitat Hunt</a></li>
+                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ls2-unit2-l6-design-habitat/" target="_blank">Design a Habitat</a></li>
+                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="/lesson-plans/gr2-ls2-unit2-quiz/" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
+                <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="/lesson-plans/gr2-ls2-refcard/" target="_blank">Reference Card — Printable Poster</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gr2 ESS1 Earth's Features -->
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: #e65100;" onclick="toggleUnit(this)">
+              <span class="unit-icon">🏔️</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Earth's Features</div>
+                <div class="unit-card-meta">
+                  <span class="unit-tag">2-ESS1 Unit 3</span>
+                  <span>Earth Science</span>
+                  <span>6 lessons</span>
+                </div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ess1-unit3-l1-landforms/" target="_blank">Landforms All Around</a></li>
+                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ess1-unit3-l2-rocks-soils/" target="_blank">Rocks &amp; Soils</a></li>
+                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ess1-unit3-l3-erosion/" target="_blank">Water Shapes the Land</a></li>
+                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ess1-unit3-l4-maps/" target="_blank">Maps &amp; Directions</a></li>
+                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ess1-unit3-l5-weather-patterns/" target="_blank">Weather Patterns</a></li>
+                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="/lesson-plans/gr2-ess1-unit3-l6-erosion-engineering/" target="_blank">Engineering: Slow the Erosion</a></li>
+                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="/lesson-plans/gr2-ess1-unit3-quiz/" target="_blank">Unit Quiz — Test Your Knowledge</a></li>
+                <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="/lesson-plans/gr2-ess1-refcard/" target="_blank">Reference Card — Printable Poster</a></li>
               </ul>
             </div>
           </div>
@@ -893,13 +1013,29 @@
       </div><!-- /grade-section 2 -->
 
       <!-- ═══════════════ GRADE 3 ═══════════════ -->
-      <div class="grade-section" data-grade="3">
+      <div class="grade-section" data-grade="3" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">3</div>
           <h2 class="grade-title">Grade 3</h2>
           <span class="grade-count">3 units · 9 lessons</span>
         </div>
         <div class="unit-grid">
+
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--eng-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🥚</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 3</span><span>Engineering</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🥚</span><a href="lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank">Free Sample — Egg Drop Kitchen Challenge</a></li>
+              </ul>
+            </div>
+          </div>
 
           <div class="unit-card">
             <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
@@ -978,6 +1114,22 @@
           <h2 class="grade-title">Grade 4</h2>
         </div>
         <div class="unit-grid">
+
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color:#8d6e63;" onclick="toggleUnit(this)">
+              <span class="unit-icon">🍏</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 4</span><span>Chemistry</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🍏</span><a href="lesson-plans/free-gr4-apple-oxidation.html" target="_blank">Free Sample — Apple Browning Experiment</a></li>
+              </ul>
+            </div>
+          </div>
           <div class="coming-soon-card">
             <h3>Grade 4 Units Coming Soon</h3>
             <p>Full curriculum in development. Subscribe to get early access.</p>
@@ -986,13 +1138,29 @@
       </div>
 
       <!-- ═══════════════ GRADE 5 ═══════════════ -->
-      <div class="grade-section" data-grade="5">
+      <div class="grade-section" data-grade="5" style="display:none;">
         <div class="grade-header">
           <div class="grade-badge">5</div>
           <h2 class="grade-title">Grade 5</h2>
           <span class="grade-count">3 lessons</span>
         </div>
         <div class="unit-grid">
+
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🍞</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 5</span><span>Life Science</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🍞</span><a href="lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank">Free Sample — Bread Mold Terrarium</a></li>
+              </ul>
+            </div>
+          </div>
 
           <!-- Gr5 PS1 Kitchen Chemistry -->
           <div class="unit-card">

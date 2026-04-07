@@ -496,6 +496,7 @@
       <button class="filter-btn" data-grade="1">Grade 1</button>
       <button class="filter-btn" data-grade="2">Grade 2</button>
       <button class="filter-btn" data-grade="3">Grade 3</button>
+      <button class="filter-btn" data-grade="4">Grade 4</button>
       <button class="filter-btn" data-grade="5">Grade 5</button>
       </div>
     </div>
@@ -503,22 +504,6 @@
 
   <div class="curriculum-main">
     <div class="container">
-
-      <div class="grade-section" id="free-lesson-spotlights">
-        <div class="grade-header">
-          <div class="grade-badge">★</div>
-          <h2 class="grade-title">Free Lesson Spotlights</h2>
-          <span class="grade-count">K–5 sampler</span>
-        </div>
-        <div class="unit-grid">
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#FF6B6B;"><span class="unit-icon">🥛</span><div class="unit-card-info"><div class="unit-card-name">Kindergarten — Milk Magic</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Physical Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">K</span><span class="lesson-icon">📄</span><a href="lesson-plans/k-milk-magic.html" target="_blank">Open Milk Magic</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#2e7d32;"><span class="unit-icon">🌈</span><div class="unit-card-info"><div class="unit-card-name">Grade 1 — Celery Rainbow</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Life Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr1-celery-rainbow.html" target="_blank">Open Celery Rainbow</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#e65100;"><span class="unit-icon">🦴</span><div class="unit-card-info"><div class="unit-card-name">Grade 2 — Salt Dough Fossil Factory</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Earth Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank">Open Salt Dough Fossil Factory</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#1976d2;"><span class="unit-icon">🥚</span><div class="unit-card-info"><div class="unit-card-name">Grade 3 — Egg Drop Kitchen Challenge</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Engineering</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank">Open Egg Drop Kitchen Challenge</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#8d6e63;"><span class="unit-icon">🍏</span><div class="unit-card-info"><div class="unit-card-name">Grade 4 — Apple Browning Experiment</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Chemical Reactions</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr4-apple-oxidation.html" target="_blank">Open Apple Browning Experiment</a></li></ul></div></div>
-          <div class="unit-card"><div class="unit-card-header" style="border-left-color:#7B2FBE;"><span class="unit-icon">🍞</span><div class="unit-card-info"><div class="unit-card-name">Grade 5 — Bread Mold Terrarium</div><div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Life Science</span></div></div></div><div class="unit-card-body" style="display:block;"><ul class="lesson-list"><li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-icon">📄</span><a href="lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank">Open Bread Mold Terrarium</a></li></ul></div></div>
-        </div>
-      </div>
 
       <!-- ═══════════════ KINDERGARTEN ═══════════════ -->
       <div class="grade-section" data-grade="k">
@@ -751,6 +736,22 @@
         </div>
         <div class="unit-grid">
 
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🌈</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 1</span><span>Life Science</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🌈</span><a href="lesson-plans/free-gr1-celery-rainbow.html" target="_blank">Free Sample — Celery Rainbow</a></li>
+              </ul>
+            </div>
+          </div>
+
           <div class="domain-header phys" style="grid-column: 1 / -1; display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#e3f0ff 0%,#f8faff 100%); border-left: 5px solid var(--ps-color); border-radius: 8px; padding: 10px 18px; margin: 8px 0 4px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ps-color);">
             <span>⚡</span> Physical Science
           </div>
@@ -908,6 +909,22 @@
         </div>
         <div class="unit-grid">
 
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--es-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🦴</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 2</span><span>Earth Science</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🦴</span><a href="lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank">Free Sample — Salt Dough Fossil Factory</a></li>
+              </ul>
+            </div>
+          </div>
+
           <!-- Gr2 PS1 Matter & Its Properties -->
           <div class="unit-card">
             <div class="unit-card-header" style="border-left-color: #7B2FBE;" onclick="toggleUnit(this)">
@@ -1005,6 +1022,22 @@
         <div class="unit-grid">
 
           <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--eng-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🥚</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 3</span><span>Engineering</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🥚</span><a href="lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank">Free Sample — Egg Drop Kitchen Challenge</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="unit-card">
             <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
               <span class="unit-icon">🌿</span>
               <div class="unit-card-info">
@@ -1081,6 +1114,22 @@
           <h2 class="grade-title">Grade 4</h2>
         </div>
         <div class="unit-grid">
+
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color:#8d6e63;" onclick="toggleUnit(this)">
+              <span class="unit-icon">🍏</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 4</span><span>Chemistry</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🍏</span><a href="lesson-plans/free-gr4-apple-oxidation.html" target="_blank">Free Sample — Apple Browning Experiment</a></li>
+              </ul>
+            </div>
+          </div>
           <div class="coming-soon-card">
             <h3>Grade 4 Units Coming Soon</h3>
             <p>Full curriculum in development. Subscribe to get early access.</p>
@@ -1096,6 +1145,22 @@
           <span class="grade-count">3 lessons</span>
         </div>
         <div class="unit-grid">
+
+          <div class="unit-card">
+            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
+              <span class="unit-icon">🍞</span>
+              <div class="unit-card-info">
+                <div class="unit-card-name">Free Sample Lesson</div>
+                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 5</span><span>Life Science</span></div>
+              </div>
+              <span class="unit-toggle">▼</span>
+            </div>
+            <div class="unit-card-body">
+              <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🍞</span><a href="lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank">Free Sample — Bread Mold Terrarium</a></li>
+              </ul>
+            </div>
+          </div>
 
           <!-- Gr5 PS1 Kitchen Chemistry -->
           <div class="unit-card">
