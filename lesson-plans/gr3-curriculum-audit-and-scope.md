@@ -10,9 +10,202 @@ It began as the **audit + scope definition** tracker for the Grade 3 buildout pa
 
 Unless a later section explicitly says otherwise, early tables in this file should be read as historical audit snapshots rather than the final current-state status.
 
-**Current-state shortcut:** start with `Stricter rerun inventory + correction snapshot (2026-04-07, iteration 1 of 2)` below. The later `Final Grade 3 QA pass snapshot (2026-04-07, iteration 1 of 2)` should now be read as a historical earlier-pass snapshot only.
+**Current-state shortcut:** start with `Repo re-audit snapshot for current thread (2026-04-07, iteration 1 of 2)` below. The later `Stricter rerun inventory + correction snapshot (2026-04-07, iteration 1 of 2)` and `Final Grade 3 QA pass snapshot (2026-04-07, iteration 1 of 2)` sections should now be read as historical earlier-pass snapshots unless they are explicitly reaffirmed by the newer repo re-audit section.
 
 It does **not** claim that Rachel review, Margaret review, or Remarq inline review has happened unless a later batch-review section explicitly records those notes.
+
+---
+
+## Repo re-audit snapshot for current thread (2026-04-07, iteration 1 of 2)
+
+This section is the current chunk-level source of truth for the repository re-audit requested in this thread.
+It is intentionally narrower and stricter than earlier Grade 3 writeups: it records only what is verifiable from the repo right now, separates repo state from unverified live-site state, and names preview-depth behavior by exact file/path rather than by assumption.
+
+### Exact repo evidence re-checked for this refresh
+
+#### Grade 3 lesson and support files inventoried
+- `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
+- `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
+- `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
+- `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
+- `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
+- `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
+- `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
+- `lesson-plans/gr3-ps2-unit1-quiz.html`
+- `lesson-plans/gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html`
+- `lesson-plans/gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html`
+- `lesson-plans/gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html`
+- `lesson-plans/gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html`
+- `lesson-plans/gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html`
+- `lesson-plans/gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html`
+- `lesson-plans/bird-beak-buffet.html`
+- `lesson-plans/free-gr3-egg-drop-kitchen-challenge.html`
+- `lesson-plans/free-gr3-egg-drop-kitchen-challenge-refcard.html`
+- `lesson-plans/free-gr3-egg-drop-kitchen-challenge-quiz.html`
+
+#### Grade 3 repo navigation/catalog surfaces re-checked
+- `index.html`
+- `curriculum.html`
+- `curriculum/index.html`
+
+#### Exact preview-depth code paths re-checked
+- inline paywall logic inside:
+  - `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
+  - `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+  - `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
+  - `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
+  - `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
+  - `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
+  - `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
+  - `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
+- quiz paywall logic inside:
+  - `lesson-plans/gr3-ps2-unit1-quiz.html`
+
+### Current repo-state findings
+
+#### 1. Grade 3 curriculum currently discoverable in the repo
+The currently discoverable Grade 3 curriculum and Grade 3-adjacent inventory in this repo is:
+- canonical lesson scope:
+  - `3-LS1 Unit 1` — Lessons 1–2
+  - `3-PS2 Unit 1` — Lessons 1–6 plus unit quiz
+  - `3-LS4` standalone — `Bird Beak Buffet`
+- canonical support-asset scope:
+  - `3-PS2` refcards for Lessons 1–6
+- Grade 3-adjacent but out-of-canonical-map scope:
+  - `free-gr3-egg-drop-kitchen-challenge.html`
+  - `free-gr3-egg-drop-kitchen-challenge-refcard.html`
+  - `free-gr3-egg-drop-kitchen-challenge-quiz.html`
+
+No additional Grade 3 `3-ESS*`, `3-ETS*`, other `3-LS*`, or other `3-PS*` lesson/unit files were discoverable by repo inventory during this refresh.
+
+#### 2. Current repo navigation/catalog state
+The repo-side Grade 3 discovery surfaces already contain more than the earlier historical audit text said.
+
+Verified current repo links:
+- `index.html`
+  - links `3-LS1` Lessons 1–2
+  - links `3-PS2` Lessons 1–6 + quiz
+  - links `3-LS4 Bird Beak Buffet`
+  - also links the Grade 3 freebie `free-gr3-egg-drop-kitchen-challenge.html`
+- `curriculum.html`
+  - links `3-LS1` Lessons 1–2
+  - links `3-PS2` Lessons 1–6 + quiz
+  - links `3-LS4 Bird Beak Buffet`
+  - also links the Grade 3 freebie `free-gr3-egg-drop-kitchen-challenge.html`
+- `curriculum/index.html`
+  - links `3-LS1` Lessons 1–2
+  - links `3-PS2` Lessons 1–6 + quiz
+  - links `3-LS4 Bird Beak Buffet`
+  - also links the Grade 3 freebie `free-gr3-egg-drop-kitchen-challenge.html`
+
+Important boundary:
+- this refresh confirms **repo-side wiring only**
+- it does **not** claim the public domain currently reflects those repo links
+- live publish verification remains a later chunk
+
+#### 3. Categorized gap list for the current discovered repo scope
+
+##### Existing-complete in repo
+- `3-LS1 Unit 1 Lesson 1` — complete lesson shell present
+- `3-LS1 Unit 1 Lesson 2` — complete lesson shell present
+- `3-PS2 Unit 1 Lessons 1–6` — complete lesson shells present
+- `3-PS2 Unit 1 Quiz` — present with review/paywall shell
+- `3-PS2` refcards for Lessons 1–6 — present in repo
+- repo navigation references for LS1, PS2, LS4, and the Grade 3 freebie — present in `index.html`, `curriculum.html`, and `curriculum/index.html`
+
+##### Existing-partial or still needing later work
+- live publish verification for the repo-wired Grade 3 navigation/catalog state — not yet verified on the public domain
+- final canonical public-URL manifest for the Grade 3 curriculum set — tracked separately and still publish-state-sensitive
+- `Bird Beak Buffet` parity with the newer Grade 3 lesson shell — not treated as broken in this chunk, but still a separate modernization decision if strict shell parity is required later
+- Grade 3 preview-depth acceptance confirmation is now evidence-backed for the audited lesson set, but the code remains duplicated inline per lesson file rather than centralized in one reusable component
+
+##### Missing from the discoverable repo map
+- additional Grade 3 Life Science units beyond `3-LS1` and `3-LS4`
+- Grade 3 Earth / Space Science units
+- Grade 3 Engineering / ETS unit pages
+- a full year-at-a-glance Grade 3 curriculum map comparable to stronger lower-grade curriculum maps
+
+##### Blocked / unknown rather than honestly missing-in-repo files
+- any claim that Grade 3 should include more domains/units than the discovered `LS1`, `LS4`, and `PS2` set is currently blocked by lack of an in-repo Grade 3 year map or other authoritative scope source
+- any claim that the repo-wired Grade 3 navigation is already live is blocked until later publish verification happens against the public domain
+
+### Preview-depth audit for the Grade 3 lesson set
+
+#### Current lesson-preview behavior verified from exact files
+The following Grade 3 lesson pages all contain inline paywall logic that locks from the first `h2` matching one of these keywords:
+- `materials`
+- `gather before you start`
+- `what you need`
+
+Verified lesson files using that lock boundary:
+- `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
+- `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
+- `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
+- `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
+- `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
+- `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
+- `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
+
+Practical implication:
+- these lesson pages preview through the top conceptual sections before `Materials`
+- this is deeper than the older LLC pattern that locked at the first non-goal section after `Learning Objective` / `Learning Goal`
+- for the audited Grade 3 lesson set, the current preview boundary is **not** the tiny top-section behavior; it is already the deeper `lock-from-Materials` behavior
+
+#### Grade 3 quiz preview behavior
+- `lesson-plans/gr3-ps2-unit1-quiz.html` has quiz preview/paywall behavior present
+- during this refresh, no matching `lockKeywords` block was found in the same lesson-style form as the lesson pages
+- that is a separate quiz-preview implementation detail, not evidence that the lesson pages themselves are still shallow
+
+#### Preview-depth conclusion for this chunk
+- no currently discovered canonical Grade 3 lesson page was found using the older shallow `learning objective / learning goal / big idea` lock boundary
+- the exact current Grade 3 lesson files named above are already using the deeper `materials / gather before you start / what you need` boundary
+- if preview-depth fixes are still required later, they should target:
+  - new Grade 3 lesson files created after this audit
+  - any non-Grade-3 or freebie pages still using the older shallow boundary
+  - the Grade 3 quiz only if later product requirements require lesson-style depth semantics there too
+
+### Implementation queue from this refreshed audit
+
+Use coherent batches; do not re-open already complete lesson shells without a concrete reason.
+
+#### Batch A — Grade 3 scope-expansion audit before new curriculum creation
+Goal:
+- determine whether there is an authoritative Grade 3 year map outside the currently discoverable repo scope
+
+Why this is first:
+- the repo currently proves `LS1`, `LS4`, and `PS2`
+- it does **not** prove the full intended year across all domains
+- before creating additional Grade 3 units, the next iteration should search for or request an authoritative source that says what else Grade 3 is supposed to include
+
+#### Batch B — If authoritative scope exists, build the missing Grade 3 domains/units in coherent domain batches
+Potential follow-on batches only after scope expansion is real:
+- additional Life Science units together
+- Earth / Space together
+- Engineering / ETS together
+
+#### Batch C — Preview-depth parity guardrail for future/new Grade 3 pages
+Goal:
+- when creating any new Grade 3 lesson pages, copy the current deeper `lock-from-Materials` preview boundary rather than the older shallow goal-based lock pattern
+
+Concrete rule:
+- new Grade 3 lesson pages should match the exact deeper-preview behavior verified in the eight canonical lesson files above
+
+#### Batch D — Review-loop execution for any genuinely new or newly expanded Grade 3 scope
+Goal:
+- only after new curriculum scope is proven and files exist, run the full Rachel → Margaret → revise loop for those items, up to three total rounds max
+
+#### Batch E — Publish/readiness verification and manifest reconciliation
+Goal:
+- verify live/public parity for repo-wired Grade 3 navigation
+- finalize the Grade 3 public-URL manifest against actual publish state rather than repo-only assumptions
+
+### Current chunk decision
+For the repo-discoverable Grade 3 scope audited in this refresh:
+- canonical Grade 3 lesson files are **not** currently partial in the repo
+- the biggest unresolved item is not lesson incompleteness inside discovered files; it is **scope ambiguity beyond the discovered repo map**
+- the main preview-depth risk for the next chunk is regression on newly created Grade 3 pages, not the currently audited canonical Grade 3 lesson files
 
 ---
 

@@ -316,6 +316,31 @@ A lesson is not baseline-compliant if it is missing any of these without a docum
 - paywall overlay logic
 - pending or final document ID on body and script
 
+### Preview-depth baseline for the currently audited Grade 3 lesson set
+The current canonical Grade 3 lesson files were re-audited in `lesson-plans/gr3-curriculum-audit-and-scope.md`.
+That refresh verified that the lesson pages are using the deeper preview boundary that locks from the first `h2` matching:
+- `materials`
+- `gather before you start`
+- `what you need`
+
+This means the current audited Grade 3 lesson pages preview through the conceptual top matter before `Materials` instead of stopping at the first post-goals section.
+
+#### Exact verified lesson files using the deeper boundary
+- `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
+- `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
+- `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
+- `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
+- `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
+- `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
+- `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
+
+#### Implementation rule for future Grade 3 work
+When creating or modernizing additional Grade 3 lesson pages:
+- preserve the deeper `lock-from-Materials` preview behavior used by the audited canonical lesson set
+- do **not** regress to the older shallow goal-based lock pattern (`learning objective`, `learning goal`, `big idea`, `the big idea`) that appears in older LLC lesson shells elsewhere in the repo
+- if preview logic is copied forward manually, verify the actual keywords and lock boundary in the file, not just the overlay copy text
+
 ### Review-mode caution
 Do not claim browser-level verification happened unless an actual verification pass happened. In planning/build docs, record the pattern requirement without pretending it was tested live.
 
