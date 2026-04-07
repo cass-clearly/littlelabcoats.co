@@ -93,10 +93,36 @@ They are staged in repo navigation for the next push/publish step, but they are 
   - `lesson-plans/gr3-life-science-batch-review.md`
   - `lesson-plans/gr3-physical-science-batch-review.md`
 
+## Grade 3 Earth Science URLs staged for next live wiring
+
+These Earth Science files exist in repo as staged drafts for the next build/publish pass, but they are **not live yet** and should not be presented as published until the public domain checks pass.
+
+- `3-ESS2 Unit 1 Lesson 1 — Weather Patterns Over Time`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html`  
+  Status: `repo draft, not live`
+- `3-ESS2 Unit 1 Lesson 2 — Climate Regions and Conditions`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html`  
+  Status: `repo draft, not live`
+- `3-ESS2 Unit 1 Lesson 3 — Reading Weather Data`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html`  
+  Status: `repo draft, not live`
+- `3-ESS2 Unit 1 Lesson 4 — Weather Hazards and Impacts`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html`  
+  Status: `repo draft, not live`
+- `3-ESS2 Unit 1 Lesson 5 — Designing for Local Weather`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html`  
+  Status: `repo draft, not live`
+- `3-ESS2 Unit 1 Lesson 6 — Reducing Weather-Related Hazards`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html`  
+  Status: `repo draft, not live`
+- `3-ESS2 Unit 1 Quiz — Weather & Climate`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html`  
+  Status: `repo draft, not live`
+
 ## What remains after LS1 publish/live verification
 
 - wire real Remarq document IDs for the LS1 lessons, refcards, and quiz if/when that workflow is accessible
-- build the required Grade 3 Earth Science 6-lesson unit and support assets
+- complete the Grade 3 Earth Science lesson-file revisions, support-asset revisions, and publish loop
 - build the required Grade 3 Engineering 6-lesson unit and support assets
 - update the wider Grade 3 manifest again as Earth Science and Engineering go live
 
