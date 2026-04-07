@@ -118,6 +118,24 @@ These Earth Science files are now live on the public domain and were verified on
 - `3-ESS2 Unit 1 Quiz — Weather & Climate`  
   `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html`  
   Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 1 — Weather Patterns Over Time`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 2 — Climate Regions and Conditions`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 3 — Reading Weather Data`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 4 — Weather Hazards and Impacts`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 5 — Designing for Local Weather`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 6 — Reducing Weather-Related Hazards`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html`  
+  Status: `live verified 2026-04-07`
 
 ## What remains after LS1 publish/live verification
 

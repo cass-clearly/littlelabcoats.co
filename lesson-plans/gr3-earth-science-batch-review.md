@@ -146,6 +146,14 @@ Verified live on 2026-04-07 after commit `df78991` reached production:
 - `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html`
 - `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html`
 
+Support-asset spot check also verified live on 2026-04-07:
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html`
+
 ## Known blockers / honesty check
 
 - Real Remarq document IDs are not available yet for the Earth Science lesson pages, refcards, or quiz.
