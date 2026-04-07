@@ -49,6 +49,13 @@ It is intentionally narrower and stricter than earlier Grade 3 writeups: it reco
 - `curriculum.html`
 - `curriculum/index.html`
 
+#### Stronger-scope source search re-checked
+- `lesson-plans/science-curriculum-business-plan.html`
+- `lesson-plans/free-lesson-audit-and-scope.md`
+- `lesson-plans/gr3-life-science-batch-review.md`
+- `lesson-plans/gr3-physical-science-batch-review.md`
+- repo-wide filename/content search for Grade 3 curriculum-map / scope / manifest terms
+
 #### Exact preview-depth code paths re-checked
 - inline paywall logic inside:
   - `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
@@ -78,6 +85,20 @@ The currently discoverable Grade 3 curriculum and Grade 3-adjacent inventory in 
   - `free-gr3-egg-drop-kitchen-challenge-quiz.html`
 
 No additional Grade 3 `3-ESS*`, `3-ETS*`, other `3-LS*`, or other `3-PS*` lesson/unit files were discoverable by repo inventory during this refresh.
+
+#### 1a. Result of the stronger-scope source search
+No stronger in-repo Grade 3 year map was found during this refresh.
+
+What was found:
+- `lesson-plans/science-curriculum-business-plan.html` contains a detailed Kindergarten year map, but this refresh did not find a comparable Grade 3 year map section in that file
+- `lesson-plans/gr3-life-science-batch-review.md` explicitly says additional Grade 3 Life Science expansion would require an external Grade 3 curriculum map if one exists
+- `lesson-plans/gr3-physical-science-batch-review.md` confirms completion inside the currently discovered PS2 scope, not a broader full-year Grade 3 map
+- `lesson-plans/free-lesson-audit-and-scope.md` tracks the Grade 3 freebie, but does not redefine the canonical Grade 3 curriculum map
+
+Current audit consequence:
+- this chunk can be exact about the **discoverable repo scope**
+- it cannot honestly claim a complete intended full-year Grade 3 domain map beyond that discoverable repo scope
+- external-scope confirmation remains the blocker for any claim that more Grade 3 domains/units are definitively intended right now
 
 #### 2. Current repo navigation/catalog state
 The repo-side Grade 3 discovery surfaces already contain more than the earlier historical audit text said.
@@ -129,6 +150,7 @@ Important boundary:
 ##### Blocked / unknown rather than honestly missing-in-repo files
 - any claim that Grade 3 should include more domains/units than the discovered `LS1`, `LS4`, and `PS2` set is currently blocked by lack of an in-repo Grade 3 year map or other authoritative scope source
 - any claim that the repo-wired Grade 3 navigation is already live is blocked until later publish verification happens against the public domain
+- any claim that specific `3-ESS*` or `3-ETS*` lesson slots are missing files rather than simply absent-from-known-scope is blocked until an authoritative Grade 3 map names those slots
 
 ### Preview-depth audit for the Grade 3 lesson set
 
@@ -158,12 +180,19 @@ Practical implication:
 - during this refresh, no matching `lockKeywords` block was found in the same lesson-style form as the lesson pages
 - that is a separate quiz-preview implementation detail, not evidence that the lesson pages themselves are still shallow
 
+#### Grade 3-adjacent freebie preview behavior
+- `lesson-plans/free-gr3-egg-drop-kitchen-challenge.html` is a free-access artifact with the feedback layer present and the paywall lock intentionally removed
+- `lesson-plans/free-gr3-egg-drop-kitchen-challenge-quiz.html` is a free-access companion artifact with the feedback layer present and no lesson-style paywall-lock block found
+- `lesson-plans/free-gr3-egg-drop-kitchen-challenge-refcard.html` is a free companion artifact and no lesson-style paywall-lock block was found in this refresh
+- because these are free-access artifacts, they are **not** part of the shallow-preview problem class for this Grade 3 chunk
+
 #### Preview-depth conclusion for this chunk
 - no currently discovered canonical Grade 3 lesson page was found using the older shallow `learning objective / learning goal / big idea` lock boundary
 - the exact current Grade 3 lesson files named above are already using the deeper `materials / gather before you start / what you need` boundary
+- the Grade 3-adjacent freebie trio is free-access rather than shallow-preview locked
 - if preview-depth fixes are still required later, they should target:
   - new Grade 3 lesson files created after this audit
-  - any non-Grade-3 or freebie pages still using the older shallow boundary
+  - any non-Grade-3 legacy/template pages elsewhere in the repo still using the older shallow boundary
   - the Grade 3 quiz only if later product requirements require lesson-style depth semantics there too
 
 ### Implementation queue from this refreshed audit
@@ -204,8 +233,10 @@ Goal:
 ### Current chunk decision
 For the repo-discoverable Grade 3 scope audited in this refresh:
 - canonical Grade 3 lesson files are **not** currently partial in the repo
+- every remaining item inside the **discoverable repo scope** is now assigned to a coherent later batch: scope-expansion audit, potential new-domain build batches, preview-depth guardrail, review loops for newly created scope, and publish/manifest verification
 - the biggest unresolved item is not lesson incompleteness inside discovered files; it is **scope ambiguity beyond the discovered repo map**
 - the main preview-depth risk for the next chunk is regression on newly created Grade 3 pages, not the currently audited canonical Grade 3 lesson files
+- therefore this chunk should be read as complete for the discoverable repo scope, with external-scope confirmation recorded as the blocker to any stronger full-year Grade 3 completeness claim
 
 ---
 

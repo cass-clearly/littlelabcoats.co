@@ -8,6 +8,11 @@ This file is the concise Grade 3 URL handoff for the next live step.
 It does **not** claim that any new Grade 3 lesson was published in this pass.
 The stricter Rachel + Margaret rerun standard is now recorded in repo artifacts with round-1 revisions applied, but these navigation updates are still **not published/live yet**.
 
+Scope note for audit alignment:
+- this manifest reflects the **currently discoverable canonical Grade 3 repo scope** audited in `lesson-plans/gr3-curriculum-audit-and-scope.md`
+- that discoverable canonical scope is currently `3-LS1`, `3-PS2`, and the standalone `3-LS4` lesson `Bird Beak Buffet`
+- it should not be read as proof that a larger full-year Grade 3 domain map has been confirmed in-repo
+
 ## Already public / linked in Grade 3 navigation
 
 - `Bird Beak Buffet`  
