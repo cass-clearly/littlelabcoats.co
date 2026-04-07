@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-07
 Chunk: `grade3-engineering-unit1`
-Status: round-1 Rachel + Margaret review notes recorded; round-1 revisions applied in repo; live publish still pending
+Status: round-1 Rachel + Margaret review notes recorded; round-1 revisions applied in repo; published to littlelabcoats.co and verified on 2026-04-07; Remarq IDs still pending
 
 ## Purpose
 
@@ -39,8 +39,8 @@ The required support assets are:
 - Lesson files: `exist in repo and revised for publish`
 - Refcards: `exist in repo and revised for publish`
 - Quiz: `exists in repo and revised for publish`
-- Navigation: `wired in repo; live publish still pending for lesson routes`
-- Public URLs: `not yet live verified`
+- Navigation: `wired in repo and live`
+- Public URLs: `verified live for lessons 1–6 and the unit quiz on 2026-04-07`
 - Remarq IDs: `pending / placeholder only`
 - Review status: `round-1 notes recorded below; round-1 revisions applied in repo`
 
@@ -126,8 +126,18 @@ Status: `not started`
 Notes:
 - reserved if another review round is needed after round 2
 
+## Public verification log
+
+Verified live on 2026-04-07 after commit `461ca34` reached production:
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html`
+
 ## Known blockers / honesty check
 
 - Real Remarq document IDs are not available yet for the Engineering lesson pages, refcards, or quiz.
-- No Engineering asset in this batch should be called live until the public URLs return 200 on `https://littlelabcoats.co`.
-- This file records review notes and round-1 revisions, but it does **not** claim publish/live rollout yet.
+- This file does **not** claim successful Remarq wiring yet.
