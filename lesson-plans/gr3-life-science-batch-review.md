@@ -65,7 +65,7 @@ Use these as direct continuity anchors:
 - Rachel review: `round 1 commented on lesson pages and support assets`
 - Margaret review: `round 1 commented on lesson pages and support assets`
 - Revisions: `round 1 lesson-page revisions applied; support-asset packaging review captured`
-- Publish/live rollout: `repo wiring updated; live publish/verification still pending in this batch`
+- Publish/live rollout: `published to littlelabcoats.co and verified on 2026-04-07; Remarq IDs still pending`
 
 ### What this file does and does not claim
 This file now tracks the real Lessons 3–6 batch.
@@ -257,13 +257,12 @@ Before this batch can be treated as fully package-complete beyond the lesson pag
 - the LS1 Batch 1 lesson URLs are now listed in `lesson-plans/gr3-shareable-manifest.md`
 
 ### What is explicitly not complete in this pass
-- real Remarq document IDs have not been assigned for the new LS1 support assets
-- public live verification has not yet succeeded for LS1 Lessons 3–6, the refcards, or the unit quiz in this batch file
-- nothing in this file should be read as proof that deployment has completed successfully
+- real Remarq document IDs have not been assigned for the new LS1 lesson pages, refcards, or unit quiz
+- nothing in this file should be read as proof that Remarq/document wiring is complete
 
 ### Packaging state
-The LS1 lesson + support-asset package is now `repo-complete and ready for publish/deploy work`, with lesson pages carrying round-1 review/revision history and support-asset review addenda captured in this file.
-Live publish verification and real Remarq wiring remain separate later steps.
+The LS1 lesson + support-asset package is now `published and live-verified`, with lesson pages carrying round-1 review/revision history and support-asset review addenda captured in this file.
+Real Remarq wiring remains the only known follow-up blocker inside the LS1 package.
 
 ---
 
@@ -271,12 +270,27 @@ Live publish verification and real Remarq wiring remain separate later steps.
 
 - Real Remarq document IDs for the new LS1 lesson pages, refcards, and the LS1 quiz are still pending and should use placeholder document IDs until wired later.
 - The LS1 refcards remain intentionally lightweight support artifacts rather than full review-layer pages.
-- Repo-side navigation wiring for LS1 Lessons 3–6 and the unit quiz is complete, but public deployment still needs to succeed before the batch can be called fully shipped.
+- Repo-side navigation wiring for LS1 Lessons 3–6 and the unit quiz is complete, and public deployment succeeded on 2026-04-07.
 - If human scope changes the lesson titles, paths must be reconciled against the locked path plan in `gr3-curriculum-audit-and-scope.md`.
 
 ---
 
+## Public verification log
+
+Verified live on 2026-04-07 after commit `df77a88` reached production:
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-quiz.html`
+
 ## Honesty check
 
 This file now reflects the explicit Grade 3 LS1 Batch 1 recovery scope for Lessons 3–6 and records real lesson-page round-1 review plus support-asset review addenda for the refcards and unit quiz.
-It does **not** claim successful Remarq wiring or final publish/live rollout.
+It does **not** claim successful Remarq wiring.

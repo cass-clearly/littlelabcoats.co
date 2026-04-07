@@ -1,12 +1,11 @@
 # Grade 3 Shareable Manifest
 
 Last updated: 2026-04-07
-Status: LS1 package is repo-ready; Grade 3 LS1 navigation is now wired in repo, but live publish/verification is still pending
+Status: LS1 package is live on littlelabcoats.co and verified on 2026-04-07; Remarq IDs still pending
 Audience: Serena
 
-This file is the concise Grade 3 URL handoff for the next live step.
-It does **not** claim that any new Grade 3 lesson was published in this pass.
-The stricter Rachel + Margaret rerun standard is now recorded in repo artifacts with round-1 revisions applied, and LS1 Lessons 3–6 plus the LS1 quiz are now wired into the Grade 3 navigation surfaces in repo. Nothing here should be read as already live-verified until the public domain checks pass.
+This file is the concise Grade 3 URL handoff for the current live state.
+The stricter Rachel + Margaret rerun standard is recorded in repo artifacts with round-1 revisions applied, and LS1 Lessons 3–6 plus the LS1 quiz are now live and publicly reachable.
 
 Scope note for audit alignment:
 - this manifest reflects the **currently discoverable Grade 3 repo state** audited in `lesson-plans/gr3-curriculum-audit-and-scope.md`
@@ -32,38 +31,38 @@ They remain the live baseline anchors for the LS1 unit.
 ## Grade 3 LS1 Batch 1 lesson URLs staged for handoff
 
 These lesson files now exist in LLC format, have recorded Rachel + Margaret round-1 comments, and have round-1 revisions applied in repo.
-They are now wired into the Grade 3 navigation surfaces in repo, but they are still **not marked live** until the public domain checks succeed.
+They are wired into the Grade 3 navigation surfaces and were verified live on the public domain on 2026-04-07.
 
 - `3-LS1 Unit 1 Lesson 3 — Plant Life Cycles and Seeds`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Unit 1 Lesson 4 — Animal Life Cycles and Metamorphosis`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Unit 1 Lesson 5 — Comparing Life Cycle Patterns`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Unit 1 Lesson 6 — Model and Explain a Life Cycle`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 
 ## Grade 3 LS1 support URLs staged for handoff
 
 - `3-LS1 Refcard — Lesson 3 Plant Life Cycles and Seeds`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Refcard — Lesson 4 Animal Life Cycles and Metamorphosis`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Refcard — Lesson 5 Comparing Life Cycle Patterns`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Refcard — Lesson 6 Model and Explain a Life Cycle`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 - `3-LS1 Unit 1 Quiz — Life Cycles`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-quiz.html`  
-  Status: `repo-ready, not live`
+  Status: `live verified 2026-04-07`
 
 ## Grade 3 PS2 lesson URLs staged for next live wiring
 
@@ -94,14 +93,12 @@ They are staged in repo navigation for the next push/publish step, but they are 
   - `lesson-plans/gr3-life-science-batch-review.md`
   - `lesson-plans/gr3-physical-science-batch-review.md`
 
-## What remains before publish/live verification
+## What remains after LS1 publish/live verification
 
-- publish the LS1 repo changes so Lessons 3–6, the LS1 quiz, and any exposed support links resolve publicly
-- verify the public domain reflects the finalized LS1 listings after publish
-- wire real Remarq document IDs and preserve deeper preview behavior across the new lesson set
+- wire real Remarq document IDs for the LS1 lessons, refcards, and quiz if/when that workflow is accessible
 - build the required Grade 3 Earth Science 6-lesson unit and support assets
 - build the required Grade 3 Engineering 6-lesson unit and support assets
-- confirm the public/live Grade 3 discovery surfaces show the same lesson set now staged in repo
+- update the wider Grade 3 manifest again as Earth Science and Engineering go live
 
 ## Scope note
 
