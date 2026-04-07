@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Cycles Unit Quiz — Grade 3 Life Science</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.45in; font-size: 11pt; line-height: 1.45; color: #222; background: #fff; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #2e7d32; padding-bottom: 10px; color: #2e7d32; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #a5d6a7; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #2e7d32; color: white; padding: 8px 14px; margin: 24px 0 12px; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1b5e20; border-bottom: 2px solid #a5d6a7; padding-bottom: 4px; margin: 18px 0 8px; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .question-card { background: #fff; border: 2px solid #d8ead9; border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .q-number { font-size: 0.8rem; font-weight: 700; color: #2e7d32; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .q-text { font-size: 1.02rem; font-weight: 600; color: #222; margin-bottom: 14px; line-height: 1.4; }
+    .options-list { list-style: none; padding: 0; margin: 0; }
+    .options-list li { margin-bottom: 8px; }
+    .option-btn { width: 100%; text-align: left; background: #f8fcf8; border: 2px solid #d8ead9; border-radius: 8px; padding: 10px 14px; font-size: 0.95rem; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; gap: 10px; color: #333; font-family: inherit; }
+    .option-btn:hover:not(:disabled) { background: #eef8ef; border-color: #a5d6a7; }
+    .option-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; font-weight: 600; }
+    .option-btn.wrong { background: #ffebee; border-color: #e53935; color: #c62828; font-weight: 600; }
+    .option-btn.revealed-correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; }
+    .option-icon { font-size: 1.1rem; min-width: 22px; text-align: center; }
+    .explanation { display: none; background: #eef8ef; border-left: 4px solid #2e7d32; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 14px; font-size: 0.9rem; color: #444; line-height: 1.5; }
+    .explanation.show { display: block; }
+    .score-bar { background: #f8fcf8; border: 2px solid #d8ead9; border-radius: 10px; padding: 14px 18px; text-align: center; font-size: 1rem; font-weight: 700; color: #1b5e20; margin-bottom: 18px; }
+    .results-section { display: none; background: white; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); padding: 24px 22px; margin: 24px 0; text-align: center; border: 3px solid #2e7d32; }
+    .results-section.show { display: block; }
+    .results-section .score-display { font-size: 2.4rem; font-weight: 800; color: #2e7d32; margin: 8px 0; }
+    .results-section .encouragement { font-size: 1.1rem; color: #333; margin: 10px 0 20px; font-weight: 600; }
+    .see-score-btn { background: #2e7d32; color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; display: block; margin: 10px auto; }
+    .back-link { display: inline-block; margin-top: 8px; color: #2e7d32; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .back-link:hover { text-decoration: underline; }
+    .worksheet-section { margin: 20px 0; }
+    .fill-line { border-bottom: 2px solid #a5d6a7; min-height: 26px; margin: 8px 0 14px; display: block; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #616161; text-align: center; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-paywall-sub strong { color: #3B1F6B; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; }
+    @media print { .see-score-btn, .results-section, .score-bar { display:none !important; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  </style>
+</head>
+<body data-document-id="doc_pending_gr3_ls1_u1_quiz">
+  <h1>🌱 Life Cycles Unit Quiz 🌱</h1>
+  <p class="subtitle">Grade 3 Life Science — Unit 1 Quiz</p>
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 3rd Grade</span>
+    <span>🌱 <strong>Subject:</strong> Life Science</span>
+    <span>📝 <strong>Format:</strong> Quiz + short response</span>
+  </div>
+
+  <div class="tip-box"><strong>Quiz note:</strong> This quiz checks the shared life-cycle pattern, plant life cycles, animal life cycles, metamorphosis, comparison, and evidence-based explanation.</div>
+  <div class="tip-box"><strong>Family tip:</strong> Encourage your child to say the full shared pattern — <strong>birth, growth, reproduction, and death</strong> — before choosing an answer or writing the short response.</div>
+  <div class="score-bar">Score: <span id="scoreDisplay">0</span> / <span id="answeredDisplay">0</span> correct &nbsp;|&nbsp; <span id="totalDisplay">8</span> multiple-choice questions</div>
+  <a href="gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html" class="back-link">← Back to Unit 1 Lesson 6</a>
+  <div id="questions-container" style="margin-top:20px;"></div>
+  <button class="see-score-btn" onclick="showResults()">📊 See Your Score</button>
+  <div class="results-section" id="resultsBox">
+    <div style="font-size:2.5rem; margin-bottom:4px;">🏆</div>
+    <div class="score-display" id="finalScore">0 / 8</div>
+    <div class="encouragement" id="encouragementText">Nice work, scientist!</div>
+    <a href="gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html" class="back-link">↺ Review the unit lessons</a>
+  </div>
+
+  <div class="worksheet-section">
+    <h2>✍️ Short Response — Use Evidence</h2>
+    <p>Use evidence from one life-cycle model in the unit to explain how an organism shows birth, growth, reproduction, and death.</p>
+    <p><strong>Prompt:</strong> Choose a plant or animal from the unit. Explain how its model shows the same big life-cycle pattern, and include one detail that makes that organism’s life cycle unique.</p>
+    <span class="fill-line"></span>
+    <span class="fill-line"></span>
+    <span class="fill-line"></span>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Use the quiz and short response together:</strong> The multiple-choice section checks recognition, while the short response checks whether the student can explain a life-cycle model with evidence.</li>
+      <li><strong>Good evidence sounds specific:</strong> Look for stage names, reproduction details, and direct reference to birth, growth, reproduction, and death.</li>
+      <li><strong>Coaching tip:</strong> If a child names only one similarity, prompt them to restate the full shared pattern before adding the organism’s unique feature.</li>
+      <li><strong>Skim-first suggestion:</strong> Before grading, quickly scan for the words <em>birth</em>, <em>growth</em>, <em>reproduction</em>, and <em>death</em>. That fast check catches the most common omission in this unit.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+      <p><strong>Parent note:</strong> This page is for parent/teacher reference. Student wording may vary if the science idea is correct.</p>
+      <h3>Multiple-Choice Answer Key</h3>
+      <ol>
+        <li>Birth, growth, reproduction, and death</li>
+        <li>A mature plant makes new seeds</li>
+        <li>The same organism changes a lot between stages</li>
+        <li>Both still begin life, grow, reproduce, and die</li>
+        <li>To show and explain how the stages connect</li>
+        <li>A seedling grows into a mature plant</li>
+        <li>The adult stage</li>
+        <li>The butterfly changes a lot between stages, but the bird grows more gradually</li>
+      </ol>
+      <h3>Short Response — What Success Looks Like</h3>
+      <ul>
+        <li>Student states the full shared pattern: birth, growth, reproduction, and death.</li>
+        <li>Student uses specific details from a plant or animal life-cycle model.</li>
+        <li>Student names one unique feature of the chosen organism’s life cycle.</li>
+      </ul>
+      <h3>Short Response — Sample Acceptable Answers</h3>
+      <ul>
+        <li><strong>Plant example:</strong> “A bean plant begins as a seed, grows into a seedling and mature plant, makes new seeds, and dies. One unique feature is that reproduction happens when the plant makes seeds.”</li>
+        <li><strong>Animal example:</strong> “A butterfly begins as an egg, grows through caterpillar and chrysalis stages, becomes an adult that can reproduce, and dies. One unique feature is metamorphosis because the body changes a lot between stages.”</li>
+      </ul>
+      <h3>Troubleshooting / Misconceptions</h3>
+      <ul>
+        <li>If the student forgets reproduction, ask “How does the cycle begin again for a new organism?”</li>
+        <li>If the student lists stages without explaining the pattern, ask them to connect each stage to birth, growth, reproduction, or death.</li>
+        <li>If the student treats metamorphosis like a different animal instead of a different stage, point back to the same organism changing over time.</li>
+      </ul>
+    </div>
+  </div>
+
+<script>
+const quizData = [
+  { q: 'Which four parts are shared by all life cycles in this unit?', opts: ['Birth, growth, reproduction, and death', 'Seeds, roots, flowers, and leaves', 'Egg, larva, pupa, adult', 'Baby, child, teen, adult'], a: 0, exp: 'Different organisms use different stage names, but the shared pattern is birth, growth, reproduction, and death.' },
+  { q: 'How does reproduction appear in a plant life cycle?', opts: ['A mature plant makes new seeds', 'The leaves turn green', 'The roots go into soil', 'A seedling gets taller'], a: 0, exp: 'Reproduction appears when the mature plant makes new seeds that can begin a new cycle.' },
+  { q: 'What is metamorphosis?', opts: ['A plant making seeds', 'The same organism changing a lot between stages', 'A life cycle ending early', 'A kind of weather'], a: 1, exp: 'Metamorphosis means a major body change between stages, like caterpillar to butterfly.' },
+  { q: 'How can a butterfly and a bean plant still belong in the same life-cycle unit?', opts: ['They have the same stage names', 'Both still begin life, grow, reproduce, and die', 'Both are animals', 'Both always hatch from eggs'], a: 1, exp: 'The organisms are different, but the same big life-cycle pattern still appears.' },
+  { q: 'Why do scientists use a life-cycle model?', opts: ['To show and explain how the stages connect', 'To make the page look pretty', 'To avoid using evidence', 'To hide the stages'], a: 0, exp: 'A model helps scientists show the order of stages and explain the science idea.' },
+  { q: 'Which statement shows growth in a plant life cycle?', opts: ['A seedling grows into a mature plant', 'A flower turns into soil', 'A plant becomes an animal', 'A seed never changes'], a: 0, exp: 'Growth means the organism develops over time, such as a seedling becoming a mature plant.' },
+  { q: 'In many animal life cycles, when does reproduction happen?', opts: ['In the adult stage', 'Before birth', 'Only in the egg', 'It never happens'], a: 0, exp: 'Reproduction usually happens in the mature adult stage.' },
+  { q: 'Which comparison is strongest?', opts: ['A butterfly is pretty and a bird is noisy', 'The butterfly changes a lot between stages, but the bird grows more gradually', 'A bean plant is green and a frog is wet', 'All organisms have exactly the same stage names'], a: 1, exp: 'A strong comparison names a meaningful similarity or difference connected to the science idea.' }
+];
+let score = 0; let answered = 0;
+function renderQuiz(){
+  const container = document.getElementById('questions-container');
+  quizData.forEach((item, idx) => {
+    const card = document.createElement('div'); card.className = 'question-card';
+    card.innerHTML = `<div class="q-number">Question ${idx+1}</div><div class="q-text">${item.q}</div>`;
+    const ul = document.createElement('ul'); ul.className = 'options-list';
+    const exp = document.createElement('div'); exp.className = 'explanation'; exp.textContent = item.exp;
+    item.opts.forEach((opt, optIdx) => {
+      const li = document.createElement('li');
+      const btn = document.createElement('button'); btn.className = 'option-btn';
+      btn.innerHTML = `<span class="option-icon">🔹</span><span>${opt}</span>`;
+      li.appendChild(btn); ul.appendChild(li);
+      btn.onclick = () => answerQuestion(idx, optIdx, btn, ul, exp);
+    });
+    card.appendChild(ul); card.appendChild(exp); container.appendChild(card);
+  });
+}
+function answerQuestion(qIdx, optIdx, btn, ul, exp){
+  if (ul.dataset.answered === 'true') return;
+  ul.dataset.answered = 'true'; answered++;
+  const correctIdx = quizData[qIdx].a;
+  Array.from(ul.querySelectorAll('.option-btn')).forEach((b, i) => {
+    b.disabled = true;
+    if (i === correctIdx) b.classList.add('revealed-correct');
+  });
+  if (optIdx === correctIdx) { btn.classList.remove('revealed-correct'); btn.classList.add('correct'); score++; }
+  else { btn.classList.add('wrong'); }
+  exp.classList.add('show');
+  document.getElementById('scoreDisplay').textContent = score;
+  document.getElementById('answeredDisplay').textContent = answered;
+}
+function showResults(){
+  const box = document.getElementById('resultsBox');
+  box.classList.add('show');
+  document.getElementById('finalScore').textContent = `${score} / ${quizData.length}`;
+  let msg = 'Nice work, scientist!';
+  if (score === quizData.length) msg = 'Perfect score! You really understand life-cycle patterns.';
+  else if (score >= 6) msg = 'Great job! You are using comparison and evidence like a scientist.';
+  else if (score >= 4) msg = 'Good work! Review the lesson models and try again to grow even stronger.';
+  else msg = 'Keep exploring! Go back through the life-cycle lessons and compare the models again.';
+  document.getElementById('encouragementText').textContent = msg;
+}
+renderQuiz();
+</script>
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_pending_gr3_ls1_u1_quiz" data-content-selector="body"></script>
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full quiz.</div>
+    <p class="llc-paywall-sub">You're seeing the quiz preview. Subscribe to access the full unit quiz, short-response review, and every K–5 lesson, worksheet, and Parent Answer Key.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+  function lockQuiz() {
+    var cards = Array.from(document.querySelectorAll('.question-card'));
+    var freePreviewCount = 2;
+    cards.forEach(function(card, index) { if (index >= freePreviewCount) card.style.display = 'none'; });
+    var responseSection = document.querySelector('.worksheet-section');
+    if (responseSection) responseSection.style.display = 'none';
+    var answerKey = document.querySelector('.page-break');
+    if (answerKey) answerKey.style.display = 'none';
+    var seeScoreButton = document.querySelector('.see-score-btn');
+    if (seeScoreButton) seeScoreButton.style.display = 'none';
+    var resultsBox = document.getElementById('resultsBox');
+    if (resultsBox) resultsBox.style.display = 'none';
+    document.body.style.paddingBottom = '220px';
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
+    if (!isUnlocked()) lockQuiz();
+  });
+})();
+</script>
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

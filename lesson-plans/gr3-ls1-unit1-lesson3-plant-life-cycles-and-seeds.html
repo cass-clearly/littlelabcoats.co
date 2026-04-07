@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Life Cycles and Seeds — Grade 3 Life Science Unit 1</title>
+  <style>
+
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #222;
+}
+h1 {
+  text-align: center;
+  font-size: 22pt;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #2e7d32;
+  padding-bottom: 10px;
+  color: #2e7d32;
+}
+.subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 13pt;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  background: #e8f5e9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 10pt;
+  border: 1px solid #a5d6a7;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+h2 {
+  font-size: 14pt;
+  background: #2e7d32;
+  color: white;
+  padding: 8px 14px;
+  margin: 24px 0 12px 0;
+  border-radius: 6px;
+}
+h3 {
+  font-size: 12pt;
+  color: #1b5e20;
+  border-bottom: 2px solid #a5d6a7;
+  padding-bottom: 4px;
+  margin: 18px 0 8px 0;
+}
+ul, ol { margin: 8px 0; padding-left: 25px; }
+li { margin-bottom: 5px; }
+.hero-image { text-align: center; margin: 16px 0; }
+.emoji-hero { font-size: 58pt; line-height: 1.2; }
+.caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+.standards-box {
+  background: #f3e5f5;
+  border: 1px solid #ce93d8;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 10px 0;
+  font-size: 10pt;
+}
+.objective-box {
+  background: #e8f5e9;
+  border: 2px solid #81c784;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 10px 0;
+}
+.tip-box {
+  background: #e0f7fa;
+  border-left: 5px solid #00bcd4;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 10pt;
+}
+.materials-box {
+  background: #fff8e1;
+  border: 2px solid #ffcc80;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.materials-box h3 { color: #e65100; border-color: #ffcc80; }
+.procedure-step {
+  background: #e8f5e9;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border-left: 5px solid #2e7d32;
+}
+.question-box {
+  background: #f1f8e9;
+  border-left: 5px solid #00B894;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 0 6px 6px 0;
+}
+.discussion-hint {
+  display: block;
+  font-style: italic;
+  color: #555;
+  font-size: 10pt;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+.extension-box {
+  background: #e8eaf6;
+  border: 1px solid #9fa8da;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 10px 0;
+}
+.teacher-note, .answer-key {
+  background: #f5f5f5;
+  border: 2px dashed #999;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 10pt;
+  color: #555;
+}
+.answer-key { border-width: 3px; padding: 20px; }
+.vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.vocab-chip {
+  background: #e8f5e9;
+  border: 1.5px solid #00B894;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #1b5e20;
+}
+.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+.card-grid.five { grid-template-columns: repeat(5, 1fr); }
+.card-grid.three { grid-template-columns: repeat(3, 1fr); }
+.mini-card {
+  border: 2px solid #a5d6a7;
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+  background: #fff;
+}
+.mini-card .big { font-size: 24pt; display: block; margin-bottom: 6px; }
+.mini-card .label { font-weight: bold; color: #1b5e20; margin-bottom: 6px; font-size: 10.5pt; }
+.mini-card .copy { font-size: 9.2pt; color: #444; line-height: 1.35; }
+.section-callout {
+  background: #f9fff9;
+  border: 2px solid #a5d6a7;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 14px 0;
+}
+.worksheet-section { margin: 20px 0; }
+.name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+.draw-area { border: 1.5px dashed #bbb; border-radius: 6px; min-height: 90px; background: #fafafa; margin-top: 8px; }
+.line-block p { border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0; }
+.compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10pt; }
+.compare-table th { background: #2e7d32; color: white; padding: 8px 10px; border: 1.5px solid #1b5e20; text-align: left; }
+.compare-table td { border: 1.5px solid #a5d6a7; padding: 10px; vertical-align: top; height: 44px; }
+.compare-table tr:nth-child(even) td { background: #f6fff6; }
+.science-sentence { background: #e8f5e9; border: 2px solid #00B894; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 12pt; }
+.blank-line { display: inline-block; border-bottom: 2px solid #2e7d32; min-width: 100px; height: 1.1em; vertical-align: bottom; }
+.page-break { page-break-before: always; break-before: page; }
+.print-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1000;
+}
+.llc-paywall-overlay {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+  padding: 48px 24px 40px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+}
+.llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+.llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+.llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+.llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+.llc-paywall-sub strong { color: #3B1F6B; }
+.llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+@media print {
+  h1, h2, h3 { break-after: avoid; }
+  .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .mini-card, .standards-box, .objective-box, .section-callout, .answer-key {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .print-btn, .llc-paywall-overlay { display: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+@media (max-width: 640px) {
+  .card-grid, .card-grid.five, .card-grid.three { grid-template-columns: 1fr; }
+  .meta { flex-direction: column; }
+  .print-btn { position: static; display: block; margin: 0 auto 16px; }
+}
+
+  </style>
+</head>
+<body data-document-id="doc_pending_gr3_ls1_u1_l3">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>Plant Life Cycles and Seeds</h1>
+  <p class="subtitle">Life Science — Life Cycles | Unit 1, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 3rd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Life Cycles</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🌱🌼🫘</div>
+    <div class="caption">Seeds, seedlings, flowers, and new seeds show a plant life cycle in motion.</div>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>3-LS1-1</strong> — Develop models to describe that organisms have unique and diverse life cycles but all have in common birth, growth, reproduction, and death.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will model a plant life cycle and explain where birth, growth, reproduction, and death appear in that model.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Plants may look different from animals, but they still follow the same big pattern of birth, growth, reproduction, and death. A seed begins life, a seedling grows, a mature plant reproduces by making new seeds, and the cycle can begin again.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>A plant life cycle often starts with a <strong>seed</strong>. When conditions are right, the seed begins to grow into a <strong>seedling</strong>. The plant gets larger, makes roots, stems, and leaves, and later produces flowers, fruit, cones, or seed pods. Those structures help the plant make new seeds. New seeds begin the pattern again.</p><div class="card-grid"><div class="mini-card"><span class="big">🫘</span><div class="label">Seed</div><div class="copy">A new plant begins protected inside a seed.</div></div><div class="mini-card"><span class="big">🌱</span><div class="label">Seedling</div><div class="copy">The young plant starts growing roots, stems, and leaves.</div></div><div class="mini-card"><span class="big">🌿</span><div class="label">Mature Plant</div><div class="copy">The plant grows larger and can make flowers or cones.</div></div><div class="mini-card"><span class="big">🌼</span><div class="label">New Seeds</div><div class="copy">Reproduction makes seeds that can begin the pattern again.</div></div></div><p>Different plants may have different-looking stages, but the shared pattern still matters most. Scientists care about the model of what happens over time.</p>
+
+  <div class="tip-box">
+    <strong>💡 Key Vocabulary</strong>
+    <div class="vocab-chips"><span class="vocab-chip">seed</span><span class="vocab-chip">seedling</span><span class="vocab-chip">germinate</span><span class="vocab-chip">mature plant</span><span class="vocab-chip">flower</span><span class="vocab-chip">reproduce</span><span class="vocab-chip">life cycle</span><span class="vocab-chip">model</span></div>
+  </div>
+
+  <h2>Materials</h2>
+  <div class="materials-box"><h3>🏠 Household Items to Gather</h3><ul><li>1 dried bean or sunflower seed per child</li><li>Printed lesson pages and worksheet</li><li>Pencils and colored pencils</li><li>Optional: one real flower, seed packet, or bean pod to observe</li></ul><h3>📋 Printables</h3><ul><li>Student Worksheet page from this lesson</li></ul></div>
+
+  <h2>Let's Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Reconnect to the unit pattern (5 min)</strong><br>Review birth, growth, reproduction, and death from Lessons 1 and 2.</div><div class="procedure-step"><strong>Step 2 — Observe a seed and make a claim (8 min)</strong><br>Ask why a tiny seed counts as the beginning of a plant life cycle.</div><div class="procedure-step"><strong>Step 3 — Build the plant model (12 min)</strong><br>Walk through seed → seedling → mature plant → flower or seed pod → new seeds.</div><div class="procedure-step"><strong>Step 4 — Compare plants to animals (10 min)</strong><br>Compare a bean plant to one familiar animal from earlier lessons.</div><div class="procedure-step"><strong>Step 5 — Explain with evidence (10 min)</strong><br>Use the worksheet to explain how the plant model proves plants have life cycles too.</div>
+
+  <h2>Discussion Questions</h2>
+  <div class="question-box"><strong>Why does a seed count as the beginning of a plant life cycle?</strong><span class="discussion-hint">Look for answers like: the new plant begins inside the seed, so the seed is part of birth and the start of growth.</span></div><div class="question-box"><strong>How is a plant life cycle the same as an animal life cycle?</strong><span class="discussion-hint">They might say both begin life, grow, reproduce, and die, even though the stages look different.</span></div><div class="question-box"><strong>Where do you see reproduction in a plant life cycle?</strong><span class="discussion-hint">Look for flowers, cones, fruit, or seed pods making new seeds that can become new plants.</span></div><div class="question-box"><strong>Why do scientists use models for plant life cycles?</strong><span class="discussion-hint">They might say models help us see the order of stages and explain how one stage leads to the next.</span></div><div class="question-box"><strong>What would happen if a plant never made seeds?</strong><span class="discussion-hint">Students may say the cycle could not begin again for a new plant of the same kind.</span></div>
+
+  <h2>Extensions</h2>
+  <div class="extension-box"><p><strong>Try one more plant:</strong> Add a second plant, such as a sunflower, pumpkin, or pine tree, and compare how its life cycle stages look similar and different.</p><p><strong>Family challenge:</strong> Plant a bean seed and keep a short observation journal.</p></div>
+
+  <h2>Parent/Teacher Notes</h2>
+  <div class="teacher-note"><strong>Teaching move:</strong> Keep returning to the idea that making seeds is how many plants reproduce.<br><br><strong>Important misconception to catch:</strong> Some students think seeds are just “plant crumbs.” Emphasize that a seed is the beginning of a new organism.</div>
+
+  <div class="page-break">
+    <h2>Student Worksheet</h2>
+    <div class="worksheet-section"><div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div><h3>1️⃣ Put the Plant Life Cycle in Order</h3><div class="card-grid"><div class="mini-card"><div class="label">Seed</div><div class="draw-area"></div></div><div class="mini-card"><div class="label">Seedling</div><div class="draw-area"></div></div><div class="mini-card"><div class="label">Mature Plant</div><div class="draw-area"></div></div><div class="mini-card"><div class="label">New Seeds</div><div class="draw-area"></div></div></div></div><div class="worksheet-section"><h3>2️⃣ Show the Big Pattern in a Plant</h3><table class="compare-table"><tr><th>Birth</th><th>Growth</th><th>Reproduction</th><th>Death</th></tr><tr><td></td><td></td><td></td><td></td></tr></table></div><div class="worksheet-section"><h3>3️⃣ Use Your Model as Evidence</h3><p style="font-size:10pt;">Use your model as evidence. Be sure to name where birth, growth, reproduction, and death appear in the plant life cycle.</p><div class="line-block"><p></p><p></p><p></p></div></div><div class="worksheet-section"><h3>4️⃣ Compare a Plant and an Animal</h3><p style="font-size:10pt;">Explain one way both organisms match the same big pattern and one way the plant is different.</p><table class="compare-table"><tr><th>Same</th><th>Different</th></tr><tr><td></td><td></td></tr></table></div>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+      <h3>1️⃣ Put the Plant Life Cycle in Order — Sample Acceptable Answers</h3><p>Accept seed → seedling/sprout → young or mature plant → flower/pod/cone → new seeds.</p><h3>2️⃣ Show the Big Pattern in a Plant — Sample Ideas</h3><ul><li><strong>Birth:</strong> the plant begins as a seed</li><li><strong>Growth:</strong> the seedling and mature plant get bigger</li><li><strong>Reproduction:</strong> the plant makes flowers, fruit, cones, or seed pods that produce new seeds</li><li><strong>Death:</strong> the plant eventually dies after its life</li></ul><h3>3️⃣ Use Your Model as Evidence — Model Response</h3><p>“My model shows that a bean plant begins as a seed, grows into a larger plant, makes new seeds, and dies. That is evidence that plants have life cycles too.”</p><h3>4️⃣ Compare a Plant and an Animal — Sample Ideas</h3><p><strong>Same:</strong> both begin life, grow, reproduce, and die.<br><strong>Different:</strong> a plant begins as a seed and reproduces by making new seeds, while many animals begin in eggs or are born live.</p><h3>✅ What Success Looks Like</h3><ul><li>Student can place the plant stages in a logical order.</li><li>Student can identify where reproduction happens in a plant model.</li><li>Student can use the model as evidence instead of only naming parts.</li><li>Student can connect a plant example back to the same big pattern used earlier in the unit.</li></ul><h3>🛠️ Troubleshooting / Teaching Notes</h3><ul><li>If a student thinks the flower is the end of the cycle, ask what happens after the flower or pod forms.</li><li>If a student skips death, remind them that all living things die even if the next generation begins.</li><li>If a student gives only a surface comparison, prompt: “Where do you see birth, growth, reproduction, and death in both models?”</li></ul>
+    </div>
+  </div>
+
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_pending_gr3_ls1_u1_l3" data-content-selector="body"></script>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+    <div class="llc-paywall-inner">
+      <span class="llc-paywall-emoji">🥼</span>
+      <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+      <p class="llc-paywall-sub">You're seeing the lesson preview. Subscribe to access the full procedure, Student Worksheet, discussion questions, and Parent Answer Key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+      <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+
+    function isUnlocked() {
+      return localStorage.getItem(ACCESS_KEY) === 'granted';
+    }
+
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+      var lockFromH2 = null;
+
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+          lockFromH2 = allH2[i];
+          break;
+        }
+      }
+
+      if (!lockFromH2) {
+        lockFromH2 = allH2[Math.min(4, allH2.length - 1)];
+      }
+
+      if (!lockFromH2) {
+        document.body.style.overflow = 'hidden';
+        document.body.style.maxHeight = '600px';
+        document.getElementById('llcPaywall').style.display = 'block';
+        return;
+      }
+
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) {
+        try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+        return;
+      }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+    © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+  </div>
+</body>
+</html>
