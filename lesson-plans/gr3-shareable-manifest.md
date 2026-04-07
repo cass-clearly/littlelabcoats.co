@@ -1,16 +1,15 @@
 # Grade 3 Shareable Manifest
 
 Last updated: 2026-04-07
-Status: LS1 package is live on littlelabcoats.co and verified on 2026-04-07; Remarq IDs still pending
+Status: Grade 3 LS1, PS2 baseline, ESS2, and ETS1 public URLs in this handoff were spot-checked successfully on 2026-04-07; Remarq IDs still pending for the newly shipped LS1 / ESS2 / ETS1 packages
 Audience: Serena
 
 This file is the concise Grade 3 URL handoff for the current live state.
-The stricter Rachel + Margaret rerun standard is recorded in repo artifacts with round-1 revisions applied, and LS1 Lessons 3–6 plus the LS1 quiz are now live and publicly reachable.
+It should be treated as the Grade 3 source-of-truth URL list for what is publicly reachable right now, plus the exact unresolved blockers that still need external workflow access.
 
 Scope note for audit alignment:
 - this manifest reflects the **currently discoverable Grade 3 repo state** audited in `lesson-plans/gr3-curriculum-audit-and-scope.md`
-- that repo state currently includes `3-LS1` lesson pages 1–6, `3-PS2`, and the standalone `3-LS4` lesson `Bird Beak Buffet`
-- it does **not** mean the required Earth Science / Engineering units for this run already exist
+- that repo state currently includes `3-LS1` lesson pages 1–6, `3-PS2`, `3-ESS2 Unit 1`, `3-ETS1 Unit 1`, and the standalone `3-LS4` lesson `Bird Beak Buffet`
 - it should not be read as proof that a larger full-year Grade 3 domain map has been confirmed in-repo
 
 ## Already public / linked in Grade 3 navigation
@@ -64,25 +63,33 @@ They are wired into the Grade 3 navigation surfaces and were verified live on th
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-quiz.html`  
   Status: `live verified 2026-04-07`
 
-## Grade 3 PS2 lesson URLs staged for next live wiring
+## Grade 3 PS2 current public baseline URLs
 
-These lesson files exist, stricter round-1 Rachel + Margaret review notes are recorded, and round-1 revisions are applied in repo artifacts.
-They are staged in repo navigation for the next push/publish step, but they are **not represented as already published/live in this pass**.
+These Physical Science lesson and quiz URLs are already publicly reachable on the live site.
+Current HTTP spot checks returned `200` on 2026-04-07.
+They are included here as existing Grade 3 baseline inventory, not as part of the newly shipped LS1 / ESS2 / ETS1 completion run.
 
 - `3-PS2 Unit 1 Lesson 1 — Balanced and Unbalanced Forces`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 - `3-PS2 Unit 1 Lesson 2 — Motion Changes with Force`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 - `3-PS2 Unit 1 Lesson 3 — Magnets Pull Without Touching`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 - `3-PS2 Unit 1 Lesson 4 — Magnetic Patterns`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 - `3-PS2 Unit 1 Lesson 5 — Design a Magnetic Game or Tool`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 - `3-PS2 Unit 1 Lesson 6 — Test and Improve Your Force Design`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 - `3-PS2 Unit 1 Quiz — Forces & Motion`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-quiz.html`
+  `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-quiz.html`  
+  Status: `HTTP 200 spot-checked 2026-04-07`
 
 ## Supporting artifacts completed in repo
 
@@ -162,6 +169,24 @@ These Engineering files are now live on the public domain and were verified on 2
 - `3-ETS1 Unit 1 Quiz — Engineering Design`  
   `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html`  
   Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 1 — Defining the Problem`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 2 — Researching Constraints and Materials`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 3 — Planning a Solution`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 4 — Building and Testing a Prototype`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 5 — Improving the Design`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 6 — Share and Defend Your Solution`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html`  
+  Status: `live verified 2026-04-07`
 
 ## Integration checklist snapshot
 
@@ -171,12 +196,21 @@ These Engineering files are now live on the public domain and were verified on 2
 - Grade 3 lesson and quiz routes are now represented in repo-side catalog surfaces for LS1, Earth Science, and Engineering.
 - Real Remarq document IDs are still **not available in-repo** for the new Grade 3 set; affected files still use `doc_pending_*` placeholders.
 
+## Deployment notes for the newly shipped Grade 3 work
+
+- LS1 publish: `df77a88` — `Publish Grade 3 LS1 unit completion assets and navigation`
+- LS1 verification record: `8ed1028` — `Record live verification for Grade 3 LS1 rollout`
+- Earth publish: `df78991` — `Publish Grade 3 Earth Science weather unit and navigation`
+- Earth verification record: `07a2eb7` — `Record live verification for Grade 3 Earth Science rollout`
+- Earth support-asset verification note: `b7bfff6` — `Document Earth Science support asset verification`
+- Engineering publish: `461ca34` — `Publish Grade 3 Engineering unit and navigation`
+- Engineering verification record: `481728c` — `Record live verification for Grade 3 Engineering rollout`
+
 ## What remains after this integration pass
 
 - wire real Remarq document IDs for the LS1 lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
 - wire real Remarq document IDs for the Earth Science lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
 - wire real Remarq document IDs for the Engineering lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
-- update this manifest again after Engineering refcards are explicitly live-verified and after real Remarq IDs are assigned
 
 ## Scope note
 

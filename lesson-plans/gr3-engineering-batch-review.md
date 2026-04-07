@@ -137,6 +137,14 @@ Verified live on 2026-04-07 after commit `461ca34` reached production:
 - `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html`
 - `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html`
 
+Support-asset spot check also verified live on 2026-04-07:
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html`
+
 ## Known blockers / honesty check
 
 - Real Remarq document IDs are not available yet for the Engineering lesson pages, refcards, or quiz.

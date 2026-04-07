@@ -52,7 +52,7 @@ Use these as direct continuity anchors:
 - use the LLC style guide and existing live lesson patterns
 - keep the deeper preview behavior so preview reaches the conceptual top matter and locks from `Materials`
 - run the full review loop: build -> Rachel review -> Margaret review -> revise -> repeat if needed up to 3 rounds max
-- do not push or publish in this pass
+- note for historical accuracy: the original drafting pass did not push/publish, but this package was later published and live-verified on 2026-04-07
 
 ---
 
@@ -70,7 +70,6 @@ Use these as direct continuity anchors:
 ### What this file does and does not claim
 This file now tracks the real Lessons 3–6 batch.
 It does **not** claim that:
-- any LS1 Batch 1 artifact is published/live
 - any review round beyond round 1 has happened
 - real Remarq document IDs have been assigned yet
 
