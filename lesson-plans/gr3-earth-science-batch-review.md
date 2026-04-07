@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-07
 Chunk: `grade3-earth-science-unit1`
-Status: round-1 Rachel + Margaret review notes recorded; round-1 revisions applied in repo; live publish still pending
+Status: round-1 Rachel + Margaret review notes recorded; round-1 revisions applied in repo; published to littlelabcoats.co and verified on 2026-04-07; Remarq IDs still pending
 
 ## Purpose
 
@@ -39,8 +39,8 @@ The required support assets are:
 - Lesson files: `exist in repo and revised for publish`
 - Refcards: `exist in repo and revised for publish`
 - Quiz: `exists in repo and revised for publish`
-- Navigation: `wired in repo; live deployment still pending`
-- Public URLs: `404 for all lessons and quiz before publish`
+- Navigation: `wired in repo and live`
+- Public URLs: `verified live for lessons 1–6 and the unit quiz on 2026-04-07`
 - Remarq IDs: `pending / placeholder only`
 - Review status: `round-1 notes recorded below; round-1 revisions applied in repo`
 
@@ -135,9 +135,18 @@ Status: `not started`
 Notes:
 - reserved if another review round is needed after round 2
 
+## Public verification log
+
+Verified live on 2026-04-07 after commit `df78991` reached production:
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html`
+
 ## Known blockers / honesty check
 
 - Real Remarq document IDs are not available yet for the Earth Science lesson pages, refcards, or quiz.
-- No Earth Science asset in this batch should be called live until the public URLs return 200 on `https://littlelabcoats.co`.
-- Live publish is still pending.
-- This file records real review notes and round-1 revisions, but it does **not** claim publish/live rollout has happened yet.
+- This file does **not** claim successful Remarq wiring yet.
