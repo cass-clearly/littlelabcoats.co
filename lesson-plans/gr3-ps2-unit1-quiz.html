@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Your Knowledge — Forces & Motion | Grade 3</title>
+  <title>Forces & Motion Unit Quiz — Grade 3 Physical Science</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f0f4ff; margin: 0; padding: 0; color: #222; }
-    .quiz-header { background: linear-gradient(135deg, #1976d2, #1565c0); color: white; padding: 32px 24px; text-align: center; }
-    .quiz-header h1 { font-size: 2rem; margin: 0 0 8px; }
-    .quiz-header .subtitle { font-size: 1rem; opacity: 0.88; margin: 0; }
-    .score-bar { background: white; border-bottom: 2px solid #d6e9ff; padding: 14px 24px; text-align: center; font-size: 1.1rem; font-weight: 700; color: #1565c0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .quiz-body { max-width: 760px; margin: 0 auto; padding: 24px 16px 80px; }
-    .question-card { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 22px 24px; margin-bottom: 20px; border: 2px solid #d6e9ff; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.45in; font-size: 11pt; line-height: 1.45; color: #222; background: #fff; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1976d2; padding-bottom: 10px; color: #1976d2; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1976d2; color: white; padding: 8px 14px; margin: 24px 0 12px; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #1565c0; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .question-card { background: #fff; border: 2px solid #d6e9ff; border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
     .q-number { font-size: 0.8rem; font-weight: 700; color: #1976d2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
-    .q-text { font-size: 1.05rem; font-weight: 600; color: #222; margin-bottom: 16px; line-height: 1.4; }
+    .q-text { font-size: 1.02rem; font-weight: 600; color: #222; margin-bottom: 14px; line-height: 1.4; }
     .options-list { list-style: none; padding: 0; margin: 0; }
     .options-list li { margin-bottom: 8px; }
     .option-btn { width: 100%; text-align: left; background: #f8fbff; border: 2px solid #d6e9ff; border-radius: 8px; padding: 10px 14px; font-size: 0.95rem; cursor: pointer; transition: background 0.15s, border-color 0.15s; display: flex; align-items: center; gap: 10px; color: #333; font-family: inherit; }
@@ -25,68 +27,41 @@
     .option-icon { font-size: 1.1rem; min-width: 22px; text-align: center; }
     .explanation { display: none; background: #eef5ff; border-left: 4px solid #1976d2; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 14px; font-size: 0.9rem; color: #444; line-height: 1.5; }
     .explanation.show { display: block; }
-    .results-section { display: none; background: white; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); padding: 30px 28px; margin: 24px 0; text-align: center; border: 3px solid #1976d2; }
+    .score-bar { background: #f8fbff; border: 2px solid #d6e9ff; border-radius: 10px; padding: 14px 18px; text-align: center; font-size: 1rem; font-weight: 700; color: #1565c0; margin-bottom: 18px; }
+    .results-section { display: none; background: white; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); padding: 24px 22px; margin: 24px 0; text-align: center; border: 3px solid #1976d2; }
     .results-section.show { display: block; }
-    .results-section .score-display { font-size: 3rem; font-weight: 800; color: #1976d2; margin: 8px 0; }
-    .results-section .encouragement { font-size: 1.2rem; color: #333; margin: 10px 0 20px; font-weight: 600; }
+    .results-section .score-display { font-size: 2.4rem; font-weight: 800; color: #1976d2; margin: 8px 0; }
+    .results-section .encouragement { font-size: 1.1rem; color: #333; margin: 10px 0 20px; font-weight: 600; }
     .see-score-btn { background: #1976d2; color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; display: block; margin: 10px auto; }
     .back-link { display: inline-block; margin-top: 8px; color: #1976d2; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
     .back-link:hover { text-decoration: underline; }
-    .llc-paywall-overlay {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
-      padding: 48px 24px 40px;
-      text-align: center;
-      z-index: 1000;
-      box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
-    }
-    .llc-paywall-inner {
-      max-width: 520px;
-      margin: 0 auto;
-    }
+    .worksheet-section { margin: 20px 0; }
+    .fill-line { border-bottom: 2px solid #90caf9; min-height: 26px; margin: 8px 0 14px; display: block; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #616161; text-align: center; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
     .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-    .llc-paywall-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #3B1F6B;
-      margin-bottom: 8px;
-    }
-    .llc-paywall-sub {
-      font-family: 'Lato', sans-serif;
-      font-size: 0.95rem;
-      color: #5A7A78;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
     .llc-paywall-sub strong { color: #3B1F6B; }
-    .llc-btn-subscribe {
-      display: inline-block;
-      background: #FF6B6B;
-      color: #fff;
-      font-family: 'Lato', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 14px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 16px rgba(255,107,107,0.28);
-      transition: background 0.2s, transform 0.15s;
-    }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(255,107,107,0.28); transition: background 0.2s, transform 0.15s; }
     .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
-    @media print { body { display: none; } }
+    @media print { .see-score-btn, .results-section, .score-bar { display:none !important; } }
   </style>
 </head>
 <body data-document-id="doc_pending_gr3_ps2_u1_quiz">
-<div class="quiz-header">
-  <h1>🧲 Test Your Knowledge — Forces & Motion</h1>
-  <p class="subtitle">Grade 3 · Physical Science Unit 1 · 3-PS2-1</p>
-</div>
-<div class="score-bar">Score: <span id="scoreDisplay">0</span> / <span id="answeredDisplay">0</span> correct &nbsp;|&nbsp; <span id="totalDisplay">8</span> questions</div>
-<div class="quiz-body">
+  <h1>🧲 Forces & Motion Unit Quiz 🧲</h1>
+  <p class="subtitle">Grade 3 Physical Science — Unit 1 Quiz</p>
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 3rd Grade</span>
+    <span>🧲 <strong>Subject:</strong> Physical Science</span>
+    <span>📝 <strong>Format:</strong> Quiz + short response</span>
+  </div>
+
+  <div class="tip-box"><strong>Quiz note:</strong> This quiz checks balanced and unbalanced forces, motion changes, magnetism, pattern finding, and design improvement. The short response at the end asks students to explain an answer with evidence.</div>
+  <div class="score-bar">Score: <span id="scoreDisplay">0</span> / <span id="answeredDisplay">0</span> correct &nbsp;|&nbsp; <span id="totalDisplay">8</span> multiple-choice questions</div>
   <a href="gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html" class="back-link">← Back to Unit 1 Lesson 6</a>
   <div id="questions-container" style="margin-top:20px;"></div>
   <button class="see-score-btn" onclick="showResults()">📊 See Your Score</button>
@@ -96,7 +71,62 @@
     <div class="encouragement" id="encouragementText">Nice work, scientist!</div>
     <a href="gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html" class="back-link">↺ Review the unit lessons</a>
   </div>
-</div>
+
+  <div class="worksheet-section">
+    <h2>✍️ Short Response — Use Evidence</h2>
+    <p>Pick one idea from the unit and explain it using evidence from an investigation or design test.</p>
+    <p><strong>Prompt:</strong> Explain how evidence from the unit shows one of these ideas: balanced vs unbalanced forces, stronger pushes changing motion, magnets acting without touching, or version 2 improving a design.</p>
+    <span class="fill-line"></span>
+    <span class="fill-line"></span>
+    <span class="fill-line"></span>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Use the quiz and short response together:</strong> The multiple-choice section checks recognition, while the short response checks whether the student can explain an idea with evidence.</li>
+      <li><strong>Good evidence sounds specific:</strong> Look for references to repeated trials, measured distances, magnetic test objects, or version-1 vs version-2 comparisons.</li>
+      <li><strong>Shell parity note:</strong> This quiz now mirrors the lesson pattern more closely by including parent-facing support and an evidence-writing task.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 Parent Answer Key</h2>
+      <p><strong>Detach note:</strong> This page is for parent/teacher reference. Student wording may vary if the science idea is correct.</p>
+      <h3>Multiple-Choice Answer Key</h3>
+      <ol>
+        <li>It does not change motion because the forces match.</li>
+        <li>A push or a pull.</li>
+        <li>To get better evidence and check for a pattern.</li>
+        <li>Paperclip.</li>
+        <li>The object moves toward the magnet before contact.</li>
+        <li>They attract many iron or steel objects but not most other materials.</li>
+        <li>Use the evidence to improve the design.</li>
+        <li>My strong pushes usually moved the car farther than my gentle pushes.</li>
+      </ol>
+      <h3>Short Response — What Success Looks Like</h3>
+      <ul>
+        <li>Student states a correct science or engineering idea from the unit.</li>
+        <li>Student uses specific evidence such as repeated push trials, a magnetic/non-magnetic object pattern, or a version-1 vs version-2 comparison.</li>
+        <li>Student connects the evidence to the idea instead of only restating vocabulary.</li>
+      </ul>
+      <h3>Short Response — Sample Acceptable Answers</h3>
+      <ul>
+        <li><strong>Forces:</strong> “Balanced forces did not change the object’s motion, but unbalanced forces did. In our tests, the object stayed still when the pushes matched and moved when one push was stronger.”</li>
+        <li><strong>Motion changes:</strong> “The stronger pushes usually moved the car farther than the gentle pushes. I know this because I compared the distances from both strong trials and both gentle trials.”</li>
+        <li><strong>Magnetism:</strong> “A magnet can act without touching because the paperclip moved before the magnet touched it. The pattern also showed that some materials were magnetic and others were not.”</li>
+        <li><strong>Design improvement:</strong> “Version 2 worked better because I changed the design after testing version 1. My proof is that version 2 completed the job more reliably than version 1.”</li>
+      </ul>
+      <h3>Troubleshooting / Misconceptions</h3>
+      <ul>
+        <li>If the student gives only a definition, ask “What evidence from the lesson or test supports that?”</li>
+        <li>If the student overgeneralizes magnets to all metals, point them back to the mixed test results.</li>
+        <li>If the student says version 2 was better without proof, ask what specifically changed in the results.</li>
+      </ul>
+    </div>
+  </div>
+
 <script>
 const quizData = [
   { q: 'When forces are balanced, what happens to an object\'s motion?', opts: ['It always speeds up', 'It does not change motion because the forces match', 'It always moves backward', 'It explodes'], a: 1, exp: 'Balanced forces cancel out, so the object does not change motion.' },
@@ -119,8 +149,8 @@ function renderQuiz(){
       const li = document.createElement('li');
       const btn = document.createElement('button'); btn.className = 'option-btn';
       btn.innerHTML = `<span class="option-icon">🔹</span><span>${opt}</span>`;
-      btn.onclick = () => answerQuestion(idx, optIdx, btn, ul, exp);
       li.appendChild(btn); ul.appendChild(li);
+      btn.onclick = () => answerQuestion(idx, optIdx, btn, ul, exp);
     });
     const exp = document.createElement('div'); exp.className = 'explanation'; exp.textContent = item.exp;
     card.appendChild(ul); card.appendChild(exp); container.appendChild(card);
@@ -158,50 +188,38 @@ renderQuiz();
   <div class="llc-paywall-inner">
     <span class="llc-paywall-emoji">🥼</span>
     <div class="llc-paywall-title">This is a preview. Unlock the full quiz.</div>
-    <p class="llc-paywall-sub">You're seeing the quiz preview. Subscribe to access the full unit quiz and every K–5 lesson, worksheet, and Parent Answer Key.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <p class="llc-paywall-sub">You're seeing the quiz preview. Subscribe to access the full unit quiz, short-response review, and every K–5 lesson, worksheet, and Parent Answer Key.<br><strong>$99/year. Cancel anytime.</strong></p>
     <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
   </div>
 </div>
 <script>
 (function() {
   var ACCESS_KEY = 'llc_access';
-
-  function isUnlocked() {
-    return localStorage.getItem(ACCESS_KEY) === 'granted';
-  }
-
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
   function lockQuiz() {
     var cards = Array.from(document.querySelectorAll('.question-card'));
     var freePreviewCount = 2;
-    cards.forEach(function(card, index) {
-      if (index >= freePreviewCount) {
-        card.style.display = 'none';
-      }
-    });
-
+    cards.forEach(function(card, index) { if (index >= freePreviewCount) card.style.display = 'none'; });
+    var responseSection = document.querySelector('.worksheet-section');
+    if (responseSection) responseSection.style.display = 'none';
+    var answerKey = document.querySelector('.page-break');
+    if (answerKey) answerKey.style.display = 'none';
     var seeScoreButton = document.querySelector('.see-score-btn');
     if (seeScoreButton) seeScoreButton.style.display = 'none';
-
     var resultsBox = document.getElementById('resultsBox');
     if (resultsBox) resultsBox.style.display = 'none';
-
     document.body.style.paddingBottom = '220px';
     document.getElementById('llcPaywall').style.display = 'block';
   }
-
   document.addEventListener('DOMContentLoaded', function() {
     if (window.location.search.indexOf('review=1') !== -1) {
       try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
       return;
     }
-    if (!isUnlocked()) {
-      lockQuiz();
-    }
+    if (!isUnlocked()) lockQuiz();
   });
 })();
 </script>
-<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
-  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
-</div>
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
 </body>
 </html>

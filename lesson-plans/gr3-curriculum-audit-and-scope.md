@@ -10,9 +10,114 @@ It began as the **audit + scope definition** tracker for the Grade 3 buildout pa
 
 Unless a later section explicitly says otherwise, early tables in this file should be read as historical audit snapshots rather than the final current-state status.
 
-**Current-state shortcut:** for the final integrated status view, go directly to `Final Grade 3 QA pass snapshot (2026-04-07, iteration 1 of 2)` near the end of this file.
+**Current-state shortcut:** start with `Stricter rerun inventory + correction snapshot (2026-04-07, iteration 1 of 2)` below. The later `Final Grade 3 QA pass snapshot (2026-04-07, iteration 1 of 2)` should now be read as a historical earlier-pass snapshot only.
 
 It does **not** claim that Rachel review, Margaret review, or Remarq inline review has happened unless a later batch-review section explicitly records those notes.
+
+---
+
+## Stricter rerun inventory + correction snapshot (2026-04-07, iteration 1 of 2)
+
+This section is the current source of truth for the stricter Grade 3 reviewer-rerun planning pass.
+It supersedes any weaker earlier wording elsewhere in this file that could be read as if the current stricter reviewer requirement were already complete.
+
+### Verified Grade 3 review set for the stricter rerun
+
+The rerun scope is the currently live/discovered Grade 3 lesson set requested for review:
+- `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
+- `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
+- `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
+- `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
+- `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
+- `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
+- `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
+- `lesson-plans/gr3-ps2-unit1-quiz.html`
+
+### Quiz inclusion decision
+
+`lesson-plans/gr3-ps2-unit1-quiz.html` is **included** in the stricter review set.
+
+Rationale:
+- the file exists in the repo as a real Grade 3 PS2 unit artifact
+- the requested user scope explicitly includes it if it is part of the review set
+- earlier Grade 3 tracking artifacts already group it with the PS2 lesson sequence
+- it affects curriculum completeness and should be reviewed alongside PS2 Lessons 1–6 rather than treated as a separate later-only artifact
+
+### Existing Grade 3 review/status artifacts that must be treated carefully
+
+#### Core tracking artifacts
+- `lesson-plans/gr3-curriculum-audit-and-scope.md`
+- `lesson-plans/gr3-life-science-batch-review.md`
+- `lesson-plans/gr3-physical-science-batch-review.md`
+- `lesson-plans/gr3-shareable-manifest.md`
+
+#### Historical-but-weaker claims that must not be treated as final stricter-review completion
+- `lesson-plans/gr3-physical-science-batch-review.md`
+  - contains historical statuses like `Status: commented`, `Revision round 1: done`, and `Ready-for-human-review`
+  - these are now treated as earlier-pass PS2 build/review markers, **not** proof that the stricter full Grade 3 rerun is complete
+- `lesson-plans/gr3-curriculum-audit-and-scope.md`
+  - the older `Final Grade 3 QA pass snapshot` section contains wording such as `draft ready for human review` and cites the earlier PS2 review artifact as the basis
+  - for the stricter rerun, that wording must be read as historical only until new rerun comments + revisions are recorded
+- `lesson-plans/gr3-shareable-manifest.md`
+  - tracks URLs and earlier review-readiness language for PS2
+  - should not be used as proof that the stricter reviewer pass has been completed
+- `lesson-plans/gr3-life-science-batch-review.md`
+  - honestly remains pending, but still needs explicit LS1 Rachel + Margaret review comments in the stricter rerun
+
+### Public navigation/catalog file map for later wiring
+
+These are the exact repo files that govern Grade 3 discovery and now contain the staged repo-side navigation updates for the Grade 3 LS1 + PS2 set:
+- `index.html`
+  - Grade 3 landing content now stages LS1 Lessons 1–2, PS2 Lessons 1–6 + quiz, and the existing `Bird Beak Buffet` standalone lesson
+- `curriculum.html`
+  - Grade 3 curriculum library section now stages LS1, PS2, and `Bird Beak Buffet` in the unit-card pattern
+- `curriculum/index.html`
+  - mirrors the curriculum-library Grade 3 section and now stages the same LS1 + PS2 + LS4 discovery set
+
+Current staged-not-live summary:
+- Grade 3 LS1 Lessons 1–2 are now wired in repo navigation/catalog files
+- Grade 3 PS2 Lessons 1–6 are now wired in repo navigation/catalog files
+- Grade 3 PS2 Unit 1 Quiz is now wired in repo navigation/catalog files
+- these changes are prepared for the next push/publish step, but they are **not yet claimed as live on the public domain**
+
+### Review-plan note for the stricter rerun
+
+Use two review batches for execution, while preserving explicit comment targets inside each artifact:
+1. `Grade 3 LS1 batch`
+   - covers LS1 Lesson 1 and LS1 Lesson 2
+   - reviewer comments may be recorded per lesson or as a batch only if each comment clearly names the affected lesson
+2. `Grade 3 PS2 batch`
+   - covers PS2 Lessons 1–6 plus `gr3-ps2-unit1-quiz.html`
+   - reviewer comments may be grouped by sub-batch (`L1–L2`, `L3–L4`, `L5–L6`, `Quiz`) or by lesson, but every comment must still map to a concrete file target
+
+Minimum acceptance for the next chunk:
+- both Rachel and Margaret must have explicit round-1 comments recorded for both LS1 and PS2 scope
+- resulting file revisions must be logged as round-1 actions
+- no artifact should claim stricter-review completion until those comments and revisions are actually present
+
+### Stricter rerun review-artifact status update
+
+Current state after round-1 review + revision work:
+- `lesson-plans/gr3-life-science-batch-review.md`
+  - Rachel round-1 comments: `recorded`
+  - Margaret round-1 comments: `recorded`
+  - revision round 1: `revised after round 1 — no round 2 required right now`
+- `lesson-plans/gr3-physical-science-batch-review.md`
+  - Rachel stricter round-1 comments: `recorded`
+  - Margaret stricter round-1 comments: `recorded`
+  - stricter rerun revision round 1: `revised after round 1 — no round 2 required right now`
+
+This means the stricter Grade 3 rerun now has explicit round-1 review comments captured for both LS1 and PS2 scope, and the lesson files have been revised in response. Historical earlier-pass sections elsewhere in the repo should still be read as historical only.
+
+### Navigation/readiness staging snapshot
+
+Current pre-publish readiness state:
+- reviewer round 1: complete for both Rachel and Margaret across LS1 + PS2 scope
+- round-1 revisions: applied in lesson/quiz files and recorded in the review artifacts
+- round 2: not required right now; reopen only if a human reviewer wants additional polish
+- repo navigation/catalog wiring: staged in `index.html`, `curriculum.html`, and `curriculum/index.html`
+- public/live publish state: **not yet claimed** in this repo pass
 
 ---
 
@@ -66,14 +171,14 @@ It does **not** claim that Rachel review, Margaret review, or Remarq inline revi
    - feedback layer script
    - preview/paywall behavior
    - pending `data-document-id` placeholders suitable for later review wiring
-3. **Grade 3 Physical Science Unit 1 exists only partially.**
-   - Lessons 1–2 have content
-   - Lessons 3–6 are TODO placeholders
-   - quiz is TODO placeholder
-   - only refcard for lesson 1 has real content
-4. **Public navigation does not yet represent the full Grade 3 scope.**
-   - Public curriculum currently advertises only `Bird Beak Buffet` for Grade 3
-   - the remaining Grade 3 files are repo artifacts, not yet fully surfaced as public curriculum entries
+3. **Grade 3 Physical Science Unit 1 now has a full stricter-round-1-reviewed lesson + quiz set in repo.**
+   - Lessons 1–6 have concrete content
+   - the quiz has concrete content
+   - refcards for lessons 1–6 are present in repo
+   - stricter Rachel + Margaret round-1 comments and revisions are recorded in the review artifacts
+4. **Repo navigation now stages the full Grade 3 LS1 + PS2 scope, but publish is still pending.**
+   - `index.html`, `curriculum.html`, and `curriculum/index.html` now stage the Grade 3 LS1 + PS2 listings alongside `Bird Beak Buffet`
+   - this repo pass does **not** claim that the public domain has already been updated
 
 ### Scope decision for this chunk
 The canonical Grade 3 scope for the next implementation passes should be based on the **actual Grade 3 repo curriculum artifacts discovered in the repo**, not on current public navigation alone.
@@ -160,26 +265,26 @@ From `lesson-plans/style-guide.html` and the template audits:
 
 | Artifact | Type | Route candidate | Current status | Notes |
 |---|---|---|---|---|
-| `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | lesson page | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | live complete baseline | modern LLC shell; worksheet + answer key + feedback/paywall |
-| `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | lesson page | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | live complete baseline | modern LLC shell; worksheet + answer key + feedback/paywall |
-| `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | draft incomplete | content-bearing; older/simpler shell; has worksheet + answer key; lacks modern paywall/review parity |
-| `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | draft incomplete | content-bearing; older/simpler shell; has worksheet + answer key; lacks modern paywall/review parity |
-| `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | placeholder | file is TODO only |
-| `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | placeholder | file is TODO only |
-| `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | placeholder | file is TODO only |
-| `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | placeholder | file is TODO only |
+| `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | lesson page | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | round-1 reviewed + revised baseline | modern LLC shell; worksheet + answer key + feedback/paywall |
+| `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | lesson page | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | round-1 reviewed + revised baseline | modern LLC shell; worksheet + answer key + feedback/paywall |
+| `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | round-1 reviewed + revised | modern LLC shell parity improved; evidence prompts strengthened |
+| `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | round-1 reviewed + revised | modern LLC shell parity improved; trial-comparison structure strengthened |
+| `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | round-1 reviewed + revised | mixed-object guidance added; no longer a placeholder |
+| `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | round-1 reviewed + revised | mixed-results framing added; no longer a placeholder |
+| `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | round-1 reviewed + revised | success-criteria and constraint language added |
+| `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | lesson page | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | round-1 reviewed + revised | version-comparison and proof prompts added |
 
 ### B. Grade 3 refcards and quiz artifacts
 
 | Artifact | Type | Route candidate | Current status | Notes |
 |---|---|---|---|---|
-| `lesson-plans/gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | draft incomplete | content exists; needs consistency review against final Grade 3 pattern |
-| `lesson-plans/gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | placeholder | TODO only |
-| `lesson-plans/gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | placeholder | TODO only |
-| `lesson-plans/gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | placeholder | TODO only |
-| `lesson-plans/gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | placeholder | TODO only |
-| `lesson-plans/gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | placeholder | TODO only |
-| `lesson-plans/gr3-ps2-unit1-quiz.html` | unit quiz | `/lesson-plans/gr3-ps2-unit1-quiz.html` | placeholder | TODO only |
+| `lesson-plans/gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | present in repo | supporting refcard exists |
+| `lesson-plans/gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | present in repo | supporting refcard exists |
+| `lesson-plans/gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | present in repo | supporting refcard exists |
+| `lesson-plans/gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | present in repo | supporting refcard exists |
+| `lesson-plans/gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | present in repo | supporting refcard exists |
+| `lesson-plans/gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | refcard | `/lesson-plans/gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | present in repo | supporting refcard exists |
+| `lesson-plans/gr3-ps2-unit1-quiz.html` | unit quiz | `/lesson-plans/gr3-ps2-unit1-quiz.html` | round-1 reviewed + revised | quiz shell updated with short response, parent notes, and answer key |
 
 ### C. Grade 3 planning/reference artifacts
 
@@ -210,19 +315,19 @@ This table is the compact asset/supporting-material audit for discovered Grade 3
 |---|---|---|---|---|---|---|
 | `gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | yes | yes | yes | yes | strong baseline | current best-in-class Grade 3 shell |
 | `gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | yes | yes | yes | yes | strong baseline | current best-in-class Grade 3 shell |
-| `gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | yes | yes | no modern parity found | no modern parity found | partial | has worksheet + answer key but not the modern LLC review/paywall shell |
-| `gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | yes | yes | no modern parity found | no modern parity found | partial | has worksheet + answer key but not the modern LLC review/paywall shell |
-| `gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | no | no | no | no | placeholder | TODO-only file |
-| `gr3-ps2-unit1-lesson4-magnetic-patterns.html` | no | no | no | no | placeholder | TODO-only file |
-| `gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | no | no | no | no | placeholder | TODO-only file |
-| `gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | no | no | no | no | placeholder | TODO-only file |
-| `gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | n/a | n/a | n/a | n/a | partial | content-bearing refcard |
-| `gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | n/a | n/a | n/a | n/a | placeholder | TODO-only refcard |
-| `gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | n/a | n/a | n/a | n/a | placeholder | TODO-only refcard |
-| `gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | n/a | n/a | n/a | n/a | placeholder | TODO-only refcard |
-| `gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | n/a | n/a | n/a | n/a | placeholder | TODO-only refcard |
-| `gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | n/a | n/a | n/a | n/a | placeholder | TODO-only refcard |
-| `gr3-ps2-unit1-quiz.html` | n/a | n/a | n/a | n/a | placeholder | TODO-only quiz |
+| `gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | yes | yes | yes | yes | revised | worksheet + answer key + evidence prompts + review/paywall parity present |
+| `gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | yes | yes | yes | yes | revised | worksheet + answer key + structured trial comparison + review/paywall parity present |
+| `gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | yes | yes | yes | yes | revised | no longer placeholder; mixed-object guidance present |
+| `gr3-ps2-unit1-lesson4-magnetic-patterns.html` | yes | yes | yes | yes | revised | no longer placeholder; magnetic-pattern evidence framing present |
+| `gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | yes | yes | yes | yes | revised | no longer placeholder; success criterion + constraint present |
+| `gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | yes | yes | yes | yes | revised | no longer placeholder; version-comparison prompt present |
+| `gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | n/a | n/a | n/a | n/a | present | content-bearing refcard |
+| `gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | n/a | n/a | n/a | n/a | present | supporting refcard exists |
+| `gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | n/a | n/a | n/a | n/a | present | supporting refcard exists |
+| `gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | n/a | n/a | n/a | n/a | present | supporting refcard exists |
+| `gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | n/a | n/a | n/a | n/a | present | supporting refcard exists |
+| `gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | n/a | n/a | n/a | n/a | present | supporting refcard exists |
+| `gr3-ps2-unit1-quiz.html` | n/a | n/a | yes | yes | revised | quiz shell now includes review/paywall support and parent-facing answer guidance |
 | `bird-beak-buffet.html` | not audited in this chunk | not audited in this chunk | not audited in this chunk | not audited in this chunk | public-adjacent baseline | tracked as existing public Grade 3 artifact, not part of LS1/PS2 modernization scope |
 | `free-gr3-egg-drop-kitchen-challenge.html` | not audited in this chunk | not audited in this chunk | not audited in this chunk | not audited in this chunk | public-adjacent freebie | tracked for scope hygiene only |
 
@@ -230,172 +335,136 @@ This table is the compact asset/supporting-material audit for discovered Grade 3
 
 | Grade 3 artifact | Currently linked publicly from Grade 3 navigation? | Current known public URL candidate | Intended/discovered route field | Notes |
 |---|---|---|---|---|
-| `Bird Beak Buffet` | yes | `/lesson-plans/bird-beak-buffet.html` | `/lesson-plans/bird-beak-buffet.html` | only clearly linked Grade 3 lesson now |
-| `3-LS1 Unit 1 L1` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | repo artifact exists; not exposed in Grade 3 navigation |
-| `3-LS1 Unit 1 L2` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | repo artifact exists; not exposed in Grade 3 navigation |
-| `3-PS2 Unit 1 L1` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | repo artifact exists |
-| `3-PS2 Unit 1 L2` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | repo artifact exists |
-| `3-PS2 Unit 1 L3` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | TODO placeholder file exists |
-| `3-PS2 Unit 1 L4` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | TODO placeholder file exists |
-| `3-PS2 Unit 1 L5` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | TODO placeholder file exists |
-| `3-PS2 Unit 1 L6` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | TODO placeholder file exists |
-| `3-PS2 Unit 1 Quiz` | no | none currently linked from Grade 3 navigation | `/lesson-plans/gr3-ps2-unit1-quiz.html` | TODO placeholder file exists |
+| `Bird Beak Buffet` | yes | `/lesson-plans/bird-beak-buffet.html` | `/lesson-plans/bird-beak-buffet.html` | existing Grade 3 standalone lesson remains staged in navigation |
+| `3-LS1 Unit 1 L1` | staged in repo | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | wired in repo navigation; not yet claimed live on public domain |
+| `3-LS1 Unit 1 L2` | staged in repo | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | wired in repo navigation; not yet claimed live on public domain |
+| `3-PS2 Unit 1 L1` | staged in repo | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | wired in repo navigation; round-1 revisions applied |
+| `3-PS2 Unit 1 L2` | staged in repo | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | wired in repo navigation; round-1 revisions applied |
+| `3-PS2 Unit 1 L3` | staged in repo | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | wired in repo navigation; no longer placeholder |
+| `3-PS2 Unit 1 L4` | staged in repo | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | wired in repo navigation; no longer placeholder |
+| `3-PS2 Unit 1 L5` | staged in repo | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | wired in repo navigation; no longer placeholder |
+| `3-PS2 Unit 1 L6` | staged in repo | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | wired in repo navigation; round-1 revisions applied |
+| `3-PS2 Unit 1 Quiz` | staged in repo | `/lesson-plans/gr3-ps2-unit1-quiz.html` | `/lesson-plans/gr3-ps2-unit1-quiz.html` | wired in repo navigation; quiz shell revised from round-1 feedback |
 
 ---
 
-## Detailed completion-gap classification for `gr3-ps2-unit1-*`
+## Detailed completion snapshot for `gr3-ps2-unit1-*`
 
 ### Lesson pages
 
 #### `gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
-Current classification: `draft incomplete`
+Current classification: `round-1 reviewed + revised`
 
-What exists now:
-- title, metadata, NGSS standard, learning objective, big idea
-- materials
-- investigation steps
-- discussion questions
-- parent/teacher notes
-- student worksheet
-- parent/teacher answer key content
-- pending `data-document-id`
-
-Specific completion needs:
-- rebuild into the **modern Grade 3 LLC shell** used by Life Science Lessons 1–2
-- standardize section names and visual rhythm to the newer template
-- add full preview/paywall/review behavior parity
-- add feedback layer script/footer parity if missing from final shell
-- review wording/terminology against style guide (`Parent Answer Key`, exact section naming, etc.)
-- verify route/public-link assumptions later
+Current tracked state:
+- modernized into the current Grade 3 LLC shell
+- includes worksheet, parent answer key, review hooks, and paywall support
+- strengthened with clearer trial-comparison evidence prompts during stricter round 1
 
 #### `gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
-Current classification: `draft incomplete`
+Current classification: `round-1 reviewed + revised`
 
-What exists now:
-- same broad structure as lesson 1
-- content-bearing lesson body
-- worksheet and answer key sections
-- pending `data-document-id`
-
-Specific completion needs:
-- same modernization/parity work required for lesson 1
-- align fully to the established Grade 3 lesson shell
-- verify consistent answer-key naming/wording against style guide
-- add review/paywall/footer/feedback parity if missing from final shell
+Current tracked state:
+- aligned to the established Grade 3 shell
+- includes worksheet, parent answer key, review hooks, and paywall support
+- strengthened with clearer trial-selection and evidence prompts during stricter round 1
 
 #### `gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
-Current classification: `placeholder`
+Current classification: `round-1 reviewed + revised`
 
-Specific completion needs:
-- full lesson page must be created from TODO stub
-- include worksheet and parent answer key if pattern remains applicable
-- include modern review/paywall shell
-- likely use existing magnet-related nearby LLC lessons as topic reference while preserving Grade 3 shell
+Current tracked state:
+- no longer a placeholder
+- includes worksheet, parent answer key, review hooks, and paywall support
+- strengthened with mixed-object guidance during stricter round 1
 
 #### `gr3-ps2-unit1-lesson4-magnetic-patterns.html`
-Current classification: `placeholder`
+Current classification: `round-1 reviewed + revised`
 
-Specific completion needs:
-- full lesson page from TODO stub
-- worksheet + parent answer key where appropriate
-- modern shell + review/paywall parity
+Current tracked state:
+- no longer a placeholder
+- includes worksheet, parent answer key, review hooks, and paywall support
+- strengthened with mixed-results interpretation guidance during stricter round 1
 
 #### `gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
-Current classification: `placeholder`
+Current classification: `round-1 reviewed + revised`
 
-Specific completion needs:
-- full engineering/design lesson from TODO stub
-- worksheet + parent answer key where appropriate
-- modern shell + review/paywall parity
-- likely needs especially clear build/test/revise workflow in the lesson itself
+Current tracked state:
+- no longer a placeholder
+- includes worksheet, parent answer key, review hooks, and paywall support
+- strengthened with explicit success-criterion and constraint language during stricter round 1
 
 #### `gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
-Current classification: `placeholder`
+Current classification: `round-1 reviewed + revised`
 
-Specific completion needs:
-- full capstone/improvement lesson from TODO stub
-- worksheet + parent answer key where appropriate
-- modern shell + review/paywall parity
-- likely depends on lesson 5 design challenge structure
+Current tracked state:
+- no longer a placeholder
+- includes worksheet, parent answer key, review hooks, and paywall support
+- strengthened with version-comparison and proof prompts during stricter round 1
 
 ### Supporting artifacts
 
 #### `gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html`
-Current classification: `draft incomplete`
+Current classification: `present in repo`
 
-What exists now:
-- compact reference card content exists
-
-Specific completion needs:
-- verify final terminology and visual parity with approved Grade 3 reference-card pattern
-- verify whether per-lesson refcards remain the intended pattern for the whole unit
+Current tracked state:
+- supporting refcard exists
 
 #### Refcards for Lessons 2–6
-Current classification: `placeholder`
+Current classification: `present in repo`
 
-Specific completion needs:
-- full content creation from TODO stubs
-- ensure one consistent reference-card pattern across the full unit
+Current tracked state:
+- supporting refcards exist for each lesson in the unit
 
 #### `gr3-ps2-unit1-quiz.html`
-Current classification: `placeholder`
+Current classification: `round-1 reviewed + revised`
 
-Specific completion needs:
-- create full interactive/printable unit quiz pattern consistent with LLC practice
-- align question coverage to the actual completed lesson sequence after lesson buildout
+Current tracked state:
+- quiz shell is present and no longer placeholder-only
+- includes short response, parent notes, answer key support, and review/paywall compatibility
 
 ---
 
 ## Canonical Grade 3 curriculum crosswalk
 
-This crosswalk tracks **all currently discoverable Grade 3 curriculum slots** in the repo and classifies expected outputs.
+This crosswalk tracks **all currently discoverable Grade 3 curriculum slots** in the repo and their current post-round-1 state.
 
 ### Status legend
-- `live complete` = appears ready and already functioning as a current public/baseline artifact
-- `draft incomplete` = real content exists but does not yet meet the target LLC standard for this pass
-- `placeholder` = TODO-only stub or equivalent
-- `missing` = no discovered artifact exists yet for a scoped slot
+- `round-1 reviewed + revised baseline` = baseline lesson with stricter round-1 review captured and revisions applied
+- `round-1 reviewed + revised` = stricter round-1 review captured and revisions applied
+- `live complete` = existing public/baseline artifact outside the stricter LS1/PS2 rerun scope
+- `present in repo` = supporting artifact exists in the repo and is not being represented here as a separate live/public readiness claim
 - `reference-only` = planning/template guidance, not student-facing curriculum
 
 ### Review workflow legend
-For every lesson/refcard/quiz build item below, the intended workflow is:
-- Build
-- Rachel review
-- Margaret review
-- Revise
-- Repeat up to **3 total review rounds max**
-- If still unresolved, mark `needs human review`
-
-No review columns below imply work already happened.
+For Grade 3 LS1 + PS2 scope in this pass, the tracked state is:
+- Rachel review: recorded
+- Margaret review: recorded
+- Rev 1: applied
+- Rev 2 / Rev 3: not needed right now unless a human requests another pass
 
 | Domain | Unit / Standard | Lesson slot | Lesson title / artifact | Expected outputs | Current repo artifact(s) | Status | Route/public URL field | Rachel review | Margaret review | Rev 1 | Rev 2 | Rev 3 | Ready for human review | Dependencies / notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Life Science | `3-LS1` Unit 1 | L1 | What Is a Life Cycle? | lesson page + student worksheet + parent answer key + review/paywall hooks | `gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | live complete | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | planned | planned | planned | planned | planned | not yet recorded | baseline template |
-| Life Science | `3-LS1` Unit 1 | L2 | Different Life Cycles, Same Big Pattern | lesson page + student worksheet + parent answer key + review/paywall hooks | `gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | live complete | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | planned | planned | planned | planned | planned | not yet recorded | baseline template |
-| Physical Science | `3-PS2` Unit 1 | L1 | Balanced and Unbalanced Forces | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`, `gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | draft incomplete | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | planned | planned | planned | planned | planned | not yet recorded | modernize to Life Science shell |
-| Physical Science | `3-PS2` Unit 1 | L2 | Motion Changes with Force | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson2-motion-changes-with-force.html`, `gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | draft incomplete | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | planned | planned | planned | planned | planned | not yet recorded | lesson exists; refcard placeholder |
-| Physical Science | `3-PS2` Unit 1 | L3 | Magnets Pull Without Touching | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`, `gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | placeholder | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | planned | planned | planned | planned | planned | not yet recorded | full creation required |
-| Physical Science | `3-PS2` Unit 1 | L4 | Magnetic Patterns | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson4-magnetic-patterns.html`, `gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | placeholder | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | planned | planned | planned | planned | planned | not yet recorded | full creation required |
-| Physical Science | `3-PS2` Unit 1 | L5 | Design a Magnetic Game or Tool | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`, `gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | placeholder | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | planned | planned | planned | planned | planned | not yet recorded | likely depends on L3/L4 content grounding |
-| Physical Science | `3-PS2` Unit 1 | L6 | Test and Improve Your Force Design | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`, `gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | placeholder | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | planned | planned | planned | planned | planned | not yet recorded | likely depends on L5 |
-| Physical Science | `3-PS2` Unit 1 | Quiz | Unit 1 Quiz | unit quiz | `gr3-ps2-unit1-quiz.html` | placeholder | `/lesson-plans/gr3-ps2-unit1-quiz.html` | planned | planned | planned | planned | planned | not yet recorded | should follow after lesson sequence is stable |
+| Life Science | `3-LS1` Unit 1 | L1 | What Is a Life Cycle? | lesson page + student worksheet + parent answer key + review/paywall hooks | `gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | round-1 reviewed + revised baseline | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | baseline template with clearer evidence/model prompts |
+| Life Science | `3-LS1` Unit 1 | L2 | Different Life Cycles, Same Big Pattern | lesson page + student worksheet + parent answer key + review/paywall hooks | `gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | round-1 reviewed + revised baseline | `/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | baseline template with comparison/application tightening |
+| Physical Science | `3-PS2` Unit 1 | L1 | Balanced and Unbalanced Forces | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`, `gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | trial-comparison evidence prompts added |
+| Physical Science | `3-PS2` Unit 1 | L2 | Motion Changes with Force | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson2-motion-changes-with-force.html`, `gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | trial-selection and evidence prompts added |
+| Physical Science | `3-PS2` Unit 1 | L3 | Magnets Pull Without Touching | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`, `gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | mixed-object guidance clarified |
+| Physical Science | `3-PS2` Unit 1 | L4 | Magnetic Patterns | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson4-magnetic-patterns.html`, `gr3-ps2-unit1-refcard-lesson4-magnetic-patterns.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | mixed-results interpretation clarified |
+| Physical Science | `3-PS2` Unit 1 | L5 | Design a Magnetic Game or Tool | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`, `gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | success criterion + constraint language added |
+| Physical Science | `3-PS2` Unit 1 | L6 | Test and Improve Your Force Design | lesson page + student worksheet + parent answer key + route + review/paywall hooks + refcard coverage | `gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`, `gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | version-1 vs version-2 proof prompt added |
+| Physical Science | `3-PS2` Unit 1 | Quiz | Unit 1 Quiz | unit quiz | `gr3-ps2-unit1-quiz.html` | round-1 reviewed + revised | `/lesson-plans/gr3-ps2-unit1-quiz.html` | recorded | recorded | applied | not needed right now | not needed right now | yes | quiz shell updated with short response + parent notes |
 | Life Science | `3-LS4` standalone | L1 | Bird Beak Buffet | standalone lesson page | `bird-beak-buffet.html` | live complete | `/lesson-plans/bird-beak-buffet.html` | tracked separately | tracked separately | tracked separately | tracked separately | tracked separately | already public artifact | already linked publicly; not part of LS1/PS2 build backlog |
 
 ---
 
-## Missing-items matrix
+## Remaining pre-publish items matrix
 
-These are scoped items implied by the discovered Grade 3 unit scaffolds but not yet present as real curriculum deliverables.
+These are the scoped next-step items that still remain after the stricter round-1 rerun and repo-side navigation staging.
 
 | Scoped item | Expected because | Status |
 |---|---|---|
-| Full content for `3-PS2` Unit 1 Lessons 3–6 | lesson filenames already exist | missing from lesson content; TODO placeholders only |
-| Full content for `3-PS2` Unit 1 refcards Lessons 2–6 | refcard filenames already exist | missing from content; TODO placeholders only |
-| Full content for `3-PS2` Unit 1 quiz | quiz filename already exists | missing from content; TODO placeholder only |
-| Modern review/paywall/feedback parity for `3-PS2` Unit 1 Lessons 1–2 | lesson pages exist, but weaker/older shell than LS1 baseline | missing from current lesson implementation |
-| Explicit worksheet + parent-answer-key support files for placeholder PS2 lessons | expected by established Grade 3 lesson pattern where appropriate | missing because lesson bodies are still TODOs |
-| Public curriculum links/routes for Grade 3 LS1 and PS2 sequence | needed for final public curriculum manifest and route consistency | missing from current public navigation |
-| Grade 3 per-lesson directory route parity (`.../index.html`) if desired by site pattern | many stronger LLC lessons use directory routes | missing for current Grade 3 discovered files |
+| Push staged Grade 3 navigation/catalog changes | repo navigation is ready but this pass does not publish | pending later publish step |
+| Verify public domain shows the staged Grade 3 LS1 + PS2 listings after publish | required to confirm repo-to-live parity | pending later publish verification |
+| Grade 3 per-lesson directory route parity (`.../index.html`) if desired by site pattern | some LLC lessons use directory routes | optional follow-up; not required for this chunk |
 | Additional Grade 3 year-map references beyond discovered LS1 / PS2 / LS4 scope | needed only if an external full Grade 3 map exists | unknown / not discoverable in repo today |
 
 ---
@@ -406,27 +475,22 @@ These are scoped items implied by the discovered Grade 3 unit scaffolds but not 
 
 | Grade 3 slot | Status | Reason |
 |---|---|---|
-| `3-LS1 Unit 1 L1` | live complete | modern LLC shell, worksheet, answer key, review/paywall hooks |
-| `3-LS1 Unit 1 L2` | live complete | modern LLC shell, worksheet, answer key, review/paywall hooks |
-| `3-PS2 Unit 1 L1` | draft incomplete | has lesson content but needs modern LLC shell parity |
-| `3-PS2 Unit 1 L2` | draft incomplete | has lesson content but needs modern LLC shell parity |
-| `3-PS2 Unit 1 L3` | placeholder | TODO stub only |
-| `3-PS2 Unit 1 L4` | placeholder | TODO stub only |
-| `3-PS2 Unit 1 L5` | placeholder | TODO stub only |
-| `3-PS2 Unit 1 L6` | placeholder | TODO stub only |
-| `3-PS2 Unit 1 Quiz` | placeholder | TODO stub only |
+| `3-LS1 Unit 1 L1` | round-1 reviewed + revised baseline | modern LLC shell, worksheet, answer key, review/paywall hooks, and review revisions present |
+| `3-LS1 Unit 1 L2` | round-1 reviewed + revised baseline | modern LLC shell, worksheet, answer key, review/paywall hooks, and review revisions present |
+| `3-PS2 Unit 1 L1` | round-1 reviewed + revised | evidence prompts and LLC shell parity improved |
+| `3-PS2 Unit 1 L2` | round-1 reviewed + revised | trial-selection prompts and LLC shell parity improved |
+| `3-PS2 Unit 1 L3` | round-1 reviewed + revised | lesson exists with mixed-object guidance and full shell |
+| `3-PS2 Unit 1 L4` | round-1 reviewed + revised | lesson exists with mixed-results guidance and full shell |
+| `3-PS2 Unit 1 L5` | round-1 reviewed + revised | lesson exists with success-criterion and constraint guidance |
+| `3-PS2 Unit 1 L6` | round-1 reviewed + revised | lesson exists with version-comparison/proof guidance |
+| `3-PS2 Unit 1 Quiz` | round-1 reviewed + revised | quiz exists with updated shell and parent-facing support |
 | `3-LS4 standalone Bird Beak Buffet` | live complete | existing public lesson |
 
 ### Supporting-asset status
 
 | Supporting asset | Status | Reason |
 |---|---|---|
-| `3-PS2 L1 refcard` | draft incomplete | content exists; needs consistency check after lesson modernization |
-| `3-PS2 L2 refcard` | placeholder | TODO stub only |
-| `3-PS2 L3 refcard` | placeholder | TODO stub only |
-| `3-PS2 L4 refcard` | placeholder | TODO stub only |
-| `3-PS2 L5 refcard` | placeholder | TODO stub only |
-| `3-PS2 L6 refcard` | placeholder | TODO stub only |
+| `3-PS2` refcards lessons 1–6 | present in repo | all supporting refcards exist |
 | `LS1 L1 template audit` | reference-only | planning artifact |
 | `LS1 L2 template audit` | reference-only | planning artifact |
 
@@ -591,40 +655,42 @@ See also: `lesson-plans/gr3-physical-science-batch-review.md`
 - `gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html` was created from placeholder state.
 - `gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html` was created from placeholder state.
 - `gr3-ps2-unit1-quiz.html` was created from placeholder state.
-- Rachel and Margaret review notes now exist in the batch review artifact, and revision round 1 is recorded as complete.
+- Rachel and Margaret review notes now exist in the batch review artifact, and revision round 1 is recorded as complete for that earlier PS2 pass.
 
 ### Updated Physical Science status
 
-| Physical Science item | Status after full chunk | Notes |
+| Physical Science item | Current stricter-rerun status | Notes |
 |---|---|---|
-| `3-PS2 Unit 1 L1` | ready for human review | modern LLC shell + worksheet + parent answer key + review/paywall hooks |
-| `3-PS2 Unit 1 L2` | ready for human review | modern LLC shell + worksheet + parent answer key + review/paywall hooks |
-| `3-PS2 Unit 1 L3` | ready for human review | created from placeholder |
-| `3-PS2 Unit 1 L4` | ready for human review | created from placeholder |
-| `3-PS2 Unit 1 L5` | ready for human review | created from placeholder |
-| `3-PS2 Unit 1 L6` | ready for human review | created from placeholder |
-| `3-PS2 L1 refcard` | ready for human review | standardized |
-| `3-PS2 L2 refcard` | ready for human review | created from placeholder |
-| `3-PS2 L3 refcard` | ready for human review | created from placeholder |
-| `3-PS2 L4 refcard` | ready for human review | created from placeholder |
-| `3-PS2 L5 refcard` | ready for human review | created from placeholder |
-| `3-PS2 L6 refcard` | ready for human review | created from placeholder |
-| `3-PS2 Unit 1 Quiz` | ready for human review | created from placeholder |
+| `3-PS2 Unit 1 L1` | round-1 reviewed + revised | modern LLC shell + worksheet + parent answer key + review/paywall hooks |
+| `3-PS2 Unit 1 L2` | round-1 reviewed + revised | modern LLC shell + worksheet + parent answer key + review/paywall hooks |
+| `3-PS2 Unit 1 L3` | round-1 reviewed + revised | created from placeholder earlier, then revised in stricter round 1 |
+| `3-PS2 Unit 1 L4` | round-1 reviewed + revised | created from placeholder earlier, then revised in stricter round 1 |
+| `3-PS2 Unit 1 L5` | round-1 reviewed + revised | created from placeholder earlier, then revised in stricter round 1 |
+| `3-PS2 Unit 1 L6` | round-1 reviewed + revised | created from placeholder earlier, then revised in stricter round 1 |
+| `3-PS2 L1 refcard` | present in repo | standardized |
+| `3-PS2 L2 refcard` | present in repo | supporting refcard exists |
+| `3-PS2 L3 refcard` | present in repo | supporting refcard exists |
+| `3-PS2 L4 refcard` | present in repo | supporting refcard exists |
+| `3-PS2 L5 refcard` | present in repo | supporting refcard exists |
+| `3-PS2 L6 refcard` | present in repo | supporting refcard exists |
+| `3-PS2 Unit 1 Quiz` | round-1 reviewed + revised | updated quiz shell with short response + parent notes |
 
 ### Review-artifact status
-- Rachel review artifact: created, status `commented`
-- Margaret review artifact: created, status `commented`
-- revision round 1: `done`
-- revision rounds 2–3: available if future review comments require more changes
-- human-review readiness: yes for the completed in-repo PS2 scope
+- Rachel review artifact: recorded in `lesson-plans/gr3-physical-science-batch-review.md`
+- Margaret review artifact: recorded in `lesson-plans/gr3-physical-science-batch-review.md`
+- revision round 1: applied and logged in the PS2 review artifact
+- revision rounds 2–3: not required right now; reopen only if a human reviewer wants another pass
+- stricter-rerun readiness: complete for round 1 across the full requested PS2 scope
 
 ## Decision for next chunk
 
-Use this file as the source of truth and move to the final QA / route / shareable-manifest chunk to verify consistency and prepare Serena-facing Grade 3 URLs.
+Use this file as the source of truth for the staged pre-publish Grade 3 state: stricter round 1 is complete, revisions are applied, and navigation is staged in repo for a later publish/verification step.
 
 ---
 
 ## Final Grade 3 QA pass snapshot (2026-04-07, iteration 1 of 2)
+
+Historical note: this section reflects the earlier in-repo QA/review-readiness snapshot before the stricter reviewer-rerun requirement was imposed. Read it together with `Stricter rerun inventory + correction snapshot (2026-04-07, iteration 1 of 2)` above.
 
 This section reconciles the discovered Grade 3 lesson scope into final working statuses for the next live/publish step.
 
@@ -649,29 +715,29 @@ This section reconciles the discovered Grade 3 lesson scope into final working s
 
 | Grade 3 lesson in scope | Final status bucket | Public URL / route field | Review artifact basis | QA notes |
 |---|---|---|---|---|
-| `3-LS1 Unit 1 L1` — What Is a Life Cycle? | live baseline | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | existing baseline lesson; tracked in Life Science audit notes | modern Grade 3 shell present; not currently linked from Grade 3 navigation |
-| `3-LS1 Unit 1 L2` — Different Life Cycles, Same Big Pattern | live baseline | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | existing baseline lesson; tracked in Life Science audit notes | modern Grade 3 shell present; not currently linked from Grade 3 navigation |
-| `3-PS2 Unit 1 L1` — Balanced and Unbalanced Forces | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | worksheet, answer key, feedback layer, paywall, review bypass, and route field all present |
-| `3-PS2 Unit 1 L2` — Motion Changes with Force | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | worksheet, answer key, feedback layer, paywall, review bypass, and route field all present |
-| `3-PS2 Unit 1 L3` — Magnets Pull Without Touching | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | created from placeholder; modern shell markers present |
-| `3-PS2 Unit 1 L4` — Magnetic Patterns | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | created from placeholder; modern shell markers present |
-| `3-PS2 Unit 1 L5` — Design a Magnetic Game or Tool | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | created from placeholder; modern shell markers present |
-| `3-PS2 Unit 1 L6` — Test and Improve Your Force Design | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | created from placeholder; modern shell markers present |
-| `3-PS2 Unit 1 Quiz` — Forces & Motion Quiz | draft ready for human review | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-quiz.html` | `lesson-plans/gr3-physical-science-batch-review.md` with Rachel + Margaret notes and revision round 1 complete | real quiz exists with `data-document-id`, feedback layer, lesson-style `llcPaywall`, and `review=1` bypass |
-| `3-LS4` standalone — Bird Beak Buffet | live baseline | `https://littlelabcoats.co/lesson-plans/bird-beak-buffet.html` | existing public Grade 3 artifact | currently the only Grade 3 lesson clearly linked from public Grade 3 navigation |
+| `3-LS1 Unit 1 L1` — What Is a Life Cycle? | round-1 reviewed + revised baseline | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | stricter LS1 batch review artifact now records Rachel + Margaret comments and round-1 revisions | staged in repo Grade 3 navigation; not yet claimed live |
+| `3-LS1 Unit 1 L2` — Different Life Cycles, Same Big Pattern | round-1 reviewed + revised baseline | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | stricter LS1 batch review artifact now records Rachel + Margaret comments and round-1 revisions | staged in repo Grade 3 navigation; not yet claimed live |
+| `3-PS2 Unit 1 L1` — Balanced and Unbalanced Forces | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | worksheet, answer key, feedback layer, paywall, review bypass, and route field all present |
+| `3-PS2 Unit 1 L2` — Motion Changes with Force | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | worksheet, answer key, feedback layer, paywall, review bypass, and route field all present |
+| `3-PS2 Unit 1 L3` — Magnets Pull Without Touching | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | created from placeholder earlier, then revised during stricter round 1 |
+| `3-PS2 Unit 1 L4` — Magnetic Patterns | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | created from placeholder earlier, then revised during stricter round 1 |
+| `3-PS2 Unit 1 L5` — Design a Magnetic Game or Tool | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | created from placeholder earlier, then revised during stricter round 1 |
+| `3-PS2 Unit 1 L6` — Test and Improve Your Force Design | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | created from placeholder earlier, then revised during stricter round 1 |
+| `3-PS2 Unit 1 Quiz` — Forces & Motion Quiz | round-1 reviewed + revised | `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-quiz.html` | stricter PS2 batch review artifact now records Rachel + Margaret comments and round-1 revisions | real quiz exists with `data-document-id`, feedback layer, lesson-style `llcPaywall`, and `review=1` bypass |
+| `3-LS4` standalone — Bird Beak Buffet | live baseline | `https://littlelabcoats.co/lesson-plans/bird-beak-buffet.html` | existing public Grade 3 artifact | preserved alongside the newly staged Grade 3 repo navigation set |
 
 ### Supporting-artifact and review completeness summary
 
 | Artifact group | Status | Notes |
 |---|---|---|
-| `3-PS2` refcards lessons 1–6 | draft ready for human review | all refcard files exist and no `TODO` placeholders remain |
-| Life Science review artifact | scoped no-op / honest pending | `lesson-plans/gr3-life-science-batch-review.md` intentionally stays pending because no new LS lesson files were built in that batch |
-| Physical Science review artifact | reviewed and revised | Rachel + Margaret notes exist and revision round 1 is recorded in `lesson-plans/gr3-physical-science-batch-review.md` |
+| `3-PS2` refcards lessons 1–6 | present in repo and aligned to the current lesson set | all refcard files exist and no `TODO` placeholders remain |
+| Life Science review artifact | stricter round 1 complete | `lesson-plans/gr3-life-science-batch-review.md` records Rachel + Margaret comments and round-1 revision dispositions |
+| Physical Science review artifact | stricter round 1 complete | `lesson-plans/gr3-physical-science-batch-review.md` records Rachel + Margaret comments and round-1 revision dispositions |
 
 ### Route and navigation reconciliation
-- `curriculum/index.html` and `index.html` still expose only `Bird Beak Buffet` for Grade 3.
-- Grade 3 LS1 and PS2 lesson file URLs are now tracked and ready for the next live/publish step, but they are **not** yet wired into Grade 3 public navigation in this pass.
-- This pass records intended public URLs only; it does **not** claim that additional Grade 3 lessons were published or surfaced live in navigation.
+- `index.html`, `curriculum.html`, and `curriculum/index.html` now stage the Grade 3 LS1 and PS2 lesson set in repo navigation/catalog surfaces.
+- These staged links are prepared for the next live/publish step, but this pass does **not** claim that the public domain has already been updated.
+- Repo state now reflects: review round 1 complete, revisions applied, navigation staged, publish still pending.
 
 ### Next-step navigation wiring pointers
 Use these tracked routes when the publish/navigation step happens later:
@@ -682,10 +748,10 @@ Use these tracked routes when the publish/navigation step happens later:
 
 ### Serena handoff note
 - **Already public / baseline:** `Bird Beak Buffet`
-- **Existing Grade 3 lesson baselines with stable URLs:** `3-LS1 Unit 1 Lessons 1–2`
-- **Built and reviewed in-repo, ready for human review before live wiring:** `3-PS2 Unit 1 Lessons 1–6`, refcards 1–6, and the unit quiz
-- **Still remaining for the next live step:** public navigation wiring and final publish/live verification
+- **Existing Grade 3 lesson baselines with stable URLs and stricter round-1 review applied:** `3-LS1 Unit 1 Lessons 1–2`
+- **Grade 3 PS2 lesson set with stricter round-1 review applied in repo:** `3-PS2 Unit 1 Lessons 1–6`, refcards 1–6, and the unit quiz
+- **Still remaining for the next live step:** push/publish the staged navigation and verify the public domain reflects it
 
 ### Current blocked items
 - No blocked Grade 3 lesson files in the currently discovered canonical scope.
-- Remaining gaps are publish/navigation tasks, not missing lesson content.
+- Remaining gaps are publish/navigation verification tasks only; stricter round-1 review and revision work are already recorded in repo artifacts.
