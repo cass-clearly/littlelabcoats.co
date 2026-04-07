@@ -6,32 +6,215 @@
   <title>Motion Changes with Force — Grade 3 Physical Science Unit 1, Lesson 2</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
-    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1976d2; padding-bottom: 10px; color: #1976d2; }
-    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
-    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
-    h2 { font-size: 14pt; background: #1976d2; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
-    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
-    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1976d2; }
-    .question-box { background: #e8f5e9; border-left: 5px solid #43a047; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
-    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
-    .tip-box { background: #f3e5f5; border-left: 5px solid #8e24aa; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
-    .standards-box { background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
-    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
-    .worksheet-section { margin: 18px 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1976d2;
+      padding-bottom: 10px;
+      color: #1976d2;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1976d2;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1565c0;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 66pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1976d2;
+    }
+    .procedure-step strong { color: #1565c0; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #43a047;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      padding-left: 8px;
+      display: block;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip {
+      background: #e3f2fd;
+      border: 1.5px solid #64b5f6;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1565c0;
+    }
+    .pattern-box {
+      background: #fff;
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+    .worksheet-section { margin: 20px 0; }
     .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
     .data-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
-    .data-table th { background: #1976d2; color: white; padding: 8px 12px; text-align: left; font-size: 10pt; }
-    .data-table td { border: 1px solid #90caf9; padding: 10px 12px; height: 42px; font-size: 10pt; vertical-align: middle; }
+    .data-table th {
+      background: #1976d2;
+      color: white;
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 10pt;
+      border: 1px solid #1565c0;
+    }
+    .data-table td {
+      border: 1px solid #90caf9;
+      padding: 10px 12px;
+      height: 42px;
+      font-size: 10pt;
+      vertical-align: middle;
+    }
     .data-table tr:nth-child(even) td { background: #e3f2fd; }
     .fill-line { border-bottom: 2px solid #90caf9; min-height: 26px; margin: 8px 0 14px 0; display: block; }
-    .draw-box { border: 2px dashed #bbb; border-radius: 8px; min-height: 140px; margin: 10px 0; padding: 12px; background: #fff; color: #bbb; display: flex; align-items: center; justify-content: center; font-size: 9pt; }
-    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .draw-box {
+      border: 2px dashed #bbb;
+      border-radius: 8px;
+      min-height: 140px;
+      margin: 10px 0;
+      padding: 12px;
+      background: #fff;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
     .answer-key h2 { background: #616161; text-align: center; }
-    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
     .print-btn:hover { background: #1b5e20; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .pattern-box, .standards-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .print-btn { display: none; }
+    }
     .page-break { page-break-before: always; margin-top: 20px; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
 <body data-document-id="doc_pending_gr3_ps2_u1_l2">
@@ -41,8 +224,13 @@
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 3rd Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 40–50 minutes</span>
+    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
     <span>⚡ <strong>Subject:</strong> Physical Science</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🚗➡️</div>
+    <div class="caption">A stronger push can change how far an object moves. Repeated tests help us spot the pattern.</div>
   </div>
 
   <div class="standards-box">
@@ -50,48 +238,77 @@
     <strong>3-PS2-1</strong> — Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will test how different strengths of pushes change motion and use evidence to explain how stronger or weaker forces affect how far an object moves.</p>
-
   <h2>💡 The Big Idea</h2>
-  <p>A force can change motion. A stronger push can make an object move farther or faster. A weaker push may move it only a little. Scientists compare results and use evidence from repeated tests.</p>
+  <p>A force can change an object's motion. When we compare a gentle push to a stronger push, we can collect evidence that stronger and weaker forces can change how far an object moves.</p>
 
-  <div class="tip-box">💡 <strong>Key vocabulary:</strong> force, motion, distance, stronger force, weaker force, evidence, compare</div>
+  <h2>🔬 The Science</h2>
+  <p>Scientists look for patterns by keeping most parts of a test the same and changing just one thing. In this lesson, students keep the same object and starting point, but compare different strengths of pushes.</p>
+  <p>If a stronger push acts on an object, the motion may change more than it does with a weaker push. Repeating the test helps students gather <strong>evidence</strong> instead of guessing from only one try.</p>
+
+  <div class="pattern-box">
+    <h3>What pattern are we looking for?</h3>
+    <p>When the push gets stronger, the object usually moves farther or faster. The exact numbers may change a little, but the pattern should show up across repeated trials.</p>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">force</span>
+      <span class="vocab-chip">motion</span>
+      <span class="vocab-chip">distance</span>
+      <span class="vocab-chip">stronger force</span>
+      <span class="vocab-chip">weaker force</span>
+      <span class="vocab-chip">evidence</span>
+      <span class="vocab-chip">compare</span>
+    </div>
+  </div>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
     <ul>
       <li>1 toy car, small block, or object that slides</li>
-      <li>1 ramp made from cardboard/book (optional) or flat table surface</li>
-      <li>Masking tape</li>
+      <li>1 flat table or smooth floor surface</li>
+      <li>Masking tape for a starting line</li>
       <li>Ruler or measuring tape</li>
       <li>Pencil</li>
-      <li>Printed worksheet</li>
+      <li>Printed Student Worksheet</li>
     </ul>
   </div>
 
-  <h2>🔬 Investigation</h2>
-  <div class="procedure-step"><strong>Step 1 — Set a Starting Line (5 min)</strong><br>Use tape to mark a starting line. Place the object at the same spot each time.</div>
-  <div class="procedure-step"><strong>Step 2 — Try a Gentle Push (8 min)</strong><br>Give the object a gentle push. Measure how far it moved. Record the distance.</div>
-  <div class="procedure-step"><strong>Step 3 — Try a Stronger Push (8 min)</strong><br>Push the same object harder from the same starting line. Measure again and compare.</div>
-  <div class="procedure-step"><strong>Step 4 — Repeat and Compare (10 min)</strong><br>Do each kind of push at least twice. Look for patterns in your results.</div>
+  <h2>🔬 Let's Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Make a Starting Line (5 min)</strong><br>Use tape to mark one starting line. Put the object in the same spot every time so the test stays fair.</div>
+  <div class="procedure-step"><strong>Step 2 — Try a Gentle Push (8 min)</strong><br>Push the object gently. Measure how far it moved. Record the result.</div>
+  <div class="procedure-step"><strong>Step 3 — Repeat the Gentle Push (5 min)</strong><br>Do a second gentle push from the same starting line. Compare the two results.</div>
+  <div class="procedure-step"><strong>Step 4 — Try a Stronger Push (8 min)</strong><br>Push the same object harder from the same starting line. Measure and record how far it moved.</div>
+  <div class="procedure-step"><strong>Step 5 — Repeat and Compare (10 min)</strong><br>Do a second strong push. Then compare the gentle pushes to the strong pushes. What pattern do you notice?</div>
 
   <h2>💬 Discussion Questions</h2>
-  <div class="question-box"><strong>🗣️ Question 1:</strong> "What happened when the push was stronger?"<p class="discussion-hint">💬 A stronger push often made the object travel farther or faster.</p></div>
-  <div class="question-box"><strong>🗣️ Question 2:</strong> "Why do we repeat the test?"<p class="discussion-hint">💬 Repeating helps us check if the pattern happens again and gives us better evidence.</p></div>
-  <div class="question-box"><strong>🗣️ Question 3:</strong> "What is your evidence?"<p class="discussion-hint">💬 Students should use their measured distances or observations from the tests.</p></div>
+  <div class="question-box"><strong>🗣️ Question 1:</strong> What happened when the push was stronger?<span class="discussion-hint">Look for: The object usually moved farther or faster when the push was stronger.</span></div>
+  <div class="question-box"><strong>🗣️ Question 2:</strong> Why did we use the same object and starting line each time?<span class="discussion-hint">Look for: Keeping those parts the same makes the test fair, so we can compare the push strength.</span></div>
+  <div class="question-box"><strong>🗣️ Question 3:</strong> Why do scientists repeat tests?<span class="discussion-hint">Look for: Repeating helps us see whether the same pattern happens again and gives stronger evidence.</span></div>
+  <div class="question-box"><strong>🗣️ Question 4:</strong> What evidence from your chart supports your claim?<span class="discussion-hint">Look for: Students should point to measured distances or clear repeated observations.</span></div>
+
+  <h2>✨ Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>📏 <strong>Average It:</strong> Find the average distance for gentle pushes and for strong pushes.</li>
+      <li>🧱 <strong>Change One Variable:</strong> Try a heavier object next. Does the same pattern still appear?</li>
+      <li>🚦 <strong>Real Life:</strong> Think of a time when a stronger push or pull changed motion in real life, like opening a door or kicking a ball.</li>
+    </ul>
+  </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
     <ul>
-      <li>Consistency matters. Keep the object and starting point the same for each test.</li>
-      <li>Students do not need perfect measurements. The goal is comparing stronger and weaker forces clearly.</li>
-      <li>Encourage students to use actual numbers or comparative words like farther, less far, faster, slower.</li>
+      <li><strong>Fair-test reminder:</strong> Keep the object and starting line the same. The lesson works best when students clearly see that push strength is the variable changing.</li>
+      <li><strong>Measurement does not need to be perfect:</strong> The goal is pattern-finding, not exact lab precision.</li>
+      <li><strong>Evidence language matters:</strong> Encourage students to point to measured distances or repeated observations, not just say “because it was stronger.”</li>
+      <li><strong>Assessment check:</strong> Students should be able to make a claim and back it up with data from their chart.</li>
     </ul>
   </div>
 
   <div class="page-break">
-    <h1>🚗 Student Worksheet — Motion Changes with Force</h1>
+    <h1>🚗 Student Worksheet — Motion Changes with Force 🚗</h1>
     <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
     <div class="worksheet-section">
@@ -111,31 +328,136 @@
       <span class="fill-line"></span>
       <p>My evidence is __________________________________.</p>
       <span class="fill-line"></span>
+      <p>We repeated the test because __________________________________.</p>
+      <span class="fill-line"></span>
     </div>
 
     <div class="worksheet-section">
       <h3>Part 3 — Draw the Test</h3>
-      <p>Draw one gentle push and one strong push.</p>
+      <p>Draw one gentle push and one strong push from the same starting line.</p>
       <div class="draw-box">Draw here ✏️</div>
     </div>
   </div>
 
   <div class="page-break">
     <div class="answer-key">
-      <h2>🔑 PARENT/TEACHER ANSWER KEY</h2>
+      <h2>🔑 Parent Answer Key</h2>
+      <p><strong>Detach note:</strong> This page is for parent/teacher reference. Student wording may vary if the science idea is correct.</p>
       <h3>Part 1</h3>
       <p>Distances vary. Strong pushes should usually move the object farther than gentle pushes.</p>
       <h3>Part 2</h3>
       <ul>
         <li>When the push was stronger, the object <strong>moved farther / moved faster</strong>.</li>
-        <li>Evidence should include measured distances or clear observations from repeated tests.</li>
+        <li>Evidence should include measured distances or repeated observations from the test chart.</li>
+        <li>We repeated the test because <strong>scientists need better evidence and want to see if the same pattern happens again</strong>.</li>
       </ul>
       <h3>What Success Looks Like</h3>
       <ul>
         <li>Student compares stronger and weaker pushes correctly.</li>
-        <li>Student uses evidence from the test table to explain motion changes.</li>
+        <li>Student uses evidence from repeated tests instead of guessing.</li>
+        <li>Student understands that keeping the object and start line the same helps make a fair comparison.</li>
+      </ul>
+      <h3>Troubleshooting / Misconceptions</h3>
+      <ul>
+        <li>If results are messy, remind students that repeated tests matter more than one outlier.</li>
+        <li>If a student says “strong always means faster,” point back to the actual evidence they collected and discuss how we describe what we observed.</li>
       </ul>
     </div>
   </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_pending_gr3_ps2_u1_l2" data-content-selector="body"></script>
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the lesson preview. Subscribe to access the full procedure, Student Worksheet, discussion questions, and Parent Answer Key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) { lockFromIndex = i; break; }
+    }
+    if (lockFromIndex === -1 || lockFromIndex === 0) lockFromIndex = Math.min(2, allH2.length - 1);
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+      if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+    });
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
+    if (!isUnlocked()) lockLesson();
+  });
+})();
+</script>
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
 </body>
 </html>

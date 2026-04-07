@@ -6,38 +6,221 @@
   <title>Balanced and Unbalanced Forces — Grade 3 Physical Science Unit 1, Lesson 1</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
-    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1976d2; padding-bottom: 10px; color: #1976d2; }
-    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
-    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
-    h2 { font-size: 14pt; background: #1976d2; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
-    h3 { font-size: 12pt; color: #1976d2; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #1976d2;
+      padding-bottom: 10px;
+      color: #1976d2;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #90caf9;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #1976d2;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1565c0;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
     ul, ol { margin: 8px 0; padding-left: 25px; }
     li { margin-bottom: 5px; }
     .hero-image { text-align: center; margin: 16px 0; }
-    .hero-image .emoji-hero { font-size: 70pt; line-height: 1.2; }
+    .hero-image .emoji-hero { font-size: 66pt; line-height: 1.2; }
     .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
-    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
-    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1976d2; }
-    .question-box { background: #e8f5e9; border-left: 5px solid #43a047; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
-    .discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
-    .tip-box { background: #f3e5f5; border-left: 5px solid #8e24aa; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
-    .standards-box { background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
-    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
-    .worksheet-section { margin: 18px 0; }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e3f2fd;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #1976d2;
+    }
+    .procedure-step strong { color: #1565c0; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #43a047;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      padding-left: 8px;
+      display: block;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip {
+      background: #e3f2fd;
+      border: 1.5px solid #64b5f6;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1565c0;
+    }
+    .force-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .force-card {
+      border: 2px solid #90caf9;
+      border-radius: 10px;
+      padding: 12px 14px;
+      background: #fff;
+    }
+    .force-card h3 { margin-top: 0; }
+    .worksheet-section { margin: 20px 0; }
     .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
     .data-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
-    .data-table th { background: #1976d2; color: white; padding: 8px 12px; text-align: left; font-size: 10pt; }
-    .data-table td { border: 1px solid #90caf9; padding: 10px 12px; height: 42px; font-size: 10pt; vertical-align: middle; }
+    .data-table th {
+      background: #1976d2;
+      color: white;
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 10pt;
+      border: 1px solid #1565c0;
+    }
+    .data-table td {
+      border: 1px solid #90caf9;
+      padding: 10px 12px;
+      height: 42px;
+      font-size: 10pt;
+      vertical-align: middle;
+    }
     .data-table tr:nth-child(even) td { background: #e3f2fd; }
     .fill-line { border-bottom: 2px solid #90caf9; min-height: 26px; margin: 8px 0 14px 0; display: block; }
-    .draw-box { border: 2px dashed #bbb; border-radius: 8px; min-height: 140px; margin: 10px 0; padding: 12px; background: #fff; color: #bbb; display: flex; align-items: center; justify-content: center; font-size: 9pt; }
-    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .draw-box {
+      border: 2px dashed #bbb;
+      border-radius: 8px;
+      min-height: 140px;
+      margin: 10px 0;
+      padding: 12px;
+      background: #fff;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9pt;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
     .answer-key h2 { background: #616161; text-align: center; }
-    .print-btn { position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
     .print-btn:hover { background: #1b5e20; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .force-card, .standards-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .print-btn { display: none; }
+    }
     .page-break { page-break-before: always; margin-top: 20px; }
-    @media print { .print-btn { display: none; } }
   </style>
 </head>
 <body data-document-id="doc_pending_gr3_ps2_u1_l1">
@@ -47,13 +230,13 @@
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 3rd Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 40–50 minutes</span>
+    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
     <span>🧲 <strong>Subject:</strong> Physical Science</span>
   </div>
 
   <div class="hero-image">
     <div class="emoji-hero">↔️📦</div>
-    <div class="caption">Forces can cancel out, or one force can win and cause motion.</div>
+    <div class="caption">When forces match, motion stays the same. When one force wins, motion changes.</div>
   </div>
 
   <div class="standards-box">
@@ -61,48 +244,83 @@
     <strong>3-PS2-1</strong> — Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.
   </div>
 
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <strong>investigate</strong> what happens when forces are balanced or unbalanced and <strong>use evidence</strong> from a simple test to explain why an object stayed still or moved.</p>
-
   <h2>💡 The Big Idea</h2>
-  <p>A force is a push or a pull. When forces are balanced, they cancel out and the object does not change motion. When forces are unbalanced, one force is stronger, and the object starts moving, stops moving, speeds up, slows down, or changes direction.</p>
+  <p>Objects do not just move for no reason. A push or pull changes motion. If forces are balanced, they cancel out and the object does not change motion. If forces are unbalanced, the object's motion changes.</p>
 
-  <div class="tip-box">💡 <strong>Key vocabulary:</strong> force, push, pull, balanced force, unbalanced force, motion, evidence</div>
+  <h2>🔬 The Science</h2>
+  <p>A <strong>force</strong> is a push or a pull. Forces can start motion, stop motion, speed something up, slow it down, or change its direction. Scientists compare what happens when forces are equal and when they are unequal.</p>
+  <p>When two forces are the same size but act in opposite directions, they are <strong>balanced</strong>. Balanced forces do not mean there are no forces. They mean the forces match. When one force is stronger, the forces are <strong>unbalanced</strong>, and the object's motion changes.</p>
+
+  <div class="force-grid">
+    <div class="force-card">
+      <h3>Balanced</h3>
+      <p>Equal pushes or pulls cancel out. The object stays still or keeps moving the same way it already was.</p>
+    </div>
+    <div class="force-card">
+      <h3>Unbalanced</h3>
+      <p>One force is stronger. The object starts moving, stops, speeds up, slows down, or changes direction.</p>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    💡 <strong>Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">force</span>
+      <span class="vocab-chip">push</span>
+      <span class="vocab-chip">pull</span>
+      <span class="vocab-chip">balanced</span>
+      <span class="vocab-chip">unbalanced</span>
+      <span class="vocab-chip">motion</span>
+      <span class="vocab-chip">evidence</span>
+    </div>
+  </div>
 
   <h2>📦 Materials</h2>
   <div class="materials-box">
     <ul>
       <li>1 small toy car, block, or smooth object that can slide</li>
-      <li>1 flat surface (table or floor)</li>
+      <li>1 flat table or floor surface</li>
       <li>2 index cards or stiff paper pieces</li>
       <li>Masking tape</li>
       <li>Pencil</li>
-      <li>Printed worksheet</li>
+      <li>Printed Student Worksheet</li>
     </ul>
   </div>
 
-  <h2>🔬 Investigation</h2>
-  <div class="procedure-step"><strong>Step 1 — Observe a Balanced Situation (8 min)</strong><br>Place the object on the table. Gently press on both sides at the same time with two index cards so the pushes match. Ask: <em>"Did the object move? What do you notice?"</em></div>
-  <div class="procedure-step"><strong>Step 2 — Try an Unbalanced Push (8 min)</strong><br>Now push harder from one side only. Watch the object move. Ask: <em>"What changed? Which force won?"</em></div>
-  <div class="procedure-step"><strong>Step 3 — Test Again (10 min)</strong><br>Repeat the test with different strengths of pushes. Try one balanced push and two unbalanced pushes. Record what happened each time.</div>
-  <div class="procedure-step"><strong>Step 4 — Explain with Evidence (10 min)</strong><br>Use your observations to explain why the object stayed still in one test and moved in another.</div>
+  <h2>🔬 Let's Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Set Up a Fair Test (5 min)</strong><br>Place the object on the same starting spot each time. Explain that good investigations keep most things the same so we can notice what changed.</div>
+  <div class="procedure-step"><strong>Step 2 — Try a Balanced Push (8 min)</strong><br>Use two index cards to push gently from opposite sides at the same time. Ask: <em>"Did the object change motion? What do you notice?"</em></div>
+  <div class="procedure-step"><strong>Step 3 — Try an Unbalanced Push (8 min)</strong><br>Now make one push stronger than the other. Watch what happens. Ask: <em>"Which force won? How did the motion change?"</em></div>
+  <div class="procedure-step"><strong>Step 4 — Repeat and Record (10 min)</strong><br>Do at least three trials: one balanced and two unbalanced. Record what happened each time on the Student Worksheet.</div>
+  <div class="procedure-step"><strong>Step 5 — Explain with Evidence (10 min)</strong><br>Use your observations to explain why the object stayed still in one test and moved in another. Push students to use the words <em>balanced</em>, <em>unbalanced</em>, and <em>evidence</em>.</div>
 
   <h2>💬 Discussion Questions</h2>
-  <div class="question-box"><strong>🗣️ Question 1:</strong> "What happened when the pushes matched?"<p class="discussion-hint">💬 When the pushes matched, the forces were balanced, so the object did not change motion.</p></div>
-  <div class="question-box"><strong>🗣️ Question 2:</strong> "What happened when one push was stronger?"<p class="discussion-hint">💬 When one push was stronger, the forces were unbalanced, so the object moved.</p></div>
-  <div class="question-box"><strong>🗣️ Question 3:</strong> "What is your evidence?"<p class="discussion-hint">💬 Students should point to what they saw happen in their tests, not just repeat a definition.</p></div>
+  <div class="question-box"><strong>🗣️ Question 1:</strong> What happened when the pushes matched?<span class="discussion-hint">Look for: The forces were balanced, so the object did not change motion.</span></div>
+  <div class="question-box"><strong>🗣️ Question 2:</strong> What happened when one push was stronger?<span class="discussion-hint">Look for: The forces were unbalanced, so the object moved or changed motion.</span></div>
+  <div class="question-box"><strong>🗣️ Question 3:</strong> Why is it important to repeat the test?<span class="discussion-hint">Look for: Repeating gives stronger evidence and helps us see whether the same pattern happens again.</span></div>
+  <div class="question-box"><strong>🗣️ Question 4:</strong> Does balanced mean there were no forces?<span class="discussion-hint">Look for: No. Balanced means the forces were equal and canceled each other out.</span></div>
+
+  <h2>✨ Extensions</h2>
+  <div class="extension-box">
+    <ul>
+      <li>🏒 <strong>Sports Spotting:</strong> Find a sports example of balanced forces and one of unbalanced forces.</li>
+      <li>🧪 <strong>Change the Object:</strong> Repeat the test with an object that is heavier or rougher. How does that affect your results?</li>
+      <li>📝 <strong>Evidence Sentence:</strong> Write one complete sentence using the words <em>balanced</em>, <em>motion</em>, and <em>evidence</em>.</li>
+    </ul>
+  </div>
 
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
     <ul>
-      <li>Keep the investigation physical and visible. The main goal is noticing how motion changes when forces are equal or unequal.</li>
-      <li>Push students to use observation words: stayed still, moved, slid farther, changed direction.</li>
-      <li>This lesson works best when students compare one balanced test to one unbalanced test directly.</li>
+      <li><strong>Keep it visible:</strong> The goal is not precision physics. The goal is helping students notice whether motion changed or stayed the same.</li>
+      <li><strong>Push observation language:</strong> Encourage words like stayed still, moved, changed direction, started moving, and slowed down.</li>
+      <li><strong>Correct a common misconception:</strong> Students often think balanced means “nothing is happening.” Re-emphasize that balanced means the forces match.</li>
+      <li><strong>Assessment check:</strong> A successful response explains both what happened and why the evidence supports balanced or unbalanced forces.</li>
     </ul>
   </div>
 
   <div class="page-break">
-    <h1>⚖️ Student Worksheet — Balanced and Unbalanced Forces</h1>
+    <h1>⚖️ Student Worksheet — Balanced and Unbalanced Forces ⚖️</h1>
     <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
     <div class="worksheet-section">
@@ -121,6 +339,8 @@
       <span class="fill-line"></span>
       <p>When the forces were unbalanced, the object __________________________________.</p>
       <span class="fill-line"></span>
+      <p>My evidence is __________________________________.</p>
+      <span class="fill-line"></span>
     </div>
 
     <div class="worksheet-section">
@@ -132,20 +352,123 @@
 
   <div class="page-break">
     <div class="answer-key">
-      <h2>🔑 PARENT/TEACHER ANSWER KEY</h2>
+      <h2>🔑 Parent Answer Key</h2>
+      <p><strong>Detach note:</strong> This page is for parent/teacher reference. Student wording may vary if the science idea is correct.</p>
       <h3>Part 1</h3>
-      <p>Answers vary. Balanced-force trials should show little or no change in motion. Unbalanced-force trials should show the object moving.</p>
+      <p>Answers vary. Balanced trials should show little or no change in motion. Unbalanced trials should show the object moving or changing motion.</p>
       <h3>Part 2</h3>
       <ul>
         <li>When the forces were balanced, the object <strong>stayed still / did not change motion</strong>.</li>
         <li>When the forces were unbalanced, the object <strong>moved / changed motion</strong>.</li>
+        <li>Evidence should refer to what the student observed in the investigation.</li>
       </ul>
       <h3>What Success Looks Like</h3>
       <ul>
-        <li>Student can tell the difference between balanced and unbalanced situations.</li>
-        <li>Student uses evidence from the investigation to explain motion.</li>
+        <li>Student can distinguish balanced from unbalanced situations.</li>
+        <li>Student uses evidence from the tests rather than only repeating vocabulary.</li>
+        <li>Student can explain that balanced does not mean “no forces.”</li>
+      </ul>
+      <h3>Troubleshooting / Misconceptions</h3>
+      <ul>
+        <li>If the student says balanced means “nothing happened at all,” remind them that equal forces were still acting.</li>
+        <li>If a test result looks messy, focus on the pattern across repeated trials rather than one imperfect push.</li>
       </ul>
     </div>
   </div>
+
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_pending_gr3_ps2_u1_l1" data-content-selector="body"></script>
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the lesson preview. Subscribe to access the full procedure, Student Worksheet, discussion questions, and Parent Answer Key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) { lockFromIndex = i; break; }
+    }
+    if (lockFromIndex === -1 || lockFromIndex === 0) lockFromIndex = Math.min(2, allH2.length - 1);
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+      if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+    });
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
+    if (!isUnlocked()) lockLesson();
+  });
+})();
+</script>
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
 </body>
 </html>
