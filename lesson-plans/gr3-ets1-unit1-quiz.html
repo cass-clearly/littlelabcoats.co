@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Design Unit Quiz — Grade 3</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.45in; font-size: 11pt; line-height: 1.45; color: #222; background: #fff; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #8e44ad; padding-bottom: 10px; color: #8e44ad; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #f4e6fb; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #d2b4de; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #8e44ad; color: white; padding: 8px 14px; margin: 24px 0 12px; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #6c3483; border-bottom: 2px solid #d2b4de; padding-bottom: 4px; margin: 18px 0 8px; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .question-card { background: #fff; border: 2px solid #eadcf1; border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .q-number { font-size: 0.8rem; font-weight: 700; color: #8e44ad; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .q-text { font-size: 1.02rem; font-weight: 600; color: #222; margin-bottom: 14px; line-height: 1.4; }
+    .options-list { list-style: none; padding: 0; margin: 0; }
+    .options-list li { margin-bottom: 8px; }
+    .option-btn { width: 100%; text-align: left; background: #faf5ff; border: 2px solid #eadcf1; border-radius: 8px; padding: 10px 14px; font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; gap: 10px; color: #333; font-family: inherit; }
+    .option-btn.correct, .option-btn.revealed-correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; }
+    .option-btn.wrong { background: #ffebee; border-color: #e53935; color: #c62828; }
+    .option-icon { font-size: 1.1rem; min-width: 22px; text-align: center; }
+    .explanation { display: none; background: #f4e6fb; border-left: 4px solid #8e44ad; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 14px; font-size: 0.9rem; color: #444; line-height: 1.5; }
+    .explanation.show { display: block; }
+    .score-bar { background: #faf5ff; border: 2px solid #eadcf1; border-radius: 10px; padding: 14px 18px; text-align: center; font-size: 1rem; font-weight: 700; color: #6c3483; margin-bottom: 18px; }
+    .results-section { display: none; background: white; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); padding: 24px 22px; margin: 24px 0; text-align: center; border: 3px solid #8e44ad; }
+    .results-section.show { display: block; }
+    .results-section .score-display { font-size: 2.4rem; font-weight: 800; color: #8e44ad; margin: 8px 0; }
+    .see-score-btn { background: #8e44ad; color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; display: block; margin: 10px auto; }
+    .back-link { display: inline-block; margin-top: 8px; color: #8e44ad; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .worksheet-section { margin: 20px 0; }
+    .fill-line { border-bottom: 2px solid #d2b4de; min-height: 26px; margin: 8px 0 14px; display: block; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #616161; text-align: center; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; }
+    @media print { .see-score-btn, .results-section, .score-bar { display:none !important; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  </style>
+</head>
+<body data-document-id="doc_pending_gr3_ets1_u1_quiz">
+  <h1>🛠️ Engineering Design Unit Quiz 🛠️</h1>
+  <p class="subtitle">Grade 3 Engineering — Unit 1 Quiz</p>
+  <div class="meta"><span>📚 <strong>Grade:</strong> 3rd Grade</span><span>🛠️ <strong>Subject:</strong> Engineering</span><span>📝 <strong>Format:</strong> Quiz + short response</span></div>
+  <div class="tip-box"><strong>Family tip:</strong> This quiz checks whether students can explain the whole design process for a fragile-object protection challenge: defining the problem, working with constraints, planning, fair testing, redesign, and defending a solution. <br><strong>Skim-first suggestion:</strong> Review the refcards from Lessons 1–6 or retell the journey from version 1 to version 2 before answering.</div>
+  <div class="score-bar">Score: <span id="scoreDisplay">0</span> / <span id="answeredDisplay">0</span> correct &nbsp;|&nbsp; <span id="totalDisplay">8</span> multiple-choice questions</div>
+  <a href="gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html" class="back-link">← Back to Unit 1 Lesson 6</a>
+  <div id="questions-container" style="margin-top:20px;"></div>
+  <button class="see-score-btn" onclick="showResults()">📊 See Your Score</button>
+  <div class="results-section" id="resultsBox"><div style="font-size:2.5rem; margin-bottom:4px;">🏆</div><div class="score-display" id="finalScore">0 / 8</div><div class="encouragement" id="encouragementText">Nice work, engineer!</div><a href="gr3-ets1-unit1-lesson1-defining-the-problem.html" class="back-link">↺ Review the unit lessons</a></div>
+  <div class="worksheet-section"><h2>✍️ Short Response — Use Evidence</h2><p>Explain how one redesign improved a fragile-object protection challenge.</p><p><strong>Prompt:</strong> Name the problem, describe one change from version 1 to version 2, and explain what test evidence makes the new version more trustworthy.</p><span class="fill-line"></span><span class="fill-line"></span><span class="fill-line"></span></div>
+  <h2>👩‍🏫 Parent/Teacher Notes</h2><div class="teacher-note"><ul><li><strong>Use the quiz and short response together:</strong> Multiple choice checks recognition of the design process, while the short response checks reasoning with evidence.</li><li><strong>Look for challenge-specific language:</strong> Strong answers mention fragile-object protection, criteria, constraints, fair tests, failure points, or redesign evidence.</li><li><strong>Fast grading tip:</strong> Scan for the words criteria, constraint, prototype, fair test, failure point, version 1, and version 2.</li></ul></div>
+  <div class="page-break"><div class="answer-key"><h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2><p><strong>Parent note:</strong> Student wording may vary if the engineering reasoning is correct.</p><h3>Multiple-Choice Answer Key</h3><ol><li>It names the need and what success should look like</li><li>A limit the design must follow</li><li>To choose the idea that best fits the criteria and constraints</li><li>The drop height and object stay the same</li><li>The weakest part that did not work well</li><li>It should connect to evidence from version 1</li><li>The problem, solution, criteria, constraints, and evidence</li><li>Because it includes specific test or redesign evidence</li></ol><h3>Short Response — What Success Looks Like</h3><ul><li>Student names the challenge or problem clearly.</li><li>Student describes one specific redesign change.</li><li>Student cites test evidence showing why version 2 is stronger.</li></ul><h3>Short Response — Sample Acceptable Answer</h3><p>“My problem was protecting a fragile egg during a drop. I changed version 2 by adding stronger side supports and extra padding where version 1 bent. The evidence is that version 2 held its shape better and the egg moved less during the same drop test.”</p></div></div>
+<script>
+const quizData = [
+  { q: 'What makes a problem statement strong in this unit?', opts: ['It names the need and what success should look like', 'It uses the most materials', 'It skips the user and criteria', 'It focuses only on decoration'], a: 0, exp: 'A strong engineering problem statement clearly names the need and success goal.' },
+  { q: 'What is a constraint?', opts: ['A final grade', 'A limit the design must follow', 'A type of sketch only', 'A way to ignore the challenge'], a: 1, exp: 'Constraints are limits such as allowed materials, time, or size.' },
+  { q: 'Why do engineers compare more than one plan before building?', opts: ['To choose the idea that best fits the criteria and constraints', 'To waste time', 'To make the worksheet longer', 'Because testing is not important'], a: 0, exp: 'Comparing plans helps engineers make a reasoned design choice.' },
+  { q: 'What makes a drop test fair?', opts: ['Changing the object every time', 'The drop height and object stay the same', 'Testing from random places', 'Skipping notes'], a: 1, exp: 'Fair tests keep important conditions consistent so results can be compared honestly.' },
+  { q: 'What is a failure point?', opts: ['The best part of the design', 'A decoration added at the end', 'The weakest part that did not work well', 'The final score'], a: 2, exp: 'The failure point tells engineers where the design most needs improvement.' },
+  { q: 'What should guide a redesign?', opts: ['A random new idea', 'Whatever uses more tape', 'It should connect to evidence from version 1', 'Only what looks nice'], a: 2, exp: 'A redesign is strongest when it directly responds to the earlier evidence.' },
+  { q: 'What should a final engineering defense include?', opts: ['Only the final model', 'The problem, solution, criteria, constraints, and evidence', 'Just the materials list', 'Only personal opinion'], a: 1, exp: 'A strong engineering defense connects the whole design story to evidence.' },
+  { q: 'Why is evidence stronger than opinion in a design defense?', opts: ['Because it sounds longer', 'Because it includes specific test or redesign evidence', 'Because engineers never explain their thinking', 'Because evidence is always a drawing'], a: 1, exp: 'Evidence shows what actually happened in testing or redesign.' }
+];
+let score = 0; let answered = 0;
+function renderQuiz(){ const container = document.getElementById('questions-container'); quizData.forEach((item, idx) => { const card = document.createElement('div'); card.className = 'question-card'; card.innerHTML = `<div class="q-number">Question ${idx+1}</div><div class="q-text">${item.q}</div>`; const ul = document.createElement('ul'); ul.className = 'options-list'; const exp = document.createElement('div'); exp.className = 'explanation'; exp.textContent = item.exp; item.opts.forEach((opt, optIdx) => { const li = document.createElement('li'); const btn = document.createElement('button'); btn.className = 'option-btn'; btn.innerHTML = `<span class="option-icon">🔹</span><span>${opt}</span>`; li.appendChild(btn); ul.appendChild(li); btn.onclick = () => answerQuestion(idx, optIdx, btn, ul, exp); }); card.appendChild(ul); card.appendChild(exp); container.appendChild(card); }); }
+function answerQuestion(qIdx, optIdx, btn, ul, exp){ if (ul.dataset.answered === 'true') return; ul.dataset.answered = 'true'; answered++; const correctIdx = quizData[qIdx].a; Array.from(ul.querySelectorAll('.option-btn')).forEach((b, i) => { b.disabled = true; if (i === correctIdx) b.classList.add('revealed-correct'); }); if (optIdx === correctIdx) { btn.classList.remove('revealed-correct'); btn.classList.add('correct'); score++; } else { btn.classList.add('wrong'); } exp.classList.add('show'); document.getElementById('scoreDisplay').textContent = score; document.getElementById('answeredDisplay').textContent = answered; }
+function showResults(){ const box = document.getElementById('resultsBox'); box.classList.add('show'); document.getElementById('finalScore').textContent = `${score} / ${quizData.length}`; let msg = 'Nice work, engineer!'; if (score === quizData.length) msg = 'Perfect score! You can explain the whole engineering design cycle.'; else if (score >= 6) msg = 'Great job! You are connecting design choices to evidence well.'; else if (score >= 4) msg = 'Good work! Review the planning, fair-testing, and redesign lessons to strengthen your explanations.'; else msg = 'Keep building! Go back through the unit and practice connecting the problem, tests, and redesign evidence.'; document.getElementById('encouragementText').textContent = msg; }
+renderQuiz();
+</script>
+<script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc_pending_gr3_ets1_u1_quiz" data-content-selector="body"></script>
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full quiz.</div><p class="llc-paywall-sub">You're seeing the quiz preview. Subscribe to access the full unit quiz, short-response review, and every K–5 lesson, worksheet, and Parent Answer Key.<br><strong>$99/year. Cancel anytime.</strong></p><a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a></div></div>
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+  function lockQuiz() {
+    var cards = Array.from(document.querySelectorAll('.question-card'));
+    var freePreviewCount = 2;
+    cards.forEach(function(card, index) { if (index >= freePreviewCount) card.style.display = 'none'; });
+    var responseSection = document.querySelector('.worksheet-section');
+    if (responseSection) responseSection.style.display = 'none';
+    var answerKey = document.querySelector('.page-break');
+    if (answerKey) answerKey.style.display = 'none';
+    var seeScoreButton = document.querySelector('.see-score-btn');
+    if (seeScoreButton) seeScoreButton.style.display = 'none';
+    var resultsBox = document.getElementById('resultsBox');
+    if (resultsBox) resultsBox.style.display = 'none';
+    document.body.style.paddingBottom = '220px';
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
+    if (!isUnlocked()) lockQuiz();
+  });
+})();
+</script>
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

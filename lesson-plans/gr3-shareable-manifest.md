@@ -137,12 +137,41 @@ These Earth Science files are now live on the public domain and were verified on
   `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html`  
   Status: `live verified 2026-04-07`
 
-## What remains after LS1 publish/live verification
+## Grade 3 Engineering URLs staged for next live wiring
 
-- wire real Remarq document IDs for the LS1 lessons, refcards, and quiz if/when that workflow is accessible
-- wire real Remarq document IDs for the Earth Science lessons, refcards, and quiz if/when that workflow is accessible
-- build the required Grade 3 Engineering 6-lesson unit and support assets
-- update the wider Grade 3 manifest again as Engineering goes live
+These Engineering files now exist in repo, have been revised after round-1 review notes, follow the Grade 3 lesson/support shell, and are wired into repo-side Grade 3 navigation surfaces.
+They are **not yet represented as live verified in this manifest**.
+
+- `3-ETS1 Unit 1 Lesson 1 — Defining the Problem`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html`
+- `3-ETS1 Unit 1 Lesson 2 — Researching Constraints and Materials`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html`
+- `3-ETS1 Unit 1 Lesson 3 — Planning a Solution`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html`
+- `3-ETS1 Unit 1 Lesson 4 — Building and Testing a Prototype`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html`
+- `3-ETS1 Unit 1 Lesson 5 — Improving the Design`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html`
+- `3-ETS1 Unit 1 Lesson 6 — Share and Defend Your Solution`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html`
+- `3-ETS1 Unit 1 Quiz — Engineering Design`  
+  `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html`
+
+## Integration checklist snapshot
+
+- Preview/paywall lesson scripts for LS1, Earth Science, and Engineering use the deeper `lock-from-Materials` behavior in repo.
+- `index.html`, `curriculum.html`, and `curriculum/index.html` now include Grade 3 LS1, Earth Science, and Engineering unit discoverability links in repo.
+- Store CTA pattern remains `/store.html` on the newly built Grade 3 lessons and quizzes.
+- Grade 3 lesson and quiz routes are now represented in repo-side catalog surfaces for LS1, Earth Science, and Engineering.
+- Real Remarq document IDs are still **not available in-repo** for the new Grade 3 set; affected files still use `doc_pending_*` placeholders.
+
+## What remains after this integration pass
+
+- wire real Remarq document IDs for the LS1 lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
+- wire real Remarq document IDs for the Earth Science lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
+- wire real Remarq document IDs for the Engineering lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
+- publish and live-verify the Engineering unit
+- update this manifest again after Engineering is live verified and after real Remarq IDs are assigned
 
 ## Scope note
 
