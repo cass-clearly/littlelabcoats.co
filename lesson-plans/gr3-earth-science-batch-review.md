@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-07
 Chunk: `grade3-earth-science-unit1`
-Status: round-1 Rachel + Margaret review notes recorded; round-1 revisions applied in repo; published to littlelabcoats.co and verified on 2026-04-07; Remarq IDs still pending
+Status: round-1 Rachel + Margaret review notes recorded; round-1 revisions applied in repo; published to littlelabcoats.co and verified on 2026-04-07; stable self-generated document IDs now wired in repo
 
 ## Purpose
 
@@ -41,8 +41,8 @@ The required support assets are:
 - Quiz: `exists in repo and revised for publish`
 - Navigation: `wired in repo and live`
 - Public URLs: `verified live for lessons 1–6 and the unit quiz on 2026-04-07`
-- Remarq IDs: `pending / placeholder only`
-- Review status: `round-1 notes recorded below; round-1 revisions applied in repo`
+- Remarq IDs: `stable self-generated IDs wired in repo; see lesson-plans/gr3-document-id-manifest.md`
+- Review status: `Rachel + Margaret round 1 recorded; round-1 revisions applied in repo; no Earth Science asset remains in pre-review or pre-revision state for this run`
 
 ## Internal QA snapshot
 
@@ -126,14 +126,16 @@ Notes:
 - Round 2 is not required right now, but can be reopened if publish-phase review finds additional issues.
 
 ### Revision round 2
-Status: `not started`
+Status: `not needed at this time`
 Notes:
-- reserved if later publish-phase review finds additional issues
+- reserved only if a later publish-phase review finds additional issues
+- no current Earth Science asset is waiting on round-2 review or revision
 
 ### Revision round 3
-Status: `not started`
+Status: `not needed at this time`
 Notes:
-- reserved if another review round is needed after round 2
+- reserved only if another review round becomes necessary after round 2
+- no current Earth Science asset is waiting on round-3 review or revision
 
 ## Public verification log
 
@@ -156,5 +158,6 @@ Support-asset spot check also verified live on 2026-04-07:
 
 ## Known blockers / honesty check
 
-- Real Remarq document IDs are not available yet for the Earth Science lesson pages, refcards, or quiz.
-- This file does **not** claim successful Remarq wiring yet.
+- Earth Science lesson pages, refcards, and quiz now use stable self-generated document IDs for this run.
+- This file now claims successful in-repo document-ID wiring for the Earth Science package.
+- There is no active Rachel/Margaret review blocker remaining for the Earth Science package in this run.

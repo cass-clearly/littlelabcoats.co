@@ -1,7 +1,7 @@
 # Grade 3 Shareable Manifest
 
 Last updated: 2026-04-07
-Status: Grade 3 LS1, PS2 baseline, ESS2, and ETS1 public URLs in this handoff were spot-checked successfully on 2026-04-07; Remarq IDs still pending for the newly shipped LS1 / ESS2 / ETS1 packages
+Status: Grade 3 LS1, PS2 baseline, ESS2, and ETS1 public URLs in this handoff were spot-checked successfully on 2026-04-07; representative live publish/discoverability checks for ESS2 and ETS1 lessons, quizzes, refcards, and curriculum surfaces returned HTTP 200 on 2026-04-07; stable self-generated document IDs are now wired for the newly shipped LS1 / ESS2 / ETS1 packages
 Audience: Serena
 
 This file is the concise Grade 3 URL handoff for the current live state.
@@ -188,13 +188,56 @@ These Engineering files are now live on the public domain and were verified on 2
   `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html`  
   Status: `live verified 2026-04-07`
 
+## Live verification sweep addendum
+
+Full public re-check completed on 2026-04-07 for the newly shipped Grade 3 Earth Science and Engineering sets.
+All in-scope URLs below returned `HTTP 200`, and the fetched page titles matched the expected lesson / refcard / quiz names.
+
+### Earth Science full public sweep
+- `gr3-ess2-unit1-lesson1-weather-patterns-over-time.html` → `200` / title matched
+- `gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html` → `200` / title matched
+- `gr3-ess2-unit1-lesson3-reading-weather-data.html` → `200` / title matched
+- `gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html` → `200` / title matched
+- `gr3-ess2-unit1-lesson5-designing-for-local-weather.html` → `200` / title matched
+- `gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html` → `200` / title matched
+- `gr3-ess2-unit1-quiz.html` → `200` / title matched
+- `gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html` → `200` / title matched
+- `gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html` → `200` / title matched
+- `gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html` → `200` / title matched
+- `gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html` → `200` / title matched
+- `gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html` → `200` / title matched
+- `gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html` → `200` / title matched
+
+### Engineering full public sweep
+- `gr3-ets1-unit1-lesson1-defining-the-problem.html` → `200` / title matched
+- `gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html` → `200` / title matched
+- `gr3-ets1-unit1-lesson3-planning-a-solution.html` → `200` / title matched
+- `gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html` → `200` / title matched
+- `gr3-ets1-unit1-lesson5-improving-the-design.html` → `200` / title matched
+- `gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html` → `200` / title matched
+- `gr3-ets1-unit1-quiz.html` → `200` / title matched
+- `gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html` → `200` / title matched
+- `gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html` → `200` / title matched
+- `gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html` → `200` / title matched
+- `gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html` → `200` / title matched
+- `gr3-ets1-unit1-refcard-lesson5-improving-the-design.html` → `200` / title matched
+- `gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html` → `200` / title matched
+
+### Live discoverability spot checks
+- `/` exposes Grade 3 Earth Science and Grade 3 Engineering lesson + quiz links in the Grade 3 section.
+- `/curriculum.html` exposes Grade 3 Earth Science and Grade 3 Engineering lesson + quiz links in the Grade 3 curriculum view.
+- `/curriculum/` exposes the same Grade 3 Earth Science and Grade 3 Engineering lesson + quiz links in the live curriculum route.
+- No routing, visibility, or grade-placement fix was required during this verification pass.
+
 ## Integration checklist snapshot
 
 - Preview/paywall lesson scripts for LS1, Earth Science, and Engineering use the deeper `lock-from-Materials` behavior in repo.
 - `index.html`, `curriculum.html`, and `curriculum/index.html` now include Grade 3 LS1, Earth Science, and Engineering unit discoverability links in repo.
 - Store CTA pattern remains `/store.html` on the newly built Grade 3 lessons and quizzes.
 - Grade 3 lesson and quiz routes are now represented in repo-side catalog surfaces for LS1, Earth Science, and Engineering.
-- Real Remarq document IDs are still **not available in-repo** for the new Grade 3 set; affected files still use `doc_pending_*` placeholders.
+- Stable self-generated document IDs are now wired in-repo for the in-scope LS1 / ESS2 / ETS1 lessons, refcards, and quizzes.
+- The authoritative mapping lives in `lesson-plans/gr3-document-id-manifest.md`.
+- Representative live re-checks on 2026-04-07 returned HTTP 200 for: `gr3-ess2-unit1-lesson1-weather-patterns-over-time.html`, `gr3-ess2-unit1-quiz.html`, `gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`, `gr3-ets1-unit1-lesson1-defining-the-problem.html`, `gr3-ets1-unit1-quiz.html`, `gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`, `curriculum.html`, `curriculum/`, and `/`.
 
 ## Deployment notes for the newly shipped Grade 3 work
 
@@ -206,11 +249,172 @@ These Engineering files are now live on the public domain and were verified on 2
 - Engineering publish: `461ca34` — `Publish Grade 3 Engineering unit and navigation`
 - Engineering verification record: `481728c` — `Record live verification for Grade 3 Engineering rollout`
 
-## What remains after this integration pass
+## Final rollout manifest for newly completed Grade 3 assets
 
-- wire real Remarq document IDs for the LS1 lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
-- wire real Remarq document IDs for the Earth Science lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
-- wire real Remarq document IDs for the Engineering lessons, refcards, and quiz once the authoritative ID source/workflow is accessible
+This section is the final handoff view for the newly completed Grade 3 rollout in this run.
+Each listed asset is live, tied to its stable generated document ID, and backed by the review / publish / verification records referenced elsewhere in this file.
+
+### Completion summary
+
+- `3-LS1` completion assets in scope for this run: Rachel + Margaret review recorded, revisions applied, published live, and live verified on 2026-04-07.
+- `3-ESS2 Unit 1`: Rachel + Margaret review recorded, revisions applied, published live, and live verified on 2026-04-07.
+- `3-ETS1 Unit 1`: Rachel + Margaret review recorded, revisions applied, published live, and live verified on 2026-04-07.
+- Stable self-generated document IDs are the implementation truth for this run and are wired in the published LS1 / ESS2 / ETS1 assets.
+- Final live verification for ESS2 / ETS1 includes full public sweep results plus live navigation/discoverability checks recorded above.
+
+### `3-LS1 Unit 1` newly completed assets
+
+- `3-LS1 Unit 1 Lesson 3 — Plant Life Cycles and Seeds`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html`  
+  Document ID: `doc_gr3_ls1_u1_l3`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Unit 1 Lesson 4 — Animal Life Cycles and Metamorphosis`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html`  
+  Document ID: `doc_gr3_ls1_u1_l4`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Unit 1 Lesson 5 — Comparing Life Cycle Patterns`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html`  
+  Document ID: `doc_gr3_ls1_u1_l5`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Unit 1 Lesson 6 — Model and Explain a Life Cycle`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html`  
+  Document ID: `doc_gr3_ls1_u1_l6`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Refcard — Lesson 3 Plant Life Cycles and Seeds`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`  
+  Document ID: `doc_gr3_ls1_u1_ref_l3`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Refcard — Lesson 4 Animal Life Cycles and Metamorphosis`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`  
+  Document ID: `doc_gr3_ls1_u1_ref_l4`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Refcard — Lesson 5 Comparing Life Cycle Patterns`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html`  
+  Document ID: `doc_gr3_ls1_u1_ref_l5`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Refcard — Lesson 6 Model and Explain a Life Cycle`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html`  
+  Document ID: `doc_gr3_ls1_u1_ref_l6`  
+  Status: `live verified 2026-04-07`
+- `3-LS1 Unit 1 Quiz — Life Cycles`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-quiz.html`  
+  Document ID: `doc_gr3_ls1_u1_quiz`  
+  Status: `live verified 2026-04-07`
+
+### `3-ESS2 Unit 1` final live assets
+
+- `3-ESS2 Unit 1 Lesson 1 — Weather Patterns Over Time`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html`  
+  Document ID: `doc_gr3_ess2_u1_l1`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Lesson 2 — Climate Regions and Conditions`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html`  
+  Document ID: `doc_gr3_ess2_u1_l2`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Lesson 3 — Reading Weather Data`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html`  
+  Document ID: `doc_gr3_ess2_u1_l3`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Lesson 4 — Weather Hazards and Impacts`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html`  
+  Document ID: `doc_gr3_ess2_u1_l4`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Lesson 5 — Designing for Local Weather`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html`  
+  Document ID: `doc_gr3_ess2_u1_l5`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Lesson 6 — Reducing Weather-Related Hazards`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html`  
+  Document ID: `doc_gr3_ess2_u1_l6`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Quiz — Weather & Climate`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html`  
+  Document ID: `doc_gr3_ess2_u1_quiz`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 1 — Weather Patterns Over Time`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`  
+  Document ID: `doc_gr3_ess2_u1_ref_l1`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 2 — Climate Regions and Conditions`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`  
+  Document ID: `doc_gr3_ess2_u1_ref_l2`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 3 — Reading Weather Data`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`  
+  Document ID: `doc_gr3_ess2_u1_ref_l3`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 4 — Weather Hazards and Impacts`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`  
+  Document ID: `doc_gr3_ess2_u1_ref_l4`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 5 — Designing for Local Weather`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`  
+  Document ID: `doc_gr3_ess2_u1_ref_l5`  
+  Status: `live verified 2026-04-07`
+- `3-ESS2 Unit 1 Refcard 6 — Reducing Weather-Related Hazards`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html`  
+  Document ID: `doc_gr3_ess2_u1_ref_l6`  
+  Status: `live verified 2026-04-07`
+
+### `3-ETS1 Unit 1` final live assets
+
+- `3-ETS1 Unit 1 Lesson 1 — Defining the Problem`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html`  
+  Document ID: `doc_gr3_ets1_u1_l1`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Lesson 2 — Researching Constraints and Materials`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html`  
+  Document ID: `doc_gr3_ets1_u1_l2`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Lesson 3 — Planning a Solution`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html`  
+  Document ID: `doc_gr3_ets1_u1_l3`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Lesson 4 — Building and Testing a Prototype`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html`  
+  Document ID: `doc_gr3_ets1_u1_l4`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Lesson 5 — Improving the Design`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html`  
+  Document ID: `doc_gr3_ets1_u1_l5`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Lesson 6 — Share and Defend Your Solution`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html`  
+  Document ID: `doc_gr3_ets1_u1_l6`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Quiz — Engineering Design`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html`  
+  Document ID: `doc_gr3_ets1_u1_quiz`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 1 — Defining the Problem`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`  
+  Document ID: `doc_gr3_ets1_u1_ref_l1`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 2 — Researching Constraints and Materials`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`  
+  Document ID: `doc_gr3_ets1_u1_ref_l2`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 3 — Planning a Solution`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`  
+  Document ID: `doc_gr3_ets1_u1_ref_l3`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 4 — Building and Testing a Prototype`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`  
+  Document ID: `doc_gr3_ets1_u1_ref_l4`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 5 — Improving the Design`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`  
+  Document ID: `doc_gr3_ets1_u1_ref_l5`  
+  Status: `live verified 2026-04-07`
+- `3-ETS1 Unit 1 Refcard 6 — Share and Defend Your Solution`  
+  URL: `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html`  
+  Document ID: `doc_gr3_ets1_u1_ref_l6`  
+  Status: `live verified 2026-04-07`
+
+## What remains after this final handoff
+
+- keep the new self-generated LS1 / ESS2 / ETS1 document IDs as the implementation truth for this run
+- if future Remarq workflow changes ever require migration, use `lesson-plans/gr3-document-id-manifest.md` as the source mapping rather than re-inventing IDs ad hoc
 
 ## Scope note
 

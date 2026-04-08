@@ -35,20 +35,58 @@ Important consequence:
 
 ## Current repo inventory re-audit
 
-### Existing Grade 3 lesson and support artifacts confirmed in repo
+### Existing Grade 3 lesson, reference-card, and quiz artifacts confirmed in repo
 
-#### Grade 3 Life Science
+This is the canonical explicit inventory from current repo contents.
+
+#### Grade 3 Life Science — `3-LS1 Unit 1`
+Lesson pages:
 - `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
 - `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html`
+- `lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html`
+- `lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html`
+- `lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html`
 
-#### Grade 3 Physical Science anchors already built
+Reference cards:
+- `lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`
+- `lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`
+- `lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html`
+- `lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html`
+
+Quiz:
+- `lesson-plans/gr3-ls1-unit1-quiz.html`
+
+#### Grade 3 Earth Science — `3-ESS2 Unit 1`
+Lesson pages:
+- `lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html`
+- `lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html`
+- `lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html`
+- `lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html`
+- `lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html`
+- `lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html`
+
+Reference cards:
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html`
+
+Quiz:
+- `lesson-plans/gr3-ess2-unit1-quiz.html`
+
+#### Grade 3 Physical Science — `3-PS2 Unit 1`
+Lesson pages:
 - `lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html`
 - `lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html`
 - `lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html`
 - `lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html`
 - `lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html`
 - `lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html`
-- `lesson-plans/gr3-ps2-unit1-quiz.html`
+
+Reference cards:
 - `lesson-plans/gr3-ps2-unit1-refcard-lesson1-balanced-and-unbalanced-forces.html`
 - `lesson-plans/gr3-ps2-unit1-refcard-lesson2-motion-changes-with-force.html`
 - `lesson-plans/gr3-ps2-unit1-refcard-lesson3-magnets-pull-without-touching.html`
@@ -56,8 +94,34 @@ Important consequence:
 - `lesson-plans/gr3-ps2-unit1-refcard-lesson5-design-a-magnetic-game-or-tool.html`
 - `lesson-plans/gr3-ps2-unit1-refcard-lesson6-test-and-improve-your-force-design.html`
 
+Quiz:
+- `lesson-plans/gr3-ps2-unit1-quiz.html`
+
+#### Grade 3 Engineering — `3-ETS1 Unit 1`
+Lesson pages:
+- `lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html`
+- `lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html`
+- `lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html`
+- `lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html`
+- `lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html`
+- `lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html`
+
+Reference cards:
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html`
+
+Quiz:
+- `lesson-plans/gr3-ets1-unit1-quiz.html`
+
 #### Grade 3 standalone / adjacent anchors
+Standalone lesson anchor:
 - `lesson-plans/bird-beak-buffet.html`
+
+Engineering-adjacent freebie set:
 - `lesson-plans/free-gr3-egg-drop-kitchen-challenge.html`
 - `lesson-plans/free-gr3-egg-drop-kitchen-challenge-refcard.html`
 - `lesson-plans/free-gr3-egg-drop-kitchen-challenge-quiz.html`
@@ -71,29 +135,148 @@ Important consequence:
 
 #### Already existing in repo and usable as anchors
 - Grade 3 Life Science Unit 1 Lessons 1–6 now exist in repo
+- Grade 3 Life Science Unit 1 refcards for Lessons 3–6 exist in repo
+- Grade 3 Life Science Unit 1 quiz exists in repo
 - Grade 3 Physical Science Unit 1 Lessons 1–6 exist in repo
 - Grade 3 Physical Science Unit 1 quiz exists in repo
 - Grade 3 Physical Science per-lesson refcards for Lessons 1–6 exist in repo
+- Grade 3 Earth Science `3-ESS2 Unit 1` Lessons 1–6 exist in repo
+- Grade 3 Earth Science `3-ESS2 Unit 1` per-lesson refcards for Lessons 1–6 exist in repo
+- Grade 3 Earth Science `3-ESS2 Unit 1` quiz exists in repo
+- Grade 3 Engineering `3-ETS1 Unit 1` Lessons 1–6 exist in repo
+- Grade 3 Engineering `3-ETS1 Unit 1` per-lesson refcards for Lessons 1–6 exist in repo
+- Grade 3 Engineering `3-ETS1 Unit 1` quiz exists in repo
 - Bird Beak Buffet exists as a Grade 3 standalone anchor
-- Egg Drop Kitchen Challenge + refcard + quiz exist as Grade 3 engineering-adjacent anchors
+- Egg Drop Kitchen Challenge + refcard + quiz exist as a Grade 3 engineering-adjacent freebie anchor set
 
 #### Still missing or incomplete for this run
-- Grade 3 Life Science Unit 1 refcards for Lessons 3–6 are now present in repo and live-verified
-- Grade 3 Life Science Unit 1 quiz is now present in repo and live-verified
-- a complete 6-lesson Grade 3 Earth Science unit
-- a complete 6-lesson Grade 3 Engineering unit
-- Earth Science and Engineering companion support artifacts where the LLC workflow expects them
-- Earth Science and Engineering batch review artifacts
-- real Remarq wiring / document IDs for newly created assets in this run
-- updated Grade 3 catalog/navigation wiring for the finished set
-- final clean public URL manifest for the finished set after live verification
+- the Grade 3 audit/baseline docs still need to be treated as the canonical status source for downstream implementation so later chunks do not re-open already-finished Earth Science and Engineering build/review/publish work
+- the final handoff for this run still needs a manifest that reflects the now-wired document-ID truth consistently across all status files
+
+#### Not blocked anymore for this run
+- Earth Science is **not** blocked on missing year-map docs: the full `gr3-ess2-unit1-*` lesson/refcard/quiz set already exists in repo, review notes are recorded, revisions are logged, navigation is wired, and public verification is documented
+- Engineering is **not** blocked on missing year-map docs: the full `gr3-ets1-unit1-*` lesson/refcard/quiz set already exists in repo, review notes are recorded, revisions are logged, navigation is wired, and public verification is documented
+- external authoritative Remarq IDs are **not** required to continue; stable self-generated IDs are now wired for the in-scope LS1 / ESS2 / ETS1 assets in this run
 
 ### Life Science gap-map conclusion
 
 For this completion run, **no Grade 3 LS1 lesson pages remain to be written**.
 The remaining Grade 3 Life Science scope is exactly:
-- wire real Remarq document IDs for LS1 lessons, refcards, and quiz
-- carry the verified LS1 live state forward in later Grade 3 manifest/audit updates as Earth Science and Engineering are shipped
+- carry the verified LS1 live state forward in later Grade 3 manifest/audit updates alongside the Earth Science and Engineering sets
+- use the stable self-generated LS1 document IDs already recorded in `lesson-plans/gr3-document-id-manifest.md`
+
+---
+
+## Chunk-1 consolidated gap report
+
+This section is the current canonical implementation-status snapshot for the Grade 3 completion run.
+Use it instead of older assumptions that Earth Science or Engineering are still missing from the repo.
+
+### Centralized asset inventory summary from current repo contents
+
+The explicit canonical path inventory lives above.
+This summary condenses that inventory into implementation-sized groups for downstream chunks.
+
+#### Lesson-page groups present now
+- Life Science `3-LS1 Unit 1`: 6 lesson pages (`lesson1` through `lesson6`)
+- Earth Science `3-ESS2 Unit 1`: 6 lesson pages (`lesson1` through `lesson6`)
+- Physical Science `3-PS2 Unit 1`: 6 lesson pages (`lesson1` through `lesson6`)
+- Engineering `3-ETS1 Unit 1`: 6 lesson pages (`lesson1` through `lesson6`)
+- Standalone Grade 3-adjacent lesson anchor: `lesson-plans/bird-beak-buffet.html`
+- Standalone Grade 3-adjacent engineering freebie lesson: `lesson-plans/free-gr3-egg-drop-kitchen-challenge.html`
+
+#### Reference-card groups present now
+- Life Science `3-LS1 Unit 1`: 4 refcards in repo for Lessons 3–6
+- Earth Science `3-ESS2 Unit 1`: 6 refcards
+- Physical Science `3-PS2 Unit 1`: 6 refcards
+- Engineering `3-ETS1 Unit 1`: 6 refcards
+- Standalone Grade 3-adjacent engineering freebie refcard: `lesson-plans/free-gr3-egg-drop-kitchen-challenge-refcard.html`
+
+#### Quiz groups present now
+- Life Science unit quiz: `lesson-plans/gr3-ls1-unit1-quiz.html`
+- Earth Science unit quiz: `lesson-plans/gr3-ess2-unit1-quiz.html`
+- Physical Science unit quiz: `lesson-plans/gr3-ps2-unit1-quiz.html`
+- Engineering unit quiz: `lesson-plans/gr3-ets1-unit1-quiz.html`
+- Standalone Grade 3-adjacent engineering freebie quiz: `lesson-plans/free-gr3-egg-drop-kitchen-challenge-quiz.html`
+
+### Status by asset group
+
+| Asset group | Repo existence | Review state | Revision state | Publish/live state | Navigation/catalog state | Document ID state | Remaining action in this run |
+|---|---|---|---|---|---|---|---|
+| `3-LS1 Unit 1` lessons 1–6 (`gr3-ls1-unit1-lesson1-*` through `lesson6-*`) | present | recorded in existing LS1 batch-review trail for the shipped set; Lessons 1–2 are baseline anchors | revisions already applied for shipped set | public URLs already documented as live verified | linked in `index.html`, `curriculum.html`, and `curriculum/index.html` | stable self-generated IDs now wired | carry the stable IDs forward in final manifest truth |
+| `3-LS1 Unit 1` refcards 3–6 + quiz (`gr3-ls1-unit1-refcard-lesson3-*` through `lesson6-*`, plus `gr3-ls1-unit1-quiz.html`) | present | support-asset review addendum already recorded | revised | public URLs already documented as live verified | linked from Grade 3 catalog surfaces via unit quiz discoverability | stable self-generated IDs now wired | carry the stable IDs forward in final manifest truth |
+| `3-ESS2 Unit 1` lessons 1–6 (`gr3-ess2-unit1-lesson1-*` through `lesson6-*`) | present | Rachel + Margaret round 1 recorded in `gr3-earth-science-batch-review.md`; no Earth Science lesson remains in pre-review state for this run | round-1 revisions applied | public URLs live verified on 2026-04-07 | linked in `index.html`, `curriculum.html`, and `curriculum/index.html` | stable self-generated IDs now wired | refresh final manifest so it reflects the wired ID state |
+| `3-ESS2 Unit 1` refcards 1–6 + quiz (`gr3-ess2-unit1-refcard-lesson1-*` through `lesson6-*`, plus `gr3-ess2-unit1-quiz.html`) | present | covered by `gr3-earth-science-batch-review.md`; no Earth Science support asset remains in pre-review state for this run | revised | support assets + quiz live verified on 2026-04-07 | quiz linked in Grade 3 catalog surfaces; support assets documented in manifest/review logs | stable self-generated IDs now wired | refresh final manifest so it reflects the wired ID state |
+| `3-ETS1 Unit 1` lessons 1–6 (`gr3-ets1-unit1-lesson1-*` through `lesson6-*`) | present | Rachel + Margaret round 1 recorded in `gr3-engineering-batch-review.md`; no Engineering lesson remains in pre-review state for this run | round-1 revisions applied | public URLs live verified on 2026-04-07 | linked in `index.html`, `curriculum.html`, and `curriculum/index.html` | stable self-generated IDs now wired | refresh final manifest so it reflects the wired ID state |
+| `3-ETS1 Unit 1` refcards 1–6 + quiz (`gr3-ets1-unit1-refcard-lesson1-*` through `lesson6-*`, plus `gr3-ets1-unit1-quiz.html`) | present | covered by `gr3-engineering-batch-review.md`; no Engineering support asset remains in pre-review state for this run | revised | support assets + quiz live verified on 2026-04-07 | quiz linked in Grade 3 catalog surfaces; support assets documented in manifest/review logs | stable self-generated IDs now wired | refresh final manifest so it reflects the wired ID state |
+| `3-PS2 Unit 1` lessons/refcards/quiz (`gr3-ps2-unit1-*`) | present | baseline prior work; not the blocked set for this run | already in repo | public baseline URLs documented and spot-checked | linked in Grade 3 catalog surfaces | document IDs not audited in this chunk beyond baseline note | no new build/review/publish work; keep as pattern anchor |
+| `Bird Beak Buffet` + free Grade 3 egg-drop set (`bird-beak-buffet.html`, `free-gr3-egg-drop-kitchen-challenge*`) | present | not part of the canonical Earth Science / Engineering unit completion scope | n/a for this chunk | public-facing anchor/freebie state documented | surfaced in Grade 3 navigation | not part of the blocker-driving asset list for this chunk | keep as adjacent anchor only |
+
+### Concrete remaining blockers after this audit
+
+Only these blockers remain in scope after the repo re-audit:
+- the final Grade 3 shareable manifest and related status docs still need to reflect the resolved document-ID state consistently now that stable self-generated IDs are wired
+
+These are **not** current blockers after the repo re-audit:
+- Earth Science lesson creation
+- Engineering lesson creation
+- Earth Science support-asset creation
+- Engineering support-asset creation
+- Earth Science Rachel review round 1
+- Earth Science Margaret review round 1
+- Engineering Rachel review round 1
+- Engineering Margaret review round 1
+- Earth Science revision round 1
+- Engineering revision round 1
+- Earth Science publish
+- Engineering publish
+- Earth Science live verification
+- Engineering live verification
+- Grade 3 navigation/catalog discoverability wiring in repo
+
+### Canonical Earth Science and Engineering scope list for the rest of this run
+
+#### Earth Science `3-ESS2 Unit 1`
+Lesson pages:
+- `lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html`
+- `lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html`
+- `lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html`
+- `lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html`
+- `lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html`
+- `lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html`
+
+Support assets:
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`
+- `lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html`
+- `lesson-plans/gr3-ess2-unit1-quiz.html`
+
+Batch-review / status source:
+- `lesson-plans/gr3-earth-science-batch-review.md`
+
+#### Engineering `3-ETS1 Unit 1`
+Lesson pages:
+- `lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html`
+- `lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html`
+- `lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html`
+- `lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html`
+- `lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html`
+- `lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html`
+
+Support assets:
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`
+- `lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html`
+- `lesson-plans/gr3-ets1-unit1-quiz.html`
+
+Batch-review / status source:
+- `lesson-plans/gr3-engineering-batch-review.md`
 
 ---
 
@@ -228,25 +411,25 @@ These paths are the canonical path plan for implementation unless a later human 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Life Science | `3-LS1 Unit 1` | L1 | exists in repo | keep as anchor | `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | n/a | n/a | unknown / verify existing | already deeper preview | baseline anchor; no new review needed for this chunk | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html` | linked in `index.html`, `curriculum.html`, `curriculum/index.html`; live status still requires public verification |
 | Life Science | `3-LS1 Unit 1` | L2 | exists in repo | keep as anchor | `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | n/a | n/a | unknown / verify existing | already deeper preview | baseline anchor; no new review needed for this chunk | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html` | linked in `index.html`, `curriculum.html`, `curriculum/index.html`; live status still requires public verification |
-| Life Science | `3-LS1 Unit 1` | L3 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | placeholder/pending real ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html` | repo navigation updated and public URL verified |
-| Life Science | `3-LS1 Unit 1` | L4 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | placeholder/pending real ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html` | repo navigation updated and public URL verified |
-| Life Science | `3-LS1 Unit 1` | L5 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | placeholder/pending real ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html` | repo navigation updated and public URL verified |
-| Life Science | `3-LS1 Unit 1` | L6 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | placeholder/pending real ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html` | repo navigation updated and public URL verified |
-| Life Science | `3-LS1 Unit 1` | Unit support | live-verified | keep companion set and carry forward | n/a | `lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`; `lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`; `lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html`; `lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | all pending real IDs | quiz behavior aligned to Grade 3 quiz pattern | batch review includes support-asset review addendum and public verification log | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-quiz.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | L1 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | pending new ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | L2 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | pending new ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | L3 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | pending new ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | L4 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | pending new ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | L5 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | pending new ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | L6 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | pending new ID | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html` | repo navigation updated and public URL verified |
-| Earth Science | `3-ESS2 Unit 1` | Unit support | live-verified | keep companion set and carry forward | n/a | `lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | all pending real IDs | quiz behavior aligned to Grade 3 quiz pattern | batch review includes revision history and public verification log | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | L1 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | pending new ID / no authoritative in-repo Remarq source yet | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | L2 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | pending new ID / no authoritative in-repo Remarq source yet | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | L3 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | pending new ID / no authoritative in-repo Remarq source yet | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | L4 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | pending new ID / no authoritative in-repo Remarq source yet | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | L5 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | pending new ID / no authoritative in-repo Remarq source yet | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | L6 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | pending new ID / no authoritative in-repo Remarq source yet | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md` | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html` | repo navigation updated and public URL verified |
-| Engineering | `3-ETS1 Unit 1` | Unit support | live-verified | keep companion set and carry forward | n/a | `lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | all pending real IDs / no authoritative in-repo Remarq source yet | quiz behavior aligned to Grade 3 quiz pattern | batch review includes round-1 notes, revision tracking, and public verification log, plus refcard spot-check verification | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html` | repo navigation updated and public URL verified |
+| Life Science | `3-LS1 Unit 1` | L3 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html` | repo navigation updated and public URL verified |
+| Life Science | `3-LS1 Unit 1` | L4 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html` | repo navigation updated and public URL verified |
+| Life Science | `3-LS1 Unit 1` | L5 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html` | repo navigation updated and public URL verified |
+| Life Science | `3-LS1 Unit 1` | L6 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html` | `lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded for lesson; support-asset review addendum recorded | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html` | repo navigation updated and public URL verified |
+| Life Science | `3-LS1 Unit 1` | Unit support | live-verified | keep companion set and carry forward | n/a | `lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`; `lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`; `lesson-plans/gr3-ls1-unit1-refcard-lesson5-comparing-life-cycle-patterns.html`; `lesson-plans/gr3-ls1-unit1-refcard-lesson6-model-and-explain-a-life-cycle.html` | `lesson-plans/gr3-ls1-unit1-quiz.html` | all stable self-generated IDs wired | quiz behavior aligned to Grade 3 quiz pattern | batch review includes support-asset review addendum and public verification log | `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-quiz.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | L1 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | L2 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | L3 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | L4 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | L5 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | L6 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html` | `lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-earth-science-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html` | repo navigation updated and public URL verified |
+| Earth Science | `3-ESS2 Unit 1` | Unit support | live-verified | keep companion set and carry forward | n/a | `lesson-plans/gr3-ess2-unit1-refcard-lesson1-weather-patterns-over-time.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson2-climate-regions-and-conditions.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson3-reading-weather-data.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson4-weather-hazards-and-impacts.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson5-designing-for-local-weather.html`; `lesson-plans/gr3-ess2-unit1-refcard-lesson6-reducing-weather-related-hazards.html` | `lesson-plans/gr3-ess2-unit1-quiz.html` | all stable self-generated IDs wired | quiz behavior aligned to Grade 3 quiz pattern | batch review includes revision history and public verification log; no further Earth Science support-asset review is pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-quiz.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | L1 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | L2 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | L3 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | L4 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | L5 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | L6 | lesson + support live | keep live lesson/refcard pair | `lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html` | `lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | stable self-generated ID wired | preview behavior verified in repo before publish | Rachel+Margaret round 1 recorded; revisions applied in `lesson-plans/gr3-engineering-batch-review.md`; no further review pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html` | repo navigation updated and public URL verified |
+| Engineering | `3-ETS1 Unit 1` | Unit support | live-verified | keep companion set and carry forward | n/a | `lesson-plans/gr3-ets1-unit1-refcard-lesson1-defining-the-problem.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson2-researching-constraints-and-materials.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson3-planning-a-solution.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson4-building-and-testing-a-prototype.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson5-improving-the-design.html`; `lesson-plans/gr3-ets1-unit1-refcard-lesson6-share-and-defend-your-solution.html` | `lesson-plans/gr3-ets1-unit1-quiz.html` | all stable self-generated IDs wired | quiz behavior aligned to Grade 3 quiz pattern | batch review includes round-1 notes, revision tracking, and public verification log, plus refcard spot-check verification; no further Engineering support-asset review is pending for this run | `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-quiz.html` | repo navigation updated and public URL verified |
 ---
 
 ## Historical path-by-path execution checklist
