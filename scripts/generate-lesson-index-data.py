@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import json
 import re
+import subprocess
+import sys
 from html import unescape
 from pathlib import Path
 
@@ -14,6 +16,7 @@ EXCLUDED_NAME_SUBSTRINGS = {
     "worksheet",
     "competitor-analysis",
     "daario-",
+    "mia-",
     "audit",
     "review",
     "manifest",
@@ -25,7 +28,11 @@ EXCLUDED_NAME_SUBSTRINGS = {
 
 EXCLUDED_SLUGS = {
     "gr4-ls1-unit1-l1-food-webs",
+    "how-to-save-and-print",
     "index",
+    "landing-page",
+    "science-curriculum-business-plan",
+    "template",
 }
 
 GRADE_LABELS = {
@@ -292,6 +299,8 @@ def main() -> None:
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    render_script = REPO_ROOT / "scripts" / "render-lesson-index-page.py"
+    subprocess.run([sys.executable, str(render_script)], check=True)
     print(f"Wrote {len(entries)} lesson entries to {OUTPUT_PATH.relative_to(REPO_ROOT)}")
 
 
