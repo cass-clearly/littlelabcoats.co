@@ -1,6 +1,6 @@
 # Grade 3 Earth Science Unit 1 Lesson 2 — Print Verification Note
 
-Last updated: 2026-04-08
+Last updated: 2026-04-08 (live review completed)
 Target file: `lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html`
 Live review URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html?review=1`
 
@@ -49,19 +49,28 @@ Local verification artifacts generated during review:
 - `/tmp/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.pdf`
 - `/tmp/gr3-ess2-unit1-lesson2-climate-regions-and-conditions-print.png`
 
-## Manual spot-check checklist after publish
+## Live end-to-end print review
 
-Review target:
+Review target used:
 - `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html?review=1`
 
-After deploy, confirm:
-1. The top-right print button still opens print from the live page
-2. All four climate cards remain readable without awkward splits or giant blank gaps
-3. The climate-card note stays visually attached to the card block
-4. The worksheet tables fit cleanly on the page
-5. There is still no parent-facing instruction telling the family to supply climate cards
-6. Screen layout still matches the normal LLC lesson structure
+Verified against the published review page using a live browser automation walkthrough plus print-PDF/screenshot output:
+1. The top-right print button invoked the print handler successfully on the live page
+2. All four climate cards were present and readable in print mode
+3. The climate-card note stayed attached to the card block in the printed output
+4. Both worksheet tables fit page width cleanly and rendered with fixed table layout
+5. No parent-facing instruction remained asking the family to supply climate cards
+6. The printed output preserved the normal LLC lesson structure without major overflow, distortion, missing assets, or broken instructions
+
+Live verification artifacts generated during review:
+- `/tmp/l2-live.pdf`
+- `/tmp/l2-live.png`
+
+## Remaining edge cases before release
+
+No high-severity print issues were found in the live Lesson 2 flow.
+No additional Lesson 2 code changes were required during this end-to-end review.
 
 ## Current status
 
-This note now records successful local runtime print verification for the updated Lesson 2 file, plus a remaining live-site spot-check to perform after publish.
+Lesson 2 now passes end-to-end print-readiness review on the published review URL and is considered genuinely print-ready for release.

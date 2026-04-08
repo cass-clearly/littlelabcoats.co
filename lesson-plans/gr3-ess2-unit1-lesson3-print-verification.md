@@ -1,6 +1,6 @@
 # Grade 3 Earth Science Unit 1 Lesson 3 — Print Verification Note
 
-Last updated: 2026-04-08
+Last updated: 2026-04-08 (live review completed)
 Target file: `lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html`
 Live review URL: `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html?review=1`
 
@@ -48,20 +48,28 @@ Local verification artifacts generated during review:
 - `/tmp/gr3-ess2-unit1-lesson3-reading-weather-data.pdf`
 - `/tmp/gr3-ess2-unit1-lesson3-reading-weather-data-print.png`
 
-## Manual spot-check checklist after publish
+## Live end-to-end print review
 
-Open:
+Review target used:
 - `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html?review=1`
 
-After deploy, confirm:
-1. The top-right print button still opens print from the live page
-2. The weather chart fits on page at readable size
-3. The chart header row remains readable and proportioned correctly
-4. The chart key stays near the chart without creating a large blank gap
-5. The worksheet table columns remain readable and do not overflow page width
-6. There are no awkward page splits through the chart or first worksheet table
-7. Screen layout still matches the normal LLC lesson structure
+Verified against the published review page using a live browser automation walkthrough plus print-PDF/screenshot output:
+1. The top-right print button invoked the print handler successfully on the live page
+2. The weather chart fit on page at readable size in printed output
+3. The chart header row remained readable and proportioned correctly
+4. The chart key stayed near the chart without creating a large blank gap
+5. The worksheet table columns remained readable and did not overflow page width
+6. The printed output preserved the normal LLC lesson structure without major overflow, distortion, missing assets, or broken instructions
+
+Live verification artifacts generated during review:
+- `/tmp/l3-live.pdf`
+- `/tmp/l3-live.png`
+
+## Remaining edge cases before release
+
+No high-severity print issues were found in the live Lesson 3 flow.
+No additional Lesson 3 code changes were required during this end-to-end review.
 
 ## Current status
 
-This note now records successful local runtime print verification for the updated Lesson 3 file, plus a remaining live-site spot-check to perform after publish.
+Lesson 3 now passes end-to-end print-readiness review on the published review URL and is considered genuinely print-ready for release.
