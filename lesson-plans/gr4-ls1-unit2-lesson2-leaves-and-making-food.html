@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaves and Making Food — Grade 4 Life Science Unit 2</title>
+  <style>
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #222;
+      background: #fff;
+    }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #2e7d32;
+      padding-bottom: 10px;
+      color: #2e7d32;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #e8f5e9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #a5d6a7;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .hero-image .emoji-hero { font-size: 72pt; line-height: 1.2; }
+    .hero-image .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box {
+      background: #f3e5f5;
+      border: 1px solid #ce93d8;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .standards-box strong { color: #7b1fa2; }
+
+    .lesson-path {
+      background: #f7fbff;
+      border: 1px solid #b6d7f2;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 14px 0 20px;
+    }
+    .lesson-path-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #24557a;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .lesson-path-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lesson-path-links a {
+      display: inline-block;
+      text-decoration: none;
+      color: #1b5e20;
+      background: #ffffff;
+      border: 1px solid #a5d6a7;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+    .lesson-path-links a.current {
+      background: #2e7d32;
+      color: #fff;
+      border-color: #2e7d32;
+    }
+    .tip-box {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+    }
+    .materials-box {
+      background: #fff8e1;
+      border: 2px solid #ffcc80;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step {
+      background: #e8f5e9;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #2e7d32;
+    }
+    .procedure-step strong { color: #1b5e20; }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #00B894;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      margin-top: 4px;
+      display: block;
+    }
+    .extension-box {
+      background: #e8eaf6;
+      border: 1px solid #9fa8da;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .teacher-note strong { color: #333; }
+    .worksheet-section { margin: 20px 0; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-card {
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 12px 0;
+      background: #fbfffb;
+    }
+    .worksheet-card h3 { margin-top: 0; }
+    .line { border-bottom: 1.5px solid #bbb; height: 28px; margin: 6px 0; }
+    .claim-box {
+      border: 2px dashed #90caf9;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 10px 0;
+      min-height: 86px;
+      background: #f8fcff;
+    }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10pt; }
+    .compare-table th { background: #2e7d32; color: white; padding: 8px 10px; border: 1.5px solid #1b5e20; text-align: left; }
+    .compare-table td { border: 1.5px solid #a5d6a7; padding: 10px; height: 42px; vertical-align: top; }
+    .compare-table tr:nth-child(even) td { background: #f6fff6; }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #616161; text-align: center; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    .llc-paywall-overlay {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+      padding: 48px 24px 40px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+    }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-paywall-sub strong { color: #3B1F6B; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(255,107,107,0.28); }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .worksheet-card, .standards-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+  </style>
+</head>
+<body data-document-id="doc__A5QgFwPUiY">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>🌿 Leaves and Making Food 🌿</h1>
+  <p class="subtitle">Life Science — Plant Structures &amp; Reproduction | Unit 2, Lesson 2 of 6</p>
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 4th Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Life Science — Plant Structures & Reproduction</span>
+  </div>
+  <div class="hero-image">
+    <div class="emoji-hero">🍃☀️🌿</div>
+    <div class="caption">Leaves are shaped to capture light and help plants make the food they need to live and grow.</div>
+  </div>
+  <div class="standards-box">
+    <strong>📋 NGSS Standard:</strong><br>
+    <strong>4-LS1-1</strong> — Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction.
+  </div>
+  <div class="lesson-path">
+    <div class="lesson-path-title">Grade 4 Life Science Path</div>
+    <div class="lesson-path-links">
+      <a href="gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems.html">← Previous lesson</a>
+      <a href="gr4-ls1-unit2-quiz.html">Unit 2 quiz</a>
+      <a href="gr4-ls1-unit2-lesson3-water-transport-inside-plants.html">Next lesson →</a>
+      <a href="gr4-ls1-unit2-lesson2-leaves-and-making-food.html" class="current">Current lesson</a>
+    </div>
+  </div>
+  <h2>The Big Idea</h2>
+  <p>Leaves are not just decorations. Their structure helps plants capture sunlight and exchange gases so the plant can make food.</p>
+  <p>A broad flat leaf can be a strong clue that the plant needs to collect light efficiently. In Grade 4, the key idea is not chemical detail — it is that the structure helps the plant do a life-supporting job.</p>
+  <h2>The Science</h2>
+  <p>Leaves often have a broad, thin surface that helps them capture sunlight. The green color comes from chlorophyll, which helps in photosynthesis. Plants use light energy, water, and carbon dioxide to make food. Leaf structure matters because the plant needs a surface that can gather light effectively while supporting the plant’s survival and growth.</p>
+  <div class="tip-box"><strong>Key vocabulary:</strong> leaf, sunlight, photosynthesis, chlorophyll, surface, energy, gas exchange, food</div>
+  <h2>Materials</h2>
+  <div class="materials-box">
+    <h3>Gather Before You Start</h3>
+    <ul>
+      <li>printed lesson pages and Student Worksheet</li>
+      <li>several leaves or leaf photos for comparison</li>
+      <li>flashlight or sunny window if available</li>
+      <li>pencil</li>
+    </ul>
+  </div>
+  <h2>Let's Get Started</h2>
+  <div class="procedure-step"><strong>Step 1:</strong> Compare a few leaves and ask what features many leaves have in common.</div>
+  <div class="procedure-step"><strong>Step 2:</strong> Guide students to notice broad flat surfaces and why those surfaces might help with gathering light.</div>
+  <div class="procedure-step"><strong>Step 3:</strong> Explain at a Grade 4 level that leaves help plants make food from light, water, and air.</div>
+  <div class="procedure-step"><strong>Step 4:</strong> Have students connect a visible clue from a leaf to the job of making food.</div>
+  <div class="procedure-step"><strong>Step 5:</strong> Use the worksheet claim box to explain how a leaf structure supports plant survival and growth.</div>
+  <h2>Discussion Questions</h2>
+  <div class="question-box"><strong>Q:</strong> Why might a broad flat leaf be helpful?<span class="discussion-hint">Look for collecting light over more surface area.</span></div>
+  <div class="question-box"><strong>Q:</strong> Why do plants need a structure that helps make food?<span class="discussion-hint">Because food supports survival and growth.</span></div>
+  <div class="question-box"><strong>Q:</strong> How can the structure of a leaf give evidence about its function?<span class="discussion-hint">Shape, surface area, and placement are all useful clues.</span></div>
+  <h2>Extensions</h2>
+  <div class="extension-box">Compare a thick needle-like leaf and a broad flat leaf. Ask which seems best for collecting lots of light and what tradeoffs the plant might face in different environments.</div>
+  <h2>Parent/Teacher Notes</h2>
+  <div class="teacher-note"><strong>Teaching note:</strong> Keep photosynthesis student-friendly. The lesson should center on the function of leaf structures, not on overloading students with reaction details.</div>
+  <div class="page-break worksheet-section">
+    <h1>🌱 Student Worksheet — Leaves and Making Food 🌱</h1>
+    <div class="name-date">Name: ____________________ &nbsp;&nbsp;&nbsp; Date: ____________________</div>
+
+      <div class="worksheet-card"><h3>Leaf Clues</h3><table class="compare-table"><tr><th>Leaf clue</th><th>What it may help with</th><th>How that supports the plant</th></tr><tr><td>broad / flat / green / many leaves</td><td></td><td></td></tr><tr><td>leaf placement or size</td><td></td><td></td></tr></table></div>
+      <div class="worksheet-card"><h3>Explain It</h3><p>Why is a leaf an important plant structure?</p><div class="line"></div><div class="line"></div><div class="line"></div></div>
+      <div class="worksheet-card"><h3>Claim Box</h3><p>A leaf structure that supports survival and growth is ... because ...</p><div class="claim-box"></div></div>
+    
+  </div>
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>🔑 Parent Answer Key</h2>
+      <p><strong>Detach note:</strong> Student wording may vary if the structure-function science is correct.</p>
+      
+      <ul><li><strong>What Success Looks Like:</strong> Student explains that leaves help capture light so the plant can make food.</li><li><strong>Acceptable examples:</strong> Broad flat leaves collect light; green leaves help with photosynthesis; many leaves can help collect more light overall.</li><li><strong>Misconception watch:</strong> If a student says leaves “eat soil,” redirect them to roots and the leaf’s role in making food.</li></ul>
+    </div>
+  </div>
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-api-url="http://192.168.5.204:3334" data-document-id="doc__A5QgFwPUiY" data-content-selector="body"></script>
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+    <div class="llc-paywall-inner">
+      <span class="llc-paywall-emoji">🥼</span>
+      <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+      <p class="llc-paywall-sub">You're seeing the lesson preview. Subscribe to access the full procedure, Student Worksheet, discussion questions, and Parent Answer Key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+      <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+    </div>
+  </div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase();
+        if (lockKeywords.some(function(k){ return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var bodyChildren = Array.from(document.body.children);
+      var hiding = false;
+      bodyChildren.forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.body.style.paddingBottom = '220px';
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>
