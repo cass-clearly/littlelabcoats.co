@@ -1,7 +1,7 @@
 # Grade 4 Shareable Manifest
 
 Last updated: 2026-04-08
-Status: canonical Grade 4 Life Science lesson URLs and review URLs are live; representative public/live verification on 2026-04-08 confirms Grade 4 LS lesson, refcard, and quiz URLs now resolve publicly
+Status: final closeout URL manifest for the canonical Grade 4 Life Science domain; live verification on 2026-04-08 confirms the lesson, review, quiz, and listing URLs below resolve publicly with no canonical Grade 4 404s remaining
 Audience: Serena
 
 This file is the concise Grade 4 Life Science URL handoff for the current repo state.
@@ -57,14 +57,37 @@ It should be treated as the source-of-truth URL list for the canonical `4-LS1` p
 - `Document ID mapping` lives in `lesson-plans/gr4-document-id-manifest.md`
 - `Batch review tracking` lives in `lesson-plans/gr4-life-science-batch-review.md`
 
+## Live listing / discovery URLs
+
+These are the public surfaces that should expose Grade 4 Life Science live:
+
+- `Homepage`  
+  `https://littlelabcoats.co/`
+- `Curriculum library`  
+  `https://littlelabcoats.co/curriculum/`
+- `Curriculum library (html route)`  
+  `https://littlelabcoats.co/curriculum.html`
+
 ## Scope note
 
 This manifest intentionally reflects the canonical 12-lesson Grade 4 Life Science package and does **not** treat `gr4-ls1-unit1-l1-food-webs.html` as authoritative for the Grade 4 LS1 scope.
 
-## Verification honesty note
+## Final live verification note
 
-- canonical lesson and review URLs are live on the public site
-- representative public checks on 2026-04-08 confirmed live `200` responses for Grade 4 lesson, refcard, and quiz review URLs
+Final live closeout verification on 2026-04-08 confirmed:
+- all 12 canonical lesson URLs return `200`
+- all 12 canonical lesson review URLs return `200`
+- both canonical quiz URLs return `200`
+- both canonical quiz review URLs return `200`
+- the live listing/discovery surfaces return `200`:
+  - `https://littlelabcoats.co/`
+  - `https://littlelabcoats.co/curriculum/`
+  - `https://littlelabcoats.co/curriculum.html`
 - representative live page checks confirmed explicit `data-document-id` values on deployed Grade 4 pages match `lesson-plans/gr4-document-id-manifest.md`
-- reviewed-target verification confirmed the recorded Rachel + Margaret comment IDs map to the same document IDs now exposed on the live public Grade 4 lesson/quiz pages
-- `lesson-plans/gr4-life-science-batch-review.md` records the current Rachel + Margaret review evidence, comment IDs, document matches, and revision status
+- representative live review checks confirmed public Remarq comment/highlight loading works on sampled reviewed Grade 4 pages
+- `lesson-plans/gr4-life-science-batch-review.md` records the Rachel + Margaret review evidence, comment IDs, document matches, and revision status
+- `lesson-plans/gr4-print-verification.md` records the final live print/readiness verification evidence
+
+Disposition:
+- this manifest is the final exact public URL handoff for the canonical Grade 4 Life Science domain
+- no canonical Grade 4 public 404s remain in the verified lesson, review, quiz, or listing surfaces

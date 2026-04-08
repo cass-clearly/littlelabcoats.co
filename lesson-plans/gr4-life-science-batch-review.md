@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-08
 Chunk: `remarq-review-revise-loop`
-Status: round-1 Rachel + Margaret review recorded in Remarq; targeted round-1 revisions applied in repo; live review-path verification and comment-to-public-document matching completed on the real Grade 4 pages
+Status: round-1 Rachel + Margaret review recorded in Remarq; targeted round-1 revisions applied in repo; live review-path verification, comment-to-public-document matching, and final closeout proof completed on the real Grade 4 pages
 
 ## Scope
 
@@ -166,6 +166,7 @@ Disposition:
 - the Grade 4 package is no longer blocked on public 404s for live review-path verification
 - explicit real document IDs are confirmed on live representative lesson/refcard/quiz pages and on all reviewed lesson/quiz targets recorded in round 1
 - the existing Rachel + Margaret inline comment records are confirmed to belong to the same document IDs now exposed on the public Grade 4 pages
+- representative final live checks confirmed public Remarq comment/highlight loading works on sampled reviewed Grade 4 pages after the final proxy/path fix
 - round-1 revisions described above are the applied response set for the recorded feedback
 - for this Grade 4 review chunk, Remarq integration and round-1 review/revise evidence are now sufficient for signoff
 
