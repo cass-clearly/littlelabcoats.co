@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson Index — Little Lab Coats</title>
+  <meta name="description" content="Operational lesson index for Little Lab Coats. Browse every lesson with direct open and review-mode links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F9FFFE;
+      --cream-dark: #E8F8F6;
+      --teal: #4ECDC4;
+      --teal-pale: #D4F5F3;
+      --coral: #FF6B6B;
+      --navy: #3B1F6B;
+      --navy-light: #5A3490;
+      --white: #FFFFFF;
+      --border: #C8F0ED;
+      --text-muted: #5A7A78;
+      --shadow-sm: 0 2px 8px rgba(43,58,103,0.07);
+      --shadow-md: 0 8px 24px rgba(43,58,103,0.10);
+      --radius-md: 14px;
+      --radius-lg: 22px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(249,255,254,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--teal); text-decoration: none; }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { text-decoration: none; font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 56px 0 34px;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 12px; }
+    .hero p { max-width: 760px; color: rgba(255,255,255,0.84); font-size: 1.02rem; }
+    .hero-note { margin-top: 14px; font-size: 0.95rem; color: #d7fff9; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-md);
+      padding: 14px;
+    }
+    .stat-number { display: block; font-size: 1.4rem; font-weight: 700; }
+    .stat-label { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.82); }
+    .main { padding: 28px 0 72px; }
+    .toolbar {
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+    .toolbar strong { display: block; margin-bottom: 10px; }
+    .toolbar-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .toolbar-links a {
+      text-decoration: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+    .group-grid { display: grid; gap: 18px; }
+    .group-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 20px 20px 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fffe 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .group-header h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; margin-bottom: 4px; }
+    .group-header p { color: var(--text-muted); font-weight: 700; }
+    .group-count { font-weight: 700; color: var(--teal); white-space: nowrap; }
+    .lesson-list { list-style: none; }
+    .lesson-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      padding: 14px 20px;
+      border-top: 1px solid #eef9f8;
+      align-items: center;
+    }
+    .lesson-title { font-weight: 700; font-size: 1rem; color: var(--navy); }
+    .lesson-meta { margin-top: 4px; color: var(--text-muted); font-size: 0.9rem; }
+    .lesson-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+    .lesson-links a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--cream);
+    }
+    .lesson-links a:last-child { background: var(--teal-pale); }
+    .footer-note { margin-top: 24px; color: var(--text-muted); font-size: 0.92rem; }
+    @media (max-width: 760px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+      .lesson-row { grid-template-columns: 1fr; }
+      .lesson-links { justify-content: flex-start; }
+      .group-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Little Lab Coats</a>
+      <div class="nav-links">
+        <a href="/curriculum.html">Curriculum</a>
+        <a href="/store.html">Shop</a>
+        <a href="/lesson-plans/">Lesson Index</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Lesson Index</h1>
+      <p>Auto-generated from the lesson directory so Chris and Serena can browse every lesson from one stable page. Each row includes the normal lesson link and a direct review-mode link.</p>
+      <div class="hero-note">Stable URL: <strong>/lesson-plans/</strong> • Total lessons indexed: <strong>149</strong></div>
+      <div class="stats">
+        <div class="stat"><span class="stat-number">43</span><span class="stat-label">Kindergarten</span></div><div class="stat"><span class="stat-number">31</span><span class="stat-label">Grade 1</span></div><div class="stat"><span class="stat-number">26</span><span class="stat-label">Grade 2</span></div><div class="stat"><span class="stat-number">25</span><span class="stat-label">Grade 3</span></div><div class="stat"><span class="stat-number">2</span><span class="stat-label">Grade 4</span></div><div class="stat"><span class="stat-number">5</span><span class="stat-label">Grade 5</span></div><div class="stat"><span class="stat-number">17</span><span class="stat-label">Other Lessons</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="toolbar">
+        <strong>Jump to a section</strong>
+        <div class="toolbar-links">
+          <a href="#kindergarten-physical-science">Kindergarten · Physical Science</a><a href="#kindergarten-life-science">Kindergarten · Life Science</a><a href="#kindergarten-earth-and-space-science">Kindergarten · Earth &amp; Space Science</a><a href="#kindergarten-engineering">Kindergarten · Engineering</a><a href="#kindergarten-other-lessons">Kindergarten · Other Lessons</a><a href="#grade-1-physical-science">Grade 1 · Physical Science</a><a href="#grade-1-life-science">Grade 1 · Life Science</a><a href="#grade-1-earth-and-space-science">Grade 1 · Earth &amp; Space Science</a><a href="#grade-1-engineering">Grade 1 · Engineering</a><a href="#grade-1-other-lessons">Grade 1 · Other Lessons</a><a href="#grade-2-physical-science">Grade 2 · Physical Science</a><a href="#grade-2-life-science">Grade 2 · Life Science</a><a href="#grade-2-earth-and-space-science">Grade 2 · Earth &amp; Space Science</a><a href="#grade-2-other-lessons">Grade 2 · Other Lessons</a><a href="#grade-3-physical-science">Grade 3 · Physical Science</a><a href="#grade-3-life-science">Grade 3 · Life Science</a><a href="#grade-3-earth-and-space-science">Grade 3 · Earth &amp; Space Science</a><a href="#grade-3-engineering">Grade 3 · Engineering</a><a href="#grade-3-other-lessons">Grade 3 · Other Lessons</a><a href="#grade-4-life-science">Grade 4 · Life Science</a><a href="#grade-4-other-lessons">Grade 4 · Other Lessons</a><a href="#grade-5-physical-science">Grade 5 · Physical Science</a><a href="#grade-5-earth-and-space-science">Grade 5 · Earth &amp; Space Science</a><a href="#grade-5-other-lessons">Grade 5 · Other Lessons</a><a href="#other-lessons-other-lessons">Other Lessons · Other Lessons</a>
+        </div>
+      </section>
+
+      <div class="group-grid">
+        <section class="group-card" id="kindergarten-physical-science">
+      <div class="group-header">
+        <div>
+          <h2>Kindergarten</h2>
+          <p>Physical Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Sun Warms Everything</div>
+                <div class="lesson-meta">Unit 2 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Shadow Science</div>
+                <div class="lesson-meta">Unit 2 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ps3-unit2-lesson2-shadow-science.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ps3-unit2-lesson2-shadow-science.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Warming Up — Dark vs Light Surfaces</div>
+                <div class="lesson-meta">Unit 2 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Melting Race</div>
+                <div class="lesson-meta">Unit 2 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ps3-unit2-lesson4-melting-race.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ps3-unit2-lesson4-melting-race.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Design a Sun Shelter — Plan</div>
+                <div class="lesson-meta">Unit 2 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Design a Sun Shelter — Build &amp; Test</div>
+                <div class="lesson-meta">Unit 2 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="kindergarten-life-science">
+      <div class="group-header">
+        <div>
+          <h2>Kindergarten</h2>
+          <p>Life Science</p>
+        </div>
+        <div class="group-count">12 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What&#x27;s Inside a Seed?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Planting Day: What Do Seeds Need?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit2-lesson2-planting-day.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit2-lesson2-planting-day.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Parts of a Plant: Root to Flower</div>
+                <div class="lesson-meta">Unit 2 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit2-lesson3-parts-of-a-plant.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit2-lesson3-parts-of-a-plant.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Sunlight or No Sunlight?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit2-lesson4-sunlight-or-no-sunlight.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit2-lesson4-sunlight-or-no-sunlight.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Seed Travelers: How Seeds Move</div>
+                <div class="lesson-meta">Unit 2 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit2-lesson5-seed-travelers.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit2-lesson5-seed-travelers.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">My Plant&#x27;s Life Story</div>
+                <div class="lesson-meta">Unit 2 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit2-lesson6-plant-life-cycle.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit2-lesson6-plant-life-cycle.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Do ALL Animals Need?</div>
+                <div class="lesson-meta">Unit 3 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What&#x27;s for Dinner? How Animals Eat</div>
+                <div class="lesson-meta">Unit 3 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit3-lesson2-whats-for-dinner.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit3-lesson2-whats-for-dinner.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Breathing: Lungs, Gills, and More</div>
+                <div class="lesson-meta">Unit 3 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit3-lesson3-breathing.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit3-lesson3-breathing.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Water, Water Everywhere: How Animals Drink</div>
+                <div class="lesson-meta">Unit 3 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit3-lesson4-how-animals-drink.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit3-lesson4-how-animals-drink.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Building a Shelter: Every Animal Needs a Home</div>
+                <div class="lesson-meta">Unit 3 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit3-lesson5-building-a-shelter.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit3-lesson5-building-a-shelter.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">When Needs Aren&#x27;t Met: What Happens?</div>
+                <div class="lesson-meta">Unit 3 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ls1-unit3-lesson6-when-needs-arent-met.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ls1-unit3-lesson6-when-needs-arent-met.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="kindergarten-earth-and-space-science">
+      <div class="group-header">
+        <div>
+          <h2>Kindergarten</h2>
+          <p>Earth &amp; Space Science</p>
+        </div>
+        <div class="group-count">12 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Is Weather?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Wind — Invisible but Powerful</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess2-unit1-lesson2-wind.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess2-unit1-lesson2-wind.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Rain, Snow, and the Water Cycle</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess2-unit1-lesson3-water-cycle.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess2-unit1-lesson3-water-cycle.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Four Seasons</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess2-unit1-lesson4-four-seasons.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess2-unit1-lesson4-four-seasons.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Weather &amp; Animals — How Animals Respond</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess2-unit1-lesson5-animals-and-weather.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess2-unit1-lesson5-animals-and-weather.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Weather Patterns Over Time</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess2-unit1-lesson6-weather-patterns.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess2-unit1-lesson6-weather-patterns.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Does Earth Give Us?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Water — Earth&#x27;s Most Important Resource</div>
+                <div class="lesson-meta">Unit 2 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess3-unit2-lesson2-water-resource.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess3-unit2-lesson2-water-resource.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Soil — What&#x27;s Under Our Feet?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess3-unit2-lesson3-soil.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess3-unit2-lesson3-soil.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Humans Change the Earth</div>
+                <div class="lesson-meta">Unit 2 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess3-unit2-lesson4-humans-change-earth.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess3-unit2-lesson4-humans-change-earth.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Weather Hazards — Staying Safe</div>
+                <div class="lesson-meta">Unit 2 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess3-unit2-lesson5-weather-hazards.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess3-unit2-lesson5-weather-hazards.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Being Earth&#x27;s Helper</div>
+                <div class="lesson-meta">Unit 2 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ess3-unit2-lesson6-being-earths-helper.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ess3-unit2-lesson6-being-earths-helper.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="kindergarten-engineering">
+      <div class="group-header">
+        <div>
+          <h2>Kindergarten</h2>
+          <p>Engineering</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Is a Problem?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Ask Questions, Make Observations</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ets1-unit1-lesson2-ask-questions.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ets1-unit1-lesson2-ask-questions.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Draw Your Idea</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ets1-unit1-lesson3-draw-your-idea.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ets1-unit1-lesson3-draw-your-idea.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Build It!</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ets1-unit1-lesson4-build-it.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ets1-unit1-lesson4-build-it.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Test and Improve</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ets1-unit1-lesson5-test-and-improve.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ets1-unit1-lesson5-test-and-improve.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Share Your Solution</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-ets1-unit1-lesson6-share-your-solution.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-ets1-unit1-lesson6-share-your-solution.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="kindergarten-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Kindergarten</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">7 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Great Push &amp; Pull Sort</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/unit1-lesson1-push-pull-sort.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/unit1-lesson1-push-pull-sort.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Ramp Racers — Forces &amp; Motion Lab</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/unit1-lesson2-ramp-racers.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/unit1-lesson2-ramp-racers.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Strong Push, Gentle Push — Forces Lab</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/unit1-lesson3-strong-push-gentle-push.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/unit1-lesson3-strong-push-gentle-push.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Magnet Magic</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/unit1-lesson4-magnet-magic.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/unit1-lesson4-magnet-magic.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Wind Wagon Engineering Challenge</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/unit1-lesson5-wind-wagon.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/unit1-lesson5-wind-wagon.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Marble Run Madness</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/unit1-lesson6-marble-run.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/unit1-lesson6-marble-run.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Kindergarten Freebie Candidate — Fizzy Color Explosions</div>
+                <div class="lesson-meta">Free sample</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/free-k-fizzy-color-explosions.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/free-k-fizzy-color-explosions.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-1-physical-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 1</h2>
+          <p>Physical Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Sound Is Vibration</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Light Travels in Straight Lines</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson2-light-travels.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson2-light-travels.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mirrors, Signals &amp; Sending Messages</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson3-mirrors-and-communication.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson3-mirrors-and-communication.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Vibrating Strings &amp; Sound</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson4-vibrating-strings-and-sound.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson4-vibrating-strings-and-sound.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Sound Through Solids, Liquids &amp; Gases</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson5-sound-through-solids-liquids-gases.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson5-sound-through-solids-liquids-gases.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Design a Sound Sender</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson6-design-a-sound-sender.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ps4-unit1-lesson6-design-a-sound-sender.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-1-life-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 1</h2>
+          <p>Life Science</p>
+        </div>
+        <div class="group-count">12 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Roots, Stems, Leaves, Flowers — What Each Part Does</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson2-plant-parts-functions.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson2-plant-parts-functions.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">How Animals Protect Themselves</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson3-animal-protection.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson3-animal-protection.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">How Plants Attract Pollinators</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson4-plants-attract-pollinators.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson4-plants-attract-pollinators.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Animal Structures for Getting Food</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson5-structures-for-getting-food.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson5-structures-for-getting-food.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Structures for Moving</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson6-structures-for-moving.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls1-unit1-lesson6-structures-for-moving.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">You Look Like Your Parents</div>
+                <div class="lesson-meta">Unit 2 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Baby Animals and Their Needs</div>
+                <div class="lesson-meta">Unit 2 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson2-baby-animals-and-needs.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson2-baby-animals-and-needs.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">How Animal Parents Protect Offspring</div>
+                <div class="lesson-meta">Unit 2 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson3-parents-protect-offspring.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson3-parents-protect-offspring.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Teaching: When Parents Show What to Do</div>
+                <div class="lesson-meta">Unit 2 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson4-parents-teach-offspring.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson4-parents-teach-offspring.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Plant Parenting</div>
+                <div class="lesson-meta">Unit 2 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Patterns of Parent and Offspring Behavior</div>
+                <div class="lesson-meta">Unit 2 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson6-patterns-parent-offspring.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls3-unit2-lesson6-patterns-parent-offspring.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Nature&#x27;s Engineers: How Animal Bodies Solve Problems</div>
+                <div class="lesson-meta">Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-1-earth-and-space-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 1</h2>
+          <p>Earth &amp; Space Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Sun — Our Closest Star</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Moon — Earth&#x27;s Natural Satellite</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson2-the-moon.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson2-the-moon.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Stars — Suns Very Far Away</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson3-stars.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson3-stars.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">How Much Daylight? Seasons and the Sun</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Sky Changes — Morning, Day, and Night</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson5-sky-changes.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson5-sky-changes.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Patterns in the Sky</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson6-patterns-in-the-sky.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ess1-unit1-lesson6-patterns-in-the-sky.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-1-engineering">
+      <div class="group-header">
+        <div>
+          <h2>Grade 1</h2>
+          <p>Engineering</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Problem Can We Solve?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Look at Animal Solutions</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson2-look-at-animal-solutions.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson2-look-at-animal-solutions.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Plan a Nature-Inspired Tool</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson3-plan-a-nature-inspired-tool.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson3-plan-a-nature-inspired-tool.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Build Your First Model</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson4-build-your-first-model.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson4-build-your-first-model.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Test and Improve Your Design</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson5-test-and-improve-your-design.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson5-test-and-improve-your-design.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Share Your Final Design</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson6-share-your-final-design.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr1-ets1-unit1-lesson6-share-your-final-design.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-1-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Grade 1</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Celery Rainbow</div>
+                <div class="lesson-meta">Free sample</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/free-gr1-celery-rainbow.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/free-gr1-celery-rainbow.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-2-physical-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 2</h2>
+          <p>Physical Science</p>
+        </div>
+        <div class="group-count">7 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Is Matter? Solids, Liquids, and Gases</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-unit1-l1-matter.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-unit1-l1-matter.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Touch and Test: Texture, Hardness, and Flexibility</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-unit1-l2-texture.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-unit1-l2-texture.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Sink or Float? Testing Matter in Water</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-unit1-l3-sink-float.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-unit1-l3-sink-float.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mix It Up: Mixing and Separating Materials</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-unit1-l4-mixing.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-unit1-l4-mixing.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Hot and Cold: How Heating and Cooling Change Matter</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-unit1-l5-heating-cooling.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-unit1-l5-heating-cooling.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Build the Best Boat: Engineering with Foil</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-unit1-l6-boat-engineering.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-unit1-l6-boat-engineering.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mystery Powders: What&#x27;s in Your Kitchen?</div>
+                <div class="lesson-meta">Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ps1-lesson1-mystery-powders.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ps1-lesson1-mystery-powders.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-2-life-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 2</h2>
+          <p>Life Science</p>
+        </div>
+        <div class="group-count">12 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Do Plants Need?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Pollinators: Nature&#x27;s Delivery Service</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Seed Dispersal: How Plants Travel</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson3-seed-dispersal.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson3-seed-dispersal.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Food Chains: Who Eats Whom?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson4-food-chains.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson4-food-chains.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Habitats: The Right Place for the Right Plant</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson5-habitats.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson5-habitats.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Ecosystems Under Threat: What Can We Do?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson6-ecosystems-under-threat.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit1-lesson6-ecosystems-under-threat.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Is an Ecosystem?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit2-l1-ecosystems.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit2-l1-ecosystems.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Plants Need Partners</div>
+                <div class="lesson-meta">Unit 2 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit2-l2-plants-partners.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit2-l2-plants-partners.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Food Chains: Who Eats Who?</div>
+                <div class="lesson-meta">Unit 2 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit2-l3-food-chains.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit2-l3-food-chains.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Predator and Prey: The Population Game</div>
+                <div class="lesson-meta">Unit 2 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit2-l4-predator-prey.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit2-l4-predator-prey.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Habitat Hunt: Explorer&#x27;s Field Journal</div>
+                <div class="lesson-meta">Unit 2 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit2-l5-habitat-hunt.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit2-l5-habitat-hunt.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Design a Habitat</div>
+                <div class="lesson-meta">Unit 2 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ls2-unit2-l6-design-habitat.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ls2-unit2-l6-design-habitat.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-2-earth-and-space-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 2</h2>
+          <p>Earth &amp; Space Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Landforms All Around - Grade 2 Earth Science</div>
+                <div class="lesson-meta">Unit 3 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ess1-unit3-l1-landforms.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ess1-unit3-l1-landforms.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Rocks and Soils - Grade 2 Earth Science</div>
+                <div class="lesson-meta">Unit 3 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ess1-unit3-l2-rocks-soils.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ess1-unit3-l2-rocks-soils.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Water Shapes the Land - Grade 2 Earth Science</div>
+                <div class="lesson-meta">Unit 3 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ess1-unit3-l3-erosion.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ess1-unit3-l3-erosion.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Maps and Directions - Grade 2 Earth Science</div>
+                <div class="lesson-meta">Unit 3 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ess1-unit3-l4-maps.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ess1-unit3-l4-maps.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Weather Patterns - Grade 2 Earth Science</div>
+                <div class="lesson-meta">Unit 3 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ess1-unit3-l5-weather-patterns.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ess1-unit3-l5-weather-patterns.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Engineering: Slow the Erosion - Grade 2 Earth Science</div>
+                <div class="lesson-meta">Unit 3 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr2-ess1-unit3-l6-erosion-engineering.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr2-ess1-unit3-l6-erosion-engineering.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-2-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Grade 2</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Salt Dough Fossil Factory</div>
+                <div class="lesson-meta">Free sample</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/free-gr2-salt-dough-fossil-factory.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-3-physical-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 3</h2>
+          <p>Physical Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Balanced and Unbalanced Forces</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Motion Changes with Force</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Magnets Pull Without Touching</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Magnetic Patterns</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Design a Magnetic Game or Tool</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Test and Improve Your Force Design</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-3-life-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 3</h2>
+          <p>Life Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">What Is a Life Cycle?</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Different Life Cycles, Same Big Pattern</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Plant Life Cycles and Seeds</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Animal Life Cycles and Metamorphosis</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Comparing Life Cycle Patterns</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Model and Explain a Life Cycle</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-3-earth-and-space-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 3</h2>
+          <p>Earth &amp; Space Science</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Weather Patterns Over Time</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Climate Regions and Conditions</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Reading Weather Data</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Weather Hazards and Impacts</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Designing for Local Weather</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Reducing Weather-Related Hazards</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-3-engineering">
+      <div class="group-header">
+        <div>
+          <h2>Grade 3</h2>
+          <p>Engineering</p>
+        </div>
+        <div class="group-count">6 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Defining the Problem</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Researching Constraints and Materials</div>
+                <div class="lesson-meta">Unit 1 • Lesson 2</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Planning a Solution</div>
+                <div class="lesson-meta">Unit 1 • Lesson 3</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Building and Testing a Prototype</div>
+                <div class="lesson-meta">Unit 1 • Lesson 4</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Improving the Design</div>
+                <div class="lesson-meta">Unit 1 • Lesson 5</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Share and Defend Your Solution</div>
+                <div class="lesson-meta">Unit 1 • Lesson 6</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-3-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Grade 3</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Egg Drop Kitchen Challenge</div>
+                <div class="lesson-meta">Free sample</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/free-gr3-egg-drop-kitchen-challenge.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-4-life-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 4</h2>
+          <p>Life Science</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Food Webs: Energy in Ecosystems -- Life Science Unit, Lesson 1</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr4-ls1-unit1-l1-food-webs.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr4-ls1-unit1-l1-food-webs.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-4-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Grade 4</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Great Apple Browning Experiment</div>
+                <div class="lesson-meta">Free sample</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/free-gr4-apple-oxidation.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/free-gr4-apple-oxidation.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-5-physical-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 5</h2>
+          <p>Physical Science</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Kitchen Chemistry: Reactants, Products &amp; Mixtures</div>
+                <div class="lesson-meta">Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr5-ps1-lesson1-reactants-products-mixtures.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr5-ps1-lesson1-reactants-products-mixtures.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-5-earth-and-space-science">
+      <div class="group-header">
+        <div>
+          <h2>Grade 5</h2>
+          <p>Earth &amp; Space Science</p>
+        </div>
+        <div class="group-count">1 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Human Impact: How We Change Earth -- Earth Science Unit, Lesson 1</div>
+                <div class="lesson-meta">Unit 1 • Lesson 1</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/gr5-ess3-unit1-l1-human-impact.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/gr5-ess3-unit1-l1-human-impact.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="grade-5-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Grade 5</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">3 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Balanced &amp; Unbalanced Forces, Friction, and Newton&#x27;s Laws</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/5th-forces-balanced-unbalanced.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/5th-forces-balanced-unbalanced.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Fossils: Reading the Pages of Earth&#x27;s History</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/5th-fossils-earth-history.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/5th-fossils-earth-history.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Bread Mold Terrarium</div>
+                <div class="lesson-meta">Free sample</div>
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/free-gr5-bread-mold-terrarium.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+<section class="group-card" id="other-lessons-other-lessons">
+      <div class="group-header">
+        <div>
+          <h2>Other Lessons</h2>
+          <p>Other Lessons</p>
+        </div>
+        <div class="group-count">17 lessons</div>
+      </div>
+      <ul class="lesson-list">
+        <li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">[Lesson Title]</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/template.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/template.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Bird Beak Buffet: Adaptation Lab</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/bird-beak-buffet.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/bird-beak-buffet.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Forces &amp; Motion: Direction of Forces and Acceleration</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/forces-motion-acceleration.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/forces-motion-acceleration.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">How to Save &amp; Print the Ice Cream Lesson</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/how-to-save-and-print.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/how-to-save-and-print.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Into the Abyss</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/ocean-L3-into-the-abyss.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/ocean-L3-into-the-abyss.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Little Lab Coats — Hands-On Science Curriculum for Homeschool Families</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/landing-page.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/landing-page.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mia&#x27;s Friday Learning Plan — Week 1</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/mia-friday-week1.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/mia-friday-week1.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mia&#x27;s Monday Learning Plan — Week 1</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/mia-monday-week1.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/mia-monday-week1.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mia&#x27;s Thursday Learning Plan — Week 1</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/mia-thursday-week1.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/mia-thursday-week1.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mia&#x27;s Tuesday Learning Plan — Week 1</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/mia-tuesday-week1.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/mia-tuesday-week1.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Mia&#x27;s Wednesday Learning Plan — Week 1</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/mia-wednesday-week1.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/mia-wednesday-week1.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Milk Magic</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/k-milk-magic.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/k-milk-magic.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Ocean in Motion</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/ocean-L4-ocean-in-motion.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/ocean-L4-ocean-in-motion.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Science Curriculum Business Plan — Clearly Curriculum</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/science-curriculum-business-plan.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/science-curriculum-business-plan.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Sharks — Built to Hunt</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/ocean-L2-sharks-built-to-hunt.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/ocean-L2-sharks-built-to-hunt.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">The Coral Kingdom</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/ocean-L1-coral-kingdom.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/ocean-L1-coral-kingdom.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li><li class="lesson-row">
+              <div class="lesson-main">
+                <div class="lesson-title">Thermal Energy &amp; States of Matter - Ice Cream Experiment</div>
+                
+              </div>
+              <div class="lesson-links">
+                <a href="/lesson-plans/thermal-energy-ice-cream.html" target="_blank" rel="noopener">Open lesson</a>
+                <a href="/lesson-plans/thermal-energy-ice-cream.html?review=1" target="_blank" rel="noopener">Review mode</a>
+              </div>
+            </li>
+      </ul>
+    </section>
+      </div>
+
+      <p class="footer-note">This page is generated from <code>lesson-plans/*.html</code>. To refresh it after lesson changes, regenerate the lesson index data and re-render this page.</p>
+    </div>
+  </main>
+</body>
+</html>
