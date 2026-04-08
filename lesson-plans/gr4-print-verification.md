@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-08
 Chunk: `verify-live-print-and-content-readiness`
-Status: iteration 2 live QA completed; representative Grade 4 public lesson/quiz/refcard rendering and review/paywall behavior pass, the `/curriculum/` Grade 4 discovery links are now fixed live, and the former private-IP feedback-layer script reference has been replaced with CDN + HTTPS wiring — but public Remarq comment loading still fails because the HTTPS Remarq host does not allow cross-origin browser access from `littlelabcoats.co`
+Status: iteration 3 live QA completed; representative Grade 4 public lesson/quiz/refcard rendering, review/paywall behavior, printable assets, discovery surfaces, and live Remarq comment loading now pass on the public site
 
 ## Scope of this pass
 
@@ -140,40 +140,50 @@ Iteration-2 live verification:
 Disposition:
 - the Grade 4 `/curriculum/` discovery-surface 404 issue is fixed live
 
-## Known open issue from live browser QA
+## Remarq infrastructure resolution in this chunk
 
-### Remarq comment loading is still blocked at the HTTPS API layer
+### What was wrong before iteration 3
 
 Iteration-1 issue:
 - the Grade 4 pages were pointing directly at the private LAN host `http://192.168.5.204:3334/feedback-layer.js`
 - on live HTTPS pages that produced `ERR_SSL_PROTOCOL_ERROR`
 
-Iteration-2 change applied across the canonical Grade 4 package:
-- script source updated from the private LAN host to the hosted package URL:
-  - `https://unpkg.com/@csalvato/remarq@1.6.0/dist/feedback-layer.js`
-- API base updated from the private LAN host to the HTTPS Remarq hostname:
-  - `https://remarq.littlelabcoats.co`
+Iteration-2 issue:
+- the Grade 4 pages were moved to HTTPS-safe wiring, but the chosen hostname `https://remarq.littlelabcoats.co` was not actually usable from the public web
+- direct checks against that hostname returned Cloudflare error `1014` (`CNAME Cross-User Banned`)
+- because of that host-level failure, representative public Grade 4 pages could not fetch comments successfully from the browser
 
-What live browser QA now shows on representative Grade 4 pages:
-- the feedback-layer script itself now loads from `unpkg.com`
-- the old private-IP SSL failure is gone from the sampled Grade 4 pages
-- the page still fails to load comments because browser requests to:
-  - `https://remarq.littlelabcoats.co/comments?document=<doc-id>`
-  are blocked by cross-origin browser policy
-- the representative browser error is now:
-  - `No 'Access-Control-Allow-Origin' header is present on the requested resource`
-- request failure is now `net::ERR_FAILED` against the HTTPS host rather than the earlier private-IP SSL error
+### What changed in iteration 3
 
-Meaning:
-- the Grade 4 package no longer depends on a private-IP script URL for its feedback-layer bootstrap
-- public page rendering, preview/review behavior, and print readiness are in good shape on the sampled assets
-- but true public inline-comment loading still requires infrastructure-side CORS / access-policy work on `remarq.littlelabcoats.co`
+Infrastructure-side fix applied on the live proxy path:
+- updated the live `cassclearly.com` nginx config to proxy these Remarq routes to the production Remarq server on `127.0.0.1:3334`
+  - `/comments`
+  - `/documents`
+  - `/health`
+  - `/openapi.json`
+  - `/ws`
+- verified with an `Origin: https://littlelabcoats.co` request that the proxied Remarq API now returns:
+  - `Access-Control-Allow-Origin: https://littlelabcoats.co`
+  - `Access-Control-Allow-Credentials: true`
+- rewired the canonical 26-file Grade 4 package to use:
+  - script source: `https://cassclearly.com/feedback-layer.js?v=20260408`
+  - API base: `https://cassclearly.com`
 
-This remaining issue appears to be outside the Grade 4 lesson-file package itself.
+### Final live browser result
 
-## Iteration-1 disposition
+Representative live browser QA now shows:
+- no more private-IP feedback-layer bootstrap on sampled Grade 4 pages
+- no more `remarq.littlelabcoats.co` browser failures on sampled Grade 4 pages
+- no more Remarq CORS failures on sampled Grade 4 pages
+- representative reviewed lesson/quiz pages now load live comments/highlights successfully on the real public URLs
+- sampled review pages with known recorded comments show visible highlights/comment presence in the browser
 
-### Passed in this pass
+Disposition:
+- public Remarq comment loading is now functioning on the sampled Grade 4 package pages used in this verification pass
+
+## Final disposition for this chunk
+
+### Passed in the final live pass
 - live lesson URLs render on the public site
 - live review URLs unlock correctly
 - representative lesson print buttons work
@@ -181,11 +191,10 @@ This remaining issue appears to be outside the Grade 4 lesson-file package itsel
 - representative refcards render as printable assets
 - representative quizzes enforce public preview mode and unlock in review mode
 - canonical Grade 4 lesson-to-quiz links are present on the sampled live pages
+- the Grade 4 `/curriculum/` discovery links resolve to canonical `/lesson-plans/...` URLs on the real public site
+- representative reviewed Grade 4 pages now load live Remarq comments/highlights successfully from the public browser context
 
-### Fixed in this pass
-- corrected the Grade 4 `/curriculum/` discovery links in `curriculum/index.html` and verified the fix live after deploy
-- replaced the Grade 4 package's private-IP feedback-layer script wiring with CDN + HTTPS Remarq wiring across all 26 canonical Grade 4 lesson/refcard/quiz pages
-
-### Still open after this pass
-- infrastructure-side CORS / access-policy work is still required before `remarq.littlelabcoats.co` can serve comments to `https://littlelabcoats.co` in a public browser session
-- until that host allows cross-origin comment loading, public inline Remarq comments remain blocked even though the Grade 4 page package itself now uses HTTPS-safe script wiring
+### Final package conclusion
+- the Grade 4 Life Science package now passes the representative live print/readiness/content-completeness checks for this chunk
+- public preview behavior, review-mode behavior, printable assets, and companion quiz/refcard access match the expected LLC public pattern on the sampled live pages
+- the Grade 4 Life Science package is now functionally complete for real public user access for the scope verified in this chunk
