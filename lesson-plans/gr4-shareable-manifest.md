@@ -66,4 +66,5 @@ This manifest intentionally reflects the canonical 12-lesson Grade 4 Life Scienc
 - canonical lesson and review URLs are live on the public site
 - representative public checks on 2026-04-08 confirmed live `200` responses for Grade 4 lesson, refcard, and quiz review URLs
 - representative live page checks confirmed explicit `data-document-id` values on deployed Grade 4 pages match `lesson-plans/gr4-document-id-manifest.md`
-- `lesson-plans/gr4-life-science-batch-review.md` records the current Rachel + Margaret review evidence and revision status
+- reviewed-target verification confirmed the recorded Rachel + Margaret comment IDs map to the same document IDs now exposed on the live public Grade 4 lesson/quiz pages
+- `lesson-plans/gr4-life-science-batch-review.md` records the current Rachel + Margaret review evidence, comment IDs, document matches, and revision status

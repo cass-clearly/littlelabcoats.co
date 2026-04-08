@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-08
 Chunk: `remarq-review-revise-loop`
-Status: round-1 Rachel + Margaret review recorded in Remarq; targeted round-1 revisions applied in repo; representative public live review-path verification completed on the real Grade 4 pages
+Status: round-1 Rachel + Margaret review recorded in Remarq; targeted round-1 revisions applied in repo; live review-path verification and comment-to-public-document matching completed on the real Grade 4 pages
 
 ## Scope
 
@@ -145,11 +145,29 @@ Live page checks also confirmed that representative deployed pages expose the sa
 - `gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems.html` → `doc_4XnPmnn9uHw`
 - `gr4-ls1-unit2-quiz.html` → `doc_O9CjxfDd3cw`
 
+Additional live/backend confirmation completed on 2026-04-08:
+- the Remarq backend at `http://192.168.5.204:3334` is reachable and returns live `documents` / `comments` collections
+- each recorded round-1 inline comment ID below resolves in the backend comment collection
+- each of those comments points at the same document ID exposed on the current public lesson/quiz page for that target
+- each of those comments includes a stored quote selection, confirming the comment was attached to a real anchored document selection rather than a placeholder record
+
+Comment-to-live-document confirmation:
+- `cmt_uYklotZpdVI` → `doc_PkRt1nihjic` → live `gr4-ls1-unit1-lesson6-construct-an-argument-animal-structures.html`
+- `cmt_cmqjrg03Pgs` → `doc_tHdONv_mztI` → live `gr4-ls1-unit1-lesson2-sensing-the-world.html`
+- `cmt_dCniCaGVsBA` → `doc_4GL06eNhyX8` → live `gr4-ls1-unit2-lesson3-water-transport-inside-plants.html`
+- `cmt_dv5KvSm1RGc` → `doc_tQ6Q8JxPVaM` → live `gr4-ls1-unit2-lesson4-flowers-pollination-and-reproduction.html`
+- `cmt_Ypf07YNGxIc` → `doc_O9CjxfDd3cw` → live `gr4-ls1-unit2-quiz.html`
+- `cmt_RuLciC0fyFw` → `doc_drBxHhVD4Ck` → live `gr4-ls1-unit1-lesson3-mouths-beaks-teeth-and-getting-food.html`
+- `cmt_3kaZteO94Vg` → `doc_4XnPmnn9uHw` → live `gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems.html`
+- `cmt_DSXoQojNP44` → `doc_7VxHL9ii9S4` → live `gr4-ls1-unit2-lesson5-seeds-fruits-and-new-plants.html`
+- `cmt_KpHnslYt7LE` → `doc_gakQbV2UB7I` → live `gr4-ls1-unit2-lesson6-construct-an-argument-plant-structures.html`
+
 Disposition:
 - the Grade 4 package is no longer blocked on public 404s for live review-path verification
-- explicit real document IDs are confirmed on representative public lesson/refcard/quiz pages
-- the existing Rachel + Margaret inline comment records remain the comment evidence for round 1
+- explicit real document IDs are confirmed on live representative lesson/refcard/quiz pages and on all reviewed lesson/quiz targets recorded in round 1
+- the existing Rachel + Margaret inline comment records are confirmed to belong to the same document IDs now exposed on the public Grade 4 pages
 - round-1 revisions described above are the applied response set for the recorded feedback
+- for this Grade 4 review chunk, Remarq integration and round-1 review/revise evidence are now sufficient for signoff
 
 ## Remaining not-complete items outside this chunk pass
 

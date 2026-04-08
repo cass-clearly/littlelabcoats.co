@@ -7,7 +7,7 @@ Status: real backend document IDs created and wired for Grade 4 Life Science Uni
 
 These document IDs were created against the Remarq backend for the intended live asset URLs under `https://littlelabcoats.co/lesson-plans/...` and then wired into the repo files.
 Bootstrap comments used only to create the document records were removed immediately after ID capture.
-Representative live verification on 2026-04-08 confirmed that the deployed public Grade 4 lesson, refcard, and quiz pages expose the same explicit `data-document-id` values documented here and that sampled `?review=1` URLs resolve publicly.
+Representative live verification on 2026-04-08 confirmed that the deployed public Grade 4 lesson, refcard, and quiz pages expose the same explicit `data-document-id` values documented here and that sampled `?review=1` URLs resolve publicly. Additional review-loop verification confirmed that the recorded Rachel + Margaret inline comment IDs in `lesson-plans/gr4-life-science-batch-review.md` point at the same live document IDs for the reviewed Grade 4 lesson/quiz targets.
 
 ## Asset → real document ID mapping
 
