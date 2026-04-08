@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-08
 Chunk: `verify-live-print-and-content-readiness`
-Status: iteration 1 live QA completed; public lesson/quiz/refcard rendering and review/paywall behavior mostly pass on representative Grade 4 assets, but one public directory surface fix was required and one Remarq script-loading issue remains open
+Status: iteration 2 live QA completed; representative Grade 4 public lesson/quiz/refcard rendering and review/paywall behavior pass, the `/curriculum/` Grade 4 discovery links are now fixed live, and the former private-IP feedback-layer script reference has been replaced with CDN + HTTPS wiring — but public Remarq comment loading still fails because the HTTPS Remarq host does not allow cross-origin browser access from `littlelabcoats.co`
 
 ## Scope of this pass
 
@@ -124,32 +124,52 @@ Verified live:
 - representative Grade 4 package links resolve correctly from this page
 
 ### `curriculum/`
-Problem found during this pass:
-- the Grade 4 links on `https://littlelabcoats.co/curriculum/` were still using relative `lesson-plans/...` paths
+Iteration-1 problem:
+- the Grade 4 links on `https://littlelabcoats.co/curriculum/` were using relative `lesson-plans/...` paths
 - on the deployed `/curriculum/` route that produced broken URLs such as:
   - `https://littlelabcoats.co/curriculum/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html`
 - those broken `/curriculum/lesson-plans/...` URLs returned `404`
 
-Action taken in this iteration:
-- updated `curriculum/index.html` so the Grade 4 free sample, Unit 1 lesson/quiz links, and Unit 2 lesson/quiz links use root-relative `/lesson-plans/...` paths instead of route-relative `lesson-plans/...`
+Iteration-2 live verification:
+- `https://littlelabcoats.co/curriculum/` now exposes root-relative Grade 4 links such as:
+  - `/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html`
+- browser automation confirmed the rendered link now resolves to:
+  - `https://littlelabcoats.co/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html`
+- the representative Grade 4 curriculum-directory link no longer routes through the broken `/curriculum/lesson-plans/...` path
 
-This fix still needs deploy verification after push.
+Disposition:
+- the Grade 4 `/curriculum/` discovery-surface 404 issue is fixed live
 
 ## Known open issue from live browser QA
 
-### Remarq feedback-layer script is not public-web safe yet on the sampled Grade 4 pages
+### Remarq comment loading is still blocked at the HTTPS API layer
 
-On every representative Grade 4 lesson, refcard, and quiz checked in this pass, browser automation reported the same live script-load failure:
-- page source still points the feedback layer at `http://192.168.5.204:3334/feedback-layer.js`
-- the browser attempted to load it as `https://192.168.5.204:3334/feedback-layer.js`
-- the request failed with `net::ERR_SSL_PROTOCOL_ERROR`
+Iteration-1 issue:
+- the Grade 4 pages were pointing directly at the private LAN host `http://192.168.5.204:3334/feedback-layer.js`
+- on live HTTPS pages that produced `ERR_SSL_PROTOCOL_ERROR`
+
+Iteration-2 change applied across the canonical Grade 4 package:
+- script source updated from the private LAN host to the hosted package URL:
+  - `https://unpkg.com/@csalvato/remarq@1.6.0/dist/feedback-layer.js`
+- API base updated from the private LAN host to the HTTPS Remarq hostname:
+  - `https://remarq.littlelabcoats.co`
+
+What live browser QA now shows on representative Grade 4 pages:
+- the feedback-layer script itself now loads from `unpkg.com`
+- the old private-IP SSL failure is gone from the sampled Grade 4 pages
+- the page still fails to load comments because browser requests to:
+  - `https://remarq.littlelabcoats.co/comments?document=<doc-id>`
+  are blocked by cross-origin browser policy
+- the representative browser error is now:
+  - `No 'Access-Control-Allow-Origin' header is present on the requested resource`
+- request failure is now `net::ERR_FAILED` against the HTTPS host rather than the earlier private-IP SSL error
 
 Meaning:
-- the page-shell review bypass works (`?review=1` unlocks content correctly)
-- print/readability checks mostly pass
-- but the embedded Remarq feedback-layer script is still not loading cleanly from the published HTTPS pages in browser automation
+- the Grade 4 package no longer depends on a private-IP script URL for its feedback-layer bootstrap
+- public page rendering, preview/review behavior, and print readiness are in good shape on the sampled assets
+- but true public inline-comment loading still requires infrastructure-side CORS / access-policy work on `remarq.littlelabcoats.co`
 
-This is the remaining issue most likely to block true public inline-comment behavior on the Grade 4 package.
+This remaining issue appears to be outside the Grade 4 lesson-file package itself.
 
 ## Iteration-1 disposition
 
@@ -163,8 +183,9 @@ This is the remaining issue most likely to block true public inline-comment beha
 - canonical Grade 4 lesson-to-quiz links are present on the sampled live pages
 
 ### Fixed in this pass
-- corrected the Grade 4 `/curriculum/` discovery links in `curriculum/index.html` so they will deploy as root-relative canonical lesson/quiz URLs instead of broken `/curriculum/lesson-plans/...` URLs
+- corrected the Grade 4 `/curriculum/` discovery links in `curriculum/index.html` and verified the fix live after deploy
+- replaced the Grade 4 package's private-IP feedback-layer script wiring with CDN + HTTPS Remarq wiring across all 26 canonical Grade 4 lesson/refcard/quiz pages
 
 ### Still open after this pass
-- deploy + recheck the `/curriculum/` Grade 4 link fix
-- resolve or explicitly waive the broken private-IP feedback-layer script loading on live Grade 4 pages before calling the package fully production-ready for public review/comments
+- infrastructure-side CORS / access-policy work is still required before `remarq.littlelabcoats.co` can serve comments to `https://littlelabcoats.co` in a public browser session
+- until that host allows cross-origin comment loading, public inline Remarq comments remain blocked even though the Grade 4 page package itself now uses HTTPS-safe script wiring
