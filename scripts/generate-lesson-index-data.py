@@ -23,6 +23,11 @@ EXCLUDED_NAME_SUBSTRINGS = {
     "public-mapping-and-publish-prep",
 }
 
+EXCLUDED_SLUGS = {
+    "gr4-ls1-unit1-l1-food-webs",
+    "index",
+}
+
 GRADE_LABELS = {
     "k": "Kindergarten",
     "1": "Grade 1",
@@ -57,6 +62,8 @@ def should_include(path: Path) -> bool:
     if path.suffix.lower() != ".html":
         return False
     slug = path.stem.lower()
+    if slug in EXCLUDED_SLUGS:
+        return False
     return not any(token in slug for token in EXCLUDED_NAME_SUBSTRINGS)
 
 
