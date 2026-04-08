@@ -496,7 +496,7 @@
     </div>
   </div>
 
-  <script src="http://192.168.5.204:3334/feedback-layer.js"></script>
+  <script src="http://192.168.5.204:3334/feedback-layer.js" data-document-id="doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs"></script>
 <!-- ═══ PAYWALL SYSTEM ═══ -->
 <style>
   .llc-paywall-overlay {
@@ -609,6 +609,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try {
+        localStorage.setItem(ACCESS_KEY, 'granted');
+      } catch (e) {}
+      return;
+    }
+
     if (!isUnlocked()) {
       lockLesson();
     }

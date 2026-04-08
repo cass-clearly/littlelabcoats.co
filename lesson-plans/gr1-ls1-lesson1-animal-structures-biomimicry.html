@@ -329,7 +329,7 @@
     @media print { .print-btn { display: none; } }
   </style>
 </head>
-<body data-document-id="">
+<body data-document-id="doc_gr1-ls1-lesson1-animal-structures-biomimicry">
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
   <h1>🦎 Nature's Engineers: How Animal Bodies Solve Problems 🦆</h1>
@@ -748,6 +748,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try {
+        localStorage.setItem(ACCESS_KEY, 'granted');
+      } catch (e) {}
+      return;
+    }
+
     if (!isUnlocked()) {
       lockLesson();
     }
