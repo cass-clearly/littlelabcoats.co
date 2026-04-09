@@ -1,7 +1,7 @@
 # Grade 4 Life Science Unit 1 Lesson 2 — Remarq Baseline
 
 Last updated: 2026-04-09
-Status: baseline captured before revision edits
+Status: revision follow-up checked after lesson updates and live review verification
 Target: `Grade 4 Life Science → Animal Structures & Survival → Unit 1 Lesson 2`
 
 ## Canonical lesson + route confirmation
@@ -34,76 +34,80 @@ All current comments on `doc_tHdONv_mztI` were reviewed from the live Remarq bac
    - Comment: tighten the compare prompt so students must name the sensory structure, the information it detects, and the survival behavior it supports for each animal.
    - Baseline disposition: appears already applied in the live lesson worksheet prompt and answer-key language.
 
-### Open lesson-specific comments to use as revision input
+### Lesson-specific comment resolution status after the current revision pass
 
-#### A. Materials and lesson-support asset clarity
+#### Resolved lesson comments
 1. `cmt_IUsYk9D75g4` — Serena Salvato
    - Quote: `animal photos or simple observation cards`
-   - Comment: `supply these with the lessons`
-   - Revision implication: clarify whether lesson-native observation cards/images are included, or reword the materials list so it does not imply missing provided assets.
+   - Resolution now visible in lesson: materials now say `2–4 animal photos from a nature book, magazine, or device`, which removes the implication that missing observation cards are supplied with the lesson.
 
 2. `cmt_5wTOgmamF8Q` — Serena Salvato
    - Quote: `paper tub`
-   - Comment: `give examples are we talking straw or toilet roll tube`
-   - Revision implication: make the materials list and activity wording concrete by naming an age-appropriate tube example.
+   - Resolution now visible in lesson: materials and Step 1 now explicitly say `toilet paper roll or paper towel tube`.
 
-#### B. Procedure-step clarity and activity flow
 3. `cmt_LaTi5_pzAzg` — Serena Salvato
    - Quote: `Have students record one structure, one type of information it detects, and one survival behavior it supports.`
-   - Comment: `This is unclear what the step is asking 4. Make it more explicit`
-   - Revision implication: rewrite Step 4 so the student task is explicit and connected to the worksheet.
+   - Resolution now visible in lesson: Step 4 now explicitly tells students to complete a second `Sensory Detective` row and finish the `Claim Box` with one full sentence naming the structure, the information it detects, and how that helps survival or behavior.
 
 4. `cmt_ICYW7DoUQsw` — Serena Salvato
    - Quote: `sight`
-   - Comment: `change this to smell. It's more fun. And encorporate it into the main lesson. It's more dynamic and interesting. Integrate into step 4`
-   - Revision implication: replace the current sight-only extension comparison with a smell-based activity and pull that idea into the main lesson flow rather than leaving it only in Extensions.
+   - Resolution now visible in lesson: the smell challenge is now part of Step 4 in the main lesson flow, and the extension no longer carries the main sensory-activity move by itself.
 
-#### C. Worksheet sequencing / student-direction clarity
 5. `cmt_155TFGieedk` — Serena Salvato
    - Quote: `Sensory Detective`
-   - Comment: `is this step 2? Can we make this clearer?`
-   - Revision implication: label or cue when students should complete the `Sensory Detective` worksheet section.
+   - Resolution now visible in lesson: the worksheet now says `Use during Step 2 and Step 4`, and Step 2 explicitly tells families when to begin the table.
 
 6. `cmt_n2qIxYe2lyo` — Serena Salvato
    - Quote: `because`
-   - Comment: `Which step is this? Make it clear when this is to be completed by the student`
-   - Revision implication: label or cue when students should complete the `Claim Box` section.
+   - Resolution now visible in lesson: the worksheet now says `Complete during Step 4`, and Step 4 explicitly tells families when to finish the `Claim Box`.
 
-## Revision checklist for the next implementation chunk
+#### Remaining comment status
+- No unaddressed actionable lesson-page comments remain from the current Remarq revision pass.
+- `cmt_cmqjrg03Pgs` remains a non-regression item and is still reflected in the compare prompt / answer-key expectations.
 
-### Content / materials updates
-- Clarify whether the lesson includes observation cards or otherwise remove ambiguity around supplied animal visuals.
-- Replace vague `paper tube` wording with a concrete example.
+## Post-revision checklist status
 
-### Lesson-flow updates
-- Make Step 4 explicit about what students do, what they record, and which worksheet section they use.
-- Integrate a smell-based sensory activity into the main procedure, per Serena’s comment, instead of keeping the alternate-sense idea only in the extension.
+### Lesson-page comment fixes
+- observation-card ambiguity removed on the lesson page
+- concrete tube example added on the lesson page
+- Step 4 rewritten to be explicit and worksheet-linked
+- smell activity moved into the main lesson flow
+- `Sensory Detective` timing cue added
+- `Claim Box` timing cue added
 
-### Worksheet / direction updates
-- Add explicit worksheet timing/cues for `Sensory Detective`.
-- Add explicit worksheet timing/cues for `Claim Box`.
+### Parity watch item still worth a later follow-up
+- the paired refcard still reflects older wording and should be reviewed separately for parity on materials / science summary / family follow-up language
 
-### Parity check item
-- After lesson edits, review the paired refcard for wording parity on materials and the `Try this next` sensory activity.
+## Live review-mode verification after current revisions
 
-## Baseline public review-mode check
-
-Live check completed against:
+Live checks completed against:
 - `https://littlelabcoats.co/lesson-plans/gr4-ls1-unit1-lesson2-sensing-the-world.html?review=1`
 
-### Availability
+### Availability and updated content
 - HTTP status: `200`
 - Live page exposes `data-document-id="doc_tHdONv_mztI"`
-- Live page still contains the current wording that Serena commented on, including:
-  - `paper tube or blindfold for a quick limited-senses demo`
-  - Step 4 wording about recording structure / information / behavior
-  - worksheet headings `Sensory Detective` and `Claim Box`
+- Live page contains the updated lesson wording, including:
+  - `Sensory structures help animals gather clues.`
+  - Step 4 smell-challenge wording
+  - worksheet cue `Use during Step 2 and Step 4`
 
-### Current LLC structure confirmed on the live lesson page
-- canonical link tag present
-- lesson shell present: title, subtitle, grade/duration/subject meta, hero, NGSS box, lesson path, Big Idea, Science, Materials, procedure steps, discussion questions, extension, teacher notes, worksheet, answer key
-- review/paywall wiring present via `feedback-layer.js` with API base `https://cassclearly.com`
-- review-mode URL is available for later post-push verification
+### Remarq wiring confirmed live
+- live page still loads `feedback-layer.js?v=20260408` from `https://cassclearly.com`
+- live page still exposes the matching lesson document ID in both `<body>` and the feedback-layer script tag
+- live page still contains the `?review=1` unlock logic for review mode
+- `https://cassclearly.com/feedback-layer.js?v=20260408` returned HTTP `200`
+
+### Live review/edit UI presence confirmed
+A headless browser check against the public `?review=1` URL confirmed:
+- `.fb-sidebar` present
+- `.fb-sidebar-tab` present
+- feedback-layer styles for annotation / comment UI loaded
+- full review content visible in review mode, including the worksheet
+
+Disposition:
+- review mode loads on the correct live lesson page
+- Remarq review/edit UI is present on the public review URL
+- the updated lesson content is the content currently served on the live review page
 
 ### Print-sensitive sections identified for preservation
 - print button present in live page
@@ -128,4 +132,4 @@ Live check completed against:
 ## Out of scope for this chunk
 - no PDF generation
 - no export work
-- no lesson-content edits yet
+- refcard parity cleanup remains for a later chunk
