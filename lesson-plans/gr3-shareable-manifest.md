@@ -1,7 +1,7 @@
 # Grade 3 Shareable Manifest
 
-Last updated: 2026-04-07
-Status: Grade 3 LS1, PS2 baseline, ESS2, and ETS1 public URLs in this handoff were spot-checked successfully on 2026-04-07; representative live publish/discoverability checks for ESS2 and ETS1 lessons, quizzes, refcards, and curriculum surfaces returned HTTP 200 on 2026-04-07; stable self-generated document IDs are now wired for the newly shipped LS1 / ESS2 / ETS1 packages
+Last updated: 2026-04-09
+Status: Grade 3 LS1, PS2 baseline, ESS2, and ETS1 public URLs in this handoff were spot-checked successfully on 2026-04-07; representative live publish/discoverability checks for ESS2 and ETS1 lessons, quizzes, refcards, and curriculum surfaces returned HTTP 200 on 2026-04-07; stable self-generated document IDs are now wired for the newly shipped LS1 / ESS2 / ETS1 packages; Grade 3 review-entry routing and live production Remarq wiring were re-verified on 2026-04-09
 Audience: Serena
 
 This file is the concise Grade 3 URL handoff for the current live state.
@@ -11,6 +11,52 @@ Scope note for audit alignment:
 - this manifest reflects the **currently discoverable Grade 3 repo state** audited in `lesson-plans/gr3-curriculum-audit-and-scope.md`
 - that repo state currently includes `3-LS1` lesson pages 1–6, `3-PS2`, `3-ESS2 Unit 1`, `3-ETS1 Unit 1`, and the standalone `3-LS4` lesson `Bird Beak Buffet`
 - it should not be read as proof that a larger full-year Grade 3 domain map has been confirmed in-repo
+
+## 2026-04-09 urgent Grade 3 review-flow verification
+
+This addendum captures the urgent review-usability fix verification after the Grade 3 directory review-routing and Remarq wiring update was committed and pushed on `main`.
+
+### Live directory-entry verification
+
+The live public directory surfaces now expose representative Grade 3 lesson links with explicit `?review=1` review URLs:
+- `https://littlelabcoats.co/`
+- `https://littlelabcoats.co/curriculum.html`
+- `https://littlelabcoats.co/curriculum/`
+- `https://littlelabcoats.co/lesson-plans/`
+
+Representative live matches confirmed in fetched page source:
+- `gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1`
+- `gr3-ess2-unit1-lesson1-weather-patterns-over-time.html?review=1`
+- `gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1`
+- `gr3-ets1-unit1-lesson1-defining-the-problem.html?review=1`
+
+### Representative live lesson verification
+
+The following live review URLs were re-checked on 2026-04-09 and returned `HTTP 200`:
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html?review=1`
+- `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html?review=1`
+
+For each sampled live lesson page, fetched page source confirmed:
+- explicit `data-document-id` is present on the deployed page
+- the deployed page loads `https://cassclearly.com/feedback-layer.js?v=20260408`
+- the deployed page uses `data-api-url="https://cassclearly.com"`
+- the deployed page still contains `?review=1` bypass logic so the review URL opens the full lesson instead of the preview lock
+
+### Deploy/cache status
+
+Deployment lag was explicitly checked and ruled out for the sampled directory and lesson pages:
+- live homepage response showed fresh `last-modified` and cache-miss headers during verification
+- live fetched HTML already reflected the new `?review=1` Grade 3 directory links
+- live fetched Grade 3 lesson HTML already reflected the production feedback-layer wiring
+
+### Review-usability conclusion
+
+For the verified sample, the urgent user-facing problem is no longer reproducible:
+- the live public Grade 3 directory paths now point reviewers into review URLs
+- representative Grade 3 lesson pages on the live domain now expose production Remarq wiring plus explicit document IDs
+- the review path is available from the directory entrypoint, not only from a manually typed direct lesson URL
 
 ## Already public / linked in Grade 3 navigation
 
