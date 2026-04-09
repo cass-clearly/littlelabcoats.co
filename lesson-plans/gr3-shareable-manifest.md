@@ -51,11 +51,36 @@ Deployment lag was explicitly checked and ruled out for the sampled directory an
 - live fetched HTML already reflected the new `?review=1` Grade 3 directory links
 - live fetched Grade 3 lesson HTML already reflected the production feedback-layer wiring
 
+### Browser-based feedback-layer validation
+
+A real headless browser validation was also run on 2026-04-09 against these live review URLs:
+- `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1`
+- `https://littlelabcoats.co/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html?review=1`
+- `https://littlelabcoats.co/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1`
+- `https://littlelabcoats.co/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html?review=1`
+
+For each sampled page, the live client-side feedback UI initialized successfully:
+- `.fb-sidebar-tab` rendered
+- `.fb-sidebar` rendered
+- commenter name input rendered
+- comment list container rendered
+- feedback controls rendered (`.fb-ai-btn`, `.fb-shortcuts-btn`)
+- selecting live lesson text produced the `.fb-annotate-tooltip`
+- clicking the tooltip opened the live comment composer (`.fb-form-textarea`)
+
+This is the strongest live proof in this repo pass that review/comment capability is available from the public Grade 3 review URLs, not just that the static HTML wiring looks correct.
+
+Observed non-blocking runtime noise during browser verification:
+- a Cloudflare Insights beacon request failed with `ERR_CERT_AUTHORITY_INVALID` in the headless environment
+- one LS1 page logged a generic `404` resource error during browser capture
+- neither issue prevented the feedback sidebar, annotate tooltip, or comment composer from initializing on the sampled Grade 3 review pages
+
 ### Review-usability conclusion
 
 For the verified sample, the urgent user-facing problem is no longer reproducible:
 - the live public Grade 3 directory paths now point reviewers into review URLs
 - representative Grade 3 lesson pages on the live domain now expose production Remarq wiring plus explicit document IDs
+- the live feedback layer initializes and exposes the comment UI on representative Grade 3 lesson pages
 - the review path is available from the directory entrypoint, not only from a manually typed direct lesson URL
 
 ## Already public / linked in Grade 3 navigation
