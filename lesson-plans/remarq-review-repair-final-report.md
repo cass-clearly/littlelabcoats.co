@@ -149,29 +149,19 @@ Secondary issues found during audit:
 
 ## Remaining known gaps outside this completed scope
 
-The following legacy buckets are still documented as needing later migration work and were intentionally not reopened in this pass:
-- Kindergarten / early legacy pages
-- Grade 1 lesson/support sets
-- Grade 2 support assets
-- Grade 5 legacy pages
-- remaining free lessons / support pages outside the repaired Grade 3 sample
-- miscellaneous older / sandbox pages
+No remaining private-host Remarq wiring gap is currently expected across the `lesson-plans/` HTML review surfaces after the final cleanup pass.
 
-Representative known remaining examples:
-- `https://littlelabcoats.co/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html?review=1`
-- `https://littlelabcoats.co/lesson-plans/k-ps3-unit2-lesson4-melting-race.html?review=1`
-- `https://littlelabcoats.co/lesson-plans/free-gr4-apple-oxidation.html?review=1`
-
-These remaining cases are explicitly tracked in:
-- `lesson-plans/gr3-shared-remarq-followup-audit.md`
+What still remains outside the scope of this report:
+- browser-interactive confirmation of visible inline comments/highlights on more than the representative sampled pages
+- ongoing regression monitoring in case a future page or generated artifact reintroduces non-production wiring
+- cleanup of historical audit notes that still describe earlier broken states for context
 
 ## Follow-up recommendation
 
-Recommended next bounded migration order if more Remarq cleanup is wanted:
-1. Grade 1 lesson pages + linked support assets
-2. Kindergarten lesson pages + linked support assets
-3. remaining free sample/support pages across grades
-4. miscellaneous legacy/sandbox pages only if they still matter publicly
+Recommended next bounded follow-up if more certainty is wanted:
+1. run browser-level live spot checks on representative pages from Grade 1, Grade 2, Grade 3, Kindergarten, and free/sample surfaces
+2. remove or clearly label historical audit files whose pre-fix wording could confuse future readers
+3. treat any newly reported issue as a route-specific regression audit rather than an assumed broad migration backlog
 
 ## Verification scope note
 
@@ -188,4 +178,4 @@ What is confirmed live:
 For business decision-making here, the key conclusion is still straightforward:
 - **Grade 2 is now reviewable on the live site**
 - **the highest-impact adjacent Grade 3 support surfaces are also live-good**
-- **the remaining backlog is known, bounded, and documented**
+- **the legacy private-host Remarq wiring backlog for the `lesson-plans/` HTML review surfaces has now been cleaned up in the repo**

@@ -48,40 +48,19 @@ After the Grade 2 chunk plus this follow-up, the highest-impact public review su
 - Grade 3 review-only and lesson-index entrypoints
 - main public Grade 3 discovery links in `index.html`, `curriculum.html`, and `curriculum/index.html`
 
-## Remaining known private-host cases outside this chunk
+## Subsequent full migration note
 
-A repo-wide scan still finds private-host Remarq wiring outside the repaired Grade 2 + Grade 3 scope.
+After this follow-up audit was written, the remaining live lesson/support HTML files that still pointed at the private dev Remarq host were migrated to the production `cassclearly.com` host as a final cleanup pass.
 
-Current bounded categories still showing `192.168.5.204:3334` references:
-- Kindergarten / early: `115` files
-- Grade 1: `75` files
-- Grade 2 support assets: `12` files
-- Grade 5: `9` files
-- Free lessons / support (outside repaired Grade 3 sample): `15` files total category before subtracting repaired subset
-- Other / misc legacy pages: `27` files
+Current state for the HTML review surfaces in `lesson-plans/`:
+- no remaining lesson/support HTML file is expected to point at `192.168.5.204:3334`
+- the original “remaining private-host cases” list in this file is now historical context, not current live-state truth
 
-Representative still-broken live public examples outside current scope:
-- Grade 1 lesson page:
-  - `https://littlelabcoats.co/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html?review=1`
-- Kindergarten lesson page:
-  - `https://littlelabcoats.co/lesson-plans/k-ps3-unit2-lesson4-melting-race.html?review=1`
-- Grade 4 free sample lesson:
-  - `https://littlelabcoats.co/lesson-plans/free-gr4-apple-oxidation.html?review=1`
-
-These are not silently ignored.
-They remain known follow-up migration work, but repairing them all is larger than this chunk’s bounded scope.
-
-## Why the remaining cases were not fixed here
-
-This chunk was intentionally limited to:
-- shared/high-impact public review surfaces tied to the already-audited Grade 3 gap
-- the Grade 3 support assets and free sample that logically sit next to the repaired Grade 3 lesson pages
-- documenting the broader remaining migration rather than reopening the entire historical archive in one pass
+If future Remarq issues appear, treat them as route-specific regressions to audit directly rather than assuming the earlier legacy backlog still exists unchanged.
 
 ## Recommended next follow-up if needed
 
-If more Remarq migration work is requested, the next bounded passes should likely be:
-1. Grade 1 lesson pages + linked support assets
-2. Kindergarten lesson pages + linked support assets
-3. remaining free sample/support pages across grades
-4. miscellaneous legacy/sandbox pages only if they are still publicly important
+If more Remarq cleanup is requested later, the next work should be:
+1. route-specific live verification if a page is reported broken
+2. browser-interactive confirmation of visible comment/highlight UI on a few representative pages
+3. cleanup of any historical audit docs whose pre-fix wording is no longer useful
