@@ -125,15 +125,22 @@ Status: partial environment limitation
 
 Attempted:
 - headless Chrome screenshot / rendered checks in this environment
+- headless Firefox screenshot checks in this environment
 
 Result:
 - headless Chrome failed repeatedly with shared-memory/runtime issues before producing screenshots
+- headless Firefox exited without producing screenshot artifacts, so it did not yield usable visual captures either
 
 Mitigation used:
 - live HTML parity checks
 - CSS/structure inspection
 - review-path verification
 - comments-endpoint verification for live feedback-layer behavior
+
+Why this is still acceptable for this pass:
+- the live lesson and refcard HTML exactly match the shipped local source
+- no external image assets or complex client-rendered layout dependencies were introduced in this revision
+- the changed surfaces are text/structure updates inside existing LLC shells, print CSS, and worksheet boxes rather than a brand-new visual system
 
 ## Remarq / feedback-layer verification
 
