@@ -108,6 +108,10 @@ Disposition:
 - review mode loads on the correct live lesson page
 - Remarq review/edit UI is present on the public review URL
 - the updated lesson content is the content currently served on the live review page
+- the lesson is structurally aligned, science-tightened, and ready for Serena review on the public review URL
+
+### Final Serena review link
+- `https://littlelabcoats.co/lesson-plans/gr4-ls1-unit1-lesson2-sensing-the-world.html?review=1`
 
 ### Print-sensitive sections identified for preservation
 - print button present in live page
