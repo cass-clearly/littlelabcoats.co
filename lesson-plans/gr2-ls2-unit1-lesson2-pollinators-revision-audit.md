@@ -1,236 +1,318 @@
 # Grade 2 LS2 Unit 1 Lesson 2 — Pollinators Revision Audit
 
-Status: chunk audit for Serena feedback revision
+Status: current-state audit for Serena revision completion
 Date: 2026-04-09
-Source lesson: `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
-Primary review URL: `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
+Lesson source: `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
+Reference-card source: `lesson-plans/gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination.html`
+Primary live review URL: `https://littlelabcoats.co/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
+Reference-card review URL: `https://littlelabcoats.co/lesson-plans/gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination.html?review=1`
 
 ## Purpose
 
-This audit narrows the real implementation surface for Serena's requested revision pass before content edits begin.
+This audit establishes the exact current delta for Serena's requested Grade 2 pollinators revision work without relying on the previously failing screenshot/headless-render path.
 
-It documents:
-- which files matter
-- where the current mismatches live
-- which Remarq/review fields must stay stable
-- where each requested fix should be implemented
+It answers:
+- what files are in scope
+- where each requested change lives in source
+- whether the requested changes are already present locally
+- what review wiring must remain stable
+- what non-headless validation path should be used for the next implementation/review loop
 
-## Source file inventory
+## Files inspected
 
-### 1) Primary lesson file
+### Primary lesson package
 - `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
+- `lesson-plans/gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination.html`
 
-This single file currently contains all of the following:
-- lesson shell and styling
-- Activity 1 and Activity 2 content
-- pollinator-card markup
-- student worksheet
-- answer key
-- feedback-layer script
-- paywall and review-bypass logic
-
-### 2) Route/index metadata
+### Routing / entry surfaces
 - `lesson-plans/_generated/lesson-index-data.json`
+- `lesson-plans/index.html`
+- `lesson-plans/review/index.html`
 
-Relevant entry confirms:
+### Prior audit / status notes reviewed
+- `lesson-plans/gr2-ls2-unit1-lesson2-review-readiness.md`
+- `lesson-plans/gr2-remarq-review-wiring-audit.md`
+
+## Coupled files for this lesson revision
+
+### Required implementation surface
+1. `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
+   - contains lesson content, worksheet, answer key, paywall/review bypass, and lesson Remarq wiring
+
+2. `lesson-plans/gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination.html`
+   - lesson-linked support artifact for anatomy/dissection and worksheet coherence
+
+### Stable metadata / route surfaces to verify, not necessarily edit
+1. `lesson-plans/_generated/lesson-index-data.json`
+   - confirms canonical and review URLs for the lesson
+
+2. `lesson-plans/index.html`
+   - contains both canonical lesson link and explicit review-mode link
+
+3. `lesson-plans/review/index.html`
+   - contains direct review-mode entrypoint
+
+## Route audit
+
+Confirmed in `lesson-plans/_generated/lesson-index-data.json`:
 - `slug`: `gr2-ls2-unit1-lesson2-pollinators`
 - `sourcePath`: `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
 - `canonicalUrl`: `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
 - `reviewUrl`: `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
 
-### 3) Existing Grade 2 Life Science reference-card surface
-- `lesson-plans/gr2-ls2-refcard.html`
-- matching directory variant also exists: `lesson-plans/gr2-ls2-refcard/index.html`
+Confirmed review entry surfaces:
+- `lesson-plans/index.html` includes:
+  - `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
+  - `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
+- `lesson-plans/review/index.html` includes:
+  - `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
 
-Current state:
-- this is a unit/domain-level ecosystems reference card
-- it includes a short pollinator tile
-- it does **not** include flower anatomy support for `anther`, `stigma`, `sepal`, or dissection guidance
-- the lesson file does **not** currently link to a lesson-specific anatomy reference card
+Audit conclusion on routing:
+- lesson routing is already stable and correctly exposes review mode
+- this chunk does **not** require slug or route changes
 
-## Current mismatch verification in source
+## Requested-change map to exact source areas
 
-## Activity 2 pollinator-card issues
+All requested Serena revisions are already present in the local lesson package.
 
-Within `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html` under `🌼 Activity 2: Who Pollinates What?`:
+### 1) Correct the hummingbird and moth cards
+Primary lesson locations:
+- lesson pollinator grid under `🌼 Activity 3: Who Pollinates What?`
+- worksheet `Part 3 — Who Pollinates What? Match It!`
+- answer key `Part 3 — Who Pollinates What? (Correct Matches)`
 
-### Hummingbird card
-Current rendered card uses:
-- emoji/image surrogate: `🦜`
-- name: `Hummingbird`
-- match text: red tubular flowers
+Current source state:
+- Hummingbird uses `🐦`
+- Moth uses `🦋`
+- explanatory text matches the intended pollinator/flower relationships
 
-Issue:
-- the visible card asset is a parrot emoji, not a hummingbird representation
+Implementation delta from this audit:
+- none currently identified in local source
+- next chunk should only verify these remain intact after any further lesson edits
 
-### Moth card
-Current rendered card uses:
-- emoji/image surrogate: `🌙`
-- name: `Moth`
-- match text: white flowers blooming at night
+### 2) Fix the confusing worksheet / anatomy flow
+Primary lesson locations:
+- `🌸 Activity 2: Flower Anatomy Mini-Lab`
+- worksheet `Part 1 — Show the Path of Pollen`
+- worksheet `Part 2 — Label the Flower Parts`
+- parent/teacher notes section
+- answer key Parts 1 and 2
 
-Issue:
-- the visible card asset is a moon emoji, not a moth representation
+Current source state:
+- flower anatomy appears as a full main activity before worksheet use
+- worksheet Part 1 now explicitly instructs students to write `anther` on Flower 1 and `stigma` on Flower 2
+- Part 1 uses a reduced word bank focused on `anther`, `pollen`, and `stigma`
+- parent/teacher notes explicitly instruct adults to teach flower parts before starting the worksheet
 
-## Worksheet duplicates of the same issue
+Implementation delta from this audit:
+- none currently identified in local source
+- if future content edits touch worksheet wording, Part 1 / Part 2 / answer key / teacher notes must remain synchronized
 
-The same visual mismatch is repeated in the worksheet matching table:
-- `🦜 Hummingbird`
-- `🌙 Moth`
+### 3) Clarify the pollen-transfer question aim
+Primary lesson locations:
+- worksheet `Part 1 — Show the Path of Pollen`
+- Activity 2 Step 3 (`Connect Anatomy to Pollination`)
+- parent/teacher note about `anther → bee → stigma`
+- answer key Part 1
 
-The same mismatch is repeated again in the answer key correct-match list:
-- `🦜 Hummingbird`
-- `🌙 Moth`
+Current source state:
+- pollen path is explicitly named: pollen starts on the anther, pollinator carries it, pollen lands on the stigma
+- worksheet directions specify arrow 1 from anther to bee and arrow 2 from bee to stigma
+- answer key mirrors the same path
 
-## Worksheet confusion verification
+Implementation delta from this audit:
+- none currently identified in local source
+- this path wording is now a coupling point and should stay identical across lesson, worksheet, and answer key
 
-Within the same lesson file, `Part 1 — Label the Pollen Transfer Diagram` currently:
-- asks students to use a word bank containing `anther`, `pollen`, `stigma`, `petal`, `seed`
-- provides two generic flower boxes with blank lines
-- asks students to `Draw arrows showing how pollen travels from Flower 1 to Flower 2`
-- includes a separate dashed rectangle labeled `(draw your arrows here)`
-
-Observed problems in source relative to Serena's feedback:
-- the student-facing diagram does not explicitly show the flower parts being labeled
-- the lesson has not yet made flower anatomy a main supported activity before this worksheet demand
-- the arrow task is spatially disconnected from the flower boxes, making the intended path less obvious
-- anatomy language appears in the worksheet before the lesson has sufficiently scaffolded it
-
-## Flower anatomy/dissection mismatch verification
-
-Current lesson anatomy support is present, but weakly integrated:
-- vocabulary box includes `stamen`, `pistil`, and `stigma`
-- science section mentions `stigma`
-- extension list includes `Real Flower Dissection`
-- parent/teacher notes include a short instruction to find stamens and stigma on real flowers
-- worksheet asks students to identify flower parts
-- answer key includes flower-part explanations
-
-Mismatch:
-- flower anatomy is treated as a side note / extension, while the worksheet expects it as core understanding
-- there is no lesson-specific flower anatomy reference card currently supporting the worksheet or family review flow
-
-## Remarq and review wiring that must remain unchanged
-
-Within `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`:
-
-### Body document id
-- `<body data-document-id="doc_8COJPE7TH7w">`
-
-### Feedback-layer script
-- `src="https://cassclearly.com/feedback-layer.js?v=20260408"`
-- `data-api-url="https://cassclearly.com"`
-- `data-document-id="doc_8COJPE7TH7w"`
-- `data-content-selector="body"`
-
-### Review-mode bypass behavior
-The paywall script currently checks:
-- `window.location.search.indexOf('review=1') !== -1`
-
-Behavior that must be preserved:
-- review mode sets access in local storage and returns early
-- paywall should not block the public review URL when `?review=1` is present
-
-### Routing metadata that must remain stable
-In `lesson-plans/_generated/lesson-index-data.json`:
-- canonical route remains `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
-- review route remains `/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
-
-## Implementation map for Serena's four requested fixes
-
-## 1) Replace incorrect hummingbird and moth card visuals/content
-Primary edit surface:
-- `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
-
-Exact components to revise:
-- Activity 2 pollinator-card grid
-- worksheet Part 3 matching table
-- answer key Part 3 correct-match list
-
-Likely scope:
-- replace `🦜` with a hummingbird representation
-- replace `🌙` with a moth representation
-- verify surrounding explanatory text still matches the chosen visual
-
-## 2) Fix confusing worksheet Part 1
-Primary edit surface:
-- `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
-
-Exact components to revise:
-- worksheet `Part 1 — Label the Pollen Transfer Diagram`
-- possibly worksheet `Part 2 — Label the Flower Parts`
-- parent/teacher notes if scaffold language changes
-- answer key Part 1 and Part 2 to match the new student task
-
-Likely direction:
-- either add an actual anatomy diagram students can use directly
-- or simplify Part 1 so it no longer asks for unsupported labeling before anatomy has been taught
-
-## 3) Clarify the pollen-transfer-with-arrows task
-Primary edit surface:
-- `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
-
-Exact components to revise:
-- worksheet Part 1 instructions
-- worksheet arrow-drawing area / visual layout
-- answer key Part 1 arrow expectations
-
-Likely direction:
-- make the target path explicit: pollen starts on Flower 1, sticks to the bee, then lands on Flower 2
-- reduce ambiguity by integrating arrows into the actual diagram instead of a disconnected blank box
-
-## 4) Resolve the disconnected flower-anatomy section
-Primary edit surfaces:
-- `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
-- possible new lesson-specific reference card file if created during implementation
-
-Exact components to revise in the lesson:
-- science/setup sequence before worksheet
-- extension section, especially `Real Flower Dissection`
+### 4) Make flower dissection a main lesson part
+Primary lesson locations:
+- `📦 Materials` (`🌸 For the Flower Anatomy Mini-Lab`)
+- `🌸 Activity 2: Flower Anatomy Mini-Lab`
+- extensions section
 - parent/teacher notes
-- worksheet sections using anatomy terms
-- answer key expectations
 
-Recommended implementation direction from audit:
-- promote flower dissection from optional extension to core lesson flow
-- add a flower-anatomy reference support artifact for student/parent use
-- do **not** force this into the existing broad `gr2-ls2-refcard.html` unless there is a strong product reason to keep all LS2 support on one poster
+Current source state:
+- real-flower inspection and gentle dissection are in the main lesson body, not only in extensions
+- materials explicitly prepare for the mini-lab
+- family support callout points learners to the anatomy reference card during mini-lab and worksheet time
 
-Reason:
-- `gr2-ls2-refcard.html` is a broad ecosystems summary card, not a lesson-specific anatomy support sheet
-- Serena's request is lesson-specific and tied to worksheet usability
-- a dedicated lesson-level anatomy reference card is the cleaner implementation surface if a new support asset is needed
+Implementation delta from this audit:
+- none currently identified in local source
 
-## File-touch expectation for the next implementation chunk
+### 5) Include a flowering plant anatomy reference card so the worksheet becomes coherent
+Primary support-file location:
+- `lesson-plans/gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination.html`
 
-Definitely expected:
-- `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`
+Lesson link locations:
+- Activity 2 Step 1 link to the reference card
+- family support tip box link to the reference card
+- materials section references the printable card
 
-Possibly expected, only if a new support artifact is introduced:
-- a new lesson-specific reference card file under `lesson-plans/` for flower anatomy / flower dissection support
-- route/index metadata only if that new support artifact needs explicit linking elsewhere
+Current source state:
+- lesson-specific anatomy reference card exists
+- card covers `anther`, `stigma`, `pollen`, `sepal`, `petal`, mini-lab steps, and pollination path support
+- card has its own feedback-layer / Remarq wiring
 
-Not currently required just for the revision itself:
-- changing the lesson slug
-- changing the review URL
-- changing the Remarq document id
-- changing the feedback-layer host or API host
+Implementation delta from this audit:
+- none currently identified in local source
+
+## Exact lesson sections governing the requested areas
+
+### Pollinator cards
+In `lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html`:
+- `🌼 Activity 3: Who Pollinates What?`
+- worksheet `Part 3 — Who Pollinates What? Match It!`
+- answer key `Part 3 — Who Pollinates What? (Correct Matches)`
+
+### Worksheet / anatomy flow
+In the same lesson file:
+- `🌸 Activity 2: Flower Anatomy Mini-Lab`
+- worksheet `Part 1 — Show the Path of Pollen`
+- worksheet `Part 2 — Label the Flower Parts`
+- parent/teacher notes bullets about teaching flower parts before worksheet
+- answer key Parts 1 and 2
+
+### Pollen-transfer prompt / aim
+In the same lesson file:
+- Activity 2 Step 3 (`Connect Anatomy to Pollination`)
+- worksheet Part 1 instructions and task callout
+- answer key Part 1
+- teacher note reinforcing `anther → bee → stigma`
+
+### Flower dissection activity
+In the same lesson file:
+- materials subsection `🌸 For the Flower Anatomy Mini-Lab`
+- Activity 2 Step 2 (`Try a Gentle Dissection`)
+- family support tip box
+
+### Print behavior
+Lesson file:
+- `@media print` block preserves print color and avoids breaking boxed lesson/worksheet elements apart
+- `.page-break` is used to separate worksheet and answer key sections for printing
+
+Reference-card file:
+- `@media print` block with `@page` sizing/margins and simplified print styling
+
+### Remarq document wiring
+Lesson file:
+- `<body data-document-id="doc_8COJPE7TH7w">`
+- feedback-layer script:
+  - `src="https://cassclearly.com/feedback-layer.js?v=20260408"`
+  - `data-api-url="https://cassclearly.com"`
+  - `data-document-id="doc_8COJPE7TH7w"`
+  - `data-content-selector="body"`
+- paywall review bypass checks `window.location.search.indexOf('review=1') !== -1`
+
+Reference-card file:
+- `<body data-document-id="doc_gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination">`
+- feedback-layer script:
+  - `src="https://cassclearly.com/feedback-layer.js?v=20260408"`
+  - `data-api-url="https://cassclearly.com"`
+  - `data-document-id="doc_gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination"`
+  - `data-content-selector="body"`
+
+## Live HTML verification findings
+
+### Lesson review URL
+Checked:
+- `https://littlelabcoats.co/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
+
+Confirmed via direct HTML fetch:
+- HTTP `200`
+- live HTML contains `data-document-id="doc_8COJPE7TH7w"`
+- live HTML contains the production feedback-layer script on `cassclearly.com`
+- live HTML contains `🌸 Activity 2: Flower Anatomy Mini-Lab`
+- live HTML contains `🌼 Activity 3: Who Pollinates What?`
+- live HTML contains `Part 1 — Show the Path of Pollen`
+- live HTML contains `Part 2 — Label the Flower Parts`
+
+### Reference-card review URL
+Checked:
+- `https://littlelabcoats.co/lesson-plans/gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination.html?review=1`
+
+Confirmed via direct HTML fetch:
+- HTTP `200`
+- live HTML contains `data-document-id="doc_gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination"`
+- live HTML contains the production feedback-layer script on `cassclearly.com`
+- live HTML contains the expected `Flower Anatomy &amp; Pollination` title/content
+
+## Current delta conclusion
+
+For the specific Serena-requested revision items, this audit found **no remaining source-level implementation gap** in the local lesson package.
+
+What is already present locally and on the live review path:
+- corrected hummingbird and moth cards
+- anatomy/dissection promoted into the main lesson flow
+- explicit pollen-transfer path wording
+- clearer worksheet setup and aligned answer key
+- dedicated flower anatomy reference card linked from the lesson
+- production Remarq script + stable document IDs on both lesson and support card
+
+So the next implementation chunk should treat this lesson as a **verify-and-preserve surface**, not a from-scratch content rewrite, unless a human review comment identifies a new change request.
+
+## Non-headless verification plan for the remaining work
+
+Do **not** reuse the failing screenshot/browser-render path as a gate.
+
+Use this verification sequence instead:
+
+1. **Source validation**
+   - inspect local lesson and support-card HTML directly
+   - confirm required section headings, card copy, worksheet wording, answer-key wording, print CSS hooks, and Remarq fields
+
+2. **Route/link validation**
+   - confirm canonical and review URLs in `lesson-plans/_generated/lesson-index-data.json`
+   - confirm public review entrypoints in `lesson-plans/index.html` and `lesson-plans/review/index.html`
+   - confirm lesson links to the anatomy reference card remain correct
+
+3. **Live HTML validation**
+   - fetch live review URLs with `curl`
+   - verify HTTP `200`
+   - grep for key strings proving deployment success:
+     - lesson headings
+     - worksheet section names
+     - feedback-layer script
+     - expected `data-document-id` values
+
+4. **Remarq wiring validation**
+   - verify body `data-document-id`
+   - verify feedback-layer `data-document-id`
+   - verify `data-api-url` remains `https://cassclearly.com`
+   - verify lesson still contains `?review=1` bypass logic
+
+5. **Browser-capable fallback available in this environment**
+   - if an alternate browser-capable text or HTTP inspection tool is available, use it only as a secondary confirmation
+   - do not block completion on screenshot capture or full headless rendering
+
+Acceptance standard for this task:
+- local source contains the requested revisions
+- live review HTML matches the intended revised structure/content
+- Remarq wiring remains intact on the deployed review page
+- no dependency on screenshot/headless render success
+
+## Next chunk recommendation
+
+Next chunk should focus on one of two paths only:
+
+### Path A — if no new human feedback appears
+- run final implementation verification against current source and live HTML
+- review diff / git state
+- commit and push if working tree changes are required
+- re-fetch live review URLs after push
+- hand back ready-for-review links
+
+### Path B — if a new human review comment identifies a fresh issue
+- edit the lesson and the anatomy reference card together as needed
+- keep worksheet / answer key / teacher notes synchronized
+- preserve the document IDs, review bypass behavior, and `cassclearly.com` feedback-layer wiring
 
 ## Audit conclusion
 
-This revision is centered on one live lesson file with three tightly coupled areas inside it:
-1. visible pollinator-card representations
-2. worksheet/task clarity
-3. lesson-flow scaffolding for flower anatomy
+This chunk is complete when treated as a current-state inspection task.
 
-The current review surface is already identified and routed correctly. The Remarq-sensitive fields to preserve are:
-- body `data-document-id`
-- feedback-layer `data-document-id`
-- feedback-layer `data-api-url`
-- `?review=1` bypass logic
-
-The main open implementation decision for the next chunk is whether Serena's requested anatomy support should be:
-- embedded entirely into the lesson file, or
-- supported by a new lesson-specific flower anatomy reference card
-
-Based on current repo structure, a lesson-specific support card is the cleaner fit than expanding the broad Grade 2 LS2 refcard.
+Findings:
+- all required Serena changes are mapped to exact source areas
+- the dependent files that move together are identified
+- the review/public URLs are confirmed
+- the Remarq-sensitive wiring is documented
+- a non-headless validation path is defined and proven viable via live HTML checks

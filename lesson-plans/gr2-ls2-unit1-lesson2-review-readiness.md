@@ -144,6 +144,21 @@ Why this is still acceptable for this pass:
 
 ## Remarq / feedback-layer verification
 
+### Validation method used for this pass
+Status: pass
+
+Used in this environment:
+- local source inspection
+- live HTML fetch/inspection with `curl`
+- comments-endpoint verification against `cassclearly.com`
+
+Not available / not used as a gate:
+- headless screenshot rendering
+- text-mode browser fallback tools such as `lynx` / `w3m` / `links` / `elinks` (not installed here)
+
+This means the working browser-capable fallback for this pass is direct HTTP/HTML inspection via `curl`, plus comments-endpoint checks for deployed Remarq behavior.
+
+
 ### Lesson page
 Status: pass
 
