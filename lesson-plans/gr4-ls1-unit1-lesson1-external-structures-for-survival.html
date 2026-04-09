@@ -189,6 +189,97 @@
     .compare-table th { background: #2e7d32; color: white; padding: 8px 10px; border: 1.5px solid #1b5e20; text-align: left; }
     .compare-table td { border: 1.5px solid #a5d6a7; padding: 10px; height: 42px; vertical-align: top; }
     .compare-table tr:nth-child(even) td { background: #f6fff6; }
+    .animal-card-section {
+      background: #fbfff9;
+      border: 2px solid #c8e6c9;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    .animal-card-intro {
+      font-size: 10pt;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .animal-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .animal-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f3fbf3 100%);
+      border: 1.5px solid #a5d6a7;
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 2px 8px rgba(46,125,50,0.08);
+    }
+    .animal-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .animal-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #2e7d32;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19pt;
+      flex: 0 0 42px;
+    }
+    .animal-card-title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #1b5e20;
+      margin: 0;
+    }
+    .animal-card-tag {
+      display: inline-block;
+      margin-top: 2px;
+      background: #fff;
+      border: 1px solid #a5d6a7;
+      border-radius: 999px;
+      padding: 2px 9px;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #2e7d32;
+    }
+    .animal-card p {
+      margin: 7px 0;
+      font-size: 10pt;
+    }
+    .animal-clue-list {
+      margin: 8px 0 0 0;
+      padding-left: 18px;
+      font-size: 9.8pt;
+    }
+    .animal-clue-list li { margin-bottom: 4px; }
+    .card-mini-label {
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #567;
+    }
+    .animal-card-note {
+      background: #e0f7fa;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      font-size: 10pt;
+      color: #444;
+      margin-top: 12px;
+    }
+    .animal-cut-note {
+      margin-top: 10px;
+      font-size: 9.5pt;
+      color: #456;
+      text-align: center;
+    }
     .answer-key {
       background: #f5f5f5;
       border: 3px dashed #999;
@@ -236,11 +327,31 @@
       .print-btn, .llc-paywall-overlay { display: none !important; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .worksheet-card, .standards-box {
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .worksheet-card, .standards-box, .animal-card-section, .animal-card, .animal-card-note {
         break-inside: avoid;
         page-break-inside: avoid;
       }
+      .animal-card-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .animal-card {
+        padding: 11px;
+        box-shadow: none;
+      }
+      .animal-card-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16pt;
+        flex: 0 0 36px;
+      }
+      .animal-card-title { font-size: 10.8pt; }
+      .animal-card-tag { font-size: 7.8pt; }
+      .animal-card p, .animal-clue-list { font-size: 9pt; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    @media (max-width: 700px) {
+      .animal-card-grid { grid-template-columns: 1fr; }
     }
 
   </style>
@@ -281,33 +392,83 @@
   <div class="materials-box">
     <h3>Gather Before You Start</h3>
     <ul>
-      <li>printed lesson pages and Student Worksheet</li>
-      <li>picture cards or book images of 4–6 animals</li>
+      <li>printed lesson pages, Student Worksheet, and the included animal cards on this lesson page</li>
       <li>pencil or colored pencils</li>
       <li>optional: magnifying glass for feather/fur/shell observation</li>
     </ul>
+    <p style="font-size:10pt; color:#555; margin-top:8px;"><strong>Printables on this page:</strong> the Student Worksheet and the <em>Animal Cards for This Lesson</em> section are both included below.</p>
+  </div>
+  <div class="animal-card-section">
+    <h3>🦆 Animal Cards for This Lesson</h3>
+    <p class="animal-card-intro">Use the included animal cards on this lesson page for the observation, sorting, and worksheet activities. Each card highlights one visible external structure and the job it helps the animal do. You can point to the cards on screen or print this page and cut them apart for easier sorting.</p>
+    <div class="animal-card-grid">
+      <div class="animal-card">
+        <div class="animal-card-header"><div class="animal-card-icon">🦆</div><div><div class="animal-card-title">Duck</div><div class="animal-card-tag">stays dry + moves in water</div></div></div>
+        <p><span class="card-mini-label">Notice this structure</span><br>Waterproof feathers and webbed feet</p>
+        <p><span class="card-mini-label">How it helps</span><br>These structures help a duck stay dry and push through water while it swims.</p>
+        <p><span class="card-mini-label">Look for evidence</span></p>
+        <ul class="animal-clue-list"><li>Feathers shed water instead of soaking it up.</li><li>Webbed feet act like paddles.</li></ul>
+      </div>
+      <div class="animal-card">
+        <div class="animal-card-header"><div class="animal-card-icon">🐻‍❄️</div><div><div class="animal-card-title">Polar Bear</div><div class="animal-card-tag">stays warm</div></div></div>
+        <p><span class="card-mini-label">Notice this structure</span><br>Thick fur and large paws</p>
+        <p><span class="card-mini-label">How it helps</span><br>Thick fur helps keep heat in, and large paws help the bear move across snow and ice.</p>
+        <p><span class="card-mini-label">Look for evidence</span></p>
+        <ul class="animal-clue-list"><li>The fur covers most of the body.</li><li>The paws are broad for gripping slippery ground.</li></ul>
+      </div>
+      <div class="animal-card">
+        <div class="animal-card-header"><div class="animal-card-icon">🐢</div><div><div class="animal-card-title">Turtle</div><div class="animal-card-tag">stays protected</div></div></div>
+        <p><span class="card-mini-label">Notice this structure</span><br>Shell</p>
+        <p><span class="card-mini-label">How it helps</span><br>A hard shell protects the turtle's body from danger.</p>
+        <p><span class="card-mini-label">Look for evidence</span></p>
+        <ul class="animal-clue-list"><li>The shell is a hard outer covering.</li><li>The turtle can pull soft body parts closer to the shell.</li></ul>
+      </div>
+      <div class="animal-card">
+        <div class="animal-card-header"><div class="animal-card-icon">🦅</div><div><div class="animal-card-title">Hawk</div><div class="animal-card-tag">gets food</div></div></div>
+        <p><span class="card-mini-label">Notice this structure</span><br>Hooked beak and sharp talons</p>
+        <p><span class="card-mini-label">How it helps</span><br>These structures help a hawk catch food and tear it into pieces.</p>
+        <p><span class="card-mini-label">Look for evidence</span></p>
+        <ul class="animal-clue-list"><li>The beak curves downward.</li><li>The talons are sharp for gripping prey.</li></ul>
+      </div>
+      <div class="animal-card">
+        <div class="animal-card-header"><div class="animal-card-icon">🦌</div><div><div class="animal-card-title">Deer</div><div class="animal-card-tag">moves fast</div></div></div>
+        <p><span class="card-mini-label">Notice this structure</span><br>Long legs and hooves</p>
+        <p><span class="card-mini-label">How it helps</span><br>Long legs and hooves help a deer run quickly and travel safely across land.</p>
+        <p><span class="card-mini-label">Look for evidence</span></p>
+        <ul class="animal-clue-list"><li>The legs are tall and built for running.</li><li>The hooves help the deer push off the ground.</li></ul>
+      </div>
+      <div class="animal-card">
+        <div class="animal-card-header"><div class="animal-card-icon">🦔</div><div><div class="animal-card-title">Porcupine</div><div class="animal-card-tag">stays protected</div></div></div>
+        <p><span class="card-mini-label">Notice this structure</span><br>Quills</p>
+        <p><span class="card-mini-label">How it helps</span><br>Sharp quills help protect the porcupine from animals that might attack it.</p>
+        <p><span class="card-mini-label">Look for evidence</span></p>
+        <ul class="animal-clue-list"><li>The quills cover the back and sides.</li><li>The quills create a painful barrier for predators.</li></ul>
+      </div>
+    </div>
+    <div class="animal-card-note"><strong>What to notice:</strong> These cards show different kinds of external structures. Some help animals move, some help them stay warm or dry, some help them get food, and some help protect the body.</div>
+    <p class="animal-cut-note">Optional print tip: If your child likes hands-on sorting, print this page and cut along the space between the cards. The lesson still works without cutting.</p>
   </div>
   <h2>Let's Get Started</h2>
-  <div class="procedure-step"><strong>Step 1:</strong> Start with a quick picture walk. Ask students to notice one visible body part on several animals before naming its job.</div>
-  <div class="procedure-step"><strong>Step 2:</strong> Model structure-function thinking with one example: “A duck has waterproof feathers. That helps it move through water and stay warm.”</div>
-  <div class="procedure-step"><strong>Step 3:</strong> Sort animal examples by the kind of job the structure does: movement, protection, finding food, or staying warm/cool.</div>
-  <div class="procedure-step"><strong>Step 4:</strong> Have students choose two animals and write or say how one external structure helps each animal survive.</div>
+  <div class="procedure-step"><strong>Step 1:</strong> Start with a quick picture walk using the included animal cards on this lesson page. Ask students to notice one visible body part on several animals before naming its job.</div>
+  <div class="procedure-step"><strong>Step 2:</strong> Model structure-function thinking with the duck card: “A duck has waterproof feathers. That helps it move through water and stay warm.”</div>
+  <div class="procedure-step"><strong>Step 3:</strong> Sort the included animal cards by the kind of job the structure does: movement, protection, finding food, or staying warm/cool.</div>
+  <div class="procedure-step"><strong>Step 4:</strong> Have students choose two animals from the included animal cards on this lesson page and write or say how one external structure helps each animal survive.</div>
   <div class="procedure-step"><strong>Step 5:</strong> Use the worksheet claim box to complete the sentence: “This structure helps the animal survive because ...”</div>
   <h2>Discussion Questions</h2>
   <div class="question-box"><strong>Q:</strong> Why would two animals need different body coverings?<span class="discussion-hint">Look for answers about habitat, temperature, camouflage, or protection.</span></div>
   <div class="question-box"><strong>Q:</strong> How can the same kind of structure do different jobs?<span class="discussion-hint">Guide students to examples like claws for digging, climbing, holding, or catching prey.</span></div>
   <div class="question-box"><strong>Q:</strong> Why is it not enough to only name a body part?<span class="discussion-hint">Look for the idea that science explanations need function, not just labels.</span></div>
   <h2>Extensions</h2>
-  <div class="extension-box">Go on a “structure hunt” with pets, birds outside, or animal photos from a book. Each time, name one visible structure and one likely function. Then ask whether that structure seems best for survival in water, on land, or in the air.</div>
+  <div class="extension-box">Revisit the included animal cards on this lesson page and challenge your child to sort them a second way: by animals that stay safe mostly through body covering, by animals that move quickly, and by animals whose structures help them get food. Then add one real-life observation from a pet, bird outside, or zoo memory as an optional bonus example.</div>
   <h2>Parent/Teacher Notes</h2>
-  <div class="teacher-note"><strong>Teaching note:</strong> Keep examples concrete and familiar. The goal is not perfect zoology vocabulary for every species. The goal is strong structure-function reasoning tied to 4-LS1-1.</div>
+  <div class="teacher-note"><strong>Teaching note:</strong> Keep examples concrete and familiar. The goal is not perfect zoology vocabulary for every species. The goal is strong structure-function reasoning tied to 4-LS1-1. The included animal cards on this lesson page are the main evidence source for the activity, so encourage students to point to something visible before explaining its job.</div>
   <div class="page-break worksheet-section">
     <h1>🌱 Student Worksheet — External Structures for Survival 🌱</h1>
     <div class="name-date">Name: ____________________ &nbsp;&nbsp;&nbsp; Date: ____________________</div>
 
-      <div class="worksheet-card"><h3>Structure Spotter</h3><p>Write an animal and one external structure you noticed.</p><div class="line"></div><div class="line"></div></div>
-      <div class="worksheet-card"><h3>Match the Job</h3><table class="compare-table"><tr><th>Structure</th><th>Possible job</th><th>Evidence from the picture or animal</th></tr><tr><td>fur / feathers / shell / claws</td><td></td><td></td></tr><tr><td>beak / hoof / fin / tail</td><td></td><td></td></tr></table></div>
-      <div class="worksheet-card"><h3>Claim Box</h3><p>Complete the sentence: <strong>One external structure that helps an animal survive is ... because ...</strong></p><div class="claim-box"></div></div>
+      <div class="worksheet-card"><h3>Structure Spotter</h3><p>Use the included animal cards from this lesson page from Step 1. Name an animal and one external structure you noticed.</p><div class="line"></div><div class="line"></div></div>
+      <div class="worksheet-card"><h3>Match the Job</h3><p style="font-size:10pt; color:#555; margin-bottom:8px;">This matches Step 3. Use the included animal cards from this lesson page to sort structures by the job they do and fill in the chart.</p><table class="compare-table"><tr><th>Structure</th><th>Possible job</th><th>Evidence from the included card</th></tr><tr><td>fur / feathers / shell / claws</td><td></td><td></td></tr><tr><td>beak / hoof / fin / tail</td><td></td><td></td></tr></table></div>
+      <div class="worksheet-card"><h3>Claim Box</h3><p>Use one of the included animal cards from this lesson page. Complete the sentence: <strong>One external structure that helps an animal survive is ... because ...</strong></p><div class="claim-box"></div></div>
     
   </div>
   <div class="page-break">
@@ -315,7 +476,7 @@
       <h2>🔑 Parent Answer Key</h2>
       <p><strong>Detach note:</strong> Student wording may vary if the structure-function science is correct.</p>
       
-      <ul><li><strong>What Success Looks Like:</strong> Student names a visible structure, tells what job it does, and connects it to survival.</li><li><strong>Acceptable examples:</strong> Fur keeps an animal warm; feathers help a bird fly or stay dry; claws help grip or catch food; a shell helps protect the body.</li><li><strong>Coach for precision:</strong> If a student only writes “feathers,” prompt with “What do the feathers help the bird do?”</li></ul>
+      <ul><li><strong>What Success Looks Like:</strong> Student names a visible structure from one of the included animal cards on this lesson page, tells what job it does, and connects it to survival.</li><li><strong>Acceptable examples:</strong> Ducks use waterproof feathers and webbed feet to stay dry and swim; polar bears use thick fur to stay warm; turtles use shells for protection; hawks use hooked beaks or talons to get food; deer use long legs and hooves to move quickly; porcupines use quills for defense.</li><li><strong>Evidence source reminder:</strong> Students may use any of the included animal cards from this lesson page as evidence if they correctly connect structure to function.</li><li><strong>Coach for precision:</strong> If a student only writes “feathers,” prompt with “What do the feathers help the bird do?”</li></ul>
     </div>
   </div>
   <script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_1ls0NvQ4g-0" data-content-selector="body"></script>
