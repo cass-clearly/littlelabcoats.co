@@ -75,3 +75,14 @@ Commit deployed: `959735f` — `Fix homepage mobile nav, popup close, and free s
 ## Notes
 - Verification used mobile-relevant browser automation on the public site after push.
 - One early homepage grade-tab check gave a false negative because the test did not first scroll into the sample-units area before tab interaction; the corrected live verification confirmed the feature is working as expected.
+
+## Deploy verification rule update — 2026-04-10
+- `littlelabcoats.co` live deploy path is push to `origin/main`.
+- Production is served from GitHub Pages behind Cloudflare/Fastly.
+- After push, canonical public pages can lag briefly before they reflect the new commit.
+- During that window, stale public HTML alone should not be treated as an immediate hard blocker.
+- Correct verification behavior is: push → check live URLs with cache-busting query params → allow a short wait/retry window → recheck before declaring a deploy problem.
+- Status reports should explicitly distinguish:
+  - `repo pushed, waiting on propagation`
+  - `deploy pipeline unknown/broken`
+- This note reflects the behavior observed on 2026-04-10: push to `origin/main`, then wait for public propagation before judging live verification.
