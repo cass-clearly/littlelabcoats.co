@@ -36,6 +36,28 @@
       border-radius: 5px;
       margin-bottom: 20px;
       font-size: 10pt;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .hero-image {
+      text-align: center;
+      margin: 18px 0 14px;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #fff8e1 0%, #fce4ec 100%);
+      border: 2px solid #ffd54f;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .hero-image .emoji-hero {
+      font-size: 42pt;
+      line-height: 1.1;
+      letter-spacing: 4px;
+    }
+    .hero-image .caption {
+      font-size: 9.5pt;
+      color: #6d4c41;
+      font-style: italic;
+      margin-top: 6px;
     }
     h2 {
       font-size: 14pt;
@@ -148,6 +170,25 @@
       font-size: 10pt;
       color: #555;
     }
+    @media (max-width: 700px) {
+      body {
+        padding: 0.3in;
+      }
+      .meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-image {
+        padding: 12px 14px;
+      }
+      .hero-image .emoji-hero {
+        font-size: 34pt;
+        letter-spacing: 2px;
+      }
+      .two-column {
+        flex-direction: column;
+      }
+    }
     @media print {
       body { 
         padding: 0.25in;
@@ -175,6 +216,10 @@
         page-break-inside: avoid;
         break-inside: avoid;
       }
+      .hero-image {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
       /* Preserve colorful backgrounds in print */
       * {
         -webkit-print-color-adjust: exact;
@@ -201,6 +246,11 @@
     <span><strong>Grades:</strong> 3rd & 5th</span>
     <span><strong>Duration:</strong> 45-60 minutes</span>
     <span><strong>Subject:</strong> Physical Science</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🍦 ❄️ 🧂</div>
+    <div class="caption">A kitchen science treat: turn cream into ice cream by pulling heat out and shaking up the fun.</div>
   </div>
 
   <h2>🎯 Learning Objectives</h2>
