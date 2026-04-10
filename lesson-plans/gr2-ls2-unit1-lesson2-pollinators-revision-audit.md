@@ -125,12 +125,15 @@ It answers:
 
 ### Pollinator-visual asset inventory
 - no separate local image files are currently referenced by `gr2-ls2-unit1-lesson2-pollinators.html` for the hummingbird / moth pollinator cards
-- current shipped source uses inline emoji/icon glyphs as the visible pollinator representations:
-  - Hummingbird → `🐦`
-  - Bumblebee → `🐝`
-  - Moth → `🦋`
-  - Wind → `💨`
-- because these are glyph-based visuals, the next chunk must treat the **actual live render** as the source of truth; source inspection alone is not sufficient to prove Serena’s complaint resolved
+- the current lesson no longer uses the earlier plain emoji placeholders for the two disputed animal pollinators; it now uses inline SVG illustrations in both major student-facing placements:
+  - `🌼 Activity 3: Who Pollinates What?`
+    - Hummingbird card → inline blue/green bird SVG with long beak
+    - Moth card → inline tan/brown moth SVG with four wings
+  - worksheet `Part 3 — Who Pollinates What? Match It!`
+    - Hummingbird row → same inline bird SVG reused as a compact icon
+    - Moth row → same inline moth SVG reused as a compact icon
+- the answer key `Part 3 — Who Pollinates What? (Correct Matches)` names `Hummingbird` and `Moth` in text only and does **not** contain a matching visual/icon for either animal
+- because the disputed surfaces are custom inline illustrations rather than audited source-linked image files, the next implementation chunk must explicitly replace the hummingbird and moth SVG markup in both student-facing placements, not merely preserve the current state
 
 ## Baseline mapping of prior claimed fixes / commits
 
@@ -202,22 +205,34 @@ Audit conclusion on routing:
 
 ## Requested-change map to exact source areas
 
-All requested Serena revisions are already present in the local lesson package.
+Most Serena-requested lesson revisions are already present in the local lesson package, but the hummingbird and moth visuals remain the active unresolved gap.
 
 ### 1) Correct the hummingbird and moth cards
 Primary lesson locations:
 - lesson pollinator grid under `🌼 Activity 3: Who Pollinates What?`
+  - Hummingbird card block around lines `436–449`
+  - Moth card block around lines `456–470`
 - worksheet `Part 3 — Who Pollinates What? Match It!`
+  - Hummingbird row icon around line `596`
+  - Moth row icon around line `614`
 - answer key `Part 3 — Who Pollinates What? (Correct Matches)`
+  - text-only confirmation rows around lines `690` and `692`
 
 Current source state:
-- Hummingbird uses `🐦`
-- Moth uses `🦋`
-- explanatory text matches the intended pollinator/flower relationships
+- Hummingbird now uses a custom inline SVG rather than the earlier plain bird emoji
+- Moth now uses a custom inline SVG rather than the earlier plain butterfly emoji
+- explanatory text still matches the intended pollinator/flower relationships
+
+Why these are still the active implementation gap:
+- Serena's explicit complaint for this lesson remains that the hummingbird still does not read as an actual hummingbird and the moth still does not read clearly enough as the intended moth
+- the current hummingbird drawing is generic and stylized enough that it can still read as a broad cartoon bird instead of a clearly recognizable hummingbird
+- the current moth drawing is better than the old butterfly emoji, but it is still a simplified generic insect illustration rather than a carefully selected, clearly identifiable moth visual
+- these two visuals appear twice each in the student-facing lesson package, so the next implementation chunk must update both placements for each animal to avoid mixed old/new visuals
 
 Implementation delta from this audit:
-- none currently identified in local source
-- next chunk should only verify these remain intact after any further lesson edits
+- replace the hummingbird SVG in both the Activity 3 card and the worksheet Part 3 row
+- replace the moth SVG in both the Activity 3 card and the worksheet Part 3 row
+- keep the answer-key text relationship lines unless the visual rewrite requires tiny wording cleanup for consistency
 
 ### 2) Fix the confusing worksheet / anatomy flow
 Primary lesson locations:
@@ -367,17 +382,30 @@ Confirmed via direct HTML fetch:
 
 ## Current delta conclusion
 
-For the specific Serena-requested revision items, this audit found **no remaining source-level implementation gap** in the local lesson package.
+The previously open hummingbird/moth visual gap has now been corrected in local source, and the lesson is in **pre-push local review** state rather than still waiting on the visual implementation itself.
 
-What is already present locally and on the live review path:
-- corrected hummingbird and moth cards
-- anatomy/dissection promoted into the main lesson flow
-- explicit pollen-transfer path wording
-- clearer worksheet setup and aligned answer key
-- dedicated flower anatomy reference card linked from the lesson
-- production Remarq script + stable document IDs on both lesson and support card
+### Serena items that are already supported in current source
+- anatomy/dissection is promoted into the main lesson flow
+- pollen-transfer path wording is explicit and synchronized across lesson, worksheet, and answer key
+- worksheet setup is clearer and aligned with the answer key
+- the dedicated flower anatomy reference card exists and is linked from the lesson
+- production Remarq script + stable document IDs are present on both lesson and support card
+- hummingbird visual replaced in both student-facing placements
+- moth visual replaced in both student-facing placements
 
-So the next implementation chunk should treat this lesson as a **verify-and-preserve surface**, not a from-scratch content rewrite, unless a human review comment identifies a new change request.
+### This-pass local review result
+- Activity 3 and worksheet Part 3 were manually rechecked after the SVG swap
+- the updated hummingbird and moth visuals remain aligned with the existing captions and lesson flow
+- the answer key remains correctly text-only for these pollinator entries
+- no local source-level regression was found in the adjacent worksheet sections, answer-key structure, paywall logic, review bypass logic, or Remarq wiring
+- live/public review-page verification is still pending for the later ship/verify chunk and is not claimed complete here
+
+### Rachel / Margaret status
+- no lesson-specific Rachel review artifact has been recovered in repo docs for this lesson package
+- no lesson-specific Margaret review artifact has been recovered in repo docs for this lesson package
+- therefore any Rachel/Margaret completion claim for this lesson remains `unsourced / pending recovery`, not done
+
+So the next implementation chunk should treat this lesson as **ready for commit/push and live verification**, not as needing more local visual redesign unless live review reveals a new issue.
 
 ## Non-headless verification plan for the remaining work
 
@@ -421,27 +449,40 @@ Acceptance standard for this task:
 
 ## Next chunk recommendation
 
-Next chunk should focus on one of two paths only:
+Next chunk should focus on shipping and live verification:
 
-### Path A — if no new human feedback appears
-- run final implementation verification against current source and live HTML
-- review diff / git state
-- commit and push if working tree changes are required
-- re-fetch live review URLs after push
-- hand back ready-for-review links
+### Commit, push, and verify the public review page
+- commit the lesson visual update plus this audit/status documentation
+- push to GitHub
+- fetch and inspect the public review URL after push
+- confirm the shipped page exposes the updated hummingbird and moth visuals on the live review surface
+- then prepare the final honest status summary that separates Serena-done items, this-pass fixes, and Rachel/Margaret unsourced/pending status
 
-### Path B — if a new human review comment identifies a fresh issue
-- edit the lesson and the anatomy reference card together as needed
-- keep worksheet / answer key / teacher notes synchronized
-- preserve the document IDs, review bypass behavior, and `cassclearly.com` feedback-layer wiring
+## Local review and regression-check notes
+
+Status: local review pass completed; ready for commit/push pending live verification
+
+Checks completed in local source:
+- reviewed `🌼 Activity 3: Who Pollinates What?` in context and confirmed the new hummingbird and moth visuals fit the existing pollinator-card layout
+- reviewed worksheet `Part 3 — Who Pollinates What? Match It!` and confirmed the compact icon versions stay paired with the correct labels and flower matches
+- reviewed answer key `Part 3 — Who Pollinates What? (Correct Matches)` and confirmed no visual/icon dependency was introduced there
+- rechecked adjacent lesson sections before and after the touched area so the swap did not disturb surrounding LLC structure or instructional flow
+- rechecked `data-document-id`, feedback-layer script, and `?review=1` bypass logic in the lesson file so the visual edit did not disturb review-mode behavior
+- rechecked the paywall overlay block and lock script so no accidental regression was introduced outside the pollinator swap
+
+Local regression judgment:
+- no obvious source-level structural regression remains
+- no caption mismatch was found around the updated pollinator visuals
+- no extra cleanup edit was required in the lesson HTML after this local review pass
+- live/public verification still remains outstanding and must happen after push
 
 ## Audit conclusion
 
-This chunk is complete when treated as a current-state inspection task.
+This lesson is locally review-clean for the hummingbird/moth fix and ready for the commit/push + live-verification chunk.
 
 Findings:
-- all required Serena changes are mapped to exact source areas
-- the dependent files that move together are identified
-- the review/public URLs are confirmed
-- the Remarq-sensitive wiring is documented
-- a non-headless validation path is defined and proven viable via live HTML checks
+- the updated hummingbird and moth visuals are present in both student-facing placements
+- the answer key remains correctly text-only for these pollinator entries
+- Serena-complete anatomy/worksheet/reference-card items remain intact alongside the new visual fix
+- Rachel and Margaret review status for this lesson remains unsourced/pending rather than complete
+- the dependent files, review/public URLs, and Remarq-sensitive wiring remain documented for the ship/verify chunk
