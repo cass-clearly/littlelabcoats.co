@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Moth pollinator illustration</title>
+  <desc id="desc">A pale brown moth with broad wings shown near a moonlit night sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#24314f"/>
+      <stop offset="100%" stop-color="#11182f"/>
+    </linearGradient>
+    <linearGradient id="upperWing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#efe5d4"/>
+      <stop offset="100%" stop-color="#cfbea4"/>
+    </linearGradient>
+    <linearGradient id="lowerWing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d2c2ab"/>
+      <stop offset="100%" stop-color="#b09a83"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="36" fill="url(#sky)"/>
+  <circle cx="248" cy="76" r="34" fill="#fff6c7" opacity="0.96"/>
+  <circle cx="258" cy="66" r="34" fill="#24314f"/>
+  <circle cx="64" cy="58" r="3" fill="#fff7d8" opacity="0.95"/>
+  <circle cx="96" cy="94" r="2.5" fill="#fff7d8" opacity="0.8"/>
+  <circle cx="52" cy="112" r="2.5" fill="#fff7d8" opacity="0.7"/>
+  <ellipse cx="160" cy="168" rx="20" ry="66" fill="#6d4b3b"/>
+  <circle cx="160" cy="91" r="14" fill="#6d4b3b"/>
+  <path d="M151 88 C127 65 98 56 74 64" stroke="#6d4b3b" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M169 88 C193 65 222 56 246 64" stroke="#6d4b3b" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M147 136 C103 90 56 96 40 138 C51 198 97 220 148 186 Z" fill="url(#upperWing)" stroke="#8b7768" stroke-width="7"/>
+  <path d="M173 136 C217 90 264 96 280 138 C269 198 223 220 172 186 Z" fill="url(#upperWing)" stroke="#8b7768" stroke-width="7"/>
+  <path d="M150 188 C120 230 105 269 118 284 C146 277 162 243 160 201 Z" fill="url(#lowerWing)" stroke="#8b7768" stroke-width="7"/>
+  <path d="M170 188 C200 230 215 269 202 284 C174 277 158 243 160 201 Z" fill="url(#lowerWing)" stroke="#8b7768" stroke-width="7"/>
+  <path d="M141 138 C116 124 92 124 70 136" stroke="#aa9b88" stroke-width="5" stroke-linecap="round"/>
+  <path d="M179 138 C204 124 228 124 250 136" stroke="#aa9b88" stroke-width="5" stroke-linecap="round"/>
+  <path d="M146 103 C122 92 102 92 84 102" stroke="#8b7768" stroke-width="5" stroke-linecap="round"/>
+  <path d="M174 103 C198 92 218 92 236 102" stroke="#8b7768" stroke-width="5" stroke-linecap="round"/>
+</svg>
