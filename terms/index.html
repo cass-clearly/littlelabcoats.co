@@ -301,6 +301,19 @@
       .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
+  <script>
+    (function () {
+      var host = window.location.hostname;
+      if (host !== 'littlelabcoats.co' && host !== 'www.littlelabcoats.co') return;
+      if (document.querySelector('script[data-llc-analytics="plausible"]')) return;
+      var script = document.createElement('script');
+      script.defer = true;
+      script.dataset.domain = 'littlelabcoats.co';
+      script.dataset.llcAnalytics = 'plausible';
+      script.src = 'https://plausible.io/js/script.js';
+      document.head.appendChild(script);
+    })();
+  </script>
 </head>
 <body>
 
