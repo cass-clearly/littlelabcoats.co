@@ -59,6 +59,113 @@
       font-style: italic;
       margin-top: 6px;
     }
+    .science-diagram-card {
+      margin: 16px 0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 2px solid;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .science-diagram-card h3 {
+      margin-top: 0;
+      border: none;
+      font-size: 13pt;
+    }
+    .heat-flow-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .heat-node {
+      flex: 1 1 180px;
+      min-width: 180px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      border: 2px solid rgba(0,0,0,0.08);
+    }
+    .heat-node .icon {
+      font-size: 28pt;
+      line-height: 1.1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .heat-node .label {
+      font-weight: 700;
+      font-size: 11pt;
+      margin-bottom: 4px;
+    }
+    .heat-node .detail {
+      font-size: 9.5pt;
+      color: #444;
+      line-height: 1.35;
+    }
+    .heat-arrow {
+      flex: 0 0 auto;
+      font-size: 22pt;
+      font-weight: 700;
+      color: #d84315;
+      text-align: center;
+    }
+    .states-diagram {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .state-card {
+      background: rgba(255,255,255,0.94);
+      border-radius: 12px;
+      padding: 12px;
+      border: 2px solid rgba(0,0,0,0.08);
+    }
+    .state-card .state-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .state-card .state-icon {
+      font-size: 24pt;
+      line-height: 1;
+    }
+    .particle-row {
+      display: flex;
+      gap: 6px;
+      margin: 8px 0;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .particle {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: currentColor;
+      opacity: 0.9;
+    }
+    .particle-row.solid {
+      color: #8e24aa;
+    }
+    .particle-row.liquid {
+      color: #1e88e5;
+    }
+    .particle-row.cold-bath {
+      color: #00897b;
+    }
+    .state-card p {
+      font-size: 9.5pt;
+      line-height: 1.35;
+      margin: 0;
+      color: #444;
+    }
     h2 {
       font-size: 14pt;
       background: #333;
@@ -188,6 +295,15 @@
       .two-column {
         flex-direction: column;
       }
+      .heat-flow-diagram {
+        flex-direction: column;
+      }
+      .heat-arrow {
+        transform: rotate(90deg);
+      }
+      .states-diagram {
+        grid-template-columns: 1fr;
+      }
     }
     @media print {
       body { 
@@ -216,7 +332,8 @@
         page-break-inside: avoid;
         break-inside: avoid;
       }
-      .hero-image {
+      .hero-image,
+      .science-diagram-card {
         break-inside: avoid;
         page-break-inside: avoid;
       }
@@ -297,6 +414,23 @@
     <p style="margin: 0; font-size: 10.5pt;"><strong>Quick picture:</strong> warm cream → colder salty ice bath</p>
   </div>
 
+  <div class="science-diagram-card" style="background:#fff3e0; border-color:#ffb74d;">
+    <h3 style="color:#e65100;">🧊 Diagram 1: Which way does the heat go?</h3>
+    <div class="heat-flow-diagram" aria-label="Diagram showing heat moving from warm cream to colder salty ice bath">
+      <div class="heat-node">
+        <span class="icon">🥛</span>
+        <div class="label">Warm cream mixture</div>
+        <div class="detail">Starts as a liquid with <strong>more thermal energy</strong>.</div>
+      </div>
+      <div class="heat-arrow" aria-hidden="true">heat →</div>
+      <div class="heat-node">
+        <span class="icon">❄️🧂</span>
+        <div class="label">Colder salty ice bath</div>
+        <div class="detail">Pulls heat away so the cream can freeze.</div>
+      </div>
+    </div>
+  </div>
+
   <div style="background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 16px; margin: 14px 0;">
     <h3 style="margin-top: 0; color: #1565c0; border-bottom: 2px solid #90caf9;">🧂 Why add salt?</h3>
     <p style="margin-bottom: 8px;">Plain ice sits at about 32°F, but salt helps the ice melt at a lower temperature. That makes the ice bath even colder, so it can pull heat out of the cream faster. This is the same reason salt can help melt icy roads in winter.</p>
@@ -307,6 +441,33 @@
     <h3 style="margin-top: 0; color: #7b1fa2; border-bottom: 2px solid #ce93d8;">🥄 Why do we shake?</h3>
     <p style="margin-bottom: 8px;">Shaking keeps bringing warmer cream to the cold sides of the bag, which helps freezing happen more evenly and more quickly. It also helps keep the texture smoother by stopping large ice crystals from building up.</p>
     <p style="margin: 0; font-size: 10.5pt;"><strong>Science words:</strong> thermal energy, heat transfer, freezing, liquid, solid</p>
+  </div>
+
+  <div class="science-diagram-card" style="background:#f3e5f5; border-color:#ce93d8;">
+    <h3 style="color:#7b1fa2;">🔬 Diagram 2: What changes during the experiment?</h3>
+    <div class="states-diagram" aria-label="Diagram comparing the liquid cream, frozen ice cream, and salty ice bath during the experiment">
+      <div class="state-card">
+        <div class="state-top"><span class="state-icon">🥛</span><span>Liquid cream</span></div>
+        <div class="particle-row liquid" aria-hidden="true">
+          <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        </div>
+        <p>Particles can slide past each other, so the mixture can slosh and pour.</p>
+      </div>
+      <div class="state-card">
+        <div class="state-top"><span class="state-icon">🍦</span><span>Frozen ice cream</span></div>
+        <div class="particle-row solid" aria-hidden="true">
+          <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        </div>
+        <p>After heat leaves, particles slow down and stay much more locked in place.</p>
+      </div>
+      <div class="state-card">
+        <div class="state-top"><span class="state-icon">❄️🧂</span><span>Salt + ice bath</span></div>
+        <div class="particle-row cold-bath" aria-hidden="true">
+          <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        </div>
+        <p>The extra-cold bath absorbs heat from the cream while the ice starts to melt.</p>
+      </div>
+    </div>
   </div>
 
   <div style="background: #fff9c4; border: 2px solid #fbc02d; border-radius: 10px; padding: 14px 16px; margin: 16px 0 20px;">
