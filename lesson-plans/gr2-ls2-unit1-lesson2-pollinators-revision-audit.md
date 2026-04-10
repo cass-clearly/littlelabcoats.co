@@ -460,7 +460,7 @@ Next chunk should focus on shipping and live verification:
 
 ## Local review and regression-check notes
 
-Status: local review pass completed; ready for commit/push pending live verification
+Status: local review pass completed before ship; live verification completed after push
 
 Checks completed in local source:
 - reviewed `🌼 Activity 3: Who Pollinates What?` in context and confirmed the new hummingbird and moth visuals fit the existing pollinator-card layout
@@ -474,15 +474,68 @@ Local regression judgment:
 - no obvious source-level structural regression remains
 - no caption mismatch was found around the updated pollinator visuals
 - no extra cleanup edit was required in the lesson HTML after this local review pass
-- live/public verification still remains outstanding and must happen after push
+
+## Live public review-page verification
+
+Status: pass
+
+Live/public review URL used:
+- `https://littlelabcoats.co/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1`
+
+Verification method:
+- fetched the actual public review URL after push
+- compared live HTML against the just-pushed local lesson source
+- checked the exact hummingbird and moth SVG signatures in both student-facing placements
+- rechecked lesson `data-document-id` and feedback-layer wiring on the live page
+
+Live verification findings:
+- live review URL returned `HTTP 200`
+- live HTML now contains the updated hummingbird SVG markers, including:
+  - `M46 28 L63 25 L46 31`
+  - `cx="34" cy="31" rx="10" ry="6.5"`
+  - `stroke="#d94f70"`
+- live HTML now contains the updated moth SVG markers, including:
+  - `rx="5.5" ry="14"`
+  - `M30 15 C24 10, 18 8, 13 9`
+- the updated hummingbird and moth visuals are present live in:
+  - `🌼 Activity 3: Who Pollinates What?`
+  - worksheet `Part 3 — Who Pollinates What? Match It!`
+- live lesson still exposes `data-document-id="doc_8COJPE7TH7w"`
+- live lesson still exposes the production `cassclearly.com` feedback-layer script
+- no cache/deploy follow-up action was required for this pass because the live HTML matched the pushed lesson state
+
+## Final reviewer-status summary — `gr2-ls2-unit1-lesson2-pollinators`
+
+### A) Serena items done
+- flower anatomy / dissection is in the main lesson flow rather than treated as a disconnected side note
+- pollen-transfer wording is explicit and synchronized across lesson, worksheet, and answer key
+- worksheet setup is clearer and aligned with the flower-anatomy support flow
+- the dedicated flower anatomy reference card exists and is linked from the lesson
+- the lesson and support asset remain wired for public review with the expected production feedback-layer fields
+
+### B) Items fixed in this pass
+- replaced the hummingbird visual in both student-facing lesson placements:
+  - `🌼 Activity 3: Who Pollinates What?`
+  - worksheet `Part 3 — Who Pollinates What? Match It!`
+- replaced the moth visual in both student-facing lesson placements:
+  - `🌼 Activity 3: Who Pollinates What?`
+  - worksheet `Part 3 — Who Pollinates What? Match It!`
+- locally reviewed the updated lesson sections for adjacent structure/regression issues before ship
+- verified after push that the live public review page reflects the new hummingbird and moth SVGs
+
+### C) Rachel / Margaret items still unsourced or still pending
+- no lesson-specific Rachel review artifact has been recovered in repo docs for this lesson package
+- no lesson-specific Margaret review artifact has been recovered in repo docs for this lesson package
+- because those lesson-specific review artifacts are still unrecovered, this summary does **not** claim Rachel or Margaret completion for this lesson
+- if Rachel/Margaret comments exist elsewhere (for example in Remarq history outside the recovered repo docs), they still need to be sourced explicitly before any done/not-done claim should be upgraded
 
 ## Audit conclusion
 
-This lesson is locally review-clean for the hummingbird/moth fix and ready for the commit/push + live-verification chunk.
+This lesson is now locally reviewed, pushed, live-verified for the hummingbird/moth visual fix, and paired with an explicit non-inflated reviewer-status summary.
 
 Findings:
-- the updated hummingbird and moth visuals are present in both student-facing placements
+- the updated hummingbird and moth visuals are present in both student-facing placements locally and on the live review page
 - the answer key remains correctly text-only for these pollinator entries
 - Serena-complete anatomy/worksheet/reference-card items remain intact alongside the new visual fix
 - Rachel and Margaret review status for this lesson remains unsourced/pending rather than complete
-- the dependent files, review/public URLs, and Remarq-sensitive wiring remain documented for the ship/verify chunk
+- the dependent files, review/public URLs, and Remarq-sensitive wiring remain documented for final reporting
