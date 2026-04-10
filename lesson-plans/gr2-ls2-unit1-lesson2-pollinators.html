@@ -154,6 +154,25 @@
     .pollinator-card .emoji { font-size: 30pt; display: block; margin-bottom: 4px; }
     .pollinator-card .pollinator-name { font-weight: bold; color: #2e7d32; font-size: 11pt; }
     .pollinator-card .flower-match { font-size: 10pt; color: #555; margin-top: 4px; }
+    .pollinator-illustration {
+      width: 62px;
+      height: 62px;
+      display: block;
+      margin: 0 auto 6px;
+    }
+    .pollinator-illustration svg,
+    .inline-pollinator-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .inline-pollinator-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: -4px;
+      margin-right: 4px;
+    }
     /* Worksheet styles */
     .worksheet-title {
       text-align: center;
@@ -415,7 +434,17 @@
 
   <div class="pollinator-grid">
     <div class="pollinator-card">
-      <span class="emoji">🐦</span>
+      <span class="pollinator-illustration" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img" focusable="false">
+          <path d="M41 30 L61 26 L41 34 Z" fill="#2e7d32"/>
+          <ellipse cx="30" cy="33" rx="13" ry="8" fill="#35a7c8"/>
+          <circle cx="42" cy="31" r="4" fill="#35a7c8"/>
+          <circle cx="43.5" cy="30" r="1" fill="#111"/>
+          <path d="M27 30 C17 16, 10 15, 6 18 C11 25, 17 30, 25 34 Z" fill="#7fd3e8"/>
+          <path d="M19 35 C11 43, 9 49, 10 55 C17 48, 21 42, 25 37 Z" fill="#1b5e20"/>
+          <path d="M24 36 C21 43, 18 49, 16 57" stroke="#1b5e20" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </span>
       <div class="pollinator-name">Hummingbird</div>
       <div class="flower-match">→ Red tubular flowers 🌺<br><em>Long beak fits perfectly inside the tube to reach nectar</em></div>
     </div>
@@ -425,7 +454,18 @@
       <div class="flower-match">→ Open, wide flowers 🌻<br><em>Big enough to land on — a bee-sized landing pad</em></div>
     </div>
     <div class="pollinator-card">
-      <span class="emoji">🦋</span>
+      <span class="pollinator-illustration" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img" focusable="false">
+          <ellipse cx="32" cy="34" rx="4" ry="13" fill="#6d4c41"/>
+          <circle cx="32" cy="18" r="3" fill="#6d4c41"/>
+          <path d="M30 16 C26 8, 20 6, 16 6" stroke="#6d4c41" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M34 16 C38 8, 44 6, 48 6" stroke="#6d4c41" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M29 28 C18 16, 9 19, 7 29 C9 40, 18 43, 29 35 Z" fill="#d9d0c6" stroke="#8d6e63" stroke-width="1.5"/>
+          <path d="M35 28 C46 16, 55 19, 57 29 C55 40, 46 43, 35 35 Z" fill="#d9d0c6" stroke="#8d6e63" stroke-width="1.5"/>
+          <path d="M29 37 C20 44, 16 52, 19 58 C26 56, 30 49, 31 40 Z" fill="#b0a79b" stroke="#8d6e63" stroke-width="1.5"/>
+          <path d="M35 37 C44 44, 48 52, 45 58 C38 56, 34 49, 33 40 Z" fill="#b0a79b" stroke="#8d6e63" stroke-width="1.5"/>
+        </svg>
+      </span>
       <div class="pollinator-name">Moth</div>
       <div class="flower-match">→ White flowers (night blooming) 🌕<br><em>Moths are nocturnal — white flowers glow in moonlight</em></div>
     </div>
@@ -553,7 +593,7 @@
       <table style="width:100%; border-collapse:collapse;">
         <tr>
           <td style="width:40%; padding:6px; vertical-align:middle;">
-            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🐦 Hummingbird</div>
+            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;"><span class="inline-pollinator-icon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" focusable="false"><path d="M41 30 L61 26 L41 34 Z" fill="#2e7d32"/><ellipse cx="30" cy="33" rx="13" ry="8" fill="#35a7c8"/><circle cx="42" cy="31" r="4" fill="#35a7c8"/><circle cx="43.5" cy="30" r="1" fill="#111"/><path d="M27 30 C17 16, 10 15, 6 18 C11 25, 17 30, 25 34 Z" fill="#7fd3e8"/><path d="M19 35 C11 43, 9 49, 10 55 C17 48, 21 42, 25 37 Z" fill="#1b5e20"/><path d="M24 36 C21 43, 18 49, 16 57" stroke="#1b5e20" stroke-width="3" stroke-linecap="round"/></svg></span>Hummingbird</div>
           </td>
           <td style="width:20%; text-align:center; font-size:9pt; color:#aaa;">draw a line →</td>
           <td style="width:40%; padding:6px; vertical-align:middle;">
@@ -571,7 +611,7 @@
         </tr>
         <tr>
           <td style="padding:6px; vertical-align:middle;">
-            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;">🦋 Moth</div>
+            <div style="background:#fff; border:2px solid #a5d6a7; border-radius:8px; padding:8px 10px; text-align:center; font-size:10pt;"><span class="inline-pollinator-icon" aria-hidden="true"><svg viewBox="0 0 64 64" role="img" focusable="false"><ellipse cx="32" cy="34" rx="4" ry="13" fill="#6d4c41"/><circle cx="32" cy="18" r="3" fill="#6d4c41"/><path d="M30 16 C26 8, 20 6, 16 6" stroke="#6d4c41" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M34 16 C38 8, 44 6, 48 6" stroke="#6d4c41" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M29 28 C18 16, 9 19, 7 29 C9 40, 18 43, 29 35 Z" fill="#d9d0c6" stroke="#8d6e63" stroke-width="1.5"/><path d="M35 28 C46 16, 55 19, 57 29 C55 40, 46 43, 35 35 Z" fill="#d9d0c6" stroke="#8d6e63" stroke-width="1.5"/><path d="M29 37 C20 44, 16 52, 19 58 C26 56, 30 49, 31 40 Z" fill="#b0a79b" stroke="#8d6e63" stroke-width="1.5"/><path d="M35 37 C44 44, 48 52, 45 58 C38 56, 34 49, 33 40 Z" fill="#b0a79b" stroke="#8d6e63" stroke-width="1.5"/></svg></span>Moth</div>
           </td>
           <td style="text-align:center; font-size:9pt; color:#aaa;">draw a line →</td>
           <td style="padding:6px; vertical-align:middle;">
@@ -647,9 +687,9 @@
       <div class="ak-section">
         <h3>Part 3 — Who Pollinates What? (Correct Matches)</h3>
         <ul class="ak-match-list">
-          <li>🐦 <strong>Hummingbird</strong> → 🌺 <strong>Red tubular flowers</strong> — long beak fits the tube perfectly to reach nectar deep inside</li>
+          <li><strong>Hummingbird</strong> → 🌺 <strong>Red tubular flowers</strong> — long beak fits the tube perfectly to reach nectar deep inside</li>
           <li>🐝 <strong>Bumblebee</strong> → 🌻 <strong>Wide open flowers (landing pad)</strong> — bees need a flat surface to land and collect pollen</li>
-          <li>🦋 <strong>Moth</strong> → 🌕 <strong>White flowers (blooms at night)</strong> — moths are nocturnal; white flowers are visible in moonlight</li>
+          <li><strong>Moth</strong> → 🌕 <strong>White flowers (blooms at night)</strong> — moths are nocturnal; white flowers are visible in moonlight</li>
           <li>💨 <strong>Wind</strong> → 🌾 <strong>Grasses &amp; trees (no color, no smell)</strong> — wind doesn't need to be attracted; plants produce enormous quantities of tiny, light pollen</li>
         </ul>
       </div>
