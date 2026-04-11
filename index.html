@@ -998,19 +998,20 @@
     }
 
     .feature-check {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 800;
       flex-shrink: 0;
       margin-top: 1px;
+      background: var(--teal);
+      color: white;
+      box-shadow: 0 6px 14px rgba(78,205,196,0.22);
     }
-
-    .pricing-card:nth-child(1) .feature-check { background: var(--coral); color: white; }
-    .pricing-card.featured .feature-check     { background: var(--teal); color: white; }
 
     .pricing-price-stack {
       display: flex;
@@ -1035,15 +1036,20 @@
     .pricing-note-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin: 10px 0 18px;
-      padding: 9px 14px;
+      justify-content: center;
+      gap: 10px;
+      margin: 14px 0 26px;
+      padding: 16px 24px;
       border-radius: 999px;
-      background: var(--yellow-pale);
-      color: #92400e;
+      background: linear-gradient(135deg, #fff4c2 0%, #fde68a 100%);
+      color: #7c2d12;
       font-family: 'Lato', sans-serif;
-      font-size: 0.86rem;
-      font-weight: 700;
+      font-size: 1.08rem;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      box-shadow: 0 14px 34px rgba(212,137,58,0.24);
+      border: 2px solid rgba(212,137,58,0.3);
     }
 
     /* ─── Founder ─── */
@@ -2850,17 +2856,17 @@
           <div class="pricing-tier-name">Basic</div>
           <div class="pricing-tagline">Buy a single unit with no subscription</div>
           <div class="pricing-price-stack">
-            <div class="pricing-strike">$22.50 anchor price</div>
+            <div class="pricing-strike">$22.50</div>
             <div class="price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/unit</small></div>
             <div class="price-alt">One-time purchase · No subscription</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>One complete unit purchase</li>
-            <li><span class="feature-check">✓</span>6 NGSS-aligned lessons in that unit</li>
-            <li><span class="feature-check">✓</span>Printable worksheets and parent answer keys</li>
-            <li><span class="feature-check">✓</span>Reference card and unit quiz included</li>
-            <li><span class="feature-check">✓</span>Perfect for trying one topic at a time</li>
+            <li><span class="feature-check">✔</span>One complete unit purchase</li>
+            <li><span class="feature-check">✔</span>6 NGSS-aligned lessons in that unit</li>
+            <li><span class="feature-check">✔</span>Printable worksheets and parent answer keys</li>
+            <li><span class="feature-check">✔</span>Reference card and unit quiz included</li>
+            <li><span class="feature-check">✔</span>Perfect for trying one topic at a time</li>
           </ul>
           <a href="store.html" class="btn btn-secondary" style="width:100%; text-align:center;">Shop Single Units</a>
         </div>
@@ -2871,18 +2877,18 @@
           <div class="pricing-tier-name">Premium</div>
           <div class="pricing-tagline">Unlock one full grade level</div>
           <div class="pricing-price-stack">
-            <div class="pricing-strike">$18.74/month anchor price</div>
+            <div class="pricing-strike">$18.74/month</div>
             <div class="price-main">$14.99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/month</small></div>
             <div class="pricing-bill-line">Billed annually: $149/year <span style="font-weight:400; color:var(--text-muted);">(2 months free)</span></div>
             <div class="price-alt">Every unit in one grade level</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>Every lesson in one grade level</li>
-            <li><span class="feature-check">✓</span>All units, worksheets, answer keys, and quizzes for that grade</li>
-            <li><span class="feature-check">✓</span>Printable reference cards included</li>
-            <li><span class="feature-check">✓</span>Great for families teaching one grade this year</li>
-            <li><span class="feature-check">✓</span>Annual billing with 2 months free</li>
+            <li><span class="feature-check">✔</span>Every lesson in one grade level</li>
+            <li><span class="feature-check">✔</span>All units, worksheets, answer keys, and quizzes for that grade</li>
+            <li><span class="feature-check">✔</span>Printable reference cards included</li>
+            <li><span class="feature-check">✔</span>Great for families teaching one grade this year</li>
+            <li><span class="feature-check">✔</span>Annual billing with 2 months free</li>
           </ul>
           <a href="store.html" class="btn btn-primary" style="width:100%; text-align:center;">Choose Premium</a>
         </div>
@@ -2892,18 +2898,18 @@
           <div class="pricing-tier-name">VIP</div>
           <div class="pricing-tagline">Every lesson across the site</div>
           <div class="pricing-price-stack">
-            <div class="pricing-strike">$31.24/month anchor price</div>
+            <div class="pricing-strike">$31.24/month</div>
             <div class="price-main">$24.99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/month</small></div>
-            <div class="pricing-bill-line">Billed annually: $249/year</div>
+            <div class="pricing-bill-line">Billed annually: $249/year <span style="font-weight:400; color:var(--text-muted);">(2 months free)</span></div>
             <div class="price-alt">All-access across the full K–5 library</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>Access to every lesson across the site</li>
-            <li><span class="feature-check">✓</span>All units, quizzes, worksheets, and reference cards</li>
-            <li><span class="feature-check">✓</span>Ideal for multi-age homeschool families</li>
-            <li><span class="feature-check">✓</span>Use across all available grade levels</li>
-            <li><span class="feature-check">✓</span>Best value for full-library access</li>
+            <li><span class="feature-check">✔</span>Access to every lesson across the site</li>
+            <li><span class="feature-check">✔</span>All units, quizzes, worksheets, and reference cards</li>
+            <li><span class="feature-check">✔</span>Ideal for multi-age homeschool families</li>
+            <li><span class="feature-check">✔</span>Use across all available grade levels</li>
+            <li><span class="feature-check">✔</span>Best value for full-library access</li>
           </ul>
           <a href="store.html" class="btn btn-teal" style="width:100%; text-align:center;">Choose VIP</a>
         </div>
