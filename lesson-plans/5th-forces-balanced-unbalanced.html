@@ -235,9 +235,26 @@
       page-break-before: always;
       margin-top: 20px;
     }
-  </style>
+  
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 1000;
+    }
+</style>
 </head>
 <body data-document-id="doc_5th-forces-balanced-unbalanced">
+  <button class="print-btn" type="button" onclick="window.focus(); window.print();">🖨️ Print Lesson</button>
+
 
   <h1>⚖️ The Force Is With You ⚖️</h1>
   <p class="subtitle">Physical Science — Balanced &amp; Unbalanced Forces, Friction, and Newton's Laws</p>
@@ -661,6 +678,21 @@
     transition: background 0.2s, transform 0.15s;
   }
   .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 1000;
+    }
 </style>
 
 <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
