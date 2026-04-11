@@ -273,6 +273,56 @@
       gap: 20px;
     }
 
+    .grade-domain-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .domain-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border: 2px solid var(--border);
+      border-radius: 999px;
+      background: white;
+      color: var(--navy);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .domain-tab-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+    .domain-tab-btn.active {
+      color: white;
+      border-color: transparent;
+      box-shadow: var(--shadow-md);
+    }
+    .domain-tab-btn[data-domain="physical"].active {
+      background: linear-gradient(135deg,#4f8ff0 0%,#3676d6 100%);
+    }
+    .domain-tab-btn[data-domain="life"].active {
+      background: linear-gradient(135deg,#43a047 0%,#2e7d32 100%);
+    }
+    .domain-tab-btn[data-domain="earth"].active {
+      background: linear-gradient(135deg,#f2994a 0%,#e67e22 100%);
+    }
+    .domain-panel {
+      display: none;
+    }
+    .domain-panel.active {
+      display: block;
+    }
+    .domain-panel .domain-header {
+      margin-bottom: 18px;
+    }
+
     /* ─── Unit card ─── */
     .unit-card {
       background: white;
@@ -1257,106 +1307,131 @@
         <div class="grade-header">
           <div class="grade-badge">5</div>
           <h2 class="grade-title">Grade 5</h2>
-          <span class="grade-count">21 lessons</span>
+          <span class="grade-count">3 units · 18 lessons</span>
         </div>
-        <div class="unit-grid">
 
-          <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">🍞</span>
-              <div class="unit-card-info">
-                <div class="unit-card-name">Free Sample Lesson</div>
-                <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 5</span><span>Life Science</span></div>
-              </div>
-              <span class="unit-toggle">▼</span>
-            </div>
-            <div class="unit-card-body">
-              <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🍞</span><a href="lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank">Free Sample — Bread Mold Terrarium</a></li>
-              </ul>
-            </div>
+        <div class="grade-domain-tabs" role="tablist" aria-label="Grade 5 curriculum domains">
+          <button class="domain-tab-btn active" type="button" data-domain="physical" onclick="selectDomainTab(this)"><span>⚖️</span><span>Physical Science</span></button>
+          <button class="domain-tab-btn" type="button" data-domain="life" onclick="selectDomainTab(this)"><span>🌿</span><span>Life Science</span></button>
+          <button class="domain-tab-btn" type="button" data-domain="earth" onclick="selectDomainTab(this)"><span>💧</span><span>Earth Science</span></button>
+        </div>
+
+        <div class="domain-panel active" data-domain="physical">
+          <div class="domain-header phys" style="display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#e3f0ff 0%,#f8faff 100%); border-left: 5px solid var(--ps-color); border-radius: 8px; padding: 10px 18px; margin: 0 0 16px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ps-color);">
+            <span>⚡</span> Physical Science
           </div>
-
-          <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">⚖️</span>
-              <div class="unit-card-info">
-                <div class="unit-card-name">Forces &amp; Motion</div>
-                <div class="unit-card-meta">
-                  <span class="unit-tag">5-PS2</span>
-                  <span>Physical Science</span>
+          <div class="unit-grid">
+            <div class="unit-card">
+              <div class="unit-card-header" style="border-left-color: var(--ps-color);" onclick="toggleUnit(this)">
+                <span class="unit-icon">⚖️</span>
+                <div class="unit-card-info">
+                  <div class="unit-card-name">Forces &amp; Motion</div>
+                  <div class="unit-card-meta">
+                    <span class="unit-tag">5-PS2</span>
+                    <span>Physical Science</span>
+                    <span>6 lessons</span>
+                  </div>
                 </div>
+                <span class="unit-toggle">▼</span>
               </div>
-              <span class="unit-toggle">▼</span>
-            </div>
-            <div class="unit-card-body">
-              <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l1-balanced-and-unbalanced-forces.html" target="_blank">Balanced and Unbalanced Forces</a></li>
-                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l2-gravity-points-down.html" target="_blank">Gravity Points Down</a></li>
-                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l3-ramps-speed-and-motion-changes.html" target="_blank">Ramps, Speed, and Motion Changes</a></li>
-                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l4-collisions-and-transferring-motion.html" target="_blank">Collisions and Transferring Motion</a></li>
-                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l5-does-mass-matter.html" target="_blank">Does Mass Matter?</a></li>
-                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l6-design-and-improve-a-force-challenge.html" target="_blank">Design and Improve a Force Challenge</a></li>
-                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr5-ps2-unit1-quiz.html" target="_blank">Unit Quiz — Forces &amp; Motion</a></li>
-                <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="lesson-plans/gr5-ps2-unit1-refcard.html" target="_blank">Reference Card — Forces &amp; Motion</a></li>
-              </ul>
+              <div class="unit-card-body">
+                <ul class="lesson-list">
+                  <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l1-balanced-and-unbalanced-forces.html" target="_blank">Balanced and Unbalanced Forces</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l2-gravity-points-down.html" target="_blank">Gravity Points Down</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l3-ramps-speed-and-motion-changes.html" target="_blank">Ramps, Speed, and Motion Changes</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l4-collisions-and-transferring-motion.html" target="_blank">Collisions and Transferring Motion</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l5-does-mass-matter.html" target="_blank">Does Mass Matter?</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ps2-unit1-l6-design-and-improve-a-force-challenge.html" target="_blank">Design and Improve a Force Challenge</a></li>
+                  <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr5-ps2-unit1-quiz.html" target="_blank">Unit Quiz — Forces &amp; Motion</a></li>
+                  <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="lesson-plans/gr5-ps2-unit1-refcard.html" target="_blank">Reference Card — Forces &amp; Motion</a></li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">🌿</span>
-              <div class="unit-card-info">
-                <div class="unit-card-name">Ecosystems &amp; Food Webs</div>
-                <div class="unit-card-meta">
-                  <span class="unit-tag">5-LS2</span>
-                  <span>Life Science</span>
+        <div class="domain-panel" data-domain="life">
+          <div class="domain-header life" style="display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#e8f5e9 0%,#f8fff8 100%); border-left: 5px solid var(--ls-color); border-radius: 8px; padding: 10px 18px; margin: 0 0 16px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--ls-color);">
+            <span>🌱</span> Life Science
+          </div>
+          <div class="unit-grid">
+            <div class="unit-card">
+              <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
+                <span class="unit-icon">🌿</span>
+                <div class="unit-card-info">
+                  <div class="unit-card-name">Ecosystems &amp; Food Webs</div>
+                  <div class="unit-card-meta">
+                    <span class="unit-tag">5-LS2</span>
+                    <span>Life Science</span>
+                    <span>6 lessons</span>
+                  </div>
                 </div>
+                <span class="unit-toggle">▼</span>
               </div>
-              <span class="unit-toggle">▼</span>
+              <div class="unit-card-body">
+                <ul class="lesson-list">
+                  <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l1-what-is-an-ecosystem.html" target="_blank">What Is an Ecosystem?</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l2-from-the-sun-to-producers.html" target="_blank">From the Sun to Producers</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l3-food-chains-and-food-webs.html" target="_blank">Food Chains and Food Webs</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l4-decomposers-recycle-matter.html" target="_blank">Decomposers Recycle Matter</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l5-when-one-population-changes.html" target="_blank">When One Population Changes</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l6-modeling-matter-in-an-ecosystem.html" target="_blank">Modeling Matter in an Ecosystem</a></li>
+                  <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr5-ls1-unit1-quiz.html" target="_blank">Unit Quiz — Ecosystems &amp; Food Webs</a></li>
+                  <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="lesson-plans/gr5-ls1-unit1-refcard.html" target="_blank">Reference Card — Ecosystems &amp; Food Webs</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="unit-card-body">
-              <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l1-what-is-an-ecosystem.html" target="_blank">What Is an Ecosystem?</a></li>
-                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l2-from-the-sun-to-producers.html" target="_blank">From the Sun to Producers</a></li>
-                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l3-food-chains-and-food-webs.html" target="_blank">Food Chains and Food Webs</a></li>
-                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l4-decomposers-recycle-matter.html" target="_blank">Decomposers Recycle Matter</a></li>
-                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l5-when-one-population-changes.html" target="_blank">When One Population Changes</a></li>
-                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ls1-unit1-l6-modeling-matter-in-an-ecosystem.html" target="_blank">Modeling Matter in an Ecosystem</a></li>
-                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr5-ls1-unit1-quiz.html" target="_blank">Unit Quiz — Ecosystems &amp; Food Webs</a></li>
-                <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="lesson-plans/gr5-ls1-unit1-refcard.html" target="_blank">Reference Card — Ecosystems &amp; Food Webs</a></li>
-              </ul>
-            </div>
-          </div>
 
-          <div class="unit-card">
-            <div class="unit-card-header" style="border-left-color: var(--es-color);" onclick="toggleUnit(this)">
-              <span class="unit-icon">💧</span>
-              <div class="unit-card-info">
-                <div class="unit-card-name">Water on Earth Systems</div>
-                <div class="unit-card-meta">
-                  <span class="unit-tag">5-ESS2</span>
-                  <span>Earth &amp; Space Science</span>
+            <div class="unit-card">
+              <div class="unit-card-header" style="border-left-color: var(--ls-color);" onclick="toggleUnit(this)">
+                <span class="unit-icon">🍞</span>
+                <div class="unit-card-info">
+                  <div class="unit-card-name">Free Sample Lesson</div>
+                  <div class="unit-card-meta"><span class="unit-tag">Free Lesson</span><span>Grade 5</span><span>Life Science</span></div>
                 </div>
+                <span class="unit-toggle">▼</span>
               </div>
-              <span class="unit-toggle">▼</span>
-            </div>
-            <div class="unit-card-body">
-              <ul class="lesson-list">
-                <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l1-where-is-earth-s-water.html" target="_blank">Where Is Earth’s Water?</a></li>
-                <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l2-evaporation-and-condensation.html" target="_blank">Evaporation and Condensation</a></li>
-                <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l3-precipitation-and-collection.html" target="_blank">Precipitation and Collection</a></li>
-                <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater.html" target="_blank">Runoff, Infiltration, and Groundwater</a></li>
-                <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l5-earth-systems-working-together.html" target="_blank">Earth Systems Working Together</a></li>
-                <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l6-modeling-a-local-water-system.html" target="_blank">Modeling a Local Water System</a></li>
-                <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr5-ess1-unit1-quiz.html" target="_blank">Unit Quiz — Water on Earth Systems</a></li>
-                <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="lesson-plans/gr5-ess1-unit1-refcard.html" target="_blank">Reference Card — Water on Earth Systems</a></li>
-              </ul>
+              <div class="unit-card-body">
+                <ul class="lesson-list">
+                  <li class="lesson-item"><span class="lesson-num">★</span><span class="lesson-icon">🍞</span><a href="lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank">Free Sample — Bread Mold Terrarium</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-            </div>
-          </div>
+        </div>
 
+        <div class="domain-panel" data-domain="earth">
+          <div class="domain-header earth" style="display:flex; align-items:center; gap:10px; background: linear-gradient(90deg,#fff8e1 0%,#fffdf5 100%); border-left: 5px solid var(--es-color); border-radius: 8px; padding: 10px 18px; margin: 0 0 16px 0; font-family:'Lato',sans-serif; font-weight:700; font-size:1.05rem; color: var(--es-color);">
+            <span>🌍</span> Earth Science
+          </div>
+          <div class="unit-grid">
+            <div class="unit-card">
+              <div class="unit-card-header" style="border-left-color: var(--es-color);" onclick="toggleUnit(this)">
+                <span class="unit-icon">💧</span>
+                <div class="unit-card-info">
+                  <div class="unit-card-name">Water on Earth Systems</div>
+                  <div class="unit-card-meta">
+                    <span class="unit-tag">5-ESS2</span>
+                    <span>Earth &amp; Space Science</span>
+                    <span>6 lessons</span>
+                  </div>
+                </div>
+                <span class="unit-toggle">▼</span>
+              </div>
+              <div class="unit-card-body">
+                <ul class="lesson-list">
+                  <li class="lesson-item"><span class="lesson-num">L1</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l1-where-is-earth-s-water.html" target="_blank">Where Is Earth’s Water?</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L2</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l2-evaporation-and-condensation.html" target="_blank">Evaporation and Condensation</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L3</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l3-precipitation-and-collection.html" target="_blank">Precipitation and Collection</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L4</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater.html" target="_blank">Runoff, Infiltration, and Groundwater</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L5</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l5-earth-systems-working-together.html" target="_blank">Earth Systems Working Together</a></li>
+                  <li class="lesson-item"><span class="lesson-num">L6</span><span class="lesson-icon">📄</span><a href="lesson-plans/gr5-ess1-unit1-l6-modeling-a-local-water-system.html" target="_blank">Modeling a Local Water System</a></li>
+                  <li class="lesson-item quiz-row"><span class="lesson-num"></span><span class="lesson-icon">🎯</span><a href="lesson-plans/gr5-ess1-unit1-quiz.html" target="_blank">Unit Quiz — Water on Earth Systems</a></li>
+                  <li class="lesson-item refcard-row"><span class="lesson-num"></span><span class="lesson-icon">📋</span><a href="lesson-plans/gr5-ess1-unit1-refcard.html" target="_blank">Reference Card — Water on Earth Systems</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div><!-- /grade-section 5 -->
 
@@ -1405,6 +1480,17 @@
     function toggleUnit(header) {
       const card = header.closest('.unit-card');
       card.classList.toggle('open');
+    }
+
+    function selectDomainTab(button) {
+      const section = button.closest('.grade-section');
+      if (!section) return;
+      const domain = button.dataset.domain;
+      const buttons = section.querySelectorAll('.domain-tab-btn');
+      const panels = section.querySelectorAll('.domain-panel');
+
+      buttons.forEach(btn => btn.classList.toggle('active', btn === button));
+      panels.forEach(panel => panel.classList.toggle('active', panel.dataset.domain === domain));
     }
 
     const gradeSynonyms = {
