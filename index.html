@@ -891,11 +891,11 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 16px;
       align-items: start;
-      max-width: 800px;
+      max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1011,6 +1011,40 @@
 
     .pricing-card:nth-child(1) .feature-check { background: var(--coral); color: white; }
     .pricing-card.featured .feature-check     { background: var(--teal); color: white; }
+
+    .pricing-price-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pricing-strike {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .pricing-bill-line {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .pricing-note-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0 18px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--yellow-pale);
+      color: #92400e;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
 
     /* ─── Founder ─── */
     #founder {
@@ -2805,63 +2839,79 @@
   <section id="pricing">
     <div class="pricing-inner">
       <span class="section-label">Simple pricing</span>
-      <h2 class="section-title">Choose what works for your family.</h2>
-      <p class="section-sub">Buy individual units as you go, or save with a yearly subscription. All plans include the full lesson — nothing locked behind upgrades.</p>
+      <h2 class="section-title">Choose the plan that fits your homeschool.</h2>
+      <p class="section-sub">Start small with one unit, unlock one grade level, or open up the full Little Lab Coats library for every learner in your home.</p>
+      <div class="pricing-note-pill">🎉 First 50 signups get 25% off</div>
 
       <div class="pricing-grid">
 
-        <!-- Tier 1: Single Unit -->
         <div class="pricing-card">
-          <span class="pricing-icon">📄</span>
-          <div class="pricing-tier-name">Single Unit</div>
-          <div class="pricing-tagline">Try one unit before committing</div>
-          <div class="pricing-price">
-            <div class="price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">one-time</small></div>
-            <div class="price-alt">Per unit · PDF download</div>
-            <div style="color:#16a34a; font-size:0.85rem; font-weight:600; margin-top:6px;">✓ One-time payment · No subscription required</div>
+          <span class="pricing-icon">🧪</span>
+          <div class="pricing-tier-name">Basic</div>
+          <div class="pricing-tagline">Buy a single unit with no subscription</div>
+          <div class="pricing-price-stack">
+            <div class="pricing-strike">$22.50 anchor price</div>
+            <div class="price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/unit</small></div>
+            <div class="price-alt">One-time purchase · No subscription</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>Instant PDF download</li>
-            <li><span class="feature-check">✓</span>Full unit (6 lessons)</li>
-            <li><span class="feature-check">✓</span>Student worksheets (all grade levels)</li>
-            <li><span class="feature-check">✓</span>Parent answer key</li>
-            <li><span class="feature-check">✓</span>Discussion questions with guided answers</li>
-            <li><span class="feature-check">✓</span>Unit reference card</li>
-            <li><span class="feature-check">✓</span>Unit quiz</li>
-            <li><span class="feature-check">✓</span>Print as many times as you need</li>
+            <li><span class="feature-check">✓</span>One complete unit purchase</li>
+            <li><span class="feature-check">✓</span>6 NGSS-aligned lessons in that unit</li>
+            <li><span class="feature-check">✓</span>Printable worksheets and parent answer keys</li>
+            <li><span class="feature-check">✓</span>Reference card and unit quiz included</li>
+            <li><span class="feature-check">✓</span>Perfect for trying one topic at a time</li>
           </ul>
-          <a href="store.html" class="btn btn-secondary" style="width:100%; text-align:center;">Buy a Unit</a>
+          <a href="store.html" class="btn btn-secondary" style="width:100%; text-align:center;">Shop Single Units</a>
         </div>
 
-        <!-- Tier 2: Full Library (Featured) -->
         <div class="pricing-card featured">
           <div class="pricing-badge">Most Popular</div>
-          <span class="pricing-icon">🥼</span>
-          <div class="pricing-tier-name">Full Library</div>
-          <div class="pricing-tagline">Every lesson, every grade, all year</div>
-          <div class="pricing-price">
-            <div class="price-main"><span style="text-decoration:line-through; color:var(--text-muted); font-size:1.1rem; font-weight:400;">$124</span> <strong>$99</strong> <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/year</small></div>
-            <div class="price-alt">Introductory price · Cancel anytime</div>
-            <div style="color:#b45309; font-size:0.85rem; font-weight:600; margin-top:6px;">🐣 Early bird — lock in this rate forever</div>
+          <span class="pricing-icon">🎓</span>
+          <div class="pricing-tier-name">Premium</div>
+          <div class="pricing-tagline">Unlock one full grade level</div>
+          <div class="pricing-price-stack">
+            <div class="pricing-strike">$18.74/month anchor price</div>
+            <div class="price-main">$14.99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/month</small></div>
+            <div class="pricing-bill-line">Billed annually: $149/year <span style="font-weight:400; color:var(--text-muted);">(2 months free)</span></div>
+            <div class="price-alt">Every unit in one grade level</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✓</span>All 80+ lessons across K–5</li>
-            <li><span class="feature-check">✓</span>All grades: Kindergarten through Grade 5</li>
-            <li><span class="feature-check">✓</span>Every unit, refcard, and quiz</li>
-            <li><span class="feature-check">✓</span>New lessons added regularly</li>
-            <li><span class="feature-check">✓</span>Printable PDFs for all lessons</li>
-            <li><span class="feature-check">✓</span>Multi-child household use</li>
-            <li><span class="feature-check">✓</span>Cancel anytime</li>
+            <li><span class="feature-check">✓</span>Every lesson in one grade level</li>
+            <li><span class="feature-check">✓</span>All units, worksheets, answer keys, and quizzes for that grade</li>
+            <li><span class="feature-check">✓</span>Printable reference cards included</li>
+            <li><span class="feature-check">✓</span>Great for families teaching one grade this year</li>
+            <li><span class="feature-check">✓</span>Annual billing with 2 months free</li>
           </ul>
-          <a href="store.html" class="btn btn-primary" style="width:100%; text-align:center;">Subscribe — $99/yr</a>
+          <a href="store.html" class="btn btn-primary" style="width:100%; text-align:center;">Choose Premium</a>
+        </div>
+
+        <div class="pricing-card">
+          <span class="pricing-icon">👑</span>
+          <div class="pricing-tier-name">VIP</div>
+          <div class="pricing-tagline">Every lesson across the site</div>
+          <div class="pricing-price-stack">
+            <div class="pricing-strike">$31.24/month anchor price</div>
+            <div class="price-main">$24.99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/month</small></div>
+            <div class="pricing-bill-line">Billed annually: $249/year</div>
+            <div class="price-alt">All-access across the full K–5 library</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✓</span>Access to every lesson across the site</li>
+            <li><span class="feature-check">✓</span>All units, quizzes, worksheets, and reference cards</li>
+            <li><span class="feature-check">✓</span>Ideal for multi-age homeschool families</li>
+            <li><span class="feature-check">✓</span>Use across all available grade levels</li>
+            <li><span class="feature-check">✓</span>Best value for full-library access</li>
+          </ul>
+          <a href="store.html" class="btn btn-teal" style="width:100%; text-align:center;">Choose VIP</a>
         </div>
 
       </div>
 
       <p style="margin-top: 32px; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text-muted);">
-        Each unit includes at least 6 lessons — that's just <strong>$3 per lesson</strong>. Less than Teachers Pay Teachers, and you don't have to piece it together yourself.
+        Each unit includes at least 6 lessons — that's just <strong>$3 per lesson</strong> on Basic, with even stronger value on Premium and VIP.
       </p>
       <p style="margin-top: 12px; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text-muted);">
         All purchases include a 30-day satisfaction guarantee. If it's not right for your family, just reach out.
