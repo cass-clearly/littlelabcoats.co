@@ -3078,7 +3078,12 @@
       { title: "Sound Is Vibration", grade: "Grade 1", subject: "Physical Science", unit: "Grade 1 Sound & Light", desc: "Explore how sound starts with vibrations you can see and feel." },
       { title: "Plant Parts & Functions", grade: "Grade 1", subject: "Life Science", unit: "Grade 1 Plant & Animal Structures", desc: "Learn what roots, stems, leaves, and flowers do for a plant." },
       { title: "The Sun", grade: "Grade 1", subject: "Earth & Space Science", unit: "Grade 1 Sun, Moon & Stars", desc: "Investigate our closest star and how it lights and warms Earth." },
-      { title: "Bird Beak Buffet", grade: "3rd & 5th", subject: "Life Science", unit: "Standalone", desc: "Model bird beak adaptations using household tools to pick up different 'foods'." },
+      { title: "What Do Plants Need?", grade: "Grade 2", subject: "Life Science", unit: "Grade 2 Ecosystems", desc: "Investigate the sunlight, water, and air plants need to grow." },
+      { title: "Habitats", grade: "Grade 2", subject: "Life Science", unit: "Grade 2 Ecosystems", desc: "Compare habitats and discover how living things get what they need." },
+      { title: "Mystery Powders", grade: "Grade 2", subject: "Physical Science", unit: "Grade 2 Matter", desc: "Observe and compare powders to learn about properties of matter." },
+      { title: "Bird Beak Buffet", grade: "Grade 3", subject: "Life Science", unit: "Standalone", desc: "Model bird beak adaptations using household tools to pick up different 'foods'." },
+      { title: "Plant Life Cycles and Seeds", grade: "Grade 3", subject: "Life Science", unit: "Grade 3 Life Cycles", desc: "Explore how plants grow, reproduce, and begin again from seeds." },
+      { title: "Weather Patterns Over Time", grade: "Grade 3", subject: "Earth Science", unit: "Grade 3 Weather & Climate", desc: "Track weather patterns and look for changes over time." },
       { title: "Thermal Energy Ice Cream", grade: "3rd & 5th", subject: "Physical Science", unit: "Standalone", desc: "Make ice cream while learning about thermal energy transfer and states of matter." },
       { title: "Balanced & Unbalanced Forces", grade: "5th", subject: "Forces & Motion", unit: "Standalone", desc: "Investigate Newton's Laws through friction experiments with household items." },
       { title: "The Coral Kingdom", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Explore coral reef ecosystems, symbiosis, and ocean food webs." },
@@ -3120,13 +3125,23 @@
     function buildSearchIndex(lesson) {
       var gradeAliases = [];
       if (lesson.grade === 'K') gradeAliases = ['kindergarten', 'grade k', 'k'];
-      if (lesson.grade === '3rd') gradeAliases = ['grade 3', '3', 'third grade', '3rd grade', 'third', '3rd'];
-      if (lesson.grade === '5th') gradeAliases = ['grade 5', '5', 'fifth grade', '5th grade', 'fifth', '5th'];
-      if (lesson.grade === '3rd-5th' || lesson.grade === '3rd & 5th') {
-        gradeAliases = ['grade 3', '3', 'third grade', '3rd grade', 'third', '3rd', 'grade 5', '5', 'fifth grade', '5th grade', 'fifth', '5th'];
-      }
       if (lesson.grade === '1st' || lesson.grade === '1' || lesson.grade === 'Grade 1') {
         gradeAliases = ['grade 1', '1', 'first grade', '1st grade', 'first', '1st'];
+      }
+      if (lesson.grade === '2nd' || lesson.grade === '2' || lesson.grade === 'Grade 2') {
+        gradeAliases = ['grade 2', '2', 'second grade', '2nd grade', 'second', '2nd'];
+      }
+      if (lesson.grade === '3rd' || lesson.grade === '3' || lesson.grade === 'Grade 3') {
+        gradeAliases = ['grade 3', '3', 'third grade', '3rd grade', 'third', '3rd'];
+      }
+      if (lesson.grade === '4th' || lesson.grade === '4' || lesson.grade === 'Grade 4') {
+        gradeAliases = ['grade 4', '4', 'fourth grade', '4th grade', 'fourth', '4th'];
+      }
+      if (lesson.grade === '5th' || lesson.grade === '5' || lesson.grade === 'Grade 5') {
+        gradeAliases = ['grade 5', '5', 'fifth grade', '5th grade', 'fifth', '5th'];
+      }
+      if (lesson.grade === '3rd-5th' || lesson.grade === '3rd & 5th') {
+        gradeAliases = ['upper elementary', 'multi age', 'grades 3 to 5', '3rd to 5th'];
       }
       return normalizeGradeQuery([
         lesson.title,
