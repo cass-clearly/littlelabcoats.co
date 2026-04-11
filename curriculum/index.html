@@ -223,6 +223,12 @@
     }
 
     /* ─── Grade section ─── */
+    .unit-card.search-hidden,
+    .lesson-item.search-hidden,
+    .domain-group.search-hidden,
+    .grade-section.search-hidden {
+      display: none !important;
+    }
     .grade-section {
       margin-bottom: 56px;
     }
@@ -498,7 +504,12 @@
       <button class="filter-btn" data-grade="4">Grade 4</button>
       <button class="filter-btn" data-grade="5">Grade 5</button>
       </div>
+      <div class="search-wrap">
+        <label class="search-label" for="curriculum-search">Search</label>
+        <input id="curriculum-search" class="search-input" type="search" placeholder="Try Grade 1, 1, first grade, plants..." autocomplete="off" />
+      </div>
     </div>
+    <div id="search-status" class="search-status" aria-live="polite"></div>
   </div>
 
   <div class="curriculum-main">
@@ -1396,24 +1407,160 @@
       card.classList.toggle('open');
     }
 
-    // Grade filter
+    const gradeSynonyms = {
+      k: ['k', 'kg', 'kindergarten', 'kindergarden', 'prek', 'pre-k', 'pre k', 'kindy'],
+      1: ['1', '1st', 'first', 'grade1', 'grade 1', 'firstgrade', 'first grade'],
+      2: ['2', '2nd', 'second', 'grade2', 'grade 2', 'secondgrade', 'second grade'],
+      3: ['3', '3rd', 'third', 'grade3', 'grade 3', 'thirdgrade', 'third grade'],
+      4: ['4', '4th', 'fourth', 'grade4', 'grade 4', 'fourthgrade', 'fourth grade'],
+      5: ['5', '5th', 'fifth', 'grade5', 'grade 5', 'fifthgrade', 'fifth grade']
+    };
+
+    function normalizeText(value) {
+      return (value || '')
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function tokenize(value) {
+      return normalizeText(value).split(' ').filter(Boolean);
+    }
+
+    function expandGradeTokens(tokens) {
+      const expanded = new Set(tokens);
+      Object.entries(gradeSynonyms).forEach(([grade, synonyms]) => {
+        if (tokens.some(token => synonyms.includes(token))) {
+          expanded.add(grade);
+          synonyms.forEach(synonym => {
+            tokenize(synonym).forEach(part => expanded.add(part));
+            expanded.add(normalizeText(synonym));
+          });
+        }
+      });
+      return Array.from(expanded).filter(Boolean);
+    }
+
+    function buildSearchText(parts) {
+      return normalizeText(parts.join(' '));
+    }
+
     const filterBtns = document.querySelectorAll('.filter-btn');
     const gradeSections = document.querySelectorAll('.grade-section');
+    const activeSearchInput = document.getElementById('curriculum-search');
+    const activeSearchStatus = document.getElementById('search-status');
+    let activeGrade = document.querySelector('.filter-btn.active')?.dataset.grade || 'k';
+
+    const units = Array.from(document.querySelectorAll('.unit-card')).map(card => {
+      const gradeSection = card.closest('.grade-section');
+      const grade = gradeSection ? gradeSection.dataset.grade : '';
+      const gradeTitle = gradeSection ? gradeSection.querySelector('.grade-title')?.textContent || '' : '';
+      const body = card.querySelector('.unit-card-body');
+      const unitName = card.querySelector('.unit-card-name')?.textContent || '';
+      const meta = Array.from(card.querySelectorAll('.unit-card-meta span')).map(el => el.textContent.trim());
+      const lessons = Array.from(card.querySelectorAll('.lesson-item')).map(item => ({
+        element: item,
+        text: buildSearchText([
+          item.textContent,
+          gradeTitle,
+          'Grade ' + grade,
+          ...meta,
+          unitName
+        ])
+      }));
+      return {
+        element: card,
+        gradeSection,
+        grade,
+        text: buildSearchText([
+          unitName,
+          gradeTitle,
+          'Grade ' + grade,
+          ...meta,
+          body ? body.textContent : ''
+        ]),
+        lessons
+      };
+    });
+
+    function updateSearch() {
+      const query = activeSearchInput ? activeSearchInput.value.trim() : '';
+      const normalizedQuery = normalizeText(query);
+      const expandedTokens = expandGradeTokens(tokenize(query));
+      const searching = normalizedQuery.length > 0;
+      let visibleSections = 0;
+      let visibleUnits = 0;
+
+      units.forEach(unit => {
+        let unitMatches = !searching;
+        let matchingLessons = 0;
+
+        if (searching) {
+          unitMatches = expandedTokens.every(token => unit.text.indexOf(token) !== -1);
+          unit.lessons.forEach(lesson => {
+            const lessonMatch = expandedTokens.every(token => lesson.text.indexOf(token) !== -1);
+            lesson.element.classList.toggle('search-hidden', !lessonMatch);
+            if (lessonMatch) {
+              matchingLessons += 1;
+            }
+          });
+          if (!unitMatches && matchingLessons > 0) {
+            unitMatches = true;
+          }
+        } else {
+          unit.lessons.forEach(lesson => lesson.element.classList.remove('search-hidden'));
+        }
+
+        const gradeAllowed = activeGrade === 'all' || unit.grade === activeGrade;
+        const showUnit = gradeAllowed && unitMatches;
+        unit.element.classList.toggle('search-hidden', !showUnit);
+        if (showUnit && searching) {
+          unit.element.classList.add('open');
+        }
+        if (showUnit) {
+          visibleUnits += 1;
+        }
+      });
+
+      gradeSections.forEach(section => {
+        const hasVisibleUnits = section.querySelector('.unit-card:not(.search-hidden)');
+        section.classList.toggle('search-hidden', !hasVisibleUnits);
+        section.style.display = hasVisibleUnits ? '' : 'none';
+        if (hasVisibleUnits) {
+          visibleSections += 1;
+        }
+      });
+
+      if (!activeSearchStatus) {
+        return;
+      }
+
+      if (searching) {
+        activeSearchStatus.classList.add('active');
+        activeSearchStatus.textContent = visibleUnits
+          ? 'Showing ' + visibleUnits + ' matching unit' + (visibleUnits === 1 ? '' : 's') + ' across ' + visibleSections + ' grade section' + (visibleSections === 1 ? '' : 's') + ' for “' + query + '”.'
+          : 'No curriculum matches found for “' + query + '”. Try Grade 1, first grade, kindergarten, plants, weather, or engineering.';
+      } else {
+        activeSearchStatus.classList.remove('active');
+        activeSearchStatus.textContent = '';
+      }
+    }
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const grade = btn.dataset.grade;
-        gradeSections.forEach(section => {
-          if (grade === 'all' || section.dataset.grade === grade) {
-            section.style.display = '';
-          } else {
-            section.style.display = 'none';
-          }
-        });
+        activeGrade = btn.dataset.grade;
+        updateSearch();
       });
     });
+
+    if (activeSearchInput) {
+      activeSearchInput.addEventListener('input', updateSearch);
+    }
+    updateSearch();
   </script>
 </body>
 </html>
