@@ -157,3 +157,9 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
   - `gr4-ets1-unit1-refcard-lesson6-present-and-defend-your-shelter-solution.html`
   - `gr4-ets1-unit1-quiz.html`
 - Remaining coherent creation gap after this batch: the remaining Grade 4 Physical Science Unit 1 lessons beyond the caller-excluded already-finished Lesson 1 item.
+
+## 2026-04-12 watcher unblock decision log — Grade 4 Physical Science remainder
+- **Canonical Grade 4 Physical Science scaffold:** use the existing `Grade 5 PS2 Unit 1` force-and-motion package as the closest upper-elementary canonical physical-science package already present in the repo, with `Grade 3 PS2 Unit 1` as a secondary naming/structure cross-check.
+- **Adaptation rule:** preserve the modern 6-lesson physical-science unit shape and LLC formatting, but only create the remaining `Grade 4 Physical Science Unit 1` lessons/support assets after the caller-excluded already-finished Lesson 1 item. Raise rigor to Grade 4 with more explicit evidence language, variable/control thinking, and energy-transfer / motion-cause reasoning appropriate to a `4-PS3`-style unit.
+- **Canonical Grade 4 Physical Science theme chosen:** `Energy & Motion` centered on collisions, energy transfer, speed changes, surface/friction effects, and evidence-based explanation of how energy moves and causes motion.
+- **Why this is the smallest unblock:** it reuses the nearest existing physical-science package instead of inventing a new structure, respects the do-not-duplicate Lesson 1 constraint, and gives the creation worker a concrete remainder scope to continue immediately.
