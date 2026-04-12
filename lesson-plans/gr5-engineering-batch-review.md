@@ -2,17 +2,20 @@
 
 Last updated: 2026-04-12
 Chunk: `gr5-ets1-unit1-review-batch-1`
-Status: not started because the prerequisite Grade 2 batch is not honestly closed out yet; repo-level index omission is fixed, but commit/push/live verification and Grade 2 closeout are still pending
+Status: round-1 Rachel + Margaret review recorded from direct source inspection; no literal content revisions required from this pass; public status-surface exposure now exists, but batch commit/push/live verification specific to Grade 5 review closeout has not happened in this run
 
 ## Purpose
 
-This file is the batch-level review tracker placeholder for Grade 5 Engineering `5-ETS1 Unit 1`.
-It exists so the review program can distinguish between:
-- created-but-not-reviewed assets
-- actively reviewed batches
-- blocked batches waiting on an upstream prerequisite
+This file is the batch-level review tracker for Grade 5 Engineering `5-ETS1 Unit 1`.
+It is the source of truth for:
+- exact lesson/support scope
+- Rachel review notes
+- Margaret review notes
+- revision status
+- live-publish honesty checks
+- known blockers
 
-## Intended unit scope
+## Unit scope
 
 The required Engineering lesson pages are:
 - `lesson-plans/gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem.html`
@@ -33,29 +36,98 @@ The required support assets are:
 
 ## Current batch state
 
-- Lesson files: `exist in repo`
-- Refcards: `exist in repo`
-- Quiz: `exists in repo`
-- Review status: `not yet run through Rachel + Margaret in this file`
-- Upstream dependency: `wait until Grade 2 Engineering is honestly closed out or explicitly blocked`
+- Lesson files: `exist in repo and were directly reviewed in source`
+- Refcards: `exist in repo and were directly reviewed in source`
+- Quiz: `exists in repo and was directly reviewed in source`
+- Review status: `Rachel + Margaret round 1 now recorded here; no literal text changes were required by this pass`
+- Upstream dependency: `Grade 2 status-surface blocker is cleared, so this batch may now proceed honestly in later review/publish work`
+- Status surfaces: `generated lesson-index and review-index now expose Grade 5 Engineering on the live site`
 
-## Why this batch did not start in this pass
+## Internal QA snapshot
 
-Caller order was explicit: complete Grade 2 Engineering Unit 1 first, then continue immediately into Grade 5 Engineering Unit 1 if the first batch completes in this run.
+- All six lesson pages contain explicit `data-document-id` wiring, review-mode bypass, paywall shell, `Materials`, worksheet, and detachable Parent Answer Key sections.
+- The six refcards contain explicit `data-document-id` wiring and review-mode support.
+- The unit quiz contains explicit `data-document-id` wiring, review-mode support, and a detachable Parent Answer Key.
+- The lesson arc is coherent around one recurring water-filter design challenge instead of disconnected engineering shells.
+- Source inspection found no placeholder subtitles or obvious generic filler in the six lesson pages.
 
-That prerequisite was not met because:
-- Grade 2 Engineering review notes were recorded, and the repo-level generated lesson-index/review-index status surfaces now include the engineering units after the generator fix
-- the caller still required that fix to be committed, pushed, and public-verified before Grade 2 counts as honestly reviewed/closed out
-- until that live verification happens and Grade 2 is advanced honestly, Grade 5 cannot claim to have started under the requested order
+## Rachel round-1 review notes
 
-## Honest batch disposition
+1. **Target:** `lesson1` + `lesson2`
+   **Observation:** The design-problem framing is concrete, measurable, and appropriately emphasizes criteria, constraints, and trade-offs for Grade 5.
+   **Expected revision action:** No content change required.
 
-What this file claims:
-- Grade 5 Engineering Unit 1 assets exist in repo
-- they remain created-but-not-reviewed in the reviewer-first program
-- this batch is pending the Grade 2 blocker resolution
+2. **Target:** `lesson3` + `lesson4`
+   **Observation:** The prototype-planning and first-trial lessons already use explicit fair-test language and a consistent water-filter challenge throughline.
+   **Expected revision action:** No content change required.
 
-What this file does not claim:
-- it does not claim Rachel review happened yet
-- it does not claim Margaret review happened yet
-- it does not claim any Grade 5 Engineering revisions, commit, push, or public verification happened in this pass
+3. **Target:** `lesson5` + `lesson6`
+   **Observation:** Redesign and defense language is already evidence-based and specific rather than generic engineering filler.
+   **Expected revision action:** No content change required.
+
+4. **Target:** `refcards + quiz`
+   **Observation:** Support assets are unit-specific and aligned to the same water-filter challenge.
+   **Expected revision action:** No content change required.
+
+5. **Target:** `status surfaces`
+   **Observation:** The generated lesson-index and review-index now expose Grade 5 Engineering, so the earlier omission blocker is not preventing reviewer visibility anymore.
+   **Expected revision action:** Keep the batch honest as reviewed-but-not-yet-published-as-a-review-batch in this file until a Grade 5-specific commit/push/live verification step happens.
+
+## Margaret round-1 review notes
+
+1. **Target:** `full lesson set`
+   **Observation:** The family-facing water-filter unit reads as one connected homeschool sequence and matches the established LLC engineering shell.
+   **Expected revision action:** No content change required.
+
+2. **Target:** `lesson wording`
+   **Observation:** Student-facing language is concrete and age-appropriate for Grade 5 without drifting into unnecessary vagueness.
+   **Expected revision action:** No content change required.
+
+3. **Target:** `support assets`
+   **Observation:** The refcards and quiz reinforce the same criteria/constraints/testing thread as the lesson set.
+   **Expected revision action:** No content change required.
+
+4. **Target:** `batch honesty`
+   **Observation:** This file can now record review notes honestly, but it should not overclaim a full Grade 5 reviewed closeout without a Grade 5-specific publish/verification step.
+   **Expected revision action:** Keep status below full completion in this run.
+
+## Revision tracking
+
+### Revision round 1
+Status: `no literal content revisions required from this review pass`
+Notes:
+- Rachel and Margaret review was completed directly against the created Grade 5 Engineering source files.
+- Round-1 disposition log:
+  - Rachel 1 (`lesson1` + `lesson2` design-problem framing) → `accepted as-is`; no literal file edit required.
+  - Rachel 2 (`lesson3` + `lesson4` planning/testing sequence) → `accepted as-is`; no literal file edit required.
+  - Rachel 3 (`lesson5` + `lesson6` evidence/defense language) → `accepted as-is`; no literal file edit required.
+  - Rachel 4 (`refcards + quiz` specificity) → `accepted as-is`; no literal file edit required.
+  - Rachel 5 (`status surfaces`) → `addressed`; generated surfaces now expose Grade 5 Engineering.
+  - Margaret 1 (`family-facing throughline`) → `accepted as-is`; no literal file edit required.
+  - Margaret 2 (`wording clarity`) → `accepted as-is`; no literal file edit required.
+  - Margaret 3 (`support alignment`) → `accepted as-is`; no literal file edit required.
+  - Margaret 4 (`batch honesty`) → `addressed` by keeping this file short of full completed/published status.
+
+### Revision round 2
+Status: `not started`
+Reserved only if a later verification/publish pass finds issues.
+
+### Revision round 3
+Status: `not started`
+Reserved only if a later pass requires another reviewer loop.
+
+## Public/status verification log
+
+Verified live on 2026-04-12:
+- `https://littlelabcoats.co/lesson-plans/?cb=engfix5`
+  - confirmed public lesson index contains `Grade 5 · Engineering`
+  - confirmed public lesson index contains `Define the Water Filter Design Problem`
+- `https://littlelabcoats.co/lesson-plans/review/?cb=engfix5`
+  - confirmed public review index contains `Grade 5 · Engineering`
+  - confirmed public review index contains `Define the Water Filter Design Problem`
+
+## Known blockers / honesty check
+
+- No literal reviewer-requested content edits are open from this round-1 review pass.
+- This file does **not** claim a separate Grade 5 review-fix commit or full reviewed-batch closeout in this run.
+- Grade 5 Engineering is now visible on the generated status surfaces and has round-1 review notes recorded, but any future claim of `completed` should wait for a dedicated Grade 5 closeout/publish verification step if one is required.
