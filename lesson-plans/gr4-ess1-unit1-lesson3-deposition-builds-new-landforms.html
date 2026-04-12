@@ -199,6 +199,23 @@ li { margin-bottom: 5px; }
 
 
 
-<script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_gr4_ess1_u1_l3_deposition" data-content-selector="body"></script>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = 'https://cassclearly.com/feedback-layer.js?v=20260408';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = 'doc_gr4_ess1_u1_l3_deposition';
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
+  }
+
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    } else {
+      loadFeedbackLayer();
+    }
+  }
+})();</script>
 <footer class="llc-footer" style="text-align:center;padding:24px 16px 16px;font-family:'Lato',sans-serif;font-size:.78rem;color:#999;border-top:1px solid #eee;margin-top:32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</footer></body>
 </html>
