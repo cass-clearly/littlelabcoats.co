@@ -196,17 +196,45 @@
     }
     .audit-table tr:nth-child(even) td { background: #fff8f0; }
     .pledge-box {
-      background: #fff3e0;
-      border: 2px solid #ffcc80;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
+      background: linear-gradient(180deg, #fff9f2 0%, #fff1dc 100%);
+      border: 3px solid #ffb74d;
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin: 14px 0;
       font-size: 12pt;
+      box-shadow: 0 4px 14px rgba(230,81,0,0.10);
+    }
+    .pledge-box-title {
+      text-align: center;
+      font-size: 14pt;
+      font-weight: bold;
+      color: #bf360c;
+      margin-bottom: 6px;
+    }
+    .pledge-box-subtitle {
+      text-align: center;
+      font-size: 10pt;
+      color: #777;
+      margin-bottom: 14px;
+      font-style: italic;
     }
     .pledge-line {
-      border-bottom: 1.5px solid #e65100;
-      height: 30px;
-      margin-bottom: 8px;
+      border-bottom: 2px solid #e65100;
+      height: 32px;
+      margin-bottom: 10px;
+    }
+    .pledge-signoff {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 10px;
+      font-size: 10pt;
+      color: #777;
+    }
+    .pledge-signoff span {
+      flex: 1;
+      border-top: 1.5px solid #e65100;
+      padding-top: 6px;
     }
     .short-answer-box {
       margin: 14px 0;
@@ -324,10 +352,10 @@
       <li>Paper and pencil</li>
       <li>3 clear cups of water</li>
       <li>1 drop of food coloring (any color)</li>
-      <li>1 coffee filter</li>
+      <li>1 coffee filter <em>or</em> a paper towel, napkin, clean scrap of cotton fabric, or even a piece of an old T-shirt</li>
       <li>Newspaper or magazine -- optional (for the impact audit warm-up)</li>
     </ul>
-    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>The pollution simulation uses only water, food coloring, and a coffee filter -- all easy to find at home!</em></p>
+    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>The pollution simulation uses only water, food coloring, and a simple household filter material. If you do not have a coffee filter, a paper towel, napkin, clean scrap of cotton fabric, or an old T-shirt piece can work too.</em></p>
   </div>
 
   <h2>🔬 Part 1 -- Pollution Simulation (15 min)</h2>
@@ -473,12 +501,16 @@
     <p style="font-size:10pt; color:#555;">Write a 3-sentence pledge for your household. Be specific about what you will do and when!</p>
 
     <div class="pledge-box">
+      <div class="pledge-box-title">🌍 Our Family Sustainability Pledge 🌱</div>
+      <div class="pledge-box-subtitle">Print and laminate and stick on the fridge!</div>
       <strong>Our family will...</strong><br><br>
       <div class="pledge-line"></div>
       <div class="pledge-line"></div>
       <div class="pledge-line"></div>
-      <br>
-      <p style="font-size:10pt; color:#777; margin:0;">Signed: ________________________________ &nbsp;&nbsp; Date: ________________</p>
+      <div class="pledge-signoff">
+        <span>Signed: ________________________________</span>
+        <span>Date: ________________</span>
+      </div>
     </div>
 
     <h3>Part 4 -- Reflection Question</h3>
