@@ -195,28 +195,51 @@
       vertical-align: top;
     }
     .audit-table tr:nth-child(even) td { background: #fff8f0; }
-    .pledge-box {
-      background: linear-gradient(180deg, #fff9f2 0%, #fff1dc 100%);
-      border: 3px solid #ffb74d;
-      border-radius: 16px;
-      padding: 18px 20px;
-      margin: 14px 0;
-      font-size: 12pt;
-      box-shadow: 0 4px 14px rgba(230,81,0,0.10);
+    .worksheet-note {
+      background: #fff8f0;
+      border: 2px solid #ffcc80;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 10px 0 14px;
+      font-size: 10pt;
+      color: #6d4c41;
     }
-    .pledge-box-title {
-      text-align: center;
-      font-size: 14pt;
-      font-weight: bold;
-      color: #bf360c;
-      margin-bottom: 6px;
-    }
-    .pledge-box-subtitle {
+    .worksheet-note strong { color: #bf360c; }
+    .pledge-display-note {
       text-align: center;
       font-size: 10pt;
       color: #777;
-      margin-bottom: 14px;
+      margin: 6px 0 10px;
       font-style: italic;
+    }
+    .pledge-box {
+      background: linear-gradient(180deg, #fffdf8 0%, #fff4e6 100%);
+      border: 3px solid #ffb74d;
+      border-radius: 18px;
+      padding: 20px 22px;
+      margin: 14px 0;
+      font-size: 12pt;
+      box-shadow: 0 4px 14px rgba(230,81,0,0.10);
+      position: relative;
+      overflow: hidden;
+    }
+    .pledge-box::before,
+    .pledge-box::after {
+      content: "✦";
+      position: absolute;
+      top: 10px;
+      font-size: 16pt;
+      color: #ffb74d;
+    }
+    .pledge-box::before { left: 14px; }
+    .pledge-box::after { right: 14px; }
+    .pledge-box-title {
+      text-align: center;
+      font-size: 15pt;
+      font-weight: bold;
+      color: #bf360c;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
     }
     .pledge-line {
       border-bottom: 2px solid #e65100;
@@ -227,7 +250,7 @@
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 10pt;
       color: #777;
     }
@@ -279,9 +302,12 @@
         print-color-adjust: exact;
       }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .story-box, .impact-card {
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .story-box, .impact-card, .worksheet-note, .pledge-box {
         break-inside: avoid;
         page-break-inside: avoid;
+      }
+      .pledge-display-note {
+        display: none !important;
       }
       * {
         -webkit-print-color-adjust: exact;
@@ -465,6 +491,7 @@
     <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
     <h3>Part 1 -- Impact Audit: 10 Things I Used Today</h3>
+    <div class="worksheet-note"><strong>Before you start:</strong> Gather a few real household items to look at while you work, like food packaging, a cloth or plastic bag, shoes, a toothbrush, clothing, or a phone charger. Use them as visual clues while you fill in the audit.</div>
     <p style="font-size:10pt; color:#555;">List 10 things you used today. For each one, name the resource it uses and one environmental impact.</p>
 
     <table class="audit-table">
@@ -490,7 +517,7 @@
     </table>
 
     <h3>Part 2 -- Brainstorm Better Choices</h3>
-    <p style="font-size:10pt; color:#555;">Look at the items from your Impact Audit. Brainstorm as many ways as you can to reduce their impact. Use real household items around you as visual clues.</p>
+    <p style="font-size:10pt; color:#555;">Look at the items from your Impact Audit and the real household items you gathered. Brainstorm as many ways as you can to reduce their impact.</p>
     <table class="audit-table">
       <thead>
         <tr>
@@ -508,10 +535,10 @@
 
     <h3>Part 3 -- Our Sustainability Pledge</h3>
     <p style="font-size:10pt; color:#555;">Write a 3-sentence pledge for your household. Be specific about what you will do and when!</p>
+    <div class="pledge-display-note">Optional: print, laminate, and display after you fill it out.</div>
 
     <div class="pledge-box">
       <div class="pledge-box-title">🌍 Our Family Sustainability Pledge 🌱</div>
-      <div class="pledge-box-subtitle">Print and laminate and stick on the fridge!</div>
       <strong>Our family will...</strong><br><br>
       <div class="pledge-line"></div>
       <div class="pledge-line"></div>
