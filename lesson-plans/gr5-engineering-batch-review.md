@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-12
 Chunk: `gr5-ets1-unit1-review-batch-1`
-Status: round-1 Rachel + Margaret review recorded from direct source inspection; no literal content revisions required from this pass; public status-surface exposure now exists, but batch commit/push/live verification specific to Grade 5 review closeout has not happened in this run
+Status: round-1 Rachel + Margaret review recorded from direct source inspection; no literal content revisions required from this pass; dedicated review-closeout status rollout completed; commit/push and representative public verification completed for the Grade 5 batch
 
 ## Purpose
 
@@ -39,9 +39,9 @@ The required support assets are:
 - Lesson files: `exist in repo and were directly reviewed in source`
 - Refcards: `exist in repo and were directly reviewed in source`
 - Quiz: `exists in repo and was directly reviewed in source`
-- Review status: `Rachel + Margaret round 1 now recorded here; no literal text changes were required by this pass`
-- Upstream dependency: `Grade 2 status-surface blocker is cleared, so this batch may now proceed honestly in later review/publish work`
-- Status surfaces: `generated lesson-index and review-index now expose Grade 5 Engineering on the live site`
+- Review status: `Rachel + Margaret round 1 is recorded here; no literal text changes were required by this pass`
+- Status surfaces: `main lesson index, review index, generated lesson-index metadata, and durable tracker now expose Grade 5 Engineering as reviewed / revised`
+- Closeout state: `this batch now has its own review-closeout commit/push/live verification instead of relying only on the earlier shared surface-generation fix`
 
 ## Internal QA snapshot
 
@@ -71,7 +71,7 @@ The required support assets are:
 
 5. **Target:** `status surfaces`
    **Observation:** The generated lesson-index and review-index now expose Grade 5 Engineering, so the earlier omission blocker is not preventing reviewer visibility anymore.
-   **Expected revision action:** Keep the batch honest as reviewed-but-not-yet-published-as-a-review-batch in this file until a Grade 5-specific commit/push/live verification step happens.
+   **Expected revision action:** Complete the dedicated Grade 5 closeout by publishing reviewed / revised status through the directory surfaces and rerunning representative live verification.
 
 ## Margaret round-1 review notes
 
@@ -88,13 +88,13 @@ The required support assets are:
    **Expected revision action:** No content change required.
 
 4. **Target:** `batch honesty`
-   **Observation:** This file can now record review notes honestly, but it should not overclaim a full Grade 5 reviewed closeout without a Grade 5-specific publish/verification step.
-   **Expected revision action:** Keep status below full completion in this run.
+   **Observation:** This file can now record review notes honestly, and once the Grade 5-specific publish / verification step is complete it should be upgraded from in-progress to completed.
+   **Expected revision action:** Record only the exact closeout work actually completed for this Grade 5 batch.
 
 ## Revision tracking
 
 ### Revision round 1
-Status: `no literal content revisions required from this review pass`
+Status: `no literal lesson-content revisions required from this review pass`
 Notes:
 - Rachel and Margaret review was completed directly against the created Grade 5 Engineering source files.
 - Round-1 disposition log:
@@ -102,11 +102,11 @@ Notes:
   - Rachel 2 (`lesson3` + `lesson4` planning/testing sequence) → `accepted as-is`; no literal file edit required.
   - Rachel 3 (`lesson5` + `lesson6` evidence/defense language) → `accepted as-is`; no literal file edit required.
   - Rachel 4 (`refcards + quiz` specificity) → `accepted as-is`; no literal file edit required.
-  - Rachel 5 (`status surfaces`) → `addressed`; generated surfaces now expose Grade 5 Engineering.
+  - Rachel 5 (`status surfaces`) → `addressed`; this closeout pass added reviewed / revised status exposure in the generated lesson index, main lesson directory, review index, and durable tracker.
   - Margaret 1 (`family-facing throughline`) → `accepted as-is`; no literal file edit required.
   - Margaret 2 (`wording clarity`) → `accepted as-is`; no literal file edit required.
   - Margaret 3 (`support alignment`) → `accepted as-is`; no literal file edit required.
-  - Margaret 4 (`batch honesty`) → `addressed` by keeping this file short of full completed/published status.
+  - Margaret 4 (`batch honesty`) → `addressed`; this file now records only the dedicated closeout work actually completed for Grade 5 Engineering.
 
 ### Revision round 2
 Status: `not started`
@@ -118,16 +118,24 @@ Reserved only if a later pass requires another reviewer loop.
 
 ## Public/status verification log
 
-Verified live on 2026-04-12:
-- `https://littlelabcoats.co/lesson-plans/?cb=engfix5`
+Verified live on 2026-04-12 after the dedicated closeout publish:
+- `https://littlelabcoats.co/lesson-plans/?cb=gr5etscloseout`
   - confirmed public lesson index contains `Grade 5 · Engineering`
-  - confirmed public lesson index contains `Define the Water Filter Design Problem`
-- `https://littlelabcoats.co/lesson-plans/review/?cb=engfix5`
+  - confirmed public lesson index contains `Grade 5 Engineering Unit 1 completed review closeout and verification.`
+  - confirmed the representative lesson `Define the Water Filter Design Problem` now shows the `Reviewed / revised` badge in the public lesson directory
+- `https://littlelabcoats.co/lesson-plans/review/?cb=gr5etscloseout`
   - confirmed public review index contains `Grade 5 · Engineering`
-  - confirmed public review index contains `Define the Water Filter Design Problem`
+  - confirmed public review index contains `Grade 5 Engineering Unit 1 completed review closeout and verification.`
+  - confirmed the representative lesson `Define the Water Filter Design Problem` now shows the `Reviewed / revised` badge in the public review directory
+- `https://littlelabcoats.co/lesson-plans/gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem.html?review=1&cb=gr5etscloseout`
+  - confirmed review-mode lesson returns `200` and still exposes `data-document-id="doc_gr5_ets1_u1_l1_water_filter_problem"`
+- `https://littlelabcoats.co/lesson-plans/gr5-ets1-unit1-refcard-lesson1-define-the-water-filter-design-problem.html?review=1&cb=gr5etscloseout`
+  - confirmed review-mode refcard returns `200` and still exposes `data-document-id="doc_gr5_ets1_u1_ref_l1_water_filter_problem"`
+- `https://littlelabcoats.co/lesson-plans/gr5-ets1-unit1-quiz.html?review=1&cb=gr5etscloseout`
+  - confirmed review-mode quiz returns `200` and still exposes `data-document-id="doc_gr5_ets1_u1_quiz"`
 
 ## Known blockers / honesty check
 
 - No literal reviewer-requested content edits are open from this round-1 review pass.
-- This file does **not** claim a separate Grade 5 review-fix commit or full reviewed-batch closeout in this run.
-- Grade 5 Engineering is now visible on the generated status surfaces and has round-1 review notes recorded, but any future claim of `completed` should wait for a dedicated Grade 5 closeout/publish verification step if one is required.
+- No Grade 5 Engineering-specific blocker remains in this batch file after the dedicated closeout publish and verification.
+- This file does **not** claim any extra literal lesson edits beyond the status-surface closeout that was actually performed.

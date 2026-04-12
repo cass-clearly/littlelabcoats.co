@@ -41,22 +41,22 @@ Practical execution order:
 | gr5-ess1-unit1-review-batch-1 | Grade 5 ESS1 Unit 1 lessons 1-6 + refcard + quiz | completed | yes | yes | yes | yes | yes | yes | First concrete execution batch completed 2026-04-12. Commit `9a0c8c4` pushed to `origin/main`; backend document IDs were created/reconciled and representative live review HTML now serves the new ESS1 document IDs. |
 | gr5-ls1-unit2-review-batch-1 | Grade 5 LS1 Unit 2 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | yes | yes | yes | yes | Reviewer-first continuation resumed 2026-04-12 from direct source/live inspection because live comment feed was empty; see `lesson-plans/gr5-life-science-batch-review.md`. |
 | gr2-ets1-unit1-review-batch-1 | Grade 2 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | no literal content changes needed | yes | yes | yes | Review notes are recorded in `lesson-plans/gr2-engineering-batch-review.md`; commit `aa52f75` fixed the generator/parser omission, and public lesson-index plus review-index verification now shows Grade 2 Engineering on the live status surfaces. |
-| gr5-ets1-unit1-review-batch-1 | Grade 5 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | in progress | yes | yes | no literal content changes needed | yes | no | status surfaces only | Review notes are now recorded in `lesson-plans/gr5-engineering-batch-review.md`; Grade 5 Engineering is visible on the live lesson-index and review-index, but this run did not do a separate Grade 5 publish-closeout commit beyond the shared surface-generation fix. |
+| gr5-ets1-unit1-review-batch-1 | Grade 5 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | no literal lesson-content changes needed | yes | yes | yes | Review notes are recorded in `lesson-plans/gr5-engineering-batch-review.md`; this closeout pass added reviewed / revised status exposure to the generated directory surfaces and reran representative live lesson/refcard/quiz verification. |
 | gr4-ls1-remarq-review-revise-loop | Grade 4 LS1 Units 1-2 lessons/refcards/quizzes | previously completed | yes | yes | yes | yes | yes | yes | Proven prior batch, see `lesson-plans/gr4-life-science-batch-review.md`. |
 
 ## Current next action
 
 Next required ship step:
-- continue into the Grade 5 Engineering reviewer-first batch now that the Grade 2 engineering status-surface blocker is cleared live
+- continue into the next unfinished Grade 4 reviewer-first batch now that Grade 5 Engineering closeout is complete
 - keep release gating strict: Rachel + Margaret review first, literal fixes second, public verification before counting anything as released
-- if Grade 5 remains only created/not reviewed in this run, keep that distinction explicit on the tracker
+- if the next Grade 4/5 lane has duplicate or conflicting scaffolds, keep that ambiguity explicit before claiming a finished batch
 
 ## Candidate next batches after current one
 
 Priority candidates:
-- Grade 2 ETS1 Unit 1 after the index/status-surface blocker is fixed
-- Grade 5 ETS1 Unit 1 immediately after Grade 2 ETS1 Unit 1 is honestly closed or narrowly blocked
-- Kindergarten PS3 Unit 2 sun/heat set after the engineering lane is cleared
+- Grade 4 ETS1 Unit 1 storm-shelter batch as the next coherent Grade 4 reviewer-first lane
+- Grade 4 Earth & Space Science after the Grade 4 engineering lane, if the canonical ESS1/ESS2 scaffold choice is explicit enough to keep the tracker honest
+- Kindergarten PS3 Unit 2 sun/heat set after the Grade 4/5 engineering lane is cleared
 
 ## Notes for future continuation
 

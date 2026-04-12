@@ -3746,7 +3746,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "5-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+      }
     },
     {
       "slug": "gr5-ets1-unit1-lesson2-compare-possible-filter-materials-and-systems",
@@ -3763,7 +3768,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "5-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+      }
     },
     {
       "slug": "gr5-ets1-unit1-lesson3-plan-a-testable-filter-prototype",
@@ -3780,7 +3790,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "5-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+      }
     },
     {
       "slug": "gr5-ets1-unit1-lesson4-build-and-run-your-first-filter-trial",
@@ -3797,7 +3812,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "5-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+      }
     },
     {
       "slug": "gr5-ets1-unit1-lesson5-redesign-using-test-evidence",
@@ -3814,7 +3834,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "5-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+      }
     },
     {
       "slug": "gr5-ets1-unit1-lesson6-present-and-defend-your-water-filter-solution",
@@ -3831,7 +3856,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "5-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+      }
     },
     {
       "slug": "5th-forces-balanced-unbalanced",
@@ -7996,7 +8026,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "5-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+          }
         },
         {
           "slug": "gr5-ets1-unit1-lesson2-compare-possible-filter-materials-and-systems",
@@ -8013,7 +8048,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "5-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+          }
         },
         {
           "slug": "gr5-ets1-unit1-lesson3-plan-a-testable-filter-prototype",
@@ -8030,7 +8070,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "5-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+          }
         },
         {
           "slug": "gr5-ets1-unit1-lesson4-build-and-run-your-first-filter-trial",
@@ -8047,7 +8092,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "5-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+          }
         },
         {
           "slug": "gr5-ets1-unit1-lesson5-redesign-using-test-evidence",
@@ -8064,7 +8114,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "5-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+          }
         },
         {
           "slug": "gr5-ets1-unit1-lesson6-present-and-defend-your-water-filter-solution",
@@ -8081,10 +8136,21 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "5-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+          }
         }
       ],
-      "statusSummaries": []
+      "statusSummaries": [
+        {
+          "id": "gr5-ets1-unit1-review-batch-1",
+          "label": "Reviewed / revised",
+          "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+        }
+      ]
     },
     {
       "gradeLabel": "Grade 5",
