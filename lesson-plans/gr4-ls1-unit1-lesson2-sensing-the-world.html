@@ -75,41 +75,45 @@
     }
     .standards-box strong { color: #7b1fa2; }
 
-    .lesson-path {
-      background: #f7fbff;
-      border: 1px solid #b6d7f2;
+    .sense-hook-box {
+      background: #fff3e0;
+      border: 2px solid #ffb74d;
       border-radius: 10px;
-      padding: 12px 14px;
-      margin: 14px 0 20px;
+      padding: 14px 18px;
+      margin: 12px 0;
     }
-    .lesson-path-title {
-      font-size: 10pt;
+    .sense-hook-box h3 { color: #e65100; border-color: #ffb74d; }
+    .sense-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .sense-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f6fff6 100%);
+      border: 1.5px solid #a5d6a7;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 2px 8px rgba(46,125,50,0.08);
+    }
+    .sense-card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1.5px solid #c8e6c9;
+      margin-bottom: 10px;
+      background: #eef7ee;
+    }
+    .sense-card-title {
+      font-size: 12pt;
       font-weight: 700;
-      color: #24557a;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 8px;
-    }
-    .lesson-path-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .lesson-path-links a {
-      display: inline-block;
-      text-decoration: none;
       color: #1b5e20;
-      background: #ffffff;
-      border: 1px solid #a5d6a7;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 9.5pt;
-      font-weight: 600;
+      margin-bottom: 4px;
     }
-    .lesson-path-links a.current {
-      background: #2e7d32;
-      color: #fff;
-      border-color: #2e7d32;
+    .sense-card p {
+      margin: 6px 0;
+      font-size: 10pt;
     }
     .tip-box {
       background: #e0f7fa;
@@ -236,11 +240,14 @@
       .print-btn, .llc-paywall-overlay { display: none !important; }
       h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .worksheet-card, .standards-box {
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .worksheet-card, .standards-box, .sense-hook-box, .sense-card {
         break-inside: avoid;
         page-break-inside: avoid;
       }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    @media (max-width: 700px) {
+      .sense-card-grid { grid-template-columns: 1fr; }
     }
 
   </style>
@@ -264,40 +271,73 @@
   </div>
 
   <h2>🎯 Learning Objective</h2>
-  <p>Students will investigate sensing the World, make observations during the lesson activity, and explain what they learned using evidence from the lesson.</p>
+  <p>Students will use their own senses during quick challenges, study animal sensory structures, and explain with evidence how those structures help animals gather information and survive.</p>
 
-  <div class="lesson-path">
-    <div class="lesson-path-title">Grade 4 Life Science Path</div>
-    <div class="lesson-path-links">
-      <a href="gr4-ls1-unit1-lesson1-external-structures-for-survival.html">← Previous lesson</a>
-      <a href="gr4-ls1-unit1-quiz.html">Unit 1 quiz</a>
-      <a href="gr4-ls1-unit1-lesson3-mouths-beaks-teeth-and-getting-food.html">Next lesson →</a>
-      <a href="gr4-ls1-unit1-lesson2-sensing-the-world.html" class="current">Current lesson</a>
-    </div>
-  </div>
   <h2>The Big Idea</h2>
   <p>Animals survive by collecting information about the world around them. Sensory structures help them notice food, danger, movement, and changes in their habitat.</p>
   <p>Different animals depend on different senses. In Grade 4, the key idea is simple: a structure matters because it helps the animal do an important job.</p>
   <h2>The Science</h2>
   <p>Sensory structures help animals gather clues. Ears detect sound, noses detect smells, and whiskers or antennae can sense touch or movement. Those clues help an animal find food, avoid danger, and move safely.</p>
   <div class="tip-box"><strong>Key vocabulary:</strong> sensory structure, detect, information, behavior, whiskers, antennae, compound eye, hearing</div>
+
+  <div class="sense-hook-box">
+    <h3>🕵️ Quick Sensory Warm-Up</h3>
+    <p>Before talking about animal senses, let students <em>use their own</em>. Try three fast rounds:</p>
+    <ul>
+      <li><strong>Hearing:</strong> Close eyes and identify a sound in the room.</li>
+      <li><strong>Smell:</strong> Smell a safe familiar scent and guess what it is.</li>
+      <li><strong>Touch:</strong> Reach into a bag or feel an object without looking and describe its texture or shape.</li>
+    </ul>
+    <p>Then ask: <em>Which sense gave you the fastest clue? Which one felt hardest to use? How do animals use those same kinds of clues?</em></p>
+  </div>
+
   <h2>Materials</h2>
   <div class="materials-box">
     <h3>Gather Before You Start</h3>
     <ul>
       <li>printed lesson pages and Student Worksheet</li>
-      <li>2–4 animal photos from a nature book, magazine, or device</li>
+      <li>the included animal sense cards on this lesson page</li>
       <li>1 cardboard tube, such as a toilet paper roll or paper towel tube, or 1 simple blindfold</li>
       <li>2 safe familiar scents for the smell challenge, such as orange peel, cinnamon, vanilla, or mint</li>
+      <li>1 safe mystery object for touch only, such as a pinecone, cotton ball, spoon, shell, or toy animal</li>
       <li>pencil</li>
     </ul>
   </div>
+
+  <h2>👀 Animal Sense Cards</h2>
+  <div class="sense-card-grid">
+    <div class="sense-card">
+      <img src="../images/lesson-assets/gr4-ls1-unit1-lesson2-fox-senses-card.jpg?v=20260412a" alt="Fox with large ears and alert eyes">
+      <div class="sense-card-title">Fox</div>
+      <p><strong>Notice:</strong> large ears, sharp eyes, strong nose</p>
+      <p><strong>Why it matters:</strong> helps the fox hear tiny movements and notice prey quickly.</p>
+    </div>
+    <div class="sense-card">
+      <img src="../images/lesson-assets/gr4-ls1-unit1-lesson2-owl-senses-card.jpg?v=20260412a" alt="Owl with large eyes and facial disk">
+      <div class="sense-card-title">Owl</div>
+      <p><strong>Notice:</strong> huge eyes and a face shaped to collect sound</p>
+      <p><strong>Why it matters:</strong> helps the owl hunt in dim light and detect movement at night.</p>
+    </div>
+    <div class="sense-card">
+      <img src="../images/lesson-assets/gr4-ls1-unit1-lesson2-deer-senses-card.jpg?v=20260412a" alt="Deer with large ears and nose visible">
+      <div class="sense-card-title">Deer</div>
+      <p><strong>Notice:</strong> large ears and nose</p>
+      <p><strong>Why it matters:</strong> helps the deer notice danger early and react fast.</p>
+    </div>
+    <div class="sense-card">
+      <img src="../images/lesson-assets/gr4-ls1-unit1-lesson2-butterfly-senses-card.jpg?v=20260412a" alt="Butterfly with antennae visible">
+      <div class="sense-card-title">Butterfly</div>
+      <p><strong>Notice:</strong> antennae and compound eyes</p>
+      <p><strong>Why it matters:</strong> helps the butterfly detect nearby cues while moving through its habitat.</p>
+    </div>
+  </div>
+
   <h2>Let's Get Started</h2>
-  <div class="procedure-step"><strong>Step 1:</strong> Start with a quick limited-senses demonstration. Have students look through a cardboard tube, such as a toilet paper roll, or close their eyes and listen for a sound. Ask: What information was easier to notice, and what information was harder to notice?</div>
-  <div class="procedure-step"><strong>Step 2:</strong> Show 2–4 animals and ask which sensory structure seems especially important for each one. During this step, begin the <strong>Sensory Detective</strong> table by filling in one row with the animal, its sensory structure, the information it detects, and the behavior that information supports.</div>
-  <div class="procedure-step"><strong>Step 3:</strong> Talk about habitat clues. Ask why hearing, smell, touch, or sight might matter more in darkness, water, tall grass, or while hunting.</div>
-  <div class="procedure-step"><strong>Step 4:</strong> Run a quick smell challenge using two safe familiar scents, such as orange peel and cinnamon. Then have students complete a second row in <strong>Sensory Detective</strong> and finish the <strong>Claim Box</strong> with one full sentence: name the sensory structure, tell what information it detects, and explain how that information helps the animal survive or behave.</div>
-  <div class="procedure-step"><strong>Step 5:</strong> End with the compare prompt on the worksheet. Have students explain how two animals can solve a similar problem, such as finding food, by relying on different sensory structures.</div>
+  <div class="procedure-step"><strong>Step 1:</strong> Start with a <strong>human senses challenge</strong>. Let students do three fast rounds: listen with eyes closed, smell a mystery scent, and feel a hidden object without looking. After each round ask: <em>What information did your body help you collect?</em></div>
+  <div class="procedure-step"><strong>Step 2:</strong> Use the included <strong>Animal Sense Cards</strong> and ask which sensory structure seems especially important for each one. Begin the <strong>Sensory Detective</strong> table by filling in one row with the animal, its sensory structure, the information it detects, and the behavior that information supports.</div>
+  <div class="procedure-step"><strong>Step 3:</strong> Make habitat clues more playful. Ask: <em>If you were hunting in the dark, hiding in tall grass, flying at night, or trying not to get eaten, which sense would you want to be your superpower?</em> Then connect answers back to hearing, smell, touch, and sight.</div>
+  <div class="procedure-step"><strong>Step 4:</strong> Run a quick smell challenge using two safe familiar scents, such as orange peel and cinnamon, then compare that to how animals use noses, antennae, or other sensory structures. Have students complete a second row in <strong>Sensory Detective</strong> and finish the <strong>Claim Box</strong> with one full sentence: name the sensory structure, tell what information it detects, and explain how that information helps the animal survive or behave.</div>
+  <div class="procedure-step"><strong>Step 5:</strong> End with the compare prompt on the worksheet. Have students explain how two animals can solve a similar problem, such as finding food or avoiding danger, by relying on different sensory structures.</div>
   <h2>Discussion Questions</h2>
   <div class="question-box"><strong>Q:</strong> Why might a nocturnal animal need a different sensory strength than a daytime animal?<span class="discussion-hint">Look for reasoning about darkness and hearing or smell being more useful.</span></div>
   <div class="question-box"><strong>Q:</strong> How do whiskers or antennae help behavior?<span class="discussion-hint">Guide students toward touch, vibration, and nearby-object information.</span></div>
