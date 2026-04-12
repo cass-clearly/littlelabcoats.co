@@ -36,10 +36,10 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
 
 ### Grade 4
 - **Life Science:** content exists and already has the strongest review proof in repo
-- **Physical Science:** caller says Grade 4 Physical Science Unit 1 Lesson 1 creation is already finished elsewhere; remainder of a canonical physical unit is still not fully present in this repo pass
+- **Physical Science:** caller-owned Lesson 1 remains intentionally untouched; the repo now contains the remainder of the canonical Grade 4 `Energy & Motion` package as `gr4-ps3-unit1` Lessons 2–6 plus unit refcard + quiz
 - **Earth Science:** content now exists (`4-ESS1 Unit 1 — Shaping Earth’s Surface`)
 - **Engineering:** content exists (`4-ETS1 Unit 1`)
-- **Creation blocker status:** Grade 4 Earth Science scaffold/content blocker is cleared; the next coherent Grade 4 creation gap is the remaining Physical Science Unit 1 lessons beyond the caller-excluded Lesson 1 item
+- **Creation blocker status:** the Grade 4 Physical Science remainder-scope blocker is cleared; next coherent step is reviewer-first work on the full Grade 4 PS package once the caller-owned Lesson 1 item is brought into the same review lane/path as needed
 
 ### Grade 5
 - **Physical Science:** content exists (`5-PS2`)
@@ -163,3 +163,16 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
 - **Adaptation rule:** preserve the modern 6-lesson physical-science unit shape and LLC formatting, but only create the remaining `Grade 4 Physical Science Unit 1` lessons/support assets after the caller-excluded already-finished Lesson 1 item. Raise rigor to Grade 4 with more explicit evidence language, variable/control thinking, and energy-transfer / motion-cause reasoning appropriate to a `4-PS3`-style unit.
 - **Canonical Grade 4 Physical Science theme chosen:** `Energy & Motion` centered on collisions, energy transfer, speed changes, surface/friction effects, and evidence-based explanation of how energy moves and causes motion.
 - **Why this is the smallest unblock:** it reuses the nearest existing physical-science package instead of inventing a new structure, respects the do-not-duplicate Lesson 1 constraint, and gives the creation worker a concrete remainder scope to continue immediately.
+
+## Shipped in this Grade 4 Physical Science unblock batch
+- Grade 4 Physical Science Unit 1 remainder package using the explicit `Grade 5 PS2 Unit 1` scaffold and `Grade 3 PS2` naming/shape cross-check under the theme `Energy & Motion`:
+  - `gr4-ps3-unit1-l2-collisions-transfer-energy.html`
+  - `gr4-ps3-unit1-l3-faster-motion-bigger-changes.html`
+  - `gr4-ps3-unit1-l4-surfaces-and-friction-change-motion.html`
+  - `gr4-ps3-unit1-l5-testing-one-change-at-a-time.html`
+  - `gr4-ps3-unit1-l6-explain-how-energy-moves-and-causes-motion.html`
+  - `gr4-ps3-unit1-refcard.html`
+  - `gr4-ps3-unit1-quiz.html`
+- Caller-excluded Lesson 1 work was intentionally not duplicated or overwritten in this pass.
+- Immediate creation-run blocker removed: the remaining Grade 4 Physical Science Unit 1 scope now has a concrete shipped remainder package instead of an open scaffold decision.
+- Next coherent step after this creation batch: move the Grade 4 Physical Science package into the reviewer-first lane with the caller-owned Lesson 1 item aligned to the intended canonical path when available.
