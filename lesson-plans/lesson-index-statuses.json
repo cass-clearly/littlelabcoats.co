@@ -30,6 +30,16 @@
       "note": "Grade 5 Life Science Unit 2 completed review and revision."
     },
     {
+      "id": "gr4-ets1-unit1-review-batch-1",
+      "match": {
+        "gradeKey": "4",
+        "domainKey": "ets",
+        "unitNumber": 1
+      },
+      "label": "Reviewed / revised",
+      "note": "Grade 4 Engineering Unit 1 completed review and revision."
+    },
+    {
       "id": "gr5-ets1-unit1-review-batch-1",
       "match": {
         "gradeKey": "5",

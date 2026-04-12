@@ -3120,7 +3120,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "4-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Engineering Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr4-ets1-unit1-lesson2-compare-shelter-materials-and-shapes",
@@ -3137,7 +3142,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "4-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Engineering Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr4-ets1-unit1-lesson3-plan-a-testable-storm-shelter",
@@ -3154,7 +3164,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "4-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Engineering Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr4-ets1-unit1-lesson4-build-and-run-the-first-shelter-test",
@@ -3171,7 +3186,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "4-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Engineering Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr4-ets1-unit1-lesson5-redesign-using-test-evidence",
@@ -3188,7 +3208,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "4-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Engineering Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr4-ets1-unit1-lesson6-present-and-defend-your-shelter-solution",
@@ -3205,7 +3230,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "4-ets",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ets1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Engineering Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "free-gr4-apple-oxidation",
@@ -7348,7 +7378,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "4-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Engineering Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr4-ets1-unit1-lesson2-compare-shelter-materials-and-shapes",
@@ -7365,7 +7400,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "4-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Engineering Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr4-ets1-unit1-lesson3-plan-a-testable-storm-shelter",
@@ -7382,7 +7422,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "4-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Engineering Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr4-ets1-unit1-lesson4-build-and-run-the-first-shelter-test",
@@ -7399,7 +7444,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "4-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Engineering Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr4-ets1-unit1-lesson5-redesign-using-test-evidence",
@@ -7416,7 +7466,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "4-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Engineering Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr4-ets1-unit1-lesson6-present-and-defend-your-shelter-solution",
@@ -7433,10 +7488,21 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "4-ets",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ets1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Engineering Unit 1 completed review and revision."
+          }
         }
       ],
-      "statusSummaries": []
+      "statusSummaries": [
+        {
+          "id": "gr4-ets1-unit1-review-batch-1",
+          "label": "Reviewed / revised",
+          "note": "Grade 4 Engineering Unit 1 completed review and revision."
+        }
+      ]
     },
     {
       "gradeLabel": "Grade 4",
