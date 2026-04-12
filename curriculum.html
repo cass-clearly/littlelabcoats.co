@@ -1598,6 +1598,47 @@
       return normalizeText(value).split(' ').filter(Boolean);
     }
 
+    const safeSingleWordGradePhrases = new Set(['k', 'kg', 'kindergarten', 'kindergarden', 'prek', 'pre k', 'kindy']);
+    const gradePhrasePatterns = Object.entries(gradeSynonyms)
+      .flatMap(([grade, synonyms]) => synonyms
+        .map(synonym => normalizeText(synonym))
+        .filter(synonym => synonym && (synonym.includes(' ') || synonym.startsWith('grade') || synonym.endsWith('grade') || safeSingleWordGradePhrases.has(synonym)))
+        .map(synonym => ({ grade, synonym })))
+      .sort((a, b) => b.synonym.length - a.synonym.length);
+    const exactGradeLookup = Object.fromEntries(
+      Object.entries(gradeSynonyms).flatMap(([grade, synonyms]) =>
+        synonyms.map(synonym => [normalizeText(synonym), grade])
+      )
+    );
+
+    function parseSearchQuery(value) {
+      const normalized = normalizeText(value);
+      if (!normalized) {
+        return { textTokens: [], gradeFilters: [] };
+      }
+
+      const gradeFilters = new Set();
+      let remainder = ` ${normalized} `;
+
+      gradePhrasePatterns.forEach(({ grade, synonym }) => {
+        const needle = ` ${synonym} `;
+        if (remainder.includes(needle)) {
+          gradeFilters.add(grade);
+          remainder = remainder.replace(needle, ' ');
+        }
+      });
+
+      if (!gradeFilters.size && exactGradeLookup[normalized]) {
+        gradeFilters.add(exactGradeLookup[normalized]);
+        remainder = ' ';
+      }
+
+      return {
+        textTokens: tokenize(remainder),
+        gradeFilters: Array.from(gradeFilters)
+      };
+    }
+
     function buildGradeSearchText(gradeValue) {
       const gradeKey = normalizeText(String(gradeValue || ''));
       const synonyms = gradeSynonyms[gradeKey];
@@ -1644,6 +1685,14 @@
     const domainTabs = document.querySelectorAll('.domain-tab');
     let activeGrade = document.querySelector('.filter-btn.active')?.dataset.grade || 'k';
 
+    function renderFilterState(searching) {
+      filterBtns.forEach(btn => {
+        const shouldBeActive = searching ? btn.dataset.grade === 'all' : btn.dataset.grade === activeGrade;
+        btn.classList.toggle('active', shouldBeActive);
+        btn.setAttribute('aria-pressed', shouldBeActive ? 'true' : 'false');
+      });
+    }
+
     const units = Array.from(document.querySelectorAll('.unit-card')).map(card => {
       const gradeSection = card.closest('.grade-section');
       const grade = gradeSection ? gradeSection.dataset.grade : '';
@@ -1689,19 +1738,21 @@
     function updateSearch() {
       const query = searchInput.value.trim();
       const normalizedQuery = normalizeText(query);
-      const searchTokens = tokenize(query);
+      const { textTokens, gradeFilters } = parseSearchQuery(query);
       const searching = normalizedQuery.length > 0;
+      renderFilterState(searching);
       let visibleSections = 0;
       let visibleUnits = 0;
 
       units.forEach(unit => {
         let unitMatches = !searching;
         let matchingLessons = 0;
+        const gradeMatches = !gradeFilters.length || gradeFilters.includes(unit.grade);
 
         if (searching) {
-          unitMatches = matchesSearch(unit, searchTokens);
+          unitMatches = gradeMatches && (textTokens.length === 0 || matchesSearch(unit, textTokens));
           unit.lessons.forEach(lesson => {
-            const lessonMatch = matchesSearch(lesson, searchTokens);
+            const lessonMatch = gradeMatches && (textTokens.length === 0 || matchesSearch(lesson, textTokens));
             lesson.element.classList.toggle('search-hidden', !lessonMatch);
             if (lessonMatch) {
               matchingLessons += 1;
@@ -1714,7 +1765,7 @@
           unit.lessons.forEach(lesson => lesson.element.classList.remove('search-hidden'));
         }
 
-        const gradeAllowed = activeGrade === 'all' || unit.grade === activeGrade;
+        const gradeAllowed = searching || activeGrade === 'all' || unit.grade === activeGrade;
         const showUnit = gradeAllowed && unitMatches;
         unit.element.classList.toggle('search-hidden', !showUnit);
         if (showUnit && searching) {
@@ -1771,8 +1822,6 @@
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
         activeGrade = btn.dataset.grade;
         updateSearch();
       });
