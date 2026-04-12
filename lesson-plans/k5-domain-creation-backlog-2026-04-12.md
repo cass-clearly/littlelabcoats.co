@@ -37,9 +37,9 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
 ### Grade 4
 - **Life Science:** content exists and already has the strongest review proof in repo
 - **Physical Science:** caller says Grade 4 Physical Science Unit 1 Lesson 1 creation is already finished elsewhere; remainder of a canonical physical unit is still not fully present in this repo pass
-- **Earth Science:** **missing canonical unit**
-- **Engineering:** **missing canonical unit** (free sample exists, not a full domain unit)
-- **Creation blocker status:** Grade 4 remains the largest unfinished creation gap, but this pass avoids duplicate ownership on the already-finished PS Unit 1 Lesson 1 item
+- **Earth Science:** content now exists (`4-ESS1 Unit 1 — Shaping Earth’s Surface`)
+- **Engineering:** content exists (`4-ETS1 Unit 1`)
+- **Creation blocker status:** Grade 4 Earth Science scaffold/content blocker is cleared; the next coherent Grade 4 creation gap is the remaining Physical Science Unit 1 lessons beyond the caller-excluded Lesson 1 item
 
 ### Grade 5
 - **Physical Science:** content exists (`5-PS2`)
@@ -105,6 +105,18 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
 - **Adaptation rule:** preserve the 6-lesson + unit refcard + unit quiz package structure and the existing LLC Earth-science lesson formatting, but raise to Grade 4 rigor with stronger cause/effect reasoning, more explicit evidence language, and Earth-process emphasis appropriate to `4-ESS2-1` style work.
 - **Canonical Grade 4 Earth Science theme chosen:** `Shaping Earth’s Surface` centered on weathering, erosion, deposition, landform change, map/model evidence, and pattern-based explanation.
 - **Why this is the smallest unblock:** it reuses the nearest existing Earth-science package instead of inventing a new format, and gives the creation worker a concrete package/theme to continue from without claiming reviewer completion.
+
+## Shipped in this follow-up run
+- Grade 4 Earth Science full new package using the explicit Grade 2 ESS1 Unit 3 scaffold decision, adapted upward for Grade 4 rigor under the theme `Shaping Earth’s Surface`:
+  - `gr4-ess1-unit1-lesson1-weathering-starts-landform-change.html`
+  - `gr4-ess1-unit1-lesson2-erosion-moves-sediment.html`
+  - `gr4-ess1-unit1-lesson3-deposition-builds-new-landforms.html`
+  - `gr4-ess1-unit1-lesson4-maps-and-models-show-earth-surface-change.html`
+  - `gr4-ess1-unit1-lesson5-patterns-of-water-wind-ice-and-vegetation.html`
+  - `gr4-ess1-unit1-lesson6-explain-and-protect-a-changing-streambank.html`
+  - `gr4-ess1-unit1-refcard.html`
+  - `gr4-ess1-unit1-quiz.html`
+- Next coherent creation gap after this ship: the remaining Grade 4 Physical Science Unit 1 lessons beyond the caller-excluded Lesson 1 item.
 
 ## Explicit non-goals for this pass
 - no search-page/search-index work

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deposition Builds New Landforms — Grade 4 Earth Science</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #222;
+}
+h1 {
+  text-align: center;
+  font-size: 22pt;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #e65100;
+  padding-bottom: 10px;
+  color: #e65100;
+}
+.subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+.meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+ul, ol { margin: 8px 0; padding-left: 25px; }
+li { margin-bottom: 5px; }
+.materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+.materials-box h3 { color: #e65100; border-color: #ffcc80; }
+.procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+.procedure-step strong { color: #bf360c; }
+.question-box { background: #fff3e0; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+.discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+.tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+.standards-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+.standards-box strong { color: #e65100; }
+.extension-box { background: #fff8e1; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+.teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+.teacher-note strong { color: #333; }
+.answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+.answer-key h2 { background: #757575; text-align: center; }
+.name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+.worksheet-header { background: #bf360c; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+.draw-box { border: 2px solid #ffcc80; background: white; border-radius: 8px; min-height: 120px; margin: 6px 0; padding: 6px; }
+.draw-label { font-size: 9pt; color: #888; font-style: italic; text-align: center; margin-top: 4px; }
+.vocab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+.vocab-card { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 10px; text-align: center; font-size: 10pt; }
+.vocab-card .vocab-word { font-weight: bold; color: #e65100; font-size: 12pt; display: block; margin-bottom: 4px; }
+.vocab-card .vocab-def { color: #555; font-size: 9pt; line-height: 1.4; }
+.data-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+.data-table th { background: #fff3e0; border: 2px solid #ffcc80; padding: 8px; text-align: left; }
+.data-table td { border: 2px solid #ffcc80; padding: 10px; vertical-align: top; }
+.claim-box { border: 2px dashed #ffcc80; border-radius: 8px; min-height: 90px; padding: 10px; background: #fff; }
+@media print {
+  body { padding: 0.25in; font-size: 10pt; }
+  h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h3 { break-after: avoid; }
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .data-table {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+.page-break { page-break-before: always; margin-top: 20px; }
+.print-btn {
+  position: fixed; top: 20px; right: 20px; background: #e65100; color: white;
+  border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000; display: flex; align-items: center; gap: 6px;
+}
+.print-btn:hover { background: #bf360c; }
+@media print { .print-btn { display: none; } }
+
+</style>
+</head>
+<body data-document-id="doc_gr4_ess1_u1_l3_deposition">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+<h1>🏞️ Deposition Builds New Landforms</h1>
+<p class="subtitle">Earth Science — Shaping Earth’s Surface | Unit 1, Lesson 3 of 6</p>
+<div class="meta"><span><strong>Grade:</strong> 4</span><span><strong>Duration:</strong> 45–55 minutes</span><span><strong>Subject:</strong> Earth Science, Deposition</span><span><strong>Materials:</strong> Jar, sand, gravel, water</span></div>
+<div class="standards-box"><strong>NGSS Standard:</strong> 4-ESS2-1 — Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation.</div>
+<h2>🎯 Learning Objectives</h2>
+<ul><li>Define <strong>deposition</strong> as the dropping of sediment when water or wind loses energy.</li><li>Observe how larger particles settle before smaller particles.</li><li>Explain how deposition can build features such as deltas, bars, or layered sediments.</li></ul>
+<h2>📦 Materials</h2>
+<div class="materials-box"><ul><li>Clear jar or bottle with lid</li><li>Small amount of gravel, sand, and soil</li><li>Water</li><li>Tray or plate</li><li>Spoon</li><li>Pencil</li></ul></div>
+<h2>📖 Vocabulary</h2>
+<div class="vocab-grid"><div class="vocab-card"><span class="vocab-word">deposition</span><span class="vocab-def">The dropping of sediment in a new place</span></div><div class="vocab-card"><span class="vocab-word">delta</span><span class="vocab-def">A landform built where a river drops sediment near a larger body of water</span></div><div class="vocab-card"><span class="vocab-word">sediment layer</span><span class="vocab-def">A visible band of deposited material</span></div><div class="vocab-card"><span class="vocab-word">energy</span><span class="vocab-def">The ability of moving water or wind to carry material</span></div><div class="vocab-card"><span class="vocab-word">settle</span><span class="vocab-def">To sink or drop out of moving water</span></div></div>
+<h2>🔬 Background</h2>
+<p>Erosion does not move sediment forever. When water slows down, it can no longer carry as much material. The dropped material is called <strong>deposition</strong>. Deposition builds new landforms and adds layers to existing ones.</p><p>Large, heavy pieces usually settle first. Smaller pieces stay suspended longer and settle later. This pattern helps scientists infer what happened in the past when they study layered sediments.</p><p>Deposition is why rivers build sandbars, floodplains, and deltas. It is also why stormwater can leave muddy layers after a flood. Landforms are shaped not only by what gets removed, but also by what gets added.</p>
+<h2>🧪 Activity</h2>
+<div class="procedure-step"><strong>Step 1:</strong> Put a spoonful each of gravel, sand, and soil into a clear jar. Fill it about three-quarters with water.</div><div class="procedure-step"><strong>Step 2:</strong> Shake the jar strongly for 10 seconds so all the particles are mixed.</div><div class="procedure-step"><strong>Step 3:</strong> Set the jar down and watch closely for one minute. Notice which particles settle first and which stay cloudy longer.</div><div class="procedure-step"><strong>Step 4:</strong> After several minutes, sketch the layers you see from bottom to top.</div><div class="procedure-step"><strong>Step 5:</strong> Carefully pour a little of the muddy water onto a flat tray. Watch what happens where the water slows and spreads out.</div><div class="procedure-step"><strong>Step 6:</strong> Explain how the pattern you observed connects to river deltas, sandbars, or muddy flood deposits.</div>
+<h2>💬 Discussion Questions</h2>
+<div class="question-box"><strong>Q1:</strong> Why do larger particles settle sooner than tiny ones?<p class="discussion-hint"><strong>Hint:</strong> They are heavier and harder for slower water to keep moving.</p></div><div class="question-box"><strong>Q2:</strong> How can deposition make a place larger instead of smaller?<p class="discussion-hint"><strong>Hint:</strong> Added sediment can build up new surfaces such as bars, beaches, or deltas.</p></div>
+<div class="page-break"></div>
+<h2>✏️ Student Worksheet</h2>
+<div class="worksheet-header">Deposition Builds New Landforms - Student Worksheet</div>
+<div class="name-date">Name: _________________________ &nbsp;&nbsp; Date: _____________</div>
+<h3>1. Prediction</h3><p>Which material will settle first? _______________________</p><h3>2. Layer Sketch</h3><div class="draw-box" style="min-height:170px;"></div><h3>3. Label the Layers</h3><p>Bottom: ____________________</p><p>Middle: ____________________</p><p>Top / still cloudy: ____________________</p><h3>4. Explain the Pattern</h3><p>When water slowed down, it __________________________________________________.</p><p>This shows deposition because ________________________________________________.</p><h3>5. Real-world connection</h3><p>Name one landform that can be built by deposition: ______________________________.</p>
+<div class="page-break"></div>
+<h2>👩‍🏫 Parent/Teacher Notes</h2>
+<div class="teacher-note"><ul><li><strong>Observation timing:</strong> Coarse particles often settle within seconds, but very fine soil may stay cloudy for quite a while.</li><li><strong>Rigor move:</strong> Push students to describe the order of settling, not just list the materials.</li><li><strong>Link forward:</strong> In the next lesson, students will use maps and models to show where change happened.</li></ul></div>
+<h2>✂️ PARENT ANSWER KEY</h2>
+<div class="answer-key"><h3>Worksheet Answers</h3><ol><li><strong>Prediction:</strong> Gravel should usually be predicted first.</li><li><strong>Layer sketch:</strong> Strong sketches show larger particles at the bottom and finer particles higher up.</li><li><strong>Explain the pattern:</strong> Good explanations mention that slower water drops sediment instead of carrying it.</li><li><strong>Real-world connection:</strong> Accept delta, sandbar, beach, floodplain, or sediment layer.</li></ol></div>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Objectives. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) { lockFromIndex = i; break; }
+    }
+    if (lockFromIndex === -1 || lockFromIndex === 0) lockFromIndex = Math.min(2, allH2.length - 1);
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+      if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+    });
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
+    if (!isUnlocked()) lockLesson();
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+
+<script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_gr4_ess1_u1_l3_deposition" data-content-selector="body"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maps and Models Show Earth’s Surface Change — Grade 4 Earth Science</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.5in;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #222;
+}
+h1 {
+  text-align: center;
+  font-size: 22pt;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #e65100;
+  padding-bottom: 10px;
+  color: #e65100;
+}
+.subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+.meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+h2 { font-size: 14pt; background: #e65100; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+ul, ol { margin: 8px 0; padding-left: 25px; }
+li { margin-bottom: 5px; }
+.materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+.materials-box h3 { color: #e65100; border-color: #ffcc80; }
+.procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #e65100; }
+.procedure-step strong { color: #bf360c; }
+.question-box { background: #fff3e0; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+.discussion-hint { font-style: italic; color: #555; margin-top: 6px; font-size: 10pt; }
+.tip-box { background: #fff8e1; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+.standards-box { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+.standards-box strong { color: #e65100; }
+.extension-box { background: #fff8e1; border: 1px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+.teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+.teacher-note strong { color: #333; }
+.answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+.answer-key h2 { background: #757575; text-align: center; }
+.name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+.worksheet-header { background: #bf360c; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+.draw-box { border: 2px solid #ffcc80; background: white; border-radius: 8px; min-height: 120px; margin: 6px 0; padding: 6px; }
+.draw-label { font-size: 9pt; color: #888; font-style: italic; text-align: center; margin-top: 4px; }
+.vocab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+.vocab-card { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 10px; text-align: center; font-size: 10pt; }
+.vocab-card .vocab-word { font-weight: bold; color: #e65100; font-size: 12pt; display: block; margin-bottom: 4px; }
+.vocab-card .vocab-def { color: #555; font-size: 9pt; line-height: 1.4; }
+.data-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+.data-table th { background: #fff3e0; border: 2px solid #ffcc80; padding: 8px; text-align: left; }
+.data-table td { border: 2px solid #ffcc80; padding: 10px; vertical-align: top; }
+.claim-box { border: 2px dashed #ffcc80; border-radius: 8px; min-height: 90px; padding: 10px; background: #fff; }
+@media print {
+  body { padding: 0.25in; font-size: 10pt; }
+  h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h3 { break-after: avoid; }
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .data-table {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+.page-break { page-break-before: always; margin-top: 20px; }
+.print-btn {
+  position: fixed; top: 20px; right: 20px; background: #e65100; color: white;
+  border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000; display: flex; align-items: center; gap: 6px;
+}
+.print-btn:hover { background: #bf360c; }
+@media print { .print-btn { display: none; } }
+
+</style>
+</head>
+<body data-document-id="doc_gr4_ess1_u1_l4_maps_models">
+<button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+<h1>🗺️ Maps and Models Show Earth’s Surface Change</h1>
+<p class="subtitle">Earth Science — Shaping Earth’s Surface | Unit 1, Lesson 4 of 6</p>
+<div class="meta"><span><strong>Grade:</strong> 4</span><span><strong>Duration:</strong> 50 minutes</span><span><strong>Subject:</strong> Earth Science, Maps & Models</span><span><strong>Materials:</strong> Tray model, crayons, clay</span></div>
+<div class="standards-box"><strong>NGSS Standard:</strong> 4-ESS2-2 — Analyze and interpret data from maps to describe patterns of Earth’s features.</div>
+<h2>🎯 Learning Objectives</h2>
+<ul><li>Create a simple before-and-after map from a top-down view of a stream model.</li><li>Use map and model evidence to describe where erosion and deposition happened.</li><li>Explain why maps and models are useful for studying landform change.</li></ul>
+<h2>📦 Materials</h2>
+<div class="materials-box"><ul><li>Tray with sand or soil</li><li>Water cup or squeeze bottle</li><li>Paper and crayons or colored pencils</li><li>Small amount of clay or playdough</li><li>Ruler</li></ul></div>
+<h2>📖 Vocabulary</h2>
+<div class="vocab-grid"><div class="vocab-card"><span class="vocab-word">map evidence</span><span class="vocab-def">Information you can gather from a top-down drawing</span></div><div class="vocab-card"><span class="vocab-word">model</span><span class="vocab-def">A smaller or simpler representation used to study something</span></div><div class="vocab-card"><span class="vocab-word">top view</span><span class="vocab-def">Looking from above, like a bird flying overhead</span></div><div class="vocab-card"><span class="vocab-word">pattern</span><span class="vocab-def">Something that repeats or can be noticed in the same kind of evidence</span></div><div class="vocab-card"><span class="vocab-word">interpret</span><span class="vocab-def">To use evidence to decide what it means</span></div></div>
+<h2>🔬 Background</h2>
+<p>Scientists cannot always watch a landform change for years or centuries. Instead, they compare maps, photos, and models from different times. A <strong>map</strong> shows where features are located. A <strong>model</strong> helps us test ideas and visualize shapes.</p><p>If a channel becomes wider on the second map, that is evidence of erosion. If a new wedge of sediment appears where water slowed down, that is evidence of deposition. Scientists look for repeated patterns in these records to explain what process likely happened.</p><p>In Grade 4, students move beyond simply drawing a map. They use the map as evidence. That means noticing what changed, where it changed, and which Earth process best explains it.</p>
+<h2>🧪 Activity</h2>
+<div class="procedure-step"><strong>Step 1:</strong> Shape a stream path or small channel in a sand tray. Before adding water, draw a top-view map of the tray on your worksheet. Use blue for the water path and brown for land.</div><div class="procedure-step"><strong>Step 2:</strong> Pour water through the same starting point two or three times.</div><div class="procedure-step"><strong>Step 3:</strong> Draw a second map of the tray after the water flowed. Add arrows or labels where you see widening, new channels, or piles of sediment.</div><div class="procedure-step"><strong>Step 4:</strong> Build a quick clay model of the “after” surface so you can show the height and shape changes in 3-D.</div><div class="procedure-step"><strong>Step 5:</strong> Compare your maps and model. Identify one place where erosion happened and one place where deposition happened.</div><div class="procedure-step"><strong>Step 6:</strong> Write a short explanation using the map and model as evidence.</div>
+<h2>💬 Discussion Questions</h2>
+<div class="question-box"><strong>Q1:</strong> Why is a before-and-after map useful even if the drawings are simple?<p class="discussion-hint"><strong>Hint:</strong> It helps you compare change over time in the same place.</p></div><div class="question-box"><strong>Q2:</strong> What can a model show that a flat map cannot?<p class="discussion-hint"><strong>Hint:</strong> A model can show height, slope, and 3-D shape more clearly.</p></div>
+<div class="page-break"></div>
+<h2>✏️ Student Worksheet</h2>
+<div class="worksheet-header">Maps and Models Show Earth’s Surface Change - Student Worksheet</div>
+<div class="name-date">Name: _________________________ &nbsp;&nbsp; Date: _____________</div>
+<h3>1. Before Map</h3><div class="draw-box" style="min-height:180px;"></div><h3>2. After Map</h3><div class="draw-box" style="min-height:180px;"></div><h3>3. Evidence Table</h3><table class="data-table"><tr><th>What changed?</th><th>Map or model evidence</th><th>Process I think caused it</th></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table><h3>4. Explanation</h3><div class="claim-box"></div>
+<div class="page-break"></div>
+<h2>👩‍🏫 Parent/Teacher Notes</h2>
+<div class="teacher-note"><ul><li><strong>Keep the map simple:</strong> Students do not need perfect cartography. The goal is evidence-based comparison.</li><li><strong>Push precision:</strong> Encourage wording like “the channel widened on the right side” instead of “it changed.”</li><li><strong>Cross-unit value:</strong> This lesson supports later science work that uses maps, diagrams, and models as evidence.</li></ul></div>
+<h2>✂️ PARENT ANSWER KEY</h2>
+<div class="answer-key"><h3>Worksheet Answers</h3><ol><li><strong>Maps:</strong> Student drawings should show the stream path before and after.</li><li><strong>Evidence table:</strong> Strong answers name a visible change and connect it to either erosion or deposition.</li><li><strong>Explanation:</strong> Good responses mention both the evidence and the process, for example, “The channel widened after water flowed, so erosion removed material from the bank.”</li></ol></div>
+<!-- ═══ PAYWALL SYSTEM ═══ -->
+<style>
+  .llc-paywall-overlay {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
+  }
+  .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+  .llc-paywall-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3B1F6B;
+    margin-bottom: 8px;
+  }
+  .llc-paywall-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    color: #5A7A78;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .llc-paywall-sub strong { color: #3B1F6B; }
+  .llc-btn-subscribe {
+    display: inline-block;
+    background: #FF6B6B;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+</style>
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the Learning Objectives. Subscribe to access the full experiment, procedure, worksheets, discussion questions, and answer key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
+    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
+  </div>
+</div>
+<script>
+(function() {
+  var ACCESS_KEY = 'llc_access';
+  function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+  function lockLesson() {
+    var allH2 = Array.from(document.querySelectorAll('h2'));
+    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+    var lockFromIndex = -1;
+    for (var i = 0; i < allH2.length; i++) {
+      var text = allH2[i].textContent.toLowerCase();
+      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
+      if (!isGoal) { lockFromIndex = i; break; }
+    }
+    if (lockFromIndex === -1 || lockFromIndex === 0) lockFromIndex = Math.min(2, allH2.length - 1);
+    var lockFromH2 = allH2[lockFromIndex];
+    if (!lockFromH2) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.maxHeight = '600px';
+      document.getElementById('llcPaywall').style.display = 'block';
+      return;
+    }
+    var bodyChildren = Array.from(document.body.children);
+    var hiding = false;
+    bodyChildren.forEach(function(child) {
+      if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+      if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+    });
+    document.getElementById('llcPaywall').style.display = 'block';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.search.indexOf('review=1') !== -1) {
+      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
+      return;
+    }
+    if (!isUnlocked()) lockLesson();
+  });
+})();
+</script>
+<!-- ═══ END PAYWALL ═══ -->
+
+<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
+  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+</div>
+
+<script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_gr4_ess1_u1_l4_maps_models" data-content-selector="body"></script>
+</body>
+</html>
