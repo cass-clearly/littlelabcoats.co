@@ -40,21 +40,23 @@ Practical execution order:
 |---|---|---|---|---|---|---|---|---|---|
 | gr5-ess1-unit1-review-batch-1 | Grade 5 ESS1 Unit 1 lessons 1-6 + refcard + quiz | completed | yes | yes | yes | yes | yes | yes | First concrete execution batch completed 2026-04-12. Commit `9a0c8c4` pushed to `origin/main`; backend document IDs were created/reconciled and representative live review HTML now serves the new ESS1 document IDs. |
 | gr5-ls1-unit2-review-batch-1 | Grade 5 LS1 Unit 2 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | yes | yes | yes | yes | Reviewer-first continuation resumed 2026-04-12 from direct source/live inspection because live comment feed was empty; see `lesson-plans/gr5-life-science-batch-review.md`. |
+| gr2-ets1-unit1-review-batch-1 | Grade 2 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | in progress | yes | yes | no literal content changes needed | repo-level fix applied; live verify pending | no | representative lesson URL only | Review notes are recorded in `lesson-plans/gr2-engineering-batch-review.md`; the generator/parser omission is fixed in repo output, but commit/push and public verification are still required before the batch can be honestly marked reviewed/closed. |
+| gr5-ets1-unit1-review-batch-1 | Grade 5 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | not started | no | no | no | no | no | no | Held behind the explicit caller order because Grade 2 Engineering is not yet honestly closed out; see `lesson-plans/gr5-engineering-batch-review.md`. |
 | gr4-ls1-remarq-review-revise-loop | Grade 4 LS1 Units 1-2 lessons/refcards/quizzes | previously completed | yes | yes | yes | yes | yes | yes | Proven prior batch, see `lesson-plans/gr4-life-science-batch-review.md`. |
 
 ## Current next action
 
 Next required ship step:
-- move to the next coherent reviewed batch now that Grade 5 ESS1 Unit 1 and Grade 5 LS1 Unit 2 are shipped end-to-end
-- preferred next content batch: Kindergarten PS3 Unit 2 sun/heat set unless a more urgent still-open comment batch is directly proved first
+- commit, push, and public-verify the generated lesson-index / review-index repair so Grade 2 and Grade 5 Engineering are honestly exposed on the live status surfaces
+- once Grade 2 Engineering is either truly closed or narrowly blocked with that live surface issue resolved, continue into the Grade 5 Engineering reviewer-first batch in the same order requested by the caller
 - keep release gating strict: Rachel + Margaret review first, literal fixes second, public verification before counting anything as released
 
 ## Candidate next batches after current one
 
 Priority candidates:
-- Kindergarten PS3 Unit 2 sun/heat set
-- Grade 2 LS2 Unit 1 plant/pollinator/ecosystem set (after Remarq-path reconciliation planning)
-- Grade 5 LS1 Unit 1 ecosystem matter set
+- Grade 2 ETS1 Unit 1 after the index/status-surface blocker is fixed
+- Grade 5 ETS1 Unit 1 immediately after Grade 2 ETS1 Unit 1 is honestly closed or narrowly blocked
+- Kindergarten PS3 Unit 2 sun/heat set after the engineering lane is cleared
 
 ## Notes for future continuation
 

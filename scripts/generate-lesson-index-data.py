@@ -60,6 +60,10 @@ STRUCTURED_RE = re.compile(
     r"^(?P<prefix>k|gr\d+)-(?P<domain>ps|ls|ess|ets)\d*-(?:unit(?P<unit>\d+)-)?(?:lesson|l)(?P<lesson>\d+)-(?P<rest>.+)$",
     re.IGNORECASE,
 )
+UNIT_OVERVIEW_RE = re.compile(
+    r"^(?P<prefix>k|gr\d+)-(?P<domain>ps|ls|ess|ets)\d*-(?:unit(?P<unit>\d+)-)?(?P<rest>.+)$",
+    re.IGNORECASE,
+)
 LEGACY_UNIT_RE = re.compile(r"^unit(?P<unit>\d+)-(?:lesson|l)(?P<lesson>\d+)-(?P<rest>.+)$", re.IGNORECASE)
 FREE_RE = re.compile(r"^free-(?:(?P<freeprefix>k|gr\d+|\d+th)-)?(?P<rest>.+)$", re.IGNORECASE)
 FIFTH_RE = re.compile(r"^(?P<grade>\d+)th-(?P<rest>.+)$", re.IGNORECASE)
@@ -201,6 +205,24 @@ def parse_metadata(slug: str) -> dict:
                 "gradeLabel": grade_label or "Other Lessons",
                 "bucket": f"{(grade_key or 'other')}-free-samples",
                 "sourcePattern": "free-sample",
+            }
+        )
+        return metadata
+
+    match = UNIT_OVERVIEW_RE.match(slug)
+    if match:
+        grade_key, grade_label = parse_grade_prefix(match.group("prefix"))
+        domain_key = match.group("domain").lower()
+        unit_number = int(match.group("unit")) if match.group("unit") else None
+        metadata.update(
+            {
+                "gradeKey": grade_key,
+                "gradeLabel": grade_label or "Other Lessons",
+                "domainKey": domain_key,
+                "domainLabel": DOMAIN_LABELS.get(domain_key, "Other Lessons"),
+                "unitNumber": unit_number,
+                "bucket": f"{(grade_key or 'other')}-{domain_key}",
+                "sourcePattern": "unit-overview",
             }
         )
         return metadata
