@@ -45,16 +45,15 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
 - **Physical Science:** content exists (`5-PS2`)
 - **Life Science:** content exists (`5-LS1`)
 - **Earth Science:** content exists (`5-ESS1` + fossils standalone)
-- **Engineering:** **missing canonical unit**
-- **Creation blocker status:** full `5-ETS1 Unit 1` package still needed
+- **Engineering:** content now exists (`5-ETS1 Unit 1`) using the Grade 2 Engineering Unit 1 package shape as the canonical scaffold, adapted upward for Grade 5 rigor
+- **Creation blocker status:** canonical creation blocker cleared for Grade 5 Engineering; reviewer-first loop still required before live-ready status
 
 ## Coherent batch order for this creation run
 1. **Finish lower-grade engineering support holes first**
    - complete Grade 1 Engineering support assets so `1-ETS1` can enter the reviewer-first loop as a complete package
 2. **Create the first fully missing engineering domain package**
    - build Grade 2 Engineering Unit 1 as the next absent-domain unit
-3. **Leave higher-risk / larger missing-grade work for follow-up passes**
-   - Grade 5 Engineering Unit 1
+3. **Continue remaining largest missing-grade work after Grade 5 Engineering**
    - Grade 4 Earth Science Unit 1
    - Grade 4 Engineering Unit 1
    - Grade 4 Physical Science Unit 1 remainder (excluding the already-finished Lesson 1 item)
@@ -77,6 +76,29 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
   - `gr2-ets1-unit1-refcard-lesson5-test-and-improve-your-bridge.html`
   - `gr2-ets1-unit1-refcard-lesson6-share-and-compare-bridge-designs.html`
   - `gr2-ets1-unit1-quiz.html`
+
+## 2026-04-12 scaffold decision log — keep the engineering lane moving
+- **Canonical Grade 5 Engineering scaffold:** explicitly use the shipped `Grade 2 Engineering Unit 1` package shape as the package template for `Grade 5 Engineering Unit 1`.
+- **Adaptation rule used:** preserve the 6-lesson + 6-refcard + 1-quiz package structure, but raise rigor through measurable criteria, explicit constraints, fair-testing language, trade-offs, redesign justification, and stronger evidence-based design defense.
+- **Canonical Grade 5 Engineering theme chosen:** `Clean Water Design Lab` as a 3–5 ETS1-appropriate prototype-design unit using model dirty-water filtration. This stays inside lesson-creation scope and does not claim drinking-water safety.
+- **Next coherent backlog move after Grade 5 Engineering:** Grade 4 Earth Science Unit 1, then Grade 4 Engineering Unit 1, then the remaining Grade 4 Physical Science Unit 1 lessons beyond the caller-excluded already-finished Lesson 1.
+
+## Shipped in this follow-up run
+- Grade 5 Engineering full new package using Grade 2 Engineering Unit 1 as the canonical package scaffold, adapted upward for Grade 5 rigor:
+  - `gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem.html`
+  - `gr5-ets1-unit1-lesson2-compare-possible-filter-materials-and-systems.html`
+  - `gr5-ets1-unit1-lesson3-plan-a-testable-filter-prototype.html`
+  - `gr5-ets1-unit1-lesson4-build-and-run-your-first-filter-trial.html`
+  - `gr5-ets1-unit1-lesson5-redesign-using-test-evidence.html`
+  - `gr5-ets1-unit1-lesson6-present-and-defend-your-water-filter-solution.html`
+  - `gr5-ets1-unit1-refcard-lesson1-define-the-water-filter-design-problem.html`
+  - `gr5-ets1-unit1-refcard-lesson2-compare-possible-filter-materials-and-systems.html`
+  - `gr5-ets1-unit1-refcard-lesson3-plan-a-testable-filter-prototype.html`
+  - `gr5-ets1-unit1-refcard-lesson4-build-and-run-your-first-filter-trial.html`
+  - `gr5-ets1-unit1-refcard-lesson5-redesign-using-test-evidence.html`
+  - `gr5-ets1-unit1-refcard-lesson6-present-and-defend-your-water-filter-solution.html`
+  - `gr5-ets1-unit1-quiz.html`
+- Remaining coherent creation gap after this batch: Grade 4 Earth Science Unit 1 is the next unblocked package to create.
 
 ## Explicit non-goals for this pass
 - no search-page/search-index work
