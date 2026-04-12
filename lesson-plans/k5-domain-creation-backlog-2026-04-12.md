@@ -100,8 +100,31 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
   - `gr5-ets1-unit1-quiz.html`
 - Remaining coherent creation gap after this batch: Grade 4 Earth Science Unit 1 is the next unblocked package to create.
 
+## 2026-04-12 watcher unblock decision log — Grade 4 Earth Science scaffold
+- **Canonical Grade 4 Earth Science scaffold:** use the existing `Grade 2 ESS1 Unit 3` package (`landforms / rocks-soils / erosion / maps / weather-pattern context / erosion-engineering`) as the closest canonical Earth-science package shape already present in the repo.
+- **Adaptation rule:** preserve the 6-lesson + unit refcard + unit quiz package structure and the existing LLC Earth-science lesson formatting, but raise to Grade 4 rigor with stronger cause/effect reasoning, more explicit evidence language, and Earth-process emphasis appropriate to `4-ESS2-1` style work.
+- **Canonical Grade 4 Earth Science theme chosen:** `Shaping Earth’s Surface` centered on weathering, erosion, deposition, landform change, map/model evidence, and pattern-based explanation.
+- **Why this is the smallest unblock:** it reuses the nearest existing Earth-science package instead of inventing a new format, and gives the creation worker a concrete package/theme to continue from without claiming reviewer completion.
+
 ## Explicit non-goals for this pass
 - no search-page/search-index work
 - no styling-system rewrites
 - no Remarq backend reconciliation or reviewer-status inflation
 - no duplicate work on the already-finished Grade 4 Physical Science Unit 1 Lesson 1 creation item
+
+## Shipped in this Earth Science unblock batch
+- Grade 4 Earth Science Unit 1 full new package using `Grade 2 ESS1 Unit 3` as the canonical structural scaffold, adapted upward for Grade 4 rigor and `4-ESS2`-style weathering/erosion expectations:
+  - `gr4-ess2-unit1-lesson1-weathering-breaks-rocks.html`
+  - `gr4-ess2-unit1-lesson2-erosion-moves-earth-materials.html`
+  - `gr4-ess2-unit1-lesson3-deposition-builds-new-landforms.html`
+  - `gr4-ess2-unit1-lesson4-reading-landform-maps-and-models.html`
+  - `gr4-ess2-unit1-lesson5-fast-and-slow-surface-changes.html`
+  - `gr4-ess2-unit1-lesson6-explain-how-earth-processes-shape-landforms.html`
+  - `gr4-ess2-unit1-refcard-lesson1-weathering-breaks-rocks.html`
+  - `gr4-ess2-unit1-refcard-lesson2-erosion-moves-earth-materials.html`
+  - `gr4-ess2-unit1-refcard-lesson3-deposition-builds-new-landforms.html`
+  - `gr4-ess2-unit1-refcard-lesson4-reading-landform-maps-and-models.html`
+  - `gr4-ess2-unit1-refcard-lesson5-fast-and-slow-surface-changes.html`
+  - `gr4-ess2-unit1-refcard-lesson6-explain-how-earth-processes-shape-landforms.html`
+  - `gr4-ess2-unit1-quiz.html`
+- Remaining coherent creation gap after this batch: Grade 4 Engineering Unit 1 is now the next clean missing-domain package, followed by the remaining Grade 4 Physical Science Unit 1 lessons beyond the caller-excluded Lesson 1 item.
