@@ -80,6 +80,10 @@
     .group-header h2 { font-size: 1.2rem; margin-bottom: 2px; }
     .group-header p { color: var(--text-muted); font-weight: 700; font-size: 0.92rem; }
     .group-count { color: var(--teal); font-weight: 700; font-size: 0.95rem; }
+    .status-summary-list { list-style: none; margin-top: 10px; display: grid; gap: 6px; }
+    .status-summary-list li { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .status-badge { display: inline-block; background: #eef9f8; border: 1px solid var(--border); border-radius: 999px; padding: 3px 8px; font-size: 0.76rem; font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .status-summary-note { color: var(--text-muted); font-size: 0.88rem; }
     .lesson-list { list-style: none; }
     .lesson-row + .lesson-row { border-top: 1px solid #eef9f8; }
     .lesson-link {
@@ -89,6 +93,7 @@
       background: transparent;
     }
     .lesson-link:hover { background: var(--teal-pale); }
+    .lesson-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .lesson-title { display: block; font-weight: 700; font-size: 0.98rem; color: var(--navy); }
     .lesson-meta { margin-top: 4px; font-size: 0.88rem; color: var(--text-muted); }
     .footer-note { margin-top: 18px; font-size: 0.9rem; color: var(--text-muted); }
@@ -124,38 +129,39 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Sun Warms Everything</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Sun Warms Everything</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ps3-unit2-lesson2-shadow-science.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Shadow Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Shadow Science</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Warming Up — Dark vs Light Surfaces</span>
+                <span class="lesson-title-row"><span class="lesson-title">Warming Up — Dark vs Light Surfaces</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ps3-unit2-lesson4-melting-race.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Melting Race</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Melting Race</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Design a Sun Shelter — Plan</span>
+                <span class="lesson-title-row"><span class="lesson-title">Design a Sun Shelter — Plan</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Design a Sun Shelter — Build &amp; Test</span>
+                <span class="lesson-title-row"><span class="lesson-title">Design a Sun Shelter — Build &amp; Test</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li>
@@ -166,68 +172,69 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What&#x27;s Inside a Seed?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What&#x27;s Inside a Seed?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit2-lesson2-planting-day.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Planting Day: What Do Seeds Need?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Planting Day: What Do Seeds Need?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit2-lesson3-parts-of-a-plant.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Parts of a Plant: Root to Flower</span>
+                <span class="lesson-title-row"><span class="lesson-title">Parts of a Plant: Root to Flower</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit2-lesson4-sunlight-or-no-sunlight.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sunlight or No Sunlight?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sunlight or No Sunlight?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit2-lesson5-seed-travelers.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Seed Travelers: How Seeds Move</span>
+                <span class="lesson-title-row"><span class="lesson-title">Seed Travelers: How Seeds Move</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit2-lesson6-plant-life-cycle.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">My Plant&#x27;s Life Story</span>
+                <span class="lesson-title-row"><span class="lesson-title">My Plant&#x27;s Life Story</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Do ALL Animals Need?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Do ALL Animals Need?</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit3-lesson2-whats-for-dinner.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What&#x27;s for Dinner? How Animals Eat</span>
+                <span class="lesson-title-row"><span class="lesson-title">What&#x27;s for Dinner? How Animals Eat</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit3-lesson3-breathing.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Breathing: Lungs, Gills, and More</span>
+                <span class="lesson-title-row"><span class="lesson-title">Breathing: Lungs, Gills, and More</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit3-lesson4-how-animals-drink.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Water, Water Everywhere: How Animals Drink</span>
+                <span class="lesson-title-row"><span class="lesson-title">Water, Water Everywhere: How Animals Drink</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit3-lesson5-building-a-shelter.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Building a Shelter: Every Animal Needs a Home</span>
+                <span class="lesson-title-row"><span class="lesson-title">Building a Shelter: Every Animal Needs a Home</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ls1-unit3-lesson6-when-needs-arent-met.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">When Needs Aren&#x27;t Met: What Happens?</span>
+                <span class="lesson-title-row"><span class="lesson-title">When Needs Aren&#x27;t Met: What Happens?</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 6</div>
               </a>
             </li>
@@ -238,68 +245,69 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Is Weather?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Is Weather?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess2-unit1-lesson2-wind.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Wind — Invisible but Powerful</span>
+                <span class="lesson-title-row"><span class="lesson-title">Wind — Invisible but Powerful</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess2-unit1-lesson3-water-cycle.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Rain, Snow, and the Water Cycle</span>
+                <span class="lesson-title-row"><span class="lesson-title">Rain, Snow, and the Water Cycle</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess2-unit1-lesson4-four-seasons.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Four Seasons</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Four Seasons</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess2-unit1-lesson5-animals-and-weather.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weather &amp; Animals — How Animals Respond</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weather &amp; Animals — How Animals Respond</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess2-unit1-lesson6-weather-patterns.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weather Patterns Over Time</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weather Patterns Over Time</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Does Earth Give Us?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Does Earth Give Us?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess3-unit2-lesson2-water-resource.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Water — Earth&#x27;s Most Important Resource</span>
+                <span class="lesson-title-row"><span class="lesson-title">Water — Earth&#x27;s Most Important Resource</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess3-unit2-lesson3-soil.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Soil — What&#x27;s Under Our Feet?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Soil — What&#x27;s Under Our Feet?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess3-unit2-lesson4-humans-change-earth.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Humans Change the Earth</span>
+                <span class="lesson-title-row"><span class="lesson-title">Humans Change the Earth</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess3-unit2-lesson5-weather-hazards.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weather Hazards — Staying Safe</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weather Hazards — Staying Safe</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ess3-unit2-lesson6-being-earths-helper.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Being Earth&#x27;s Helper</span>
+                <span class="lesson-title-row"><span class="lesson-title">Being Earth&#x27;s Helper</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li>
@@ -310,38 +318,39 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Is a Problem?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Is a Problem?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ets1-unit1-lesson2-ask-questions.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Ask Questions, Make Observations</span>
+                <span class="lesson-title-row"><span class="lesson-title">Ask Questions, Make Observations</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ets1-unit1-lesson3-draw-your-idea.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Draw Your Idea</span>
+                <span class="lesson-title-row"><span class="lesson-title">Draw Your Idea</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ets1-unit1-lesson4-build-it.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Build It!</span>
+                <span class="lesson-title-row"><span class="lesson-title">Build It!</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ets1-unit1-lesson5-test-and-improve.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Test and Improve</span>
+                <span class="lesson-title-row"><span class="lesson-title">Test and Improve</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-ets1-unit1-lesson6-share-your-solution.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Share Your Solution</span>
+                <span class="lesson-title-row"><span class="lesson-title">Share Your Solution</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -352,43 +361,44 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">7</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/unit1-lesson1-push-pull-sort.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Great Push &amp; Pull Sort</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Great Push &amp; Pull Sort</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/unit1-lesson2-ramp-racers.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Ramp Racers — Forces &amp; Motion Lab</span>
+                <span class="lesson-title-row"><span class="lesson-title">Ramp Racers — Forces &amp; Motion Lab</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/unit1-lesson3-strong-push-gentle-push.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Strong Push, Gentle Push — Forces Lab</span>
+                <span class="lesson-title-row"><span class="lesson-title">Strong Push, Gentle Push — Forces Lab</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/unit1-lesson4-magnet-magic.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Magnet Magic</span>
+                <span class="lesson-title-row"><span class="lesson-title">Magnet Magic</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/unit1-lesson5-wind-wagon.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Wind Wagon Engineering Challenge</span>
+                <span class="lesson-title-row"><span class="lesson-title">Wind Wagon Engineering Challenge</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/unit1-lesson6-marble-run.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Marble Run Madness</span>
+                <span class="lesson-title-row"><span class="lesson-title">Marble Run Madness</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/free-k-fizzy-color-explosions.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Kindergarten Freebie Candidate — Fizzy Color Explosions</span>
+                <span class="lesson-title-row"><span class="lesson-title">Kindergarten Freebie Candidate — Fizzy Color Explosions</span></span>
                 <div class="lesson-meta">Free sample</div>
               </a>
             </li>
@@ -399,38 +409,39 @@
         <div>
           <h2>Grade 1</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sound Is Vibration</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sound Is Vibration</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ps4-unit1-lesson2-light-travels.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Light Travels in Straight Lines</span>
+                <span class="lesson-title-row"><span class="lesson-title">Light Travels in Straight Lines</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ps4-unit1-lesson3-mirrors-and-communication.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Mirrors, Signals &amp; Sending Messages</span>
+                <span class="lesson-title-row"><span class="lesson-title">Mirrors, Signals &amp; Sending Messages</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ps4-unit1-lesson4-vibrating-strings-and-sound.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">High Sounds, Low Sounds</span>
+                <span class="lesson-title-row"><span class="lesson-title">High Sounds, Low Sounds</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ps4-unit1-lesson5-sound-through-solids-liquids-gases.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sound Through Solids, Liquids &amp; Gases</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sound Through Solids, Liquids &amp; Gases</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ps4-unit1-lesson6-design-a-sound-sender.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sound and Light Message Challenge</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sound and Light Message Challenge</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -441,68 +452,69 @@
         <div>
           <h2>Grade 1</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls1-unit1-lesson2-plant-parts-functions.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Roots, Stems, Leaves, Flowers — What Each Part Does</span>
+                <span class="lesson-title-row"><span class="lesson-title">Roots, Stems, Leaves, Flowers — What Each Part Does</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls1-unit1-lesson3-animal-protection.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">How Animals Protect Themselves</span>
+                <span class="lesson-title-row"><span class="lesson-title">How Animals Protect Themselves</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls1-unit1-lesson4-plants-attract-pollinators.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">How Plants Attract Pollinators</span>
+                <span class="lesson-title-row"><span class="lesson-title">How Plants Attract Pollinators</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls1-unit1-lesson5-structures-for-getting-food.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Animal Structures for Getting Food</span>
+                <span class="lesson-title-row"><span class="lesson-title">Animal Structures for Getting Food</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls1-unit1-lesson6-structures-for-moving.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Structures for Moving</span>
+                <span class="lesson-title-row"><span class="lesson-title">Structures for Moving</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">You Look Like Your Parents</span>
+                <span class="lesson-title-row"><span class="lesson-title">You Look Like Your Parents</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls3-unit2-lesson2-baby-animals-and-needs.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Baby Animals and Their Needs</span>
+                <span class="lesson-title-row"><span class="lesson-title">Baby Animals and Their Needs</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls3-unit2-lesson3-parents-protect-offspring.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">How Animal Parents Protect Offspring</span>
+                <span class="lesson-title-row"><span class="lesson-title">How Animal Parents Protect Offspring</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls3-unit2-lesson4-parents-teach-offspring.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Teaching: When Parents Show What to Do</span>
+                <span class="lesson-title-row"><span class="lesson-title">Teaching: When Parents Show What to Do</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plant Parenting</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plant Parenting</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls3-unit2-lesson6-patterns-parent-offspring.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Patterns of Parent and Offspring Behavior</span>
+                <span class="lesson-title-row"><span class="lesson-title">Patterns of Parent and Offspring Behavior</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Nature&#x27;s Engineers: How Animal Bodies Solve Problems</span>
+                <span class="lesson-title-row"><span class="lesson-title">Nature&#x27;s Engineers: How Animal Bodies Solve Problems</span></span>
                 <div class="lesson-meta">Lesson 1</div>
               </a>
             </li>
@@ -513,38 +525,39 @@
         <div>
           <h2>Grade 1</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Sun — Our Closest Star</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Sun — Our Closest Star</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ess1-unit1-lesson2-the-moon.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Moon — Earth&#x27;s Natural Satellite</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Moon — Earth&#x27;s Natural Satellite</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ess1-unit1-lesson3-stars.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Stars — Suns Very Far Away</span>
+                <span class="lesson-title-row"><span class="lesson-title">Stars — Suns Very Far Away</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">How Much Daylight? Seasons and the Sun</span>
+                <span class="lesson-title-row"><span class="lesson-title">How Much Daylight? Seasons and the Sun</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ess1-unit1-lesson5-sky-changes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Sky Changes — Morning, Day, and Night</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Sky Changes — Morning, Day, and Night</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ess1-unit1-lesson6-patterns-in-the-sky.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Patterns in the Sky</span>
+                <span class="lesson-title-row"><span class="lesson-title">Patterns in the Sky</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -555,38 +568,39 @@
         <div>
           <h2>Grade 1</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Problem Can We Solve?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Problem Can We Solve?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ets1-unit1-lesson2-look-at-animal-solutions.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Look at Animal Solutions</span>
+                <span class="lesson-title-row"><span class="lesson-title">Look at Animal Solutions</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ets1-unit1-lesson3-plan-a-nature-inspired-tool.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plan a Nature-Inspired Tool</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plan a Nature-Inspired Tool</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ets1-unit1-lesson4-build-your-first-model.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Build Your First Model</span>
+                <span class="lesson-title-row"><span class="lesson-title">Build Your First Model</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ets1-unit1-lesson5-test-and-improve-your-design.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Test and Improve Your Design</span>
+                <span class="lesson-title-row"><span class="lesson-title">Test and Improve Your Design</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr1-ets1-unit1-lesson6-share-your-final-design.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Share Your Final Design</span>
+                <span class="lesson-title-row"><span class="lesson-title">Share Your Final Design</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -597,13 +611,14 @@
         <div>
           <h2>Grade 1</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/free-gr1-celery-rainbow.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Celery Rainbow</span>
+                <span class="lesson-title-row"><span class="lesson-title">Celery Rainbow</span></span>
                 <div class="lesson-meta">Free sample</div>
               </a>
             </li>
@@ -614,43 +629,44 @@
         <div>
           <h2>Grade 2</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">7</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-unit1-l1-matter.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Is Matter? Solids, Liquids, and Gases</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Is Matter? Solids, Liquids, and Gases</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-unit1-l2-texture.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Touch and Test: Texture, Hardness, and Flexibility</span>
+                <span class="lesson-title-row"><span class="lesson-title">Touch and Test: Texture, Hardness, and Flexibility</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-unit1-l3-sink-float.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sink or Float? Testing Matter in Water</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sink or Float? Testing Matter in Water</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-unit1-l4-mixing.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Mix It Up: Mixing and Separating Materials</span>
+                <span class="lesson-title-row"><span class="lesson-title">Mix It Up: Mixing and Separating Materials</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-unit1-l5-heating-cooling.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Hot and Cold: How Heating and Cooling Change Matter</span>
+                <span class="lesson-title-row"><span class="lesson-title">Hot and Cold: How Heating and Cooling Change Matter</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-unit1-l6-boat-engineering.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Build the Best Boat: Engineering with Foil</span>
+                <span class="lesson-title-row"><span class="lesson-title">Build the Best Boat: Engineering with Foil</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ps1-lesson1-mystery-powders.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Mystery Powders: What&#x27;s in Your Kitchen?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Mystery Powders: What&#x27;s in Your Kitchen?</span></span>
                 <div class="lesson-meta">Lesson 1</div>
               </a>
             </li>
@@ -661,68 +677,69 @@
         <div>
           <h2>Grade 2</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Do Plants Need?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Do Plants Need?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit1-lesson2-pollinators.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Pollinators: Nature&#x27;s Delivery Service</span>
+                <span class="lesson-title-row"><span class="lesson-title">Pollinators: Nature&#x27;s Delivery Service</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit1-lesson3-seed-dispersal.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Seed Dispersal: How Plants Travel</span>
+                <span class="lesson-title-row"><span class="lesson-title">Seed Dispersal: How Plants Travel</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit1-lesson4-food-chains.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Food Chains: Who Eats Whom?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Food Chains: Who Eats Whom?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit1-lesson5-habitats.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Habitats: The Right Place for the Right Plant</span>
+                <span class="lesson-title-row"><span class="lesson-title">Habitats: The Right Place for the Right Plant</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit1-lesson6-ecosystems-under-threat.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Ecosystems Under Threat: What Can We Do?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Ecosystems Under Threat: What Can We Do?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit2-l1-ecosystems.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Is an Ecosystem?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Is an Ecosystem?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit2-l2-plants-partners.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plants Need Partners</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plants Need Partners</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit2-l3-food-chains.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Food Chains: Who Eats Who?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Food Chains: Who Eats Who?</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit2-l4-predator-prey.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Predator and Prey: The Population Game</span>
+                <span class="lesson-title-row"><span class="lesson-title">Predator and Prey: The Population Game</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit2-l5-habitat-hunt.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Habitat Hunt: Explorer&#x27;s Field Journal</span>
+                <span class="lesson-title-row"><span class="lesson-title">Habitat Hunt: Explorer&#x27;s Field Journal</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ls2-unit2-l6-design-habitat.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Design a Habitat</span>
+                <span class="lesson-title-row"><span class="lesson-title">Design a Habitat</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li>
@@ -733,38 +750,39 @@
         <div>
           <h2>Grade 2</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ess1-unit3-l1-landforms.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Landforms All Around - Grade 2 Earth Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Landforms All Around - Grade 2 Earth Science</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ess1-unit3-l2-rocks-soils.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Rocks and Soils - Grade 2 Earth Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Rocks and Soils - Grade 2 Earth Science</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ess1-unit3-l3-erosion.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Water Shapes the Land - Grade 2 Earth Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Water Shapes the Land - Grade 2 Earth Science</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ess1-unit3-l4-maps.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Maps and Directions - Grade 2 Earth Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Maps and Directions - Grade 2 Earth Science</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ess1-unit3-l5-weather-patterns.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weather Patterns - Grade 2 Earth Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weather Patterns - Grade 2 Earth Science</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ess1-unit3-l6-erosion-engineering.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Engineering: Slow the Erosion - Grade 2 Earth Science</span>
+                <span class="lesson-title-row"><span class="lesson-title">Engineering: Slow the Erosion - Grade 2 Earth Science</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 6</div>
               </a>
             </li>
@@ -775,38 +793,39 @@
         <div>
           <h2>Grade 2</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ets1-unit1-lesson1-define-the-bridge-problem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Define the Bridge Problem</span>
+                <span class="lesson-title-row"><span class="lesson-title">Define the Bridge Problem</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ets1-unit1-lesson2-compare-strong-bridge-shapes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Compare Strong Bridge Shapes</span>
+                <span class="lesson-title-row"><span class="lesson-title">Compare Strong Bridge Shapes</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ets1-unit1-lesson3-plan-your-bridge-model.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plan Your Bridge Model</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plan Your Bridge Model</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ets1-unit1-lesson4-build-your-first-bridge.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Build Your First Bridge</span>
+                <span class="lesson-title-row"><span class="lesson-title">Build Your First Bridge</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ets1-unit1-lesson5-test-and-improve-your-bridge.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Test and Improve Your Bridge</span>
+                <span class="lesson-title-row"><span class="lesson-title">Test and Improve Your Bridge</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr2-ets1-unit1-lesson6-share-and-compare-bridge-designs.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Share and Compare Bridge Designs</span>
+                <span class="lesson-title-row"><span class="lesson-title">Share and Compare Bridge Designs</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -817,13 +836,14 @@
         <div>
           <h2>Grade 2</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/free-gr2-salt-dough-fossil-factory.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Salt Dough Fossil Factory</span>
+                <span class="lesson-title-row"><span class="lesson-title">Salt Dough Fossil Factory</span></span>
                 <div class="lesson-meta">Free sample</div>
               </a>
             </li>
@@ -834,38 +854,39 @@
         <div>
           <h2>Grade 3</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Balanced and Unbalanced Forces</span>
+                <span class="lesson-title-row"><span class="lesson-title">Balanced and Unbalanced Forces</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ps2-unit1-lesson2-motion-changes-with-force.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Motion Changes with Force</span>
+                <span class="lesson-title-row"><span class="lesson-title">Motion Changes with Force</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ps2-unit1-lesson3-magnets-pull-without-touching.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Magnets Pull Without Touching</span>
+                <span class="lesson-title-row"><span class="lesson-title">Magnets Pull Without Touching</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ps2-unit1-lesson4-magnetic-patterns.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Magnetic Patterns</span>
+                <span class="lesson-title-row"><span class="lesson-title">Magnetic Patterns</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ps2-unit1-lesson5-design-a-magnetic-game-or-tool.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Design a Magnetic Game or Tool</span>
+                <span class="lesson-title-row"><span class="lesson-title">Design a Magnetic Game or Tool</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ps2-unit1-lesson6-test-and-improve-your-force-design.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Test and Improve Your Force Design</span>
+                <span class="lesson-title-row"><span class="lesson-title">Test and Improve Your Force Design</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -876,128 +897,129 @@
         <div>
           <h2>Grade 3</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">24</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Is a Life Cycle?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Is a Life Cycle?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Different Life Cycles, Same Big Pattern</span>
+                <span class="lesson-title-row"><span class="lesson-title">Different Life Cycles, Same Big Pattern</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plant Life Cycles and Seeds</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plant Life Cycles and Seeds</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Animal Life Cycles and Metamorphosis</span>
+                <span class="lesson-title-row"><span class="lesson-title">Animal Life Cycles and Metamorphosis</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Comparing Life Cycle Patterns</span>
+                <span class="lesson-title-row"><span class="lesson-title">Comparing Life Cycle Patterns</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Model and Explain a Life Cycle</span>
+                <span class="lesson-title-row"><span class="lesson-title">Model and Explain a Life Cycle</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls3-unit2-lesson1-inherited-traits-all-around-us.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Inherited Traits All Around Us — Grade 3 Life Science — Traits &amp; Inheritance</span>
+                <span class="lesson-title-row"><span class="lesson-title">Inherited Traits All Around Us — Grade 3 Life Science — Traits &amp; Inheritance</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls3-unit2-lesson2-plant-traits-from-parent-plants.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plant Traits From Parent Plants — Grade 3 Life Science — Traits &amp; Inheritance</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plant Traits From Parent Plants — Grade 3 Life Science — Traits &amp; Inheritance</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls3-unit2-lesson3-animal-traits-from-parent-animals.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Animal Traits From Parent Animals — Grade 3 Life Science — Traits &amp; Inheritance</span>
+                <span class="lesson-title-row"><span class="lesson-title">Animal Traits From Parent Animals — Grade 3 Life Science — Traits &amp; Inheritance</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls3-unit2-lesson4-variation-within-a-similar-group.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Variation Within a Similar Group — Grade 3 Life Science — Traits &amp; Inheritance</span>
+                <span class="lesson-title-row"><span class="lesson-title">Variation Within a Similar Group — Grade 3 Life Science — Traits &amp; Inheritance</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls3-unit2-lesson5-trait-data-detective.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Trait Data Detective — Grade 3 Life Science — Traits &amp; Inheritance</span>
+                <span class="lesson-title-row"><span class="lesson-title">Trait Data Detective — Grade 3 Life Science — Traits &amp; Inheritance</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls3-unit2-lesson6-make-the-inheritance-case.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Make the Inheritance Case — Grade 3 Life Science — Traits &amp; Inheritance</span>
+                <span class="lesson-title-row"><span class="lesson-title">Make the Inheritance Case — Grade 3 Life Science — Traits &amp; Inheritance</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls4-unit3-lesson1-variation-can-help-survival.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Variation Can Help Survival — Grade 3 Life Science — Traits for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Variation Can Help Survival — Grade 3 Life Science — Traits for Survival</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls4-unit3-lesson2-camouflage-and-staying-hidden.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Camouflage and Staying Hidden — Grade 3 Life Science — Traits for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Camouflage and Staying Hidden — Grade 3 Life Science — Traits for Survival</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls4-unit3-lesson3-beaks-mouths-and-getting-food.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Beaks, Mouths, and Getting Food — Grade 3 Life Science — Traits for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Beaks, Mouths, and Getting Food — Grade 3 Life Science — Traits for Survival</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls4-unit3-lesson4-movement-traits-in-different-places.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Movement Traits in Different Places — Grade 3 Life Science — Traits for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Movement Traits in Different Places — Grade 3 Life Science — Traits for Survival</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls4-unit3-lesson5-traits-that-help-find-mates-or-reproduce.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Traits That Help Find Mates or Reproduce — Grade 3 Life Science — Traits for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Traits That Help Find Mates or Reproduce — Grade 3 Life Science — Traits for Survival</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls4-unit3-lesson6-construct-an-explanation-from-evidence.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Construct an Explanation From Evidence — Grade 3 Life Science — Traits for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Construct an Explanation From Evidence — Grade 3 Life Science — Traits for Survival</span></span>
                 <div class="lesson-meta">Unit 3 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls2-unit4-lesson1-why-animals-sometimes-stick-together.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Why Animals Sometimes Stick Together — Grade 3 Life Science — Group Behavior &amp; Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Why Animals Sometimes Stick Together — Grade 3 Life Science — Group Behavior &amp; Survival</span></span>
                 <div class="lesson-meta">Unit 4 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls2-unit4-lesson2-lookout-calls-and-warning-signals.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Lookout Calls and Warning Signals — Grade 3 Life Science — Group Behavior &amp; Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Lookout Calls and Warning Signals — Grade 3 Life Science — Group Behavior &amp; Survival</span></span>
                 <div class="lesson-meta">Unit 4 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls2-unit4-lesson3-schooling-flocking-and-moving-together.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Schooling, Flocking, and Moving Together — Grade 3 Life Science — Group Behavior &amp; Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Schooling, Flocking, and Moving Together — Grade 3 Life Science — Group Behavior &amp; Survival</span></span>
                 <div class="lesson-meta">Unit 4 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls2-unit4-lesson4-working-together-to-find-food.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Working Together to Find Food — Grade 3 Life Science — Group Behavior &amp; Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Working Together to Find Food — Grade 3 Life Science — Group Behavior &amp; Survival</span></span>
                 <div class="lesson-meta">Unit 4 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls2-unit4-lesson5-parents-babies-and-group-protection.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Parents, Babies, and Group Protection — Grade 3 Life Science — Group Behavior &amp; Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Parents, Babies, and Group Protection — Grade 3 Life Science — Group Behavior &amp; Survival</span></span>
                 <div class="lesson-meta">Unit 4 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ls2-unit4-lesson6-model-how-group-behavior-helps-survival.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Model How Group Behavior Helps Survival — Grade 3 Life Science — Group Behavior &amp; Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">Model How Group Behavior Helps Survival — Grade 3 Life Science — Group Behavior &amp; Survival</span></span>
                 <div class="lesson-meta">Unit 4 • Lesson 6</div>
               </a>
             </li>
@@ -1008,38 +1030,39 @@
         <div>
           <h2>Grade 3</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weather Patterns Over Time</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weather Patterns Over Time</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Climate Regions and Conditions</span>
+                <span class="lesson-title-row"><span class="lesson-title">Climate Regions and Conditions</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Reading Weather Data</span>
+                <span class="lesson-title-row"><span class="lesson-title">Reading Weather Data</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weather Hazards and Impacts</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weather Hazards and Impacts</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Designing for Local Weather</span>
+                <span class="lesson-title-row"><span class="lesson-title">Designing for Local Weather</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Reducing Weather-Related Hazards</span>
+                <span class="lesson-title-row"><span class="lesson-title">Reducing Weather-Related Hazards</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1050,38 +1073,39 @@
         <div>
           <h2>Grade 3</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Defining the Problem</span>
+                <span class="lesson-title-row"><span class="lesson-title">Defining the Problem</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Researching Constraints and Materials</span>
+                <span class="lesson-title-row"><span class="lesson-title">Researching Constraints and Materials</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Planning a Solution</span>
+                <span class="lesson-title-row"><span class="lesson-title">Planning a Solution</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Building and Testing a Prototype</span>
+                <span class="lesson-title-row"><span class="lesson-title">Building and Testing a Prototype</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Improving the Design</span>
+                <span class="lesson-title-row"><span class="lesson-title">Improving the Design</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Share and Defend Your Solution</span>
+                <span class="lesson-title-row"><span class="lesson-title">Share and Defend Your Solution</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1092,13 +1116,14 @@
         <div>
           <h2>Grade 3</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/free-gr3-egg-drop-kitchen-challenge.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Egg Drop Kitchen Challenge</span>
+                <span class="lesson-title-row"><span class="lesson-title">Egg Drop Kitchen Challenge</span></span>
                 <div class="lesson-meta">Free sample</div>
               </a>
             </li>
@@ -1109,33 +1134,34 @@
         <div>
           <h2>Grade 4</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">5</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ps3-unit1-l2-collisions-transfer-energy.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Collisions Transfer Energy</span>
+                <span class="lesson-title-row"><span class="lesson-title">Collisions Transfer Energy</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ps3-unit1-l3-faster-motion-bigger-changes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Faster Motion, Bigger Changes</span>
+                <span class="lesson-title-row"><span class="lesson-title">Faster Motion, Bigger Changes</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ps3-unit1-l4-surfaces-and-friction-change-motion.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Surfaces and Friction Change Motion</span>
+                <span class="lesson-title-row"><span class="lesson-title">Surfaces and Friction Change Motion</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ps3-unit1-l5-testing-one-change-at-a-time.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Testing One Change at a Time</span>
+                <span class="lesson-title-row"><span class="lesson-title">Testing One Change at a Time</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ps3-unit1-l6-explain-how-energy-moves-and-causes-motion.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Explain How Energy Moves and Causes Motion</span>
+                <span class="lesson-title-row"><span class="lesson-title">Explain How Energy Moves and Causes Motion</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1146,68 +1172,69 @@
         <div>
           <h2>Grade 4</h2>
           <p>Life Science</p>
+          <ul class="status-summary-list"><li><span class="status-badge">Previously completed</span><span class="status-summary-note">Full 4-LS1 domain reviewed and completed (Units 1–2).</span></li></ul>
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">External Structures for Survival</span>
+                <span class="lesson-title-row"><span class="lesson-title">External Structures for Survival</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit1-lesson2-sensing-the-world.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sensing the World</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sensing the World</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit1-lesson3-mouths-beaks-teeth-and-getting-food.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Mouths, Beaks, Teeth, and Getting Food</span>
+                <span class="lesson-title-row"><span class="lesson-title">Mouths, Beaks, Teeth, and Getting Food</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit1-lesson4-movement-structures-and-finding-safety.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Movement Structures and Finding Safety</span>
+                <span class="lesson-title-row"><span class="lesson-title">Movement Structures and Finding Safety</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit1-lesson5-structures-for-protection-and-defense.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Structures for Protection and Defense</span>
+                <span class="lesson-title-row"><span class="lesson-title">Structures for Protection and Defense</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit1-lesson6-construct-an-argument-animal-structures.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Construct an Argument: How Animal Structures Help Them Live</span>
+                <span class="lesson-title-row"><span class="lesson-title">Construct an Argument: How Animal Structures Help Them Live</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Roots, Stems, and Plant Support Systems</span>
+                <span class="lesson-title-row"><span class="lesson-title">Roots, Stems, and Plant Support Systems</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit2-lesson2-leaves-and-making-food.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Leaves and Making Food</span>
+                <span class="lesson-title-row"><span class="lesson-title">Leaves and Making Food</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit2-lesson3-water-transport-inside-plants.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Water Transport Inside Plants</span>
+                <span class="lesson-title-row"><span class="lesson-title">Water Transport Inside Plants</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit2-lesson4-flowers-pollination-and-reproduction.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Flowers, Pollination, and Reproduction</span>
+                <span class="lesson-title-row"><span class="lesson-title">Flowers, Pollination, and Reproduction</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit2-lesson5-seeds-fruits-and-new-plants.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Seeds, Fruits, and New Plants</span>
+                <span class="lesson-title-row"><span class="lesson-title">Seeds, Fruits, and New Plants</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ls1-unit2-lesson6-construct-an-argument-plant-structures.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Construct an Argument: How Plant Structures Help Plants Live and Reproduce</span>
+                <span class="lesson-title-row"><span class="lesson-title">Construct an Argument: How Plant Structures Help Plants Live and Reproduce</span><span class="status-badge">Previously completed</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li>
@@ -1218,68 +1245,69 @@
         <div>
           <h2>Grade 4</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess2-unit1-lesson1-weathering-breaks-rocks.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weathering Breaks Rocks</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weathering Breaks Rocks</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess1-unit1-lesson1-weathering-starts-landform-change.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Weathering Starts Landform Change</span>
+                <span class="lesson-title-row"><span class="lesson-title">Weathering Starts Landform Change</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess2-unit1-lesson2-erosion-moves-earth-materials.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Erosion Moves Earth Materials</span>
+                <span class="lesson-title-row"><span class="lesson-title">Erosion Moves Earth Materials</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess1-unit1-lesson2-erosion-moves-sediment.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Erosion Moves Sediment</span>
+                <span class="lesson-title-row"><span class="lesson-title">Erosion Moves Sediment</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess1-unit1-lesson3-deposition-builds-new-landforms.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Deposition Builds New Landforms</span>
+                <span class="lesson-title-row"><span class="lesson-title">Deposition Builds New Landforms</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess2-unit1-lesson3-deposition-builds-new-landforms.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Deposition Builds New Landforms</span>
+                <span class="lesson-title-row"><span class="lesson-title">Deposition Builds New Landforms</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess1-unit1-lesson4-maps-and-models-show-earth-surface-change.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Maps and Models Show Earth’s Surface Change</span>
+                <span class="lesson-title-row"><span class="lesson-title">Maps and Models Show Earth’s Surface Change</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess2-unit1-lesson4-reading-landform-maps-and-models.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Reading Landform Maps and Models</span>
+                <span class="lesson-title-row"><span class="lesson-title">Reading Landform Maps and Models</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess2-unit1-lesson5-fast-and-slow-surface-changes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Fast and Slow Surface Changes</span>
+                <span class="lesson-title-row"><span class="lesson-title">Fast and Slow Surface Changes</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess1-unit1-lesson5-patterns-of-water-wind-ice-and-vegetation.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Patterns of Water, Wind, Ice, and Vegetation</span>
+                <span class="lesson-title-row"><span class="lesson-title">Patterns of Water, Wind, Ice, and Vegetation</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess1-unit1-lesson6-explain-and-protect-a-changing-streambank.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Explain and Protect a Changing Streambank</span>
+                <span class="lesson-title-row"><span class="lesson-title">Explain and Protect a Changing Streambank</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ess2-unit1-lesson6-explain-how-earth-processes-shape-landforms.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Explain How Earth Processes Shape Landforms</span>
+                <span class="lesson-title-row"><span class="lesson-title">Explain How Earth Processes Shape Landforms</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1290,38 +1318,39 @@
         <div>
           <h2>Grade 4</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ets1-unit1-lesson1-define-the-storm-shelter-problem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Define the Storm Shelter Problem</span>
+                <span class="lesson-title-row"><span class="lesson-title">Define the Storm Shelter Problem</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ets1-unit1-lesson2-compare-shelter-materials-and-shapes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Compare Shelter Materials and Shapes</span>
+                <span class="lesson-title-row"><span class="lesson-title">Compare Shelter Materials and Shapes</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ets1-unit1-lesson3-plan-a-testable-storm-shelter.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plan a Testable Storm Shelter</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plan a Testable Storm Shelter</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ets1-unit1-lesson4-build-and-run-the-first-shelter-test.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Build and Run the First Shelter Test</span>
+                <span class="lesson-title-row"><span class="lesson-title">Build and Run the First Shelter Test</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ets1-unit1-lesson5-redesign-using-test-evidence.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Redesign Using Test Evidence</span>
+                <span class="lesson-title-row"><span class="lesson-title">Redesign Using Test Evidence</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr4-ets1-unit1-lesson6-present-and-defend-your-shelter-solution.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Present and Defend Your Shelter Solution</span>
+                <span class="lesson-title-row"><span class="lesson-title">Present and Defend Your Shelter Solution</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1332,13 +1361,14 @@
         <div>
           <h2>Grade 4</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/free-gr4-apple-oxidation.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Great Apple Browning Experiment</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Great Apple Browning Experiment</span></span>
                 <div class="lesson-meta">Free sample</div>
               </a>
             </li>
@@ -1349,43 +1379,44 @@
         <div>
           <h2>Grade 5</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">7</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps2-unit1-l1-balanced-and-unbalanced-forces.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Balanced and Unbalanced Forces</span>
+                <span class="lesson-title-row"><span class="lesson-title">Balanced and Unbalanced Forces</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps2-unit1-l2-gravity-points-down.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Gravity Points Down</span>
+                <span class="lesson-title-row"><span class="lesson-title">Gravity Points Down</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps2-unit1-l3-ramps-speed-and-motion-changes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Ramps, Speed, and Motion Changes</span>
+                <span class="lesson-title-row"><span class="lesson-title">Ramps, Speed, and Motion Changes</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps2-unit1-l4-collisions-and-transferring-motion.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Collisions and Transferring Motion</span>
+                <span class="lesson-title-row"><span class="lesson-title">Collisions and Transferring Motion</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps2-unit1-l5-does-mass-matter.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Does Mass Matter?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Does Mass Matter?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps2-unit1-l6-design-and-improve-a-force-challenge.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Design and Improve a Force Challenge</span>
+                <span class="lesson-title-row"><span class="lesson-title">Design and Improve a Force Challenge</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ps1-lesson1-reactants-products-mixtures.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Kitchen Chemistry: Reactants, Products &amp; Mixtures</span>
+                <span class="lesson-title-row"><span class="lesson-title">Kitchen Chemistry: Reactants, Products &amp; Mixtures</span></span>
                 <div class="lesson-meta">Lesson 1</div>
               </a>
             </li>
@@ -1396,68 +1427,69 @@
         <div>
           <h2>Grade 5</h2>
           <p>Life Science</p>
+          <ul class="status-summary-list"><li><span class="status-badge">Reviewed / revised</span><span class="status-summary-note">Grade 5 Life Science Unit 2 completed review and revision.</span></li></ul>
         </div>
         <div class="group-count">12</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit1-l1-what-is-an-ecosystem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Is an Ecosystem?</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Is an Ecosystem?</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit1-l2-from-the-sun-to-producers.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">From the Sun to Producers</span>
+                <span class="lesson-title-row"><span class="lesson-title">From the Sun to Producers</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit1-l3-food-chains-and-food-webs.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Food Chains and Food Webs</span>
+                <span class="lesson-title-row"><span class="lesson-title">Food Chains and Food Webs</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit1-l4-decomposers-recycle-matter.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Decomposers Recycle Matter</span>
+                <span class="lesson-title-row"><span class="lesson-title">Decomposers Recycle Matter</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit1-l5-when-one-population-changes.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">When One Population Changes</span>
+                <span class="lesson-title-row"><span class="lesson-title">When One Population Changes</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit1-l6-modeling-matter-in-an-ecosystem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Modeling Matter in an Ecosystem</span>
+                <span class="lesson-title-row"><span class="lesson-title">Modeling Matter in an Ecosystem</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit2-lesson1-what-do-plants-need-to-grow.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">What Do Plants Need to Grow? — Grade 5 Life Science — Plant Matter &amp; Growth</span>
+                <span class="lesson-title-row"><span class="lesson-title">What Do Plants Need to Grow? — Grade 5 Life Science — Plant Matter &amp; Growth</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit2-lesson2-water-moves-into-plants.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Water Moves Into Plants — Grade 5 Life Science — Plant Matter &amp; Growth</span>
+                <span class="lesson-title-row"><span class="lesson-title">Water Moves Into Plants — Grade 5 Life Science — Plant Matter &amp; Growth</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit2-lesson3-plants-use-air-too.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plants Use Air Too — Grade 5 Life Science — Plant Matter &amp; Growth</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plants Use Air Too — Grade 5 Life Science — Plant Matter &amp; Growth</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit2-lesson4-soil-support-minerals-and-a-common-misconception.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Soil: Support, Minerals, and a Common Misconception — Grade 5 Life Science — Plant Matter &amp; Growth</span>
+                <span class="lesson-title-row"><span class="lesson-title">Soil: Support, Minerals, and a Common Misconception — Grade 5 Life Science — Plant Matter &amp; Growth</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit2-lesson5-modeling-how-plants-build-new-matter.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Modeling How Plants Build New Matter — Grade 5 Life Science — Plant Matter &amp; Growth</span>
+                <span class="lesson-title-row"><span class="lesson-title">Modeling How Plants Build New Matter — Grade 5 Life Science — Plant Matter &amp; Growth</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ls1-unit2-lesson6-support-the-argument-with-evidence.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Support the Argument With Evidence — Grade 5 Life Science — Plant Matter &amp; Growth</span>
+                <span class="lesson-title-row"><span class="lesson-title">Support the Argument With Evidence — Grade 5 Life Science — Plant Matter &amp; Growth</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </a>
             </li>
@@ -1468,43 +1500,44 @@
         <div>
           <h2>Grade 5</h2>
           <p>Earth &amp; Space Science</p>
+          <ul class="status-summary-list"><li><span class="status-badge">Reviewed / revised</span><span class="status-summary-note">Grade 5 Earth &amp; Space Science Unit 1 completed review and revision.</span></li></ul>
         </div>
         <div class="group-count">7</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess3-unit1-l1-human-impact.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Human Impact: How We Change Earth -- Earth Science Unit, Lesson 1</span>
+                <span class="lesson-title-row"><span class="lesson-title">Human Impact: How We Change Earth -- Earth Science Unit, Lesson 1</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess1-unit1-l1-where-is-earth-s-water.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Where Is Earth’s Water?</span>
+                <span class="lesson-title-row"><span class="lesson-title">Where Is Earth’s Water?</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess1-unit1-l2-evaporation-and-condensation.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Evaporation and Condensation</span>
+                <span class="lesson-title-row"><span class="lesson-title">Evaporation and Condensation</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess1-unit1-l3-precipitation-and-collection.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Precipitation and Collection</span>
+                <span class="lesson-title-row"><span class="lesson-title">Precipitation and Collection</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Runoff, Infiltration, and Groundwater</span>
+                <span class="lesson-title-row"><span class="lesson-title">Runoff, Infiltration, and Groundwater</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess1-unit1-l5-earth-systems-working-together.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Earth Systems Working Together</span>
+                <span class="lesson-title-row"><span class="lesson-title">Earth Systems Working Together</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ess1-unit1-l6-modeling-a-local-water-system.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Modeling a Local Water System</span>
+                <span class="lesson-title-row"><span class="lesson-title">Modeling a Local Water System</span><span class="status-badge">Reviewed / revised</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1515,38 +1548,39 @@
         <div>
           <h2>Grade 5</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Define the Water Filter Design Problem</span>
+                <span class="lesson-title-row"><span class="lesson-title">Define the Water Filter Design Problem</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ets1-unit1-lesson2-compare-possible-filter-materials-and-systems.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Compare Possible Filter Materials and Systems</span>
+                <span class="lesson-title-row"><span class="lesson-title">Compare Possible Filter Materials and Systems</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ets1-unit1-lesson3-plan-a-testable-filter-prototype.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Plan a Testable Filter Prototype</span>
+                <span class="lesson-title-row"><span class="lesson-title">Plan a Testable Filter Prototype</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ets1-unit1-lesson4-build-and-run-your-first-filter-trial.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Build and Run Your First Filter Trial</span>
+                <span class="lesson-title-row"><span class="lesson-title">Build and Run Your First Filter Trial</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ets1-unit1-lesson5-redesign-using-test-evidence.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Redesign Using Test Evidence</span>
+                <span class="lesson-title-row"><span class="lesson-title">Redesign Using Test Evidence</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/gr5-ets1-unit1-lesson6-present-and-defend-your-water-filter-solution.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Present and Defend Your Water Filter Solution</span>
+                <span class="lesson-title-row"><span class="lesson-title">Present and Defend Your Water Filter Solution</span></span>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </a>
             </li>
@@ -1557,23 +1591,24 @@
         <div>
           <h2>Grade 5</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">3</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/5th-forces-balanced-unbalanced.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Balanced &amp; Unbalanced Forces, Friction, and Newton&#x27;s Laws</span>
+                <span class="lesson-title-row"><span class="lesson-title">Balanced &amp; Unbalanced Forces, Friction, and Newton&#x27;s Laws</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/5th-fossils-earth-history.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Fossils: Reading the Pages of Earth&#x27;s History</span>
+                <span class="lesson-title-row"><span class="lesson-title">Fossils: Reading the Pages of Earth&#x27;s History</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/free-gr5-bread-mold-terrarium.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Bread Mold Terrarium</span>
+                <span class="lesson-title-row"><span class="lesson-title">Bread Mold Terrarium</span></span>
                 <div class="lesson-meta">Free sample</div>
               </a>
             </li>
@@ -1584,48 +1619,49 @@
         <div>
           <h2>Other Lessons</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">8</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/bird-beak-buffet.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Bird Beak Buffet: Adaptation Lab</span>
+                <span class="lesson-title-row"><span class="lesson-title">Bird Beak Buffet: Adaptation Lab</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/forces-motion-acceleration.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Forces &amp; Motion: Direction of Forces and Acceleration</span>
+                <span class="lesson-title-row"><span class="lesson-title">Forces &amp; Motion: Direction of Forces and Acceleration</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/ocean-L3-into-the-abyss.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Into the Abyss</span>
+                <span class="lesson-title-row"><span class="lesson-title">Into the Abyss</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/k-milk-magic.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Milk Magic</span>
+                <span class="lesson-title-row"><span class="lesson-title">Milk Magic</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/ocean-L4-ocean-in-motion.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Ocean in Motion</span>
+                <span class="lesson-title-row"><span class="lesson-title">Ocean in Motion</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/ocean-L2-sharks-built-to-hunt.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Sharks — Built to Hunt</span>
+                <span class="lesson-title-row"><span class="lesson-title">Sharks — Built to Hunt</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/ocean-L1-coral-kingdom.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">The Coral Kingdom</span>
+                <span class="lesson-title-row"><span class="lesson-title">The Coral Kingdom</span></span>
                 
               </a>
             </li><li class="lesson-row">
               <a class="lesson-link" href="/lesson-plans/thermal-energy-ice-cream.html?review=1" target="_blank" rel="noopener">
-                <span class="lesson-title">Thermal Energy &amp; States of Matter - Ice Cream Experiment</span>
+                <span class="lesson-title-row"><span class="lesson-title">Thermal Energy &amp; States of Matter - Ice Cream Experiment</span></span>
                 
               </a>
             </li>

@@ -1,0 +1,33 @@
+{
+  "statuses": [
+    {
+      "id": "gr4-ls1-full-domain",
+      "match": {
+        "gradeKey": "4",
+        "domainKey": "ls"
+      },
+      "label": "Previously completed",
+      "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+    },
+    {
+      "id": "gr5-ess1-unit1-review-batch-1",
+      "match": {
+        "gradeKey": "5",
+        "domainKey": "ess",
+        "unitNumber": 1
+      },
+      "label": "Reviewed / revised",
+      "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision." 
+    },
+    {
+      "id": "gr5-ls1-unit2-review-batch-1",
+      "match": {
+        "gradeKey": "5",
+        "domainKey": "ls",
+        "unitNumber": 2
+      },
+      "label": "Reviewed / revised",
+      "note": "Grade 5 Life Science Unit 2 completed review and revision."
+    }
+  ]
+}

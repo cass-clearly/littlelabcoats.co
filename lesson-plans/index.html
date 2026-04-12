@@ -120,6 +120,10 @@
     .group-header h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; margin-bottom: 4px; }
     .group-header p { color: var(--text-muted); font-weight: 700; }
     .group-count { font-weight: 700; color: var(--teal); white-space: nowrap; }
+    .status-summary-list { list-style: none; margin-top: 10px; display: grid; gap: 6px; }
+    .status-summary-list li { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .status-badge { display: inline-block; background: var(--cream-dark); border: 1px solid var(--border); border-radius: 999px; padding: 3px 8px; font-size: 0.76rem; font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .status-summary-note { color: var(--text-muted); font-size: 0.9rem; }
     .lesson-list { list-style: none; }
     .lesson-row {
       display: grid;
@@ -129,6 +133,7 @@
       border-top: 1px solid #eef9f8;
       align-items: center;
     }
+    .lesson-title-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .lesson-title { font-weight: 700; font-size: 1rem; color: var(--navy); }
     .lesson-meta { margin-top: 4px; color: var(--text-muted); font-size: 0.9rem; }
     .lesson-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
@@ -202,13 +207,14 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Sun Warms Everything</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Sun Warms Everything</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -217,7 +223,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Shadow Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Shadow Science</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -226,7 +232,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Warming Up — Dark vs Light Surfaces</div>
+                <div class="lesson-title-row"><div class="lesson-title">Warming Up — Dark vs Light Surfaces</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -235,7 +241,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Melting Race</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Melting Race</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -244,7 +250,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Design a Sun Shelter — Plan</div>
+                <div class="lesson-title-row"><div class="lesson-title">Design a Sun Shelter — Plan</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -253,7 +259,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Design a Sun Shelter — Build &amp; Test</div>
+                <div class="lesson-title-row"><div class="lesson-title">Design a Sun Shelter — Build &amp; Test</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -268,13 +274,14 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What&#x27;s Inside a Seed?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What&#x27;s Inside a Seed?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -283,7 +290,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Planting Day: What Do Seeds Need?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Planting Day: What Do Seeds Need?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -292,7 +299,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Parts of a Plant: Root to Flower</div>
+                <div class="lesson-title-row"><div class="lesson-title">Parts of a Plant: Root to Flower</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -301,7 +308,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sunlight or No Sunlight?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sunlight or No Sunlight?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -310,7 +317,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Seed Travelers: How Seeds Move</div>
+                <div class="lesson-title-row"><div class="lesson-title">Seed Travelers: How Seeds Move</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -319,7 +326,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">My Plant&#x27;s Life Story</div>
+                <div class="lesson-title-row"><div class="lesson-title">My Plant&#x27;s Life Story</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -328,7 +335,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Do ALL Animals Need?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Do ALL Animals Need?</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -337,7 +344,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What&#x27;s for Dinner? How Animals Eat</div>
+                <div class="lesson-title-row"><div class="lesson-title">What&#x27;s for Dinner? How Animals Eat</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -346,7 +353,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Breathing: Lungs, Gills, and More</div>
+                <div class="lesson-title-row"><div class="lesson-title">Breathing: Lungs, Gills, and More</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -355,7 +362,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Water, Water Everywhere: How Animals Drink</div>
+                <div class="lesson-title-row"><div class="lesson-title">Water, Water Everywhere: How Animals Drink</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -364,7 +371,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Building a Shelter: Every Animal Needs a Home</div>
+                <div class="lesson-title-row"><div class="lesson-title">Building a Shelter: Every Animal Needs a Home</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -373,7 +380,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">When Needs Aren&#x27;t Met: What Happens?</div>
+                <div class="lesson-title-row"><div class="lesson-title">When Needs Aren&#x27;t Met: What Happens?</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -388,13 +395,14 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Is Weather?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Is Weather?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -403,7 +411,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Wind — Invisible but Powerful</div>
+                <div class="lesson-title-row"><div class="lesson-title">Wind — Invisible but Powerful</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -412,7 +420,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Rain, Snow, and the Water Cycle</div>
+                <div class="lesson-title-row"><div class="lesson-title">Rain, Snow, and the Water Cycle</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -421,7 +429,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Four Seasons</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Four Seasons</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -430,7 +438,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weather &amp; Animals — How Animals Respond</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weather &amp; Animals — How Animals Respond</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -439,7 +447,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weather Patterns Over Time</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weather Patterns Over Time</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -448,7 +456,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Does Earth Give Us?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Does Earth Give Us?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -457,7 +465,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Water — Earth&#x27;s Most Important Resource</div>
+                <div class="lesson-title-row"><div class="lesson-title">Water — Earth&#x27;s Most Important Resource</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -466,7 +474,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Soil — What&#x27;s Under Our Feet?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Soil — What&#x27;s Under Our Feet?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -475,7 +483,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Humans Change the Earth</div>
+                <div class="lesson-title-row"><div class="lesson-title">Humans Change the Earth</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -484,7 +492,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weather Hazards — Staying Safe</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weather Hazards — Staying Safe</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -493,7 +501,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Being Earth&#x27;s Helper</div>
+                <div class="lesson-title-row"><div class="lesson-title">Being Earth&#x27;s Helper</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -508,13 +516,14 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Is a Problem?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Is a Problem?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -523,7 +532,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Ask Questions, Make Observations</div>
+                <div class="lesson-title-row"><div class="lesson-title">Ask Questions, Make Observations</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -532,7 +541,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Draw Your Idea</div>
+                <div class="lesson-title-row"><div class="lesson-title">Draw Your Idea</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -541,7 +550,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Build It!</div>
+                <div class="lesson-title-row"><div class="lesson-title">Build It!</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -550,7 +559,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Test and Improve</div>
+                <div class="lesson-title-row"><div class="lesson-title">Test and Improve</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -559,7 +568,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Share Your Solution</div>
+                <div class="lesson-title-row"><div class="lesson-title">Share Your Solution</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -574,13 +583,14 @@
         <div>
           <h2>Kindergarten</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">7 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Great Push &amp; Pull Sort</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Great Push &amp; Pull Sort</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -589,7 +599,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Ramp Racers — Forces &amp; Motion Lab</div>
+                <div class="lesson-title-row"><div class="lesson-title">Ramp Racers — Forces &amp; Motion Lab</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -598,7 +608,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Strong Push, Gentle Push — Forces Lab</div>
+                <div class="lesson-title-row"><div class="lesson-title">Strong Push, Gentle Push — Forces Lab</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -607,7 +617,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Magnet Magic</div>
+                <div class="lesson-title-row"><div class="lesson-title">Magnet Magic</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -616,7 +626,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Wind Wagon Engineering Challenge</div>
+                <div class="lesson-title-row"><div class="lesson-title">Wind Wagon Engineering Challenge</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -625,7 +635,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Marble Run Madness</div>
+                <div class="lesson-title-row"><div class="lesson-title">Marble Run Madness</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -634,7 +644,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Kindergarten Freebie Candidate — Fizzy Color Explosions</div>
+                <div class="lesson-title-row"><div class="lesson-title">Kindergarten Freebie Candidate — Fizzy Color Explosions</div></div>
                 <div class="lesson-meta">Free sample</div>
               </div>
               <div class="lesson-links">
@@ -649,13 +659,14 @@
         <div>
           <h2>Grade 1</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sound Is Vibration</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sound Is Vibration</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -664,7 +675,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Light Travels in Straight Lines</div>
+                <div class="lesson-title-row"><div class="lesson-title">Light Travels in Straight Lines</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -673,7 +684,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Mirrors, Signals &amp; Sending Messages</div>
+                <div class="lesson-title-row"><div class="lesson-title">Mirrors, Signals &amp; Sending Messages</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -682,7 +693,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">High Sounds, Low Sounds</div>
+                <div class="lesson-title-row"><div class="lesson-title">High Sounds, Low Sounds</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -691,7 +702,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sound Through Solids, Liquids &amp; Gases</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sound Through Solids, Liquids &amp; Gases</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -700,7 +711,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sound and Light Message Challenge</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sound and Light Message Challenge</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -715,13 +726,14 @@
         <div>
           <h2>Grade 1</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Roots, Stems, Leaves, Flowers — What Each Part Does</div>
+                <div class="lesson-title-row"><div class="lesson-title">Roots, Stems, Leaves, Flowers — What Each Part Does</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -730,7 +742,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">How Animals Protect Themselves</div>
+                <div class="lesson-title-row"><div class="lesson-title">How Animals Protect Themselves</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -739,7 +751,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">How Plants Attract Pollinators</div>
+                <div class="lesson-title-row"><div class="lesson-title">How Plants Attract Pollinators</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -748,7 +760,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Animal Structures for Getting Food</div>
+                <div class="lesson-title-row"><div class="lesson-title">Animal Structures for Getting Food</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -757,7 +769,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Structures for Moving</div>
+                <div class="lesson-title-row"><div class="lesson-title">Structures for Moving</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -766,7 +778,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">You Look Like Your Parents</div>
+                <div class="lesson-title-row"><div class="lesson-title">You Look Like Your Parents</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -775,7 +787,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Baby Animals and Their Needs</div>
+                <div class="lesson-title-row"><div class="lesson-title">Baby Animals and Their Needs</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -784,7 +796,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">How Animal Parents Protect Offspring</div>
+                <div class="lesson-title-row"><div class="lesson-title">How Animal Parents Protect Offspring</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -793,7 +805,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Teaching: When Parents Show What to Do</div>
+                <div class="lesson-title-row"><div class="lesson-title">Teaching: When Parents Show What to Do</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -802,7 +814,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plant Parenting</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plant Parenting</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -811,7 +823,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Patterns of Parent and Offspring Behavior</div>
+                <div class="lesson-title-row"><div class="lesson-title">Patterns of Parent and Offspring Behavior</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -820,7 +832,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Nature&#x27;s Engineers: How Animal Bodies Solve Problems</div>
+                <div class="lesson-title-row"><div class="lesson-title">Nature&#x27;s Engineers: How Animal Bodies Solve Problems</div></div>
                 <div class="lesson-meta">Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -835,13 +847,14 @@
         <div>
           <h2>Grade 1</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Sun — Our Closest Star</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Sun — Our Closest Star</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -850,7 +863,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Moon — Earth&#x27;s Natural Satellite</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Moon — Earth&#x27;s Natural Satellite</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -859,7 +872,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Stars — Suns Very Far Away</div>
+                <div class="lesson-title-row"><div class="lesson-title">Stars — Suns Very Far Away</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -868,7 +881,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">How Much Daylight? Seasons and the Sun</div>
+                <div class="lesson-title-row"><div class="lesson-title">How Much Daylight? Seasons and the Sun</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -877,7 +890,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Sky Changes — Morning, Day, and Night</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Sky Changes — Morning, Day, and Night</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -886,7 +899,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Patterns in the Sky</div>
+                <div class="lesson-title-row"><div class="lesson-title">Patterns in the Sky</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -901,13 +914,14 @@
         <div>
           <h2>Grade 1</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Problem Can We Solve?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Problem Can We Solve?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -916,7 +930,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Look at Animal Solutions</div>
+                <div class="lesson-title-row"><div class="lesson-title">Look at Animal Solutions</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -925,7 +939,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plan a Nature-Inspired Tool</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plan a Nature-Inspired Tool</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -934,7 +948,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Build Your First Model</div>
+                <div class="lesson-title-row"><div class="lesson-title">Build Your First Model</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -943,7 +957,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Test and Improve Your Design</div>
+                <div class="lesson-title-row"><div class="lesson-title">Test and Improve Your Design</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -952,7 +966,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Share Your Final Design</div>
+                <div class="lesson-title-row"><div class="lesson-title">Share Your Final Design</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -967,13 +981,14 @@
         <div>
           <h2>Grade 1</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1 lesson</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Celery Rainbow</div>
+                <div class="lesson-title-row"><div class="lesson-title">Celery Rainbow</div></div>
                 <div class="lesson-meta">Free sample</div>
               </div>
               <div class="lesson-links">
@@ -988,13 +1003,14 @@
         <div>
           <h2>Grade 2</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">7 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Is Matter? Solids, Liquids, and Gases</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Is Matter? Solids, Liquids, and Gases</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1003,7 +1019,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Touch and Test: Texture, Hardness, and Flexibility</div>
+                <div class="lesson-title-row"><div class="lesson-title">Touch and Test: Texture, Hardness, and Flexibility</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1012,7 +1028,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sink or Float? Testing Matter in Water</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sink or Float? Testing Matter in Water</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1021,7 +1037,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Mix It Up: Mixing and Separating Materials</div>
+                <div class="lesson-title-row"><div class="lesson-title">Mix It Up: Mixing and Separating Materials</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1030,7 +1046,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Hot and Cold: How Heating and Cooling Change Matter</div>
+                <div class="lesson-title-row"><div class="lesson-title">Hot and Cold: How Heating and Cooling Change Matter</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1039,7 +1055,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Build the Best Boat: Engineering with Foil</div>
+                <div class="lesson-title-row"><div class="lesson-title">Build the Best Boat: Engineering with Foil</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1048,7 +1064,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Mystery Powders: What&#x27;s in Your Kitchen?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Mystery Powders: What&#x27;s in Your Kitchen?</div></div>
                 <div class="lesson-meta">Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1063,13 +1079,14 @@
         <div>
           <h2>Grade 2</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Do Plants Need?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Do Plants Need?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1078,7 +1095,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Pollinators: Nature&#x27;s Delivery Service</div>
+                <div class="lesson-title-row"><div class="lesson-title">Pollinators: Nature&#x27;s Delivery Service</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1087,7 +1104,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Seed Dispersal: How Plants Travel</div>
+                <div class="lesson-title-row"><div class="lesson-title">Seed Dispersal: How Plants Travel</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1096,7 +1113,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Food Chains: Who Eats Whom?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Food Chains: Who Eats Whom?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1105,7 +1122,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Habitats: The Right Place for the Right Plant</div>
+                <div class="lesson-title-row"><div class="lesson-title">Habitats: The Right Place for the Right Plant</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1114,7 +1131,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Ecosystems Under Threat: What Can We Do?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Ecosystems Under Threat: What Can We Do?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1123,7 +1140,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Is an Ecosystem?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Is an Ecosystem?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1132,7 +1149,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plants Need Partners</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plants Need Partners</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1141,7 +1158,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Food Chains: Who Eats Who?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Food Chains: Who Eats Who?</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1150,7 +1167,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Predator and Prey: The Population Game</div>
+                <div class="lesson-title-row"><div class="lesson-title">Predator and Prey: The Population Game</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1159,7 +1176,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Habitat Hunt: Explorer&#x27;s Field Journal</div>
+                <div class="lesson-title-row"><div class="lesson-title">Habitat Hunt: Explorer&#x27;s Field Journal</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1168,7 +1185,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Design a Habitat</div>
+                <div class="lesson-title-row"><div class="lesson-title">Design a Habitat</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1183,13 +1200,14 @@
         <div>
           <h2>Grade 2</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Landforms All Around - Grade 2 Earth Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Landforms All Around - Grade 2 Earth Science</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1198,7 +1216,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Rocks and Soils - Grade 2 Earth Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Rocks and Soils - Grade 2 Earth Science</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1207,7 +1225,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Water Shapes the Land - Grade 2 Earth Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Water Shapes the Land - Grade 2 Earth Science</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1216,7 +1234,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Maps and Directions - Grade 2 Earth Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Maps and Directions - Grade 2 Earth Science</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1225,7 +1243,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weather Patterns - Grade 2 Earth Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weather Patterns - Grade 2 Earth Science</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1234,7 +1252,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Engineering: Slow the Erosion - Grade 2 Earth Science</div>
+                <div class="lesson-title-row"><div class="lesson-title">Engineering: Slow the Erosion - Grade 2 Earth Science</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1249,13 +1267,14 @@
         <div>
           <h2>Grade 2</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Define the Bridge Problem</div>
+                <div class="lesson-title-row"><div class="lesson-title">Define the Bridge Problem</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1264,7 +1283,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Compare Strong Bridge Shapes</div>
+                <div class="lesson-title-row"><div class="lesson-title">Compare Strong Bridge Shapes</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1273,7 +1292,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plan Your Bridge Model</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plan Your Bridge Model</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1282,7 +1301,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Build Your First Bridge</div>
+                <div class="lesson-title-row"><div class="lesson-title">Build Your First Bridge</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1291,7 +1310,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Test and Improve Your Bridge</div>
+                <div class="lesson-title-row"><div class="lesson-title">Test and Improve Your Bridge</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1300,7 +1319,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Share and Compare Bridge Designs</div>
+                <div class="lesson-title-row"><div class="lesson-title">Share and Compare Bridge Designs</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1315,13 +1334,14 @@
         <div>
           <h2>Grade 2</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1 lesson</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Salt Dough Fossil Factory</div>
+                <div class="lesson-title-row"><div class="lesson-title">Salt Dough Fossil Factory</div></div>
                 <div class="lesson-meta">Free sample</div>
               </div>
               <div class="lesson-links">
@@ -1336,13 +1356,14 @@
         <div>
           <h2>Grade 3</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Balanced and Unbalanced Forces</div>
+                <div class="lesson-title-row"><div class="lesson-title">Balanced and Unbalanced Forces</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1351,7 +1372,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Motion Changes with Force</div>
+                <div class="lesson-title-row"><div class="lesson-title">Motion Changes with Force</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1360,7 +1381,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Magnets Pull Without Touching</div>
+                <div class="lesson-title-row"><div class="lesson-title">Magnets Pull Without Touching</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1369,7 +1390,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Magnetic Patterns</div>
+                <div class="lesson-title-row"><div class="lesson-title">Magnetic Patterns</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1378,7 +1399,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Design a Magnetic Game or Tool</div>
+                <div class="lesson-title-row"><div class="lesson-title">Design a Magnetic Game or Tool</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1387,7 +1408,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Test and Improve Your Force Design</div>
+                <div class="lesson-title-row"><div class="lesson-title">Test and Improve Your Force Design</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1402,13 +1423,14 @@
         <div>
           <h2>Grade 3</h2>
           <p>Life Science</p>
+          
         </div>
         <div class="group-count">24 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Is a Life Cycle?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Is a Life Cycle?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1417,7 +1439,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Different Life Cycles, Same Big Pattern</div>
+                <div class="lesson-title-row"><div class="lesson-title">Different Life Cycles, Same Big Pattern</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1426,7 +1448,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plant Life Cycles and Seeds</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plant Life Cycles and Seeds</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1435,7 +1457,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Animal Life Cycles and Metamorphosis</div>
+                <div class="lesson-title-row"><div class="lesson-title">Animal Life Cycles and Metamorphosis</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1444,7 +1466,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Comparing Life Cycle Patterns</div>
+                <div class="lesson-title-row"><div class="lesson-title">Comparing Life Cycle Patterns</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1453,7 +1475,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Model and Explain a Life Cycle</div>
+                <div class="lesson-title-row"><div class="lesson-title">Model and Explain a Life Cycle</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1462,7 +1484,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Inherited Traits All Around Us — Grade 3 Life Science — Traits &amp; Inheritance</div>
+                <div class="lesson-title-row"><div class="lesson-title">Inherited Traits All Around Us — Grade 3 Life Science — Traits &amp; Inheritance</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1471,7 +1493,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plant Traits From Parent Plants — Grade 3 Life Science — Traits &amp; Inheritance</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plant Traits From Parent Plants — Grade 3 Life Science — Traits &amp; Inheritance</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1480,7 +1502,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Animal Traits From Parent Animals — Grade 3 Life Science — Traits &amp; Inheritance</div>
+                <div class="lesson-title-row"><div class="lesson-title">Animal Traits From Parent Animals — Grade 3 Life Science — Traits &amp; Inheritance</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1489,7 +1511,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Variation Within a Similar Group — Grade 3 Life Science — Traits &amp; Inheritance</div>
+                <div class="lesson-title-row"><div class="lesson-title">Variation Within a Similar Group — Grade 3 Life Science — Traits &amp; Inheritance</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1498,7 +1520,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Trait Data Detective — Grade 3 Life Science — Traits &amp; Inheritance</div>
+                <div class="lesson-title-row"><div class="lesson-title">Trait Data Detective — Grade 3 Life Science — Traits &amp; Inheritance</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1507,7 +1529,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Make the Inheritance Case — Grade 3 Life Science — Traits &amp; Inheritance</div>
+                <div class="lesson-title-row"><div class="lesson-title">Make the Inheritance Case — Grade 3 Life Science — Traits &amp; Inheritance</div></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1516,7 +1538,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Variation Can Help Survival — Grade 3 Life Science — Traits for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Variation Can Help Survival — Grade 3 Life Science — Traits for Survival</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1525,7 +1547,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Camouflage and Staying Hidden — Grade 3 Life Science — Traits for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Camouflage and Staying Hidden — Grade 3 Life Science — Traits for Survival</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1534,7 +1556,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Beaks, Mouths, and Getting Food — Grade 3 Life Science — Traits for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Beaks, Mouths, and Getting Food — Grade 3 Life Science — Traits for Survival</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1543,7 +1565,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Movement Traits in Different Places — Grade 3 Life Science — Traits for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Movement Traits in Different Places — Grade 3 Life Science — Traits for Survival</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1552,7 +1574,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Traits That Help Find Mates or Reproduce — Grade 3 Life Science — Traits for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Traits That Help Find Mates or Reproduce — Grade 3 Life Science — Traits for Survival</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1561,7 +1583,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Construct an Explanation From Evidence — Grade 3 Life Science — Traits for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Construct an Explanation From Evidence — Grade 3 Life Science — Traits for Survival</div></div>
                 <div class="lesson-meta">Unit 3 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1570,7 +1592,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Why Animals Sometimes Stick Together — Grade 3 Life Science — Group Behavior &amp; Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Why Animals Sometimes Stick Together — Grade 3 Life Science — Group Behavior &amp; Survival</div></div>
                 <div class="lesson-meta">Unit 4 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1579,7 +1601,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Lookout Calls and Warning Signals — Grade 3 Life Science — Group Behavior &amp; Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Lookout Calls and Warning Signals — Grade 3 Life Science — Group Behavior &amp; Survival</div></div>
                 <div class="lesson-meta">Unit 4 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1588,7 +1610,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Schooling, Flocking, and Moving Together — Grade 3 Life Science — Group Behavior &amp; Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Schooling, Flocking, and Moving Together — Grade 3 Life Science — Group Behavior &amp; Survival</div></div>
                 <div class="lesson-meta">Unit 4 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1597,7 +1619,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Working Together to Find Food — Grade 3 Life Science — Group Behavior &amp; Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Working Together to Find Food — Grade 3 Life Science — Group Behavior &amp; Survival</div></div>
                 <div class="lesson-meta">Unit 4 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1606,7 +1628,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Parents, Babies, and Group Protection — Grade 3 Life Science — Group Behavior &amp; Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Parents, Babies, and Group Protection — Grade 3 Life Science — Group Behavior &amp; Survival</div></div>
                 <div class="lesson-meta">Unit 4 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1615,7 +1637,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Model How Group Behavior Helps Survival — Grade 3 Life Science — Group Behavior &amp; Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">Model How Group Behavior Helps Survival — Grade 3 Life Science — Group Behavior &amp; Survival</div></div>
                 <div class="lesson-meta">Unit 4 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1630,13 +1652,14 @@
         <div>
           <h2>Grade 3</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weather Patterns Over Time</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weather Patterns Over Time</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1645,7 +1668,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Climate Regions and Conditions</div>
+                <div class="lesson-title-row"><div class="lesson-title">Climate Regions and Conditions</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1654,7 +1677,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Reading Weather Data</div>
+                <div class="lesson-title-row"><div class="lesson-title">Reading Weather Data</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1663,7 +1686,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weather Hazards and Impacts</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weather Hazards and Impacts</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1672,7 +1695,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Designing for Local Weather</div>
+                <div class="lesson-title-row"><div class="lesson-title">Designing for Local Weather</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1681,7 +1704,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Reducing Weather-Related Hazards</div>
+                <div class="lesson-title-row"><div class="lesson-title">Reducing Weather-Related Hazards</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1696,13 +1719,14 @@
         <div>
           <h2>Grade 3</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Defining the Problem</div>
+                <div class="lesson-title-row"><div class="lesson-title">Defining the Problem</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1711,7 +1735,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Researching Constraints and Materials</div>
+                <div class="lesson-title-row"><div class="lesson-title">Researching Constraints and Materials</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1720,7 +1744,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Planning a Solution</div>
+                <div class="lesson-title-row"><div class="lesson-title">Planning a Solution</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1729,7 +1753,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Building and Testing a Prototype</div>
+                <div class="lesson-title-row"><div class="lesson-title">Building and Testing a Prototype</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1738,7 +1762,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Improving the Design</div>
+                <div class="lesson-title-row"><div class="lesson-title">Improving the Design</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1747,7 +1771,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Share and Defend Your Solution</div>
+                <div class="lesson-title-row"><div class="lesson-title">Share and Defend Your Solution</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1762,13 +1786,14 @@
         <div>
           <h2>Grade 3</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1 lesson</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Egg Drop Kitchen Challenge</div>
+                <div class="lesson-title-row"><div class="lesson-title">Egg Drop Kitchen Challenge</div></div>
                 <div class="lesson-meta">Free sample</div>
               </div>
               <div class="lesson-links">
@@ -1783,13 +1808,14 @@
         <div>
           <h2>Grade 4</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">5 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Collisions Transfer Energy</div>
+                <div class="lesson-title-row"><div class="lesson-title">Collisions Transfer Energy</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1798,7 +1824,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Faster Motion, Bigger Changes</div>
+                <div class="lesson-title-row"><div class="lesson-title">Faster Motion, Bigger Changes</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1807,7 +1833,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Surfaces and Friction Change Motion</div>
+                <div class="lesson-title-row"><div class="lesson-title">Surfaces and Friction Change Motion</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1816,7 +1842,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Testing One Change at a Time</div>
+                <div class="lesson-title-row"><div class="lesson-title">Testing One Change at a Time</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1825,7 +1851,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Explain How Energy Moves and Causes Motion</div>
+                <div class="lesson-title-row"><div class="lesson-title">Explain How Energy Moves and Causes Motion</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1840,13 +1866,14 @@
         <div>
           <h2>Grade 4</h2>
           <p>Life Science</p>
+          <ul class="status-summary-list"><li><span class="status-badge">Previously completed</span><span class="status-summary-note">Full 4-LS1 domain reviewed and completed (Units 1–2).</span></li></ul>
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">External Structures for Survival</div>
+                <div class="lesson-title-row"><div class="lesson-title">External Structures for Survival</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1855,7 +1882,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sensing the World</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sensing the World</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1864,7 +1891,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Mouths, Beaks, Teeth, and Getting Food</div>
+                <div class="lesson-title-row"><div class="lesson-title">Mouths, Beaks, Teeth, and Getting Food</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1873,7 +1900,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Movement Structures and Finding Safety</div>
+                <div class="lesson-title-row"><div class="lesson-title">Movement Structures and Finding Safety</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1882,7 +1909,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Structures for Protection and Defense</div>
+                <div class="lesson-title-row"><div class="lesson-title">Structures for Protection and Defense</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1891,7 +1918,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Construct an Argument: How Animal Structures Help Them Live</div>
+                <div class="lesson-title-row"><div class="lesson-title">Construct an Argument: How Animal Structures Help Them Live</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1900,7 +1927,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Roots, Stems, and Plant Support Systems</div>
+                <div class="lesson-title-row"><div class="lesson-title">Roots, Stems, and Plant Support Systems</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1909,7 +1936,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Leaves and Making Food</div>
+                <div class="lesson-title-row"><div class="lesson-title">Leaves and Making Food</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1918,7 +1945,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Water Transport Inside Plants</div>
+                <div class="lesson-title-row"><div class="lesson-title">Water Transport Inside Plants</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -1927,7 +1954,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Flowers, Pollination, and Reproduction</div>
+                <div class="lesson-title-row"><div class="lesson-title">Flowers, Pollination, and Reproduction</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -1936,7 +1963,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Seeds, Fruits, and New Plants</div>
+                <div class="lesson-title-row"><div class="lesson-title">Seeds, Fruits, and New Plants</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -1945,7 +1972,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Construct an Argument: How Plant Structures Help Plants Live and Reproduce</div>
+                <div class="lesson-title-row"><div class="lesson-title">Construct an Argument: How Plant Structures Help Plants Live and Reproduce</div><span class="status-badge">Previously completed</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -1960,13 +1987,14 @@
         <div>
           <h2>Grade 4</h2>
           <p>Earth &amp; Space Science</p>
+          
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weathering Breaks Rocks</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weathering Breaks Rocks</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1975,7 +2003,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Weathering Starts Landform Change</div>
+                <div class="lesson-title-row"><div class="lesson-title">Weathering Starts Landform Change</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -1984,7 +2012,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Erosion Moves Earth Materials</div>
+                <div class="lesson-title-row"><div class="lesson-title">Erosion Moves Earth Materials</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -1993,7 +2021,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Erosion Moves Sediment</div>
+                <div class="lesson-title-row"><div class="lesson-title">Erosion Moves Sediment</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2002,7 +2030,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Deposition Builds New Landforms</div>
+                <div class="lesson-title-row"><div class="lesson-title">Deposition Builds New Landforms</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2011,7 +2039,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Deposition Builds New Landforms</div>
+                <div class="lesson-title-row"><div class="lesson-title">Deposition Builds New Landforms</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2020,7 +2048,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Maps and Models Show Earth’s Surface Change</div>
+                <div class="lesson-title-row"><div class="lesson-title">Maps and Models Show Earth’s Surface Change</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2029,7 +2057,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Reading Landform Maps and Models</div>
+                <div class="lesson-title-row"><div class="lesson-title">Reading Landform Maps and Models</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2038,7 +2066,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Fast and Slow Surface Changes</div>
+                <div class="lesson-title-row"><div class="lesson-title">Fast and Slow Surface Changes</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2047,7 +2075,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Patterns of Water, Wind, Ice, and Vegetation</div>
+                <div class="lesson-title-row"><div class="lesson-title">Patterns of Water, Wind, Ice, and Vegetation</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2056,7 +2084,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Explain and Protect a Changing Streambank</div>
+                <div class="lesson-title-row"><div class="lesson-title">Explain and Protect a Changing Streambank</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2065,7 +2093,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Explain How Earth Processes Shape Landforms</div>
+                <div class="lesson-title-row"><div class="lesson-title">Explain How Earth Processes Shape Landforms</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2080,13 +2108,14 @@
         <div>
           <h2>Grade 4</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Define the Storm Shelter Problem</div>
+                <div class="lesson-title-row"><div class="lesson-title">Define the Storm Shelter Problem</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2095,7 +2124,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Compare Shelter Materials and Shapes</div>
+                <div class="lesson-title-row"><div class="lesson-title">Compare Shelter Materials and Shapes</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2104,7 +2133,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plan a Testable Storm Shelter</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plan a Testable Storm Shelter</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2113,7 +2142,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Build and Run the First Shelter Test</div>
+                <div class="lesson-title-row"><div class="lesson-title">Build and Run the First Shelter Test</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2122,7 +2151,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Redesign Using Test Evidence</div>
+                <div class="lesson-title-row"><div class="lesson-title">Redesign Using Test Evidence</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2131,7 +2160,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Present and Defend Your Shelter Solution</div>
+                <div class="lesson-title-row"><div class="lesson-title">Present and Defend Your Shelter Solution</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2146,13 +2175,14 @@
         <div>
           <h2>Grade 4</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">1 lesson</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Great Apple Browning Experiment</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Great Apple Browning Experiment</div></div>
                 <div class="lesson-meta">Free sample</div>
               </div>
               <div class="lesson-links">
@@ -2167,13 +2197,14 @@
         <div>
           <h2>Grade 5</h2>
           <p>Physical Science</p>
+          
         </div>
         <div class="group-count">7 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Balanced and Unbalanced Forces</div>
+                <div class="lesson-title-row"><div class="lesson-title">Balanced and Unbalanced Forces</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2182,7 +2213,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Gravity Points Down</div>
+                <div class="lesson-title-row"><div class="lesson-title">Gravity Points Down</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2191,7 +2222,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Ramps, Speed, and Motion Changes</div>
+                <div class="lesson-title-row"><div class="lesson-title">Ramps, Speed, and Motion Changes</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2200,7 +2231,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Collisions and Transferring Motion</div>
+                <div class="lesson-title-row"><div class="lesson-title">Collisions and Transferring Motion</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2209,7 +2240,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Does Mass Matter?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Does Mass Matter?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2218,7 +2249,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Design and Improve a Force Challenge</div>
+                <div class="lesson-title-row"><div class="lesson-title">Design and Improve a Force Challenge</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2227,7 +2258,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Kitchen Chemistry: Reactants, Products &amp; Mixtures</div>
+                <div class="lesson-title-row"><div class="lesson-title">Kitchen Chemistry: Reactants, Products &amp; Mixtures</div></div>
                 <div class="lesson-meta">Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2242,13 +2273,14 @@
         <div>
           <h2>Grade 5</h2>
           <p>Life Science</p>
+          <ul class="status-summary-list"><li><span class="status-badge">Reviewed / revised</span><span class="status-summary-note">Grade 5 Life Science Unit 2 completed review and revision.</span></li></ul>
         </div>
         <div class="group-count">12 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Is an Ecosystem?</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Is an Ecosystem?</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2257,7 +2289,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">From the Sun to Producers</div>
+                <div class="lesson-title-row"><div class="lesson-title">From the Sun to Producers</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2266,7 +2298,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Food Chains and Food Webs</div>
+                <div class="lesson-title-row"><div class="lesson-title">Food Chains and Food Webs</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2275,7 +2307,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Decomposers Recycle Matter</div>
+                <div class="lesson-title-row"><div class="lesson-title">Decomposers Recycle Matter</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2284,7 +2316,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">When One Population Changes</div>
+                <div class="lesson-title-row"><div class="lesson-title">When One Population Changes</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2293,7 +2325,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Modeling Matter in an Ecosystem</div>
+                <div class="lesson-title-row"><div class="lesson-title">Modeling Matter in an Ecosystem</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2302,7 +2334,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">What Do Plants Need to Grow? — Grade 5 Life Science — Plant Matter &amp; Growth</div>
+                <div class="lesson-title-row"><div class="lesson-title">What Do Plants Need to Grow? — Grade 5 Life Science — Plant Matter &amp; Growth</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2311,7 +2343,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Water Moves Into Plants — Grade 5 Life Science — Plant Matter &amp; Growth</div>
+                <div class="lesson-title-row"><div class="lesson-title">Water Moves Into Plants — Grade 5 Life Science — Plant Matter &amp; Growth</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2320,7 +2352,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plants Use Air Too — Grade 5 Life Science — Plant Matter &amp; Growth</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plants Use Air Too — Grade 5 Life Science — Plant Matter &amp; Growth</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2329,7 +2361,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Soil: Support, Minerals, and a Common Misconception — Grade 5 Life Science — Plant Matter &amp; Growth</div>
+                <div class="lesson-title-row"><div class="lesson-title">Soil: Support, Minerals, and a Common Misconception — Grade 5 Life Science — Plant Matter &amp; Growth</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2338,7 +2370,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Modeling How Plants Build New Matter — Grade 5 Life Science — Plant Matter &amp; Growth</div>
+                <div class="lesson-title-row"><div class="lesson-title">Modeling How Plants Build New Matter — Grade 5 Life Science — Plant Matter &amp; Growth</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2347,7 +2379,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Support the Argument With Evidence — Grade 5 Life Science — Plant Matter &amp; Growth</div>
+                <div class="lesson-title-row"><div class="lesson-title">Support the Argument With Evidence — Grade 5 Life Science — Plant Matter &amp; Growth</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 2 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2362,13 +2394,14 @@
         <div>
           <h2>Grade 5</h2>
           <p>Earth &amp; Space Science</p>
+          <ul class="status-summary-list"><li><span class="status-badge">Reviewed / revised</span><span class="status-summary-note">Grade 5 Earth &amp; Space Science Unit 1 completed review and revision.</span></li></ul>
         </div>
         <div class="group-count">7 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Human Impact: How We Change Earth -- Earth Science Unit, Lesson 1</div>
+                <div class="lesson-title-row"><div class="lesson-title">Human Impact: How We Change Earth -- Earth Science Unit, Lesson 1</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2377,7 +2410,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Where Is Earth’s Water?</div>
+                <div class="lesson-title-row"><div class="lesson-title">Where Is Earth’s Water?</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2386,7 +2419,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Evaporation and Condensation</div>
+                <div class="lesson-title-row"><div class="lesson-title">Evaporation and Condensation</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2395,7 +2428,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Precipitation and Collection</div>
+                <div class="lesson-title-row"><div class="lesson-title">Precipitation and Collection</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2404,7 +2437,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Runoff, Infiltration, and Groundwater</div>
+                <div class="lesson-title-row"><div class="lesson-title">Runoff, Infiltration, and Groundwater</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2413,7 +2446,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Earth Systems Working Together</div>
+                <div class="lesson-title-row"><div class="lesson-title">Earth Systems Working Together</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2422,7 +2455,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Modeling a Local Water System</div>
+                <div class="lesson-title-row"><div class="lesson-title">Modeling a Local Water System</div><span class="status-badge">Reviewed / revised</span></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2437,13 +2470,14 @@
         <div>
           <h2>Grade 5</h2>
           <p>Engineering</p>
+          
         </div>
         <div class="group-count">6 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Define the Water Filter Design Problem</div>
+                <div class="lesson-title-row"><div class="lesson-title">Define the Water Filter Design Problem</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 1</div>
               </div>
               <div class="lesson-links">
@@ -2452,7 +2486,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Compare Possible Filter Materials and Systems</div>
+                <div class="lesson-title-row"><div class="lesson-title">Compare Possible Filter Materials and Systems</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 2</div>
               </div>
               <div class="lesson-links">
@@ -2461,7 +2495,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Plan a Testable Filter Prototype</div>
+                <div class="lesson-title-row"><div class="lesson-title">Plan a Testable Filter Prototype</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 3</div>
               </div>
               <div class="lesson-links">
@@ -2470,7 +2504,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Build and Run Your First Filter Trial</div>
+                <div class="lesson-title-row"><div class="lesson-title">Build and Run Your First Filter Trial</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 4</div>
               </div>
               <div class="lesson-links">
@@ -2479,7 +2513,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Redesign Using Test Evidence</div>
+                <div class="lesson-title-row"><div class="lesson-title">Redesign Using Test Evidence</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 5</div>
               </div>
               <div class="lesson-links">
@@ -2488,7 +2522,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Present and Defend Your Water Filter Solution</div>
+                <div class="lesson-title-row"><div class="lesson-title">Present and Defend Your Water Filter Solution</div></div>
                 <div class="lesson-meta">Unit 1 • Lesson 6</div>
               </div>
               <div class="lesson-links">
@@ -2503,13 +2537,14 @@
         <div>
           <h2>Grade 5</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">3 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Balanced &amp; Unbalanced Forces, Friction, and Newton&#x27;s Laws</div>
+                <div class="lesson-title-row"><div class="lesson-title">Balanced &amp; Unbalanced Forces, Friction, and Newton&#x27;s Laws</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2518,7 +2553,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Fossils: Reading the Pages of Earth&#x27;s History</div>
+                <div class="lesson-title-row"><div class="lesson-title">Fossils: Reading the Pages of Earth&#x27;s History</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2527,7 +2562,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Bread Mold Terrarium</div>
+                <div class="lesson-title-row"><div class="lesson-title">Bread Mold Terrarium</div></div>
                 <div class="lesson-meta">Free sample</div>
               </div>
               <div class="lesson-links">
@@ -2542,13 +2577,14 @@
         <div>
           <h2>Other Lessons</h2>
           <p>Other Lessons</p>
+          
         </div>
         <div class="group-count">8 lessons</div>
       </div>
       <ul class="lesson-list">
         <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Bird Beak Buffet: Adaptation Lab</div>
+                <div class="lesson-title-row"><div class="lesson-title">Bird Beak Buffet: Adaptation Lab</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2557,7 +2593,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Forces &amp; Motion: Direction of Forces and Acceleration</div>
+                <div class="lesson-title-row"><div class="lesson-title">Forces &amp; Motion: Direction of Forces and Acceleration</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2566,7 +2602,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Into the Abyss</div>
+                <div class="lesson-title-row"><div class="lesson-title">Into the Abyss</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2575,7 +2611,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Milk Magic</div>
+                <div class="lesson-title-row"><div class="lesson-title">Milk Magic</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2584,7 +2620,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Ocean in Motion</div>
+                <div class="lesson-title-row"><div class="lesson-title">Ocean in Motion</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2593,7 +2629,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Sharks — Built to Hunt</div>
+                <div class="lesson-title-row"><div class="lesson-title">Sharks — Built to Hunt</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2602,7 +2638,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">The Coral Kingdom</div>
+                <div class="lesson-title-row"><div class="lesson-title">The Coral Kingdom</div></div>
                 
               </div>
               <div class="lesson-links">
@@ -2611,7 +2647,7 @@
               </div>
             </li><li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">Thermal Energy &amp; States of Matter - Ice Cream Experiment</div>
+                <div class="lesson-title-row"><div class="lesson-title">Thermal Energy &amp; States of Matter - Ice Cream Experiment</div></div>
                 
               </div>
               <div class="lesson-links">

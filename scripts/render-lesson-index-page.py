@@ -26,28 +26,48 @@ def lesson_meta(entry: dict) -> str:
     return " • ".join(parts)
 
 
+def render_status_badge(status: dict | None) -> str:
+    if not status:
+        return ""
+    return f'<span class="status-badge">{escape(status["label"])}</span>'
+
+
+def render_status_summary(group: dict) -> str:
+    summaries = group.get("statusSummaries") or []
+    if not summaries:
+        return ""
+    items = "".join(
+        f'<li><span class="status-badge">{escape(summary["label"])}</span><span class="status-summary-note">{escape(summary["note"])}</span></li>'
+        for summary in summaries
+    )
+    return f'<ul class="status-summary-list">{items}</ul>'
+
+
 def render_review_group(group: dict) -> str:
     rows = []
     for entry in group["entries"]:
         meta = lesson_meta(entry)
         meta_html = f'<div class="lesson-meta">{escape(meta)}</div>' if meta else ""
+        status_badge = render_status_badge(entry.get("directoryStatus"))
         rows.append(
             f"""
             <li class="lesson-row">
               <a class="lesson-link" href="{escape(entry['reviewUrl'])}" target="_blank" rel="noopener">
-                <span class="lesson-title">{escape(entry['displayTitle'])}</span>
+                <span class="lesson-title-row"><span class="lesson-title">{escape(entry['displayTitle'])}</span>{status_badge}</span>
                 {meta_html}
               </a>
             </li>
             """.strip()
         )
 
+    status_summary_html = render_status_summary(group)
     return f"""
     <section class="group-card" id="{escape(section_id(group))}">
       <div class="group-header">
         <div>
           <h2>{escape(group['gradeLabel'])}</h2>
           <p>{escape(group['domainLabel'])}</p>
+          {status_summary_html}
         </div>
         <div class="group-count">{group['count']}</div>
       </div>
@@ -63,11 +83,12 @@ def render_lesson_group(group: dict) -> str:
     for entry in group["entries"]:
         meta = lesson_meta(entry)
         meta_html = f'<div class="lesson-meta">{escape(meta)}</div>' if meta else ""
+        status_badge = render_status_badge(entry.get("directoryStatus"))
         rows.append(
             f"""
             <li class="lesson-row">
               <div class="lesson-main">
-                <div class="lesson-title">{escape(entry['displayTitle'])}</div>
+                <div class="lesson-title-row"><div class="lesson-title">{escape(entry['displayTitle'])}</div>{status_badge}</div>
                 {meta_html}
               </div>
               <div class="lesson-links">
@@ -79,12 +100,14 @@ def render_lesson_group(group: dict) -> str:
         )
 
     lesson_label = "lesson" if group["count"] == 1 else "lessons"
+    status_summary_html = render_status_summary(group)
     return f"""
     <section class="group-card" id="{escape(section_id(group))}">
       <div class="group-header">
         <div>
           <h2>{escape(group['gradeLabel'])}</h2>
           <p>{escape(group['domainLabel'])}</p>
+          {status_summary_html}
         </div>
         <div class="group-count">{group['count']} {lesson_label}</div>
       </div>
@@ -186,6 +209,10 @@ def build_review_page(data: dict) -> str:
     .group-header h2 {{ font-size: 1.2rem; margin-bottom: 2px; }}
     .group-header p {{ color: var(--text-muted); font-weight: 700; font-size: 0.92rem; }}
     .group-count {{ color: var(--teal); font-weight: 700; font-size: 0.95rem; }}
+    .status-summary-list {{ list-style: none; margin-top: 10px; display: grid; gap: 6px; }}
+    .status-summary-list li {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }}
+    .status-badge {{ display: inline-block; background: #eef9f8; border: 1px solid var(--border); border-radius: 999px; padding: 3px 8px; font-size: 0.76rem; font-weight: 700; color: var(--navy); white-space: nowrap; }}
+    .status-summary-note {{ color: var(--text-muted); font-size: 0.88rem; }}
     .lesson-list {{ list-style: none; }}
     .lesson-row + .lesson-row {{ border-top: 1px solid #eef9f8; }}
     .lesson-link {{
@@ -195,6 +222,7 @@ def build_review_page(data: dict) -> str:
       background: transparent;
     }}
     .lesson-link:hover {{ background: var(--teal-pale); }}
+    .lesson-title-row {{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }}
     .lesson-title {{ display: block; font-weight: 700; font-size: 0.98rem; color: var(--navy); }}
     .lesson-meta {{ margin-top: 4px; font-size: 0.88rem; color: var(--text-muted); }}
     .footer-note {{ margin-top: 18px; font-size: 0.9rem; color: var(--text-muted); }}
@@ -379,6 +407,10 @@ def build_lesson_page(data: dict) -> str:
     .group-header h2 {{ font-family: 'Playfair Display', serif; font-size: 1.45rem; margin-bottom: 4px; }}
     .group-header p {{ color: var(--text-muted); font-weight: 700; }}
     .group-count {{ font-weight: 700; color: var(--teal); white-space: nowrap; }}
+    .status-summary-list {{ list-style: none; margin-top: 10px; display: grid; gap: 6px; }}
+    .status-summary-list li {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }}
+    .status-badge {{ display: inline-block; background: var(--cream-dark); border: 1px solid var(--border); border-radius: 999px; padding: 3px 8px; font-size: 0.76rem; font-weight: 700; color: var(--navy); white-space: nowrap; }}
+    .status-summary-note {{ color: var(--text-muted); font-size: 0.9rem; }}
     .lesson-list {{ list-style: none; }}
     .lesson-row {{
       display: grid;
@@ -388,6 +420,7 @@ def build_lesson_page(data: dict) -> str:
       border-top: 1px solid #eef9f8;
       align-items: center;
     }}
+    .lesson-title-row {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }}
     .lesson-title {{ font-weight: 700; font-size: 1rem; color: var(--navy); }}
     .lesson-meta {{ margin-top: 4px; color: var(--text-muted); font-size: 0.9rem; }}
     .lesson-links {{ display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }}

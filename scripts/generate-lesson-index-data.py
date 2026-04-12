@@ -9,6 +9,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LESSON_DIR = REPO_ROOT / "lesson-plans"
 OUTPUT_PATH = LESSON_DIR / "_generated" / "lesson-index-data.json"
+STATUS_CONFIG_PATH = LESSON_DIR / "lesson-index-statuses.json"
 
 EXCLUDED_NAME_SUBSTRINGS = {
     "refcard",
@@ -260,6 +261,25 @@ def sort_key(entry: dict):
     )
 
 
+def load_status_rules() -> list[dict]:
+    if not STATUS_CONFIG_PATH.exists():
+        return []
+    raw = json.loads(STATUS_CONFIG_PATH.read_text(encoding="utf-8"))
+    return raw.get("statuses", [])
+
+
+def match_status_rule(entry: dict, rules: list[dict]) -> dict | None:
+    for rule in rules:
+        match = rule.get("match", {})
+        if all(entry.get(key) == value for key, value in match.items()):
+            return {
+                "id": rule.get("id"),
+                "label": rule.get("label"),
+                "note": rule.get("note"),
+            }
+    return None
+
+
 def build_groups(entries: list[dict]) -> list[dict]:
     groups = {}
     for entry in entries:
@@ -276,12 +296,25 @@ def build_groups(entries: list[dict]) -> list[dict]:
             item[0][1].lower(),
         ),
     ):
+        status_summaries = []
+        seen_statuses = set()
+        for entry in group_entries:
+            status = entry.get("directoryStatus")
+            if not status:
+                continue
+            status_key = (status.get("label"), status.get("note"))
+            if status_key in seen_statuses:
+                continue
+            seen_statuses.add(status_key)
+            status_summaries.append(status)
+
         grouped.append(
             {
                 "gradeLabel": grade_label,
                 "domainLabel": domain_label,
                 "count": len(group_entries),
                 "entries": group_entries,
+                "statusSummaries": status_summaries,
             }
         )
     return grouped
@@ -289,6 +322,7 @@ def build_groups(entries: list[dict]) -> list[dict]:
 
 def main() -> None:
     entries = []
+    status_rules = load_status_rules()
     scanned_files = sorted(path for path in LESSON_DIR.glob("*.html") if should_include(path))
 
     for path in scanned_files:
@@ -305,6 +339,9 @@ def main() -> None:
             "displayTitle": display_title,
             **metadata,
         }
+        status = match_status_rule(entry, status_rules)
+        if status:
+            entry["directoryStatus"] = status
         entries.append(entry)
 
     entries.sort(key=sort_key)
@@ -314,6 +351,7 @@ def main() -> None:
         "sourceDirectory": "lesson-plans",
         "sourcePattern": "lesson-plans/*.html",
         "excludedNameSubstrings": sorted(EXCLUDED_NAME_SUBSTRINGS),
+        "statusConfigPath": str(STATUS_CONFIG_PATH.relative_to(REPO_ROOT)) if STATUS_CONFIG_PATH.exists() else None,
         "entryCount": len(entries),
         "entries": entries,
         "groups": groups,

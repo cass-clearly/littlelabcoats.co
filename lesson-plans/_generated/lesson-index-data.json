@@ -16,6 +16,7 @@
     "style-guide",
     "worksheet"
   ],
+  "statusConfigPath": "lesson-plans/lesson-index-statuses.json",
   "entryCount": 228,
   "entries": [
     {
@@ -2651,7 +2652,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit1-lesson2-sensing-the-world",
@@ -2668,7 +2674,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit1-lesson3-mouths-beaks-teeth-and-getting-food",
@@ -2685,7 +2696,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit1-lesson4-movement-structures-and-finding-safety",
@@ -2702,7 +2718,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit1-lesson5-structures-for-protection-and-defense",
@@ -2719,7 +2740,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit1-lesson6-construct-an-argument-animal-structures",
@@ -2736,7 +2762,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems",
@@ -2753,7 +2784,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit2-lesson2-leaves-and-making-food",
@@ -2770,7 +2806,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit2-lesson3-water-transport-inside-plants",
@@ -2787,7 +2828,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit2-lesson4-flowers-pollination-and-reproduction",
@@ -2804,7 +2850,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit2-lesson5-seeds-fruits-and-new-plants",
@@ -2821,7 +2872,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ls1-unit2-lesson6-construct-an-argument-plant-structures",
@@ -2838,7 +2894,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "4-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ls1-full-domain",
+        "label": "Previously completed",
+        "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+      }
     },
     {
       "slug": "gr4-ess2-unit1-lesson1-weathering-breaks-rocks",
@@ -3399,7 +3460,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ls1-unit2-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Life Science Unit 2 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ls1-unit2-lesson2-water-moves-into-plants",
@@ -3416,7 +3482,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ls1-unit2-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Life Science Unit 2 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ls1-unit2-lesson3-plants-use-air-too",
@@ -3433,7 +3504,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ls1-unit2-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Life Science Unit 2 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ls1-unit2-lesson4-soil-support-minerals-and-a-common-misconception",
@@ -3450,7 +3526,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ls1-unit2-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Life Science Unit 2 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ls1-unit2-lesson5-modeling-how-plants-build-new-matter",
@@ -3467,7 +3548,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ls1-unit2-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Life Science Unit 2 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ls1-unit2-lesson6-support-the-argument-with-evidence",
@@ -3484,7 +3570,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ls1-unit2-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Life Science Unit 2 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess3-unit1-l1-human-impact",
@@ -3501,7 +3592,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess1-unit1-l1-where-is-earth-s-water",
@@ -3518,7 +3614,12 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess1-unit1-l2-evaporation-and-condensation",
@@ -3535,7 +3636,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess1-unit1-l3-precipitation-and-collection",
@@ -3552,7 +3658,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater",
@@ -3569,7 +3680,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess1-unit1-l5-earth-systems-working-together",
@@ -3586,7 +3702,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ess1-unit1-l6-modeling-a-local-water-system",
@@ -3603,7 +3724,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr5-ess1-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+      }
     },
     {
       "slug": "gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem",
@@ -4003,7 +4129,8 @@
           "bucket": "k-ps",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Kindergarten",
@@ -4214,7 +4341,8 @@
           "bucket": "k-ls",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Kindergarten",
@@ -4425,7 +4553,8 @@
           "bucket": "k-ess",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Kindergarten",
@@ -4534,7 +4663,8 @@
           "bucket": "k-ets",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Kindergarten",
@@ -4660,7 +4790,8 @@
           "bucket": "k-free-samples",
           "sourcePattern": "free-sample"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 1",
@@ -4769,7 +4900,8 @@
           "bucket": "1-ps",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 1",
@@ -4980,7 +5112,8 @@
           "bucket": "1-ls",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 1",
@@ -5089,7 +5222,8 @@
           "bucket": "1-ess",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 1",
@@ -5198,7 +5332,8 @@
           "bucket": "1-ets",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 1",
@@ -5222,7 +5357,8 @@
           "bucket": "1-free-samples",
           "sourcePattern": "free-sample"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 2",
@@ -5348,7 +5484,8 @@
           "bucket": "2-ps",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 2",
@@ -5559,7 +5696,8 @@
           "bucket": "2-ls",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 2",
@@ -5668,7 +5806,8 @@
           "bucket": "2-ess",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 2",
@@ -5777,7 +5916,8 @@
           "bucket": "2-ets",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 2",
@@ -5801,7 +5941,8 @@
           "bucket": "2-free-samples",
           "sourcePattern": "free-sample"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 3",
@@ -5910,7 +6051,8 @@
           "bucket": "3-ps",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 3",
@@ -6325,7 +6467,8 @@
           "bucket": "3-ls",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 3",
@@ -6434,7 +6577,8 @@
           "bucket": "3-ess",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 3",
@@ -6543,7 +6687,8 @@
           "bucket": "3-ets",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 3",
@@ -6567,7 +6712,8 @@
           "bucket": "3-free-samples",
           "sourcePattern": "free-sample"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 4",
@@ -6659,7 +6805,8 @@
           "bucket": "4-ps",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 4",
@@ -6681,7 +6828,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit1-lesson2-sensing-the-world",
@@ -6698,7 +6850,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit1-lesson3-mouths-beaks-teeth-and-getting-food",
@@ -6715,7 +6872,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit1-lesson4-movement-structures-and-finding-safety",
@@ -6732,7 +6894,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit1-lesson5-structures-for-protection-and-defense",
@@ -6749,7 +6916,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit1-lesson6-construct-an-argument-animal-structures",
@@ -6766,7 +6938,12 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems",
@@ -6783,7 +6960,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit2-lesson2-leaves-and-making-food",
@@ -6800,7 +6982,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit2-lesson3-water-transport-inside-plants",
@@ -6817,7 +7004,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit2-lesson4-flowers-pollination-and-reproduction",
@@ -6834,7 +7026,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit2-lesson5-seeds-fruits-and-new-plants",
@@ -6851,7 +7048,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
         },
         {
           "slug": "gr4-ls1-unit2-lesson6-construct-an-argument-plant-structures",
@@ -6868,7 +7070,19 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "4-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ls1-full-domain",
+            "label": "Previously completed",
+            "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
+          }
+        }
+      ],
+      "statusSummaries": [
+        {
+          "id": "gr4-ls1-full-domain",
+          "label": "Previously completed",
+          "note": "Full 4-LS1 domain reviewed and completed (Units 1–2)."
         }
       ]
     },
@@ -7081,7 +7295,8 @@
           "bucket": "4-ess",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 4",
@@ -7190,7 +7405,8 @@
           "bucket": "4-ets",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 4",
@@ -7214,7 +7430,8 @@
           "bucket": "4-free-samples",
           "sourcePattern": "free-sample"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 5",
@@ -7340,7 +7557,8 @@
           "bucket": "5-ps",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 5",
@@ -7464,7 +7682,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ls1-unit2-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Life Science Unit 2 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ls1-unit2-lesson2-water-moves-into-plants",
@@ -7481,7 +7704,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ls1-unit2-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Life Science Unit 2 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ls1-unit2-lesson3-plants-use-air-too",
@@ -7498,7 +7726,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ls1-unit2-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Life Science Unit 2 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ls1-unit2-lesson4-soil-support-minerals-and-a-common-misconception",
@@ -7515,7 +7748,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ls1-unit2-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Life Science Unit 2 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ls1-unit2-lesson5-modeling-how-plants-build-new-matter",
@@ -7532,7 +7770,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ls1-unit2-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Life Science Unit 2 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ls1-unit2-lesson6-support-the-argument-with-evidence",
@@ -7549,7 +7792,19 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ls1-unit2-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Life Science Unit 2 completed review and revision."
+          }
+        }
+      ],
+      "statusSummaries": [
+        {
+          "id": "gr5-ls1-unit2-review-batch-1",
+          "label": "Reviewed / revised",
+          "note": "Grade 5 Life Science Unit 2 completed review and revision."
         }
       ]
     },
@@ -7573,7 +7828,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ess1-unit1-l1-where-is-earth-s-water",
@@ -7590,7 +7850,12 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ess1-unit1-l2-evaporation-and-condensation",
@@ -7607,7 +7872,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ess1-unit1-l3-precipitation-and-collection",
@@ -7624,7 +7894,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater",
@@ -7641,7 +7916,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ess1-unit1-l5-earth-systems-working-together",
@@ -7658,7 +7938,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
         },
         {
           "slug": "gr5-ess1-unit1-l6-modeling-a-local-water-system",
@@ -7675,7 +7960,19 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr5-ess1-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
+          }
+        }
+      ],
+      "statusSummaries": [
+        {
+          "id": "gr5-ess1-unit1-review-batch-1",
+          "label": "Reviewed / revised",
+          "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
         }
       ]
     },
@@ -7786,7 +8083,8 @@
           "bucket": "5-ets",
           "sourcePattern": "structured"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Grade 5",
@@ -7844,7 +8142,8 @@
           "bucket": "5-free-samples",
           "sourcePattern": "free-sample"
         }
-      ]
+      ],
+      "statusSummaries": []
     },
     {
       "gradeLabel": "Other Lessons",
@@ -7987,7 +8286,8 @@
           "bucket": "other-lessons",
           "sourcePattern": "standalone"
         }
-      ]
+      ],
+      "statusSummaries": []
     }
   ]
 }
