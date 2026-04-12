@@ -1597,22 +1597,26 @@
       return normalizeText(value).split(' ').filter(Boolean);
     }
 
-    function expandGradeTokens(tokens) {
-      const expanded = new Set(tokens);
-      Object.entries(gradeSynonyms).forEach(([grade, synonyms]) => {
-        if (tokens.some(token => synonyms.includes(token))) {
-          expanded.add(grade);
-          synonyms.forEach(synonym => {
-            tokenize(synonym).forEach(part => expanded.add(part));
-            expanded.add(normalizeText(synonym));
-          });
-        }
-      });
-      return Array.from(expanded).filter(Boolean);
+    function buildGradeSearchText(gradeValue) {
+      const gradeKey = normalizeText(String(gradeValue || ''));
+      const synonyms = gradeSynonyms[gradeKey];
+      return synonyms ? synonyms.join(' ') : gradeKey;
     }
 
     function buildSearchText(parts) {
       return normalizeText(parts.join(' '));
+    }
+
+    function buildSearchData(parts) {
+      const text = buildSearchText(parts);
+      return {
+        text,
+        tokens: new Set(tokenize(text))
+      };
+    }
+
+    function matchesSearch(entry, tokens) {
+      return tokens.every(token => entry.tokens.has(token));
     }
 
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -1634,10 +1638,11 @@
       const domain = (domainPanel && domainPanel.dataset.domain) || (domainGroup && domainGroup.dataset.domain) || '';
       const lessons = Array.from(card.querySelectorAll('.lesson-item')).map(item => ({
         element: item,
-        text: buildSearchText([
+        ...buildSearchData([
           item.textContent,
           gradeTitle,
           'Grade ' + grade,
+          buildGradeSearchText(grade),
           domain,
           ...meta,
           unitName
@@ -1650,10 +1655,11 @@
         domainGroup,
         grade,
         domain,
-        text: buildSearchText([
+        ...buildSearchData([
           unitName,
           gradeTitle,
           'Grade ' + grade,
+          buildGradeSearchText(grade),
           domain,
           ...meta,
           body ? body.textContent : ''
@@ -1665,7 +1671,7 @@
     function updateSearch() {
       const query = activeSearchInput ? activeSearchInput.value.trim() : '';
       const normalizedQuery = normalizeText(query);
-      const expandedTokens = expandGradeTokens(tokenize(query));
+      const searchTokens = tokenize(query);
       const searching = normalizedQuery.length > 0;
       let visibleSections = 0;
       let visibleUnits = 0;
@@ -1675,9 +1681,9 @@
         let matchingLessons = 0;
 
         if (searching) {
-          unitMatches = expandedTokens.every(token => unit.text.indexOf(token) !== -1);
+          unitMatches = matchesSearch(unit, searchTokens);
           unit.lessons.forEach(lesson => {
-            const lessonMatch = expandedTokens.every(token => lesson.text.indexOf(token) !== -1);
+            const lessonMatch = matchesSearch(lesson, searchTokens);
             lesson.element.classList.toggle('search-hidden', !lessonMatch);
             if (lessonMatch) {
               matchingLessons += 1;
