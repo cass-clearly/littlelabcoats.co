@@ -2906,7 +2906,10 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ls1-unit2-lesson2-water-moves-into-plants",
@@ -2923,7 +2926,10 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ls1-unit2-lesson3-plants-use-air-too",
@@ -2940,7 +2946,10 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ls1-unit2-lesson4-soil-support-minerals-and-a-common-misconception",
@@ -2957,7 +2966,10 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ls1-unit2-lesson5-modeling-how-plants-build-new-matter",
@@ -2974,7 +2986,10 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ls1-unit2-lesson6-support-the-argument-with-evidence",
@@ -2991,7 +3006,10 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "5-ls",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ess3-unit1-l1-human-impact",
@@ -6366,7 +6384,10 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "reviewStatus": "reviewed-round-1-revised",
+          "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+          "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ls1-unit2-lesson2-water-moves-into-plants",
@@ -6383,7 +6404,10 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "reviewStatus": "reviewed-round-1-revised",
+          "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+          "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ls1-unit2-lesson3-plants-use-air-too",
@@ -6400,7 +6424,10 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "reviewStatus": "reviewed-round-1-revised",
+          "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+          "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ls1-unit2-lesson4-soil-support-minerals-and-a-common-misconception",
@@ -6417,7 +6444,10 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "reviewStatus": "reviewed-round-1-revised",
+          "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+          "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ls1-unit2-lesson5-modeling-how-plants-build-new-matter",
@@ -6434,7 +6464,10 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "reviewStatus": "reviewed-round-1-revised",
+          "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+          "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ls1-unit2-lesson6-support-the-argument-with-evidence",
@@ -6451,7 +6484,10 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "5-ls",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "reviewStatus": "reviewed-round-1-revised",
+          "reviewBatch": "gr5-ls1-unit2-review-batch-1",
+          "reviewedBy": ["Rachel", "Margaret"]
         }
       ]
     },

@@ -39,21 +39,22 @@ Practical execution order:
 | Batch ID | Scope | Status | Rachel | Margaret | Revisions | Directory/status updated | Commit+push | Public verify | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | gr5-ess1-unit1-review-batch-1 | Grade 5 ESS1 Unit 1 lessons 1-6 + refcard + quiz | completed | yes | yes | yes | yes | yes | yes | First concrete execution batch completed 2026-04-12. Commit `9a0c8c4` pushed to `origin/main`; backend document IDs were created/reconciled and representative live review HTML now serves the new ESS1 document IDs. |
+| gr5-ls1-unit2-review-batch-1 | Grade 5 LS1 Unit 2 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | yes | yes | yes | yes | Reviewer-first continuation resumed 2026-04-12 from direct source/live inspection because live comment feed was empty; see `lesson-plans/gr5-life-science-batch-review.md`. |
 | gr4-ls1-remarq-review-revise-loop | Grade 4 LS1 Units 1-2 lessons/refcards/quizzes | previously completed | yes | yes | yes | yes | yes | yes | Proven prior batch, see `lesson-plans/gr4-life-science-batch-review.md`. |
 
 ## Current next action
 
 Next required ship step:
-- move to the next coherent reviewed batch now that Grade 5 ESS1 Unit 1 is shipped end-to-end
-- preferred next content batch: Grade 5 LS1 Unit 2 plant matter & growth
+- move to the next coherent reviewed batch now that Grade 5 ESS1 Unit 1 and Grade 5 LS1 Unit 2 are shipped end-to-end
+- preferred next content batch: Kindergarten PS3 Unit 2 sun/heat set unless a more urgent still-open comment batch is directly proved first
 - keep release gating strict: Rachel + Margaret review first, literal fixes second, public verification before counting anything as released
 
 ## Candidate next batches after current one
 
 Priority candidates:
-- Grade 5 LS1 Unit 2 plant matter & growth
 - Kindergarten PS3 Unit 2 sun/heat set
 - Grade 2 LS2 Unit 1 plant/pollinator/ecosystem set (after Remarq-path reconciliation planning)
+- Grade 5 LS1 Unit 1 ecosystem matter set
 
 ## Notes for future continuation
 
@@ -62,3 +63,4 @@ Priority candidates:
 - keep each batch small enough to review, revise, push, and verify in one chunk
 - prefer unit-shaped batches over random lesson-by-lesson hopping unless a blocker forces a surgical pass
 - 2026-04-12 closeout note: the previously active Pollinators + Grade 4 LS1 open-comment set was rechecked and then closed in Remarq after live/source verification; those tracked documents now show `0` open top-level comments across that active set
+- 2026-04-12 continuation note: Grade 5 LS1 Unit 2 had live review-mode coverage and stable document IDs but no current comment-feed artifact, so the batch resumed via direct source/live Rachel + Margaret review notes recorded in `lesson-plans/gr5-life-science-batch-review.md` before literal fixes were applied
