@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-12
 Chunk: `gr5-ess1-unit1-review-batch-1`
-Status: round-1 Rachel + Margaret review recorded; round-1 revisions applied in repo; review index + main lesson directory updated with reviewed-status exposure; live review paths verified; publish push pending
+Status: round-1 Rachel + Margaret review recorded; round-1 revisions applied in repo; review index + main lesson directory updated with reviewed-status exposure; Remarq document IDs reconciled; commit `9a0c8c4` pushed to `origin/main`; representative public review HTML reverified
 
 ## Scope
 
@@ -57,8 +57,9 @@ Representative verified URLs:
 - `https://littlelabcoats.co/lesson-plans/gr5-ess1-unit1-refcard.html?review=1`
 
 Important honesty note:
-- the current configured Grade 5 ESS1 Unit 1 document IDs still return `404` from the reachable Remarq backend at `http://192.168.5.204:3334/documents/:id`
-- so this batch records the real content review/revision pass and directory rollout, but Remarq backend document creation / reconciliation is still an open operational follow-up
+- at the start of this batch, the configured Grade 5 ESS1 Unit 1 document IDs were returning `404` from the reachable Remarq backend at `http://192.168.5.204:3334/documents/:id`
+- on 2026-04-12, real backend documents were created/reconciled for all 6 lessons plus the unit quiz and refcard, the source files were updated to those real IDs, and representative public review HTML now serves the reconciled IDs
+- this removes the earlier ESS1 Remarq-blocker for this batch, but it does **not** imply the wider library has been reconciled yet
 
 ## Rachel review artifact
 
@@ -145,10 +146,12 @@ The following surfaces now expose this batch as actively reviewed / revised:
 
 ## Remaining follow-up for this batch
 
-Not complete yet:
-- Remarq backend document creation/reconciliation for the Grade 5 ESS1 Unit 1 lesson/refcard/quiz IDs
-- post-push public verification against the newly updated files
-- commit and push for this batch
+Batch-complete status:
+- commit `9a0c8c4` is pushed to `origin/main`
+- representative public review verification has been rerun on the live ESS1 lesson/refcard/quiz routes after the push
+- the ESS1 lesson/refcard/quiz source files now point at real backend document IDs that resolve at the checked Remarq backend
+
+No open follow-up remains for this batch itself beyond normal future regression monitoring.
 
 ## Honest batch disposition
 
@@ -160,5 +163,5 @@ What this file truthfully proves now:
 
 What this file does not claim:
 - it does not claim the entire library is complete
-- it does not claim Grade 5 ESS1 Unit 1 Remarq backend documents are already reconciled
-- it does not claim a post-edit publish push has happened yet in this exact chunk
+- it does not claim the wider Little Lab Coats Remarq backlog is reconciled outside this specific ESS1 batch
+- it does not claim later Grade 5 batches already went through the same end-to-end cycle
