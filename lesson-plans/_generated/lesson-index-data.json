@@ -3025,7 +3025,10 @@
       "lessonNumber": 1,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ess1-unit1-l2-evaporation-and-condensation",
@@ -3042,7 +3045,10 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ess1-unit1-l3-precipitation-and-collection",
@@ -3059,7 +3065,10 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater",
@@ -3076,7 +3085,10 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ess1-unit1-l5-earth-systems-working-together",
@@ -3093,7 +3105,10 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "gr5-ess1-unit1-l6-modeling-a-local-water-system",
@@ -3110,7 +3125,10 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "5-ess",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
     },
     {
       "slug": "5th-forces-balanced-unbalanced",
@@ -6474,7 +6492,10 @@
           "lessonNumber": 1,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ess1-unit1-l2-evaporation-and-condensation",
@@ -6491,7 +6512,10 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ess1-unit1-l3-precipitation-and-collection",
@@ -6508,7 +6532,10 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ess1-unit1-l4-runoff-infiltration-and-groundwater",
@@ -6525,7 +6552,10 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ess1-unit1-l5-earth-systems-working-together",
@@ -6542,7 +6572,10 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
         },
         {
           "slug": "gr5-ess1-unit1-l6-modeling-a-local-water-system",
@@ -6559,7 +6592,10 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "5-ess",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+      "reviewStatus": "reviewed-round-1-revised",
+      "reviewBatch": "gr5-ess1-unit1-review-batch-1",
+      "reviewedBy": ["Rachel", "Margaret"]
         }
       ]
     },
