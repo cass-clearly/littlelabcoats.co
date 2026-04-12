@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Design Reference Card — Grade 1 ETS1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; background: #F3E8FF; color: #0a1929; padding: 24px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+    @media print {
+      @page { size: letter portrait; margin: 0; }
+      body { background: white; padding: 0; min-height: 0; height: 11in; }
+      .no-print { display: none !important; }
+      .page-card { width: 100%; max-width: 100%; box-shadow: none; border-radius: 0; height: 11in; page-break-after: avoid; }
+      .grid-section { flex: 1; min-height: 0; }
+      .tile { min-height: 0 !important; }
+    }
+    .page-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); width: 100%; max-width: 8.5in; display: flex; flex-direction: column; overflow: hidden; }
+    .header-banner { background: #7B2FBE; color: white; text-align: center; padding: 28px 24px 22px; flex-shrink: 0; }
+    .header-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .header-banner .subtitle { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; color: #d7c3ef; text-transform: uppercase; }
+    .grid-section { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; flex: 1; min-height: 0; }
+    .tile { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 34px 26px; text-align: center; border: 3px solid rgba(255,255,255,0.6); min-height: 260px; }
+    .tile-problem { background: #F3E8FF; }
+    .tile-nature { background: #fce4ec; }
+    .tile-plan { background: #e0f7fa; }
+    .tile-improve { background: #fff9c4; }
+    .tile-emoji { font-size: 3.5rem; line-height: 1; margin-bottom: 10px; }
+    .tile-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 14px; letter-spacing: 1px; }
+    .tile-problem .tile-name { color: #7B2FBE; }
+    .tile-nature .tile-name { color: #880e4f; }
+    .tile-plan .tile-name { color: #006064; }
+    .tile-improve .tile-name { color: #f57f17; }
+    .tile-bullets { list-style: none; width: 100%; }
+    .tile-bullets li { font-size: 1.02rem; font-weight: 700; line-height: 1.4; padding: 5px 0; color: #1a1a1a; }
+    .tile-bullets li + li { border-top: 1px solid rgba(0,0,0,0.08); }
+    .facts-strip { background: #7B2FBE; display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding: 18px 20px; gap: 10px; flex-shrink: 0; }
+    .fact-pill { background: rgba(255,255,255,0.18); border: 2px solid rgba(255,255,255,0.5); border-radius: 999px; color: white; font-size: 0.92rem; font-weight: 700; padding: 10px 18px; text-align: center; flex: 1; line-height: 1.3; }
+    .footer { background: #F3E8FF; text-align: center; padding: 12px; font-size: 0.85rem; color: #555; font-weight: 700; letter-spacing: 1px; flex-shrink: 0; }
+    .print-btn { margin-top: 20px; padding: 12px 32px; background: #7B2FBE; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+  </style>
+</head>
+<body data-document-id="doc_gr1_ets1_refcard">
+  <div class="page-card">
+    <div class="header-banner">
+      <h1>🛠️ Engineering Design</h1>
+      <div class="subtitle">Grade 1 Reference Card</div>
+    </div>
+    <div class="grid-section">
+      <div class="tile tile-problem"><div class="tile-emoji">🤔</div><div class="tile-name">START WITH A PROBLEM</div><ul class="tile-bullets"><li>Name who needs help</li><li>Say what is hard</li><li>Decide what success should do</li></ul></div>
+      <div class="tile tile-nature"><div class="tile-emoji">🦆🌿</div><div class="tile-name">LOOK AT NATURE</div><ul class="tile-bullets"><li>Animal parts solve problems</li><li>Beaks, claws, and stems give ideas</li><li>Nature can inspire new tools</li></ul></div>
+      <div class="tile tile-plan"><div class="tile-emoji">✏️📦</div><div class="tile-name">PLAN AND BUILD</div><ul class="tile-bullets"><li>Draw your tool first</li><li>Label the most helpful parts</li><li>Build a simple model of version 1</li></ul></div>
+      <div class="tile tile-improve"><div class="tile-emoji">🧪🔁</div><div class="tile-name">TEST AND IMPROVE</div><ul class="tile-bullets"><li>Try the model on the real problem</li><li>Notice what worked and what did not</li><li>Change one part to make version 2 stronger</li></ul></div>
+    </div>
+    <div class="facts-strip">
+      <div class="fact-pill">Problem → Idea → Plan → Build</div>
+      <div class="fact-pill">Test what happened</div>
+      <div class="fact-pill">Improve with evidence</div>
+    </div>
+    <div class="footer">NATURE-INSPIRED TOOLS • GRADE 1 ENGINEERING • LITTLE LAB COATS</div>
+  </div>
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Print Reference Card</button>
+  <script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_gr1_ets1_refcard" data-content-selector="body"></script>
+</body>
+</html>

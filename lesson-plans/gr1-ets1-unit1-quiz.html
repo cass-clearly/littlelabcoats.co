@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Design Quiz — Grade 1, Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #F3E8FF; color: #222; }
+    .quiz-header { background: linear-gradient(135deg, #7B2FBE, #0288d1); color: white; border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(21,101,192,0.3); }
+    .quiz-header h1 { margin: 0 0 8px 0; font-size: 1.8rem; }
+    .quiz-header p { margin: 0; opacity: 0.9; font-size: 1rem; }
+    .score-bar { background: white; border: 3px solid #7B2FBE; border-radius: 12px; padding: 12px 20px; text-align: center; margin-bottom: 24px; font-size: 1.2rem; font-weight: bold; color: #7B2FBE; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .back-link { display: inline-block; margin-bottom: 20px; color: #7B2FBE; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .back-link:hover { text-decoration: underline; }
+    .question-card { background: white; border-radius: 14px; padding: 22px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 2px solid #90caf9; }
+    .question-text { font-size: 1.15rem; font-weight: 600; margin-bottom: 16px; color: #7B2FBE; line-height: 1.4; }
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 500px) { .options { grid-template-columns: 1fr; } }
+    .option-btn { background: #F3E8FF; border: 2px solid #90caf9; border-radius: 10px; padding: 12px 14px; font-size: 1rem; cursor: pointer; text-align: left; transition: all 0.15s; color: #222; line-height: 1.3; }
+    .option-btn:hover:not(:disabled) { background: #bbdefb; border-color: #7B2FBE; }
+    .option-btn.correct { background: #c8e6c9; border-color: #2e7d32; color: #1b5e20; font-weight: 600; }
+    .option-btn.wrong { background: #ffcdd2; border-color: #c62828; color: #b71c1c; }
+    .option-btn:disabled { cursor: default; }
+    .feedback-box { display: none; margin-top: 14px; padding: 12px 16px; border-radius: 10px; font-size: 0.95rem; line-height: 1.5; }
+    .feedback-box.correct-fb { background: #e8f5e9; border: 2px solid #66bb6a; color: #1b5e20; }
+    .feedback-box.wrong-fb { background: #fff3e0; border: 2px solid #ffa726; color: #e65100; }
+    .results-panel { display: none; background: white; border-radius: 16px; padding: 32px; text-align: center; margin-top: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 3px solid #7B2FBE; }
+    .results-panel h2 { color: #7B2FBE; font-size: 1.8rem; margin-bottom: 12px; }
+    .results-score { font-size: 2.5rem; font-weight: bold; color: #7B2FBE; }
+    .results-msg { font-size: 1.15rem; margin-top: 16px; color: #333; }
+    .results-emoji { font-size: 3rem; }
+    .retry-btn { background: #7B2FBE; color: white; border: none; border-radius: 10px; padding: 12px 28px; font-size: 1rem; cursor: pointer; margin-top: 20px; font-weight: 600; }
+    .q-number { font-size: 0.8rem; color: #90caf9; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  </style>
+</head>
+<body data-document-id="doc_gr1_ets1_unit1_quiz">
+  <a class="back-link" href="gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html">← Back to Lesson 1: What Problem Can We Solve?</a>
+  <div class="quiz-header"><h1>🛠️ Engineering Design Quiz 🌿</h1><p>Engineering · Unit 1 · Grade 1</p></div>
+  <div class="score-bar" id="scoreBar">Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> &nbsp;|&nbsp; Questions answered: <span id="answeredNum">0</span></div>
+  <div id="quizContainer"></div>
+  <div class="results-panel" id="resultsPanel"><div class="results-emoji" id="resultsEmoji"></div><h2>Quiz Complete! 🎉</h2><div class="results-score" id="resultsScore"></div><div class="results-msg" id="resultsMsg"></div><br><button class="retry-btn" onclick="resetQuiz()">🔄 Try Again</button></div>
+  <script>
+    const questions = [
+      { q: 'What do engineers do first?', options: ['Pick colors', 'Name the problem', 'Cut paper', 'Build the final version'], correct: 1, explanation: 'Engineering starts by noticing a problem and deciding who needs help.' },
+      { q: 'Why do engineers look at animals and plants in this unit?', options: ["To copy nature's helpful ideas", 'Because tools must be alive', 'To avoid testing', 'Because drawing animals is easier'], correct: 0, explanation: 'Nature-inspired design means learning from structures that already solve problems.' },
+      { q: 'What should a plan show?', options: ['Only decorations', 'The problem, helpful parts, and what the tool should do', "Just the child's name", 'Nothing until testing'], correct: 1, explanation: 'A useful plan shows how the tool is supposed to work before building starts.' },
+      { q: 'What is a model?', options: ['The biggest final tool only', 'A smaller version used to try an idea', 'A random toy', 'A drawing with no purpose'], correct: 1, explanation: 'A model is something engineers build to test whether an idea can work.' },
+      { q: 'Why do engineers test their design?', options: ['To see what worked and what needs improvement', 'To make it messier', 'To skip planning', 'To use more tape'], correct: 0, explanation: 'Tests give engineers information they can use to improve the design.' },
+      { q: 'What should version 2 do?', options: ['Ignore version 1', 'Change one part to solve a problem better', 'Use no evidence', 'Be exactly the same as version 1'], correct: 1, explanation: 'Version 2 should improve something important based on what happened during testing.' },
+      { q: 'What makes a final explanation strong?', options: ['It only says the tool is cool', 'It tells the problem, the inspiration, and what improved', 'It skips the problem', 'It only names the materials'], correct: 1, explanation: 'A strong explanation connects the problem, the nature idea, and the improvement.' },
+      { q: 'If your tool did not work perfectly the first time, what should you do?', options: ['Give up', 'Hide the model', 'Use the evidence to improve it', 'Change the problem'], correct: 2, explanation: 'Engineers expect to learn from testing and improve the next version.' },
+      { q: 'What is evidence in engineering?', options: ['What you observed during the test', 'A guess before building', 'Only what a friend says', 'The color of the tool'], correct: 0, explanation: 'Evidence is what actually happened during your test.' },
+      { q: 'Why is nature a good place to get design ideas?', options: ['Nature already has structures that help living things survive', 'Nature never changes', 'Animals are tools', 'Nature does not need testing'], correct: 0, explanation: 'Animal and plant structures often solve real problems in smart ways.' }
+    ];
+    let score = 0;
+    let answered = 0;
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = '';
+      questions.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        const qNumber = document.createElement('div');
+        qNumber.className = 'q-number';
+        qNumber.textContent = `Question ${index + 1}`;
+        const qText = document.createElement('div');
+        qText.className = 'question-text';
+        qText.textContent = item.q;
+        const optionsWrap = document.createElement('div');
+        optionsWrap.className = 'options';
+        const feedback = document.createElement('div');
+        feedback.className = 'feedback-box';
+        item.options.forEach((opt, optIndex) => {
+          const btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.textContent = opt;
+          btn.onclick = () => answerQuestion(index, optIndex, btn, optionsWrap, feedback);
+          optionsWrap.appendChild(btn);
+        });
+        card.appendChild(qNumber);
+        card.appendChild(qText);
+        card.appendChild(optionsWrap);
+        card.appendChild(feedback);
+        container.appendChild(card);
+      });
+    }
+    function answerQuestion(qIndex, optIndex, btn, optionsWrap, feedback) {
+      if (optionsWrap.dataset.answered === 'true') return;
+      optionsWrap.dataset.answered = 'true';
+      answered++;
+      const question = questions[qIndex];
+      Array.from(optionsWrap.children).forEach((button, i) => {
+        button.disabled = true;
+        if (i === question.correct) button.classList.add('correct');
+      });
+      if (optIndex === question.correct) {
+        score++;
+        feedback.className = 'feedback-box correct-fb';
+      } else {
+        btn.classList.add('wrong');
+        feedback.className = 'feedback-box wrong-fb';
+      }
+      feedback.textContent = question.explanation;
+      feedback.style.display = 'block';
+      document.getElementById('scoreNum').textContent = score;
+      document.getElementById('answeredNum').textContent = answered;
+      if (answered === questions.length) showResults();
+    }
+    function showResults() {
+      const panel = document.getElementById('resultsPanel');
+      const emoji = document.getElementById('resultsEmoji');
+      const scoreText = document.getElementById('resultsScore');
+      const msg = document.getElementById('resultsMsg');
+      panel.style.display = 'block';
+      scoreText.textContent = `${score} / ${questions.length}`;
+      if (score === questions.length) { emoji.textContent = '🏆'; msg.textContent = 'Perfect score! You can explain the whole design process.'; }
+      else if (score >= 8) { emoji.textContent = '🌟'; msg.textContent = 'Great job! You are thinking like an engineer.'; }
+      else if (score >= 5) { emoji.textContent = '👏'; msg.textContent = 'Nice work! Review the problem, plan, and redesign steps to get even stronger.'; }
+      else { emoji.textContent = '💡'; msg.textContent = 'Keep going! Engineers learn by trying, testing, and improving.'; }
+    }
+    function resetQuiz() { score = 0; answered = 0; document.getElementById('scoreNum').textContent = '0'; document.getElementById('answeredNum').textContent = '0'; document.getElementById('resultsPanel').style.display = 'none'; renderQuiz(); }
+    renderQuiz();
+  </script>
+  <script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_gr1_ets1_unit1_quiz" data-content-selector="body"></script>
+</body>
+</html>

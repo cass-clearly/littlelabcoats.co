@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Define the Bridge Problem — Grade 2 Engineering Unit 1</title>
+  <style>
+
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #8e44ad; padding-bottom: 10px; color: #8e44ad; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #f4e6fb; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #d2b4de; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #8e44ad; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #6c3483; border-bottom: 2px solid #d2b4de; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 5px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .objective-box { background: #f4e6fb; border: 2px solid #d2b4de; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #6c3483; border-color: #ffcc80; }
+    .procedure-step { background: #f4e6fb; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #8e44ad; }
+    .question-box { background: #fffaf3; border-left: 5px solid #ff8f00; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .extension-box { background: #e8eaf6; border: 1px solid #9fa8da; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .teacher-note, .answer-key { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .answer-key { border-width: 3px; padding: 20px; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #faf5ff; border: 1.5px solid #8e44ad; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #6c3483; }
+    .callout-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0; }
+    .callout-card { border: 2px solid #d2b4de; border-radius: 10px; padding: 12px; background: #fff; }
+    .callout-card strong { color: #6c3483; }
+    .worksheet-section { margin: 20px 0; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-area { border: 1.5px dashed #bbb; border-radius: 6px; height: 90px; background: #fafafa; margin-top: 8px; }
+    .line-block p { border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0; }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10pt; }
+    .compare-table th { background: #8e44ad; color: white; padding: 8px 10px; border: 1.5px solid #6c3483; text-align: left; }
+    .compare-table td { border: 1.5px solid #d2b4de; padding: 10px; vertical-align: top; height: 46px; }
+    .compare-table tr:nth-child(even) td { background: #faf5ff; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #8e44ad; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .answer-key, .callout-card { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+  </style>
+</head>
+<body data-document-id="doc_gr2_ets1_unit1_lesson1_define_the_bridge_problem">
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>Define the Bridge Problem</h1>
+  <p class="subtitle">Engineering — Bridge Builders | Unit 1, Lesson 1 of 6</p>
+  <div class="meta"><span>📚 <strong>Grade:</strong> 2nd Grade</span><span>⏱️ <strong>Duration:</strong> 40–50 minutes</span><span>🛠️ <strong>Subject:</strong> Engineering — Bridge Builders</span></div>
+  <div class="hero-image"><div class="emoji-hero">🌉🤔🧱</div><div class="caption">Engineers start by naming the gap, the user, and what a successful bridge must do.</div></div>
+  <div class="standards-box"><strong>📋 NGSS Standard:</strong><br><strong>K-2-ETS1-1 — Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.</strong></div>
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box"><p>Students will define a simple bridge-design problem by naming who needs the bridge, what the bridge must cross, and what success should look like.</p></div>
+  <h2>💡 The Big Idea</h2>
+  <p>A strong bridge design begins with a clear problem. Engineers need to know who the bridge is for, what gap it must cross, and what the bridge must do before they start building.</p>
+  <h2>🔬 The Science</h2>
+  <p>Bridges help people, animals, or vehicles cross over something safely. A bridge might cross water, a road, or a deep space between two places.</p><p>In this unit, students will design a small model bridge for a toy animal to cross between two tables or stacks of books. The bridge must stay up, reach across the gap, and hold a small weight.</p><p>Lesson 1 is about the problem, not the building. When students clearly name the user, the gap, and the success rules, they make smarter choices later.</p>
+  <div class="tip-box"><strong>💡 Key Vocabulary</strong><div class="vocab-chips"><span class="vocab-chip">bridge</span><span class="vocab-chip">gap</span><span class="vocab-chip">user</span><span class="vocab-chip">problem</span><span class="vocab-chip">criteria</span><span class="vocab-chip">constraint</span></div></div>
+  <div class="callout-grid"><div class="callout-card"><strong>bridge</strong><br>a structure that helps something cross over a gap</div><div class="callout-card"><strong>gap</strong><br>the space the bridge must reach across</div><div class="callout-card"><strong>criteria</strong><br>what the bridge must do to count as successful</div><div class="callout-card"><strong>constraint</strong><br>a limit such as size, time, or materials</div></div>
+  <h2>Materials</h2>
+  <div class="materials-box"><h3>🏠 Household Items to Gather</h3><ul><li>Printed lesson pages and worksheet</li><li>Pencil and crayons</li><li>Two books, boxes, or cups to show a simple gap</li><li>A small toy animal or figurine</li></ul><h3>📋 Printables</h3><ul><li>Student worksheet page from this lesson</li></ul></div>
+  <h2>Let's Get Started</h2>
+  <div class="procedure-step"><strong>Step 1</strong> — <strong>Launch the Challenge</strong>: Show two books with a small space between them. Explain that a toy animal needs a bridge to get safely across.</div><div class="procedure-step"><strong>Step 2</strong> — <strong>Name the User and Need</strong>: Ask who needs help and what the bridge must help the toy do. Keep the problem concrete and visible.</div><div class="procedure-step"><strong>Step 3</strong> — <strong>Set Success Rules</strong>: Generate simple criteria such as reaches across the gap, stays up, and holds the toy animal without falling.</div><div class="procedure-step"><strong>Step 4</strong> — <strong>Notice Constraints</strong>: Discuss limits: only simple household materials, bridge must fit the gap, and building time is short.</div><div class="procedure-step"><strong>Step 5</strong> — <strong>Write the Problem Statement</strong>: Students complete a sentence frame naming the user, the need, and what success means.</div>
+  <h2>Discussion Questions</h2>
+  <div class="question-box"><strong>Why do engineers name the problem before they build?</strong><span class="discussion-hint">Look for: it helps them know what the design must do.</span></div><div class="question-box"><strong>Who is the user in our bridge challenge?</strong><span class="discussion-hint">Look for: the toy animal or traveler trying to cross.</span></div><div class="question-box"><strong>What does the bridge have to do to be successful?</strong><span class="discussion-hint">Look for: reach the gap, stay up, and hold the toy.</span></div><div class="question-box"><strong>Why are limits like materials and time important?</strong><span class="discussion-hint">Look for: real designs must work within limits.</span></div>
+  <h2>Extensions</h2>
+  <div class="extension-box"><p><strong>Extension:</strong> Look around your neighborhood or books for different real bridges and ask what each one is helping people cross.</p><p><strong>Extension:</strong> Use blocks or cups to create a wider and narrower gap, then predict which one would be harder for a bridge.</p></div>
+  <h2>Parent/Teacher Notes</h2>
+  <div class="teacher-note"><p><strong>Teaching note:</strong> Students often jump straight to “make it tall” or “make it pretty.” Redirect them to what the bridge must do first.</p><p><strong>Teaching note:</strong> Keep the challenge small and concrete so the criteria feel reachable for Grade 2 students.</p></div>
+  <div class="page-break"><h2>Student Worksheet</h2>
+
+<div class="worksheet-section">
+  <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+  <h3>1️⃣ Define the Challenge</h3>
+  <p>The user who needs help is __________________________________________.</p>
+  <p>The gap the bridge must cross is ____________________________________.</p>
+</div>
+<div class="worksheet-section">
+  <h3>2️⃣ What Must the Bridge Do?</h3>
+  <table class="compare-table">
+    <tr><th>Success rule</th><th>Why it matters</th></tr>
+    <tr><td></td><td></td></tr>
+    <tr><td></td><td></td></tr>
+    <tr><td></td><td></td></tr>
+  </table>
+</div>
+<div class="worksheet-section">
+  <h3>3️⃣ Write a Problem Statement</h3>
+  <p style="font-size:10pt;">Use this frame: <em>I need to design a bridge that helps __________ cross __________ so it can __________.</em></p>
+  <div class="line-block"><p></p><p></p><p></p></div>
+</div>
+
+</div>
+  <div class="page-break"><div class="answer-key"><h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
+
+<h3>1️⃣ Define the Challenge — Sample Use</h3><p>Accept answers that clearly name the toy animal/user and the gap the bridge must cross.</p>
+<h3>2️⃣ What Must the Bridge Do? — Sample Ideas</h3><p>Strong rules include reaching the gap, staying balanced, and holding the toy or a few pennies.</p>
+<h3>3️⃣ Write a Problem Statement — Model Response</h3><p>“I need to design a bridge that helps a toy fox cross a gap between two books so it can get to the other side safely.”</p>
+<h3>✅ What Success Looks Like</h3><ul><li>Student names a clear user and gap.</li><li>Student lists at least two useful success rules.</li><li>Student writes a bridge problem statement that makes sense.</li></ul>
+<h3>🛠️ Troubleshooting / Teaching Notes</h3><ul><li>If a student focuses on colors or decorations, ask what the bridge must do first.</li><li>If the problem statement is vague, bring the toy and gap back into view and restate the need out loud.</li></ul>
+
+</div></div>
+  <script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_gr2_ets1_unit1_lesson1_define_the_bridge_problem" data-content-selector="body"></script>
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing the lesson preview. Subscribe to access the full procedure, Student Worksheet, discussion questions, and Parent Answer Key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p><a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'gather before you start', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.body.style.overflow = 'hidden'; document.body.style.maxHeight = '600px'; document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>
