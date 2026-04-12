@@ -128,3 +128,20 @@ Purpose: creation-only backlog inventory for the goal of at least one **reviewab
   - `gr4-ess2-unit1-refcard-lesson6-explain-how-earth-processes-shape-landforms.html`
   - `gr4-ess2-unit1-quiz.html`
 - Remaining coherent creation gap after this batch: Grade 4 Engineering Unit 1 is now the next clean missing-domain package, followed by the remaining Grade 4 Physical Science Unit 1 lessons beyond the caller-excluded Lesson 1 item.
+
+## Shipped in the next coherent backlog batch
+- Grade 4 Engineering Unit 1 full new package using the existing 3–5 LLC engineering package shape as the canonical scaffold, adapted to Grade 4 disaster-resistant shelter design rigor:
+  - `gr4-ets1-unit1-lesson1-define-the-storm-shelter-problem.html`
+  - `gr4-ets1-unit1-lesson2-compare-shelter-materials-and-shapes.html`
+  - `gr4-ets1-unit1-lesson3-plan-a-testable-storm-shelter.html`
+  - `gr4-ets1-unit1-lesson4-build-and-run-the-first-shelter-test.html`
+  - `gr4-ets1-unit1-lesson5-redesign-using-test-evidence.html`
+  - `gr4-ets1-unit1-lesson6-present-and-defend-your-shelter-solution.html`
+  - `gr4-ets1-unit1-refcard-lesson1-define-the-storm-shelter-problem.html`
+  - `gr4-ets1-unit1-refcard-lesson2-compare-shelter-materials-and-shapes.html`
+  - `gr4-ets1-unit1-refcard-lesson3-plan-a-testable-storm-shelter.html`
+  - `gr4-ets1-unit1-refcard-lesson4-build-and-run-the-first-shelter-test.html`
+  - `gr4-ets1-unit1-refcard-lesson5-redesign-using-test-evidence.html`
+  - `gr4-ets1-unit1-refcard-lesson6-present-and-defend-your-shelter-solution.html`
+  - `gr4-ets1-unit1-quiz.html`
+- Remaining coherent creation gap after this batch: the remaining Grade 4 Physical Science Unit 1 lessons beyond the caller-excluded already-finished Lesson 1 item.
