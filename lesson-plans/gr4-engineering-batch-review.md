@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-12
 Chunk: `gr4-ets1-unit1-review-batch-1`
-Status: round-1 Rachel + Margaret review recorded from direct source/live inspection; round-1 revisions applied in repo; reviewed-status exposure added to the directory surfaces; commit/push/live verification pending for this batch
+Status: round-1 Rachel + Margaret review recorded from direct source/live inspection; round-1 revisions applied in repo; reviewed-status exposure added to the directory surfaces; commit/push and representative public verification completed for this batch
 
 ## Scope
 
@@ -115,13 +115,31 @@ Reserved only if a later live/Remarq follow-up pass surfaces additional issues.
 Status: `not started`
 Reserved only if a later live/Remarq follow-up pass surfaces additional issues.
 
+## Public/status verification log
+
+Verified live on 2026-04-12 after push and cache-busting:
+- `https://littlelabcoats.co/lesson-plans/?cb=gr4etscloseout4`
+  - confirmed public lesson index contains `Grade 4 Engineering Unit 1 completed review and revision.`
+  - confirmed the representative lesson `Define the Storm Shelter Problem` now shows the `Reviewed / revised` badge in the public lesson directory
+- `https://littlelabcoats.co/lesson-plans/review/?cb=gr4etscloseout4`
+  - confirmed public review index contains `Grade 4 Engineering Unit 1 completed review and revision.`
+  - confirmed the representative lesson `Define the Storm Shelter Problem` now shows the `Reviewed / revised` badge in the public review directory
+- `https://littlelabcoats.co/lesson-plans/gr4-ets1-unit1-lesson2-compare-shelter-materials-and-shapes.html?review=1&cb=gr4etscloseout4`
+  - confirmed the strengthened worksheet coaching is live on the public review URL
+- `https://littlelabcoats.co/lesson-plans/gr4-ets1-unit1-refcard-lesson4-build-and-run-the-first-shelter-test.html?review=1&cb=gr4etscloseout4`
+  - confirmed the refcard `Key vocabulary` row now shows real vocabulary chips (`fair test`, `variable`, `prototype`, `failure point`, `evidence`, `observation`) instead of character-by-character chips
+  - confirmed the refcard still exposes `data-document-id="doc_gr4ets1u1l4r"`
+- `https://littlelabcoats.co/lesson-plans/gr4-ets1-unit1-quiz.html?review=1&cb=gr4etscloseout4`
+  - confirmed the strengthened same-fair-test short-response language is live and the quiz still exposes `data-document-id="doc_gr4ets1u1quiz"`
+
 ## Honest batch disposition
 
 What this file proves now:
 - Rachel and Margaret review notes exist in repo for the full Grade 4 Engineering unit package
 - literal batch revisions are applied in the canonical lesson/refcard/quiz files
 - reviewed / revised status has been wired into the repo-side listing surfaces
+- commit/push and representative public verification are complete for this batch
 
-What this file does not claim yet:
-- it does not claim commit/push/live verification are already complete for this batch before those steps actually happen
+What this file does not claim:
 - it does not claim the broader Grade 4 Earth & Space Science queue is already resolved
+- it does not claim any later Grade 4/5 batch has already gone through the same end-to-end cycle
