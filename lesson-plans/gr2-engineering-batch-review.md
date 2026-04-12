@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-12
 Chunk: `gr2-ets1-unit1-review-batch-1`
-Status: round-1 Rachel + Margaret review recorded; no literal content revisions required from this review pass; generated lesson/review indexes now include Grade 2 Engineering; commit/push and public propagation verification still required before honest reviewed-batch closeout
+Status: reviewed and advanced; no literal content revisions were required; generated lesson/review indexes now include Grade 2 Engineering in repo and on the public site; batch closeout can now proceed honestly from status-surface parity
 
 ## Purpose
 
@@ -39,10 +39,10 @@ The required support assets are:
 - Lesson files: `exist in repo and were directly reviewed in source + live review mode`
 - Refcards: `exist in repo and were directly reviewed in source`
 - Quiz: `exists in repo and was directly reviewed in source`
-- Navigation: `batch lesson URLs are live and the regenerated lesson-index surfaces now expose Grade 2 Engineering in repo output; live public propagation still needs verification`
+- Navigation: `batch lesson URLs are live and the regenerated lesson-index surfaces now expose Grade 2 Engineering in repo output and on the public site`
 - Public URLs: `verified live for representative review-mode lesson URLs on 2026-04-12`
 - Remarq IDs: `stable self-generated IDs are present in repo on all 6 lessons, 6 refcards, and the unit quiz`
-- Review status: `Rachel + Margaret round 1 recorded here; no literal text changes were required by this pass; batch is advanced past the index-omission blocker in repo output but cannot be counted complete until the fix is committed, pushed, and public-verified`
+- Review status: `Rachel + Margaret round 1 recorded here; no literal text changes were required by this pass; the prior index-omission blocker is removed in repo output and on the public site`
 
 ## Internal QA snapshot
 
@@ -133,6 +133,6 @@ Verified live on 2026-04-12:
 ## Known blockers / honesty check
 
 - The repo-level generated lesson-index artifacts now include Grade 2 Engineering and Grade 5 Engineering lessons after the generator/parser repair.
-- Honest closeout is still blocked until that fix is committed, pushed, and verified on the public lesson-index and review-index surfaces after propagation.
-- Until live verification is recorded, this batch remains advanced-but-not-closed rather than completed.
+- Commit `aa52f75` was pushed to `origin/main`, and public verification confirmed the live lesson-index and review-index now expose Grade 2 Engineering.
+- No reviewer-requested content edits remain open from this round-1 pass; the batch is no longer blocked by status-surface omission.
 - Grade 1 engineering support assets were not required to make this Grade 2 batch structurally complete; they remain creation-complete but were not claimed as reviewed in this file.
