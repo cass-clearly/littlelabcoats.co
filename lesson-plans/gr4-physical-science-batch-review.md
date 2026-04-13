@@ -2,7 +2,7 @@
 
 Last updated: 2026-04-13
 Chunk: `gr4-ps3-unit1-review-batch-1`
-Status: round-1 Rachel + Margaret review recorded from direct source inspection; round-1 revisions applied in repo; final public verification and reviewed-status rollout are the remaining closeout step in this pass
+Status: round-1 Rachel + Margaret review recorded from direct source inspection; round-1 revisions applied in repo; reviewed-status rollout is live; representative public verification completed
 
 ## Scope
 
@@ -120,7 +120,28 @@ Reserved only if another review loop is genuinely required later.
 
 ## Public verification log
 
-Pending completion in this same closeout pass after the final publish / propagation check.
+Verified live on 2026-04-13 after push and cache-busting:
+- `https://littlelabcoats.co/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html?cb=verify2`
+  - confirmed the public lesson returns `200`
+  - confirmed the public lesson serves `data-document-id="doc_gr4ps3u1l1"`
+  - confirmed the Gemini-generated hero image is live on the public lesson route
+  - confirmed the public lesson does **not** append the feedback-layer script outside review mode
+- `https://littlelabcoats.co/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html?review=1&cb=verify2`
+  - confirmed the live review route returns `200`
+  - confirmed the review route appends the feedback-layer script with `data-document-id="doc_gr4ps3u1l1"`
+- `https://littlelabcoats.co/lesson-plans/gr4-ps3-unit1-refcard.html?review=1&cb=verify3`
+  - confirmed the live review route returns `200`
+  - confirmed the revised higher-start / more-energy / more-speed language is live on the refcard
+  - confirmed the review route appends the feedback-layer script with `data-document-id="doc_gr4ps3u1ref"`
+- `https://littlelabcoats.co/lesson-plans/gr4-ps3-unit1-quiz.html?review=1&cb=verify2`
+  - confirmed the live review route returns `200`
+  - confirmed the review route appends the feedback-layer script with `data-document-id="doc_gr4ps3u1quiz"`
+- `https://littlelabcoats.co/lesson-plans/?cb=verify3`
+  - confirmed the public lesson index contains `Stored Energy Starts Motion`
+  - confirmed the public lesson index exposes the Grade 4 Physical Science `Reviewed / revised` badge and status summary note
+- `https://littlelabcoats.co/lesson-plans/review/?cb=verify3`
+  - confirmed the public review index contains `Stored Energy Starts Motion`
+  - confirmed the public review index exposes the Grade 4 Physical Science `Reviewed / revised` badge and status summary note
 
 ## Honest batch disposition
 
@@ -131,7 +152,6 @@ What this file proves already:
 - literal revisions from those notes are already applied in repo
 - backend document wiring is reconciled for the full package
 
-What this file does not claim yet:
-- it does not yet claim that the new Lesson 1 route has been publicly rechecked after propagation
-- it does not yet claim that reviewed-status badges and tracker rollout are finished on the live site
-- it does not yet claim final completed status until those public checks are recorded
+What this file does not claim:
+- it does not claim that every other Grade 4 or Grade 5 domain has already completed the same end-to-end review lane
+- it does not claim that the overlapping Grade 4 Earth scaffold ambiguity is resolved beyond the canonical counting decision recorded in the library audit

@@ -121,6 +121,6 @@ After the Grade 4 Physical Science Lesson 1 creation in this pass, the canonical
 This audit is only about the minimum curriculum-shape inventory. It does **not** by itself prove that every counted unit has already completed the full Little Lab Coats review protocol.
 
 Important follow-up lanes still remain:
-- complete and verify the full Grade 4 Physical Science review / revise / live-closeout lane for the now-complete `gr4-ps3-unit1` package
-- continue reviewer-program closeout for other unreviewed units
+- continue reviewer-program closeout for other unreviewed units now that Grade 4 Physical Science has been restored, reviewed, pushed, and live-verified in this pass
+- move next into Grade 4 Earth & Space Science using `gr4-ess2-unit1` as the canonical Grade 4 Earth review lane
 - eventually retire or clearly deprecate the overlapping `gr4-ess1-unit1` scaffold so later audits do not double-count Grade 4 Earth content
