@@ -1,6 +1,6 @@
 # Little Lab Coats Full-Library Review Program Tracker
 
-Last updated: 2026-04-12
+Last updated: 2026-04-13
 Purpose: durable batch tracker for running the whole lesson library through the required Rachel + Margaret review -> literal fixes -> republish -> directory/status-update workflow.
 
 ## Program rules
@@ -43,21 +43,22 @@ Practical execution order:
 | gr2-ets1-unit1-review-batch-1 | Grade 2 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | no literal content changes needed | yes | yes | yes | Review notes are recorded in `lesson-plans/gr2-engineering-batch-review.md`; commit `aa52f75` fixed the generator/parser omission, and public lesson-index plus review-index verification now shows Grade 2 Engineering on the live status surfaces. |
 | gr5-ets1-unit1-review-batch-1 | Grade 5 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | no literal lesson-content changes needed | yes | yes | yes | Review notes are recorded in `lesson-plans/gr5-engineering-batch-review.md`; this closeout pass added reviewed / revised status exposure to the generated directory surfaces and reran representative live lesson/refcard/quiz verification. |
 | gr4-ets1-unit1-review-batch-1 | Grade 4 ETS1 Unit 1 lessons 1-6 + lesson refcards + quiz | completed | yes | yes | yes | yes | yes | yes | Review notes are recorded in `lesson-plans/gr4-engineering-batch-review.md`; this batch fixed the broken refcard vocabulary/materials rendering, tightened lesson/quiz evidence prompts, and reran representative live verification after push. |
+| gr4-ps3-unit1-review-batch-1 | Grade 4 PS3 Unit 1 lessons 1-6 + refcard + quiz | in progress | yes | yes | yes | pending | pushed after status rollout commit | pending | `lesson-plans/gr4-physical-science-batch-review.md` records the missing-Lesson-1 restoration, review notes, and applied revisions; final live verification is the remaining closeout step. |
 | gr4-ls1-remarq-review-revise-loop | Grade 4 LS1 Units 1-2 lessons/refcards/quizzes | previously completed | yes | yes | yes | yes | yes | yes | Proven prior batch, see `lesson-plans/gr4-life-science-batch-review.md`. |
 
 ## Current next action
 
 Next required ship step:
-- resolve the next Grade 4 Earth & Space Science batch selection before continuing, because the current repo/index surface exposes both `gr4-ess1-*` and `gr4-ess2-*` lesson families for overlapping landform/weathering scope
+- finish the Grade 4 Physical Science public verification + status-surface closeout now that the missing Lesson 1 package exists in repo and has recorded reviewer notes
+- after that, move to Grade 4 Earth & Space Science review using `gr4-ess2-unit1` as the canonical Grade 4 Earth family for tracker purposes
 - keep release gating strict: Rachel + Margaret review first, literal fixes second, public verification before counting anything as released
-- if the next Grade 4/5 lane has duplicate or conflicting scaffolds, keep that ambiguity explicit before claiming a finished batch
 
 ## Candidate next batches after current one
 
 Priority candidates:
-- Grade 4 Earth & Space Science after the Grade 4 engineering lane, if the canonical ESS1/ESS2 scaffold choice is explicit enough to keep the tracker honest
-- Grade 5 Physical Science or another Grade 5 domain with an existing durable review tracker, if one is added before the next pass
-- Kindergarten PS3 Unit 2 sun/heat set after the Grade 4/5 engineering lane is cleared
+- Grade 4 Earth & Space Science next, using `gr4-ess2-unit1` as the canonical review lane after the Grade 4 Physical Science closeout is fully verified
+- Grade 5 Physical Science after the Grade 4 Earth lane, if a durable batch-review file is added first
+- Kindergarten PS3 Unit 2 sun/heat set after the Grade 4 lanes are cleared
 
 ## Notes for future continuation
 

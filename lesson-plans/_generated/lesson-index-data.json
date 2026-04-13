@@ -17,7 +17,7 @@
     "worksheet"
   ],
   "statusConfigPath": "lesson-plans/lesson-index-statuses.json",
-  "entryCount": 228,
+  "entryCount": 229,
   "entries": [
     {
       "slug": "k-ps3-unit2-lesson1-sun-warms-everything",
@@ -2553,6 +2553,28 @@
       "sourcePattern": "free-sample"
     },
     {
+      "slug": "gr4-ps3-unit1-l1-stored-energy-starts-motion",
+      "sourcePath": "lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html",
+      "canonicalUrl": "/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html",
+      "reviewUrl": "/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html?review=1",
+      "title": "Stored Energy Starts Motion",
+      "displayTitle": "Stored Energy Starts Motion",
+      "gradeKey": "4",
+      "gradeLabel": "Grade 4",
+      "domainKey": "ps",
+      "domainLabel": "Physical Science",
+      "unitNumber": 1,
+      "lessonNumber": 1,
+      "isFreeSample": false,
+      "bucket": "4-ps",
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ps3-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+      }
+    },
+    {
       "slug": "gr4-ps3-unit1-l2-collisions-transfer-energy",
       "sourcePath": "lesson-plans/gr4-ps3-unit1-l2-collisions-transfer-energy.html",
       "canonicalUrl": "/lesson-plans/gr4-ps3-unit1-l2-collisions-transfer-energy.html",
@@ -2567,7 +2589,12 @@
       "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "4-ps",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ps3-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+      }
     },
     {
       "slug": "gr4-ps3-unit1-l3-faster-motion-bigger-changes",
@@ -2584,7 +2611,12 @@
       "lessonNumber": 3,
       "isFreeSample": false,
       "bucket": "4-ps",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ps3-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+      }
     },
     {
       "slug": "gr4-ps3-unit1-l4-surfaces-and-friction-change-motion",
@@ -2601,7 +2633,12 @@
       "lessonNumber": 4,
       "isFreeSample": false,
       "bucket": "4-ps",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ps3-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+      }
     },
     {
       "slug": "gr4-ps3-unit1-l5-testing-one-change-at-a-time",
@@ -2618,7 +2655,12 @@
       "lessonNumber": 5,
       "isFreeSample": false,
       "bucket": "4-ps",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ps3-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+      }
     },
     {
       "slug": "gr4-ps3-unit1-l6-explain-how-energy-moves-and-causes-motion",
@@ -2635,7 +2677,12 @@
       "lessonNumber": 6,
       "isFreeSample": false,
       "bucket": "4-ps",
-      "sourcePattern": "structured"
+      "sourcePattern": "structured",
+      "directoryStatus": {
+        "id": "gr4-ps3-unit1-review-batch-1",
+        "label": "Reviewed / revised",
+        "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+      }
     },
     {
       "slug": "gr4-ls1-unit1-lesson1-external-structures-for-survival",
@@ -6778,8 +6825,30 @@
     {
       "gradeLabel": "Grade 4",
       "domainLabel": "Physical Science",
-      "count": 5,
+      "count": 6,
       "entries": [
+        {
+          "slug": "gr4-ps3-unit1-l1-stored-energy-starts-motion",
+          "sourcePath": "lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html",
+          "canonicalUrl": "/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html",
+          "reviewUrl": "/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html?review=1",
+          "title": "Stored Energy Starts Motion",
+          "displayTitle": "Stored Energy Starts Motion",
+          "gradeKey": "4",
+          "gradeLabel": "Grade 4",
+          "domainKey": "ps",
+          "domainLabel": "Physical Science",
+          "unitNumber": 1,
+          "lessonNumber": 1,
+          "isFreeSample": false,
+          "bucket": "4-ps",
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ps3-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+          }
+        },
         {
           "slug": "gr4-ps3-unit1-l2-collisions-transfer-energy",
           "sourcePath": "lesson-plans/gr4-ps3-unit1-l2-collisions-transfer-energy.html",
@@ -6795,7 +6864,12 @@
           "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "4-ps",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ps3-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+          }
         },
         {
           "slug": "gr4-ps3-unit1-l3-faster-motion-bigger-changes",
@@ -6812,7 +6886,12 @@
           "lessonNumber": 3,
           "isFreeSample": false,
           "bucket": "4-ps",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ps3-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+          }
         },
         {
           "slug": "gr4-ps3-unit1-l4-surfaces-and-friction-change-motion",
@@ -6829,7 +6908,12 @@
           "lessonNumber": 4,
           "isFreeSample": false,
           "bucket": "4-ps",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ps3-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+          }
         },
         {
           "slug": "gr4-ps3-unit1-l5-testing-one-change-at-a-time",
@@ -6846,7 +6930,12 @@
           "lessonNumber": 5,
           "isFreeSample": false,
           "bucket": "4-ps",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ps3-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+          }
         },
         {
           "slug": "gr4-ps3-unit1-l6-explain-how-energy-moves-and-causes-motion",
@@ -6863,10 +6952,21 @@
           "lessonNumber": 6,
           "isFreeSample": false,
           "bucket": "4-ps",
-          "sourcePattern": "structured"
+          "sourcePattern": "structured",
+          "directoryStatus": {
+            "id": "gr4-ps3-unit1-review-batch-1",
+            "label": "Reviewed / revised",
+            "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+          }
         }
       ],
-      "statusSummaries": []
+      "statusSummaries": [
+        {
+          "id": "gr4-ps3-unit1-review-batch-1",
+          "label": "Reviewed / revised",
+          "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
+        }
+      ]
     },
     {
       "gradeLabel": "Grade 4",

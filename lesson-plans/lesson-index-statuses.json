@@ -48,6 +48,16 @@
       },
       "label": "Reviewed / revised",
       "note": "Grade 5 Engineering Unit 1 completed review closeout and verification."
+    },
+    {
+      "id": "gr4-ps3-unit1-review-batch-1",
+      "match": {
+        "gradeKey": "4",
+        "domainKey": "ps",
+        "unitNumber": 1
+      },
+      "label": "Reviewed / revised",
+      "note": "Grade 4 Physical Science Unit 1 restored the missing Lesson 1 package and completed review closeout."
     }
   ]
 }
