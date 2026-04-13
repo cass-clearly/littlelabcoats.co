@@ -14,6 +14,7 @@
       font-size: 11pt;
       line-height: 1.4;
       color: #222;
+      background: #fff;
     }
     h1 {
       text-align: center;
@@ -61,17 +62,20 @@
     li { margin-bottom: 5px; }
     .hero-image {
       text-align: center;
-      margin: 16px 0;
+      margin: 18px 0 16px;
     }
-    .hero-image .emoji-hero {
-      font-size: 70pt;
-      line-height: 1.2;
+    .hero-image img {
+      width: 100%;
+      border-radius: 16px;
+      border: 2px solid #c8e6c9;
+      box-shadow: 0 6px 20px rgba(27,94,32,0.12);
+      display: block;
     }
     .hero-image .caption {
       font-size: 9pt;
       color: #777;
       font-style: italic;
-      margin-top: 4px;
+      margin-top: 6px;
     }
     .materials-box {
       background: #fff8e1;
@@ -154,33 +158,52 @@
       font-weight: bold;
       color: #1b5e20;
     }
-    .life-cycle-grid {
+    .example-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
       margin: 16px 0;
     }
-    .stage-card {
-      border: 2px solid #a5d6a7;
-      border-radius: 10px;
-      padding: 12px 10px;
-      text-align: center;
+    .example-card {
+      border: 2px solid #c8e6c9;
+      border-radius: 14px;
+      overflow: hidden;
       background: #fff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
     }
-    .stage-card .stage-emoji {
-      font-size: 28pt;
+    .example-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       display: block;
-      margin-bottom: 6px;
+      background: #f7fff7;
     }
-    .stage-card .stage-title {
+    .example-copy {
+      padding: 10px 12px 12px;
+    }
+    .example-title {
       font-weight: bold;
       color: #1b5e20;
-      margin-bottom: 6px;
-      font-size: 10.5pt;
+      margin-bottom: 8px;
+      font-size: 11pt;
     }
-    .stage-card .stage-copy {
-      font-size: 9.5pt;
-      color: #444;
+    .stage-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .stage-pill {
+      background: #f1f8e9;
+      border: 1px solid #c5e1a5;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 9pt;
+      color: #355e3b;
+    }
+    .stage-note {
+      font-size: 9.4pt;
+      color: #555;
     }
     .comparison-box {
       background: #f9fff9;
@@ -190,6 +213,30 @@
       margin: 14px 0;
     }
     .comparison-box h3 { margin-top: 0; }
+    .objective-box, .model-purpose-box {
+      background: #f9fff7;
+      border: 2px solid #c5e1a5;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 12px 0;
+    }
+    .model-purpose-box {
+      background: #eef7ff;
+      border-color: #90caf9;
+    }
+    .model-purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .mini-purpose {
+      background: #fff;
+      border: 1.5px solid #bbdefb;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 9.7pt;
+    }
     .worksheet-section {
       margin: 20px 0;
     }
@@ -221,15 +268,17 @@
     .draw-area {
       border: 1.5px dashed #bbb;
       border-radius: 6px;
-      height: 72px;
+      min-height: 72px;
       background: #fafafa;
       margin-top: 8px;
     }
+    .draw-area.tall { min-height: 160px; }
     .compare-table {
       width: 100%;
       border-collapse: collapse;
       margin: 14px 0;
       font-size: 10pt;
+      table-layout: fixed;
     }
     .compare-table th {
       background: #2e7d32;
@@ -241,6 +290,7 @@
     .compare-table td {
       border: 1.5px solid #a5d6a7;
       padding: 10px;
+      min-height: 42px;
       height: 42px;
       vertical-align: top;
     }
@@ -260,6 +310,57 @@
       border-bottom: 2px solid #2e7d32;
       min-width: 120px;
       margin: 0 4px;
+    }
+    .line-block p {
+      border-bottom: 1.5px solid #bbb;
+      height: 30px;
+      margin: 0 0 10px 0;
+    }
+    .cutout-directions {
+      background: #fffaf3;
+      border: 2px solid #ffcc80;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 10pt;
+      margin-bottom: 14px;
+    }
+    .cutout-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .cutout-card {
+      border: 2px dashed #8bc34a;
+      border-radius: 12px;
+      padding: 10px 8px;
+      text-align: center;
+      min-height: 150px;
+      background: #fff;
+    }
+    .cutout-organism {
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #5d8a40;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    .cutout-emoji {
+      font-size: 28pt;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .cutout-title {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 10pt;
+      margin-bottom: 6px;
+    }
+    .cutout-copy {
+      font-size: 8.8pt;
+      color: #555;
+      line-height: 1.25;
     }
     .answer-key {
       background: #f5f5f5;
@@ -288,19 +389,23 @@
       z-index: 1000;
     }
     .print-btn:hover { background: #1b5e20; }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+    }
     @media print {
       body { padding: 0.25in; font-size: 10pt; }
-      h2 {
-        break-after: avoid;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      h3 { break-after: avoid; }
+      h1, h2, h3 { break-after: avoid; }
       .procedure-step, .question-box, .teacher-note, .answer-key,
-      .materials-box, .tip-box, .extension-box, .stage-card,
-      .comparison-box, .sort-box {
+      .materials-box, .tip-box, .extension-box, .comparison-box,
+      .example-card, .sort-box, .cutout-card, .objective-box,
+      .model-purpose-box, .science-sentence {
         break-inside: avoid;
         page-break-inside: avoid;
+      }
+      .hero-image img, .example-card img {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
       .print-btn { display: none; }
       * {
@@ -308,12 +413,11 @@
         print-color-adjust: exact;
       }
     }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
-    }
     @media (max-width: 640px) {
-      .life-cycle-grid, .sort-grid {
+      .example-grid,
+      .sort-grid,
+      .cutout-grid,
+      .model-purpose-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -332,8 +436,8 @@
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🥚 → 🐛 → 🦋 &nbsp;&nbsp; 🥚 → 🐸</div>
-    <div class="caption">A butterfly and a frog change in different ways, but both life cycles still follow the same big pattern.</div>
+    <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-life-cycle-hero-gemini.jpg" alt="Gemini-generated educational illustration showing butterfly, frog, bean plant, and human life cycle scenes for a Grade 3 homeschool science lesson.">
+    <div class="caption">Different organisms look different as they change, but each one still follows the same big life-cycle pattern.</div>
   </div>
 
   <div class="standards-box">
@@ -342,14 +446,16 @@
   </div>
 
   <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>compare</em> life cycles of several organisms, identify the pattern they all share, and <em>develop a simple model</em> showing the stages of one organism's life cycle.</p>
+  <div class="objective-box">
+    <p>Students will <em>compare</em> several organisms, identify the big pattern all life cycles share, and <em>build a model</em> that uses one organism's stages as evidence for birth, growth, reproduction, and death.</p>
+  </div>
 
   <h2>💡 The Big Idea</h2>
   <p>Every living thing has a <strong>life cycle</strong>, but not every life cycle looks the same. A frog, a butterfly, a bean plant, and a human all move through different stages. Even so, they all share the same big pattern: they begin life, grow, reproduce, and eventually die.</p>
 
   <h2>🔬 The Science</h2>
   <p>A <strong>life cycle</strong> is the series of stages an organism passes through during its life. Scientists study life cycles because they help explain how living things change over time and how new organisms are produced.</p>
-  <p>Some organisms change dramatically as they grow. A butterfly begins as an egg, then becomes a caterpillar, then a chrysalis, and finally an adult butterfly. A frog begins as an egg, becomes a tadpole, then a froglet, and later an adult frog. Other organisms change more gradually. A bean plant starts as a seed, grows into a seedling, then a mature plant that produces flowers and seeds. Humans begin as babies and grow through childhood into adulthood.</p>
+  <p>Some organisms change dramatically as they grow. A butterfly begins as an egg, then becomes a caterpillar, then a chrysalis, and finally an adult butterfly. A frog begins as eggs, becomes a tadpole, then a froglet, and later an adult frog. Other organisms change more gradually. A bean plant starts as a seed, grows into a sprout, then a mature plant that produces flowers and seeds. Humans begin as babies and grow through childhood into adulthood.</p>
   <p>The stages are <strong>unique and diverse</strong>, but there is still a common pattern across life: birth, growth, reproduction, and death. That shared pattern is what makes these examples all life cycles.</p>
 
   <div class="tip-box">
@@ -365,84 +471,126 @@
     </div>
   </div>
 
+  <h2>🖼️ Picture-Led Life Cycle Examples</h2>
+  <p>Use the images first. Let students notice what changes from picture to picture before you add much explanation.</p>
+
+  <div class="example-grid">
+    <div class="example-card">
+      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-gemini.jpg" alt="Gemini-generated butterfly life cycle illustration with egg, caterpillar, chrysalis, and adult butterfly.">
+      <div class="example-copy">
+        <div class="example-title">Butterfly</div>
+        <div class="stage-strip">
+          <span class="stage-pill">egg</span>
+          <span class="stage-pill">caterpillar</span>
+          <span class="stage-pill">chrysalis</span>
+          <span class="stage-pill">adult butterfly</span>
+        </div>
+        <div class="stage-note">Big body changes = metamorphosis.</div>
+      </div>
+    </div>
+    <div class="example-card">
+      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Gemini-generated frog life cycle illustration with eggs, tadpole, froglet, and adult frog.">
+      <div class="example-copy">
+        <div class="example-title">Frog</div>
+        <div class="stage-strip">
+          <span class="stage-pill">eggs</span>
+          <span class="stage-pill">tadpole</span>
+          <span class="stage-pill">froglet</span>
+          <span class="stage-pill">adult frog</span>
+        </div>
+        <div class="stage-note">Starts in water and changes shape as it grows.</div>
+      </div>
+    </div>
+    <div class="example-card">
+      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-gemini.jpg" alt="Gemini-generated bean plant life cycle illustration with seed, sprout, young bean plant, and mature bean plant.">
+      <div class="example-copy">
+        <div class="example-title">Bean Plant</div>
+        <div class="stage-strip">
+          <span class="stage-pill">seed</span>
+          <span class="stage-pill">sprout</span>
+          <span class="stage-pill">young plant</span>
+          <span class="stage-pill">mature plant</span>
+        </div>
+        <div class="stage-note">Plants have life cycles too, even without animal-style metamorphosis.</div>
+      </div>
+    </div>
+    <div class="example-card">
+      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-human-life-cycle-gemini.jpg" alt="Gemini-generated human life cycle illustration with baby, child, adult, and adult caring for a new baby.">
+      <div class="example-copy">
+        <div class="example-title">Human</div>
+        <div class="stage-strip">
+          <span class="stage-pill">baby</span>
+          <span class="stage-pill">child</span>
+          <span class="stage-pill">adult</span>
+          <span class="stage-pill">new baby begins again</span>
+        </div>
+        <div class="stage-note">The changes are more gradual, but the same pattern is still there.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparison-box">
+    <h3>🔍 Look for These Two Big Ideas</h3>
+    <ul>
+      <li>Some organisms go through dramatic changes, while others grow more gradually.</li>
+      <li>All organisms still follow the same broad pattern of birth, growth, reproduction, and death.</li>
+    </ul>
+  </div>
+
   <h2>📦 Materials</h2>
   <div class="materials-box">
     <h3>🏠 Gather These Items</h3>
     <ul>
-      <li>Printed pictures or cards showing the life cycles of a butterfly, frog, bean plant, and human</li>
-      <li>1 pair of scissors</li>
-      <li>1 glue stick or tape</li>
-      <li>1 pencil</li>
+      <li>Printed lesson pages and printable stage cards from this lesson</li>
+      <li>Scissors</li>
+      <li>Glue stick or tape</li>
+      <li>Pencil</li>
       <li>Crayons or colored pencils</li>
-      <li>Printed Student Worksheet</li>
+      <li>Optional: a nature book or device for looking at real life cycle photos</li>
     </ul>
-    <h3>📄 Optional / Nice to Have</h3>
+    <h3>📄 Printables Included Here</h3>
     <ul>
-      <li>Index cards for sorting stages</li>
-      <li>Markers for making a larger life cycle poster</li>
-      <li>Reference books or photos of real organisms at different stages</li>
+      <li>Student Worksheet page</li>
+      <li>Printable stage-ordering cut-out cards for butterfly, frog, and bean plant life cycles</li>
     </ul>
   </div>
 
   <h2>🔬 Let's Get Started</h2>
 
-  <p>Today you'll compare several life cycles, sort their stages, and build a simple model that shows both the differences and the shared pattern.</p>
+  <p>Today you'll compare several life cycles, sort stage cards, and then turn one ordered set into a science model that proves the organism follows the same big pattern as other living things.</p>
 
   <div class="procedure-step">
     <strong>Step 1 — Notice How Living Things Change (5–7 min)</strong><br>
     Ask: <em>"Do all living things stay the same from the beginning of life to the end?"</em> Show a few quick examples: a baby and an adult human, a seed and a mature bean plant, a tadpole and an adult frog. Explain that these changes are part of a <strong>life cycle</strong>.
   </div>
 
-  <div class="life-cycle-grid">
-    <div class="stage-card">
-      <span class="stage-emoji">🦋</span>
-      <div class="stage-title">Butterfly</div>
-      <div class="stage-copy">egg → caterpillar → chrysalis → butterfly</div>
-    </div>
-    <div class="stage-card">
-      <span class="stage-emoji">🐸</span>
-      <div class="stage-title">Frog</div>
-      <div class="stage-copy">egg → tadpole → froglet → adult frog</div>
-    </div>
-    <div class="stage-card">
-      <span class="stage-emoji">🌱</span>
-      <div class="stage-title">Bean Plant</div>
-      <div class="stage-copy">seed → sprout → young plant → mature plant with seeds</div>
-    </div>
-    <div class="stage-card">
-      <span class="stage-emoji">👶</span>
-      <div class="stage-title">Human</div>
-      <div class="stage-copy">baby → child → adult → adults have offspring</div>
-    </div>
-  </div>
-
   <div class="procedure-step">
-    <strong>Step 2 — Sort the Stages (8–10 min)</strong><br>
-    Give students life cycle cards or pictures out of order. Have them place the stages in order for at least two organisms. Encourage them to explain <em>why</em> each stage comes next rather than just guessing the order.
-  </div>
-
-  <div class="comparison-box">
-    <h3>🔍 Look for Patterns</h3>
-    <p>As students sort, prompt them to notice two big ideas:</p>
-    <ul>
-      <li>Some organisms go through dramatic changes, like metamorphosis.</li>
-      <li>All organisms still follow the same broad pattern of beginning life, growing, reproducing, and dying.</li>
-    </ul>
+    <strong>Step 2 — Sort the Printable Stage Cards (8–10 min)</strong><br>
+    Cut out one organism set from the printable cards in this lesson. Have students place the cards in order for at least two organisms. Encourage them to explain <em>why</em> each stage comes next instead of just guessing.
   </div>
 
   <div class="procedure-step">
     <strong>Step 3 — Compare Two Life Cycles (8–10 min)</strong><br>
-    Pick two organisms to compare, such as a frog and a human or a butterfly and a bean plant. Make a quick chart labeled <strong>Same</strong> and <strong>Different</strong>. Talk about whether the organisms hatch, sprout, or are born live, and whether their stages look very different or more gradual.
+    Pick two organisms to compare, such as a frog and a human or a butterfly and a bean plant. Make a quick chart labeled <strong>Same</strong> and <strong>Different</strong>. Talk about whether the organisms hatch, sprout, or are born live, and whether their stages look dramatic or gradual.
+  </div>
+
+  <div class="model-purpose-box">
+    <strong>🧠 Why build a model after sorting?</strong>
+    <p>Putting cards in order shows that a student knows the sequence. A <strong>model</strong> goes one step further: it helps the student explain <em>why this organism still fits the big life-cycle pattern</em>.</p>
+    <div class="model-purpose-grid">
+      <div class="mini-purpose"><strong>Sorting</strong><br>answers: <em>What comes first, next, and last?</em></div>
+      <div class="mini-purpose"><strong>Modeling</strong><br>answers: <em>Where do we see birth, growth, reproduction, and death in this cycle?</em></div>
+    </div>
   </div>
 
   <div class="procedure-step">
-    <strong>Step 4 — Build a Life Cycle Model (12–15 min)</strong><br>
-    Choose one organism and create a model of its life cycle on the Student Worksheet. Students may draw the stages, label them, and add arrows to show the sequence. Remind them that a model helps scientists explain a pattern, even when the real organism is not in front of them.
+    <strong>Step 4 — Turn the Ordered Stages into a Life Cycle Model (12–15 min)</strong><br>
+    Choose one organism and use the Student Worksheet to turn the sorted stages into a model. Students should draw or glue the stages in order, add arrows, and label where they see <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong>. The goal is not just to show the order — it is to use the model as evidence that this organism follows the same big pattern as other living things.
   </div>
 
   <div class="procedure-step">
     <strong>Step 5 — Explain the Shared Pattern (5 min)</strong><br>
-    Have the student complete this sentence orally before writing: <em>"The life cycle of a _____ includes _____, but like all life cycles it also shows birth, growth, reproduction, and death."</em>
+    Have the student complete this sentence orally before writing: <em>"My model shows the life cycle of a _____ . It is unique because _____, but it still shows birth, growth, reproduction, and death."</em>
   </div>
 
   <h2>💬 Discussion Questions</h2>
@@ -456,7 +604,7 @@
   <div class="question-box">
     <strong>🗣️ Question 2:</strong><br>
     "How is a frog's life cycle different from a human's life cycle?"
-    <p class="discussion-hint">They might say: A frog hatches from an egg and changes from a tadpole into an adult frog, while a human is born live and grows more gradually without metamorphosis.</p>
+    <p class="discussion-hint">They might say: A frog hatches from eggs and changes from a tadpole into an adult frog, while a human is born live and grows more gradually without metamorphosis.</p>
   </div>
 
   <div class="question-box">
@@ -468,13 +616,13 @@
   <div class="question-box">
     <strong>🗣️ Question 4:</strong><br>
     "Why do scientists use models to study life cycles?"
-    <p class="discussion-hint">They might say: A model helps us show the order of stages and explain a pattern clearly. It is useful when the whole life cycle takes too long to watch all at once.</p>
+    <p class="discussion-hint">They might say: A model helps us show the order of stages and explain the shared pattern clearly. It is useful when the whole life cycle takes too long to watch all at once.</p>
   </div>
 
   <h2>🚀 Extensions</h2>
   <div class="extension-box">
     <ul>
-      <li>🦋 <strong>Life Cycle Match-Up:</strong> Mix up picture cards from three different organisms and sort them back into the correct cycles.</li>
+      <li>🦋 <strong>Life Cycle Match-Up:</strong> Mix up the printable cards from three different organisms and sort them back into the correct cycles.</li>
       <li>📚 <strong>Read and Compare:</strong> Read a book or article about butterfly metamorphosis and compare it to a frog or bean plant life cycle.</li>
       <li>📊 <strong>Fast vs. Slow:</strong> Research one organism with a very fast life cycle and one with a very slow life cycle. Which stages take the longest?</li>
       <li>🌿 <strong>Observe a Real Organism:</strong> Start a plant journal and sketch how the plant changes over several weeks.</li>
@@ -486,10 +634,10 @@
   <div class="teacher-note">
     <ul>
       <li><strong>Keep the focus on the standard:</strong> 3-LS1-1 is not just naming stages. Students should notice that life cycles are <em>diverse</em> but also share the same broad pattern.</li>
-      <li><strong>Use precise language when possible:</strong> It is fine to start with child-friendly words like <em>baby</em> or <em>grown-up</em>, but also layer in scientific words such as <strong>offspring</strong>, <strong>reproduction</strong>, and <strong>metamorphosis</strong>.</li>
-      <li><strong>Plants count too:</strong> Many students think of life cycles only in animals. Make sure the bean plant example stays visible so students see that plants also have birth, growth, reproduction, and death.</li>
-      <li><strong>Modeling matters:</strong> This lesson asks students to make a simple model, not memorize every possible life cycle. Clear arrows, labels, and stage order are more important than artistic detail.</li>
-      <li><strong>Assessment idea:</strong> Ask whether the student can explain both sides of the standard: <em>"How is this life cycle unique?"</em> and <em>"What pattern does it share with all life cycles?"</em></li>
+      <li><strong>Use the images first:</strong> Let students talk through what they notice in the pictures before you front-load lots of explanation.</li>
+      <li><strong>Sorting and modeling are different jobs:</strong> sorting checks stage order; modeling asks the student to use that order as evidence for birth, growth, reproduction, and death.</li>
+      <li><strong>Plants count too:</strong> Many students think of life cycles only in animals. Keep the bean plant example visible so students see that plants also have birth, growth, reproduction, and death.</li>
+      <li><strong>Modeling matters:</strong> Clear arrows, labels, and stage-to-pattern connections are more important than artistic detail.</li>
     </ul>
   </div>
 
@@ -500,7 +648,7 @@
 
     <div class="worksheet-section">
       <h3>1️⃣ Put a Life Cycle in Order</h3>
-      <p style="font-size:10pt;">Choose one organism. Draw or label the stages in order, then mark or label where you see <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong> in your model.</p>
+      <p style="font-size:10pt;">Cut out one printable card set and place the stages in order. Then draw or write each stage below.</p>
       <div class="sort-grid">
         <div class="sort-box">
           <div class="label">Stage 1</div>
@@ -523,7 +671,13 @@
     </div>
 
     <div class="worksheet-section">
-      <h3>2️⃣ Same and Different</h3>
+      <h3>2️⃣ Build Your Life Cycle Model</h3>
+      <p style="font-size:10pt;">Now use the same organism to build a <strong>model</strong>. Add arrows and label where you see <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong>. Your model should show more than the order — it should help explain the big pattern.</p>
+      <div class="draw-area tall"></div>
+    </div>
+
+    <div class="worksheet-section">
+      <h3>3️⃣ Same and Different</h3>
       <p style="font-size:10pt;">Compare two organisms. Write one way their life cycles are the same, one way they are different, and use your comparison as evidence that both still follow the same big pattern.</p>
       <table class="compare-table">
         <tr>
@@ -540,17 +694,117 @@
     </div>
 
     <div class="worksheet-section">
-      <h3>3️⃣ Show the Pattern</h3>
+      <h3>4️⃣ Show the Pattern</h3>
       <div class="science-sentence">
         All life cycles include <span class="blank-line">&nbsp;</span>, <span class="blank-line">&nbsp;</span>, <span class="blank-line">&nbsp;</span>, and <span class="blank-line">&nbsp;</span>.
       </div>
     </div>
 
     <div class="worksheet-section">
-      <h3>4️⃣ Explain Your Model</h3>
-      <p style="border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0;"></p>
-      <p style="border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0;"></p>
-      <p style="border-bottom: 1.5px solid #bbb; height: 30px; margin: 0;"></p>
+      <h3>5️⃣ Explain Your Model</h3>
+      <p style="font-size:10pt;">Use your model as evidence. What makes this organism's life cycle unique, and how does your model prove it still follows the same big pattern?</p>
+      <div class="line-block">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break">
+    <h1>✂️ Printable Stage Cards — Cut Out and Sort</h1>
+    <p class="subtitle">Print this page, cut on the dashed lines, and use one card per stage.</p>
+
+    <div class="cutout-directions">
+      <strong>How to use these cards:</strong> Cut out one set at a time, mix the cards up, and ask the student to put them in order before building the model on the worksheet.
+    </div>
+
+    <h3>🦋 Butterfly Life Cycle Cards</h3>
+    <div class="cutout-grid">
+      <div class="cutout-card">
+        <div class="cutout-organism">Butterfly</div>
+        <span class="cutout-emoji">🥚</span>
+        <div class="cutout-title">Egg</div>
+        <div class="cutout-copy">The butterfly begins life inside an egg on a leaf.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Butterfly</div>
+        <span class="cutout-emoji">🐛</span>
+        <div class="cutout-title">Caterpillar</div>
+        <div class="cutout-copy">The young insect eats and grows quickly.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Butterfly</div>
+        <span class="cutout-emoji">🟤</span>
+        <div class="cutout-title">Chrysalis</div>
+        <div class="cutout-copy">The body changes inside the chrysalis.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Butterfly</div>
+        <span class="cutout-emoji">🦋</span>
+        <div class="cutout-title">Adult Butterfly</div>
+        <div class="cutout-copy">The adult can reproduce and start the cycle again.</div>
+      </div>
+    </div>
+
+    <h3>🐸 Frog Life Cycle Cards</h3>
+    <div class="cutout-grid">
+      <div class="cutout-card">
+        <div class="cutout-organism">Frog</div>
+        <span class="cutout-emoji">🥚</span>
+        <div class="cutout-title">Eggs</div>
+        <div class="cutout-copy">A frog starts life in eggs laid in water.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Frog</div>
+        <span class="cutout-emoji">🐟</span>
+        <div class="cutout-title">Tadpole</div>
+        <div class="cutout-copy">The tadpole lives in water and uses a tail to swim.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Frog</div>
+        <span class="cutout-emoji">🐸</span>
+        <div class="cutout-title">Froglet</div>
+        <div class="cutout-copy">Legs appear while the tail gets smaller.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Frog</div>
+        <span class="cutout-emoji">🐸</span>
+        <div class="cutout-title">Adult Frog</div>
+        <div class="cutout-copy">The adult frog can reproduce and lay new eggs.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break">
+    <h1>✂️ Printable Stage Cards — Bean Plant Set</h1>
+    <p class="subtitle">A plant set is included too, so students see that plants have life cycles just like animals.</p>
+
+    <div class="cutout-grid">
+      <div class="cutout-card">
+        <div class="cutout-organism">Bean Plant</div>
+        <span class="cutout-emoji">🫘</span>
+        <div class="cutout-title">Seed</div>
+        <div class="cutout-copy">A new bean plant begins as a seed.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Bean Plant</div>
+        <span class="cutout-emoji">🌱</span>
+        <div class="cutout-title">Sprout</div>
+        <div class="cutout-copy">The seed opens and a tiny plant begins to grow.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Bean Plant</div>
+        <span class="cutout-emoji">🪴</span>
+        <div class="cutout-title">Young Plant</div>
+        <div class="cutout-copy">Leaves and stems grow larger over time.</div>
+      </div>
+      <div class="cutout-card">
+        <div class="cutout-organism">Bean Plant</div>
+        <span class="cutout-emoji">🌿</span>
+        <div class="cutout-title">Mature Plant</div>
+        <div class="cutout-copy">The mature plant makes flowers and seeds for the next generation.</div>
+      </div>
     </div>
   </div>
 
@@ -560,24 +814,34 @@
 
       <h3>1️⃣ Put a Life Cycle in Order — Sample Acceptable Answers</h3>
       <ul>
-        <li><strong>Butterfly:</strong> egg → caterpillar → chrysalis → butterfly</li>
-        <li><strong>Frog:</strong> egg → tadpole → froglet → adult frog</li>
+        <li><strong>Butterfly:</strong> egg → caterpillar → chrysalis → adult butterfly</li>
+        <li><strong>Frog:</strong> eggs → tadpole → froglet → adult frog</li>
         <li><strong>Bean plant:</strong> seed → sprout/seedling → young plant → mature plant with flowers or seeds</li>
         <li><strong>Human:</strong> baby → child → adult → adults have offspring, and a new baby begins the cycle again</li>
       </ul>
       <p style="font-size:10pt; color:#555; font-style:italic;">Accept equivalent stage labels if the order is scientifically reasonable and the student shows the life cycle as a sequence.</p>
-      <p style="font-size:10pt; color:#555; font-style:italic;">Prompt students to point out where the model shows birth, growth, reproduction, and death — not just the stage names in order.</p>
 
-      <h3>2️⃣ Same and Different — Sample Ideas</h3>
+      <h3>2️⃣ Build Your Life Cycle Model — What the model should show</h3>
+      <div class="question-box" style="margin:10px 0;">
+        <strong>A strong model includes:</strong><br>
+        ordered stages + arrows + labels for birth, growth, reproduction, and death.<br><br>
+        <strong>Why this is different from sorting:</strong><br>
+        Sorting shows the student knows the sequence. Modeling shows the student can use that sequence as evidence for the shared life-cycle pattern.
+      </div>
+
+      <h3>3️⃣ Same and Different — Sample Ideas</h3>
       <div class="question-box" style="margin:10px 0;">
         <strong>Same:</strong> Both organisms begin life, grow, reproduce, and die.<br><br>
         <strong>Different:</strong> One may hatch from an egg or go through metamorphosis, while another may be born live or grow more gradually.<br><br>
         <strong>Model response:</strong> “A frog and a human have different stage names, but both show birth, growth, reproduction, and death. That shared pattern is my evidence that both are life cycles.”
       </div>
 
-      <h3>3️⃣ Show the Pattern — Accepted Answers</h3>
+      <h3>4️⃣ Show the Pattern — Accepted Answers</h3>
       <p>All life cycles include <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong>.</p>
       <p style="font-size:10pt; color:#555; font-style:italic;">Accept student-friendly wording such as <em>being born</em>, <em>growing</em>, <em>having babies/offspring</em>, and <em>dying</em> if the meaning is correct.</p>
+
+      <h3>5️⃣ Explain Your Model — Sample acceptable answer</h3>
+      <p>“My model shows a butterfly life cycle. It is unique because the butterfly changes a lot from caterpillar to chrysalis to adult, but it still follows the same big pattern because it begins life, grows, becomes an adult that can reproduce, and eventually dies.”</p>
 
       <h3>4️⃣ Discussion Question Answers</h3>
       <ul>
@@ -590,18 +854,18 @@
       <h3>✅ What Success Looks Like</h3>
       <ul>
         <li>Student can correctly sequence one organism's life cycle.</li>
+        <li>Student can use a model to identify birth, growth, reproduction, and death.</li>
         <li>Student can compare two organisms and name at least one similarity and one difference.</li>
         <li>Student uses the comparison as evidence that different-looking life cycles can still share the same overall pattern.</li>
         <li>Student can explain that life cycles are diverse but share the same overall pattern.</li>
-        <li>Student uses a model with labeled stages and arrows or clear order.</li>
       </ul>
 
       <h3>🛠️ Troubleshooting / Teaching Notes</h3>
       <ul>
         <li>If a student thinks a life cycle is just a list, point back to reproduction and offspring starting the pattern again.</li>
-        <li>If a student says plants do not have life cycles, revisit seeds, seedlings, mature plants, flowers, and new seeds.</li>
-        <li>If a student mixes up <em>different stages</em> with <em>different sizes</em>, ask what major change happens at each stage.</li>
-        <li>If a student only names surface differences, ask: “Where do you see birth, growth, reproduction, and death in both organisms?”</li>
+        <li>If a student says plants do not have life cycles, revisit seeds, sprouts, mature plants, flowers, and new seeds.</li>
+        <li>If a student only gives stage names, ask: “Where do you see birth, growth, reproduction, and death in your model?”</li>
+        <li>If a student mixes up <em>different stages</em> with <em>different sizes</em>, ask what important change happens at each stage.</li>
       </ul>
     </div>
   </div>
@@ -677,21 +941,19 @@
     var allH2 = Array.from(document.querySelectorAll('h2'));
     var lockKeywords = ['materials', 'gather before you start', 'what you need'];
 
-    var lockFromIndex = -1;
+    var lockFromH2 = null;
     for (var i = 0; i < allH2.length; i++) {
-      var text = allH2[i].textContent.toLowerCase();
-      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
-      if (!isGoal) {
-        lockFromIndex = i;
+      var text = allH2[i].textContent.toLowerCase().trim();
+      if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
+        lockFromH2 = allH2[i];
         break;
       }
     }
 
-    if (lockFromIndex === -1 || lockFromIndex === 0) {
-      lockFromIndex = Math.min(2, allH2.length - 1);
+    if (!lockFromH2) {
+      lockFromH2 = allH2[Math.min(4, allH2.length - 1)];
     }
 
-    var lockFromH2 = allH2[lockFromIndex];
     if (!lockFromH2) {
       document.body.style.overflow = 'hidden';
       document.body.style.maxHeight = '600px';
