@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Building Blocks: Exploring Atoms Together — Grade 3 + Grade 5 Mixed-Age Physical Science Lesson</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #222;
+      background: #fff;
+    }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .print-btn:hover { background: #1b5e20; }
+    h1 {
+      text-align: center;
+      font-size: 22pt;
+      margin-bottom: 5px;
+      border-bottom: 3px solid #7e57c2;
+      padding-bottom: 10px;
+      color: #6a1b9a;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 18px;
+      color: #555;
+      font-size: 13pt;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      background: #f3e5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 10pt;
+      border: 1px solid #ce93d8;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 14pt;
+      background: #7e57c2;
+      color: white;
+      padding: 8px 14px;
+      margin: 24px 0 12px 0;
+      border-radius: 6px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #6a1b9a;
+      border-bottom: 2px solid #d1c4e9;
+      padding-bottom: 4px;
+      margin: 18px 0 8px 0;
+    }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 68pt; line-height: 1.1; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .materials-box, .tip-box, .extension-box, .teacher-note, .objective-box, .quick-start {
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 10px 0;
+    }
+    .standards-box { background: #ede7f6; border: 1px solid #b39ddb; font-size: 10pt; }
+    .objective-box { background: #f3e5f5; border: 2px solid #ce93d8; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00acc1; font-size: 10pt; }
+    .extension-box { background: #e8f5e9; border: 1px solid #a5d6a7; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .quick-start { background: #fff3e0; border: 2px solid #ffb74d; }
+    .procedure-step {
+      background: #f3e5f5;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border-left: 5px solid #7e57c2;
+    }
+    .question-box {
+      background: #f1f8e9;
+      border-left: 5px solid #43a047;
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .discussion-hint {
+      font-style: italic;
+      color: #555;
+      font-size: 10pt;
+      display: block;
+      margin-top: 4px;
+    }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip {
+      background: #ede7f6;
+      border: 1.5px solid #9575cd;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #6a1b9a;
+    }
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .badge-card {
+      border-radius: 10px;
+      padding: 14px;
+      background: #fff;
+      border: 2px solid #d1c4e9;
+    }
+    .g3 { border-color: #81d4fa; background: #e1f5fe; }
+    .g5 { border-color: #c5e1a5; background: #f1f8e9; }
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .model-card {
+      border: 2px solid #d1c4e9;
+      border-radius: 10px;
+      padding: 12px;
+      background: #fff;
+      text-align: center;
+    }
+    .model-visual { font-size: 30pt; margin-bottom: 6px; }
+    .stem-box {
+      background: #fafafa;
+      border: 1px dashed #bbb;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 10pt;
+    }
+    .worksheet-section { margin: 20px 0; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .draw-box {
+      border: 2px dashed #bbb;
+      border-radius: 8px;
+      min-height: 150px;
+      margin: 10px 0;
+      padding: 12px;
+      background: #fff;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9pt;
+      text-align: center;
+    }
+    .line-block p {
+      border-bottom: 2px solid #d1c4e9;
+      min-height: 28px;
+      margin: 8px 0;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .compare-table th {
+      background: #7e57c2;
+      color: white;
+      padding: 8px 10px;
+      border: 1px solid #6a1b9a;
+      text-align: left;
+    }
+    .compare-table td {
+      border: 1px solid #d1c4e9;
+      padding: 10px;
+      height: 42px;
+      vertical-align: top;
+    }
+    .answer-key {
+      background: #f5f5f5;
+      border: 3px dashed #999;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .answer-key h2 { background: #616161; text-align: center; }
+    .page-break { page-break-before: always; margin-top: 26px; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .standards-box, .badge-card, .model-card, .quick-start {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .print-btn { display: none; }
+    }
+    @media (max-width: 700px) {
+      .badge-grid, .model-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s">
+  <button class="print-btn" type="button" onclick="window.focus(); window.print();">🖨️ Print Lesson</button>
+
+  <h1>⚛️ Tiny Building Blocks: Exploring Atoms Together</h1>
+  <p class="subtitle">Physical Science — Grade 3 + Grade 5 Mixed-Age Homeschool Lesson</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grades:</strong> 3rd + 5th</span>
+    <span>⏱️ <strong>Duration:</strong> 35–45 minutes</span>
+    <span>🧪 <strong>Subject:</strong> Physical Science</span>
+    <span>🧰 <strong>Setup:</strong> Ball-and-stick atom models</span>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">⚛️🧩🔬</div>
+    <div class="caption">Models help us think about tiny things we cannot see directly.</div>
+  </div>
+
+  <div class="quick-start">
+    <strong>At a glance for the grown-up</strong>
+    <ul>
+      <li>Start by noticing matter all around you.</li>
+      <li>Introduce atoms briefly, then move fast into the hands-on model work.</li>
+      <li>Build three simple models together: 1 atom, 2 of the same type, then 2–3 with different types.</li>
+      <li>Grade 3 does one clear model-and-explain task. Grade 5 compares two models using evidence.</li>
+      <li>Keep repeating: models are helpful, but not exact pictures of reality.</li>
+    </ul>
+  </div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS note</strong><br>
+    This mixed-age family lesson is an elementary physical science enrichment lesson that builds careful model-based reasoning about matter and atoms. It is designed for homeschool use across ages, not as a single-grade standards claim.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will use ball-and-stick models to observe, compare, and talk about simple atom models, while understanding that matter is made of tiny particles called atoms and that models are thinking tools, not exact pictures of reality.</p>
+  </div>
+
+  <div class="badge-grid">
+    <div class="badge-card g3">
+      <strong>🔵 Grade 3 notice box</strong>
+      <ul>
+        <li>Notice that matter is made of tiny particles called atoms.</li>
+        <li>Use one model to show the big idea clearly.</li>
+        <li>Stay focused on what you can observe in the model.</li>
+      </ul>
+    </div>
+    <div class="badge-card g5">
+      <strong>🟢 Grade 5 think deeper box</strong>
+      <ul>
+        <li>Compare two models using evidence.</li>
+        <li>Explain how number, type, or arrangement changes the model.</li>
+        <li>Name one strength and one limitation of the model.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Matter is made of tiny particles called atoms. Scientists use models to help them think about things too small to see directly. Ball-and-stick models can help us show number, type, and arrangement, but they do not show exactly what real atoms look like.</p>
+
+  <div class="tip-box">
+    <strong>Helpful model, not exact reality</strong>
+    <ul>
+      <li>These pieces are part of a model.</li>
+      <li>The colors help us keep track of parts in the model.</li>
+      <li>The sticks help show connections in the model.</li>
+      <li>This does <strong>not</strong> mean atoms are literally colored balls and sticks.</li>
+      <li>We are comparing model representations, not looking at real atoms.</li>
+    </ul>
+  </div>
+
+  <div class="vocab-chips">
+    <span class="vocab-chip">matter</span>
+    <span class="vocab-chip">atom</span>
+    <span class="vocab-chip">model</span>
+    <span class="vocab-chip">observe</span>
+    <span class="vocab-chip">compare</span>
+    <span class="vocab-chip">arrangement</span>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🧰 What you need</h3>
+    <ul>
+      <li>Ball-and-stick atom model kit</li>
+      <li>3–5 everyday objects made of matter (cup, spoon, eraser, foil, water, salt, etc.)</li>
+      <li>Printed worksheet pages from this lesson</li>
+      <li>Pencil</li>
+      <li>Colored pencils or crayons</li>
+      <li>Optional tray or placemat for model pieces</li>
+    </ul>
+    <h3>📝 Prep note</h3>
+    <p>Pre-sort a small number of model pieces before you begin so the lesson stays calm and cleanup stays easy.</p>
+  </div>
+
+  <h2>🧪 Shared Build Setup</h2>
+  <div class="model-grid">
+    <div class="model-card">
+      <div class="model-visual">🟣</div>
+      <strong>Model A</strong>
+      <p>1 atom</p>
+    </div>
+    <div class="model-card">
+      <div class="model-visual">🟣—🟣</div>
+      <strong>Model B</strong>
+      <p>2 connected atoms of the same type</p>
+    </div>
+    <div class="model-card">
+      <div class="model-visual">🟣—⚪—🟢</div>
+      <strong>Model C</strong>
+      <p>2–3 connected atoms with at least two types represented</p>
+    </div>
+  </div>
+
+  <h2>🔬 Let’s Get Started</h2>
+
+  <div class="procedure-step">
+    <strong>Step 1 — Hook: Matter is all around us (5 min)</strong><br>
+    Ask each child to point to 3 things in the room made of matter. Let them hold one object if practical.<br>
+    Say: <em>“Matter is anything that takes up space and has mass. Today we are going to think about what matter is made of.”</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 2 — Introduce atoms simply (5 min)</strong><br>
+    Keep this brief. Say: <em>“Scientists have learned that matter is made of tiny particles called atoms. Atoms are so tiny that we cannot see single atoms with just our eyes, so scientists use models to help them think.”</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 3 — Meet the model (5 min)</strong><br>
+    Show the balls and sticks. Hold up one simple built example.<br>
+    Ask: <em>“What can this model help us notice? What can it not tell us exactly?”</em><br>
+    Remind both children: <em>“This model helps us think, but it is not an exact picture of reality.”</em>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 4 — Shared hands-on activity: Model Detective (15 min)</strong><br>
+    Build Model A, Model B, and Model C together. Pause after each one and use the same routine every time:
+    <ul>
+      <li><strong>I observe...</strong> How many atoms do you see? Are they the same type or different types? How are they arranged?</li>
+      <li><strong>This model suggests...</strong> What idea about matter does this model help you think about?</li>
+      <li><strong>This helps scientists think about...</strong> Why is this model useful when atoms are too small to see directly?</li>
+    </ul>
+    Keep asking: <em>“What stays the same across all three models?”</em>
+  </div>
+
+  <div class="teacher-note">
+    <strong>Teaching move:</strong> Make the children describe what they can literally see in the model before they explain what they think it means. Observation first, inference second. That is the whole point of this lesson.
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 5 — Mixed-age challenge (8–10 min)</strong><br>
+    Give each child one clear job after the shared build.
+    <div class="badge-grid">
+      <div class="badge-card g3">
+        <strong>Grade 3 job</strong>
+        <ul>
+          <li>Choose one model.</li>
+          <li>Draw it.</li>
+          <li>Label how many atoms it shows.</li>
+          <li>Finish: <em>“I observe...”</em>, <em>“This model suggests...”</em>, and <em>“This helps scientists think about...”</em></li>
+        </ul>
+      </div>
+      <div class="badge-card g5">
+        <strong>Grade 5 job</strong>
+        <ul>
+          <li>Choose two models.</li>
+          <li>Compare them using evidence.</li>
+          <li>Finish: <em>“I observe that model 1 has...”</em>, <em>“Because the number/type/arrangement is different...”</em>, <em>“One strength...”</em>, and <em>“One limitation...”</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 6 — Share and discuss (5 min)</strong><br>
+    Have each child read one sentence from their work.
+    <ul>
+      <li>What did you observe?</li>
+      <li>What did your model suggest about matter?</li>
+      <li>How does this help scientists think?</li>
+      <li>What is one thing the model shows well?</li>
+      <li>What is one thing the model does not show exactly?</li>
+    </ul>
+  </div>
+
+  <div class="procedure-step">
+    <strong>Step 7 — Exit reflection (3–5 min)</strong><br>
+    Each child finishes these two stems:
+    <ul>
+      <li><em>“A model is helpful because...”</em></li>
+      <li><em>“A model is not exact because...”</em></li>
+    </ul>
+  </div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>What stayed the same in all three models?</strong><span class="discussion-hint">All of them still represented matter as being made of atoms.</span></div>
+  <div class="question-box"><strong>What changed from one model to another?</strong><span class="discussion-hint">The number of atoms, the type of atoms, or the arrangement changed.</span></div>
+  <div class="question-box"><strong>Why do scientists use models instead of just guessing?</strong><span class="discussion-hint">Models help them think about things too small to see directly.</span></div>
+  <div class="question-box"><strong>What is one thing a model does not show exactly?</strong><span class="discussion-hint">Exact size, exact motion, or the true appearance of atoms.</span></div>
+
+  <h2>🚀 Extensions and Support</h2>
+  <div class="extension-box">
+    <ul>
+      <li><strong>If Grade 3 gets stuck:</strong> ask for one observation before asking for an explanation. Spoken answers are fine.</li>
+      <li><strong>If Grade 5 wants more challenge:</strong> ask which claim is supported by the model and which claim is not supported by the model.</li>
+      <li><strong>If both children are tired:</strong> stop after the shared build and have each child give one reflection sentence aloud.</li>
+      <li><strong>Optional extension:</strong> let the children invent one new simple model and explain what it might represent, while keeping the same guardrail that it is a model representation, not proof of exact reality.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet — Tiny Building Blocks: Atoms Worksheet</h2>
+    <div class="worksheet-section">
+      <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+      <p>Drawings, labels, short phrases, bullet points, or spoken answers all count.</p>
+
+      <h3>1️⃣ Shared warm-up</h3>
+      <div class="line-block">
+        <p>What is matter? ________________________________________________</p>
+        <p>What is an atom? ________________________________________________</p>
+        <p>Why do scientists use models? ____________________________________</p>
+      </div>
+
+      <h3>2️⃣ Observation → inference → function</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>I observe...</th><th>This model suggests...</th><th>This helps scientists think about...</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <div class="badge-grid">
+        <div class="badge-card g3">
+          <strong>🔵 Grade 3</strong>
+          <p>Draw one model you built. Label how many atoms it shows.</p>
+          <div class="draw-box">Draw one model here</div>
+          <div class="line-block">
+            <p>I observe ______ atoms in my model.</p>
+            <p>This model suggests __________________________________.</p>
+            <p>This helps scientists think about _____________________.</p>
+          </div>
+        </div>
+        <div class="badge-card g5">
+          <strong>🟢 Grade 5</strong>
+          <p>Compare two models using evidence.</p>
+          <div class="line-block">
+            <p>I observe that model 1 has ____________________________.</p>
+            <p>I observe that model 2 has ____________________________.</p>
+            <p>Because the number/type/arrangement is different, this model suggests __________________________________________.</p>
+            <p>One strength of this model is ________________________.</p>
+            <p>One limitation of this model is ______________________.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>3️⃣ Final reflection</h3>
+      <div class="line-block">
+        <p>A model is helpful because ______________________________.</p>
+        <p>A model is not exact because ____________________________.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break answer-key">
+    <h2>🔑 Parent Answer Key</h2>
+    <h3>Shared sample responses</h3>
+    <ul>
+      <li><strong>What is matter?</strong> Matter is anything that takes up space and has mass.</li>
+      <li><strong>What is an atom?</strong> An atom is a tiny particle that makes up matter.</li>
+      <li><strong>Why do scientists use models?</strong> Atoms are too small to see directly, so models help scientists think about them.</li>
+    </ul>
+
+    <h3>Observation → inference → function examples</h3>
+    <ul>
+      <li><em>I observe...</em> 1 atom, 2 connected atoms, different types of atoms, or a different arrangement.</li>
+      <li><em>This model suggests...</em> Matter can be represented as being made of tiny parts called atoms.</li>
+      <li><em>This helps scientists think about...</em> Structures too small to see directly and how models can represent different possible arrangements.</li>
+    </ul>
+
+    <h3>Grade 3 sample responses</h3>
+    <ul>
+      <li>I observe 2 atoms in my model.</li>
+      <li>This model suggests that matter is made of tiny parts.</li>
+      <li>This helps scientists think about atoms we cannot see.</li>
+    </ul>
+
+    <h3>Grade 5 sample responses</h3>
+    <ul>
+      <li>I observe that model 1 has 1 atom and model 2 has 2 connected atoms.</li>
+      <li>Because the number and arrangement are different, this model suggests the models can represent different possible structures.</li>
+      <li>One strength is that the model helps show parts and arrangement.</li>
+      <li>One limitation is that it does not show exact scale, motion, or what atoms truly look like.</li>
+    </ul>
+
+    <h3>Reflection samples</h3>
+    <ul>
+      <li>A model is helpful because it lets us think about something too small to see.</li>
+      <li>A model is not exact because atoms do not really look like colored balls and sticks.</li>
+    </ul>
+  </div>
+
+  <div style="text-align:center; padding:24px 16px 16px; font-family:'Lato', sans-serif; font-size:.78rem; color:#999; border-top:1px solid #eee; margin-top:32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+  <script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s" data-content-selector="body"></script>
+</body>
+</html>
