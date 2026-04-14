@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Different Life Cycles, Same Big Pattern — Grade 3 Life Science Unit 1, Lesson 2</title>
+  <title>Lesson 2 Retired Pending Rebuild — Grade 3 Life Science Unit 1</title>
   <style>
     * { box-sizing: border-box; }
     body {
       font-family: Georgia, 'Times New Roman', serif;
       max-width: 8.5in;
       margin: 0 auto;
-      padding: 0.5in;
+      padding: 0.6in 0.5in;
       font-size: 11pt;
-      line-height: 1.4;
+      line-height: 1.5;
       color: #222;
+      background: #fff;
     }
     h1 {
       text-align: center;
       font-size: 22pt;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       border-bottom: 3px solid #2e7d32;
       padding-bottom: 10px;
       color: #2e7d32;
@@ -26,805 +27,79 @@
     .subtitle {
       text-align: center;
       font-style: italic;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       color: #555;
       font-size: 13pt;
     }
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      background: #e8f5e9;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 10pt;
-      border: 1px solid #a5d6a7;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-    h2 {
-      font-size: 14pt;
-      background: #2e7d32;
-      color: white;
-      padding: 8px 14px;
-      margin: 24px 0 12px 0;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 12pt;
-      color: #1b5e20;
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 4px;
-      margin: 18px 0 8px 0;
-    }
-    ul, ol { margin: 8px 0; padding-left: 25px; }
-    li { margin-bottom: 5px; }
-    .hero-image {
-      text-align: center;
-      margin: 16px 0;
-    }
-    .hero-image .emoji-hero {
-      font-size: 52pt;
-      line-height: 1.2;
-    }
-    .hero-image .caption {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-      margin-top: 4px;
-    }
-    .materials-box {
+    .notice-box {
       background: #fff8e1;
       border: 2px solid #ffcc80;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
-    .procedure-step {
-      background: #e8f5e9;
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border-left: 5px solid #2e7d32;
-    }
-    .procedure-step strong { color: #1b5e20; }
-    .question-box {
-      background: #f1f8e9;
-      border-left: 5px solid #00B894;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .tip-box {
-      background: #e0f7fa;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-    }
-    .standards-box {
-      background: #f3e5f5;
-      border: 1px solid #ce93d8;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .standards-box strong { color: #7b1fa2; }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
-    .teacher-note {
-      background: #f5f5f5;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #555;
-    }
-    .teacher-note strong { color: #333; }
-    .discussion-hint {
-      font-style: italic;
-      color: #555;
-      font-size: 10pt;
-      margin-top: 4px;
-      margin-bottom: 8px;
-      padding-left: 8px;
-      display: block;
-    }
-    .vocab-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0;
-    }
-    .vocab-chip {
-      background: #e8f5e9;
-      border: 1.5px solid #00B894;
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 10pt;
-      font-weight: bold;
-      color: #1b5e20;
-    }
-    .cycle-card-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      margin: 16px 0;
-    }
-    .cycle-card {
-      border: 2px solid #a5d6a7;
+      border-left: 6px solid #e65100;
       border-radius: 10px;
-      padding: 12px 10px;
-      text-align: center;
-      background: #fff;
+      padding: 16px 18px;
+      margin: 22px 0;
     }
-    .cycle-card .cycle-emoji {
-      font-size: 24pt;
-      display: block;
-      margin-bottom: 6px;
-    }
-    .cycle-card .cycle-title {
-      font-weight: bold;
-      color: #1b5e20;
-      margin-bottom: 6px;
-      font-size: 10.5pt;
-    }
-    .cycle-card .cycle-copy {
-      font-size: 9.2pt;
-      color: #444;
-      line-height: 1.35;
-    }
-    .comparison-box {
+    .reason-box {
       background: #f9fff9;
       border: 2px solid #a5d6a7;
       border-radius: 10px;
-      padding: 14px 16px;
-      margin: 14px 0;
+      padding: 16px 18px;
+      margin: 18px 0;
     }
-    .comparison-box h3 { margin-top: 0; }
-    .pattern-list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin: 14px 0;
-    }
-    .pattern-chip {
-      background: #e8f5e9;
-      border: 2px solid #00B894;
+    .next-box {
+      background: #eef7ff;
+      border: 2px solid #90caf9;
       border-radius: 10px;
-      padding: 10px 8px;
-      text-align: center;
-      font-weight: bold;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    a {
       color: #1b5e20;
-      font-size: 10pt;
+      font-weight: 700;
     }
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 14px 0;
-      font-size: 10pt;
-    }
-    .compare-table th {
-      background: #2e7d32;
-      color: white;
-      padding: 8px 10px;
-      border: 1.5px solid #1b5e20;
-      text-align: left;
-    }
-    .compare-table td {
-      border: 1.5px solid #a5d6a7;
-      padding: 10px;
-      vertical-align: top;
-    }
-    .compare-table tr:nth-child(even) td {
-      background: #f6fff6;
-    }
-    .worksheet-section {
-      margin: 20px 0;
-    }
-    .name-date {
+    ul { margin: 8px 0; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    footer {
       text-align: center;
-      margin-bottom: 16px;
-      font-size: 12pt;
-    }
-    .sort-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      margin: 14px 0;
-    }
-    .sort-box {
-      border: 2px dashed #a5d6a7;
-      border-radius: 10px;
-      padding: 10px 8px;
-      text-align: center;
-      min-height: 112px;
-      background: #fbfffb;
-    }
-    .sort-box .label {
-      font-weight: bold;
-      color: #1b5e20;
-      font-size: 10pt;
-      margin-bottom: 6px;
-    }
-    .draw-area {
-      border: 1.5px dashed #bbb;
-      border-radius: 6px;
-      height: 70px;
-      background: #fafafa;
-      margin-top: 8px;
-    }
-    .science-sentence {
-      background: #e8f5e9;
-      border: 2px solid #00B894;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 16px 0;
-      font-size: 12pt;
-    }
-    .blank-line {
-      display: inline-block;
-      border-bottom: 2px solid #2e7d32;
-      min-width: 110px;
-      margin: 0 4px;
-    }
-    .line-block p {
-      border-bottom: 1.5px solid #bbb;
-      height: 30px;
-      margin: 0 0 10px 0;
-    }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    .answer-key h2 {
-      background: #757575;
-      text-align: center;
-    }
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print {
-      body { padding: 0.25in; font-size: 10pt; }
-      h2 {
-        break-after: avoid;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key,
-      .materials-box, .tip-box, .extension-box, .cycle-card,
-      .comparison-box, .sort-box {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-      .cycle-card-grid,
-      .sort-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .compare-table {
-        font-size: 9pt;
-      }
-      .compare-table th,
-      .compare-table td {
-        padding: 7px 8px;
-      }
-      .print-btn { display: none; }
-      * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-    }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
-    }
-    @media (max-width: 640px) {
-      .cycle-card-grid, .sort-grid, .pattern-list {
-        grid-template-columns: 1fr 1fr;
-      }
+      padding: 24px 16px 8px;
+      font-family: 'Lato', sans-serif;
+      font-size: .78rem;
+      color: #999;
+      border-top: 1px solid #eee;
+      margin-top: 32px;
     }
   </style>
 </head>
 <body data-document-id="doc_zhtQoI3_V5U">
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>Grade 3 LS1 Unit 1 — Lesson 2 Retired</h1>
+  <p class="subtitle">This draft has been removed from the live lesson sequence pending a full rebuild.</p>
 
-  <h1>🌱 Different Life Cycles, Same Big Pattern 🌱</h1>
-  <p class="subtitle">Life Science — Life Cycles — Unit 1, Lesson 2 of 6</p>
-
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 3rd Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 45–60 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science — Life Cycles</span>
+  <div class="notice-box">
+    <p><strong>Current status:</strong> the former Lesson 2 draft <em>Different Life Cycles, Same Big Pattern</em> is no longer part of the public Grade 3 Life Science Unit 1 sequence.</p>
+    <p>A 2026-04-14 continuity and progression review found that this page was too close to Lesson 1 and did not add enough new learning value to justify staying live.</p>
   </div>
 
-  <div class="hero-image">
-    <div class="emoji-hero">🦋 🐸 🌱 🐦 👶</div>
-    <div class="caption">A butterfly, frog, bean plant, bird, and human all have different-looking life cycles, but each one follows the same big pattern.</div>
-  </div>
-
-  <div class="standards-box">
-    <strong>📋 NGSS Standard:</strong><br>
-    <strong>3-LS1-1</strong> — Develop models to describe that organisms have unique and diverse life cycles but all have in common birth, growth, reproduction, and death.
-  </div>
-
-  <h2>🎯 Learning Objective</h2>
-  <p>Students will <em>compare</em> the life cycles of several organisms, identify how they are the same and different, and <em>develop a simple model</em> showing that all life cycles include birth, growth, reproduction, and death.</p>
-
-  <h2>💡 The Big Idea</h2>
-  <p>Life cycles can look very different from one organism to another. A butterfly goes through metamorphosis, a frog changes from tadpole to adult, a bean plant sprouts from a seed, a bird hatches from an egg, and a human is born live. Even with those differences, they all follow the same big pattern: birth, growth, reproduction, and death.</p>
-
-  <h2>🔬 The Science</h2>
-  <p>A <strong>life cycle</strong> is the sequence of stages in an organism's life. Scientists compare life cycles to understand how living things change over time and how new organisms begin.</p>
-  <p>Different organisms start life in different ways. Butterflies, frogs, and birds hatch from eggs. Bean plants begin as seeds. Humans are born live. As they grow, some organisms change a lot in body form. For example, a caterpillar does not look much like an adult butterfly, and a tadpole does not look much like an adult frog. Other organisms, like birds, bean plants, and humans, grow more gradually.</p>
-  <p>The stages may have different names, but the big pattern stays the same. Every organism begins life, grows, reproduces when it becomes an adult, and eventually dies. We call it a <strong>cycle</strong> because reproduction starts the pattern again for a new generation of offspring.</p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong>
-    <div class="vocab-chips">
-      <span class="vocab-chip">life cycle</span>
-      <span class="vocab-chip">stage</span>
-      <span class="vocab-chip">organism</span>
-      <span class="vocab-chip">offspring</span>
-      <span class="vocab-chip">reproduction</span>
-      <span class="vocab-chip">metamorphosis</span>
-      <span class="vocab-chip">seedling</span>
-      <span class="vocab-chip">tadpole</span>
-      <span class="vocab-chip">adult</span>
-    </div>
-  </div>
-
-  <h2>📦 Materials</h2>
-  <div class="materials-box">
-    <h3>🏠 Gather These Items</h3>
+  <div class="reason-box">
+    <h2 style="font-size:14pt; margin-top:0; color:#1b5e20;">Why it was retired</h2>
     <ul>
-      <li>Printed lesson pages and Student Worksheet</li>
-      <li>Pencil</li>
-      <li>Crayons or colored pencils</li>
-      <li>Optional picture cards of a butterfly, frog, bean plant, bird, and human life cycle</li>
-    </ul>
-    <h3>📄 Optional / Nice to Have</h3>
-    <ul>
-      <li>Index cards for sorting stages</li>
-      <li>Scissors and glue if you want to turn stage cards into a cut-and-sort activity</li>
-      <li>Books or photos showing real organisms at different life stages</li>
+      <li>It repeated the same core claim, same organism set, and same compare-the-pattern task already used in Lesson 1.</li>
+      <li>It weakened unit progression by spending a second full lesson on the same introductory idea instead of moving into sharper evidence work.</li>
+      <li>It made the unit feel repetitive for families before the stronger plant, animal, and capstone lessons.</li>
     </ul>
   </div>
 
-  <h2>🔬 Let's Get Started</h2>
-
-  <p>In Lesson 1, you learned the shared pattern. Today the work shifts from introduction to application: you will compare several organisms, use a model to explain how they fit the same pattern, and look for where reproduction starts the cycle again.</p>
-
-  <div class="procedure-step">
-    <strong>Step 1 — Review the Big Pattern (5 min)</strong><br>
-    Say the four shared parts together: <em>birth, growth, reproduction, and death.</em> Ask the student to explain what each word means in simple language. Remind them that Lesson 1 showed the big pattern, and Lesson 2 will show how many different organisms fit inside it.
-  </div>
-
-  <div class="cycle-card-grid">
-    <div class="cycle-card">
-      <span class="cycle-emoji">🦋</span>
-      <div class="cycle-title">Butterfly</div>
-      <div class="cycle-copy">egg → caterpillar → chrysalis → adult butterfly</div>
-    </div>
-    <div class="cycle-card">
-      <span class="cycle-emoji">🐸</span>
-      <div class="cycle-title">Frog</div>
-      <div class="cycle-copy">egg → tadpole → froglet → adult frog</div>
-    </div>
-    <div class="cycle-card">
-      <span class="cycle-emoji">🌱</span>
-      <div class="cycle-title">Bean Plant</div>
-      <div class="cycle-copy">seed → seedling → young plant → mature plant with flowers and seeds</div>
-    </div>
-    <div class="cycle-card">
-      <span class="cycle-emoji">🐦</span>
-      <div class="cycle-title">Bird</div>
-      <div class="cycle-copy">egg → hatchling → young bird → adult bird</div>
-    </div>
-    <div class="cycle-card">
-      <span class="cycle-emoji">👶</span>
-      <div class="cycle-title">Human</div>
-      <div class="cycle-copy">baby → child → teen → adult</div>
-    </div>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Notice What Is Different (8–10 min)</strong><br>
-    Compare two examples out loud. A butterfly changes through metamorphosis. A bean plant grows from a seed. A bird hatches from an egg, but it does not go through metamorphosis like a butterfly. A human is born live. Ask the student to point out which organisms hatch, sprout, or are born live.
-  </div>
-
-  <div class="comparison-box">
-    <h3>🔍 Same Big Pattern</h3>
-    <div class="pattern-list">
-      <div class="pattern-chip">1. Birth</div>
-      <div class="pattern-chip">2. Growth</div>
-      <div class="pattern-chip">3. Reproduction</div>
-      <div class="pattern-chip">4. Death</div>
-    </div>
-    <p>These four parts do <strong>not</strong> mean every organism has the same exact stages. They mean every organism begins life, changes as it grows, becomes able to produce offspring or seeds, and eventually dies.</p>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 3 — Compare Side by Side (10–12 min)</strong><br>
-    Use the chart below to notice similarities and differences. Ask: Which ones begin in eggs? Which one begins as a seed? Which one is born live? Which ones change dramatically, and which ones grow more gradually?
-  </div>
-
-  <table class="compare-table">
-    <tr>
-      <th>Organism</th>
-      <th>How life begins</th>
-      <th>Growth pattern</th>
-      <th>How the cycle continues</th>
-    </tr>
-    <tr>
-      <td><strong>Butterfly</strong></td>
-      <td>Egg</td>
-      <td>Metamorphosis: caterpillar → chrysalis → adult</td>
-      <td>Adult butterflies lay eggs</td>
-    </tr>
-    <tr>
-      <td><strong>Frog</strong></td>
-      <td>Egg</td>
-      <td>Body changes a lot: tadpole → froglet → adult</td>
-      <td>Adult frogs lay eggs</td>
-    </tr>
-    <tr>
-      <td><strong>Bean plant</strong></td>
-      <td>Seed</td>
-      <td>Sprouts and grows stems, leaves, flowers, and pods</td>
-      <td>Mature plants make flowers and seeds</td>
-    </tr>
-    <tr>
-      <td><strong>Bird</strong></td>
-      <td>Egg</td>
-      <td>Hatches and grows more gradually into an adult bird</td>
-      <td>Adult birds lay eggs</td>
-    </tr>
-    <tr>
-      <td><strong>Human</strong></td>
-      <td>Live birth</td>
-      <td>Grows gradually from baby to child to adult</td>
-      <td>Adults can have offspring</td>
-    </tr>
-  </table>
-
-  <div class="procedure-step">
-    <strong>Step 4 — Build a Comparison Model (10–12 min)</strong><br>
-    Choose one organism for the model section of the worksheet, then compare it to one second organism. The model should show the stages in order and also explain how that organism still fits the same big pattern as the others.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 5 — Say the Pattern Clearly (5 min)</strong><br>
-    Have the student finish this sentence out loud before writing: <em>"A _____ life cycle looks different from a _____ life cycle, but both include birth, growth, reproduction, and death."</em>
-  </div>
-
-  <h2>💬 Discussion Questions</h2>
-
-  <div class="question-box">
-    <strong>🗣️ Question 1:</strong><br>
-    "How can a butterfly and a bean plant both have life cycles even though they look so different?"
-    <p class="discussion-hint">Look for answers like: Their stages are different, but both begin life, grow, reproduce, and die. That shared pattern makes both of them life cycles.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 2:</strong><br>
-    "What is one important difference between a frog's early life and a human's early life?"
-    <p class="discussion-hint">They might say: A frog begins as an egg and becomes a tadpole, while a human is born live and grows more gradually.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 3:</strong><br>
-    "Why is the word <em>cycle</em> still correct for a bird, a plant, and a human?"
-    <p class="discussion-hint">Look for: Adults reproduce, and a new offspring or seed begins the pattern again. That is why it is a cycle, not just a one-time list.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 4:</strong><br>
-    "What do all the organisms in this lesson have in common?"
-    <p class="discussion-hint">They might say: All of them have a beginning of life, grow through stages, reproduce as adults, and eventually die.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 5:</strong><br>
-    "Why do scientists use models when they study life cycles?"
-    <p class="discussion-hint">Look for answers like: Models help show the order of stages and make it easier to compare patterns, especially when a whole life cycle takes a long time to watch in real life.</p>
-  </div>
-
-  <h2>🚀 Extensions</h2>
-  <div class="extension-box">
+  <div class="next-box">
+    <h2 style="font-size:14pt; margin-top:0; color:#1565c0;">What to use instead right now</h2>
     <ul>
-      <li>🦈 <strong>Add Another Organism:</strong> Choose a shark, chicken, oak tree, or flower and decide how its life cycle fits the same big pattern.</li>
-      <li>🎨 <strong>Three-Cycle Poster:</strong> Make a mini poster showing the same big pattern across three very different organisms.</li>
-      <li>📚 <strong>Read and Compare:</strong> Read about metamorphosis, then compare it to the growth of a bird or human.</li>
-      <li>🌿 <strong>Observe a Plant:</strong> Grow a bean seed and sketch how the plant changes over time.</li>
+      <li>Keep <a href="/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html">Lesson 1 — What Is a Life Cycle?</a> as the unit introduction.</li>
+      <li>Continue into <a href="/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html">Lesson 3 — Plant Life Cycles and Seeds</a> while the replacement Lesson 2 is rebuilt.</li>
+      <li>The remaining live lessons in the unit are still available and remain part of the canonical package.</li>
     </ul>
   </div>
 
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="teacher-note">
-    <ul>
-      <li><strong>Keep Lesson 1 visible:</strong> Start by reminding students of the universal pattern from Lesson 1. Lesson 2 is about applying that pattern to several examples.</li>
-      <li><strong>Plants count:</strong> Many students focus only on animals. Keep the bean plant example visible so students remember that plants also have life cycles.</li>
-      <li><strong>Different stages are not just different sizes:</strong> Help students notice major changes such as hatching, sprouting, metamorphosis, flowering, and becoming able to reproduce.</li>
-      <li><strong>Be flexible about stage labels:</strong> Accept equivalent words like <em>sprout</em> for <em>seedling</em> or <em>baby bird</em> for <em>hatchling</em> if the science and sequence are correct.</li>
-      <li><strong>Reconnect the cycle idea:</strong> If students think death means the cycle stops, point back to reproduction and a new generation beginning the pattern again.</li>
-    </ul>
-  </div>
+  <p style="margin-top:24px; color:#555;"><strong>Reviewer note:</strong> the replacement slot should return only after it adds real novelty, clearer evidence work, and stronger progression across the unit.</p>
 
-  <div class="page-break">
-    <h1>🌱 Student Worksheet — Different Life Cycles, Same Big Pattern 🌱</h1>
-    <p class="subtitle">Grade 3 Life Science — Unit 1, Lesson 2</p>
-    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-
-    <div class="worksheet-section">
-      <h3>1️⃣ Put One Life Cycle in Order</h3>
-      <p style="font-size:10pt;">Choose one organism. Draw or label its stages in order.</p>
-      <div class="sort-grid">
-        <div class="sort-box">
-          <div class="label">Stage 1</div>
-          <div class="draw-area"></div>
-        </div>
-        <div class="sort-box">
-          <div class="label">Stage 2</div>
-          <div class="draw-area"></div>
-        </div>
-        <div class="sort-box">
-          <div class="label">Stage 3</div>
-          <div class="draw-area"></div>
-        </div>
-        <div class="sort-box">
-          <div class="label">Stage 4</div>
-          <div class="draw-area"></div>
-        </div>
-        <div class="sort-box">
-          <div class="label">Stage 5 (if needed)</div>
-          <div class="draw-area"></div>
-        </div>
-      </div>
-      <p style="font-size:10pt;">Organism I chose: __________________________________________</p>
-    </div>
-
-    <div class="worksheet-section">
-      <h3>2️⃣ Compare Two Organisms</h3>
-      <p style="font-size:10pt;">Write one way the two life cycles are the same and two ways they are different. Be sure to name how <strong>reproduction</strong> appears in each organism and how both still show <strong>birth, growth, reproduction, and death</strong>.</p>
-      <table class="compare-table">
-        <tr>
-          <th>Organisms</th>
-          <th>How are they the same?</th>
-          <th>Difference 1</th>
-          <th>Difference 2</th>
-        </tr>
-        <tr>
-          <td>________________ and ________________</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="worksheet-section">
-      <h3>3️⃣ Show the Big Pattern</h3>
-      <div class="science-sentence">
-        All life cycles include <span class="blank-line">&nbsp;</span>, <span class="blank-line">&nbsp;</span>, <span class="blank-line">&nbsp;</span>, and <span class="blank-line">&nbsp;</span>.
-      </div>
-    </div>
-
-    <div class="worksheet-section">
-      <h3>4️⃣ Why Is It a Cycle?</h3>
-      <p style="font-size:10pt;">Explain why a life cycle is called a cycle instead of just a list.</p>
-      <div class="line-block">
-        <p></p>
-        <p></p>
-        <p></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="page-break">
-    <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
-
-      <h3>1️⃣ Put One Life Cycle in Order — Sample Acceptable Answers</h3>
-      <ul>
-        <li><strong>Butterfly:</strong> egg → caterpillar → chrysalis → adult butterfly</li>
-        <li><strong>Frog:</strong> egg → tadpole → froglet → adult frog</li>
-        <li><strong>Bean plant:</strong> seed → seedling/sprout → young plant → mature plant → flowers/pods/seeds</li>
-        <li><strong>Bird:</strong> egg → hatchling → young bird → adult bird</li>
-        <li><strong>Human:</strong> baby → child → teen → adult</li>
-        <li style="list-style:none; margin-top:6px; font-size:10pt; color:#555;">Adults can have offspring, and a new baby begins the pattern again.</li>
-      </ul>
-      <p style="font-size:10pt; color:#555; font-style:italic;">Accept equivalent stage labels if the sequence is scientifically reasonable and the student clearly shows growth over time.</p>
-
-      <h3>2️⃣ Compare Two Organisms — Sample Ideas</h3>
-      <div class="question-box" style="margin:10px 0;">
-        <strong>Same:</strong> Both organisms begin life, grow, reproduce, and die.<br><br>
-        <strong>Possible differences:</strong> One may begin as an egg, seed, or live birth. One may go through metamorphosis while another grows more gradually.
-      </div>
-      <ul>
-        <li><strong>Butterfly and bird:</strong> same = both hatch from eggs and later reproduce; different = butterfly goes through metamorphosis, bird does not.</li>
-        <li><strong>Frog and human:</strong> same = both grow into adults that reproduce; different = frog begins as an egg and tadpole, human is born live.</li>
-        <li><strong>Bean plant and bird:</strong> same = both begin life and later reproduce; different = plant begins as a seed while bird begins in an egg.</li>
-      </ul>
-
-      <h3>3️⃣ Show the Big Pattern — Accepted Answers</h3>
-      <p>All life cycles include <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong>.</p>
-      <p style="font-size:10pt; color:#555; font-style:italic;">Accept student-friendly wording such as <em>being born</em>, <em>growing</em>, <em>having babies/making seeds</em>, and <em>dying</em> if the meaning is correct.</p>
-
-      <h3>4️⃣ Why Is It a Cycle? — Sample Response</h3>
-      <p>A life cycle is called a cycle because adults reproduce, and a new offspring or seed begins the pattern again. The stages connect to a new beginning instead of ending forever.</p>
-
-      <h3>💬 Discussion Question Answers</h3>
-      <ul>
-        <li><strong>How can a butterfly and a bean plant both have life cycles?</strong> Their stages are different, but both still include birth, growth, reproduction, and death.</li>
-        <li><strong>What is one important difference between a frog and a human?</strong> Frogs begin as eggs and become tadpoles first; humans are born live and grow more gradually.</li>
-        <li><strong>Why is the word cycle correct?</strong> Reproduction begins the pattern again for a new generation.</li>
-        <li><strong>What do all organisms in this lesson have in common?</strong> They all begin life, grow, reproduce, and die.</li>
-        <li><strong>Why do scientists use models?</strong> Models help show stage order and compare life cycles clearly.</li>
-      </ul>
-
-      <h3>✅ What Success Looks Like</h3>
-      <ul>
-        <li>Student can correctly sequence one organism's life cycle.</li>
-        <li>Student can name at least one similarity and one difference between two organisms.</li>
-        <li>Student can identify how reproduction appears in each organism being compared.</li>
-        <li>Student can explain that all life cycles share the same big pattern.</li>
-        <li>Student can explain why reproduction makes the pattern a cycle.</li>
-      </ul>
-
-      <h3>🛠️ Troubleshooting / Teaching Notes</h3>
-      <ul>
-        <li>If a student forgets plants, bring the bean plant back into the comparison chart.</li>
-        <li>If a student thinks every life cycle has the same stage names, point out that the <em>pattern</em> is shared even when the stage names differ.</li>
-        <li>If a student struggles with reproduction, explain it in grade-appropriate terms such as <em>adults make offspring</em> or <em>plants make seeds</em>.</li>
-        <li>If the page feels dense during use, skip one optional extension and keep the focus on the comparison chart plus the worksheet compare task.</li>
-      </ul>
-    </div>
-  </div>
-
-<script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_zhtQoI3_V5U" data-content-selector="body"></script>
-<!-- ═══ PAYWALL SYSTEM ═══ -->
-<style>
-  .llc-paywall-overlay {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
-    padding: 48px 24px 40px;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
-  }
-  .llc-paywall-inner {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-  .llc-paywall-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #3B1F6B;
-    margin-bottom: 8px;
-  }
-  .llc-paywall-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    color: #5A7A78;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  .llc-paywall-sub strong { color: #3B1F6B; }
-  .llc-btn-subscribe {
-    display: inline-block;
-    background: #FF6B6B;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
-</style>
-
-<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
-  <div class="llc-paywall-inner">
-    <span class="llc-paywall-emoji">🥼</span>
-    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
-    <p class="llc-paywall-sub">You're seeing the lesson preview. Subscribe to access the full procedure, Student Worksheet, discussion questions, and Parent Answer Key — for every lesson in the K–5 curriculum.<br><strong>$99/year. Cancel anytime.</strong></p>
-    <a href="/store.html" class="llc-btn-subscribe">Subscribe to Unlock — $99/yr</a>
-  </div>
-</div>
-
-<script>
-(function() {
-  var ACCESS_KEY = 'llc_access';
-
-  function isUnlocked() {
-    return localStorage.getItem(ACCESS_KEY) === 'granted';
-  }
-
-  function lockLesson() {
-    var allH2 = Array.from(document.querySelectorAll('h2'));
-    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
-
-    var lockFromIndex = -1;
-    for (var i = 0; i < allH2.length; i++) {
-      var text = allH2[i].textContent.toLowerCase();
-      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
-      if (!isGoal) {
-        lockFromIndex = i;
-        break;
-      }
-    }
-
-    if (lockFromIndex === -1 || lockFromIndex === 0) {
-      lockFromIndex = Math.min(2, allH2.length - 1);
-    }
-
-    var lockFromH2 = allH2[lockFromIndex];
-    if (!lockFromH2) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.maxHeight = '600px';
-      document.getElementById('llcPaywall').style.display = 'block';
-      return;
-    }
-
-    var bodyChildren = Array.from(document.body.children);
-    var hiding = false;
-    bodyChildren.forEach(function(child) {
-      if (child === lockFromH2 || child.contains(lockFromH2)) {
-        hiding = true;
-      }
-      if (hiding && child.id !== 'llcPaywall') {
-        child.style.display = 'none';
-      }
-    });
-
-    document.getElementById('llcPaywall').style.display = 'block';
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.search.indexOf('review=1') !== -1) {
-      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
-      return;
-    }
-    if (!isUnlocked()) {
-      lockLesson();
-    }
-  });
-})();
-</script>
-<footer class="llc-footer" style="text-align:center;padding:24px 16px 16px;font-family:'Lato',sans-serif;font-size:.78rem;color:#999;border-top:1px solid #eee;margin-top:32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</footer>
+  <script src="https://cassclearly.com/feedback-layer.js?v=20260408" data-api-url="https://cassclearly.com" data-document-id="doc_zhtQoI3_V5U" data-content-selector="body"></script>
+  <footer>© 2026 Little Lab Coats. For personal, non-commercial use only.</footer>
 </body>
 </html>

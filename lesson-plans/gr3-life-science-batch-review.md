@@ -38,6 +38,10 @@ Use these as direct continuity anchors:
 - `lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
 - `lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
 
+2026-04-14 historical note:
+- Lesson 2 has since been retired from live sequencing after the Calvin continuity/progression audit found it too duplicative of Lesson 1.
+- For future rebuild work, use Lesson 1 plus `lesson-plans/gr3-ls1-unit1-calvin-audit-and-overhaul-plan-2026-04-14.md` as the current continuity truth instead of treating Lesson 2 as a live anchor.
+
 ### Matching support artifacts expected in this batch workflow
 - `lesson-plans/gr3-ls1-unit1-refcard-lesson3-plant-life-cycles-and-seeds.html`
 - `lesson-plans/gr3-ls1-unit1-refcard-lesson4-animal-life-cycles-and-metamorphosis.html`

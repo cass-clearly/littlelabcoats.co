@@ -4,6 +4,10 @@ Last updated: 2026-04-07
 Status: implementation baseline for Grade 3 Life Science Unit 1 Lessons 3–6
 Scope: Batch 1 recovery for the remaining lessons in `3-LS1 Unit 1`
 
+2026-04-14 superseding note:
+- The historical Lesson 2 anchor named in this scaffold is no longer a live sequencing anchor.
+- Use the Calvin audit (`lesson-plans/gr3-ls1-unit1-calvin-audit-and-overhaul-plan-2026-04-14.md`) when making future continuity decisions for this unit.
+
 ## Purpose
 
 This file is the chunk-level implementation brief for the Grade 3 Life Science Batch 1 recovery pass.

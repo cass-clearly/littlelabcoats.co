@@ -1941,23 +1941,6 @@
       "sourcePattern": "structured"
     },
     {
-      "slug": "gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern",
-      "sourcePath": "lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
-      "canonicalUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
-      "reviewUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html?review=1",
-      "title": "Different Life Cycles, Same Big Pattern — Grade 3 Life Science Unit 1, Lesson 2",
-      "displayTitle": "Different Life Cycles, Same Big Pattern",
-      "gradeKey": "3",
-      "gradeLabel": "Grade 3",
-      "domainKey": "ls",
-      "domainLabel": "Life Science",
-      "unitNumber": 1,
-      "lessonNumber": 2,
-      "isFreeSample": false,
-      "bucket": "3-ls",
-      "sourcePattern": "structured"
-    },
-    {
       "slug": "gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds",
       "sourcePath": "lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html",
       "canonicalUrl": "/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html",
@@ -6164,7 +6147,7 @@
     {
       "gradeLabel": "Grade 3",
       "domainLabel": "Life Science",
-      "count": 24,
+      "count": 23,
       "entries": [
         {
           "slug": "gr3-ls1-unit1-lesson1-what-is-a-life-cycle",
@@ -6179,23 +6162,6 @@
           "domainLabel": "Life Science",
           "unitNumber": 1,
           "lessonNumber": 1,
-          "isFreeSample": false,
-          "bucket": "3-ls",
-          "sourcePattern": "structured"
-        },
-        {
-          "slug": "gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern",
-          "sourcePath": "lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
-          "canonicalUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
-          "reviewUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html?review=1",
-          "title": "Different Life Cycles, Same Big Pattern — Grade 3 Life Science Unit 1, Lesson 2",
-          "displayTitle": "Different Life Cycles, Same Big Pattern",
-          "gradeKey": "3",
-          "gradeLabel": "Grade 3",
-          "domainKey": "ls",
-          "domainLabel": "Life Science",
-          "unitNumber": 1,
-          "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "3-ls",
           "sourcePattern": "structured"

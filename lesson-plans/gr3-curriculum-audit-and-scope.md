@@ -3,6 +3,10 @@
 Last updated: 2026-04-07
 Status: authoritative chunk-1 audit for the Grade 3 completion run
 
+2026-04-14 superseding note:
+- Grade 3 LS1 Unit 1 Lesson 2 was later retired from live sequencing after the Calvin continuity/progression audit found it too duplicative of Lesson 1.
+- For current live-sequencing truth, use `lesson-plans/gr3-ls1-unit1-calvin-audit-and-overhaul-plan-2026-04-14.md` alongside this older build-scope audit.
+
 ## Purpose
 
 This file is the source of truth for the current Grade 3 implementation run.

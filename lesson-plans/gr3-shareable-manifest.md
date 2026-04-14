@@ -9,7 +9,7 @@ It should be treated as the Grade 3 source-of-truth URL list for what is publicl
 
 Scope note for audit alignment:
 - this manifest reflects the **currently discoverable Grade 3 repo state** audited in `lesson-plans/gr3-curriculum-audit-and-scope.md`
-- that repo state currently includes `3-LS1` lesson pages 1–6, `3-PS2`, `3-ESS2 Unit 1`, `3-ETS1 Unit 1`, and the standalone `3-LS4` lesson `Bird Beak Buffet`
+- current live-sequencing truth after the 2026-04-14 Calvin pass: `3-LS1` now exposes Lesson 1 and Lessons 3–6 live while the old Lesson 2 slot is retired pending rebuild; the rest of the discoverable Grade 3 repo state still includes `3-PS2`, `3-ESS2 Unit 1`, `3-ETS1 Unit 1`, and the standalone `3-LS4` lesson `Bird Beak Buffet`
 - it should not be read as proof that a larger full-year Grade 3 domain map has been confirmed in-repo
 
 ## 2026-04-09 urgent Grade 3 review-flow verification
@@ -91,12 +91,12 @@ For the verified sample, the urgent user-facing problem is no longer reproducibl
 ## Existing Grade 3 baseline lesson URLs
 
 These are the baseline Grade 3 lesson files already present in the repo and treated as the format anchors for later Grade 3 work.
-They remain the live baseline anchors for the LS1 unit.
+Current live-anchor status for LS1 after the 2026-04-14 Calvin continuity pass:
 
 - `3-LS1 Unit 1 Lesson 1 — What Is a Life Cycle?`  
   `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html`
-- `3-LS1 Unit 1 Lesson 2 — Different Life Cycles, Same Big Pattern`  
-  `https://littlelabcoats.co/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html`
+- `3-LS1 Unit 1 Lesson 2 slot`
+  `retired from live sequencing pending rebuild; see lesson-plans/gr3-ls1-unit1-calvin-audit-and-overhaul-plan-2026-04-14.md`
 
 ## Grade 3 LS1 Batch 1 lesson URLs staged for handoff
 

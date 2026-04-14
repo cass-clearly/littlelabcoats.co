@@ -52,6 +52,7 @@ Next required ship step:
 - move to Grade 4 Earth & Space Science review using `gr4-ess2-unit1` as the canonical Grade 4 Earth family for tracker purposes
 - after that, continue into Grade 5 Physical Science or the next highest-value unreviewed unit with coherent live review URLs
 - keep release gating strict: Rachel + Margaret review first, literal fixes second, public verification before counting anything as released
+- keep the parallel Calvin continuity/progression lane active; current rubric lives in `lesson-plans/calvin-continuity-progression-rubric.md` and the first active case is `lesson-plans/gr3-ls1-unit1-calvin-audit-and-overhaul-plan-2026-04-14.md`
 
 ## Candidate next batches after current one
 
@@ -68,3 +69,4 @@ Priority candidates:
 - prefer unit-shaped batches over random lesson-by-lesson hopping unless a blocker forces a surgical pass
 - 2026-04-12 closeout note: the previously active Pollinators + Grade 4 LS1 open-comment set was rechecked and then closed in Remarq after live/source verification; those tracked documents now show `0` open top-level comments across that active set
 - 2026-04-12 continuation note: Grade 5 LS1 Unit 2 had live review-mode coverage and stable document IDs but no current comment-feed artifact, so the batch resumed via direct source/live Rachel + Margaret review notes recorded in `lesson-plans/gr5-life-science-batch-review.md` before literal fixes were applied
+- 2026-04-14 Calvin continuity note: Grade 3 LS1 Unit 1 was audited for repetition/progression; Lesson 2 was retired from live sequencing pending rebuild because it duplicated Lesson 1 too closely.
