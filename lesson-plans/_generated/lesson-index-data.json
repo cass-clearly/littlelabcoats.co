@@ -1826,8 +1826,8 @@
       "sourcePath": "lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html",
       "canonicalUrl": "/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html",
       "reviewUrl": "/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1",
-      "title": "Balanced and Unbalanced Forces — Grade 3 Physical Science Unit 1, Lesson 1",
-      "displayTitle": "Balanced and Unbalanced Forces",
+      "title": "Balanced and Unbalanced Forces, Introduction — Grade 3 Physical Science Unit 1, Lesson 1",
+      "displayTitle": "Balanced and Unbalanced Forces, Introduction",
       "gradeKey": "3",
       "gradeLabel": "Grade 3",
       "domainKey": "ps",
@@ -3809,6 +3809,23 @@
       }
     },
     {
+      "slug": "5th-fossils-earth-history",
+      "sourcePath": "lesson-plans/5th-fossils-earth-history.html",
+      "canonicalUrl": "/lesson-plans/5th-fossils-earth-history.html",
+      "reviewUrl": "/lesson-plans/5th-fossils-earth-history.html?review=1",
+      "title": "Fossils: Reading the Pages of Earth's History",
+      "displayTitle": "Fossils: Reading the Pages of Earth's History",
+      "gradeKey": "5",
+      "gradeLabel": "Grade 5",
+      "domainKey": "ess",
+      "domainLabel": "Earth & Space Science",
+      "unitNumber": null,
+      "lessonNumber": null,
+      "isFreeSample": false,
+      "bucket": "5-ess",
+      "sourcePattern": "legacy-grade-slug-domain-override"
+    },
+    {
       "slug": "gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem",
       "sourcePath": "lesson-plans/gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem.html",
       "canonicalUrl": "/lesson-plans/gr5-ets1-unit1-lesson1-define-the-water-filter-design-problem.html",
@@ -3947,23 +3964,6 @@
       "reviewUrl": "/lesson-plans/5th-forces-balanced-unbalanced.html?review=1",
       "title": "Balanced & Unbalanced Forces, Friction, and Newton's Laws — 5th Grade",
       "displayTitle": "Balanced & Unbalanced Forces, Friction, and Newton's Laws",
-      "gradeKey": "5",
-      "gradeLabel": "Grade 5",
-      "domainKey": null,
-      "domainLabel": "Other Lessons",
-      "unitNumber": null,
-      "lessonNumber": null,
-      "isFreeSample": false,
-      "bucket": "5-other",
-      "sourcePattern": "legacy-grade-slug"
-    },
-    {
-      "slug": "5th-fossils-earth-history",
-      "sourcePath": "lesson-plans/5th-fossils-earth-history.html",
-      "canonicalUrl": "/lesson-plans/5th-fossils-earth-history.html",
-      "reviewUrl": "/lesson-plans/5th-fossils-earth-history.html?review=1",
-      "title": "Fossils: Reading the Pages of Earth's History",
-      "displayTitle": "Fossils: Reading the Pages of Earth's History",
       "gradeKey": "5",
       "gradeLabel": "Grade 5",
       "domainKey": null,
@@ -6061,8 +6061,8 @@
           "sourcePath": "lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html",
           "canonicalUrl": "/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html",
           "reviewUrl": "/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html?review=1",
-          "title": "Balanced and Unbalanced Forces — Grade 3 Physical Science Unit 1, Lesson 1",
-          "displayTitle": "Balanced and Unbalanced Forces",
+          "title": "Balanced and Unbalanced Forces, Introduction — Grade 3 Physical Science Unit 1, Lesson 1",
+          "displayTitle": "Balanced and Unbalanced Forces, Introduction",
           "gradeKey": "3",
           "gradeLabel": "Grade 3",
           "domainKey": "ps",
@@ -8007,7 +8007,7 @@
     {
       "gradeLabel": "Grade 5",
       "domainLabel": "Earth & Space Science",
-      "count": 7,
+      "count": 8,
       "entries": [
         {
           "slug": "gr5-ess3-unit1-l1-human-impact",
@@ -8162,6 +8162,23 @@
             "label": "Reviewed / revised",
             "note": "Grade 5 Earth & Space Science Unit 1 completed review and revision."
           }
+        },
+        {
+          "slug": "5th-fossils-earth-history",
+          "sourcePath": "lesson-plans/5th-fossils-earth-history.html",
+          "canonicalUrl": "/lesson-plans/5th-fossils-earth-history.html",
+          "reviewUrl": "/lesson-plans/5th-fossils-earth-history.html?review=1",
+          "title": "Fossils: Reading the Pages of Earth's History",
+          "displayTitle": "Fossils: Reading the Pages of Earth's History",
+          "gradeKey": "5",
+          "gradeLabel": "Grade 5",
+          "domainKey": "ess",
+          "domainLabel": "Earth & Space Science",
+          "unitNumber": null,
+          "lessonNumber": null,
+          "isFreeSample": false,
+          "bucket": "5-ess",
+          "sourcePattern": "legacy-grade-slug-domain-override"
         }
       ],
       "statusSummaries": [
@@ -8321,7 +8338,7 @@
     {
       "gradeLabel": "Grade 5",
       "domainLabel": "Other Lessons",
-      "count": 3,
+      "count": 2,
       "entries": [
         {
           "slug": "5th-forces-balanced-unbalanced",
@@ -8330,23 +8347,6 @@
           "reviewUrl": "/lesson-plans/5th-forces-balanced-unbalanced.html?review=1",
           "title": "Balanced & Unbalanced Forces, Friction, and Newton's Laws — 5th Grade",
           "displayTitle": "Balanced & Unbalanced Forces, Friction, and Newton's Laws",
-          "gradeKey": "5",
-          "gradeLabel": "Grade 5",
-          "domainKey": null,
-          "domainLabel": "Other Lessons",
-          "unitNumber": null,
-          "lessonNumber": null,
-          "isFreeSample": false,
-          "bucket": "5-other",
-          "sourcePattern": "legacy-grade-slug"
-        },
-        {
-          "slug": "5th-fossils-earth-history",
-          "sourcePath": "lesson-plans/5th-fossils-earth-history.html",
-          "canonicalUrl": "/lesson-plans/5th-fossils-earth-history.html",
-          "reviewUrl": "/lesson-plans/5th-fossils-earth-history.html?review=1",
-          "title": "Fossils: Reading the Pages of Earth's History",
-          "displayTitle": "Fossils: Reading the Pages of Earth's History",
           "gradeKey": "5",
           "gradeLabel": "Grade 5",
           "domainKey": null,

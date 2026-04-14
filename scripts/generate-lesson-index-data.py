@@ -69,6 +69,15 @@ LEGACY_UNIT_RE = re.compile(r"^unit(?P<unit>\d+)-(?:lesson|l)(?P<lesson>\d+)-(?P
 FREE_RE = re.compile(r"^free-(?:(?P<freeprefix>k|gr\d+|\d+th)-)?(?P<rest>.+)$", re.IGNORECASE)
 FIFTH_RE = re.compile(r"^(?P<grade>\d+)th-(?P<rest>.+)$", re.IGNORECASE)
 
+LEGACY_SLUG_METADATA_OVERRIDES = {
+    "5th-fossils-earth-history": {
+        "domainKey": "ess",
+        "domainLabel": DOMAIN_LABELS["ess"],
+        "bucket": "5-ess",
+        "sourcePattern": "legacy-grade-slug-domain-override",
+    },
+}
+
 
 def should_include(path: Path) -> bool:
     if path.suffix.lower() != ".html":
@@ -239,6 +248,9 @@ def parse_metadata(slug: str) -> dict:
                 "sourcePattern": "legacy-grade-slug",
             }
         )
+        override = LEGACY_SLUG_METADATA_OVERRIDES.get(slug)
+        if override:
+            metadata.update(override)
         return metadata
 
     return metadata
