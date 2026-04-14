@@ -171,13 +171,6 @@
       background: #fff;
       box-shadow: 0 4px 14px rgba(0,0,0,0.05);
     }
-    .example-card img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-      background: #f7fff7;
-    }
     .cutout-thumb {
       width: 100%;
       aspect-ratio: 1 / 1;
@@ -194,19 +187,31 @@
       margin-bottom: 8px;
       font-size: 11pt;
     }
-    .stage-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 6px;
+    .stage-sequence {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 8px;
     }
-    .stage-pill {
-      background: #f1f8e9;
-      border: 1px solid #c5e1a5;
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-size: 9pt;
+    .stage-shot {
+      text-align: center;
+    }
+    .stage-shot img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #f7fff7;
+      border-radius: 10px;
+      border: 1px solid #dcedc8;
+      margin-bottom: 5px;
+    }
+    .stage-shot-label {
+      display: block;
+      font-size: 8.6pt;
       color: #355e3b;
+      font-weight: 600;
+      line-height: 1.2;
     }
     .stage-note {
       font-size: 9.4pt;
@@ -443,8 +448,8 @@
   </div>
 
   <div class="hero-image">
-    <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-life-cycle-hero-gemini.jpg" alt="Gemini-generated educational illustration showing butterfly, frog, bean plant, and human life cycle scenes for a Grade 3 homeschool science lesson.">
-    <div class="caption">Different organisms look different as they change, but each one still follows the same big life-cycle pattern.</div>
+    <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Gemini-generated frog life cycle image showing eggs, tadpole, froglet, and adult frog.">
+    <div class="caption">One clear example of a life cycle: frog eggs become a tadpole, then a froglet, and then an adult frog.</div>
   </div>
 
   <div class="standards-box">
@@ -462,7 +467,7 @@
 
   <h2>🔬 The Science</h2>
   <p>A <strong>life cycle</strong> is the series of stages an organism passes through during its life. Scientists study life cycles because they help explain how living things change over time and how new organisms are produced.</p>
-  <p>Some organisms change dramatically as they grow. A butterfly begins as an egg, then becomes a caterpillar, then a chrysalis, and finally an adult butterfly. A frog begins as eggs, becomes a tadpole, then a froglet, and later an adult frog. Other organisms change more gradually. A bean plant starts as a seed, grows into a sprout, then a mature plant that produces flowers and seeds. Humans begin as babies and grow through childhood into adulthood.</p>
+  <p>Some organisms change dramatically as they grow. A butterfly begins as an egg, then becomes a caterpillar, then a chrysalis, and finally an adult butterfly. A frog begins as eggs, becomes a tadpole, then a froglet, and later an adult frog. Other organisms change more gradually. A bean plant starts as a seed, grows into a seedling, then a young plant, and later a mature plant that produces flowers and seeds. Humans begin as babies and grow through childhood into adulthood.</p>
   <p>The stages are <strong>unique and diverse</strong>, but there is still a common pattern across life: birth, growth, reproduction, and death. That shared pattern is what makes these examples all life cycles.</p>
 
   <div class="tip-box">
@@ -483,55 +488,39 @@
 
   <div class="example-grid">
     <div class="example-card">
-      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-gemini.jpg" alt="Gemini-generated butterfly life cycle card showing egg, caterpillar, chrysalis, and adult butterfly in one complete visual.">
       <div class="example-copy">
         <div class="example-title">Butterfly</div>
-        <div class="stage-strip">
-          <span class="stage-pill">egg</span>
-          <span class="stage-pill">caterpillar</span>
-          <span class="stage-pill">chrysalis</span>
-          <span class="stage-pill">adult butterfly</span>
+        <div class="stage-sequence">
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-egg.jpg" alt="Butterfly life cycle stage: egg on a leaf."><span class="stage-shot-label">Egg</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-caterpillar.jpg" alt="Butterfly life cycle stage: caterpillar on a leaf."><span class="stage-shot-label">Caterpillar</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-chrysalis.jpg" alt="Butterfly life cycle stage: chrysalis hanging from a branch."><span class="stage-shot-label">Chrysalis</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-adult-butterfly.jpg" alt="Butterfly life cycle stage: adult butterfly on a flower."><span class="stage-shot-label">Adult Butterfly</span></div>
         </div>
         <div class="stage-note">Big body changes = metamorphosis.</div>
       </div>
     </div>
     <div class="example-card">
-      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Gemini-generated frog life cycle card showing eggs, tadpole, froglet, and adult frog in one complete visual.">
       <div class="example-copy">
         <div class="example-title">Frog</div>
-        <div class="stage-strip">
-          <span class="stage-pill">eggs</span>
-          <span class="stage-pill">tadpole</span>
-          <span class="stage-pill">froglet</span>
-          <span class="stage-pill">adult frog</span>
+        <div class="stage-sequence">
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-eggs.jpg" alt="Frog life cycle stage: eggs in water."><span class="stage-shot-label">Eggs</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-tadpole.jpg" alt="Frog life cycle stage: tadpole."><span class="stage-shot-label">Tadpole</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-froglet.jpg" alt="Frog life cycle stage: froglet."><span class="stage-shot-label">Froglet</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-adult-frog.jpg" alt="Frog life cycle stage: adult frog."><span class="stage-shot-label">Adult Frog</span></div>
         </div>
         <div class="stage-note">Starts in water and changes shape as it grows.</div>
       </div>
     </div>
     <div class="example-card">
-      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-gemini.jpg" alt="Gemini-generated bean plant life cycle card showing seed, sprout, young plant, and mature plant in one complete visual.">
       <div class="example-copy">
         <div class="example-title">Bean Plant</div>
-        <div class="stage-strip">
-          <span class="stage-pill">seed</span>
-          <span class="stage-pill">sprout</span>
-          <span class="stage-pill">young plant</span>
-          <span class="stage-pill">mature plant</span>
+        <div class="stage-sequence">
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seed.jpg" alt="Bean plant life cycle stage: bean seed."><span class="stage-shot-label">Seed</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seedling.jpg" alt="Bean plant life cycle stage: seedling."><span class="stage-shot-label">Seedling</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-young-plant.jpg" alt="Bean plant life cycle stage: young plant."><span class="stage-shot-label">Young Plant</span></div>
+          <div class="stage-shot"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-mature-plant.jpg" alt="Bean plant life cycle stage: mature plant with flowers and pods."><span class="stage-shot-label">Mature Plant</span></div>
         </div>
         <div class="stage-note">Plants have life cycles too, even without animal-style metamorphosis.</div>
-      </div>
-    </div>
-    <div class="example-card">
-      <img src="/images/lesson-heroes/gr3-ls1-unit1-l1-human-life-cycle-gemini.jpg" alt="Gemini-generated human life cycle illustration with baby, child, adult, and adult caring for a new baby.">
-      <div class="example-copy">
-        <div class="example-title">Human</div>
-        <div class="stage-strip">
-          <span class="stage-pill">baby</span>
-          <span class="stage-pill">child</span>
-          <span class="stage-pill">adult</span>
-          <span class="stage-pill">new baby begins again</span>
-        </div>
-        <div class="stage-note">The changes are more gradual, but the same pattern is still there.</div>
       </div>
     </div>
   </div>
@@ -568,7 +557,7 @@
 
   <div class="procedure-step">
     <strong>Step 1 — Notice How Living Things Change (5–7 min)</strong><br>
-    Ask: <em>"Do all living things stay the same from the beginning of life to the end?"</em> Show a few quick examples: a baby and an adult human, a seed and a mature bean plant, a tadpole and an adult frog. Explain that these changes are part of a <strong>life cycle</strong>.
+    Ask: <em>"Do all living things stay the same from the beginning of life to the end?"</em> Show a few quick examples: frog eggs and an adult frog, a bean seed and a mature bean plant, or a caterpillar and an adult butterfly. Explain that these changes are part of a <strong>life cycle</strong>.
   </div>
 
   <div class="procedure-step">
@@ -578,7 +567,7 @@
 
   <div class="procedure-step">
     <strong>Step 3 — Compare Two Life Cycles (8–10 min)</strong><br>
-    Pick two organisms to compare, such as a frog and a human or a butterfly and a bean plant. Make a quick chart labeled <strong>Same</strong> and <strong>Different</strong>. Talk about whether the organisms hatch, sprout, or are born live, and whether their stages look dramatic or gradual.
+    Pick two organisms to compare, such as a frog and a bean plant or a butterfly and a frog. Make a quick chart labeled <strong>Same</strong> and <strong>Different</strong>. Talk about whether the organisms hatch or sprout and whether their stages look dramatic or gradual.
   </div>
 
   <div class="model-purpose-box">
@@ -730,25 +719,25 @@
     <div class="cutout-grid">
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-gemini.jpg" alt="Butterfly stage card image: egg on a leaf." style="object-position:left top;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-egg.jpg" alt="Butterfly stage card image: egg on a leaf.">
         <div class="cutout-title">Egg</div>
         <div class="cutout-copy">The butterfly begins life inside an egg on a leaf.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-gemini.jpg" alt="Butterfly stage card image: caterpillar on a leaf." style="object-position:right top;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-caterpillar.jpg" alt="Butterfly stage card image: caterpillar on a leaf.">
         <div class="cutout-title">Caterpillar</div>
         <div class="cutout-copy">The young insect eats and grows quickly.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-gemini.jpg" alt="Butterfly stage card image: chrysalis hanging from a branch." style="object-position:right bottom;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-chrysalis.jpg" alt="Butterfly stage card image: chrysalis hanging from a branch.">
         <div class="cutout-title">Chrysalis</div>
         <div class="cutout-copy">The body changes inside the chrysalis.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-gemini.jpg" alt="Butterfly stage card image: adult butterfly." style="object-position:left bottom;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-adult-butterfly.jpg" alt="Butterfly stage card image: adult butterfly.">
         <div class="cutout-title">Adult Butterfly</div>
         <div class="cutout-copy">The adult can reproduce and start the cycle again.</div>
       </div>
@@ -758,25 +747,25 @@
     <div class="cutout-grid">
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Frog stage card image: eggs in water." style="object-position:left top;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-eggs.jpg" alt="Frog stage card image: eggs in water.">
         <div class="cutout-title">Eggs</div>
         <div class="cutout-copy">A frog starts life in eggs laid in water.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Frog stage card image: tadpole." style="object-position:right top;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-tadpole.jpg" alt="Frog stage card image: tadpole.">
         <div class="cutout-title">Tadpole</div>
         <div class="cutout-copy">The tadpole lives in water and uses a tail to swim.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Frog stage card image: froglet with tail still visible." style="object-position:right bottom;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-froglet.jpg" alt="Frog stage card image: froglet with tail still visible.">
         <div class="cutout-title">Froglet</div>
         <div class="cutout-copy">Legs appear while the tail gets smaller.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-gemini.jpg" alt="Frog stage card image: adult frog." style="object-position:left bottom;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-adult-frog.jpg" alt="Frog stage card image: adult frog.">
         <div class="cutout-title">Adult Frog</div>
         <div class="cutout-copy">The adult frog can reproduce and lay new eggs.</div>
       </div>
@@ -790,25 +779,25 @@
     <div class="cutout-grid">
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-gemini.jpg" alt="Bean plant stage card image: seed." style="object-position:left bottom;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seed.jpg" alt="Bean plant stage card image: seed.">
         <div class="cutout-title">Seed</div>
         <div class="cutout-copy">A new bean plant begins as a seed.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-gemini.jpg" alt="Bean plant stage card image: sprout." style="object-position:right bottom;">
-        <div class="cutout-title">Sprout</div>
-        <div class="cutout-copy">The seed opens and a tiny plant begins to grow.</div>
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seedling.jpg" alt="Bean plant stage card image: seedling.">
+        <div class="cutout-title">Seedling</div>
+        <div class="cutout-copy">The seed opens and a tiny seedling begins to grow.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-gemini.jpg" alt="Bean plant stage card image: young plant." style="object-position:left top;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-young-plant.jpg" alt="Bean plant stage card image: young plant.">
         <div class="cutout-title">Young Plant</div>
         <div class="cutout-copy">Leaves and stems grow larger over time.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-gemini.jpg" alt="Bean plant stage card image: mature plant with flowers and pods." style="object-position:right top;">
+        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-mature-plant.jpg" alt="Bean plant stage card image: mature plant with flowers and pods.">
         <div class="cutout-title">Mature Plant</div>
         <div class="cutout-copy">The mature plant makes flowers and seeds for the next generation.</div>
       </div>
@@ -823,7 +812,7 @@
       <ul>
         <li><strong>Butterfly:</strong> egg → caterpillar → chrysalis → adult butterfly</li>
         <li><strong>Frog:</strong> eggs → tadpole → froglet → adult frog</li>
-        <li><strong>Bean plant:</strong> seed → sprout/seedling → young plant → mature plant with flowers or seeds</li>
+        <li><strong>Bean plant:</strong> seed → seedling → young plant → mature plant with flowers or seeds</li>
         <li><strong>Human:</strong> baby → child → adult → adults have offspring, and a new baby begins the cycle again</li>
       </ul>
       <p style="font-size:10pt; color:#555; font-style:italic;">Accept equivalent stage labels if the order is scientifically reasonable and the student shows the life cycle as a sequence.</p>
