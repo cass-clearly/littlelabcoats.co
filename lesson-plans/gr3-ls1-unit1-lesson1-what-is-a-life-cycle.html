@@ -63,21 +63,18 @@
     .hero-image {
       margin: 18px 0 16px;
       background: #f7fff5;
-      border: 2px solid #c8e6c9;
-      border-radius: 16px;
-      padding: 18px 16px;
-      text-align: center;
+      border-left: 5px solid #2e7d32;
+      border-radius: 10px;
+      padding: 14px 16px;
     }
     .emoji-hero {
-      font-size: 2rem;
-      letter-spacing: 0.18em;
-      margin-bottom: 8px;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
     }
     .hero-image .caption {
       font-size: 10pt;
       color: #355e3b;
-      margin-top: 6px;
-      line-height: 1.4;
+      line-height: 1.45;
     }
     .materials-box {
       background: #fff8e1;
@@ -162,55 +159,52 @@
     }
     .example-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      grid-template-columns: 1fr;
+      gap: 10px;
       margin: 16px 0;
     }
     .example-card {
-      border: 2px solid #c8e6c9;
-      border-radius: 14px;
-      overflow: hidden;
+      border: 1.5px solid #c8e6c9;
+      border-radius: 12px;
       background: #fff;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      padding: 10px 12px;
     }
     .cutout-thumb {
-      width: 100%;
-      min-height: 84px;
+      width: 58px;
+      height: 58px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #f8fff8;
-      border-bottom: 1px solid #dcedc8;
-      font-size: 2rem;
+      border: 1px solid #dcedc8;
+      border-radius: 50%;
+      font-size: 1.8rem;
       line-height: 1;
+      margin: 0 auto 8px;
     }
     .example-copy {
-      padding: 10px 12px 12px;
+      padding: 0;
     }
     .example-title {
       font-weight: bold;
       color: #1b5e20;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       font-size: 11pt;
     }
     .stage-sequence {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      align-items: stretch;
       gap: 8px;
-      margin-bottom: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
     }
     .stage-shot {
       text-align: center;
-    }
-    .stage-shot img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-      background: #f7fff7;
-      border-radius: 10px;
+      flex: 1 1 90px;
+      background: #f8fff8;
       border: 1px solid #dcedc8;
-      margin-bottom: 5px;
+      border-radius: 10px;
+      padding: 8px 6px;
     }
     .stage-shot-label {
       display: block;
@@ -218,9 +212,10 @@
       color: #355e3b;
       font-weight: 600;
       line-height: 1.2;
+      margin-top: 4px;
     }
     .stage-note {
-      font-size: 9.4pt;
+      font-size: 9.2pt;
       color: #555;
     }
     .comparison-box {
@@ -351,7 +346,7 @@
     .cutout-card {
       border: 2px dashed #8bc34a;
       border-radius: 12px;
-      padding: 10px 8px;
+      padding: 12px 10px;
       text-align: center;
       min-height: 150px;
       background: #fff;
@@ -454,8 +449,8 @@
   </div>
 
   <div class="hero-image">
-    <div class="emoji-hero">🥚 → 🐣 → 🐸 → 🐸</div>
-    <div class="caption">Start simple: a life cycle is the story of how a living thing begins, grows, and becomes an adult that can start the cycle again.</div>
+    <div class="emoji-hero">🥚 → 🌱 → 🐸 → 🦋</div>
+    <div class="caption"><strong>Simple framing:</strong> life cycles do not all look the same, but they all show a living thing beginning life, growing and changing, and becoming an adult that can help start the cycle again.</div>
   </div>
 
   <div class="standards-box">
@@ -489,44 +484,56 @@
     </div>
   </div>
 
-  <h2>🖼️ Picture-Led Life Cycle Examples</h2>
-  <p>Use the images first. Let students notice what changes from picture to picture before you add much explanation.</p>
+  <h2>🖼️ Quick Life Cycle Examples</h2>
+  <p>Keep this part simple. Read each row from left to right and notice how the organism changes across its stages.</p>
 
   <div class="example-grid">
     <div class="example-card">
       <div class="example-copy">
         <div class="example-title">🦋 Butterfly</div>
         <div class="stage-sequence">
-          <div class="stage-shot"><div class="cutout-thumb">🥚</div><span class="stage-shot-label">Egg</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🐛</div><span class="stage-shot-label">Caterpillar</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🟤</div><span class="stage-shot-label">Chrysalis</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🦋</div><span class="stage-shot-label">Adult Butterfly</span></div>
+          <div class="stage-shot">🥚<span class="stage-shot-label">Egg</span></div>
+          <div class="stage-shot">🐛<span class="stage-shot-label">Caterpillar</span></div>
+          <div class="stage-shot">🟤<span class="stage-shot-label">Chrysalis</span></div>
+          <div class="stage-shot">🦋<span class="stage-shot-label">Adult</span></div>
         </div>
-        <div class="stage-note">Big body changes = metamorphosis.</div>
+        <div class="stage-note">This one changes a lot, which is called metamorphosis.</div>
       </div>
     </div>
     <div class="example-card">
       <div class="example-copy">
         <div class="example-title">🐸 Frog</div>
         <div class="stage-sequence">
-          <div class="stage-shot"><div class="cutout-thumb">🥚</div><span class="stage-shot-label">Eggs</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🐟</div><span class="stage-shot-label">Tadpole</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🐸</div><span class="stage-shot-label">Froglet</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🐸</div><span class="stage-shot-label">Adult Frog</span></div>
+          <div class="stage-shot">🥚<span class="stage-shot-label">Eggs</span></div>
+          <div class="stage-shot">🐟<span class="stage-shot-label">Tadpole</span></div>
+          <div class="stage-shot">🐸<span class="stage-shot-label">Froglet</span></div>
+          <div class="stage-shot">🐸<span class="stage-shot-label">Adult</span></div>
         </div>
-        <div class="stage-note">Starts in water and changes shape as it grows.</div>
+        <div class="stage-note">It starts in water and changes shape as it grows.</div>
       </div>
     </div>
     <div class="example-card">
       <div class="example-copy">
         <div class="example-title">🌱 Bean Plant</div>
         <div class="stage-sequence">
-          <div class="stage-shot"><div class="cutout-thumb">🫘</div><span class="stage-shot-label">Seed</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🌱</div><span class="stage-shot-label">Seedling</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🪴</div><span class="stage-shot-label">Young Plant</span></div>
-          <div class="stage-shot"><div class="cutout-thumb">🌿</div><span class="stage-shot-label">Mature Plant</span></div>
+          <div class="stage-shot">🫘<span class="stage-shot-label">Seed</span></div>
+          <div class="stage-shot">🌱<span class="stage-shot-label">Seedling</span></div>
+          <div class="stage-shot">🪴<span class="stage-shot-label">Young Plant</span></div>
+          <div class="stage-shot">🌿<span class="stage-shot-label">Mature Plant</span></div>
         </div>
-        <div class="stage-note">Plants have life cycles too, even without animal-style metamorphosis.</div>
+        <div class="stage-note">Plants have life cycles too, even though the changes are more gradual.</div>
+      </div>
+    </div>
+    <div class="example-card">
+      <div class="example-copy">
+        <div class="example-title">👶 Human</div>
+        <div class="stage-sequence">
+          <div class="stage-shot">👶<span class="stage-shot-label">Baby</span></div>
+          <div class="stage-shot">🧒<span class="stage-shot-label">Child</span></div>
+          <div class="stage-shot">🧑<span class="stage-shot-label">Adult</span></div>
+          <div class="stage-shot">👶<span class="stage-shot-label">New Baby</span></div>
+        </div>
+        <div class="stage-note">The changes are less dramatic, but the life-cycle pattern is still there.</div>
       </div>
     </div>
   </div>
