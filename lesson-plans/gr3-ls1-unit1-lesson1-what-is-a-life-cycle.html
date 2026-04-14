@@ -235,6 +235,21 @@
       border: 1px solid #dcedc8;
       border-radius: 10px;
     }
+    .human-stage-panel {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: block;
+      background-image: url("/images/lesson-heroes/gr3-ls1-unit1-l1-human-life-cycle-panels.jpg");
+      background-repeat: no-repeat;
+      background-size: 200% 200%;
+      border: 1px solid #dcedc8;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    .human-stage-baby { background-position: 0% 0%; }
+    .human-stage-child { background-position: 100% 0%; }
+    .human-stage-adult { background-position: 0% 100%; }
+    .human-stage-newbaby { background-position: 100% 100%; }
     .text-stage-thumb {
       min-height: 82px;
       display: flex;
@@ -421,6 +436,11 @@
       border: 1px solid #dcedc8;
       margin: 0 auto 8px;
       background: #f8fff8;
+    }
+    .cutout-thumb.contain-thumb {
+      object-fit: contain;
+      padding: 4px;
+      background: #fff;
     }
     .cutout-title {
       font-weight: bold;
@@ -666,22 +686,22 @@
         </div>
         <div class="stage-sequence">
           <div class="stage-shot">
-            <div class="text-stage-thumb">Baby</div>
+            <div class="human-stage-panel human-stage-baby" role="img" aria-label="Human life cycle stage: baby."></div>
             <span class="stage-shot-label">Beginning of life</span>
           </div>
           <div class="stage-arrow" aria-hidden="true">→</div>
           <div class="stage-shot">
-            <div class="text-stage-thumb">Child</div>
+            <div class="human-stage-panel human-stage-child" role="img" aria-label="Human life cycle stage: child."></div>
             <span class="stage-shot-label">Growth</span>
           </div>
           <div class="stage-arrow" aria-hidden="true">→</div>
           <div class="stage-shot">
-            <div class="text-stage-thumb">Adult</div>
+            <div class="human-stage-panel human-stage-adult" role="img" aria-label="Human life cycle stage: adult."></div>
             <span class="stage-shot-label">Can reproduce</span>
           </div>
           <div class="stage-arrow" aria-hidden="true">→</div>
           <div class="stage-shot">
-            <div class="text-stage-thumb">New baby</div>
+            <div class="human-stage-panel human-stage-newbaby" role="img" aria-label="Human life cycle stage: new baby beginning the cycle again."></div>
             <span class="stage-shot-label">A new life begins</span>
           </div>
         </div>
@@ -919,7 +939,7 @@
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
-        <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-tadpole.jpg" alt="Tadpole swimming in water.">
+        <img class="cutout-thumb contain-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-tadpole.jpg" alt="Tadpole swimming in water.">
         <div class="cutout-title">Tadpole</div>
         <div class="cutout-copy">The tadpole lives in water and uses a tail to swim.</div>
       </div>
