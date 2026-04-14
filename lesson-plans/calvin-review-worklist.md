@@ -22,7 +22,7 @@ Updated: 2026-04-14
 - Required outcome:
   - Calvin weighs in on Unit 2 as well.
   - New lessons should have real progression, novelty, and engagement.
-- Status: requested, not yet fully audited.
+- Status: audited on 2026-04-14 in `lesson-plans/gr3-ls2-unit4-calvin-audit-and-overhaul-plan-2026-04-14.md`.
 
 ### 3) Durable tracking so jobs do not get lost
 - Required outcome:
@@ -52,7 +52,7 @@ Updated: 2026-04-14
   - atoms work (physical science)
   - fossils
   - weather
-- Status: requested, should become part of Calvin's audit scope.
+- Status: canonical backlog now tracked in `lesson-plans/calvin-gap-backlog.md` with Grade 5 explicitly marked incomplete against the named strands.
 
 ## Calvin mandate
 Calvin is the reviewer for:
@@ -65,4 +65,4 @@ Calvin is the reviewer for:
 ## Current Calvin job
 - Session/job: `calvin-reviewer`
 - Job id: `838f1678-2126-4659-b09e-f181282cc1a2`
-- Current focus: start with Grade 3 Life Science Unit 1, then expand to Unit 2 and broader gap scan
+- Current focus: Grade 3 Life Science Unit 1 audit logged; Grade 3 LS2 Unit 4 audit logged; broader gap scan now tracked in `lesson-plans/calvin-gap-backlog.md`
