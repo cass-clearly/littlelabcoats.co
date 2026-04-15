@@ -412,6 +412,49 @@
       font-size: 1.2rem;
     }
 
+    .checkout-assist {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff7d6 0%, #fff2b3 100%);
+      border: 1px solid rgba(212,137,58,0.28);
+      color: #7c2d12;
+      box-shadow: 0 10px 28px rgba(212,137,58,0.12);
+    }
+
+    .checkout-assist strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .checkout-assist p {
+      margin: 0;
+      color: #7c2d12;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .card-helper {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f5f3ff 0%, #eefdfb 100%);
+      border: 1px solid rgba(78,205,196,0.28);
+      color: var(--navy);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .card-helper strong {
+      color: var(--navy-light);
+    }
+
     /* ─── Footer ─── */
     footer {
       background: var(--navy);
@@ -695,6 +738,11 @@
     </div>
   </div>
 
+  <div class="checkout-assist" id="checkoutAssist" hidden>
+    <strong>Saved spot</strong>
+    <p>We saved your place in <span id="checkoutAssistLabel">your lesson preview</span>. Complete checkout on this same browser/device and the success page will bring you right back.</p>
+  </div>
+
   <section class="store-section" id="products">
     <div class="store-grid">
 
@@ -713,13 +761,14 @@
             <li>Paywall unlock handoff after Stripe checkout</li>
             <li>$99/year launch pricing</li>
           </ul>
+          <div class="card-helper"><strong>Best for paywalled lessons:</strong> after checkout, Little Lab Coats unlocks this browser/device and can send you back to the lesson preview you came from.</div>
           <div class="card-price">
             <div class="price-main">$99</div>
             <div class="price-earlybird">Annual billing · cancel in Stripe</div>
           </div>
         </div>
         <div class="card-footer">
-          <a href="https://buy.stripe.com/7sY6oJeAn5V4aA41946g803" class="btn btn-primary btn-block">Start All-Access — $99/yr</a>
+          <a href="https://buy.stripe.com/7sY6oJeAn5V4aA41946g803" class="btn btn-primary btn-block" data-stripe-product="all-access-annual" data-plan="all-access-annual">Start All-Access — $99/yr</a>
         </div>
       </div>
 
@@ -749,7 +798,7 @@
           </div>
         </div>
         <div class="card-footer">
-          <a href="https://buy.stripe.com/6oU7sNcsfcjsfUo1946g801" class="btn btn-primary btn-block">Buy Now — $35</a>
+          <a href="https://buy.stripe.com/6oU7sNcsfcjsfUo1946g801" class="btn btn-primary btn-block" data-stripe-product="kindergarten-bundle">Buy Now — $35</a>
         </div>
       </div>
 
@@ -777,7 +826,7 @@
           </div>
         </div>
         <div class="card-footer">
-          <a href="https://buy.stripe.com/bJe14peAngzIdMgaJE6g802" class="btn btn-primary btn-block">Buy Now — $28</a>
+          <a href="https://buy.stripe.com/bJe14peAngzIdMgaJE6g802" class="btn btn-primary btn-block" data-stripe-product="grade-1-bundle">Buy Now — $28</a>
         </div>
       </div>
 
@@ -800,7 +849,7 @@
           </div>
         </div>
         <div class="card-footer">
-          <a href="https://buy.stripe.com/5kQ7sN9g31EO5fK8Bw6g800" class="btn btn-primary btn-block">Buy Now — $7</a>
+          <a href="https://buy.stripe.com/5kQ7sN9g31EO5fK8Bw6g800" class="btn btn-primary btn-block" data-stripe-product="kitchen-chemistry">Buy Now — $7</a>
         </div>
       </div>
 
@@ -939,74 +988,67 @@
   <!-- ─── Pricing ─── -->
   <section id="pricing">
     <div class="pricing-inner">
-      <span class="pricing-section-label">Simple pricing</span>
-      <h2 class="pricing-section-title">Choose the plan that fits your homeschool.</h2>
-      <p class="pricing-section-sub">Three clear ways to use Little Lab Coats: buy one unit, unlock one full grade level, or get all-access across the whole site.</p>
-      <div class="pricing-note-pill">🎉 First 50 signups get 25% off</div>
+      <span class="pricing-section-label">Live offers</span>
+      <h2 class="pricing-section-title">Choose the format that matches how your family wants to buy.</h2>
+      <p class="pricing-section-sub">These cards now match the products that are actually live in Stripe today: free samples, one-time purchases, and the sitewide all-access subscription.</p>
+      <div class="pricing-note-pill">🎉 Current launch pricing is live now</div>
 
       <div class="pricing-grid">
 
         <div class="pricing-card">
           <span class="pricing-icon">🧪</span>
-          <div class="pricing-tier-name">Basic</div>
-          <div class="pricing-tagline">Buy a single unit with no subscription</div>
+          <div class="pricing-tier-name">Starter</div>
+          <div class="pricing-tagline">Try Little Lab Coats without a subscription</div>
           <div class="pricing-price-stack">
-            <div class="pricing-strike">$22.50</div>
-            <div class="p-price-main">$18 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/unit</small></div>
-            <div class="p-price-alt">One-time purchase · No subscription</div>
+            <div class="p-price-main">$0–$7</div>
+            <div class="p-price-alt">Free samples plus a $7 one-time lesson offer</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✔</span>One complete unit purchase</li>
-            <li><span class="feature-check">✔</span>6 NGSS-aligned lessons in that unit</li>
-            <li><span class="feature-check">✔</span>Printable worksheets and parent answer keys</li>
-            <li><span class="feature-check">✔</span>Reference card and unit quiz included</li>
-            <li><span class="feature-check">✔</span>Best for trying one topic at a time</li>
+            <li><span class="feature-check">✔</span>Free sample lesson for every grade K–5</li>
+            <li><span class="feature-check">✔</span>Kitchen Chemistry paid starter lesson for $7</li>
+            <li><span class="feature-check">✔</span>No subscription required</li>
+            <li><span class="feature-check">✔</span>Best for trying the format before a bigger purchase</li>
           </ul>
-          <a href="#products" class="btn btn-secondary" style="width:100%; text-align:center;">Shop Single Units</a>
+          <a href="#products" class="btn btn-secondary" style="width:100%; text-align:center;">Browse Starter Options</a>
+        </div>
+
+        <div class="pricing-card">
+          <span class="pricing-icon">📚</span>
+          <div class="pricing-tier-name">Grade Bundles</div>
+          <div class="pricing-tagline">Buy a full grade bundle outright</div>
+          <div class="pricing-price-stack">
+            <div class="p-price-main">$28–$35</div>
+            <div class="p-price-alt">One-time purchase for the bundle shown in the store</div>
+          </div>
+          <hr class="pricing-divider" />
+          <ul class="pricing-features">
+            <li><span class="feature-check">✔</span>Current live bundles: Kindergarten and Grade 1</li>
+            <li><span class="feature-check">✔</span>Includes the lessons, quizzes, and listed extras in that bundle</li>
+            <li><span class="feature-check">✔</span>Good for families focused on one grade right now</li>
+            <li><span class="feature-check">✔</span>One payment instead of recurring billing</li>
+          </ul>
+          <a href="#products" class="btn btn-primary" style="width:100%; text-align:center;">Shop Grade Bundles</a>
         </div>
 
         <div class="pricing-card featured">
           <div class="pricing-badge">Most Popular</div>
-          <span class="pricing-icon">🎓</span>
-          <div class="pricing-tier-name">Premium</div>
-          <div class="pricing-tagline">Unlock one full grade level</div>
-          <div class="pricing-price-stack">
-            <div class="pricing-strike">$18.74/month</div>
-            <div class="p-price-main">$14.99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/month</small></div>
-            <div class="pricing-bill-line">Billed annually: $149/year <span style="font-weight:400; color:var(--text-muted);">(2 months free)</span></div>
-            <div class="p-price-alt">Choose a single grade and get every lesson in it</div>
-          </div>
-          <hr class="pricing-divider" />
-          <ul class="pricing-features">
-            <li><span class="feature-check">✔</span>Every lesson in one grade level</li>
-            <li><span class="feature-check">✔</span>All units, worksheets, answer keys, and quizzes for that grade</li>
-            <li><span class="feature-check">✔</span>Printable reference cards included</li>
-            <li><span class="feature-check">✔</span>Ideal for families focusing on one learner's grade</li>
-            <li><span class="feature-check">✔</span>Annual billing with 2 months free</li>
-          </ul>
-          <a href="#products" class="btn btn-primary" style="width:100%; text-align:center;">Choose Premium</a>
-        </div>
-
-        <div class="pricing-card">
           <span class="pricing-icon">👑</span>
-          <div class="pricing-tier-name">VIP</div>
-          <div class="pricing-tagline">Every lesson across the site</div>
+          <div class="pricing-tier-name">All-Access Annual</div>
+          <div class="pricing-tagline">Unlock every paid lesson across the site</div>
           <div class="pricing-price-stack">
-            <div class="pricing-strike">$31.24/month</div>
-            <div class="p-price-main">$24.99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/month</small></div>
-            <div class="pricing-bill-line">Billed annually: $249/year <span style="font-weight:400; color:var(--text-muted);">(2 months free)</span></div>
-            <div class="p-price-alt">Best for multi-age homeschool families who want full access</div>
+            <div class="p-price-main">$99 <small style="font-size:0.95rem; font-weight:400; color:var(--text-muted);">/year</small></div>
+            <div class="pricing-bill-line">Annual billing through Stripe</div>
+            <div class="p-price-alt">Best fit for multi-age homeschool families and repeat use</div>
           </div>
           <hr class="pricing-divider" />
           <ul class="pricing-features">
-            <li><span class="feature-check">✔</span>Access to every lesson across K–5</li>
-            <li><span class="feature-check">✔</span>All units, quizzes, worksheets, and reference cards</li>
-            <li><span class="feature-check">✔</span>Perfect for teaching multiple grade levels</li>
-            <li><span class="feature-check">✔</span>Use across the full site library</li>
-            <li><span class="feature-check">✔</span>Best overall value for all-access families</li>
+            <li><span class="feature-check">✔</span>Every paid K–5 lesson, quiz, worksheet, and reference card</li>
+            <li><span class="feature-check">✔</span>Current static-site unlock handoff after Stripe checkout</li>
+            <li><span class="feature-check">✔</span>Cleanest option if you expect to use multiple grades or units</li>
+            <li><span class="feature-check">✔</span>Cancel anytime in Stripe</li>
           </ul>
-          <a href="#products" class="btn btn-teal" style="width:100%; text-align:center;">Choose VIP</a>
+          <a href="#all-access-annual" class="btn btn-teal" style="width:100%; text-align:center;">Start All-Access</a>
         </div>
 
       </div>
@@ -1049,5 +1091,25 @@
     </div>
   </footer>
 
+  <script src="scripts/checkout-handoff.js?v=20260415"></script>
+  <script>
+    (function () {
+      var helper = window.LLCCheckoutHandoff;
+      if (!helper) return;
+
+      helper.rememberReturnFromParams(window.location.search);
+      helper.rememberReturnFromReferrer();
+      helper.attachPaidCheckoutTracking('a[data-stripe-product]');
+
+      var assist = document.getElementById('checkoutAssist');
+      var label = document.getElementById('checkoutAssistLabel');
+      var returnPath = helper.getReturnPath();
+
+      if (assist && label && returnPath) {
+        label.textContent = helper.getReturnLabel();
+        assist.hidden = false;
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -139,6 +139,26 @@
       color: var(--navy);
       border: 2px solid var(--navy);
     }
+    .next-step {
+      margin: 0 0 20px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff7d6 0%, #fff1b7 100%);
+      border: 1px solid rgba(212,137,58,0.28);
+      color: #7c2d12;
+    }
+    .next-step strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.02rem;
+      color: #7c2d12;
+    }
+    .next-step p {
+      margin: 0;
+      color: #7c2d12;
+      line-height: 1.7;
+    }
+    .next-step[hidden] { display: none; }
     .smallprint {
       margin: 0;
       color: var(--text-muted);
@@ -162,6 +182,11 @@
         <p>We are checking the checkout redirect details and applying the local lesson-access handoff for this browser.</p>
       </div>
 
+      <div class="next-step" id="nextStepPanel" hidden>
+        <strong>Next stop: <span id="nextStepLabel">your lesson preview</span></strong>
+        <p id="nextStepMessage">We saved your place and can send you straight back there once the unlock is confirmed.</p>
+      </div>
+
       <ul class="checklist">
         <li><span>1. Access is device-specific right now.</span> The current Little Lab Coats paywall uses an on-device browser unlock, so complete checkout and open lessons in the same browser/device.</li>
         <li><span>2. Your Stripe emails are your billing record.</span> Stripe sends receipts and subscription-management links directly from checkout.</li>
@@ -169,7 +194,7 @@
       </ul>
 
       <div class="actions">
-        <a class="btn btn-primary" href="curriculum.html">Open the Curriculum</a>
+        <a class="btn btn-primary" id="primaryAction" href="curriculum.html">Open the Curriculum</a>
         <a class="btn btn-secondary" href="store.html#all-access-annual">Back to the Store</a>
         <a class="btn btn-ghost" href="index.html">Return Home</a>
       </div>
@@ -178,22 +203,61 @@
     </section>
   </main>
 
+  <script src="scripts/checkout-handoff.js?v=20260415"></script>
   <script>
     (function () {
+      var helper = window.LLCCheckoutHandoff;
+      if (!helper) return;
+
+      helper.rememberReturnFromParams(window.location.search);
+
       var params = new URLSearchParams(window.location.search);
-      var looksLikeStripe = params.get('source') === 'stripe' || params.has('session_id') || document.referrer.indexOf('stripe.com') !== -1;
+      var looksLikeStripe = helper.looksLikeStripeRedirect(params, document.referrer);
       var status = document.getElementById('unlockStatus');
+      var nextStepPanel = document.getElementById('nextStepPanel');
+      var nextStepLabel = document.getElementById('nextStepLabel');
+      var nextStepMessage = document.getElementById('nextStepMessage');
+      var primaryAction = document.getElementById('primaryAction');
+      var returnPath = helper.getReturnPath();
+      var returnLabel = helper.getReturnLabel();
+      var unlocked = helper.isUnlocked();
 
       if (looksLikeStripe) {
-        try {
-          localStorage.setItem('llc_access', 'granted');
-          localStorage.setItem('llc_access_plan', params.get('plan') || 'all-access-annual');
-          localStorage.setItem('llc_access_granted_at', new Date().toISOString());
-        } catch (error) {}
+        helper.applyUnlock(params.get('plan'));
+        unlocked = true;
+      }
 
-        status.innerHTML = '<strong>Access unlocked on this device.</strong><p>Stripe redirect detected. Paid Little Lab Coats lesson previews should now open in full on this browser/device.</p>';
+      if (unlocked) {
+        status.innerHTML = '<strong>Access unlocked on this device.</strong><p>Paid Little Lab Coats lesson previews should now open in full on this browser/device.</p>';
       } else {
         status.innerHTML = '<strong>Waiting for a Stripe redirect.</strong><p>This page only auto-unlocks when it is opened from Stripe checkout or with the expected checkout redirect parameters.</p>';
+      }
+
+      if (returnPath && nextStepPanel && nextStepLabel && nextStepMessage) {
+        nextStepLabel.textContent = returnLabel;
+        nextStepPanel.hidden = false;
+
+        if (unlocked) {
+          nextStepMessage.innerHTML = 'We saved your place. Use the button below, or wait a few seconds and this page will take you back automatically.';
+        } else {
+          nextStepMessage.textContent = 'We saved your place here. Once the unlock is confirmed on this browser/device, use the button below to jump back.';
+        }
+      }
+
+      if (primaryAction) {
+        if (returnPath) {
+          primaryAction.href = returnPath;
+          primaryAction.textContent = unlocked ? 'Continue to Your Lesson' : 'Open Your Saved Lesson';
+        } else if (unlocked) {
+          primaryAction.href = 'curriculum.html';
+          primaryAction.textContent = 'Open the Curriculum';
+        }
+      }
+
+      if (unlocked && returnPath) {
+        window.setTimeout(function () {
+          window.location.href = returnPath;
+        }, 4500);
       }
     })();
   </script>

@@ -58,6 +58,18 @@
       gap: 12px;
       margin-top: 20px;
     }
+    .saved-spot {
+      margin: 0 auto 20px;
+      max-width: 560px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #fff7d6;
+      border: 1px solid rgba(212,137,58,0.24);
+      color: #7c2d12;
+      line-height: 1.7;
+    }
+    .saved-spot strong { color: #7c2d12; }
+    .saved-spot[hidden] { display: none; }
     .btn {
       display: inline-block;
       text-decoration: none;
@@ -74,10 +86,29 @@
     <img src="images/site/llc-logo-serena-approved-2026-04-10.png" alt="Little Lab Coats" />
     <h1>Checkout cancelled</h1>
     <p>No charge was completed. If you still want Little Lab Coats access, head back to the store and restart checkout when you're ready.</p>
+    <div class="saved-spot" id="savedSpot" hidden><strong>Saved spot:</strong> your lesson preview is still waiting, and you can jump back there before trying checkout again.</div>
     <div class="actions">
       <a class="btn btn-primary" href="store.html#all-access-annual">Return to the store</a>
-      <a class="btn btn-secondary" href="curriculum.html">Keep browsing lessons</a>
+      <a class="btn btn-secondary" id="secondaryAction" href="curriculum.html">Keep browsing lessons</a>
     </div>
   </main>
+  <script src="scripts/checkout-handoff.js?v=20260415"></script>
+  <script>
+    (function () {
+      var helper = window.LLCCheckoutHandoff;
+      if (!helper) return;
+
+      var returnPath = helper.getReturnPath();
+      var savedSpot = document.getElementById('savedSpot');
+      var secondaryAction = document.getElementById('secondaryAction');
+
+      if (returnPath && savedSpot && secondaryAction) {
+        savedSpot.hidden = false;
+        savedSpot.innerHTML = '<strong>Saved spot:</strong> ' + helper.getReturnLabel() + ' is still waiting, and you can jump back there before trying checkout again.';
+        secondaryAction.href = returnPath;
+        secondaryAction.textContent = 'Back to Your Lesson';
+      }
+    })();
+  </script>
 </body>
 </html>
