@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Option E — Cartoon Lab Coat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f8fcff;
+    --panel: #ffffff;
+    --ink: #2b2d42;
+    --muted: #5f6b7a;
+    --line: #dbe7f3;
+    --sky: #6ecbf5;
+    --teal: #36c7b4;
+    --mint: #c9f7ef;
+    --coral: #ff7b7b;
+    --sun: #ffd85e;
+    --grape: #7567f8;
+    --berry: #ff5da8;
+    --navy: #243b6b;
+    --lavender: #efeaff;
+    --foam: #effcf8;
+    --peach: #fff0e8;
+    --shadow: 0 16px 40px rgba(36, 59, 107, 0.12);
+    --radius: 24px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Nunito', system-ui, sans-serif;
+    background: linear-gradient(180deg, #f6fbff 0%, #fffdf8 100%);
+    color: var(--ink);
+    line-height: 1.5;
+    padding: 24px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .card-head { padding: 22px 22px 14px; border-bottom: 1px solid var(--line); }
+  .card-head h2 { margin: 0 0 6px; font-size: 28px; font-family: 'Baloo 2', cursive; }
+  .card-head p { margin: 0; color: var(--muted); font-size: 15px; }
+  .mockup { padding: 18px; background: #f7fbff; }
+  .site-frame {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #dce9f4;
+    background: white;
+  }
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e7eef7;
+    background: rgba(255,255,255,.95);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .brand-name { min-width: 0; }
+  .brand-title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -.02em;
+    color: #5d43eb;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+  }
+  .brand-sub { font-size: 11px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .nav-links { display: flex; gap: 18px; color: var(--muted); font-weight: 700; font-size: 13px; }
+  .cta { background: #5d43eb; color: white; border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 800; }
+  .hero {
+    padding: 26px 24px 30px;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    background: linear-gradient(135deg, #f4f1ff 0%, #eefcff 54%, #fff6ee 100%);
+  }
+  .hero h3 { margin: 0 0 10px; font-size: 38px; line-height: 1.02; max-width: 420px; font-family: 'Baloo 2', cursive; }
+  .hero p { margin: 0 0 18px; max-width: 440px; color: #405066; font-size: 16px; }
+  .pill-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .pill { padding: 9px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+  .pill.primary { background: #5d43eb; color: white; }
+  .pill.secondary { background: #ffd85e; color: #5c4700; }
+  .note { padding: 18px 22px 22px; }
+  .note h4 { margin: 0 0 10px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); }
+  .note ul { margin: 0; padding-left: 18px; color: var(--ink); }
+  .note li { margin-bottom: 8px; }
+  .logo-chip { width: 64px; height: 64px; flex: 0 0 64px; }
+  .hero-art { position: absolute; right: 18px; bottom: 12px; width: 182px; }
+  @media (max-width: 860px) {
+    .site-nav { flex-wrap: wrap; }
+    .nav-links { order: 3; width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+    .hero { min-height: 360px; }
+    .hero-art { opacity: .24; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <article class="card concept-e">
+    <div class="card-head">
+      <h2>Option E — Cartoon Lab Coat</h2>
+      <p>Serena’s requested route: a super simple cartoon lab coat icon, using Option B’s brighter playful palette and energy without getting too detailed.</p>
+    </div>
+    <div class="mockup">
+      <div class="site-frame">
+        <div class="site-nav">
+          <div class="brand">
+            <svg class="logo-chip" viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="7" y="7" width="50" height="50" rx="18" fill="#f4f1ff"/>
+              <path d="M23 20c0-4 4-7 9-7s9 3 9 7v2h2c5 0 8 3 8 8v14c0 5-3 8-8 8H21c-5 0-8-3-8-8V30c0-5 3-8 8-8h2v-2z" fill="#ffffff" stroke="#5d43eb" stroke-width="3"/>
+              <path d="M25 24l7 8 7-8" fill="none" stroke="#5d43eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="34" r="3" fill="#ffd85e"/>
+              <circle cx="40" cy="34" r="3" fill="#ff7b7b"/>
+              <path d="M32 34v12" stroke="#36c7b4" stroke-width="3" stroke-linecap="round"/>
+              <path d="M18 20l-4 4" stroke="#36c7b4" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-name">
+              <div class="brand-title">Little Lab Coats</div>
+              <div class="brand-sub">Bright, simple, and unmistakably sciencey</div>
+            </div>
+          </div>
+          <div class="nav-links"><span>Curriculum</span><span>Shop</span><span>About</span></div>
+          <div class="cta">View Lessons</div>
+        </div>
+        <div class="hero">
+          <h3>A cheerful cartoon coat that can own the header</h3>
+          <p>This keeps the icon as simple and small-size-friendly as Option A’s flask, but swaps in a literal little lab coat with Option B-style bright color pops.</p>
+          <div class="pill-row">
+            <span class="pill primary">Requested cartoon coat</span>
+            <span class="pill secondary">Bright playful palette</span>
+          </div>
+          <svg class="hero-art" viewBox="0 0 210 180" aria-hidden="true">
+            <rect x="38" y="24" width="126" height="130" rx="34" fill="#ffffff" stroke="#dddff7" stroke-width="4"/>
+            <path d="M70 44c0-9 9-16 18-16s18 7 18 16v6h8c13 0 23 10 23 23v44c0 13-10 23-23 23H69c-13 0-23-10-23-23V73c0-13 10-23 23-23h1v-6z" fill="#ffffff" stroke="#5d43eb" stroke-width="5"/>
+            <path d="M73 55l16 18 17-18" fill="none" stroke="#5d43eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="76" cy="88" r="7" fill="#ffd85e"/>
+            <circle cx="108" cy="88" r="7" fill="#ff7b7b"/>
+            <path d="M92 87v36" stroke="#36c7b4" stroke-width="6" stroke-linecap="round"/>
+            <path d="M145 43l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#ffd85e"/>
+            <path d="M53 46l-11 12" stroke="#36c7b4" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      <h4>Why it works</h4>
+      <ul>
+        <li>Directly addresses the request for a cartoon lab coat option without overcomplicating the mark.</li>
+        <li>Uses the brighter, more playful Option B color treatment while staying icon-friendly.</li>
+        <li>Feels fun and recognizable, with a literal tie to the company name.</li>
+      </ul>
+    </div>
+  </article>
+</div>
+</body>
+</html>

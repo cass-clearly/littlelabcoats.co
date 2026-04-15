@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Lab Coats — Gemini Lab-Coat Logo Round</title>
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --panel: #ffffff;
+      --ink: #243b6b;
+      --muted: #5c6b7f;
+      --line: #dbe6f0;
+      --sun: #ffd85e;
+      --sky: #6ecbf5;
+      --mint: #c9f7ef;
+      --coral: #ff7b7b;
+      --shadow: 0 16px 40px rgba(36, 59, 107, 0.12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      background: linear-gradient(180deg, #f7fbff 0%, #fffdf8 100%);
+      color: #24324a;
+    }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 32px 24px 72px; }
+    .hero {
+      background: linear-gradient(135deg, #243b6b 0%, #445ea8 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 26px;
+    }
+    .hero .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,.14);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(30px, 5vw, 48px); line-height: 1.04; }
+    .hero p { margin: 0; max-width: 920px; color: rgba(255,255,255,.88); }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .chip {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+    .chip strong { display: block; color: var(--ink); margin-bottom: 4px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f4f8fc;
+    }
+    .meta { padding: 18px 18px 20px; }
+    .meta h2 { margin: 0 0 8px; font-size: 22px; color: var(--ink); }
+    .meta p { margin: 0 0 12px; color: var(--muted); }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tag {
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .tag.sun { background: #fff5c8; color: #6b5600; }
+    .tag.sky { background: #e6f7ff; color: #0c5a7a; }
+    .tag.mint { background: #eafdf7; color: #0f6c5c; }
+    .full {
+      margin-top: 26px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .full img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
+    .notes {
+      margin-top: 26px;
+      background: #f4faff;
+      border: 1px dashed #b8cbe0;
+      border-radius: 20px;
+      padding: 18px 20px;
+    }
+    .notes h3 { margin: 0 0 10px; color: var(--ink); }
+    .notes ul { margin: 0; padding-left: 18px; }
+    .notes li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Review only · Gemini-generated · not live</div>
+      <h1>Little Lab Coats — Gemini lab-coat logo concept round</h1>
+      <p>This round is separate from the earlier hand-authored concept pack. These 4 concepts were generated directly through the existing Gemini image generation path, with prompts that kept the lab coat motif as the core symbol and asked for fun, simple, recognizable logo/icon directions.</p>
+    </section>
+
+    <section class="summary">
+      <div class="chip"><strong>Generation method</strong><span>Gemini CLI used directly</span></div>
+      <div class="chip"><strong>Concept count</strong><span>4 new Gemini-generated options</span></div>
+      <div class="chip"><strong>Live impact</strong><span>None — review assets only</span></div>
+      <div class="chip"><strong>Compare fast</strong><span>Use `review-grid.jpg` for in-channel scanning</span></div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img src="concept-1-cheerful-coat.jpg" alt="Gemini-generated cheerful lab coat logo concept" />
+        <div class="meta">
+          <h2>Concept 1 — Cheerful Coat</h2>
+          <p>Most direct simple lab-coat route. Good if Serena wants the name and symbol connection to stay very literal.</p>
+          <div class="tags"><span class="tag sun">literal</span><span class="tag sky">simple</span><span class="tag mint">logo-ish</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="concept-2-spark-coat.jpg" alt="Gemini-generated spark lab coat logo concept" />
+        <div class="meta">
+          <h2>Concept 2 — Spark Coat</h2>
+          <p>Lab coat plus a small celebratory accent. Slightly more energetic and discovery-oriented.</p>
+          <div class="tags"><span class="tag sun">playful</span><span class="tag sky">energetic</span><span class="tag mint">accented</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="concept-3-pocket-coat.jpg" alt="Gemini-generated pocketed lab coat logo concept" />
+        <div class="meta">
+          <h2>Concept 3 — Pocket Coat</h2>
+          <p>Best pocket/detail variation while still staying logo-simple. Strong middle ground if the others feel too plain.</p>
+          <div class="tags"><span class="tag sun">detail</span><span class="tag sky">friendly</span><span class="tag mint">balanced</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="concept-4-rounded-coat.jpg" alt="Gemini-generated rounded lab coat logo concept" />
+        <div class="meta">
+          <h2>Concept 4 — Rounded Coat</h2>
+          <p>Softest silhouette and most mascot-friendly feeling of the set, while still anchored around the coat shape.</p>
+          <div class="tags"><span class="tag sun">soft</span><span class="tag sky">warm</span><span class="tag mint">kid-friendly</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="full">
+      <h2 style="margin-top:0;color:var(--ink)">Quick comparison board</h2>
+      <img src="review-grid.jpg" alt="Grid showing all four Gemini-generated Little Lab Coats logo concepts" />
+    </section>
+
+    <section class="notes">
+      <h3>Concise notes</h3>
+      <ul>
+        <li>This round is intentionally separate from the earlier HTML/CSS mock concept pack.</li>
+        <li>All 4 images were generated through the real Gemini image path at <code>/home/cass/.openclaw/workspace/scripts/gemini-image.mjs</code>.</li>
+        <li>No branding changes were pushed live.</li>
+        <li>Best assets for quick in-channel comparison: <code>review-grid.jpg</code> plus the 4 original JPGs.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

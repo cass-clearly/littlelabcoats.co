@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Option A — Pocket Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+
+    :root {
+      --bg: #f8fcff;
+      --panel: #ffffff;
+      --ink: #2b2d42;
+      --muted: #5f6b7a;
+      --line: #dbe7f3;
+      --sky: #6ecbf5;
+      --teal: #36c7b4;
+      --mint: #c9f7ef;
+      --coral: #ff7b7b;
+      --sun: #ffd85e;
+      --grape: #7567f8;
+      --berry: #ff5da8;
+      --navy: #243b6b;
+      --lavender: #efeaff;
+      --foam: #effcf8;
+      --peach: #fff0e8;
+      --shadow: 0 16px 40px rgba(36, 59, 107, 0.12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: linear-gradient(180deg, #f6fbff 0%, #fffdf8 100%);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 32px 24px 80px; }
+    .top {
+      background: linear-gradient(135deg, #243b6b 0%, #445ea8 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 28px 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.16);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 46px); font-family: 'Baloo 2', cursive; line-height: 1.05; }
+    .top p { margin: 0; color: rgba(255,255,255,.86); max-width: 860px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card-head { padding: 22px 22px 14px; border-bottom: 1px solid var(--line); }
+    .card-head h2 { margin: 0 0 6px; font-size: 28px; font-family: 'Baloo 2', cursive; }
+    .card-head p { margin: 0; color: var(--muted); font-size: 15px; }
+    .mockup { padding: 18px; background: #f7fbff; }
+    .site-frame {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid #dce9f4;
+      background: white;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      border-bottom: 1px solid #e7eef7;
+      background: rgba(255,255,255,.95);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-name { min-width: 0; }
+    .brand-title {
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: -.02em;
+    }
+    .brand-sub { font-size: 11px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+    .nav-links { display: flex; gap: 18px; color: var(--muted); font-weight: 700; font-size: 13px; }
+    .cta { background: #ff7b7b; color: white; border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 800; }
+    .hero {
+      padding: 26px 24px 30px;
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+    }
+    .hero h3 { margin: 0 0 10px; font-size: 38px; line-height: 1.02; max-width: 420px; font-family: 'Baloo 2', cursive; }
+    .hero p { margin: 0 0 18px; max-width: 440px; color: #405066; font-size: 16px; }
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pill { padding: 9px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+    .note { padding: 18px 22px 22px; }
+    .note h4 { margin: 0 0 10px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); }
+    .note ul { margin: 0; padding-left: 18px; color: var(--ink); }
+    .note li { margin-bottom: 8px; }
+    .logo-chip { width: 64px; height: 64px; flex: 0 0 64px; }
+    .concept-a .brand-title { font-family: 'Baloo 2', cursive; color: #243b6b; }
+    .concept-a .hero { background: radial-gradient(circle at 82% 20%, rgba(255,216,94,.7), transparent 18%), linear-gradient(135deg, #e9fbff 0%, #fff6ea 100%); }
+    .concept-a .cta { background: #ff7b7b; }
+    .concept-a .pill.primary { background: #243b6b; color: white; }
+    .concept-a .pill.secondary { background: #c9f7ef; color: #0f6f62; }
+    .concept-a .hero-art { position: absolute; right: 18px; bottom: 10px; width: 170px; }
+    .concept-b .brand-title { font-family: 'DM Sans', sans-serif; color: #5d43eb; text-transform: uppercase; font-size: 20px; }
+    .concept-b .hero { background: linear-gradient(135deg, #f4f1ff 0%, #eefcff 54%, #fff6ee 100%); }
+    .concept-b .cta { background: #5d43eb; }
+    .concept-b .pill.primary { background: #5d43eb; color: white; }
+    .concept-b .pill.secondary { background: #ffd85e; color: #5c4700; }
+    .concept-b .hero-art { position: absolute; right: 14px; bottom: 16px; width: 178px; }
+    .concept-c .brand-title { font-family: 'Baloo 2', cursive; color: #0d7e71; }
+    .concept-c .hero { background: linear-gradient(135deg, #effcf8 0%, #f0fcff 55%, #fff3ea 100%); }
+    .concept-c .cta { background: #ff5da8; }
+    .concept-c .pill.primary { background: #0d7e71; color: white; }
+    .concept-c .pill.secondary { background: #ffe8f4; color: #a22163; }
+    .concept-c .hero-art { position: absolute; right: 18px; bottom: 12px; width: 176px; }
+    .concept-d .brand-title { font-family: 'DM Sans', sans-serif; color: #20386e; font-size: 21px; }
+    .concept-d .hero { background: linear-gradient(180deg, #fff9ef 0%, #f1fbff 100%); }
+    .concept-d .cta { background: #f28c28; }
+    .concept-d .pill.primary { background: #20386e; color: white; }
+    .concept-d .pill.secondary { background: #ffd85e; color: #574200; }
+    .concept-d .hero-art { position: absolute; right: 20px; bottom: 16px; width: 176px; }
+    .analytics {
+      margin-top: 28px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+    .analytics h2 { margin: 0 0 12px; font-family: 'Baloo 2', cursive; font-size: 30px; }
+    .analytics p, .analytics li { color: #425164; }
+    .analytics code { background: #eef4fb; padding: 2px 6px; border-radius: 6px; }
+    .files { margin-top: 28px; background: #f4faff; border: 1px dashed #b8cbe0; border-radius: 20px; padding: 18px 20px; }
+    .files h3 { margin: 0 0 10px; font-size: 18px; }
+    .files ul { margin: 0; padding-left: 18px; }
+    @media (max-width: 860px) {
+      .site-nav { flex-wrap: wrap; }
+      .nav-links { order: 3; width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+      .hero { min-height: 360px; }
+      .hero-art { opacity: .28; }
+    }
+  
+body { padding: 24px; background: linear-gradient(180deg, #f6fbff 0%, #fffdf8 100%); }
+.wrap { max-width: 980px; padding: 0; }
+.grid { display: block; }
+.card { margin: 0 auto; max-width: 900px; }
+.top, .analytics, .files { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<article class="card concept-a">
+        <div class="card-head">
+          <h2>Option A — Pocket Lab</h2>
+          <p>Most direct science signal. Rounded flask icon + cheerful wordmark. Feels playful, clear, and easy to recognize at small sizes.</p>
+        </div>
+        <div class="mockup">
+          <div class="site-frame">
+            <div class="site-nav">
+              <div class="brand">
+                <svg class="logo-chip" viewBox="0 0 64 64" aria-hidden="true">
+                  <circle cx="32" cy="32" r="30" fill="#ffffff" stroke="#d7e8f4" stroke-width="2"/>
+                  <path d="M23 16h18" stroke="#243b6b" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M27 16v12l-9 13c-4 6 0 11 8 11h12c8 0 12-5 8-11L37 28V16" fill="#36c7b4" stroke="#243b6b" stroke-width="3.4" stroke-linejoin="round"/>
+                  <path d="M24 36c3 2 7 2 10 0 3-2 7-2 10 0" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="27" cy="42" r="2.6" fill="#ffd85e"/>
+                  <circle cx="37" cy="46" r="2.2" fill="#ff7b7b"/>
+                </svg>
+                <div class="brand-name">
+                  <div class="brand-title">Little Lab Coats</div>
+                  <div class="brand-sub">Hands-on science for homeschool families</div>
+                </div>
+              </div>
+              <div class="nav-links"><span>Curriculum</span><span>About</span><span>FAQ</span></div>
+              <div class="cta">Browse Curriculum</div>
+            </div>
+            <div class="hero">
+              <h3>Hands-on science with a cheerful lab identity</h3>
+              <p>This direction keeps the science cue obvious without feeling clinical. It can scale to favicon, worksheet label, and social profile cleanly.</p>
+              <div class="pill-row">
+                <span class="pill primary">Recognizable flask mark</span>
+                <span class="pill secondary">Friendly rounded type</span>
+              </div>
+              <svg class="hero-art" viewBox="0 0 190 170" aria-hidden="true">
+                <circle cx="138" cy="52" r="30" fill="#ffd85e" opacity=".9"/>
+                <rect x="30" y="60" width="86" height="84" rx="20" fill="#ffffff" stroke="#d7e8f4" stroke-width="3"/>
+                <path d="M67 76h16" stroke="#243b6b" stroke-width="4" stroke-linecap="round"/>
+                <path d="M71 76v18l-13 20c-5 7 0 12 9 12h18c9 0 14-5 9-12L81 94V76" fill="#36c7b4" stroke="#243b6b" stroke-width="3.5" stroke-linejoin="round"/>
+                <circle cx="69" cy="111" r="4" fill="#ffd85e"/>
+                <circle cx="84" cy="116" r="3.6" fill="#ff7b7b"/>
+                <path d="M118 100c10 0 18 8 18 18" stroke="#ff7b7b" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="note">
+          <h4>Why it works</h4>
+          <ul>
+            <li>Strongest immediate science recognition without relying on the existing badge.</li>
+            <li>Feels kid-friendly and colorful, but simple enough to print well.</li>
+            <li>Easy system for curriculum tabs, worksheets, and merch labels.</li>
+          </ul>
+        </div>
+      </article>
+</div>
+</body>
+</html>

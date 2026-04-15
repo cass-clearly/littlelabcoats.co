@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Option F — Spark Star Badge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --ink:#2b2d42; --muted:#5f6b7a; --line:#dbe7f3; --shadow:0 16px 40px rgba(36,59,107,.12); --radius:24px; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Nunito',system-ui,sans-serif; background:linear-gradient(180deg,#f6fbff 0%,#fffdf8 100%); color:var(--ink); line-height:1.5; padding:24px; }
+  .wrap { max-width:980px; margin:0 auto; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; max-width:900px; margin:0 auto; }
+  .card-head { padding:22px 22px 14px; border-bottom:1px solid var(--line); }
+  .card-head h2 { margin:0 0 6px; font-size:28px; font-family:'Baloo 2',cursive; }
+  .card-head p { margin:0; color:var(--muted); font-size:15px; }
+  .mockup { padding:18px; background:#f7fbff; }
+  .site-frame { border-radius:24px; overflow:hidden; border:1px solid #dce9f4; background:#fff; }
+  .site-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px; border-bottom:1px solid #e7eef7; background:rgba(255,255,255,.95); }
+  .brand { display:flex; align-items:center; gap:12px; min-width:0; }
+  .brand-title { font-weight:900; font-size:22px; line-height:1; letter-spacing:-.02em; color:#243b6b; font-family:'Baloo 2',cursive; }
+  .brand-sub { font-size:11px; font-weight:800; letter-spacing:.11em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
+  .nav-links { display:flex; gap:18px; color:var(--muted); font-weight:700; font-size:13px; }
+  .cta { background:#ff5da8; color:#fff; border-radius:999px; padding:10px 16px; font-size:13px; font-weight:800; }
+  .hero { padding:26px 24px 30px; position:relative; overflow:hidden; min-height:300px; background:linear-gradient(135deg,#eefcff 0%,#fff8ef 55%,#fff1f7 100%); }
+  .hero h3 { margin:0 0 10px; font-size:38px; line-height:1.02; max-width:420px; font-family:'Baloo 2',cursive; }
+  .hero p { margin:0 0 18px; max-width:440px; color:#405066; font-size:16px; }
+  .pill-row { display:flex; gap:10px; flex-wrap:wrap; }
+  .pill { padding:9px 14px; border-radius:999px; font-size:12px; font-weight:800; }
+  .pill.primary { background:#243b6b; color:#fff; }
+  .pill.secondary { background:#ffd85e; color:#5c4700; }
+  .note { padding:18px 22px 22px; }
+  .note h4 { margin:0 0 10px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:#243b6b; }
+  .note ul { margin:0; padding-left:18px; }
+  .note li { margin-bottom:8px; }
+  .logo-chip { width:64px; height:64px; flex:0 0 64px; }
+  .hero-art { position:absolute; right:18px; bottom:14px; width:186px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <article class="card">
+    <div class="card-head">
+      <h2>Option F — Spark Star Badge</h2>
+      <p>A simple star/spark badge with notebook-style line details. Keeps things playful and recognizable without locking the brand to one science object.</p>
+    </div>
+    <div class="mockup">
+      <div class="site-frame">
+        <div class="site-nav">
+          <div class="brand">
+            <svg class="logo-chip" viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="7" y="7" width="50" height="50" rx="18" fill="#eefcff"/>
+              <path d="M32 13l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="#ffd85e" stroke="#243b6b" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M26 31h12M27 36h10" stroke="#ff5da8" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="45" cy="19" r="4" fill="#36c7b4"/>
+            </svg>
+            <div>
+              <div class="brand-title">Little Lab Coats</div>
+              <div class="brand-sub">Playful science with a celebratory feel</div>
+            </div>
+          </div>
+          <div class="nav-links"><span>Curriculum</span><span>Samples</span><span>FAQ</span></div>
+          <div class="cta">Start Exploring</div>
+        </div>
+        <div class="hero">
+          <h3>A bright “science is exciting” direction</h3>
+          <p>This one leans into delight and achievement. The icon is easy to spot in a small circle, and the header still feels warm and family-friendly.</p>
+          <div class="pill-row">
+            <span class="pill primary">Fast small-size recognition</span>
+            <span class="pill secondary">Less literal, more playful</span>
+          </div>
+          <svg class="hero-art" viewBox="0 0 210 180" aria-hidden="true">
+            <path d="M105 26l14 30 33 3-25 22 8 33-30-16-30 16 8-33-25-22 33-3z" fill="#ffd85e" stroke="#243b6b" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M85 81h40M88 97h34" stroke="#ff5da8" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="158" cy="42" r="12" fill="#36c7b4"/>
+            <circle cx="55" cy="46" r="10" fill="#ff7b7b"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      <h4>Why it works</h4>
+      <ul>
+        <li>Very simple silhouette that reads well in a profile circle or tiny header slot.</li>
+        <li>Feels joyful and celebratory rather than serious or institutional.</li>
+        <li>Gives Little Lab Coats a broader “curiosity/adventure” identity beyond one lab tool.</li>
+      </ul>
+    </div>
+  </article>
+</div>
+</body>
+</html>

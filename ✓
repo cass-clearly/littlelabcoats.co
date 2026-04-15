@@ -1,0 +1,56 @@
+index.html:1000:    .feature-check {
+index.html:2850:      <div class="pricing-note-pill">🎉 First 50 signups get 25% off</div>
+index.html:2865:            <li><span class="feature-check">✔</span>One complete unit purchase</li>
+index.html:2866:            <li><span class="feature-check">✔</span>6 NGSS-aligned lessons in that unit</li>
+index.html:2867:            <li><span class="feature-check">✔</span>Printable worksheets and parent answer keys</li>
+index.html:2868:            <li><span class="feature-check">✔</span>Reference card and unit quiz included</li>
+index.html:2869:            <li><span class="feature-check">✔</span>Perfect for trying one topic at a time</li>
+index.html:2887:            <li><span class="feature-check">✔</span>Every lesson in one grade level</li>
+index.html:2888:            <li><span class="feature-check">✔</span>All units, worksheets, answer keys, and quizzes for that grade</li>
+index.html:2889:            <li><span class="feature-check">✔</span>Printable reference cards included</li>
+index.html:2890:            <li><span class="feature-check">✔</span>Great for families teaching one grade this year</li>
+index.html:2891:            <li><span class="feature-check">✔</span>Annual billing with 2 months free</li>
+index.html:2908:            <li><span class="feature-check">✔</span>Access to every lesson across the site</li>
+index.html:2909:            <li><span class="feature-check">✔</span>All units, quizzes, worksheets, and reference cards</li>
+index.html:2910:            <li><span class="feature-check">✔</span>Ideal for multi-age homeschool families</li>
+index.html:2911:            <li><span class="feature-check">✔</span>Use across all available grade levels</li>
+index.html:2912:            <li><span class="feature-check">✔</span>Best value for full-library access</li>
+store.html:535:    .feature-check {
+store.html:920:      <div class="pricing-note-pill">🎉 First 50 signups get 25% off</div>
+store.html:935:            <li><span class="feature-check">✔</span>One complete unit purchase</li>
+store.html:936:            <li><span class="feature-check">✔</span>6 NGSS-aligned lessons in that unit</li>
+store.html:937:            <li><span class="feature-check">✔</span>Printable worksheets and parent answer keys</li>
+store.html:938:            <li><span class="feature-check">✔</span>Reference card and unit quiz included</li>
+store.html:939:            <li><span class="feature-check">✔</span>Best for trying one topic at a time</li>
+store.html:957:            <li><span class="feature-check">✔</span>Every lesson in one grade level</li>
+store.html:958:            <li><span class="feature-check">✔</span>All units, worksheets, answer keys, and quizzes for that grade</li>
+store.html:959:            <li><span class="feature-check">✔</span>Printable reference cards included</li>
+store.html:960:            <li><span class="feature-check">✔</span>Ideal for families focusing on one learner's grade</li>
+store.html:961:            <li><span class="feature-check">✔</span>Annual billing with 2 months free</li>
+store.html:978:            <li><span class="feature-check">✔</span>Access to every lesson across K–5</li>
+store.html:979:            <li><span class="feature-check">✔</span>All units, quizzes, worksheets, and reference cards</li>
+store.html:980:            <li><span class="feature-check">✔</span>Perfect for teaching multiple grade levels</li>
+store.html:981:            <li><span class="feature-check">✔</span>Use across the full site library</li>
+store.html:982:            <li><span class="feature-check">✔</span>Best overall value for all-access families</li>
+lesson-plans/landing-page.html:955:    .feature-check {
+lesson-plans/landing-page.html:967:    .pricing-card:nth-child(1) .feature-check { background: var(--terracotta); color: white; }
+lesson-plans/landing-page.html:968:    .pricing-card.featured .feature-check     { background: var(--sage); color: white; }
+lesson-plans/landing-page.html:969:    .pricing-card:nth-child(3) .feature-check { background: var(--navy); color: white; }
+lesson-plans/landing-page.html:1649:            <li><span class="feature-check">✓</span>Instant PDF download</li>
+lesson-plans/landing-page.html:1650:            <li><span class="feature-check">✓</span>Full lesson plan with experiment</li>
+lesson-plans/landing-page.html:1651:            <li><span class="feature-check">✓</span>Student worksheets (all grade levels)</li>
+lesson-plans/landing-page.html:1652:            <li><span class="feature-check">✓</span>Parent answer key</li>
+lesson-plans/landing-page.html:1653:            <li><span class="feature-check">✓</span>Discussion questions with guided answers</li>
+lesson-plans/landing-page.html:1654:            <li><span class="feature-check">✓</span>Print as many times as you need</li>
+lesson-plans/landing-page.html:1671:            <li><span class="feature-check">✓</span>Everything in Digital</li>
+lesson-plans/landing-page.html:1672:            <li><span class="feature-check">✓</span>Pre-assembled materials kit</li>
+lesson-plans/landing-page.html:1673:            <li><span class="feature-check">✓</span>All experiment supplies included</li>
+lesson-plans/landing-page.html:1674:            <li><span class="feature-check">✓</span>Shipped to your door</li>
+lesson-plans/landing-page.html:1675:            <li><span class="feature-check">✓</span>Zero supply hunting required</li>
+lesson-plans/landing-page.html:1676:            <li><span class="feature-check">✓</span>Open the box, start the lesson</li>
+lesson-plans/landing-page.html:1692:            <li><span class="feature-check">✓</span>Access to entire unit library</li>
+lesson-plans/landing-page.html:1693:            <li><span class="feature-check">✓</span>All grade levels K–5</li>
+lesson-plans/landing-page.html:1694:            <li><span class="feature-check">✓</span>New units added regularly</li>
+lesson-plans/landing-page.html:1695:            <li><span class="feature-check">✓</span>Instant download for everything</li>
+lesson-plans/landing-page.html:1696:            <li><span class="feature-check">✓</span>Priority access to new releases</li>
+lesson-plans/landing-page.html:1697:            <li><span class="feature-check">✓</span>Best value for active homeschoolers</li>
