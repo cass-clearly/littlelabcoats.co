@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscription Unlocked — Little Lab Coats</title>
+  <meta name="description" content="Thanks for subscribing to Little Lab Coats. This page completes the on-device unlock handoff after Stripe checkout." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/site/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="images/site/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:#F9FFFE;
+      --cream-dark:#E8F8F6;
+      --teal:#4ECDC4;
+      --coral:#FF6B6B;
+      --navy:#3B1F6B;
+      --navy-light:#5A3490;
+      --border:#C8F0ED;
+      --text-muted:#5A7A78;
+      --white:#FFFFFF;
+      --shadow:0 20px 60px rgba(43,58,103,0.14);
+      --radius:24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Lato', sans-serif;
+      color: var(--navy);
+      background: linear-gradient(180deg, #f7fffe 0%, #eef9ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 18px;
+    }
+    .shell {
+      width: min(760px, 100%);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero {
+      padding: 36px 32px 24px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: white;
+    }
+    .hero img {
+      height: 84px;
+      width: auto;
+      margin: 0 auto 14px;
+      display: block;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.1;
+    }
+    .hero p {
+      margin: 0 auto;
+      max-width: 540px;
+      color: rgba(255,255,255,0.88);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+    .content {
+      padding: 30px 28px 34px;
+    }
+    .status {
+      border-radius: 18px;
+      padding: 18px 20px;
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .status strong {
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+    .status p {
+      margin: 0;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .checklist {
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .checklist li {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: #fff;
+      line-height: 1.65;
+    }
+    .checklist span {
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 14px 18px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--coral);
+      color: white;
+      box-shadow: 0 10px 24px rgba(255,107,107,0.24);
+    }
+    .btn-secondary {
+      background: var(--teal);
+      color: white;
+      box-shadow: 0 10px 24px rgba(78,205,196,0.22);
+    }
+    .btn-ghost {
+      background: white;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .smallprint {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .smallprint strong { color: var(--navy); }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <img src="images/site/llc-logo-serena-approved-2026-04-10.png" alt="Little Lab Coats" />
+      <h1>You're in, scientist.</h1>
+      <p>Thanks for subscribing to Little Lab Coats. If you arrived here from Stripe checkout, this page unlocks paid lesson previews on this browser/device for the current site paywall flow.</p>
+    </section>
+
+    <section class="content">
+      <div class="status" id="unlockStatus">
+        <strong>Finishing your unlock…</strong>
+        <p>We are checking the checkout redirect details and applying the local lesson-access handoff for this browser.</p>
+      </div>
+
+      <ul class="checklist">
+        <li><span>1. Access is device-specific right now.</span> The current Little Lab Coats paywall uses an on-device browser unlock, so complete checkout and open lessons in the same browser/device.</li>
+        <li><span>2. Your Stripe emails are your billing record.</span> Stripe sends receipts and subscription-management links directly from checkout.</li>
+        <li><span>3. If a lesson still looks locked,</span> reopen this success page from the Stripe redirect or receipt email on the same browser, then refresh the lesson page.</li>
+      </ul>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="curriculum.html">Open the Curriculum</a>
+        <a class="btn btn-secondary" href="store.html#all-access-annual">Back to the Store</a>
+        <a class="btn btn-ghost" href="index.html">Return Home</a>
+      </div>
+
+      <p class="smallprint"><strong>Heads-up:</strong> this is a pragmatic static-site handoff, not a full account system. If Serena wants durable cross-device logins or server-verified entitlements later, the next step is adding a backend/auth layer plus Stripe webhook verification.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var looksLikeStripe = params.get('source') === 'stripe' || params.has('session_id') || document.referrer.indexOf('stripe.com') !== -1;
+      var status = document.getElementById('unlockStatus');
+
+      if (looksLikeStripe) {
+        try {
+          localStorage.setItem('llc_access', 'granted');
+          localStorage.setItem('llc_access_plan', params.get('plan') || 'all-access-annual');
+          localStorage.setItem('llc_access_granted_at', new Date().toISOString());
+        } catch (error) {}
+
+        status.innerHTML = '<strong>Access unlocked on this device.</strong><p>Stripe redirect detected. Paid Little Lab Coats lesson previews should now open in full on this browser/device.</p>';
+      } else {
+        status.innerHTML = '<strong>Waiting for a Stripe redirect.</strong><p>This page only auto-unlocks when it is opened from Stripe checkout or with the expected checkout redirect parameters.</p>';
+      }
+    })();
+  </script>
+</body>
+</html>
