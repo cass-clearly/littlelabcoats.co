@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "slug": "gr1-ps4-unit1-bundle",
+      "displayName": "Grade 1 Physical Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr1-ps4-unit1-bundle/gr1-ps4-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 1 Physical Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-manual"
+    }
+  ]
+}
