@@ -455,6 +455,242 @@
       color: var(--navy-light);
     }
 
+
+    .shop-note {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #eefdfb 0%, #f7f3ff 100%);
+      border: 1px solid rgba(78,205,196,0.28);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .shop-note h2 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .shop-note p {
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .shop-note ul {
+      margin: 10px 0 0 18px;
+      color: var(--navy);
+    }
+
+    .shop-split + .shop-split { margin-top: 28px; }
+
+    .shop-section-heading {
+      max-width: 1100px;
+      margin: 0 auto 18px;
+    }
+
+    .shop-section-heading span {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      background: var(--teal-pale);
+      border-radius: 999px;
+      padding: 5px 12px;
+      margin-bottom: 10px;
+    }
+
+    .shop-section-heading h2 {
+      font-size: clamp(1.7rem, 3vw, 2.25rem);
+      margin-bottom: 8px;
+    }
+
+    .shop-section-heading p {
+      color: var(--text-muted);
+      max-width: 760px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 14px;
+    }
+
+    .status-pill.live { background: #DCFCE7; color: #166534; }
+    .status-pill.soon { background: #FEF3C7; color: #92400E; }
+
+    .browse-status {
+      background: var(--cream-dark);
+      padding: 72px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .browse-status-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .browse-status-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .browse-status-header span {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 12px;
+    }
+
+    .browse-status-header p {
+      max-width: 720px;
+      margin: 12px auto 0;
+      color: var(--text-muted);
+    }
+
+    .grade-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .grade-tab {
+      border: 2px solid var(--border);
+      background: white;
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .grade-tab.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .grade-panel { display: none; }
+    .grade-panel.active { display: block; }
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .domain-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .domain-card-header {
+      padding: 14px 18px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      color: white;
+    }
+
+    .domain-card-header.physical { background: #7B2FBE; }
+    .domain-card-header.life { background: #2e7d32; }
+    .domain-card-header.earth { background: #e65100; }
+    .domain-card-header.engineering { background: #6a1b9a; }
+
+    .domain-card-body { padding: 18px; }
+
+    .unit-status-card + .unit-status-card { margin-top: 14px; }
+
+    .unit-status-card {
+      border: 1px solid rgba(78,205,196,0.22);
+      border-radius: 14px;
+      padding: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #fbfffe 100%);
+    }
+
+    .unit-status-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .unit-status-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .unit-status-meta {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .unit-status-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .mini-chip {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .mini-chip.live { background: #DCFCE7; color: #166534; }
+    .mini-chip.free { background: #DBEAFE; color: #1D4ED8; }
+    .mini-chip.soon { background: #FEF3C7; color: #92400E; }
+
+    .btn-inline {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .btn-inline.live { background: var(--coral); color: white; }
+    .btn-inline.free { background: var(--teal-pale); color: var(--navy); }
+    .btn-inline.more { background: transparent; color: var(--navy); border: 2px solid var(--border); }
+
+    @media (max-width: 768px) {
+      .domain-grid { grid-template-columns: 1fr; }
+      .unit-status-top { flex-direction: column; }
+    }
+
     /* ─── Footer ─── */
     footer {
       background: var(--navy);
@@ -715,7 +951,7 @@
         <li><a href="index.html#founder">About</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
       </ul>
-      <a href="store.html#all-access-annual" class="btn btn-primary nav-cta">Buy Now</a>
+      <a href="store.html#live-now" class="btn btn-primary nav-cta">Shop Live Products</a>
     </div>
   </nav>
 
@@ -724,8 +960,8 @@
   </div>
 
   <div class="store-hero">
-    <h1>Science Curriculum Bundles</h1>
-    <p>NGSS-aligned lesson plans designed and tested by a homeschooling PhD scientist. Real experiments. Beautiful materials. Zero screens. Start with printable PDF downloads, then join the waitlist for bigger bundles and all-access.</p>
+    <h1>Shop Little Lab Coats</h1>
+    <p>Only live products are buyable here right now: one paid PDF lesson plus free sample lessons for every grade. Full-grade bundles and all-access are clearly marked Coming Soon.</p>
   </div>
 
   <div class="trust-bar">
@@ -744,244 +980,335 @@
   </div>
 
   <section class="store-section" id="products">
-    <div class="store-grid">
+    <div class="shop-note">
+      <h2>What you can actually buy today</h2>
+      <p><strong>Live now:</strong> Kitchen Chemistry ($7) and free sample lessons for every grade.</p>
+      <p><strong>Not live yet:</strong> full-grade bundles, unit bundles, and all-access subscriptions. Those now route to clear Coming Soon / waitlist states instead of looking buyable.</p>
+      <ul>
+        <li>Use <strong>Live Now</strong> below if you want something immediately.</li>
+        <li>Use <strong>Browse by grade</strong> to see what exists in each domain and what status it has.</li>
+        <li>Use the <strong>waitlist</strong> buttons only for offers that are not live yet.</li>
+      </ul>
+    </div>
 
-      <div class="product-card" id="all-access-annual">
-        <div class="card-header">
-          <span class="grade-badge" style="background:#EDE9FE; color:#5B21B6; border:1px solid rgba(91,33,182,0.22);">All Access</span>
-          <span class="grade-badge" style="background:#DCFCE7; color:#166534; border:1px solid rgba(22,101,52,0.18);">Annual Subscription</span>
-        </div>
-        <div class="card-body">
-          <h3>Little Lab Coats All-Access Annual</h3>
-          <p class="card-tagline">Get every paid lesson, worksheet, quiz, and reference card across the site.</p>
-          <ul class="card-contents">
-            <li>Full K–5 lesson library in one subscription</li>
-            <li>Printable worksheets + parent answer keys</li>
-            <li>Reference cards and unit quizzes included</li>
-            <li>Email delivery + access workflow is in progress</li>
-            <li>$99/year launch pricing planned</li>
-          </ul>
-          <div class="card-helper"><strong>Coming soon:</strong> join the waitlist and we’ll let you know when all-access is ready.</div>
-          <div class="card-price">
-            <div class="price-main">$99</div>
-            <div class="price-earlybird">Coming soon</div>
+    <div class="shop-split" id="live-now" style="margin-top:32px;">
+      <div class="shop-section-heading">
+        <span>Live now</span>
+        <h2>Buyable today</h2>
+        <p>These are the only offers that should feel immediately purchasable right now.</p>
+      </div>
+      <div class="store-grid">
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge badge-gr5">Grade 5</span>
+            <span class="grade-badge" style="background:#DCFCE7; color:#166534; border:1px solid rgba(22,101,52,0.18);">Live PDF</span>
+          </div>
+          <div class="card-body">
+            <h3>Kitchen Chemistry</h3>
+            <p class="card-tagline">A bite-sized intro to 5th grade physical science</p>
+            <ul class="card-contents">
+              <li>1 full lesson plan</li>
+              <li>Interactive quiz</li>
+              <li>Reference card</li>
+              <li>Hands-on kitchen experiment</li>
+            </ul>
+            <div class="status-pill live">Live checkout</div>
+            <div class="card-price">
+              <div class="price-main">$7</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="https://buy.stripe.com/5kQ7sN9g31EO5fK8Bw6g800" class="btn btn-primary btn-block" data-stripe-product="kitchen-chemistry">Buy Now — $7</a>
           </div>
         </div>
-        <div class="card-footer">
-          <a href="mailto:clearlycass10@gmail.com?subject=Little%20Lab%20Coats%20All-Access%20Waitlist" class="btn btn-secondary btn-block">Coming Soon — Join Waitlist</a>
-        </div>
-      </div>
 
-      <!-- Bundle 1: Kindergarten -->
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge badge-k">Kindergarten</span>
-          <span class="grade-badge" style="background:#FEF3C7; color:#92400E; border:1px solid rgba(180,83,9,0.25);">🐣 Early Bird</span>
-        </div>
-        <div class="card-body">
-          <h3>Complete Kindergarten Bundle</h3>
-          <p class="card-tagline">Everything you need to teach a full year of K science</p>
-          <ul class="card-contents">
-            <li>42 lesson plans across 7 units</li>
-            <li>K-PS2: Forces &amp; Motion (6 lessons)</li>
-            <li>K-LS1: Plants &amp; Animals (12 lessons)</li>
-            <li>K-PS3: Sun &amp; Energy (6 lessons)</li>
-            <li>K-ESS2: Weather (6 lessons)</li>
-            <li>K-ESS3: Earth Resources (6 lessons)</li>
-            <li>K-ETS1: Engineering Design (6 lessons)</li>
-            <li>7 unit quizzes + reference cards</li>
-          </ul>
-          <div class="card-price">
-            <div class="price-main">$35</div>
-            <div class="price-original">Coming soon</div>
-            <div class="price-earlybird">🐣 Waitlist open now</div>
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge badge-k">Kindergarten</span>
+            <span class="grade-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <h3>Free Sample — Milk Magic</h3>
+            <p class="card-tagline">A colorful kitchen-science wow moment for Kindergarten families</p>
+            <ul class="card-contents">
+              <li>Full lesson plan: Milk Magic</li>
+              <li>Hands-on kitchen experiment</li>
+              <li>Student worksheet + answer key</li>
+              <li>Discussion questions</li>
+            </ul>
+            <div class="status-pill live">Open instantly</div>
+            <div class="card-price"><div class="price-main free">FREE</div></div>
+          </div>
+          <div class="card-footer">
+            <a href="/lesson-plans/k-milk-magic.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
           </div>
         </div>
-        <div class="card-footer">
-          <a href="mailto:clearlycass10@gmail.com?subject=Kindergarten%20Bundle%20Waitlist" class="btn btn-secondary btn-block">Coming Soon — Join Waitlist</a>
-        </div>
-      </div>
 
-      <!-- Bundle 2: Grade 1 -->
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge badge-gr1">Grade 1</span>
-          <span class="grade-badge" style="background:#FEF3C7; color:#92400E; border:1px solid rgba(180,83,9,0.25);">🐣 Early Bird</span>
-        </div>
-        <div class="card-body">
-          <h3>Complete Grade 1 Bundle</h3>
-          <p class="card-tagline">A full year of Grade 1 NGSS science</p>
-          <ul class="card-contents">
-            <li>21 lesson plans across 4 units</li>
-            <li>1-PS4: Sound &amp; Light (6 lessons)</li>
-            <li>1-LS1: Animal &amp; Plant Structures (coming soon)</li>
-            <li>1-LS3: Parent &amp; Offspring (6 lessons)</li>
-            <li>1-ESS1: Sky &amp; Space (6 lessons)</li>
-            <li>4 unit quizzes included</li>
-          </ul>
-          <div class="card-price">
-            <div class="price-main">$28</div>
-            <div class="price-original">Coming soon</div>
-            <div class="price-earlybird">🐣 Waitlist open now</div>
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge badge-gr1">Grade 1</span>
+            <span class="grade-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <h3>Free Sample — Celery Rainbow</h3>
+            <p class="card-tagline">See water travel through a plant in real time</p>
+            <ul class="card-contents">
+              <li>Full lesson plan: Celery Rainbow</li>
+              <li>Visible plant-transport experiment</li>
+              <li>Student worksheet + answer key</li>
+              <li>Family-friendly discussion prompts</li>
+            </ul>
+            <div class="status-pill live">Open instantly</div>
+            <div class="card-price"><div class="price-main free">FREE</div></div>
+          </div>
+          <div class="card-footer">
+            <a href="/lesson-plans/free-gr1-celery-rainbow.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
           </div>
         </div>
-        <div class="card-footer">
-          <a href="mailto:clearlycass10@gmail.com?subject=Grade%201%20Bundle%20Waitlist" class="btn btn-secondary btn-block">Coming Soon — Join Waitlist</a>
-        </div>
-      </div>
 
-      <!-- Bundle 3: Kitchen Chemistry Gr5 -->
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge badge-gr5">Grade 5</span>
-        </div>
-        <div class="card-body">
-          <h3>Kitchen Chemistry</h3>
-          <p class="card-tagline">A bite-sized intro to 5th grade physical science</p>
-          <ul class="card-contents">
-            <li>1 full lesson plan</li>
-            <li>Interactive quiz</li>
-            <li>Reference card</li>
-            <li>Hands-on kitchen experiment</li>
-          </ul>
-          <div class="card-price">
-            <div class="price-main">$7</div>
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge" style="background:#FFF3E0;color:#e65100;border:1px solid rgba(230,81,0,0.25);">Grade 2</span>
+            <span class="grade-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <h3>Free Sample — Salt Dough Fossil Factory</h3>
+            <p class="card-tagline">Model fossil evidence with a hands-on imprint lesson</p>
+            <ul class="card-contents">
+              <li>Full lesson plan: Salt Dough Fossil Factory</li>
+              <li>Earth science imprint activity</li>
+              <li>Student worksheet + answer key</li>
+              <li>Model-vs-real-fossil guidance</li>
+            </ul>
+            <div class="status-pill live">Open instantly</div>
+            <div class="card-price"><div class="price-main free">FREE</div></div>
+          </div>
+          <div class="card-footer">
+            <a href="/lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
           </div>
         </div>
-        <div class="card-footer">
-          <a href="https://buy.stripe.com/5kQ7sN9g31EO5fK8Bw6g800" class="btn btn-primary btn-block" data-stripe-product="kitchen-chemistry">Buy Now — $7</a>
-        </div>
-      </div>
 
-      <!-- Bundle 4: Free Sample -->
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge badge-k">Kindergarten</span>
-          <span class="grade-badge badge-free">Free</span>
-        </div>
-        <div class="card-body">
-          <h3>Free Sample — Milk Magic</h3>
-          <p class="card-tagline">A colorful kitchen-science wow moment for Kindergarten families</p>
-          <ul class="card-contents">
-            <li>Full lesson plan: Milk Magic</li>
-            <li>Hands-on kitchen experiment</li>
-            <li>Student worksheet + answer key</li>
-            <li>Discussion questions</li>
-          </ul>
-          <div class="card-price">
-            <div class="price-main free">FREE</div>
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge" style="background:#E3F2FD;color:#1976d2;border:1px solid rgba(25,118,210,0.25);">Grade 3</span>
+            <span class="grade-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <h3>Free Sample — Egg Drop Kitchen Challenge</h3>
+            <p class="card-tagline">Design, test, and improve with an engineering favorite</p>
+            <ul class="card-contents">
+              <li>Full lesson plan: Egg Drop Kitchen Challenge</li>
+              <li>Hands-on forces + engineering task</li>
+              <li>Student worksheet + answer key</li>
+              <li>Redesign and evidence prompts</li>
+            </ul>
+            <div class="status-pill live">Open instantly</div>
+            <div class="card-price"><div class="price-main free">FREE</div></div>
+          </div>
+          <div class="card-footer">
+            <a href="/lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
           </div>
         </div>
-        <div class="card-footer">
-          <a href="/lesson-plans/k-milk-magic.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge" style="background:#EFEBE9;color:#8d6e63;border:1px solid rgba(141,110,99,0.25);">Grade 4</span>
+            <span class="grade-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <h3>Free Sample — Apple Browning Experiment</h3>
+            <p class="card-tagline">Compare treatments and learn why a control matters</p>
+            <ul class="card-contents">
+              <li>Full lesson plan: Apple Browning Experiment</li>
+              <li>Chemical change + fair-test focus</li>
+              <li>Student worksheet + answer key</li>
+              <li>Data-table thinking built in</li>
+            </ul>
+            <div class="status-pill live">Open instantly</div>
+            <div class="card-price"><div class="price-main free">FREE</div></div>
+          </div>
+          <div class="card-footer">
+            <a href="/lesson-plans/free-gr4-apple-oxidation.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge badge-gr5">Grade 5</span>
+            <span class="grade-badge badge-free">Free</span>
+          </div>
+          <div class="card-body">
+            <h3>Free Sample — Bread Mold Terrarium</h3>
+            <p class="card-tagline">A gross-but-great decomposition experiment for older learners</p>
+            <ul class="card-contents">
+              <li>Full lesson plan: Bread Mold Terrarium</li>
+              <li>Multi-day decomposition investigation</li>
+              <li>Student worksheet + answer key</li>
+              <li>Safety guidance included</li>
+            </ul>
+            <div class="status-pill live">Open instantly</div>
+            <div class="card-price"><div class="price-main free">FREE</div></div>
+          </div>
+          <div class="card-footer">
+            <a href="/lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop-split" id="coming-soon">
+      <div class="shop-section-heading">
+        <span>Coming soon</span>
+        <h2>Planned offers that are not buyable yet</h2>
+        <p>These stay visible for roadmap clarity, but their actions are intentionally disabled into waitlist paths so nobody mistakes them for live products.</p>
+      </div>
+      <div class="store-grid">
+        <div class="product-card" id="all-access-annual">
+          <div class="card-header">
+            <span class="grade-badge" style="background:#EDE9FE; color:#5B21B6; border:1px solid rgba(91,33,182,0.22);">All Access</span>
+            <span class="grade-badge" style="background:#FEF3C7; color:#92400E; border:1px solid rgba(180,83,9,0.25);">Coming Soon</span>
+          </div>
+          <div class="card-body">
+            <h3>Little Lab Coats All-Access Annual</h3>
+            <p class="card-tagline">Planned full-library access once fulfillment and access handling are ready.</p>
+            <ul class="card-contents">
+              <li>Full K–5 lesson library in one subscription</li>
+              <li>Printable worksheets + parent answer keys</li>
+              <li>Reference cards and unit quizzes included</li>
+              <li>Access workflow is still being tightened</li>
+              <li>Not yet available for purchase</li>
+            </ul>
+            <div class="card-helper"><strong>Status:</strong> waitlist only for now.</div>
+            <div class="card-price">
+              <div class="price-main">$99</div>
+              <div class="price-earlybird">Coming soon</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="mailto:clearlycass10@gmail.com?subject=Little%20Lab%20Coats%20All-Access%20Waitlist" class="btn btn-secondary btn-block">Coming Soon — Join Waitlist</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge badge-k">Kindergarten</span>
+            <span class="grade-badge" style="background:#FEF3C7; color:#92400E; border:1px solid rgba(180,83,9,0.25);">Coming Soon</span>
+          </div>
+          <div class="card-body">
+            <h3>Complete Kindergarten Bundle</h3>
+            <p class="card-tagline">Everything you need to teach a full year of K science</p>
+            <ul class="card-contents">
+              <li>42 lesson plans across 7 units</li>
+              <li>K-PS2: Forces &amp; Motion (6 lessons)</li>
+              <li>K-LS1: Plants &amp; Animals (12 lessons)</li>
+              <li>K-PS3: Sun &amp; Energy (6 lessons)</li>
+              <li>K-ESS2: Weather (6 lessons)</li>
+              <li>K-ESS3: Earth Resources (6 lessons)</li>
+              <li>K-ETS1: Engineering Design (6 lessons)</li>
+              <li>7 unit quizzes + reference cards</li>
+            </ul>
+            <div class="status-pill soon">Waitlist only</div>
+            <div class="card-price">
+              <div class="price-main">$35</div>
+              <div class="price-original">Coming soon</div>
+              <div class="price-earlybird">🐣 Waitlist open now</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="mailto:clearlycass10@gmail.com?subject=Kindergarten%20Bundle%20Waitlist" class="btn btn-secondary btn-block">Coming Soon — Join Waitlist</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-header">
+            <span class="grade-badge badge-gr1">Grade 1</span>
+            <span class="grade-badge" style="background:#FEF3C7; color:#92400E; border:1px solid rgba(180,83,9,0.25);">Coming Soon</span>
+          </div>
+          <div class="card-body">
+            <h3>Complete Grade 1 Bundle</h3>
+            <p class="card-tagline">A full year of Grade 1 NGSS science</p>
+            <ul class="card-contents">
+              <li>21 lesson plans across 4 units</li>
+              <li>1-PS4: Sound &amp; Light (6 lessons)</li>
+              <li>1-LS1: Animal &amp; Plant Structures (coming soon)</li>
+              <li>1-LS3: Parent &amp; Offspring (6 lessons)</li>
+              <li>1-ESS1: Sky &amp; Space (6 lessons)</li>
+              <li>4 unit quizzes included</li>
+            </ul>
+            <div class="status-pill soon">Waitlist only</div>
+            <div class="card-price">
+              <div class="price-main">$28</div>
+              <div class="price-original">Coming soon</div>
+              <div class="price-earlybird">🐣 Waitlist open now</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="mailto:clearlycass10@gmail.com?subject=Grade%201%20Bundle%20Waitlist" class="btn btn-secondary btn-block">Coming Soon — Join Waitlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="browse-status" id="browse-by-grade">
+    <div class="browse-status-inner">
+      <div class="browse-status-header">
+        <span>Browse by grade</span>
+        <h2>Grade → domain → unit status</h2>
+        <p>This first-pass shop browser keeps the buying story honest. Use it to see which units are free previews, which paid products are live, and which larger offers are still coming soon.</p>
+      </div>
+
+      <div class="grade-tabs" role="tablist" aria-label="Shop status by grade">
+        <button class="grade-tab active" type="button" data-target="shop-grade-k">Kindergarten</button>
+        <button class="grade-tab" type="button" data-target="shop-grade-1">Grade 1</button>
+        <button class="grade-tab" type="button" data-target="shop-grade-2">Grade 2</button>
+        <button class="grade-tab" type="button" data-target="shop-grade-3">Grade 3</button>
+        <button class="grade-tab" type="button" data-target="shop-grade-4">Grade 4</button>
+        <button class="grade-tab" type="button" data-target="shop-grade-5">Grade 5</button>
+      </div>
+
+      <div id="shop-grade-k" class="grade-panel active">
+        <div class="domain-grid">
+          <div class="domain-card"><div class="domain-card-header life">🌱 Life Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Milk Magic</div><div class="unit-status-meta">Free sample lesson</div></div><span class="mini-chip free">Free now</span></div><p>Open a full free lesson today, then browse the curriculum library for the rest of Kindergarten.</p><div class="unit-status-actions"><a href="/lesson-plans/k-milk-magic.html" target="_blank" class="btn-inline free">Open free lesson</a><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Complete Kindergarten Bundle</div><div class="unit-status-meta">7 units · 42 lessons</div></div><span class="mini-chip soon">Coming soon</span></div><p>Visible on the roadmap, but not currently purchasable.</p><div class="unit-status-actions"><a href="mailto:clearlycass10@gmail.com?subject=Kindergarten%20Bundle%20Waitlist" class="btn-inline more">Join waitlist</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header physical">⚡ Physical Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Kindergarten physical science units</div><div class="unit-status-meta">Curriculum browse only</div></div><span class="mini-chip soon">Coming soon</span></div><p>Preview the lessons in the curriculum library. A direct paid product is not live yet.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge badge-gr1">Grade 1</span>
-          <span class="grade-badge badge-free">Free</span>
-        </div>
-        <div class="card-body">
-          <h3>Free Sample — Celery Rainbow</h3>
-          <p class="card-tagline">See water travel through a plant in real time</p>
-          <ul class="card-contents">
-            <li>Full lesson plan: Celery Rainbow</li>
-            <li>Visible plant-transport experiment</li>
-            <li>Student worksheet + answer key</li>
-            <li>Family-friendly discussion prompts</li>
-          </ul>
-          <div class="card-price"><div class="price-main free">FREE</div></div>
-        </div>
-        <div class="card-footer">
-          <a href="/lesson-plans/free-gr1-celery-rainbow.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+      <div id="shop-grade-1" class="grade-panel">
+        <div class="domain-grid">
+          <div class="domain-card"><div class="domain-card-header life">🌱 Life Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Celery Rainbow</div><div class="unit-status-meta">Free sample lesson</div></div><span class="mini-chip free">Free now</span></div><p>Instant free sample for Grade 1 families.</p><div class="unit-status-actions"><a href="/lesson-plans/free-gr1-celery-rainbow.html" target="_blank" class="btn-inline free">Open free lesson</a></div></div><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Complete Grade 1 Bundle</div><div class="unit-status-meta">4 units · 21 lessons</div></div><span class="mini-chip soon">Coming soon</span></div><p>Not live for checkout yet.</p><div class="unit-status-actions"><a href="mailto:clearlycass10@gmail.com?subject=Grade%201%20Bundle%20Waitlist" class="btn-inline more">Join waitlist</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header physical">⚡ Physical Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Grade 1 units</div><div class="unit-status-meta">Curriculum browse only</div></div><span class="mini-chip soon">Coming soon</span></div><p>Use the curriculum page to preview the roadmap and lesson coverage.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge" style="background:#FFF3E0;color:#e65100;border:1px solid rgba(230,81,0,0.25);">Grade 2</span>
-          <span class="grade-badge badge-free">Free</span>
-        </div>
-        <div class="card-body">
-          <h3>Free Sample — Salt Dough Fossil Factory</h3>
-          <p class="card-tagline">Model fossil evidence with a hands-on imprint lesson</p>
-          <ul class="card-contents">
-            <li>Full lesson plan: Salt Dough Fossil Factory</li>
-            <li>Earth science imprint activity</li>
-            <li>Student worksheet + answer key</li>
-            <li>Model-vs-real-fossil guidance</li>
-          </ul>
-          <div class="card-price"><div class="price-main free">FREE</div></div>
-        </div>
-        <div class="card-footer">
-          <a href="/lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+      <div id="shop-grade-2" class="grade-panel">
+        <div class="domain-grid">
+          <div class="domain-card"><div class="domain-card-header earth">🌍 Earth Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Salt Dough Fossil Factory</div><div class="unit-status-meta">Free sample lesson</div></div><span class="mini-chip free">Free now</span></div><p>Instant free sample for Grade 2.</p><div class="unit-status-actions"><a href="/lesson-plans/free-gr2-salt-dough-fossil-factory.html" target="_blank" class="btn-inline free">Open free lesson</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header physical">⚡ Physical Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Matter &amp; Its Properties</div><div class="unit-status-meta">Preview in curriculum</div></div><span class="mini-chip soon">Coming soon</span></div><p>Lesson previews exist, but there is no live unit or subscription checkout for this grade yet.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header life">🌱 Life Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Ecosystems</div><div class="unit-status-meta">Preview in curriculum</div></div><span class="mini-chip soon">Coming soon</span></div><p>Great browse path, not a live purchase path yet.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge" style="background:#E3F2FD;color:#1976d2;border:1px solid rgba(25,118,210,0.25);">Grade 3</span>
-          <span class="grade-badge badge-free">Free</span>
-        </div>
-        <div class="card-body">
-          <h3>Free Sample — Egg Drop Kitchen Challenge</h3>
-          <p class="card-tagline">Design, test, and improve with an engineering favorite</p>
-          <ul class="card-contents">
-            <li>Full lesson plan: Egg Drop Kitchen Challenge</li>
-            <li>Hands-on forces + engineering task</li>
-            <li>Student worksheet + answer key</li>
-            <li>Redesign and evidence prompts</li>
-          </ul>
-          <div class="card-price"><div class="price-main free">FREE</div></div>
-        </div>
-        <div class="card-footer">
-          <a href="/lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+      <div id="shop-grade-3" class="grade-panel">
+        <div class="domain-grid">
+          <div class="domain-card"><div class="domain-card-header engineering">🔧 Engineering</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Egg Drop Kitchen Challenge</div><div class="unit-status-meta">Free sample lesson</div></div><span class="mini-chip free">Free now</span></div><p>Open a Grade 3 engineering sample immediately.</p><div class="unit-status-actions"><a href="/lesson-plans/free-gr3-egg-drop-kitchen-challenge.html" target="_blank" class="btn-inline free">Open free lesson</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header life">🌱 Life Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Grade 3 unit library</div><div class="unit-status-meta">Multiple domains in curriculum</div></div><span class="mini-chip soon">Coming soon</span></div><p>Several strong curriculum units exist, but checkout is not live yet for Grade 3 bundles.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge" style="background:#EFEBE9;color:#8d6e63;border:1px solid rgba(141,110,99,0.25);">Grade 4</span>
-          <span class="grade-badge badge-free">Free</span>
-        </div>
-        <div class="card-body">
-          <h3>Free Sample — Apple Browning Experiment</h3>
-          <p class="card-tagline">Compare treatments and learn why a control matters</p>
-          <ul class="card-contents">
-            <li>Full lesson plan: Apple Browning Experiment</li>
-            <li>Chemical change + fair-test focus</li>
-            <li>Student worksheet + answer key</li>
-            <li>Data-table thinking built in</li>
-          </ul>
-          <div class="card-price"><div class="price-main free">FREE</div></div>
-        </div>
-        <div class="card-footer">
-          <a href="/lesson-plans/free-gr4-apple-oxidation.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+      <div id="shop-grade-4" class="grade-panel">
+        <div class="domain-grid">
+          <div class="domain-card"><div class="domain-card-header engineering">🔧 Engineering</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Apple Browning Experiment</div><div class="unit-status-meta">Free sample lesson</div></div><span class="mini-chip free">Free now</span></div><p>Immediate free Grade 4 sample.</p><div class="unit-status-actions"><a href="/lesson-plans/free-gr4-apple-oxidation.html" target="_blank" class="btn-inline free">Open free lesson</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header life">🌱 Life Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Grade 4 curriculum units</div><div class="unit-status-meta">Browse by domain in curriculum</div></div><span class="mini-chip soon">Coming soon</span></div><p>The unit structure is visible, but purchase paths are intentionally not active yet.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
         </div>
       </div>
 
-      <div class="product-card">
-        <div class="card-header">
-          <span class="grade-badge badge-gr5">Grade 5</span>
-          <span class="grade-badge badge-free">Free</span>
-        </div>
-        <div class="card-body">
-          <h3>Free Sample — Bread Mold Terrarium</h3>
-          <p class="card-tagline">A gross-but-great decomposition experiment for older learners</p>
-          <ul class="card-contents">
-            <li>Full lesson plan: Bread Mold Terrarium</li>
-            <li>Multi-day decomposition investigation</li>
-            <li>Student worksheet + answer key</li>
-            <li>Safety guidance included</li>
-          </ul>
-          <div class="card-price"><div class="price-main free">FREE</div></div>
-        </div>
-        <div class="card-footer">
-          <a href="/lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank" class="btn btn-sage btn-block">Open Free Lesson</a>
+      <div id="shop-grade-5" class="grade-panel">
+        <div class="domain-grid">
+          <div class="domain-card"><div class="domain-card-header physical">⚡ Physical Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Kitchen Chemistry</div><div class="unit-status-meta">Paid starter PDF product</div></div><span class="mini-chip live">Live now</span></div><p>The only paid checkout that is live today.</p><div class="unit-status-actions"><a href="https://buy.stripe.com/5kQ7sN9g31EO5fK8Bw6g800" class="btn-inline live">Buy for $7</a><a href="curriculum.html" class="btn-inline more">Browse more Grade 5</a></div></div></div></div>
+          <div class="domain-card"><div class="domain-card-header life">🌱 Life Science</div><div class="domain-card-body"><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Bread Mold Terrarium</div><div class="unit-status-meta">Free sample lesson</div></div><span class="mini-chip free">Free now</span></div><p>Instant free sample for Grade 5.</p><div class="unit-status-actions"><a href="/lesson-plans/free-gr5-bread-mold-terrarium.html" target="_blank" class="btn-inline free">Open free lesson</a></div></div><div class="unit-status-card"><div class="unit-status-top"><div><div class="unit-status-name">Full Grade 5 units</div><div class="unit-status-meta">Life, physical, and earth science previews</div></div><span class="mini-chip soon">Coming soon</span></div><p>Browse the curriculum now; larger Grade 5 paid offers are not yet live.</p><div class="unit-status-actions"><a href="curriculum.html" class="btn-inline more">Browse curriculum</a></div></div></div></div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1070,7 +1397,7 @@
         <h5>Curriculum</h5>
         <ul class="footer-links">
           <li><a href="curriculum.html">Browse All Lessons</a></li>
-          <li><a href="store.html">Shop Bundles</a></li>
+          <li><a href="store.html#live-now">Shop Live Products</a></li>
           <li><a href="index.html#founder">About Serena</a></li>
         </ul>
       </div>
@@ -1091,6 +1418,23 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.grade-tab');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var scope = tab.closest('.browse-status-inner');
+          if (!scope) return;
+          scope.querySelectorAll('.grade-tab').forEach(function (btn) {
+            btn.classList.toggle('active', btn === tab);
+          });
+          scope.querySelectorAll('.grade-panel').forEach(function (panel) {
+            panel.classList.toggle('active', panel.id === tab.getAttribute('data-target'));
+          });
+        });
+      });
+    })();
+  </script>
   <script src="scripts/checkout-handoff.js?v=20260415"></script>
   <script>
     (function () {
