@@ -1,0 +1,29 @@
+[
+  {
+    "id": "gr1-ess1-unit1",
+    "grade": "Grade 1",
+    "domain": "Earth and Space Science",
+    "unit": "Patterns in the Sky",
+    "previewUrl": "/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html",
+    "memberAssetPath": "library/grade-1/earth-space/patterns-in-the-sky.zip",
+    "launchIncluded": true
+  },
+  {
+    "id": "gr2-ps1-unit1",
+    "grade": "Grade 2",
+    "domain": "Physical Science",
+    "unit": "Properties of Matter",
+    "previewUrl": "/lesson-plans/gr2-ps1-unit1-l1-matter.html",
+    "memberAssetPath": "library/grade-2/physical-science/properties-of-matter.zip",
+    "launchIncluded": true
+  },
+  {
+    "id": "gr3-ess2-unit1",
+    "grade": "Grade 3",
+    "domain": "Earth and Space Science",
+    "unit": "Weather and Climate",
+    "previewUrl": "/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html",
+    "memberAssetPath": "library/grade-3/earth-space/weather-and-climate.zip",
+    "launchIncluded": false
+  }
+]
