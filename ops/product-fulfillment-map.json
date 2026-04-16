@@ -8,6 +8,24 @@
       "draftSubject": "Your Grade 1 Physical Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "live-manual"
+    },
+    {
+      "slug": "k-ls1-unit2-bundle",
+      "displayName": "Kindergarten Life Science Unit 2 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/k-ls1-unit2-bundle/k-ls1-unit2-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Life Science Unit 2 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "k-ls1-unit3-bundle",
+      "displayName": "Kindergarten Life Science Unit 3 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/k-ls1-unit3-bundle/k-ls1-unit3-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Life Science Unit 3 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
     }
   ]
 }

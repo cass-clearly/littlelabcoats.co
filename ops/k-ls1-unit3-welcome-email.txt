@@ -1,0 +1,20 @@
+Hi {{customer_name}},
+
+Thank you for your Little Lab Coats purchase.
+
+Attached is your Kindergarten Life Science Unit 3 bundle PDF.
+
+Included lessons:
+- What Do ALL Animals Need?
+- What's for Dinner? How Animals Eat
+- Breathing
+- Water, Water Everywhere
+- Building a Shelter
+- When Needs Aren't Met
+
+If you have any trouble opening the file, just reply to this email and we’ll help.
+
+Warmly,
+Serena
+Little Lab Coats
+clearlycass10@gmail.com
