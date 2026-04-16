@@ -26,6 +26,15 @@
       "draftSubject": "Your Kindergarten Life Science Unit 3 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
+    },
+    {
+      "slug": "gr3-ps2-unit1-bundle",
+      "displayName": "Grade 3 Physical Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 3 Physical Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
     }
   ]
 }
