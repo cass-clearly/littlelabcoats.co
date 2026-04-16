@@ -1,0 +1,22 @@
+Subject: Welcome to Little Lab Coats All Access
+
+Hi {{customer_name}},
+
+Thank you for joining Little Lab Coats All Access.
+
+You can access your library here:
+{{library_link}}
+
+What your membership includes right now:
+- {{included_access_summary}}
+
+Important:
+- Save this email so you can return to your library easily.
+- If you ever have trouble accessing your materials, just reply to this email and we’ll help.
+
+Thank you for being here.
+
+Warmly,
+Serena
+Little Lab Coats
+{{support_email}}

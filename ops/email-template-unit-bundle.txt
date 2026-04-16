@@ -1,0 +1,23 @@
+Subject: Your Little Lab Coats unit bundle is ready
+
+Hi {{customer_name}},
+
+Thank you for your purchase from Little Lab Coats.
+
+Your unit bundle is ready here:
+{{delivery_link}}
+
+What’s included:
+- {{bundle_name}}
+- {{bundle_contents}}
+
+A quick note:
+- Save this email so you can find your materials again later.
+- If the link gives you trouble, just reply to this email and we’ll help.
+
+Thank you for supporting Little Lab Coats.
+
+Warmly,
+Serena
+Little Lab Coats
+{{support_email}}

@@ -1,0 +1,20 @@
+Hi {{customer_name}},
+
+Thank you for your Little Lab Coats purchase.
+
+Attached is your Grade 1 Physical Science Unit 1 bundle PDF.
+
+Included lessons:
+- Lesson 1: Sound Is Vibration
+- Lesson 2: Light Travels in Straight Lines
+- Lesson 3: Mirrors, Signals & Sending Messages
+- Lesson 4: High Sounds, Low Sounds
+- Lesson 5: Sound Through Solids, Liquids & Gases
+- Lesson 6: Sound and Light Message Challenge
+
+If you have any trouble opening the file, just reply to this email and we’ll help.
+
+Warmly,
+Serena
+Little Lab Coats
+clearlycass10@gmail.com
