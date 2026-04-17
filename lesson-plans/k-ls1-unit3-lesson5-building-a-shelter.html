@@ -174,6 +174,49 @@
       font-size: 9pt;
       font-weight: 700;
     }
+    .shelter-card .shelter-scene {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 86px;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      font-size: 34pt;
+      letter-spacing: 4px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+    .shelter-card .shelter-copy {
+      line-height: 1.45;
+      color: #34524a;
+    }
+    .shelter-card.bird {
+      background: linear-gradient(180deg, #fffaf0 0%, #fff4dc 100%);
+      border-color: #f3c97a;
+    }
+    .shelter-card.bird .shelter-scene {
+      background: linear-gradient(180deg, #dff3ff 0%, #fff6da 100%);
+    }
+    .shelter-card.rabbit {
+      background: linear-gradient(180deg, #fff8f1 0%, #f7eadb 100%);
+      border-color: #d7b48e;
+    }
+    .shelter-card.rabbit .shelter-scene {
+      background: linear-gradient(180deg, #e9f6db 0%, #f8e4c6 100%);
+    }
+    .shelter-card.bear {
+      background: linear-gradient(180deg, #f7f1ea 0%, #eadccf 100%);
+      border-color: #bc9877;
+    }
+    .shelter-card.bear .shelter-scene {
+      background: linear-gradient(180deg, #e6eef9 0%, #efe2d2 100%);
+    }
+    .shelter-card.fish {
+      background: linear-gradient(180deg, #effcff 0%, #dff5ef 100%);
+      border-color: #7ac8c7;
+    }
+    .shelter-card.fish .shelter-scene {
+      background: linear-gradient(180deg, #bfe9ff 0%, #dff8ee 100%);
+    }
     .choice-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -371,28 +414,28 @@
     <strong>Step 2 — Choose Your Animal (3 min)</strong><br>
     Each student picks a toy animal and decides what kind of shelter it needs:<br><br>
     <div class="shelter-grid">
-      <div class="shelter-card">
-        <span class="shelter-emoji">🐦</span>
+      <div class="shelter-card bird">
+        <div class="shelter-scene">🐦 🪺 ☁️</div>
         <div class="shelter-title">Bird → Nest</div>
-        Use sticks, yarn, and cotton balls to make a soft nest.
+        <div class="shelter-copy">Use sticks, yarn, and cotton balls to make a soft nest.</div>
         <span class="shelter-note">Soft + up high</span>
       </div>
-      <div class="shelter-card">
-        <span class="shelter-emoji">🐇</span>
+      <div class="shelter-card rabbit">
+        <div class="shelter-scene">🐇 🕳️ 🌿</div>
         <div class="shelter-title">Rabbit → Burrow</div>
-        Drape towels over a box to make a tunnel home.
+        <div class="shelter-copy">Drape towels over a box to make a tunnel home.</div>
         <span class="shelter-note">Hidden + cozy</span>
       </div>
-      <div class="shelter-card">
-        <span class="shelter-emoji">🐻</span>
+      <div class="shelter-card bear">
+        <div class="shelter-scene">🐻 🪵 ⛰️</div>
         <div class="shelter-title">Bear → Den</div>
-        Stack blankets and pillows into a cozy cave shape.
+        <div class="shelter-copy">Stack blankets and pillows into a cozy cave shape.</div>
         <span class="shelter-note">Warm + dark</span>
       </div>
-      <div class="shelter-card">
-        <span class="shelter-emoji">🐟</span>
+      <div class="shelter-card fish">
+        <div class="shelter-scene">🐟 🪨 🌿</div>
         <div class="shelter-title">Fish → Hiding Spot</div>
-        Build a fish hiding place with a cup, "rocks," and plants.
+        <div class="shelter-copy">Build a fish hiding place with a cup, "rocks," and plants.</div>
         <span class="shelter-note">Rocks + plants</span>
       </div>
     </div>
