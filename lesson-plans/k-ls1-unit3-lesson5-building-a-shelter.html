@@ -145,22 +145,51 @@
       margin: 14px 0;
     }
     .shelter-card {
-      background: #fff;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fcf7 100%);
       border: 2px solid #a5d6a7;
-      border-radius: 10px;
-      padding: 12px 14px;
+      border-radius: 18px;
+      padding: 14px 16px;
       font-size: 10pt;
+      box-shadow: 0 8px 22px rgba(46, 125, 50, 0.10);
+      min-height: 150px;
     }
     .shelter-card .shelter-title {
       font-weight: bold;
       color: #1b5e20;
       font-size: 12pt;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
     .shelter-card .shelter-emoji {
-      font-size: 26pt;
+      font-size: 30pt;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+    }
+    .shelter-card .shelter-note {
+      display: inline-block;
+      margin-top: 8px;
+      background: #e8f5e9;
+      color: #1b5e20;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 9pt;
+      font-weight: 700;
+    }
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 12px 0 18px;
+    }
+    .choice-card {
+      border: 2px solid #c8e6c9;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+    }
+    .choice-card strong {
+      color: #1b5e20;
+      display: block;
+      margin-bottom: 6px;
     }
     /* Test checklist */
     .test-box {
@@ -345,22 +374,26 @@
       <div class="shelter-card">
         <span class="shelter-emoji">🐦</span>
         <div class="shelter-title">Bird → Nest</div>
-        Use sticks/twigs from the yard, yarn, and cotton balls in a bowl
+        Use sticks, yarn, and cotton balls to make a soft nest.
+        <span class="shelter-note">Soft + up high</span>
       </div>
       <div class="shelter-card">
         <span class="shelter-emoji">🐇</span>
         <div class="shelter-title">Rabbit → Burrow</div>
-        Drape towels over a cardboard box with a "tunnel" entrance
+        Drape towels over a box to make a tunnel home.
+        <span class="shelter-note">Hidden + cozy</span>
       </div>
       <div class="shelter-card">
         <span class="shelter-emoji">🐻</span>
         <div class="shelter-title">Bear → Den</div>
-        Stack blankets and pillows into a cozy cave shape
+        Stack blankets and pillows into a cozy cave shape.
+        <span class="shelter-note">Warm + dark</span>
       </div>
       <div class="shelter-card">
         <span class="shelter-emoji">🐟</span>
-        <div class="shelter-title">Fish → Underwater Hiding Spot</div>
-        Fish find shelter in underwater plants and rocks! Create a safe hiding spot for a toy fish using a cup and crumpled paper (rocks) with a few sprigs of fake or real plant tucked around it. <em><strong>Note: this is a dry, tabletop model — no water needed! We're representing what an underwater shelter would look like.</strong></em>
+        <div class="shelter-title">Fish → Hiding Spot</div>
+        Build a fish hiding place with a cup, "rocks," and plants.
+        <span class="shelter-note">Rocks + plants</span>
       </div>
     </div>
   </div>
@@ -371,9 +404,12 @@
     <ul>
       <li>Think about the SIZE — can the animal fit inside?</li>
       <li>Think about COVERING — is there a roof or walls?</li>
-      <li>Think about HIDING — can the animal be hidden from outside?</li>
+      <li>Think about SAFETY — would this help keep the animal safe from danger?</li>
       <li>Add a space for "babies" — make it big enough for a family!</li>
     </ul>
+    <div class="tip-box" style="margin-top:10px;">
+      <strong>Fish note:</strong> This fish activity is a dry model. The cup stands for a rocky underwater hiding place, and the paper/plants stand for rocks and water plants.
+    </div>
     <em>"Real animals are incredible engineers. You are too!"</em>
   </div>
 
@@ -392,7 +428,7 @@
       </div>
       <div class="test-item">
         <div class="test-checkbox"></div>
-        <div>👁️ <strong>"Predator" test:</strong> Step back and look — can you see the animal from outside? Is it hidden?</div>
+        <div>👁️ <strong>"Safety" test:</strong> Does the shelter help keep the animal safe from danger? It can be hidden, hard to reach, or protected by strong walls.</div>
       </div>
     </div>
     If a test fails, IMPROVE the shelter! Real animals do this too — they adjust and rebuild.
@@ -444,32 +480,31 @@
     <h1>🏠 My Animal Shelter — Student Worksheet</h1>
     <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
 
-    <h3>🐾 My animal is: _________________________________</h3>
-    <h3>🏠 The type of shelter I built: _________________________________</h3>
-
     <div class="tip-box" style="margin-bottom: 16px;">
-      📝 <strong>Parent/Scribe Note:</strong> For Task 2, help your child label their drawing by writing the material names for them as they point and tell you what each part is. Kindergartners can dictate — you can be their pencil!
+      📝 <strong>Parent Note:</strong> This worksheet is picture-based and circle-based for kindergarten. Read the choices out loud and let your child point, circle, or tick.
     </div>
 
     <h3>✏️ Task 1 — Draw your shelter!</h3>
-    <p style="font-size:10pt; color:#555; margin-bottom:4px;">Draw your shelter with your animal inside. Show what the shelter looks like from the outside.</p>
+    <p style="font-size:10pt; color:#555; margin-bottom:4px;">Draw your shelter with your animal inside.</p>
     <div class="worksheet-draw-box" style="min-height:220px;">
       &nbsp;
     </div>
 
-    <h3>🏷️ Task 2 — Label 3 materials you used:</h3>
-    <p style="font-size:10pt; color:#555; margin-bottom:4px;">Add arrows to your drawing above and write (or have a grown-up write) the name of each material.</p>
-    <div style="display:flex; gap:16px; margin:8px 0;">
-      <span style="flex:1; border-bottom:2px solid #2e7d32; min-height:28px;">&nbsp;</span>
-      <span style="flex:1; border-bottom:2px solid #2e7d32; min-height:28px;">&nbsp;</span>
-      <span style="flex:1; border-bottom:2px solid #2e7d32; min-height:28px;">&nbsp;</span>
+    <h3>⭕ Task 2 — Circle your animal:</h3>
+    <div class="choice-grid">
+      <div class="choice-card"><strong>🐦 Bird</strong> Circle me</div>
+      <div class="choice-card"><strong>🐇 Rabbit</strong> Circle me</div>
+      <div class="choice-card"><strong>🐻 Bear</strong> Circle me</div>
+      <div class="choice-card"><strong>🐟 Fish</strong> Circle me</div>
     </div>
 
-    <h3>💬 Task 3 — Fill in the sentence:</h3>
-    <p style="font-size: 13pt; line-height: 2.5; border-bottom: 1px solid #bbb; margin-bottom: 20px;">
-      My shelter protects my animal from _______________________________________.
-    </p>
-
+    <h3>✅ Task 3 — Tick what your shelter does:</h3>
+    <div class="choice-grid">
+      <div class="choice-card"><strong>☐ Keeps my animal dry</strong></div>
+      <div class="choice-card"><strong>☐ Keeps my animal warm</strong></div>
+      <div class="choice-card"><strong>☐ Keeps my animal safe</strong></div>
+      <div class="choice-card"><strong>☐ Gives my animal a place to rest</strong></div>
+    </div>
   </div>
 
   <!-- ====================== ANSWER KEY ====================== -->
@@ -486,22 +521,21 @@
         <p><strong>Q: "Humans build houses for shelter. What's one thing a human house does that an animal's shelter also needs to do?"</strong></p>
         <p><strong>A:</strong> Both need to keep out rain/cold/wind, provide safety from danger, and have space for the family. Animals are incredibly clever builders — beavers build dams, birds weave nests, some fish dig holes in sand. Humans and animals share the same core survival needs!</p>
 
-        <h3>✏️ Worksheet Fill-In</h3>
-        <p><strong>"My shelter protects my animal from ___."</strong><br>
-        Accept any of the following (great answers include multiple): rain, cold, wind, predators, danger, getting wet, the cold ground, being found by enemies, bad weather. A child who names 2 or more is demonstrating excellent understanding.</p>
+        <h3>✅ Worksheet Checkboxes</h3>
+        <p><strong>What to look for:</strong> The child should be able to tick at least one true shelter function, ideally two or more: keeps the animal dry, warm, safe, or gives it a place to rest.</p>
 
         <h3>🧪 Shelter Test Expectations</h3>
         <ul>
           <li>🌧️ <strong>Rain test:</strong> The shelter should provide cover. If it doesn't, guide the student to add a "roof" layer (a box lid, extra towel, or leaves).</li>
           <li>🐣 <strong>Baby test:</strong> If the shelter is too small, encourage expanding it. Real animals often enlarge their nests/burrows as their family grows!</li>
-          <li>👁️ <strong>Predator test:</strong> If the animal is visible, encourage adding walls or a "door." Rabbits' burrow entrances are often disguised with leaves and sticks.</li>
+          <li>👁️ <strong>Safety test:</strong> If the shelter does not seem safe, encourage adding walls, cover, or a more protected entrance. Some shelters are hidden, but others are safe because they are strong or hard to reach.</li>
         </ul>
 
         <h3>✅ What Success Looks Like</h3>
         <ul>
           <li>Student built a shelter that covers/hides the animal in some way</li>
           <li>Student can name at least 2 things a shelter protects an animal from</li>
-          <li>Student can explain the function of their shelter (not just describe what it looks like)</li>
+          <li>Student can show at least one way the shelter helps the animal stay safe, dry, warm, or rested</li>
           <li>Bonus: Student made at least one improvement after a failed test</li>
         </ul>
 
