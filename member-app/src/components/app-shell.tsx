@@ -1,126 +1,115 @@
 import Link from 'next/link';
-import type { CSSProperties, ReactNode } from 'react';
-import { getMarketingSiteUrl } from '@/lib/env';
+import type { ReactNode } from 'react';
+import { getAppMode, getAppModeLabel, getMarketingSiteUrl, getSupportEmail } from '@/lib/env';
+
+type AppShellProps = {
+  title: string;
+  eyebrow: string;
+  description?: string;
+  currentPath?: string;
+  children: ReactNode;
+};
+
+type CardProps = {
+  title: string;
+  children: ReactNode;
+  eyebrow?: string;
+};
 
 const navItems = [
-  { href: '/', label: 'Overview' },
+  { href: '/', label: 'Home' },
   { href: '/auth', label: 'Auth' },
   { href: '/library', label: 'Library' },
   { href: '/account', label: 'Account' },
   { href: '/billing', label: 'Billing' },
 ];
 
-export function AppShell({ title, eyebrow, children }: { title: string; eyebrow: string; children: ReactNode }) {
+export function AppShell({ title, eyebrow, description, currentPath = '/', children }: AppShellProps) {
+  const marketingSiteUrl = getMarketingSiteUrl();
+  const supportEmail = getSupportEmail();
+  const appMode = getAppMode();
+
   return (
-    <div style={styles.page}>
-      <header style={styles.header}>
-        <div>
-          <p style={styles.eyebrow}>{eyebrow}</p>
-          <h1 style={styles.title}>{title}</h1>
-          <p style={styles.subtitle}>
-            Small authenticated member-app scaffold for the Little Lab Coats MVP. The existing static site stays in place at{' '}
-            <a href={getMarketingSiteUrl()} style={styles.link}>
-              {getMarketingSiteUrl()}
-            </a>
-            .
-          </p>
-        </div>
-        <nav style={styles.nav}>
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} style={styles.navLink}>
-              {item.label}
+    <div className="shell-root">
+      <div className="page-container">
+        <header className="site-header panel panel-glow">
+          <div className="header-top-row">
+            <Link href="/" className="brand-lockup">
+              <span className="brand-icon" aria-hidden="true">
+                🧪
+              </span>
+              <span>
+                <span className="brand-kicker">Little Lab Coats</span>
+                <span className="brand-title">Member App</span>
+              </span>
             </Link>
-          ))}
-          <a href={getMarketingSiteUrl()} style={styles.navLink}>
-            Marketing site
-          </a>
-        </nav>
-      </header>
-      <main style={styles.main}>{children}</main>
+
+            <nav className="nav-pills" aria-label="Member app navigation">
+              {navItems.map((item) => {
+                const isActive = currentPath === item.href;
+
+                return (
+                  <Link key={item.href} href={item.href} className={`nav-pill${isActive ? ' nav-pill-active' : ''}`}>
+                    {item.label}
+                  </Link>
+                );
+              })}
+              <a href={marketingSiteUrl} className="nav-pill nav-pill-secondary">
+                Main site
+              </a>
+            </nav>
+          </div>
+
+          <div className="hero-grid">
+            <div className="stack-lg">
+              <div className="eyebrow-row">
+                <span className="eyebrow">{eyebrow}</span>
+                <span className={`status-chip status-${appMode}`}>{getAppModeLabel()}</span>
+              </div>
+              <div className="stack-sm">
+                <h1 className="hero-title">{title}</h1>
+                <p className="hero-copy">
+                  {description ??
+                    'A branded Little Lab Coats member experience for login, library access, and billing—kept separate from the public curriculum site.'}
+                </p>
+              </div>
+            </div>
+
+            <div className="hero-aside">
+              <div className="mini-stat-card">
+                <span className="mini-stat-label">MVP focus</span>
+                <strong>Families can log in, manage billing, and find their library from one place.</strong>
+              </div>
+              <div className="mini-stat-card">
+                <span className="mini-stat-label">Support</span>
+                <strong>{supportEmail}</strong>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="content-stack">{children}</main>
+
+        <footer className="site-footer">
+          <span>Little Lab Coats member-app MVP</span>
+          <span>
+            Public storefront stays at{' '}
+            <a href={marketingSiteUrl} className="text-link">
+              {marketingSiteUrl}
+            </a>
+          </span>
+        </footer>
+      </div>
     </div>
   );
 }
 
-export function Card({ title, children }: { title: string; children: ReactNode }) {
+export function Card({ title, children, eyebrow }: CardProps) {
   return (
-    <section style={styles.card}>
-      <h2 style={styles.cardTitle}>{title}</h2>
-      <div style={styles.cardBody}>{children}</div>
+    <section className="panel card-stack">
+      {eyebrow ? <p className="card-eyebrow">{eyebrow}</p> : null}
+      <h2 className="card-title">{title}</h2>
+      <div className="stack-md">{children}</div>
     </section>
   );
 }
-
-const styles: Record<string, CSSProperties> = {
-  page: {
-    minHeight: '100vh',
-    background: 'linear-gradient(180deg, #fff8e8 0%, #ffffff 100%)',
-    color: '#2f3142',
-    fontFamily: 'Arial, Helvetica, sans-serif',
-  },
-  header: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '1.5rem',
-    justifyContent: 'space-between',
-    padding: '2rem',
-    borderBottom: '1px solid #f2d7a7',
-    background: '#fffdf8',
-  },
-  eyebrow: {
-    textTransform: 'uppercase',
-    letterSpacing: '0.08em',
-    color: '#8c5b16',
-    fontWeight: 700,
-    margin: '0 0 0.5rem',
-    fontSize: '0.8rem',
-  },
-  title: {
-    margin: 0,
-    fontSize: '2rem',
-  },
-  subtitle: {
-    maxWidth: '48rem',
-    lineHeight: 1.6,
-  },
-  nav: {
-    display: 'flex',
-    gap: '0.75rem',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap',
-  },
-  navLink: {
-    textDecoration: 'none',
-    color: '#2f3142',
-    fontWeight: 700,
-    background: '#fff2cf',
-    padding: '0.7rem 1rem',
-    borderRadius: '999px',
-    border: '1px solid #efca73',
-  },
-  link: {
-    color: '#995b00',
-    fontWeight: 700,
-  },
-  main: {
-    padding: '2rem',
-    display: 'grid',
-    gap: '1rem',
-    maxWidth: '1100px',
-  },
-  card: {
-    background: '#ffffff',
-    border: '1px solid #f3ddb5',
-    borderRadius: '24px',
-    padding: '1.25rem',
-    boxShadow: '0 10px 30px rgba(127, 82, 20, 0.08)',
-  },
-  cardTitle: {
-    margin: '0 0 0.75rem',
-    fontSize: '1.2rem',
-  },
-  cardBody: {
-    display: 'grid',
-    gap: '0.75rem',
-    lineHeight: 1.6,
-  },
-};

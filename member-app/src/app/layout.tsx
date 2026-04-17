@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'Little Lab Coats Members',
-  description: 'Authenticated MVP scaffold for the Little Lab Coats subscription library.',
+  description: 'Member login, library, and billing MVP for Little Lab Coats.',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

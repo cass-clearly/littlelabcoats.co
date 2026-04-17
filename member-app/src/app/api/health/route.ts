@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server';
-import { getMissingServerEnv } from '@/lib/env';
+import { getAppMode, getReadinessChecks } from '@/lib/env';
 
 export async function GET() {
-  const missingEnv = getMissingServerEnv();
+  const checks = getReadinessChecks();
 
   return NextResponse.json({
-    ok: missingEnv.length === 0,
-    missingEnv,
+    ok: checks.every((check) => check.ready),
+    mode: getAppMode(),
+    checks,
+    routes: ['/', '/auth', '/account', '/library', '/billing', '/checkout/success', '/checkout/cancel'],
   });
 }
