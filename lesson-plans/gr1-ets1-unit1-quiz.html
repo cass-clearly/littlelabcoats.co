@@ -6,7 +6,7 @@
   <title>Engineering Design Quiz — Grade 1, Unit 1</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #F3E8FF; color: #222; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #F3E8FF; color: #222; } .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; } .lesson-branding img { width: 44px; height: 44px; object-fit: contain; } .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
     .quiz-header { background: linear-gradient(135deg, #7B2FBE, #0288d1); color: white; border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(21,101,192,0.3); }
     .quiz-header h1 { margin: 0 0 8px 0; font-size: 1.8rem; }
     .quiz-header p { margin: 0; opacity: 0.9; font-size: 1rem; }
@@ -36,7 +36,7 @@
 </head>
 <body data-document-id="doc_gr1_ets1_unit1_quiz">
   <a class="back-link" href="gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html">← Back to Lesson 1: What Problem Can We Solve?</a>
-  <div class="quiz-header"><h1>🛠️ Engineering Design Quiz 🌿</h1><p>Engineering · Unit 1 · Grade 1</p></div>
+  <div class="quiz-header"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div><h1>🛠️ Engineering Design Quiz 🌿</h1><p>Engineering · Unit 1 · Grade 1</p></div>
   <div class="score-bar" id="scoreBar">Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> &nbsp;|&nbsp; Questions answered: <span id="answeredNum">0</span></div>
   <div id="quizContainer"></div>
   <div class="results-panel" id="resultsPanel"><div class="results-emoji" id="resultsEmoji"></div><h2>Quiz Complete! 🎉</h2><div class="results-score" id="resultsScore"></div><div class="results-msg" id="resultsMsg"></div><br><button class="retry-btn" onclick="resetQuiz()">🔄 Try Again</button></div>

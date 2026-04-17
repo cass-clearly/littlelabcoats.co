@@ -154,7 +154,30 @@
       .lesson-links { justify-content: flex-start; }
       .group-header { flex-direction: column; }
     }
-  </style>
+      .lesson-branding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 0 18px 0;
+      padding: 10px 14px;
+      background: #fffaf3;
+      border: 1.5px solid #ffd6a5;
+      border-radius: 12px;
+    }
+    .lesson-branding img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+    .lesson-branding-text {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 11pt;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #5A3A16;
+    }
+    </style>
   <script>
     (function () {
       var host = window.location.hostname;
@@ -169,7 +192,7 @@
     })();
   </script>
 </head>
-<body>
+<body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="/"><img src="/images/site/llc-logo-serena-approved-2026-04-10.png" alt="Little Lab Coats" style="height:72px; width:auto; object-fit:contain; vertical-align:middle;"></a>
