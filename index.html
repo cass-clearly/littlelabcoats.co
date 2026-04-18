@@ -1065,16 +1065,24 @@
 
     .founder-layout {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: minmax(320px, 420px) 1fr;
       gap: 72px;
       align-items: center;
     }
 
     .founder-image {
-      height: 360px;
       border-radius: var(--radius-xl);
       overflow: hidden;
       box-shadow: var(--shadow-lg);
+      background: rgba(255,255,255,0.65);
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      object-position: center center;
     }
 
     .founder-greeting {
@@ -1602,7 +1610,7 @@
       .who-image { height: 280px; order: -1; }
 
       .founder-layout { grid-template-columns: 1fr; gap: 40px; }
-      .founder-image { height: 280px; order: -1; }
+      .founder-image { order: -1; max-width: 520px; margin: 0 auto; }
 
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
@@ -2921,13 +2929,13 @@
   <section id="founder">
     <div class="founder-inner">
       <div class="founder-layout">
-        <div class="founder-image" style="overflow:hidden; border-radius: var(--radius-lg);">
-          <img src="images/site/serena-founder.jpg" alt="Serena with her kids in the Colorado mountains" style="width:100%; height:100%; object-fit:cover; object-position: center 48%;">
+        <div class="founder-image">
+          <img src="images/site/serena-founder.jpg" alt="Serena with her kids in the Colorado mountains">
         </div>
         <div class="founder-content">
           <span class="section-label" style="display:block; margin-bottom:16px;">About the founder</span>
           <h2 class="founder-greeting">Hi, I'm Serena. 👋</h2>
-          <p>I'm a homeschool mom of three — and I love science! I look forward to teaching it. But it takes me <em>so much time</em>.</p>
+          <p>I'm a homeschool mom of three — and I love science! I look forward to teaching it. It took me <em>so much time</em>.</p>
           <p>For every topic I teach, I piece together materials from multiple sources: YouTube, Generation Genius, Teachers Pay Teachers, books from Amazon, random websites. <strong>It. Takes. Time.</strong></p>
           <p>And at the end of the lesson, my kids understand the concepts — but we have nothing to show for it. No paper trail, nothing for audits or assessments, and we did nothing hands-on. That made me sad.</p>
           <p>Wasn't the point of science to get your hands dirty? To <em>feel</em> it? To <em>live</em> it? To <em>experience</em> it? Because that's how kids learn. They don't learn from long paragraphs of theory, and a video will only take them so far.</p>
