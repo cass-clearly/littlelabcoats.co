@@ -4,6 +4,8 @@ import { getStripeServer } from '@/lib/stripe';
 
 type CheckoutRequest = {
   plan?: string;
+  grade?: string;
+  itemId?: string;
   email?: string;
   successPath?: string;
   cancelPath?: string;
@@ -12,16 +14,17 @@ type CheckoutRequest = {
 
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => ({}))) as CheckoutRequest;
-  const plan = body.plan ?? 'annual-all-access';
+  const plan = body.plan ?? 'full-site-access';
   const successPath = body.successPath ?? '/checkout/success';
   const cancelPath = body.cancelPath ?? '/checkout/cancel';
+  const isSubscription = plan === 'grade-access' || plan === 'full-site-access';
 
   if (body.mock || !hasStripeServerEnv()) {
     return NextResponse.json({
       ok: true,
       mode: 'mock',
       message: 'Stripe is not configured in this environment yet, so the checkout button is using a local success route.',
-      url: `${getAppUrl()}${successPath}?mock=1&plan=${encodeURIComponent(plan)}`,
+      url: `${getAppUrl()}${successPath}?mock=1&plan=${encodeURIComponent(plan)}${body.grade ? `&grade=${encodeURIComponent(body.grade)}` : ''}${body.itemId ? `&item=${encodeURIComponent(body.itemId)}` : ''}`,
     });
   }
 
@@ -32,8 +35,17 @@ export async function POST(request: Request) {
   }
 
   try {
+    if (plan !== 'full-site-access') {
+      return NextResponse.json({
+        ok: true,
+        mode: 'mock',
+        message: 'This checkout path is modeled in the app shell, but live Stripe price IDs are only wired for full-site access in this environment so far.',
+        url: `${getAppUrl()}${successPath}?mock=1&plan=${encodeURIComponent(plan)}${body.grade ? `&grade=${encodeURIComponent(body.grade)}` : ''}${body.itemId ? `&item=${encodeURIComponent(body.itemId)}` : ''}`,
+      });
+    }
+
     const session = await stripe.checkout.sessions.create({
-      mode: 'subscription',
+      mode: isSubscription ? 'subscription' : 'payment',
       line_items: [
         {
           price: process.env.STRIPE_PRICE_ID_ANNUAL,
@@ -48,6 +60,8 @@ export async function POST(request: Request) {
       metadata: {
         source: 'little-lab-coats-member-app',
         plan,
+        grade: body.grade ?? '',
+        itemId: body.itemId ?? '',
       },
     });
 

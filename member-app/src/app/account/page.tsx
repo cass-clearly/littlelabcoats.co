@@ -1,5 +1,6 @@
 import { AppShell, Card } from '@/components/app-shell';
 import { ActionButton } from '@/components/action-button';
+import { getActiveGradeEntitlements, getOwnedUnitItems, hasActiveFullSiteAccess } from '@/lib/access-model';
 import { getImplementationStatus, getMemberSnapshot } from '@/lib/member-state';
 
 type AccountPageProps = {
@@ -30,6 +31,9 @@ export default async function AccountPage({ searchParams }: AccountPageProps) {
   const member = await getMemberSnapshot();
   const implementation = getImplementationStatus();
   const notice = getAccountNotice(searchParams);
+  const ownedUnits = getOwnedUnitItems(member.entitlements);
+  const activeGrades = getActiveGradeEntitlements(member.entitlements);
+  const fullSiteActive = hasActiveFullSiteAccess(member.entitlements);
 
   return (
     <AppShell
@@ -79,14 +83,39 @@ export default async function AccountPage({ searchParams }: AccountPageProps) {
           </div>
         </Card>
 
-        <Card title="Support-safe messaging" eyebrow="What this page covers">
+        <Card title="How access behaves" eyebrow="Rules families will feel">
           <ul className="check-list">
-            <li>Clarifies whether the family is looking at live data or a demo shell.</li>
-            <li>Creates an obvious place for renewal dates, failed-payment warnings, and cancel-at-period-end notices.</li>
-            <li>Keeps billing recovery and support escalation visible in one route.</li>
+            <li>Unit bundle purchases stay owned permanently and remain downloadable from the account.</li>
+            <li>Grade and full-site plans stay open only while the subscription is active.</li>
+            <li>If billing ends, access should remain through the paid period, then the paywall returns automatically.</li>
           </ul>
         </Card>
       </div>
+
+      <Card title="Access attached to this account" eyebrow="Entitlements">
+        <div className="dual-grid">
+          <article className="info-card">
+            <span className="label">Full site</span>
+            <h3>{fullSiteActive ? 'Active' : 'Not active'}</h3>
+            <p className="body-copy">{fullSiteActive ? 'This family should bypass the paywall everywhere.' : 'No site-wide membership is attached right now.'}</p>
+          </article>
+          <article className="info-card">
+            <span className="label">Grade memberships</span>
+            <h3>{activeGrades.length}</h3>
+            <p className="body-copy">{activeGrades.length > 0 ? activeGrades.map((entry) => entry.grade).join(', ') : 'No active grade memberships yet.'}</p>
+          </article>
+          <article className="info-card">
+            <span className="label">Owned unit bundles</span>
+            <h3>{ownedUnits.length}</h3>
+            <p className="body-copy">{ownedUnits.length > 0 ? ownedUnits.map((item) => item.title).join(', ') : 'No permanent unit purchases attached yet.'}</p>
+          </article>
+          <article className="info-card">
+            <span className="label">Revocation behavior</span>
+            <h3>Automatic</h3>
+            <p className="body-copy">Subscription access falls away after Stripe marks the membership inactive, but one-time unit purchases remain.</p>
+          </article>
+        </div>
+      </Card>
 
       <Card title="Current implementation status" eyebrow="Backend hookup still pending">
         <div className="status-grid">

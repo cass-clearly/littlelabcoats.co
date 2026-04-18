@@ -1,12 +1,14 @@
 import { AppShell, Card } from '@/components/app-shell';
 import { contentManifest, getLibraryGroups, getLibraryOverview, getUnitLessonPreviews } from '@/lib/content-manifest';
+import { getLibraryAccessState } from '@/lib/access-model';
+import { getMemberSnapshot } from '@/lib/member-state';
 
 function getGroupedSubjects(items: { domain: string }[]) {
   return Array.from(new Set(items.map((item) => item.domain))).sort();
 }
 
 function getStatusClass(status: string) {
-  if (status === 'launch-ready') {
+  if (status === 'included-full-site' || status === 'included-grade' || status === 'owned-unit') {
     return 'status-available';
   }
 
@@ -17,21 +19,10 @@ function getStatusClass(status: string) {
   return 'status-coming';
 }
 
-function getStatusLabel(status: string) {
-  if (status === 'launch-ready') {
-    return 'Launch ready';
-  }
-
-  if (status === 'free-preview') {
-    return 'Free preview';
-  }
-
-  return 'Coming soon';
-}
-
-export default function LibraryPage() {
+export default async function LibraryPage() {
   const overview = getLibraryOverview();
   const groups = getLibraryGroups();
+  const member = await getMemberSnapshot();
 
   return (
     <AppShell
@@ -53,9 +44,9 @@ export default function LibraryPage() {
             <p className="muted">These are the highest-confidence bundles for the first 2-week member launch.</p>
           </div>
           <div className="kpi-card">
-            <span className="kpi-label">Grades represented</span>
-            <p className="kpi-value">{overview.gradeCount}</p>
-            <p className="muted">Enough coverage to make the library feel real on day one.</p>
+            <span className="kpi-label">Current account access</span>
+            <p className="kpi-value">{member.entitlements.filter((entry) => entry.status === 'active').length}</p>
+            <p className="muted">{member.librarySummary}</p>
           </div>
           <div className="kpi-card">
             <span className="kpi-label">Manifest format</span>
@@ -111,11 +102,12 @@ export default function LibraryPage() {
                         <div className="library-grid">
                           {subjectItems.map((item) => {
                             const lessons = getUnitLessonPreviews(item);
+                            const access = getLibraryAccessState(item, member.entitlements);
 
                             return (
                               <article key={item.id} className="library-item unit-card">
                                 <div className="eyebrow-row">
-                                  <span className={`status-chip ${getStatusClass(item.status)}`}>{getStatusLabel(item.status)}</span>
+                                  <span className={`status-chip ${getStatusClass(access.state)}`}>{access.label}</span>
                                   <span className="inline-chip">{item.lessonCount} lessons</span>
                                 </div>
                                 <div className="unit-label">Unit</div>
@@ -125,7 +117,7 @@ export default function LibraryPage() {
                                   <span className="inline-chip">{item.format}</span>
                                   <span className="inline-chip">Preview stops at learning objectives</span>
                                 </div>
-                                <p className="muted">This unit preview is locked. Open the list below to see each lesson title and learning objective only.</p>
+                                <p className="muted">{access.detail}</p>
                                 <details className="unit-preview-details">
                                   <summary>See lesson titles and learning objectives</summary>
                                   <div className="lesson-preview-list">

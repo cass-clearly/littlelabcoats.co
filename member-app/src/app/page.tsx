@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AppShell, Card } from '@/components/app-shell';
+import { getOfferCatalog } from '@/lib/access-model';
 import { getLaunchLibraryItems, getLibraryOverview } from '@/lib/content-manifest';
 import { getImplementationStatus, getLaunchDecisionsStillNeeded, getMemberSnapshot } from '@/lib/member-state';
 
@@ -31,6 +32,7 @@ export default async function HomePage() {
   const launchItems = getLaunchLibraryItems();
   const implementation = getImplementationStatus();
   const member = await getMemberSnapshot();
+  const offers = getOfferCatalog();
 
   return (
     <AppShell
@@ -107,6 +109,26 @@ export default async function HomePage() {
               </p>
             </article>
           ))}
+        </div>
+      </Card>
+
+      <Card title="Offer model now wired into the app shell" eyebrow="Customer-facing structure">
+        <div className="route-grid">
+          <article className="route-card">
+            <span className="inline-chip">{offers.unitBundleOffer.priceLabel}</span>
+            <h3>{offers.unitBundleOffer.title}</h3>
+            <p className="body-copy">{offers.unitBundleOffer.description}</p>
+          </article>
+          <article className="route-card">
+            <span className="inline-chip">$28–$35</span>
+            <h3>Full grade access</h3>
+            <p className="body-copy">One selected grade unlocks across the site while the membership stays active, then revokes cleanly if billing ends.</p>
+          </article>
+          <article className="route-card">
+            <span className="inline-chip">{offers.fullSiteOffer.priceLabel}</span>
+            <h3>{offers.fullSiteOffer.title}</h3>
+            <p className="body-copy">{offers.fullSiteOffer.description}</p>
+          </article>
         </div>
       </Card>
 

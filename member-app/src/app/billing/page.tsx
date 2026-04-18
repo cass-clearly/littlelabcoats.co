@@ -1,5 +1,6 @@
 import { AppShell, Card } from '@/components/app-shell';
 import { ActionButton } from '@/components/action-button';
+import { getOfferCatalog } from '@/lib/access-model';
 import { getImplementationStatus } from '@/lib/member-state';
 
 type BillingPageProps = {
@@ -11,6 +12,7 @@ type BillingPageProps = {
 export default function BillingPage({ searchParams }: BillingPageProps) {
   const implementation = getImplementationStatus();
   const notice = searchParams?.checkout === 'cancelled' ? 'Checkout was cancelled before payment completed.' : null;
+  const offers = getOfferCatalog();
 
   return (
     <AppShell
@@ -22,16 +24,50 @@ export default function BillingPage({ searchParams }: BillingPageProps) {
       {notice ? <div className="notice-banner">{notice}</div> : null}
 
       <div className="pricing-grid">
-        <Card title="Annual all-access membership" eyebrow="Launch offer shell">
+        <Card title={offers.unitBundleOffer.title} eyebrow="One-time purchase">
           <div className="pricing-card">
-            <p className="price-amount">Pricing TBD</p>
-            <p className="body-copy">This slot is intentionally ready for the real Stripe price ID without hard-coding an amount before the business decision is final.</p>
+            <p className="price-amount">{offers.unitBundleOffer.priceLabel}</p>
+            <p className="body-copy">{offers.unitBundleOffer.description}</p>
+            <p className="muted">{offers.unitBundleOffer.cadenceLabel}</p>
             <ul className="check-list">
-              <li>One clean launch offer keeps the first billing experience simple.</li>
-              <li>Checkout success returns to the member app instead of dropping families into a dead-end thank-you page.</li>
-              <li>Portal support is already carved out for card updates and cancellation flows.</li>
+              {offers.unitBundleOffer.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
             </ul>
-            <ActionButton endpoint="/api/stripe/checkout" label="Start checkout" pendingLabel="Starting checkout…" body={{ plan: 'annual-all-access' }} />
+            <ActionButton endpoint="/api/stripe/checkout" label="Start unit-bundle checkout" pendingLabel="Starting checkout…" body={{ plan: offers.unitBundleOffer.checkoutPlan }} />
+          </div>
+        </Card>
+
+        <Card title="Full grade access" eyebrow="Recurring membership">
+          <div className="pricing-card">
+            <p className="price-amount">$28–$35</p>
+            <p className="body-copy">Unlock one grade across the site. Families pick the grade at checkout, then see that grade open automatically inside the member library.</p>
+            <p className="muted">Annual membership</p>
+            <ul className="check-list">
+              <li>Grade access is tied to the account, not a shareable code.</li>
+              <li>Members keep access through the paid period, then lose it automatically if billing ends.</li>
+              <li>The account page should show exactly which grade is unlocked.</li>
+            </ul>
+            <div className="library-meta">
+              {offers.gradeOffers.slice(0, 6).map((offer) => (
+                <span key={offer.id} className="inline-chip">{offer.grade}</span>
+              ))}
+            </div>
+            <ActionButton endpoint="/api/stripe/checkout" label="Start grade-access checkout" pendingLabel="Starting checkout…" body={{ plan: 'grade-access', grade: 'Grade 3' }} />
+          </div>
+        </Card>
+
+        <Card title={offers.fullSiteOffer.title} eyebrow="Recurring membership">
+          <div className="pricing-card">
+            <p className="price-amount">{offers.fullSiteOffer.priceLabel}</p>
+            <p className="body-copy">{offers.fullSiteOffer.description}</p>
+            <p className="muted">{offers.fullSiteOffer.cadenceLabel}</p>
+            <ul className="check-list">
+              {offers.fullSiteOffer.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+            <ActionButton endpoint="/api/stripe/checkout" label="Start full-site checkout" pendingLabel="Starting checkout…" body={{ plan: offers.fullSiteOffer.checkoutPlan }} />
           </div>
         </Card>
 
@@ -48,7 +84,7 @@ export default function BillingPage({ searchParams }: BillingPageProps) {
         <div className="route-grid">
           <article className="route-card">
             <h3><code>POST /api/stripe/checkout</code></h3>
-            <p className="body-copy">Creates a live Checkout Session when Stripe credentials exist, otherwise falls back to a local mock success route.</p>
+            <p className="body-copy">Creates the correct checkout flow for one-time unit bundles, grade access, or full-site access. Grade and full-site memberships should land as account-linked subscriptions, not unlock codes.</p>
           </article>
           <article className="route-card">
             <h3><code>POST /api/stripe/portal</code></h3>
@@ -56,7 +92,7 @@ export default function BillingPage({ searchParams }: BillingPageProps) {
           </article>
           <article className="route-card">
             <h3><code>POST /api/stripe/webhook</code></h3>
-            <p className="body-copy">Reserved as the source of truth for subscription lifecycle changes and entitlement sync.</p>
+            <p className="body-copy">This becomes the source of truth for granting permanent unit ownership, activating subscriptions, and revoking grade/full-site access after the paid period ends.</p>
           </article>
         </div>
       </Card>
