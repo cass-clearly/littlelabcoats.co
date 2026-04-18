@@ -2,6 +2,10 @@ import { AppShell, Card } from '@/components/app-shell';
 import { contentManifest, getLibraryGroups, getLibraryOverview } from '@/lib/content-manifest';
 import { getMarketingSiteUrl } from '@/lib/env';
 
+function getGroupedSubjects(items: { domain: string }[]) {
+  return Array.from(new Set(items.map((item) => item.domain))).sort();
+}
+
 function getStatusClass(status: string) {
   if (status === 'launch-ready') {
     return 'status-available';
@@ -63,37 +67,77 @@ export default function LibraryPage() {
         </div>
       </Card>
 
-      <Card title="Browse by grade" eyebrow="Rendered from the manifest">
+      <Card title="Pick your curriculum in 3 simple steps" eyebrow="Family-friendly browse flow">
         <div className="stack-lg">
-          {groups.map((group) => (
-            <section key={group.grade} className="stack-md">
-              <div className="stack-sm">
-                <h3 className="section-title">{group.grade}</h3>
-                <p className="muted">Domains in this slice: {group.domains.join(', ')}</p>
-              </div>
-              <div className="library-grid">
-                {group.items.map((item) => (
-                  <article key={item.id} className="library-item">
-                    <div className="eyebrow-row">
-                      <span className={`status-chip ${getStatusClass(item.status)}`}>{getStatusLabel(item.status)}</span>
-                      <span className="inline-chip">{item.domain}</span>
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p className="body-copy">{item.summary}</p>
-                    <div className="library-meta">
-                      <span className="inline-chip">{item.unit}</span>
-                      <span className="inline-chip">{item.lessonCount} lessons</span>
-                      <span className="inline-chip">{item.format}</span>
-                    </div>
-                    <p className="muted">Member asset path: <code>{item.memberAssetPath}</code></p>
-                    <a href={`${marketingSiteUrl}${item.previewUrl}`} className="text-link">
-                      Open public preview
-                    </a>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
+          <div className="steps-grid">
+            <article className="step-card">
+              <span className="step-number">Step 1</span>
+              <h3>Pick your grade</h3>
+              <p className="body-copy">Start with the grade level your child is working in.</p>
+            </article>
+            <article className="step-card">
+              <span className="step-number">Step 2</span>
+              <h3>Pick your subject</h3>
+              <p className="body-copy">Choose a subject like Life Science, Physical Science, Earth and Space Science, or Engineering.</p>
+            </article>
+            <article className="step-card">
+              <span className="step-number">Step 3</span>
+              <h3>Pick your unit</h3>
+              <p className="body-copy">Open the unit that fits what you want to teach next.</p>
+            </article>
+          </div>
+
+          {groups.map((group) => {
+            const subjects = getGroupedSubjects(group.items);
+
+            return (
+              <section key={group.grade} className="grade-section stack-md">
+                <div className="stack-sm">
+                  <div className="grade-badge">{group.grade}</div>
+                  <h3 className="section-title">{group.grade}</h3>
+                  <p className="muted">Subjects available: {subjects.join(', ')}</p>
+                </div>
+
+                <div className="stack-lg">
+                  {subjects.map((subject) => {
+                    const subjectItems = group.items.filter((item) => item.domain === subject);
+
+                    return (
+                      <section key={`${group.grade}-${subject}`} className="subject-section stack-md">
+                        <div className="subject-header">
+                          <span className="subject-label">Subject</span>
+                          <h4>{subject}</h4>
+                          <p className="muted">Choose a unit below.</p>
+                        </div>
+
+                        <div className="library-grid">
+                          {subjectItems.map((item) => (
+                            <article key={item.id} className="library-item unit-card">
+                              <div className="eyebrow-row">
+                                <span className={`status-chip ${getStatusClass(item.status)}`}>{getStatusLabel(item.status)}</span>
+                                <span className="inline-chip">{item.lessonCount} lessons</span>
+                              </div>
+                              <div className="unit-label">Unit</div>
+                              <h3>{item.unit}</h3>
+                              <p className="body-copy">{item.summary}</p>
+                              <div className="library-meta">
+                                <span className="inline-chip">{item.format}</span>
+                                <span className="inline-chip">{item.title}</span>
+                              </div>
+                              <p className="muted">Member asset path: <code>{item.memberAssetPath}</code></p>
+                              <a href={`${marketingSiteUrl}${item.previewUrl}`} className="text-link">
+                                Open public preview
+                              </a>
+                            </article>
+                          ))}
+                        </div>
+                      </section>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </Card>
 

@@ -443,7 +443,9 @@ code {
 .route-card,
 .library-item,
 .info-card,
-.pricing-card {
+.pricing-card,
+.step-card,
+.subject-header {
   display: grid;
   gap: 10px;
 }
@@ -475,6 +477,69 @@ code {
 
 .dual-grid {
   align-items: start;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.step-card,
+.subject-header,
+.grade-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 255, 253, 0.96) 100%);
+  border: 1px solid rgba(78, 205, 196, 0.24);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.step-number,
+.subject-label,
+.unit-label,
+.grade-badge {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.step-number,
+.grade-badge {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.subject-label,
+.unit-label {
+  background: var(--teal-pale);
+  color: var(--teal-dark);
+}
+
+.subject-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.grade-section {
+  gap: 18px;
+}
+
+.subject-section {
+  gap: 14px;
+}
+
+.unit-card {
+  border: 2px solid rgba(26, 10, 46, 0.08);
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
+}
+
+.unit-card h3 {
+  font-size: 1.15rem;
 }
 
 .notice-banner {
