@@ -1,6 +1,5 @@
 import { AppShell, Card } from '@/components/app-shell';
-import { contentManifest, getLibraryGroups, getLibraryOverview } from '@/lib/content-manifest';
-import { getMarketingSiteUrl } from '@/lib/env';
+import { contentManifest, getLibraryGroups, getLibraryOverview, getUnitLessonPreviews } from '@/lib/content-manifest';
 
 function getGroupedSubjects(items: { domain: string }[]) {
   return Array.from(new Set(items.map((item) => item.domain))).sort();
@@ -33,7 +32,6 @@ function getStatusLabel(status: string) {
 export default function LibraryPage() {
   const overview = getLibraryOverview();
   const groups = getLibraryGroups();
-  const marketingSiteUrl = getMarketingSiteUrl();
 
   return (
     <AppShell
@@ -111,25 +109,38 @@ export default function LibraryPage() {
                         </div>
 
                         <div className="library-grid">
-                          {subjectItems.map((item) => (
-                            <article key={item.id} className="library-item unit-card">
-                              <div className="eyebrow-row">
-                                <span className={`status-chip ${getStatusClass(item.status)}`}>{getStatusLabel(item.status)}</span>
-                                <span className="inline-chip">{item.lessonCount} lessons</span>
-                              </div>
-                              <div className="unit-label">Unit</div>
-                              <h3>{item.unit}</h3>
-                              <p className="body-copy">{item.summary}</p>
-                              <div className="library-meta">
-                                <span className="inline-chip">{item.format}</span>
-                                <span className="inline-chip">{item.title}</span>
-                              </div>
-                              <p className="muted">Member asset path: <code>{item.memberAssetPath}</code></p>
-                              <a href={`${marketingSiteUrl}${item.previewUrl}`} className="text-link">
-                                Open public preview
-                              </a>
-                            </article>
-                          ))}
+                          {subjectItems.map((item) => {
+                            const lessons = getUnitLessonPreviews(item);
+
+                            return (
+                              <article key={item.id} className="library-item unit-card">
+                                <div className="eyebrow-row">
+                                  <span className={`status-chip ${getStatusClass(item.status)}`}>{getStatusLabel(item.status)}</span>
+                                  <span className="inline-chip">{item.lessonCount} lessons</span>
+                                </div>
+                                <div className="unit-label">Unit</div>
+                                <h3>{item.unit}: {item.title}</h3>
+                                <p className="body-copy">{item.summary}</p>
+                                <div className="library-meta">
+                                  <span className="inline-chip">{item.format}</span>
+                                  <span className="inline-chip">Preview stops at learning objectives</span>
+                                </div>
+                                <p className="muted">This unit preview is locked. Open the list below to see each lesson title and learning objective only.</p>
+                                <details className="unit-preview-details">
+                                  <summary>See lesson titles and learning objectives</summary>
+                                  <div className="lesson-preview-list">
+                                    {lessons.map((lesson, index) => (
+                                      <article key={lesson.slug} className="lesson-preview-item">
+                                        <div className="lesson-preview-kicker">Lesson {index + 1}</div>
+                                        <h4>{lesson.title}</h4>
+                                        <p className="muted"><strong>Learning objective:</strong> {lesson.objective}</p>
+                                      </article>
+                                    ))}
+                                  </div>
+                                </details>
+                              </article>
+                            );
+                          })}
                         </div>
                       </section>
                     );

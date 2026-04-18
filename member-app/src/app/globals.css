@@ -542,6 +542,58 @@ code {
   font-size: 1.15rem;
 }
 
+.unit-preview-details {
+  border-top: 1px solid rgba(26, 10, 46, 0.08);
+  padding-top: 12px;
+}
+
+.unit-preview-details summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--navy);
+  list-style: none;
+}
+
+.unit-preview-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.unit-preview-details summary::after {
+  content: '▾';
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.unit-preview-details[open] summary::after {
+  content: '▴';
+}
+
+.lesson-preview-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.lesson-preview-item {
+  border: 1px solid rgba(78, 205, 196, 0.22);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 12px;
+}
+
+.lesson-preview-item h4 {
+  margin: 4px 0 6px;
+  font-size: 1rem;
+}
+
+.lesson-preview-kicker {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--teal-dark);
+}
+
 .notice-banner {
   border: 1px solid rgba(255, 107, 107, 0.18);
   background: linear-gradient(180deg, rgba(255, 232, 232, 0.9) 0%, rgba(255, 255, 255, 0.96) 100%);
