@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subscription Unlocked — Little Lab Coats</title>
-  <meta name="description" content="Thanks for subscribing to Little Lab Coats. This page completes the on-device unlock handoff after Stripe checkout." />
+  <title>Purchase Complete — Little Lab Coats</title>
+  <meta name="description" content="Thanks for your Little Lab Coats purchase. This legacy success page handles the older on-device lesson unlock flow after Stripe checkout." />
   <link rel="icon" type="image/png" sizes="32x32" href="images/site/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="images/site/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -172,8 +172,8 @@
   <main class="shell">
     <section class="hero">
       <img src="images/site/llc-logo-serena-approved-2026-04-10.png" alt="Little Lab Coats" />
-      <h1>You're in, scientist.</h1>
-      <p>Thanks for subscribing to Little Lab Coats. If you arrived here from Stripe checkout, this page unlocks paid lesson previews on this browser/device for the current site paywall flow.</p>
+      <h1>Purchase complete, scientist.</h1>
+      <p>Thanks for your Little Lab Coats purchase. This older success page still handles the browser-specific lesson unlock flow for legacy checkout links while the storefront moves toward direct bundle downloads.</p>
     </section>
 
     <section class="content">
@@ -188,18 +188,18 @@
       </div>
 
       <ul class="checklist">
-        <li><span>1. Access is device-specific right now.</span> The current Little Lab Coats paywall uses an on-device browser unlock, so complete checkout and open lessons in the same browser/device.</li>
-        <li><span>2. Your Stripe emails are your billing record.</span> Stripe sends receipts and subscription-management links directly from checkout.</li>
+        <li><span>1. Access is device-specific on this legacy flow.</span> The older paywall uses an on-device browser unlock, so complete checkout and open lessons in the same browser/device.</li>
+        <li><span>2. Your Stripe emails are your billing record.</span> Stripe sends the receipt for the purchase directly from checkout.</li>
         <li><span>3. If a lesson still looks locked,</span> reopen this success page from the Stripe redirect or receipt email on the same browser, then refresh the lesson page.</li>
       </ul>
 
       <div class="actions">
         <a class="btn btn-primary" id="primaryAction" href="curriculum.html">Open the Curriculum</a>
-        <a class="btn btn-secondary" href="store.html#all-access-annual">Back to the Store</a>
+        <a class="btn btn-secondary" href="store.html#shop-flow">Back to the Store</a>
         <a class="btn btn-ghost" href="index.html">Return Home</a>
       </div>
 
-      <p class="smallprint"><strong>Heads-up:</strong> this is a pragmatic static-site handoff, not a full account system. If Serena wants durable cross-device logins or server-verified entitlements later, the next step is adding a backend/auth layer plus Stripe webhook verification.</p>
+      <p class="smallprint"><strong>Heads-up:</strong> this is a pragmatic static-site handoff, not the new primary launch model. The current storefront direction is direct digital downloads for unit bundles and full-grade bundles, with real checkout links dropping into the public store as they are wired.</p>
     </section>
   </main>
 

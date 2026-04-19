@@ -1,0 +1,444 @@
+{
+  "updatedAt": "2026-04-18",
+  "launchModel": {
+    "paidProductTypes": [
+      "unit-bundle",
+      "full-grade-bundle"
+    ],
+    "unitBundlePricing": {
+      "first50Customers": 18,
+      "afterEarlyBird": 22,
+      "currency": "USD"
+    },
+    "fullGradeBundlePricing": {
+      "first50Customers": 99,
+      "afterEarlyBird": 129,
+      "currency": "USD"
+    },
+    "delivery": "Digital PDF download delivered immediately after purchase",
+    "printedCopiesNote": "Printed copies available by contact",
+    "supportEmail": "clearlycass10@gmail.com"
+  },
+  "legacyProductsToRetireFromMainStoreflow": [
+    {
+      "slug": "kitchen-chemistry",
+      "reason": "Standalone paid lesson does not match the launch model of unit bundles plus full-grade bundles only."
+    }
+  ],
+  "grades": [
+    {
+      "grade": "Kindergarten",
+      "fullGrade": {
+        "sku": "grade-k-complete",
+        "productType": "full-grade-bundle",
+        "bundlePdfStatus": "grade_bundle_pending",
+        "checkoutLinkStatus": "pending",
+        "exportPath": "exports/grade-k-complete/",
+        "thankYouProduct": "grade-k-complete",
+        "includedUnits": [
+          "k-ps2-unit1-bundle",
+          "k-ps3-unit2-bundle",
+          "k-ls1-unit2-bundle",
+          "k-ls1-unit3-bundle",
+          "k-ess2-unit1-bundle",
+          "k-ess3-unit2-bundle",
+          "k-ets1-unit1-bundle"
+        ]
+      },
+      "units": [
+        {
+          "sku": "k-ps2-unit1-bundle",
+          "title": "Forces & Motion",
+          "domain": "Physical Science",
+          "unitCode": "K-PS2",
+          "previewUrl": "/lesson-plans/unit1-lesson1-push-pull-sort.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ps2-unit1-bundle/",
+          "thankYouProduct": "k-ps2-unit1-bundle"
+        },
+        {
+          "sku": "k-ps3-unit2-bundle",
+          "title": "Sunshine & Warmth",
+          "domain": "Physical Science",
+          "unitCode": "K-PS3 Unit 2",
+          "previewUrl": "/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html",
+          "bundlePdfStatus": "lesson_pdfs_ready_bundle_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ps3-unit2-final-pdfs/",
+          "thankYouProduct": "k-ps3-unit2-bundle"
+        },
+        {
+          "sku": "k-ls1-unit2-bundle",
+          "title": "Super Seeds & Perfect Plants",
+          "domain": "Life Science",
+          "unitCode": "K-LS1 Unit 2",
+          "previewUrl": "/lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ls1-unit2-bundle/k-ls1-unit2-six-lesson-bundle.pdf",
+          "thankYouProduct": "k-ls1-unit2-bundle"
+        },
+        {
+          "sku": "k-ls1-unit3-bundle",
+          "title": "Animal Needs",
+          "domain": "Life Science",
+          "unitCode": "K-LS1 Unit 3",
+          "previewUrl": "/lesson-plans/k-ls1-unit3-lesson2-whats-for-dinner.html",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ls1-unit3-bundle/k-ls1-unit3-six-lesson-bundle.pdf",
+          "thankYouProduct": "k-ls1-unit3-bundle"
+        },
+        {
+          "sku": "k-ess2-unit1-bundle",
+          "title": "Weather & Seasons",
+          "domain": "Earth Science",
+          "unitCode": "K-ESS2 Unit 1",
+          "previewUrl": "/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ess2-unit1-bundle/",
+          "thankYouProduct": "k-ess2-unit1-bundle"
+        },
+        {
+          "sku": "k-ess3-unit2-bundle",
+          "title": "Earth & Human Activity",
+          "domain": "Earth Science",
+          "unitCode": "K-ESS3 Unit 2",
+          "previewUrl": "/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ess3-unit2-bundle/",
+          "thankYouProduct": "k-ess3-unit2-bundle"
+        },
+        {
+          "sku": "k-ets1-unit1-bundle",
+          "title": "Engineering Design",
+          "domain": "Engineering",
+          "unitCode": "K-ETS1 Unit 1",
+          "previewUrl": "/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/k-ets1-unit1-bundle/",
+          "thankYouProduct": "k-ets1-unit1-bundle"
+        }
+      ]
+    },
+    {
+      "grade": "Grade 1",
+      "fullGrade": {
+        "sku": "grade-1-complete",
+        "productType": "full-grade-bundle",
+        "bundlePdfStatus": "grade_bundle_pending",
+        "checkoutLinkStatus": "pending",
+        "exportPath": "exports/grade-1-complete/",
+        "thankYouProduct": "grade-1-complete",
+        "includedUnits": [
+          "gr1-ps4-unit1-bundle",
+          "gr1-ls1-unit1-bundle",
+          "gr1-ls3-unit2-bundle",
+          "gr1-ess1-unit1-bundle",
+          "gr1-ets1-unit1-bundle"
+        ]
+      },
+      "units": [
+        {
+          "sku": "gr1-ps4-unit1-bundle",
+          "title": "Sound & Light",
+          "domain": "Physical Science",
+          "unitCode": "1-PS4 Unit 1",
+          "previewUrl": "/lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr1-ps4-unit1-bundle/gr1-ps4-unit1-six-lesson-bundle.pdf",
+          "thankYouProduct": "gr1-ps4-unit1-bundle"
+        },
+        {
+          "sku": "gr1-ls1-unit1-bundle",
+          "title": "Plant & Animal Structures",
+          "domain": "Life Science",
+          "unitCode": "1-LS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr1-ls1-unit1-bundle/",
+          "thankYouProduct": "gr1-ls1-unit1-bundle"
+        },
+        {
+          "sku": "gr1-ls3-unit2-bundle",
+          "title": "Parents & Offspring",
+          "domain": "Life Science",
+          "unitCode": "1-LS3 Unit 2",
+          "previewUrl": "/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr1-ls3-unit2-bundle/",
+          "thankYouProduct": "gr1-ls3-unit2-bundle"
+        },
+        {
+          "sku": "gr1-ess1-unit1-bundle",
+          "title": "Sun, Moon & Stars",
+          "domain": "Earth Science",
+          "unitCode": "1-ESS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr1-ess1-unit1-bundle/",
+          "thankYouProduct": "gr1-ess1-unit1-bundle"
+        },
+        {
+          "sku": "gr1-ets1-unit1-bundle",
+          "title": "Engineering Design",
+          "domain": "Engineering",
+          "unitCode": "1-ETS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr1-ets1-unit1-bundle/",
+          "thankYouProduct": "gr1-ets1-unit1-bundle"
+        }
+      ]
+    },
+    {
+      "grade": "Grade 2",
+      "fullGrade": {
+        "sku": "grade-2-complete",
+        "productType": "full-grade-bundle",
+        "bundlePdfStatus": "grade_bundle_pending",
+        "checkoutLinkStatus": "pending",
+        "exportPath": "exports/grade-2-complete/",
+        "thankYouProduct": "grade-2-complete",
+        "includedUnits": [
+          "gr2-ps1-unit1-bundle",
+          "gr2-ls2-unit2-bundle",
+          "gr2-ess1-unit3-bundle"
+        ]
+      },
+      "units": [
+        {
+          "sku": "gr2-ps1-unit1-bundle",
+          "title": "Matter & Its Properties",
+          "domain": "Physical Science",
+          "unitCode": "2-PS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr2-ps1-unit1-l1-matter/",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr2-ps1-unit1-bundle/",
+          "thankYouProduct": "gr2-ps1-unit1-bundle"
+        },
+        {
+          "sku": "gr2-ls2-unit2-bundle",
+          "title": "Ecosystems",
+          "domain": "Life Science",
+          "unitCode": "2-LS2 Unit 2",
+          "previewUrl": "/lesson-plans/gr2-ls2-unit2-l1-ecosystems/",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr2-ls2-unit2-bundle/",
+          "thankYouProduct": "gr2-ls2-unit2-bundle"
+        },
+        {
+          "sku": "gr2-ess1-unit3-bundle",
+          "title": "Earth's Features",
+          "domain": "Earth Science",
+          "unitCode": "2-ESS1 Unit 3",
+          "previewUrl": "/lesson-plans/gr2-ess1-unit3-l1-landforms/",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr2-ess1-unit3-bundle/",
+          "thankYouProduct": "gr2-ess1-unit3-bundle"
+        }
+      ]
+    },
+    {
+      "grade": "Grade 3",
+      "fullGrade": {
+        "sku": "grade-3-complete",
+        "productType": "full-grade-bundle",
+        "bundlePdfStatus": "grade_bundle_pending",
+        "checkoutLinkStatus": "pending",
+        "exportPath": "exports/grade-3-complete/",
+        "thankYouProduct": "grade-3-complete",
+        "includedUnits": [
+          "gr3-ps2-unit1-bundle",
+          "gr3-ls1-unit1-bundle",
+          "gr3-ls3-unit2-bundle",
+          "gr3-ls4-unit3-bundle",
+          "gr3-ls2-unit4-bundle",
+          "gr3-ess2-unit1-bundle",
+          "gr3-ets1-unit1-bundle"
+        ]
+      },
+      "units": [
+        {
+          "sku": "gr3-ps2-unit1-bundle",
+          "title": "Forces & Motion",
+          "domain": "Physical Science",
+          "unitCode": "3-PS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
+          "thankYouProduct": "gr3-ps2-unit1-bundle"
+        },
+        {
+          "sku": "gr3-ls1-unit1-bundle",
+          "title": "Life Cycles",
+          "domain": "Life Science",
+          "unitCode": "3-LS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ls1-unit1-bundle/",
+          "thankYouProduct": "gr3-ls1-unit1-bundle"
+        },
+        {
+          "sku": "gr3-ls3-unit2-bundle",
+          "title": "Traits & Inheritance",
+          "domain": "Life Science",
+          "unitCode": "3-LS3 Unit 2",
+          "previewUrl": "/lesson-plans/gr3-ls3-unit2-lesson1-inherited-traits-all-around-us.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ls3-unit2-bundle/",
+          "thankYouProduct": "gr3-ls3-unit2-bundle"
+        },
+        {
+          "sku": "gr3-ls4-unit3-bundle",
+          "title": "Traits for Survival",
+          "domain": "Life Science",
+          "unitCode": "3-LS4 Unit 3",
+          "previewUrl": "/lesson-plans/gr3-ls4-unit3-lesson1-variation-can-help-survival.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ls4-unit3-bundle/",
+          "thankYouProduct": "gr3-ls4-unit3-bundle"
+        },
+        {
+          "sku": "gr3-ls2-unit4-bundle",
+          "title": "Group Behavior & Survival",
+          "domain": "Life Science",
+          "unitCode": "3-LS2 Unit 4",
+          "previewUrl": "/lesson-plans/gr3-ls2-unit4-lesson1-why-animals-sometimes-stick-together.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ls2-unit4-bundle/",
+          "thankYouProduct": "gr3-ls2-unit4-bundle"
+        },
+        {
+          "sku": "gr3-ess2-unit1-bundle",
+          "title": "Weather & Climate",
+          "domain": "Earth Science",
+          "unitCode": "3-ESS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ess2-unit1-bundle/",
+          "thankYouProduct": "gr3-ess2-unit1-bundle"
+        },
+        {
+          "sku": "gr3-ets1-unit1-bundle",
+          "title": "Engineering Design",
+          "domain": "Engineering",
+          "unitCode": "3-ETS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr3-ets1-unit1-bundle/",
+          "thankYouProduct": "gr3-ets1-unit1-bundle"
+        }
+      ]
+    },
+    {
+      "grade": "Grade 4",
+      "fullGrade": {
+        "sku": "grade-4-complete",
+        "productType": "full-grade-bundle",
+        "bundlePdfStatus": "grade_bundle_pending",
+        "checkoutLinkStatus": "pending",
+        "exportPath": "exports/grade-4-complete/",
+        "thankYouProduct": "grade-4-complete",
+        "includedUnits": [
+          "gr4-ls1-unit1-bundle",
+          "gr4-ls1-unit2-bundle"
+        ]
+      },
+      "units": [
+        {
+          "sku": "gr4-ls1-unit1-bundle",
+          "title": "Animal Structures & Survival",
+          "domain": "Life Science",
+          "unitCode": "4-LS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr4-ls1-unit1-bundle/",
+          "thankYouProduct": "gr4-ls1-unit1-bundle"
+        },
+        {
+          "sku": "gr4-ls1-unit2-bundle",
+          "title": "Plant Structures & Reproduction",
+          "domain": "Life Science",
+          "unitCode": "4-LS1 Unit 2",
+          "previewUrl": "/lesson-plans/gr4-ls1-unit2-lesson1-roots-stems-and-plant-support-systems.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr4-ls1-unit2-bundle/",
+          "thankYouProduct": "gr4-ls1-unit2-bundle"
+        }
+      ]
+    },
+    {
+      "grade": "Grade 5",
+      "fullGrade": {
+        "sku": "grade-5-complete",
+        "productType": "full-grade-bundle",
+        "bundlePdfStatus": "grade_bundle_pending",
+        "checkoutLinkStatus": "pending",
+        "exportPath": "exports/grade-5-complete/",
+        "thankYouProduct": "grade-5-complete",
+        "includedUnits": [
+          "gr5-ps2-unit1-bundle",
+          "gr5-ls2-unit1-bundle",
+          "gr5-ess2-unit1-bundle"
+        ]
+      },
+      "units": [
+        {
+          "sku": "gr5-ps2-unit1-bundle",
+          "title": "Forces & Motion",
+          "domain": "Physical Science",
+          "unitCode": "5-PS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr5-ps2-unit1-l1-balanced-and-unbalanced-forces.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr5-ps2-unit1-bundle/",
+          "thankYouProduct": "gr5-ps2-unit1-bundle"
+        },
+        {
+          "sku": "gr5-ls2-unit1-bundle",
+          "title": "Ecosystems & Food Webs",
+          "domain": "Life Science",
+          "unitCode": "5-LS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr5-ls1-unit1-l1-what-is-an-ecosystem.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr5-ls2-unit1-bundle/",
+          "thankYouProduct": "gr5-ls2-unit1-bundle"
+        },
+        {
+          "sku": "gr5-ess2-unit1-bundle",
+          "title": "Water on Earth Systems",
+          "domain": "Earth Science",
+          "unitCode": "5-ESS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr5-ess1-unit1-l1-where-is-earth-s-water.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr5-ess2-unit1-bundle/",
+          "thankYouProduct": "gr5-ess2-unit1-bundle"
+        }
+      ]
+    }
+  ]
+}

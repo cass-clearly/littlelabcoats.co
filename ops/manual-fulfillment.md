@@ -1,48 +1,51 @@
-# Little Lab Coats manual fulfillment (Option #1)
+# Little Lab Coats manual fulfillment
 
 ## Goal
-Use Stripe checkout for payment, then send a manual welcome email with the purchased PDF/link.
+Use checkout for payment, then deliver the correct Little Lab Coats bundle download without any login or member-area dependency.
 
-## Current recommended launch path
-- Sell one unit bundle first
-- Stripe handles checkout + buyer receipt
-- Cass/manual ops sends the welcome email with the content link
+## Current launch model
+- paid products are **unit bundles** and **full-grade bundles** only
+- delivery promise is **digital PDF delivered immediately after purchase**
+- printed copies are available by contact
+- free lessons are separate and do not go through fulfillment
 
 ## Flow
-1. Customer pays through the Stripe payment link.
-2. Stripe sends the buyer a receipt.
-3. Stripe sends seller notification / dashboard record shows a completed payment.
-4. Open the payment record and copy the buyer email.
-5. Match the purchased product to the correct fulfillment link.
-6. Send the matching welcome email.
-7. Archive / mark fulfilled.
+1. Customer pays through the product checkout link.
+2. Checkout provider sends the buyer receipt.
+3. Seller notification or dashboard shows the completed payment.
+4. Match the purchased SKU to `ops/download-product-catalog.json`.
+5. Confirm the bundle asset exists at the expected export path.
+6. Send the matching fulfillment email or download link.
+7. Mark the order fulfilled.
 
-## What must exist for each product
-- Product name
-- Stripe payment link
-- Final downloadable asset or library link
-- Welcome email template
-- Support reply-to email
+## What must exist for each paid SKU
+- exact SKU from `ops/download-product-catalog.json`
+- real checkout link in `scripts/store-product-links.js`
+- final downloadable asset or download page
+- fulfillment email template
+- support reply-to email
 
-## Minimum viable setup for this week
+## Minimum viable launch setup
+
 ### Unit bundle
-- One Stripe product
-- One PDF bundle zip or one protected download page
-- One welcome email template
+- one checkout product
+- one finished PDF bundle or direct download page
+- one fulfillment email template
 
-### All access
-- One Stripe monthly or annual product
-- One library link or hub link
-- One welcome email template
-- Clear policy for what happens if payment stops
+### Full-grade bundle
+- one checkout product
+- one finished full-grade download package
+- one fulfillment email template
+- note: `Need more than one grade? Contact us`
 
-## Current blockers to fully operating this
-- Need confirmed sender inbox/account to use for fulfillment
-- Need final link/file for each SKU we plan to sell
-- Need agreement on which products are actually live first
-- Need Stripe seller notifications to be visible to the fulfillment inbox or operator
+## Current blockers to full operation
+- many SKUs still need final bundle packaging
+- many SKUs still need real checkout links dropped into `scripts/store-product-links.js`
+- full-grade bundles still need final assembled download packages
 
-## Suggested first launch cut
-- Launch only one unit bundle first
-- Rehearse the fulfillment flow once manually
-- Then add all access after the manual flow is stable
+## Suggested operating order
+1. Package the next highest-priority bundle PDF
+2. Add its checkout link
+3. Test one purchase manually end to end
+4. Repeat SKU by SKU
+5. Only call a product live after both packaging and checkout wiring are real

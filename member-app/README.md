@@ -1,6 +1,9 @@
 # Little Lab Coats member app MVP
 
-This is the separate authenticated app for the Little Lab Coats member launch. It does **not** replace or rewrite the public static site at `littlelabcoats.co`; it adds a dedicated app shell for login, library, account, and billing.
+> **Status: deferred / not the current launch path.**
+> As of 2026-04-18, the Little Lab Coats launch direction is a download-first storefront with unit bundles and full-grade bundles only. No subscriptions, no member area, and no login dependence are required for launch. This `member-app/` directory is historical scaffold work, not the primary public storefront path.
+
+This is the separate authenticated app for the older Little Lab Coats member-launch direction. It does **not** replace or rewrite the public static site at `littlelabcoats.co`; it adds a dedicated app shell for login, library, account, and billing.
 
 ## What is implemented now
 

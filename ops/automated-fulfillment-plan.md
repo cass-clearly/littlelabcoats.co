@@ -1,42 +1,43 @@
 # Automated fulfillment plan
 
 ## Objective
-Move from manual send to payment-triggered email fulfillment for PDF products.
+Move from manual send to payment-triggered bundle fulfillment for download-first Little Lab Coats products.
+
+## Launch assumptions
+- paid products are **unit bundles** and **full-grade bundles** only
+- no subscription logic is required for launch
+- no member-account entitlement sync is required for launch
+- product catalog source of truth is `ops/download-product-catalog.json`
 
 ## Recommended v1 workflow
-1. Customer pays in Stripe Checkout.
-2. Stripe sends `checkout.session.completed` webhook.
-3. Small fulfillment service verifies the event signature.
-4. Service reads the purchased product/price id.
-5. Service looks up the matching PDF/link in a product map.
-6. Service sends the welcome email from `clearlycass10@gmail.com`.
-7. Service records fulfillment status so we do not double-send.
+1. Customer pays in checkout.
+2. Checkout provider sends a completion event.
+3. Fulfillment service verifies the event.
+4. Service reads the purchased SKU.
+5. Service looks up the SKU in `ops/download-product-catalog.json`.
+6. Service sends the matching download email or link.
+7. Service records fulfillment status so the order is not resent accidentally.
 
 ## Minimum pieces to build
-- Stripe webhook endpoint
-- Stripe signing secret
-- Product map file: Stripe price/product -> attachment or link
-- Email sending integration
-- Fulfillment log or database
+- webhook endpoint
+- product/SKU map
+- email sending integration
+- fulfillment log
+- optional thank-you/download page routing
 
 ## Easiest technical shape
-- Small Node or Python service
-- One JSON product map
-- Gmail send or transactional email provider
+- small Node or Python service
+- one product catalog JSON file
+- transactional email provider or Gmail send path
 - SQLite or JSON log for sent orders
 
 ## Human decisions still needed
-- Should PDFs be attached directly or sent as download links?
-- If links, where should the files live?
-- Should we resend automatically if the same customer buys again?
-- Who gets alerted on failures?
+- attachment delivery vs hosted download links
+- exact thank-you/download page routing per SKU
+- resend policy for duplicate purchases
+- alerting path for failures
 
 ## Best immediate path
-- Keep manual fulfillment live today
-- Build automated fulfillment next on top of the same product map and email templates
-
-## How Serena can help
-- Decide whether delivery is attachment vs link
-- Confirm the exact products going live first
-- Confirm support inbox: `clearlycass10@gmail.com`
-- Confirm where downloadable files should live long-term
+- keep manual fulfillment live while the catalog is being wired
+- automate on top of the exact same SKU map and fulfillment templates
+- do not reintroduce subscription/member complexity into the automation scope

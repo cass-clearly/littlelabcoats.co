@@ -1,45 +1,43 @@
 # Little Lab Coats launch todo
 
-Last updated: 2026-04-16
+Last updated: 2026-04-18
 
-## For Serena now
-- [ ] Review lessons and send feedback to parent testers
-- [ ] Confirm which PDF unit bundles should be live first on the store
-- [ ] Decide whether fulfillment stays attachment-based for now or moves to download links
+## Launch direction locked
+- [x] Download-first storefront
+- [x] No subscriptions for launch
+- [x] No member-area dependence for launch
+- [x] Two paid product types only: unit bundles + full-grade bundles
+- [x] Free lessons separated from paid shopping flow
+- [x] Serena pricing set in repo: unit bundle `$18 → $22`, full grade `$99 → $129`
 
-## In progress now
-- [x] Remarq review comments fixed at the service level and saving restored
-- [x] Store/shop restructure first pass completed
-- [x] Member app scaffold created for subscriptions/accounts/library
-- [ ] Lesson-specific review edits in progress
-- [ ] Stripe invited-user acceptance still needs to be finished
+## Already changed in repo
+- [x] Public store rewritten around grade → domain → unit flow
+- [x] Homepage pricing/copy updated away from subscription framing
+- [x] Curriculum page note updated to point at the bundle shop
+- [x] Canonical bundle catalog added at `ops/download-product-catalog.json`
+- [x] Public checkout-link placeholder map added at `scripts/store-product-links.js`
+- [x] Packaging plan docs added
 
-## Done
-- [x] Turn on Stripe customer successful-payment emails
-- [x] Update Stripe team invite to the correct email
-- [x] Package Grade 1 PS4 Unit 1 bundle PDF
-- [x] Package Kindergarten LS Unit 2 bundle PDF
-- [x] Package Kindergarten LS Unit 3 bundle PDF
-- [x] Package Grade 3 PS2 Unit 1 bundle PDF
-- [x] Create Gmail drafts for live manual-fulfillment products
-- [x] Add manual fulfillment docs and product map
+## Still needed before every SKU is truly live
+- [ ] Finish packaging bundle PDFs for pending unit SKUs
+- [ ] Assemble full-grade download packages
+- [ ] Add real checkout links SKU by SKU in `scripts/store-product-links.js`
+- [ ] Verify each live storefront CTA resolves to the correct checkout
+- [ ] Verify thank-you/download outcome for each live SKU
 
-## Waiting on Chris
-- [ ] Confirm whether to keep using `clearlycass10@gmail.com` as the long-term ops inbox for launch
-- [ ] Help decide when to switch from PDF launch to full subscription build
+## Highest-value next SKUs to finish
+- [ ] Next Kindergarten unit bundle
+- [ ] Next Grade 1 unit bundle
+- [ ] First full-grade bundle
+- [ ] First Grade 2 unit bundle
 
-## Live manual-fulfillment products
-- [x] Grade 1 Physical Science Unit 1
-- [x] Kindergarten Life Science Unit 2
-- [x] Kindergarten Life Science Unit 3
-- [x] Grade 3 Physical Science Unit 1
+## Deferred work
+- [ ] Member app remains deferred and should not be treated as the launch blocker
+- [ ] Any future login/account build should start only after the download-first store is proving demand
 
-## Current blockers
-- Grade 1 Life Science Unit 1 appears to be missing Lesson 1 in the repo
-- Stripe invited-user acceptance is not fully completed yet
-
-## Next recommended sequence
-1. Keep Serena in lesson-review mode
-2. Apply lesson-specific edits as comments come in
-3. Finish Stripe operator access
-4. Keep building the subscription/member experience in parallel
+## Rule for closing items
+A product is only done when all of these are true:
+1. bundle asset exists
+2. checkout link exists
+3. storefront button is wired
+4. delivery outcome is clear and tested

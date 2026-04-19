@@ -1,5 +1,9 @@
 # Little Lab Coats member-app scaffold notes
 
+> **Superseded on 2026-04-18.**
+> The current launch path is the simpler download-first storefront with unit bundles and full-grade bundles only. Keep this file as historical context for the deferred member-app scaffold, not as the current execution plan.
+
+
 This repo now contains a separate Next.js scaffold in `member-app/` for the subscription-site MVP.
 
 ## Intent

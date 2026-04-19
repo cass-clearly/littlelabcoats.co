@@ -1,5 +1,9 @@
 # Little Lab Coats subscription-site MVP plan
 
+> **Superseded on 2026-04-18.**
+> The current launch direction is the download-first storefront documented in `docs/download-first-storefront-audit-2026-04-18.md` and `docs/download-bundle-packaging-plan-2026-04-18.md`. Keep this file only as historical context for the deferred member-app path.
+
+
 ## Current state to build from
 - Public site is a static HTML site on `littlelabcoats.co` / GitHub Pages.
 - Checkout is currently Stripe payment-link based.

@@ -93,7 +93,7 @@
   }
 
   function applyUnlock(plan) {
-    var chosenPlan = plan || getPendingPlan() || 'all-access-annual';
+    var chosenPlan = plan || getPendingPlan() || 'unit-bundle';
     try {
       window.localStorage.setItem(ACCESS_KEY, 'granted');
       window.localStorage.setItem(PLAN_KEY, chosenPlan);

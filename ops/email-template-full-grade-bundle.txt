@@ -1,0 +1,24 @@
+Subject: Your Little Lab Coats full-grade bundle is ready
+
+Hi {{customer_name}},
+
+Thank you for your purchase from Little Lab Coats.
+
+Your full-grade bundle is ready here:
+{{delivery_link}}
+
+What’s included:
+- {{grade_bundle_name}}
+- {{included_units_summary}}
+
+A quick note:
+- Save this email so you can find your materials again later.
+- Need more than one grade? Reply to this email and we’ll help.
+- Printed copies are available by contact.
+
+Thank you for supporting Little Lab Coats.
+
+Warmly,
+Serena
+Little Lab Coats
+{{support_email}}
