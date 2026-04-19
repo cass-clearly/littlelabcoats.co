@@ -17,7 +17,7 @@
     "worksheet"
   ],
   "statusConfigPath": "lesson-plans/lesson-index-statuses.json",
-  "entryCount": 229,
+  "entryCount": 233,
   "entries": [
     {
       "slug": "k-ps3-unit2-lesson1-sun-warms-everything",
@@ -1601,6 +1601,57 @@
       "sourcePattern": "structured"
     },
     {
+      "slug": "gr2-ess2-unit1-lesson1-weather-station-builders",
+      "sourcePath": "lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html",
+      "canonicalUrl": "/lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html",
+      "reviewUrl": "/lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html?review=1",
+      "title": "Weather Station Builders — Grade 2 Earth Science Unit 1",
+      "displayTitle": "Weather Station Builders",
+      "gradeKey": "2",
+      "gradeLabel": "Grade 2",
+      "domainKey": "ess",
+      "domainLabel": "Earth & Space Science",
+      "unitNumber": 1,
+      "lessonNumber": 1,
+      "isFreeSample": false,
+      "bucket": "2-ess",
+      "sourcePattern": "structured"
+    },
+    {
+      "slug": "gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues",
+      "sourcePath": "lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html",
+      "canonicalUrl": "/lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html",
+      "reviewUrl": "/lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html?review=1",
+      "title": "Cloud Detectives & Condensation Clues — Grade 2 Earth Science Unit 1",
+      "displayTitle": "Cloud Detectives & Condensation Clues",
+      "gradeKey": "2",
+      "gradeLabel": "Grade 2",
+      "domainKey": "ess",
+      "domainLabel": "Earth & Space Science",
+      "unitNumber": 1,
+      "lessonNumber": 2,
+      "isFreeSample": false,
+      "bucket": "2-ess",
+      "sourcePattern": "structured"
+    },
+    {
+      "slug": "gr2-ess2-unit1-lesson3-severe-weather-case-files",
+      "sourcePath": "lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html",
+      "canonicalUrl": "/lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html",
+      "reviewUrl": "/lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html?review=1",
+      "title": "Severe Weather Case Files — Grade 2 Earth Science Unit 1",
+      "displayTitle": "Severe Weather Case Files",
+      "gradeKey": "2",
+      "gradeLabel": "Grade 2",
+      "domainKey": "ess",
+      "domainLabel": "Earth & Space Science",
+      "unitNumber": 1,
+      "lessonNumber": 3,
+      "isFreeSample": false,
+      "bucket": "2-ess",
+      "sourcePattern": "structured"
+    },
+    {
       "slug": "gr2-ess1-unit3-l1-landforms",
       "sourcePath": "lesson-plans/gr2-ess1-unit3-l1-landforms.html",
       "canonicalUrl": "/lesson-plans/gr2-ess1-unit3-l1-landforms.html",
@@ -1936,6 +1987,23 @@
       "domainLabel": "Life Science",
       "unitNumber": 1,
       "lessonNumber": 1,
+      "isFreeSample": false,
+      "bucket": "3-ls",
+      "sourcePattern": "structured"
+    },
+    {
+      "slug": "gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern",
+      "sourcePath": "lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
+      "canonicalUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
+      "reviewUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html?review=1",
+      "title": "Lesson 2 Retired Pending Rebuild — Grade 3 Life Science Unit 1",
+      "displayTitle": "Lesson 2 Retired Pending Rebuild",
+      "gradeKey": "3",
+      "gradeLabel": "Grade 3",
+      "domainKey": "ls",
+      "domainLabel": "Life Science",
+      "unitNumber": 1,
+      "lessonNumber": 2,
       "isFreeSample": false,
       "bucket": "3-ls",
       "sourcePattern": "structured"
@@ -4109,6 +4177,23 @@
       "isFreeSample": false,
       "bucket": "other-lessons",
       "sourcePattern": "standalone"
+    },
+    {
+      "slug": "grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s",
+      "sourcePath": "lesson-plans/grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s.html",
+      "canonicalUrl": "/lesson-plans/grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s.html",
+      "reviewUrl": "/lesson-plans/grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s.html?review=1",
+      "title": "Tiny Building Blocks: Exploring Atoms Together — Grade 3 + Grade 5 Mixed-Age Physical Science Lesson",
+      "displayTitle": "Tiny Building Blocks: Exploring Atoms Together",
+      "gradeKey": null,
+      "gradeLabel": "Other Lessons",
+      "domainKey": null,
+      "domainLabel": "Other Lessons",
+      "unitNumber": null,
+      "lessonNumber": null,
+      "isFreeSample": false,
+      "bucket": "other-lessons",
+      "sourcePattern": "standalone"
     }
   ],
   "groups": [
@@ -5792,8 +5877,59 @@
     {
       "gradeLabel": "Grade 2",
       "domainLabel": "Earth & Space Science",
-      "count": 6,
+      "count": 9,
       "entries": [
+        {
+          "slug": "gr2-ess2-unit1-lesson1-weather-station-builders",
+          "sourcePath": "lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html",
+          "canonicalUrl": "/lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html",
+          "reviewUrl": "/lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html?review=1",
+          "title": "Weather Station Builders — Grade 2 Earth Science Unit 1",
+          "displayTitle": "Weather Station Builders",
+          "gradeKey": "2",
+          "gradeLabel": "Grade 2",
+          "domainKey": "ess",
+          "domainLabel": "Earth & Space Science",
+          "unitNumber": 1,
+          "lessonNumber": 1,
+          "isFreeSample": false,
+          "bucket": "2-ess",
+          "sourcePattern": "structured"
+        },
+        {
+          "slug": "gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues",
+          "sourcePath": "lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html",
+          "canonicalUrl": "/lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html",
+          "reviewUrl": "/lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html?review=1",
+          "title": "Cloud Detectives & Condensation Clues — Grade 2 Earth Science Unit 1",
+          "displayTitle": "Cloud Detectives & Condensation Clues",
+          "gradeKey": "2",
+          "gradeLabel": "Grade 2",
+          "domainKey": "ess",
+          "domainLabel": "Earth & Space Science",
+          "unitNumber": 1,
+          "lessonNumber": 2,
+          "isFreeSample": false,
+          "bucket": "2-ess",
+          "sourcePattern": "structured"
+        },
+        {
+          "slug": "gr2-ess2-unit1-lesson3-severe-weather-case-files",
+          "sourcePath": "lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html",
+          "canonicalUrl": "/lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html",
+          "reviewUrl": "/lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html?review=1",
+          "title": "Severe Weather Case Files — Grade 2 Earth Science Unit 1",
+          "displayTitle": "Severe Weather Case Files",
+          "gradeKey": "2",
+          "gradeLabel": "Grade 2",
+          "domainKey": "ess",
+          "domainLabel": "Earth & Space Science",
+          "unitNumber": 1,
+          "lessonNumber": 3,
+          "isFreeSample": false,
+          "bucket": "2-ess",
+          "sourcePattern": "structured"
+        },
         {
           "slug": "gr2-ess1-unit3-l1-landforms",
           "sourcePath": "lesson-plans/gr2-ess1-unit3-l1-landforms.html",
@@ -6147,7 +6283,7 @@
     {
       "gradeLabel": "Grade 3",
       "domainLabel": "Life Science",
-      "count": 23,
+      "count": 24,
       "entries": [
         {
           "slug": "gr3-ls1-unit1-lesson1-what-is-a-life-cycle",
@@ -6162,6 +6298,23 @@
           "domainLabel": "Life Science",
           "unitNumber": 1,
           "lessonNumber": 1,
+          "isFreeSample": false,
+          "bucket": "3-ls",
+          "sourcePattern": "structured"
+        },
+        {
+          "slug": "gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern",
+          "sourcePath": "lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
+          "canonicalUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
+          "reviewUrl": "/lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html?review=1",
+          "title": "Lesson 2 Retired Pending Rebuild — Grade 3 Life Science Unit 1",
+          "displayTitle": "Lesson 2 Retired Pending Rebuild",
+          "gradeKey": "3",
+          "gradeLabel": "Grade 3",
+          "domainKey": "ls",
+          "domainLabel": "Life Science",
+          "unitNumber": 1,
+          "lessonNumber": 2,
           "isFreeSample": false,
           "bucket": "3-ls",
           "sourcePattern": "structured"
@@ -8346,7 +8499,7 @@
     {
       "gradeLabel": "Other Lessons",
       "domainLabel": "Other Lessons",
-      "count": 8,
+      "count": 9,
       "entries": [
         {
           "slug": "bird-beak-buffet",
@@ -8474,6 +8627,23 @@
           "reviewUrl": "/lesson-plans/thermal-energy-ice-cream.html?review=1",
           "title": "Thermal Energy & States of Matter - Ice Cream Experiment",
           "displayTitle": "Thermal Energy & States of Matter - Ice Cream Experiment",
+          "gradeKey": null,
+          "gradeLabel": "Other Lessons",
+          "domainKey": null,
+          "domainLabel": "Other Lessons",
+          "unitNumber": null,
+          "lessonNumber": null,
+          "isFreeSample": false,
+          "bucket": "other-lessons",
+          "sourcePattern": "standalone"
+        },
+        {
+          "slug": "grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s",
+          "sourcePath": "lesson-plans/grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s.html",
+          "canonicalUrl": "/lesson-plans/grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s.html",
+          "reviewUrl": "/lesson-plans/grade-grade-3-grade-5-combo-mixed-ages-homeschool-physical-s.html?review=1",
+          "title": "Tiny Building Blocks: Exploring Atoms Together — Grade 3 + Grade 5 Mixed-Age Physical Science Lesson",
+          "displayTitle": "Tiny Building Blocks: Exploring Atoms Together",
           "gradeKey": null,
           "gradeLabel": "Other Lessons",
           "domainKey": null,

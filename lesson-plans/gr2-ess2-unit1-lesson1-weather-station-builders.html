@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Station Builders — Grade 2 Earth Science Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1565c0; padding-bottom: 10px; color: #1565c0; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1565c0; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .objective-box, .materials-box, .teacher-note, .answer-key, .extension-box { border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; font-size: 10pt; }
+    .objective-box { background: #e3f2fd; border: 2px solid #90caf9; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1565c0; }
+    .question-box { background: #f5fbff; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; }
+    .extension-box { background: #eef7ff; border: 1px solid #90caf9; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #f5fbff; border: 1.5px solid #1565c0; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #0d47a1; }
+    .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+    .tool-card { border: 2px solid #90caf9; border-radius: 10px; padding: 12px; background: #fff; }
+    .tool-card strong { color: #0d47a1; display: block; margin-bottom: 6px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-header { background: #1565c0; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .draw-area { border: 1.5px dashed #90caf9; border-radius: 8px; min-height: 120px; background: #fafcff; margin: 8px 0 12px; padding: 8px; }
+    .line { border-bottom: 1.5px solid #90caf9; min-height: 24px; margin: 8px 0 12px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #1565c0; color: white; padding: 8px; border: 1px solid #0d47a1; }
+    .ws-table td { border: 1px solid #90caf9; padding: 8px; height: 42px; vertical-align: top; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1565c0; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .answer-key, .tool-card, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <h1>🌦️ Weather Station Builders</h1>
+  <p class="subtitle">Earth Science — Weather Detectives &amp; Wild Storms | Unit 1, Lesson 1 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 50–60 minutes</span>
+    <span>🌎 <strong>Subject:</strong> Earth Science — Weather</span>
+    <span>🧪 <strong>Hands-on Hook:</strong> Build a mini weather station</span>
+  </div>
+
+  <div class="hero-image"><div class="emoji-hero">🌬️🌧️📏☁️</div><div class="caption">Meteorologists do not just guess — they build tools, collect evidence, and compare patterns.</div></div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS-aligned focus:</strong><br>
+    Planning and carrying out investigations, using tools to gather data, and analyzing weather patterns using evidence over time.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will build simple weather-observation tools, collect a first set of weather data, and explain why repeated measurements help meteorologists describe and compare local weather.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Weather is more than a feeling like “nice” or “gross.” Scientists describe weather with evidence: how windy it is, how much rain fell, what the clouds look like, and how warm or cold the air feels. Tools help us notice those details carefully and consistently.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Meteorologists study weather by observing the atmosphere over and over. They do not rely on memory alone. Instead, they collect measurements and observations so they can compare one day to the next. A windy day feels different from a calm day, but a windsock helps us describe that wind more clearly. A rainy day looks obvious while it is raining, but a rain gauge tells us how much precipitation actually fell.</p>
+  <p>In Grade 2, the important lift is moving from “I saw clouds” to “I can describe what I observed and compare it to tomorrow.” That is real science thinking. The goal is not perfect professional equipment. The goal is using simple tools in a careful way so patterns become visible.</p>
+
+  <div class="tip-box">
+    <strong>💬 Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">meteorologist</span>
+      <span class="vocab-chip">observation</span>
+      <span class="vocab-chip">wind</span>
+      <span class="vocab-chip">precipitation</span>
+      <span class="vocab-chip">cloud cover</span>
+      <span class="vocab-chip">pattern</span>
+    </div>
+  </div>
+
+  <h2>🧰 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Household Items</h3>
+    <ul>
+      <li>1 clear plastic cup or jar</li>
+      <li>Permanent marker</li>
+      <li>Ruler</li>
+      <li>1 strip of paper or lightweight fabric ribbon</li>
+      <li>String or tape</li>
+      <li>1 pencil or craft stick</li>
+      <li>Paper and crayons</li>
+      <li>Optional: outdoor thermometer</li>
+    </ul>
+    <h3>📄 Printables</h3>
+    <ul>
+      <li>Student worksheet page from this lesson</li>
+    </ul>
+  </div>
+
+  <h2>🧭 Build Your Weather Station</h2>
+  <div class="tool-grid">
+    <div class="tool-card"><strong>Rain gauge</strong>Use a clear cup. Mark a few simple measurement lines with a ruler so you can tell whether rain collected a little or a lot.</div>
+    <div class="tool-card"><strong>Windsock</strong>Tape a paper strip or ribbon to a pencil, stick, or porch rail. Watch whether it hangs down, waves a little, or stretches out strongly.</div>
+    <div class="tool-card"><strong>Sky chart</strong>Look up and record whether the sky is clear, partly cloudy, mostly cloudy, or dark and stormy.</div>
+  </div>
+
+  <h2>🔍 Let’s Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Launch the mystery:</strong> Ask, “If two people both say ‘It’s windy,’ how could a scientist make that more exact?” Explain that today the child becomes a meteorologist.</div>
+  <div class="procedure-step"><strong>Step 2 — Make a simple rain gauge:</strong> Use the ruler to mark equal lines on the side of a clear cup or jar. Label them 1, 2, 3, and 4. Place the cup outside in an open spot where it can collect rain safely.</div>
+  <div class="procedure-step"><strong>Step 3 — Make a windsock or wind ribbon:</strong> Tape a paper strip or ribbon to a stick, pencil, porch rail, or fence. Observe whether it hangs down, wiggles lightly, or stretches strongly in one direction.</div>
+  <div class="procedure-step"><strong>Step 4 — Record a first observation:</strong> Go outside or look from a safe window. Record cloud cover, wind strength, temperature feel, and whether any precipitation is happening right now.</div>
+  <div class="procedure-step"><strong>Step 5 — Compare evidence types:</strong> Ask which tool helped with wind, which helped with rainfall, and which information still depended on the child’s own careful noticing.</div>
+  <div class="procedure-step"><strong>Step 6 — Start the pattern habit:</strong> Tell the child to repeat the observation at the same time for the next two days. The power comes from doing it more than once.</div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Why do scientists use tools instead of only saying “It feels rainy” or “It feels windy”?</strong><span class="discussion-hint">Look for: tools help us gather clearer evidence and compare one day to another.</span></div>
+  <div class="question-box"><strong>Which part of weather was easiest to observe today? Which part was hardest?</strong><span class="discussion-hint">Look for: clouds are visible, but wind is easier to notice with a ribbon or windsock.</span></div>
+  <div class="question-box"><strong>Why should we observe at the same time each day if we want to compare patterns?</strong><span class="discussion-hint">Look for: it makes the observations fairer and more consistent.</span></div>
+  <div class="question-box"><strong>If your rain gauge stays empty, does that mean the lesson failed?</strong><span class="discussion-hint">Look for: no — “no rain” is still data, and scientists record what really happened.</span></div>
+
+  <h2>🌟 Extension</h2>
+  <div class="extension-box">
+    <p><strong>Extra challenge:</strong> Add a simple compass direction to your wind notes. Is the ribbon being pushed toward the east, west, north, or south?</p>
+    <p><strong>Gifted extension:</strong> Compare your data with a weather app or local forecast. Where do your observations match? Where is the app more exact?</p>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li>This lesson is stronger than Kindergarten weather observation because the child is <strong>building tools and using repeated evidence</strong>, not only naming the weather.</li>
+      <li>If there is no rain this week, that is fine. The rain gauge still matters because it teaches what evidence collection looks like.</li>
+      <li>If you own a real thermometer, add it. If not, “cold / cool / warm / hot” is enough for Grade 2.</li>
+      <li>Keep the tools simple. A child-made tool that gets used is better than a perfect tool that never goes outside.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet</h2>
+    <div class="worksheet-header">Weather Station Builders — Student Worksheet</div>
+    <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+
+    <h3>1️⃣ My Weather Tools</h3>
+    <p>I built these tools today:</p>
+    <p>☐ Rain gauge &nbsp;&nbsp; ☐ Windsock / ribbon &nbsp;&nbsp; ☐ Sky chart</p>
+    <p>The tool that helped me most today was:</p>
+    <div class="line"></div>
+
+    <h3>2️⃣ Draw Your Weather Station</h3>
+    <div class="draw-area">Draw your tools here. Label the rain gauge, wind tool, and where you observed the sky.</div>
+
+    <h3>3️⃣ My First Weather Observation</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Wind</th>
+        <th>Cloud cover</th>
+        <th>Temperature feel</th>
+        <th>Precipitation</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h3>4️⃣ Three-Day Pattern Tracker</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Day</th>
+        <th>What stayed the same?</th>
+        <th>What changed?</th>
+      </tr>
+      <tr><td>Day 1</td><td></td><td></td></tr>
+      <tr><td>Day 2</td><td></td><td></td></tr>
+      <tr><td>Day 3</td><td></td><td></td></tr>
+    </table>
+
+    <h3>5️⃣ Scientist Thinking</h3>
+    <p>Why is “no rain today” still useful data?</p>
+    <div class="line"></div>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key — Detach Before Giving Worksheet to Students</h2>
+      <h3>1️⃣ My Weather Tools</h3>
+      <p>Accept any honest record of the tools built. Strong answers name how the tool helped: for example, “The ribbon helped me see that the wind changed direction.”</p>
+
+      <h3>2️⃣ Draw Your Weather Station</h3>
+      <p>Look for a labeled sketch showing where the rain gauge and wind tool were placed and where the child observed the sky.</p>
+
+      <h3>3️⃣ First Weather Observation</h3>
+      <p>Answers vary by actual conditions. Accept category words such as calm / breezy / strong wind, clear / partly cloudy / cloudy, cool / warm / hot, and none / rain / snow.</p>
+
+      <h3>4️⃣ Three-Day Pattern Tracker</h3>
+      <p>There is no single right answer. A strong response notices one repeated feature and one change, such as “The sky stayed mostly cloudy, but the wind got stronger on Day 3.”</p>
+
+      <h3>5️⃣ Scientist Thinking</h3>
+      <p>Expected idea: “No rain” still tells us what happened and helps us compare different days. Scientists record all observations, not only exciting ones.</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>The child built at least one simple observation tool.</li>
+        <li>The child recorded a first weather observation using categories or evidence words.</li>
+        <li>The child shows understanding that repeated observations reveal patterns.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

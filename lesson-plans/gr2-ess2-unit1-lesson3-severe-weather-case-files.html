@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Severe Weather Case Files — Grade 2 Earth Science Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #ef6c00; padding-bottom: 10px; color: #ef6c00; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #fff3e0; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #ffcc80; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #ef6c00; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #bf360c; border-bottom: 2px solid #ffcc80; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .objective-box, .materials-box, .teacher-note, .answer-key, .extension-box { border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; font-size: 10pt; }
+    .objective-box { background: #fff3e0; border: 2px solid #ffcc80; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .procedure-step { background: #fff3e0; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #ef6c00; }
+    .question-box { background: #fffaf3; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #fff8e1; border-left: 5px solid #ffb300; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; }
+    .extension-box { background: #fff7ec; border: 1px solid #ffcc80; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #fffaf3; border: 1.5px solid #ef6c00; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #bf360c; }
+    .event-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0; }
+    .event-card { border: 2px solid #ffcc80; border-radius: 10px; padding: 12px; background: #fff; }
+    .event-card strong { color: #bf360c; display: block; margin-bottom: 6px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-header { background: #ef6c00; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .draw-area { border: 1.5px dashed #ffcc80; border-radius: 8px; min-height: 100px; background: #fffdfa; margin: 8px 0 12px; padding: 8px; }
+    .line { border-bottom: 1.5px solid #ffcc80; min-height: 24px; margin: 8px 0 12px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #ef6c00; color: white; padding: 8px; border: 1px solid #bf360c; }
+    .ws-table td { border: 1px solid #ffcc80; padding: 8px; height: 42px; vertical-align: top; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #ef6c00; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .answer-key, .event-card, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <h1>⛈️ Severe Weather Case Files</h1>
+  <p class="subtitle">Earth Science — Weather Detectives &amp; Wild Storms | Unit 1, Lesson 3 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 50–60 minutes</span>
+    <span>🌎 <strong>Subject:</strong> Earth Science — Weather Events</span>
+    <span>🧪 <strong>Hands-on Hook:</strong> Tornado bottle + storm case files</span>
+  </div>
+
+  <div class="hero-image"><div class="emoji-hero">🌪️⛈️🌨️🌊</div><div class="caption">Different severe weather events leave different clues, risks, and safety actions.</div></div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS-aligned focus:</strong><br>
+    Obtaining information from case examples, comparing weather hazards, and using evidence to choose safe actions for different storm events.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will compare thunderstorms, tornadoes, floods, and blizzards, identify warning signs and major risks for each event, and justify safe choices using evidence from simple weather case files.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Severe weather is not one big category. A thunderstorm, tornado, flood, and blizzard each behave differently, so scientists and families must look for the right warning signs and respond in the right way.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>A thunderstorm can bring lightning, heavy rain, strong wind, and hail. A tornado is a fast-spinning column of air connected to a strong storm. A flood happens when water rises or moves where it should not, covering roads or land. A blizzard is a dangerous snowstorm with strong wind and very low visibility.</p>
+  <p>Kindergarten safety lessons often stop at “storms can be dangerous.” Grade 2 can go further: compare event types, name what makes each one risky, and connect warning signs to safer choices. That turns weather safety into evidence-based reasoning instead of a memorized rule list.</p>
+
+  <div class="tip-box">
+    <strong>💬 Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">severe weather</span>
+      <span class="vocab-chip">warning sign</span>
+      <span class="vocab-chip">lightning</span>
+      <span class="vocab-chip">tornado</span>
+      <span class="vocab-chip">flood</span>
+      <span class="vocab-chip">blizzard</span>
+    </div>
+  </div>
+
+  <h2>🧰 Materials</h2>
+  <div class="materials-box">
+    <ul>
+      <li>2 clear plastic bottles with caps (optional tornado bottle demo)</li>
+      <li>Water</li>
+      <li>Small glitter or a drop of dish soap (optional for tornado bottle visibility)</li>
+      <li>Pencil and crayons</li>
+      <li>Student worksheet page from this lesson</li>
+      <li>Optional household items for emergency-kit sort: flashlight, water bottle, blanket, toy, snack, batteries, rain boots</li>
+    </ul>
+  </div>
+
+  <h2>📁 Case File Snapshots</h2>
+  <div class="event-grid">
+    <div class="event-card"><strong>Thunderstorm</strong>dark clouds, thunder, lightning, heavy rain, gusty wind</div>
+    <div class="event-card"><strong>Tornado</strong>rotating storm, funnel cloud, roaring wind, flying debris</div>
+    <div class="event-card"><strong>Flood</strong>rising water, overflowing rivers, roads covered by moving water</div>
+    <div class="event-card"><strong>Blizzard</strong>heavy snow, strong wind, dangerous cold, hard-to-see conditions</div>
+  </div>
+
+  <h2>🔍 Let’s Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Launch with a vortex:</strong> If possible, make a simple tornado bottle by swirling water in a bottle. Explain that the bottle is only a model of spinning motion, not a real tornado.</div>
+  <div class="procedure-step"><strong>Step 2 — Read four case files:</strong> Tell a short story for each weather event. Example: “The sky turned nearly black, thunder boomed, and lightning flashed.” Ask which event fits best.</div>
+  <div class="procedure-step"><strong>Step 3 — Compare clues:</strong> Create a chart with four columns: warning sign, biggest danger, safest action, and what makes it different from the others.</div>
+  <div class="procedure-step"><strong>Step 4 — Safety reasoning:</strong> Discuss why some actions are safer in one event but unsafe in another. Example: standing under a tree is unsafe in lightning; driving through floodwater is unsafe in floods.</div>
+  <div class="procedure-step"><strong>Step 5 — Emergency kit sort:</strong> Show 5–8 household items and ask which ones would be smart for a weather emergency kit and why.</div>
+  <div class="procedure-step"><strong>Step 6 — Write a family weather plan:</strong> Have the child choose one event and write where the family would go, what they would bring, and how they would stay informed.</div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Why is “bad weather” not a precise enough description for scientists or families?</strong><span class="discussion-hint">Look for: different events create different dangers and need different responses.</span></div>
+  <div class="question-box"><strong>What warning sign would make you think lightning or a thunderstorm might be close?</strong><span class="discussion-hint">Look for: thunder, dark clouds, heavy rain, flashes of lightning, strong gusts.</span></div>
+  <div class="question-box"><strong>Why is floodwater dangerous even if it does not look very deep?</strong><span class="discussion-hint">Look for: moving water can push people or cars, and roads may be hidden underneath.</span></div>
+  <div class="question-box"><strong>How is a blizzard different from an ordinary snowy day?</strong><span class="discussion-hint">Look for: strong wind, dangerous cold, and poor visibility make it much more hazardous.</span></div>
+
+  <h2>🌟 Extension</h2>
+  <div class="extension-box">
+    <p><strong>Extra challenge:</strong> Make a “weather safety wheel” with one section for each event and one matching safe action.</p>
+    <p><strong>Family extension:</strong> Find out which severe weather event is most common where you live and add one extra note to the family plan.</p>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li>This lesson intentionally goes beyond Kindergarten by asking the child to <strong>compare event types and justify safety choices</strong>, not just repeat “storms are dangerous.”</li>
+      <li>Keep the tone calm. The goal is confidence and preparedness, not fear.</li>
+      <li>The tornado bottle is a hook, not the main science. The main science is comparing warning signs, hazards, and responses.</li>
+      <li>If your child has storm anxiety, focus more on the plan and less on dramatic examples.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet</h2>
+    <div class="worksheet-header">Severe Weather Case Files — Student Worksheet</div>
+    <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+
+    <h3>1️⃣ Compare the Events</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Weather event</th>
+        <th>Warning sign</th>
+        <th>Big danger</th>
+        <th>Safe action</th>
+      </tr>
+      <tr><td>Thunderstorm</td><td></td><td></td><td></td></tr>
+      <tr><td>Tornado</td><td></td><td></td><td></td></tr>
+      <tr><td>Flood</td><td></td><td></td><td></td></tr>
+      <tr><td>Blizzard</td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>2️⃣ Safe or Unsafe?</h3>
+    <p>Circle one for each action:</p>
+    <p>Standing under a tree during lightning — <strong>Safe / Unsafe</strong></p>
+    <p>Driving through floodwater — <strong>Safe / Unsafe</strong></p>
+    <p>Going to an inside room away from windows during a tornado warning — <strong>Safe / Unsafe</strong></p>
+    <p>Wearing warm layers and staying inside during a blizzard — <strong>Safe / Unsafe</strong></p>
+
+    <h3>3️⃣ My Family Weather Plan</h3>
+    <p>The weather event I chose is ________________________________________.</p>
+    <p>We would go to _________________________________________________.</p>
+    <p>We would bring _________________________________________________.</p>
+    <p>We would listen for updates from __________________________________.</p>
+
+    <h3>4️⃣ Weather Safety Symbol</h3>
+    <div class="draw-area">Draw one safety poster or symbol for one severe weather event.</div>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key — Detach Before Giving Worksheet to Students</h2>
+      <h3>1️⃣ Compare the Events</h3>
+      <ul>
+        <li><strong>Thunderstorm:</strong> warning sign = thunder/dark clouds; danger = lightning or heavy rain; safe action = go indoors</li>
+        <li><strong>Tornado:</strong> warning sign = funnel cloud / rotation / warning alert; danger = violent wind and debris; safe action = move to an inside room away from windows</li>
+        <li><strong>Flood:</strong> warning sign = rising or moving water; danger = water covering roads or rushing quickly; safe action = move to higher ground and avoid floodwater</li>
+        <li><strong>Blizzard:</strong> warning sign = heavy blowing snow / very low visibility; danger = cold + getting stranded; safe action = stay inside with warm supplies</li>
+      </ul>
+
+      <h3>2️⃣ Safe or Unsafe?</h3>
+      <p>Standing under a tree during lightning — <strong>Unsafe</strong><br>Driving through floodwater — <strong>Unsafe</strong><br>Inside room away from windows during tornado warning — <strong>Safe</strong><br>Warm layers and staying inside during blizzard — <strong>Safe</strong></p>
+
+      <h3>3️⃣ Family Weather Plan</h3>
+      <p>Accept any sensible plan that matches the chosen weather event. Look for one place, one supply idea, and one information source.</p>
+
+      <h3>4️⃣ Weather Safety Symbol</h3>
+      <p>Accept any clear symbol or poster connected to one event, such as a lightning bolt with “Go Inside!” or a flood sign with “Turn Around.”</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>The child can tell that different severe weather events are different categories, not one generic danger.</li>
+        <li>The child connects at least one warning sign to the matching event.</li>
+        <li>The child justifies a safety choice with evidence from the event description.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

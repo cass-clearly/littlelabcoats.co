@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Detectives & Condensation Clues — Grade 2 Earth Science Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1976d2; padding-bottom: 10px; color: #1976d2; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1976d2; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .objective-box, .materials-box, .teacher-note, .answer-key, .extension-box { border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; font-size: 10pt; }
+    .objective-box { background: #e3f2fd; border: 2px solid #90caf9; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1976d2; }
+    .question-box { background: #f5fbff; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; }
+    .extension-box { background: #eef7ff; border: 1px solid #90caf9; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #f5fbff; border: 1.5px solid #1976d2; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #0d47a1; }
+    .cloud-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0; }
+    .cloud-card { border: 2px solid #90caf9; border-radius: 10px; padding: 10px; background: #fff; text-align: center; }
+    .cloud-card strong { display: block; color: #0d47a1; margin-bottom: 4px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-header { background: #1976d2; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .draw-area { border: 1.5px dashed #90caf9; border-radius: 8px; min-height: 120px; background: #fafcff; margin: 8px 0 12px; padding: 8px; }
+    .line { border-bottom: 1.5px solid #90caf9; min-height: 24px; margin: 8px 0 12px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #1976d2; color: white; padding: 8px; border: 1px solid #0d47a1; }
+    .ws-table td { border: 1px solid #90caf9; padding: 8px; height: 42px; vertical-align: top; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1976d2; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .answer-key, .cloud-card, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <h1>☁️ Cloud Detectives &amp; Condensation Clues</h1>
+  <p class="subtitle">Earth Science — Weather Detectives &amp; Wild Storms | Unit 1, Lesson 2 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 45–55 minutes</span>
+    <span>🌎 <strong>Subject:</strong> Earth Science — Weather &amp; Water in Air</span>
+    <span>🧪 <strong>Hands-on Hook:</strong> Condensation lab + cloud match</span>
+  </div>
+
+  <div class="hero-image"><div class="emoji-hero">☁️🥶💧🔍</div><div class="caption">Clouds and water droplets give clues about what the air is doing above us.</div></div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS-aligned focus:</strong><br>
+    Using observations and simple models to explain how cooling air can lead to condensation, clouds, and changes in weather.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will compare common cloud patterns, observe condensation on a cold surface, and use evidence from clouds and water droplets to make a short-term weather prediction.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Clouds are made of tiny droplets of water or tiny ice pieces. They form when water vapor in the air cools down and condenses. Because different clouds form in different conditions, the sky can give us clues about what weather may happen next.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Air always contains some water vapor, even when we cannot see it. When warm, moist air cools, the water vapor changes into tiny liquid droplets. If that happens high in the sky around dust or other tiny particles, clouds form. If it happens on a cold cup or can in your kitchen, you see water droplets collect on the outside. That water did not leak through the can — it came from the air.</p>
+  <p>Grade 2 does not need full meteorology vocabulary, but it is a great age to notice that some cloud patterns are thin and wispy, some are flat and gray, and some grow tall and dark before storms. This lesson is a weather-evidence lesson, not just a cloud-naming lesson.</p>
+
+  <div class="tip-box">
+    <strong>💬 Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">water vapor</span>
+      <span class="vocab-chip">condensation</span>
+      <span class="vocab-chip">cumulus</span>
+      <span class="vocab-chip">stratus</span>
+      <span class="vocab-chip">cirrus</span>
+      <span class="vocab-chip">prediction</span>
+    </div>
+  </div>
+
+  <h2>🧰 Materials</h2>
+  <div class="materials-box">
+    <ul>
+      <li>1 metal can or clear glass</li>
+      <li>Ice cubes</li>
+      <li>Water</li>
+      <li>Blue paper or construction paper</li>
+      <li>Cotton balls or torn white paper scraps</li>
+      <li>Glue or tape</li>
+      <li>Pencil and crayons</li>
+      <li>Optional: access to outdoor sky or a window</li>
+    </ul>
+  </div>
+
+  <h2>☁️ Cloud Clue Cards</h2>
+  <div class="cloud-grid">
+    <div class="cloud-card"><strong>Cumulus</strong>puffy, piled-up clouds; often fair weather when small</div>
+    <div class="cloud-card"><strong>Stratus</strong>flat, spread-out cloud layer; often gray and gloomy</div>
+    <div class="cloud-card"><strong>Cirrus</strong>thin, wispy, high clouds; often made of ice crystals</div>
+    <div class="cloud-card"><strong>Dark storm clouds</strong>thicker clouds that can signal rain or storms</div>
+  </div>
+
+  <h2>🔍 Let’s Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Sky launch:</strong> Ask, “Can the sky give us clues before rain starts?” Let the child share ideas before naming cloud patterns.</div>
+  <div class="procedure-step"><strong>Step 2 — Condensation test:</strong> Fill a metal can or glass with ice water. Wait a few minutes. Watch tiny droplets form on the outside. Ask where that water came from.</div>
+  <div class="procedure-step"><strong>Step 3 — Explain the clue:</strong> Tell the child the water did not pass through the cup. It condensed from invisible water vapor in the air when the outside surface got cold.</div>
+  <div class="procedure-step"><strong>Step 4 — Build cloud models:</strong> Use cotton balls or paper scraps on blue paper to model cumulus, stratus, cirrus, and dark storm clouds. Label each one.</div>
+  <div class="procedure-step"><strong>Step 5 — Connect clouds to weather:</strong> For each cloud type, talk about what a meteorologist might notice. Which clouds usually look calm? Which ones might warn us that rain is closer?</div>
+  <div class="procedure-step"><strong>Step 6 — Make a prediction:</strong> Look at the real sky, or choose one of the cloud cards. Have the child write a short prediction using evidence words like “because,” “I noticed,” and “I think.”</div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Why did water appear on the outside of the cold can?</strong><span class="discussion-hint">Look for: water vapor in the air cooled and condensed into droplets.</span></div>
+  <div class="question-box"><strong>Why are clouds useful to meteorologists?</strong><span class="discussion-hint">Look for: clouds can signal what kind of weather conditions are building.</span></div>
+  <div class="question-box"><strong>Are all clouds the same? How do you know?</strong><span class="discussion-hint">Look for: different clouds have different shapes, heights, and clues about weather.</span></div>
+  <div class="question-box"><strong>Why is a prediction not the same thing as a wild guess?</strong><span class="discussion-hint">Look for: a prediction uses observations and evidence, not random hoping.</span></div>
+
+  <h2>🌟 Extension</h2>
+  <div class="extension-box">
+    <p><strong>Extra challenge:</strong> Revisit the same sky later in the day. Did the cloud pattern stay the same or change?</p>
+    <p><strong>Family extension:</strong> Watch weather news or a weather app and compare the cloud symbols you see to the clouds you studied today.</p>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li>This lesson avoids repeating Kindergarten water-cycle work by focusing on <strong>evidence from condensation and cloud clues</strong>, not just the cycle diagram.</li>
+      <li>Keep the cloud types simple. The goal is not memorizing every cloud name on Earth.</li>
+      <li>If your child struggles with the can experiment, touch the droplets and ask, “Was this water here when we started?” That usually makes the condensation idea click.</li>
+      <li>Do not force a perfect forecast. What matters is the child giving a reason for the prediction.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet</h2>
+    <div class="worksheet-header">Cloud Detectives &amp; Condensation Clues — Student Worksheet</div>
+    <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+
+    <h3>1️⃣ Condensation Clue</h3>
+    <p>Water showed up on the outside of my cold can because:</p>
+    <div class="line"></div>
+
+    <h3>2️⃣ Match the Cloud to the Clue</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Cloud</th>
+        <th>What it looks like</th>
+        <th>Possible weather clue</th>
+      </tr>
+      <tr><td>Cumulus</td><td></td><td></td></tr>
+      <tr><td>Stratus</td><td></td><td></td></tr>
+      <tr><td>Cirrus</td><td></td><td></td></tr>
+      <tr><td>Dark storm cloud</td><td></td><td></td></tr>
+    </table>
+
+    <h3>3️⃣ Draw Today’s Sky</h3>
+    <div class="draw-area">Draw the sky you saw today. Use labels like puffy, thin, flat, gray, dark, or clear.</div>
+
+    <h3>4️⃣ My Prediction</h3>
+    <p>I think the weather might be __________________________________________</p>
+    <p>because I noticed _________________________________________________.</p>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key — Detach Before Giving Worksheet to Students</h2>
+      <h3>1️⃣ Condensation Clue</h3>
+      <p>Expected idea: water vapor in the air cooled on the cold outside surface and turned into liquid droplets.</p>
+
+      <h3>2️⃣ Match the Cloud to the Clue</h3>
+      <ul>
+        <li><strong>Cumulus:</strong> puffy, cotton-like; often fair weather when small</li>
+        <li><strong>Stratus:</strong> flat layer; often gray or overcast conditions</li>
+        <li><strong>Cirrus:</strong> thin and wispy; high in the sky</li>
+        <li><strong>Dark storm cloud:</strong> thick and heavy-looking; may signal rain or storms</li>
+      </ul>
+
+      <h3>3️⃣ Draw Today’s Sky</h3>
+      <p>Accept any honest observational drawing with at least one descriptive label.</p>
+
+      <h3>4️⃣ My Prediction</h3>
+      <p>There is no single right answer. The important part is the evidence sentence. A strong response sounds like, “I think it might rain later because the clouds looked darker and thicker than yesterday.”</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>The child can explain that condensation came from water in the air.</li>
+        <li>The child can compare at least two cloud patterns.</li>
+        <li>The child uses evidence to support a weather prediction.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>
