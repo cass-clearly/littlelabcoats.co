@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Earth Day Recycling Sort & Earth Helper Pledge — Free Grade 2/3 Lesson | Little Lab Coats</title>
+  <link rel="canonical" href="https://littlelabcoats.co/lesson-plans/free-gr2-gr3-earth-day-recycling-sort.html">
+  <title>Free Earth Day Recycling Sort + Earth Helper Pledge — Grades 2–3 | Little Lab Coats</title>
+  <meta name="description" content="Free Earth Day printable mini-lesson for Grades 2–3: recycling sort, Earth Helper pledge, answer key, and easy extension ideas for homeschool families and classrooms.">
+  <meta property="og:title" content="Free Earth Day Recycling Sort + Earth Helper Pledge">
+  <meta property="og:description" content="A cheerful Grade 2–3 Earth Day printable with sorting cards, sentence frames, and a family-friendly Earth Helper pledge.">
+  <meta property="og:image" content="https://littlelabcoats.co/images/lesson-plans/free-gr2-gr3-earth-day-social-cover.png">
+  <meta name="twitter:image" content="https://littlelabcoats.co/images/lesson-plans/free-gr2-gr3-earth-day-social-cover.png">
   <style>
     * { box-sizing: border-box; }
     :root {
@@ -19,6 +25,10 @@
       --lavender: #f3e8ff;
       --ink: #23303a;
       --sand: #fffaf3;
+      --navy: #3B1F6B;
+      --teal: #4ECDC4;
+      --teal-pale: #D4F5F3;
+      --rose: #FF6B6B;
     }
     body {
       margin: 0 auto;
@@ -49,13 +59,31 @@
       letter-spacing: .02em;
       color: #5A3A16;
     }
+    .promo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 auto 12px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fff3e0, #fff8e1);
+      border: 1.5px solid #ffcc80;
+      color: #8d4c13;
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
     h1 {
       margin: 0 0 6px;
       text-align: center;
-      font-size: 22pt;
+      font-size: 24pt;
       color: #1f5f34;
       border-bottom: 4px solid var(--leaf);
       padding-bottom: 10px;
+      line-height: 1.18;
     }
     .subtitle {
       text-align: center;
@@ -121,7 +149,7 @@
       padding: 16px 18px;
       margin: 14px 0;
     }
-    .quick-grid, .bin-grid, .action-grid, .extension-grid {
+    .quick-grid, .bin-grid, .action-grid, .extension-grid, .cta-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
@@ -247,6 +275,14 @@
       min-height: 28px;
       margin: 10px 0;
     }
+    .sentence-frame {
+      background: #f7fbff;
+      border: 2px dashed #9ec9ff;
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-top: 12px;
+      font-size: 10pt;
+    }
     .answer-key {
       background: #f7f7f7;
       border: 3px dashed #9e9e9e;
@@ -258,6 +294,43 @@
       margin-top: 0;
       background: #616161;
     }
+    .cta-panel {
+      margin-top: 22px;
+      padding: 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(78,205,196,0.12), rgba(255,107,107,0.12));
+      border: 2px solid rgba(59,31,107,0.10);
+      box-shadow: 0 8px 20px rgba(59,31,107,0.08);
+    }
+    .cta-panel h2 {
+      margin-top: 0;
+      background: linear-gradient(135deg, var(--navy), #5A3490);
+    }
+    .cta-card {
+      background: rgba(255,255,255,0.88);
+      border: 1.5px solid rgba(59,31,107,0.10);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-family: 'Lato', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 10pt;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .cta-btn:hover { transform: translateY(-1px); }
+    .cta-btn.primary { background: var(--rose); color: white; box-shadow: 0 6px 16px rgba(255,107,107,0.24); }
+    .cta-btn.secondary { background: white; color: var(--navy); border: 1.5px solid rgba(59,31,107,0.18); }
     .footer-note {
       margin-top: 18px;
       text-align: center;
@@ -279,29 +352,32 @@
     }
     .page-break { page-break-before: always; margin-top: 20px; }
     @media (max-width: 720px) {
-      .quick-grid, .bin-grid, .action-grid, .extension-grid, .item-grid { grid-template-columns: 1fr; }
+      .quick-grid, .bin-grid, .action-grid, .extension-grid, .cta-grid, .item-grid { grid-template-columns: 1fr; }
       .print-btn { display: none; }
+      .name-line { flex-direction: column; gap: 8px; }
     }
     @media print {
       body { padding: 0.25in; font-size: 10pt; background: white; }
       .print-btn { display: none; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .hero-card, .big-idea, .card, .step, .bin, .worksheet-shell, .pledge-card, .answer-key, .teacher-note { break-inside: avoid; page-break-inside: avoid; }
+      .hero-card, .big-idea, .card, .step, .bin, .worksheet-shell, .pledge-card, .sentence-frame, .answer-key, .teacher-note, .cta-panel, .cta-card { break-inside: avoid; page-break-inside: avoid; }
+      .cta-panel { margin-top: 14px; }
     }
   </style>
 </head>
 <body data-document-id="doc_free_gr23_earth_day_20260421">
   <div class="lesson-branding"><img src="../images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <button class="print-btn" onclick="window.focus(); window.print()">🖨️ Print Lesson</button>
 
-  <h1>🌎 Earth Day Recycling Sort &amp; Earth Helper Pledge 🌿</h1>
-  <p class="subtitle">A free Grade 2/3 Earth Day mini-lesson for celebrating, sorting, and helping the planet</p>
+  <div class="promo-badge">🎁 Free Earth Day Download • Grades 2–3</div>
+  <h1>Earth Day Recycling Sort Freebie + Earth Helper Pledge</h1>
+  <p class="subtitle">A cheerful, print-ready Little Lab Coats mini-lesson for tomorrow's Earth Day celebration — with sorting practice, discussion prompts, and one small action kids can really do.</p>
 
   <div class="meta">
     <span>📚 <strong>Grades:</strong> 2nd–3rd</span>
     <span>⏱️ <strong>Time:</strong> 35–45 minutes</span>
-    <span>🧰 <strong>Prep:</strong> Print, cut item cards if desired</span>
-    <span>🎁 <strong>Format:</strong> Free printable lesson + worksheet + answer key</span>
+    <span>🧰 <strong>Prep:</strong> Print and optionally cut item cards</span>
+    <span>🎁 <strong>Includes:</strong> Lesson + worksheet + answer key + pledge</span>
   </div>
 
   <div class="hero-card">
@@ -310,13 +386,13 @@
   </div>
 
   <div class="big-idea">
-    <strong>Big idea:</strong> Earth Day reminds us that small choices matter. When kids learn how to sort waste, reuse what they can, and care for shared spaces, they become real helpers for the planet right now — not just someday.
+    <strong>Big idea:</strong> Earth Day is a perfect time to help kids notice that caring for the planet is made of small, real choices. When children learn to sort everyday items and explain why one choice helps more than another, they are already practicing environmental stewardship.
   </div>
 
   <h2>🎯 What kids will do</h2>
   <ul>
     <li>Sort common items into <strong>recycle</strong>, <strong>compost</strong>, or <strong>trash</strong>.</li>
-    <li>Talk about why some choices help the Earth more than others.</li>
+    <li>Use simple evidence language to explain a sorting choice.</li>
     <li>Choose one realistic action they can take this week as an <strong>Earth Helper</strong>.</li>
   </ul>
 
@@ -335,19 +411,19 @@
       <ul>
         <li>Decide whether students will <strong>draw lines</strong> to the bins or <strong>cut and sort</strong> the cards.</li>
         <li>Remind students that <strong>recycling rules vary by town</strong>.</li>
-        <li>For this lesson, sort by the <strong>most common classroom-friendly rule of thumb</strong>.</li>
+        <li>For this freebie, use the <strong>most common classroom-friendly rule of thumb</strong> and invite families to check local rules later.</li>
       </ul>
     </div>
   </div>
 
   <div class="tip-box">
-    <strong>Teacher note:</strong> This is a celebration lesson, not a local recycling-law lesson. If your city handles an item differently, just tell students: “Good scientists check local rules too.”
+    <strong>Teacher note:</strong> This is a celebration lesson, not a local recycling-law lesson. If your city handles an item differently, say: “Good scientists check local rules too — today we are practicing the best common choice for our printable.”
   </div>
 
   <h2>🌱 Warm-up: What does it mean to help Earth?</h2>
   <div class="step"><strong>Step 1 — Notice (3–5 min):</strong> Show the hero picture. Ask: “What are these kids doing that helps the planet?”</div>
   <div class="step"><strong>Step 2 — Think (3 min):</strong> Ask: “What happens when things that could be reused or recycled get thrown away?”</div>
-  <div class="step"><strong>Step 3 — Share (3–5 min):</strong> Invite a few quick ideas: save water, pick up litter, recycle paper, reuse bags, walk instead of driving, plant flowers for pollinators.</div>
+  <div class="step"><strong>Step 3 — Share (3–5 min):</strong> Invite quick ideas: save water, pick up litter, recycle paper, reuse bags, walk instead of driving, plant flowers for pollinators.</div>
 
   <h2>♻️ Mini teach: Three smart sorting choices</h2>
   <div class="bin-grid">
@@ -369,7 +445,7 @@
     </div>
     <div class="bin trash">
       <h3>🗑️ Trash</h3>
-      <div class="small-note">Some things cannot be recycled or composted in a simple home/classroom system.</div>
+      <div class="small-note">Some things cannot be recycled or composted in a simple home or classroom system.</div>
       <span class="item-chip">chip bag</span>
       <span class="item-chip">broken crayon</span>
       <span class="item-chip">old sock</span>
@@ -429,6 +505,12 @@
         <div class="item-card"><div class="emoji">🥔</div><div>chip bag</div></div>
       </div>
     </div>
+
+    <div class="sentence-frame">
+      <strong>Sentence frames:</strong>
+      <div>• I put __________ in the __________ bin because __________.</div>
+      <div>• A better choice for Earth is __________ because __________.</div>
+    </div>
   </div>
 
   <div class="pledge-card">
@@ -453,6 +535,13 @@
       <li><strong>Trash:</strong> old sock, broken crayon, greasy pizza box, chip bag</li>
     </ul>
 
+    <h3>Skimmable teaching notes</h3>
+    <ul>
+      <li><strong>Greasy pizza box:</strong> food residue changes the sorting choice.</li>
+      <li><strong>Rinse containers:</strong> clean materials are easier to recycle.</li>
+      <li><strong>Local rules matter:</strong> families can double-check how their town handles specific items.</li>
+    </ul>
+
     <h3>Good discussion questions</h3>
     <ul>
       <li>Why is a <strong>greasy</strong> pizza box different from a clean cardboard box?</li>
@@ -463,7 +552,7 @@
     <h3>What success looks like</h3>
     <ul>
       <li>Student correctly sorts most items.</li>
-      <li>Student can explain at least one choice.</li>
+      <li>Student can explain at least one choice using a because-statement.</li>
       <li>Student chooses one realistic Earth Helper action they can actually do.</li>
     </ul>
   </div>
@@ -488,6 +577,28 @@
     </div>
   </div>
 
-  <div class="footer-note">Made for Little Lab Coats • Free Earth Day printable • Artwork generated with Gemini and lesson assembled for print-friendly home use</div>
+  <div class="cta-panel">
+    <h2>🥼 Want another gentle science printable?</h2>
+    <div class="cta-grid">
+      <div class="cta-card">
+        <h3>Keep exploring Little Lab Coats</h3>
+        <p>We make family-friendly science lessons that are hands-on, clear, and easy to use at home. If this Earth Day freebie was helpful, the live store and free samples are the best next stop.</p>
+        <div class="cta-buttons">
+          <a class="cta-btn primary" href="../store.html#live-now">See live products + free samples</a>
+          <a class="cta-btn secondary" href="../curriculum.html">Browse curriculum</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <h3>Tomorrow's easy follow-up</h3>
+        <p>Print the matching <strong>Reduce, Reuse, Recycle</strong> sign and hang it near your bins, table, or morning basket so kids can keep using the language all week.</p>
+        <div class="cta-buttons">
+          <a class="cta-btn secondary" href="free-reduce-reuse-recycle-sign.html">Open the matching sign</a>
+          <a class="cta-btn secondary" href="../index.html">Visit the Little Lab Coats site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">Made for Little Lab Coats • Free Earth Day printable • Artwork generated with Gemini and packaged for print-friendly home use</div>
 </body>
 </html>
