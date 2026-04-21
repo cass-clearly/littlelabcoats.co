@@ -166,7 +166,7 @@ Infrastructure-side fix applied on the live proxy path:
   - `Access-Control-Allow-Origin: https://littlelabcoats.co`
   - `Access-Control-Allow-Credentials: true`
 - rewired the canonical 26-file Grade 4 package to use:
-  - script source: `https://cassclearly.com/feedback-layer.js?v=20260408`
+  - script source: `/feedback-layer.js?v=20260421`
   - API base: `https://cassclearly.com`
 
 ### Final live browser result

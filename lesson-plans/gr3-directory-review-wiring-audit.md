@@ -128,7 +128,7 @@ This is the critical mismatch with live/public review behavior.
 ### Known-good Grade 4 comparison
 
 The checked Grade 4 lesson uses the live production feedback layer instead:
-- `https://cassclearly.com/feedback-layer.js?v=20260408`
+- `/feedback-layer.js?v=20260421`
 - `data-api-url="https://cassclearly.com"`
 
 Confirmed in:

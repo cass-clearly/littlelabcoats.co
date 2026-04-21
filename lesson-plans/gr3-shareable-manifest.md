@@ -40,7 +40,7 @@ The following live review URLs were re-checked on 2026-04-09 and returned `HTTP 
 
 For each sampled live lesson page, fetched page source confirmed:
 - explicit `data-document-id` is present on the deployed page
-- the deployed page loads `https://cassclearly.com/feedback-layer.js?v=20260408`
+- the deployed page loads `/feedback-layer.js?v=20260421`
 - the deployed page uses `data-api-url="https://cassclearly.com"`
 - the deployed page still contains `?review=1` bypass logic so the review URL opens the full lesson instead of the preview lock
 

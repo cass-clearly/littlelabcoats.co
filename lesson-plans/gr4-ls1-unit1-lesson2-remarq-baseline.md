@@ -95,7 +95,7 @@ Live checks completed against:
 - live page still loads `feedback-layer.js?v=20260408` from `https://cassclearly.com`
 - live page still exposes the matching lesson document ID in both `<body>` and the feedback-layer script tag
 - live page still contains the `?review=1` unlock logic for review mode
-- `https://cassclearly.com/feedback-layer.js?v=20260408` returned HTTP `200`
+- `/feedback-layer.js?v=20260421` returned HTTP `200`
 
 ### Live review/edit UI presence confirmed
 A headless browser check against the public `?review=1` URL confirmed:

@@ -341,7 +341,7 @@ Reference-card file:
 Lesson file:
 - `<body data-document-id="doc_8COJPE7TH7w">`
 - feedback-layer script:
-  - `src="https://cassclearly.com/feedback-layer.js?v=20260408"`
+  - `src="/feedback-layer.js?v=20260421"`
   - `data-api-url="https://cassclearly.com"`
   - `data-document-id="doc_8COJPE7TH7w"`
   - `data-content-selector="body"`
@@ -350,7 +350,7 @@ Lesson file:
 Reference-card file:
 - `<body data-document-id="doc_gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination">`
 - feedback-layer script:
-  - `src="https://cassclearly.com/feedback-layer.js?v=20260408"`
+  - `src="/feedback-layer.js?v=20260421"`
   - `data-api-url="https://cassclearly.com"`
   - `data-document-id="doc_gr2-ls2-unit1-refcard-lesson2-flower-anatomy-and-pollination"`
   - `data-content-selector="body"`

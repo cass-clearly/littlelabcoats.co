@@ -65,7 +65,7 @@ This includes:
 
 What “live-good” means in this report:
 - public URL returned `200`
-- page serves `https://cassclearly.com/feedback-layer.js?v=20260408`
+- page serves `/feedback-layer.js?v=20260421`
 - page serves `data-api-url="https://cassclearly.com"`
 - `body data-document-id` matches script `data-document-id`
 - non-free lessons expose review-mode unlock logic for `?review=1`

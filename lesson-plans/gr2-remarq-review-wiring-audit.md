@@ -192,8 +192,8 @@ Representative comparison results:
 | Grade | Review URL | Endpoint result | Interpretation |
 | --- | --- | --- | --- |
 | Grade 1 | `/lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html?review=1` | `192.168.5.204:3334` | older/legacy public review pages still point to private dev host |
-| Grade 3 | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1` | `https://cassclearly.com/feedback-layer.js?v=20260408` | Grade 3 representative page is already production-wired |
-| Grade 4 | `/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html?review=1` | `https://cassclearly.com/feedback-layer.js?v=20260408` | Grade 4 representative page is already production-wired |
+| Grade 3 | `/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html?review=1` | `/feedback-layer.js?v=20260421` | Grade 3 representative page is already production-wired |
+| Grade 4 | `/lesson-plans/gr4-ls1-unit1-lesson1-external-structures-for-survival.html?review=1` | `/feedback-layer.js?v=20260421` | Grade 4 representative page is already production-wired |
 
 Broader conclusion:
 - the problem is **not universal across the site**
