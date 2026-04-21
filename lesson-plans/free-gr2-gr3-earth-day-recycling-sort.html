@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth Day Recycling Sort & Earth Helper Pledge — Free Grade 2/3 Lesson | Little Lab Coats</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      --forest: #2e7d32;
+      --leaf: #66bb6a;
+      --mint: #e8f5e9;
+      --sky: #e3f2fd;
+      --ocean: #1976d2;
+      --sun: #fff8e1;
+      --gold: #ffca28;
+      --coral: #ff8a65;
+      --peach: #fff3e0;
+      --lavender: #f3e8ff;
+      --ink: #23303a;
+      --sand: #fffaf3;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 8.5in;
+      padding: 0.45in;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fffdf8 0%, #f7fbff 100%);
+    }
+    .lesson-branding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 0 18px 0;
+      padding: 10px 14px;
+      background: var(--sand);
+      border: 1.5px solid #ffd6a5;
+      border-radius: 12px;
+    }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 11pt;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #5A3A16;
+    }
+    h1 {
+      margin: 0 0 6px;
+      text-align: center;
+      font-size: 22pt;
+      color: #1f5f34;
+      border-bottom: 4px solid var(--leaf);
+      padding-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #567;
+      margin: 0 0 18px;
+      font-size: 12.5pt;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f1f8e9, #e1f5fe);
+      border: 1px solid #b2dfdb;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 10pt;
+    }
+    .hero-card {
+      background: white;
+      border: 2px solid #c8e6c9;
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 8px 24px rgba(46,125,50,0.08);
+      margin-bottom: 18px;
+    }
+    .hero-card img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+      border: 1px solid #dcefdc;
+    }
+    .hero-caption {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 10pt;
+      color: #5f6f67;
+      font-style: italic;
+    }
+    h2 {
+      font-size: 14pt;
+      color: white;
+      background: linear-gradient(135deg, var(--forest), #43a047);
+      padding: 9px 14px;
+      border-radius: 10px;
+      margin: 22px 0 12px;
+    }
+    h3 {
+      font-size: 12pt;
+      color: #1f5f34;
+      border-bottom: 2px solid #c8e6c9;
+      padding-bottom: 4px;
+      margin: 16px 0 8px;
+    }
+    p, li { margin-top: 0; }
+    ul, ol { padding-left: 24px; }
+    .big-idea {
+      background: linear-gradient(135deg, #fffde7, #e8f5e9);
+      border: 2px solid #dce775;
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin: 14px 0;
+    }
+    .quick-grid, .bin-grid, .action-grid, .extension-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 14px;
+      border: 2px solid #d9ebff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .materials { border-color: #ffe0b2; background: #fffaf0; }
+    .prep { border-color: #d1c4e9; background: #faf7ff; }
+    .tip-box {
+      background: var(--lavender);
+      border-left: 5px solid #7e57c2;
+      border-radius: 0 10px 10px 0;
+      padding: 12px 14px;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    .teacher-note {
+      background: #f5f5f5;
+      border: 2px dashed #9e9e9e;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 10pt;
+      color: #555;
+    }
+    .step {
+      background: #eef7ff;
+      border-left: 5px solid var(--ocean);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    .step strong { color: #0d47a1; }
+    .bin {
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 220px;
+      border: 3px dashed rgba(0,0,0,0.12);
+      break-inside: avoid;
+    }
+    .bin h3 { border: none; margin-top: 0; }
+    .bin.recycle { background: #e8f5e9; border-color: #66bb6a; }
+    .bin.compost { background: #fff8e1; border-color: #ffb300; }
+    .bin.trash { background: #f3f4f6; border-color: #90a4ae; }
+    .bin .small-note {
+      font-size: 9.5pt;
+      color: #556;
+      margin-bottom: 8px;
+    }
+    .item-chip {
+      display: inline-block;
+      padding: 8px 10px;
+      margin: 5px 6px 0 0;
+      border-radius: 999px;
+      background: white;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      font-size: 10pt;
+      font-weight: 600;
+    }
+    .worksheet-shell {
+      background: white;
+      border: 3px solid #c8e6c9;
+      border-radius: 20px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .name-line {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 12px;
+      font-size: 10.5pt;
+    }
+    .line {
+      flex: 1;
+      border-bottom: 2px solid #90a4ae;
+      min-height: 24px;
+    }
+    .cut-box {
+      border: 2px dashed #90caf9;
+      border-radius: 14px;
+      padding: 12px;
+      margin-top: 12px;
+      background: #f8fcff;
+    }
+    .item-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .item-card {
+      background: white;
+      border: 2px solid #dfe7ef;
+      border-radius: 14px;
+      padding: 12px 8px;
+      text-align: center;
+      min-height: 86px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      font-size: 9.8pt;
+      font-weight: 700;
+    }
+    .item-card .emoji { font-size: 22pt; line-height: 1; }
+    .action-grid .card { border-color: #c5e1a5; background: #fbfff8; }
+    .extension-grid .card { background: #fffdf7; border-color: #ffe082; }
+    .pledge-card {
+      background: linear-gradient(135deg, #fff8e1, #e8f5e9);
+      border: 3px solid #aed581;
+      border-radius: 20px;
+      padding: 18px;
+      margin-top: 14px;
+      text-align: center;
+    }
+    .pledge-fill {
+      border-bottom: 2px solid #5c6b73;
+      min-height: 28px;
+      margin: 10px 0;
+    }
+    .answer-key {
+      background: #f7f7f7;
+      border: 3px dashed #9e9e9e;
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 18px;
+    }
+    .answer-key h2 {
+      margin-top: 0;
+      background: #616161;
+    }
+    .footer-note {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 9.5pt;
+      color: #667;
+    }
+    .print-btn {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      border: none;
+      background: #2e7d32;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+    }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    @media (max-width: 720px) {
+      .quick-grid, .bin-grid, .action-grid, .extension-grid, .item-grid { grid-template-columns: 1fr; }
+      .print-btn { display: none; }
+    }
+    @media print {
+      body { padding: 0.25in; font-size: 10pt; background: white; }
+      .print-btn { display: none; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .hero-card, .big-idea, .card, .step, .bin, .worksheet-shell, .pledge-card, .answer-key, .teacher-note { break-inside: avoid; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body data-document-id="doc_free_gr23_earth_day_20260421">
+  <div class="lesson-branding"><img src="../images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+
+  <h1>🌎 Earth Day Recycling Sort &amp; Earth Helper Pledge 🌿</h1>
+  <p class="subtitle">A free Grade 2/3 Earth Day mini-lesson for celebrating, sorting, and helping the planet</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grades:</strong> 2nd–3rd</span>
+    <span>⏱️ <strong>Time:</strong> 35–45 minutes</span>
+    <span>🧰 <strong>Prep:</strong> Print, cut item cards if desired</span>
+    <span>🎁 <strong>Format:</strong> Free printable lesson + worksheet + answer key</span>
+  </div>
+
+  <div class="hero-card">
+    <img src="../images/lesson-plans/free-earth-day-recycling-hero-gemini.jpg" alt="Children sorting recycling outdoors on Earth Day">
+    <div class="hero-caption">Gemini-generated artwork for this free Earth Day lesson</div>
+  </div>
+
+  <div class="big-idea">
+    <strong>Big idea:</strong> Earth Day reminds us that small choices matter. When kids learn how to sort waste, reuse what they can, and care for shared spaces, they become real helpers for the planet right now — not just someday.
+  </div>
+
+  <h2>🎯 What kids will do</h2>
+  <ul>
+    <li>Sort common items into <strong>recycle</strong>, <strong>compost</strong>, or <strong>trash</strong>.</li>
+    <li>Talk about why some choices help the Earth more than others.</li>
+    <li>Choose one realistic action they can take this week as an <strong>Earth Helper</strong>.</li>
+  </ul>
+
+  <div class="quick-grid">
+    <div class="card materials">
+      <h3>📦 Materials</h3>
+      <ul>
+        <li>Printed worksheet pages</li>
+        <li>Scissors (optional)</li>
+        <li>Glue stick or tape (optional)</li>
+        <li>Crayons, markers, or colored pencils</li>
+      </ul>
+    </div>
+    <div class="card prep">
+      <h3>👩‍🏫 Quick prep</h3>
+      <ul>
+        <li>Decide whether students will <strong>draw lines</strong> to the bins or <strong>cut and sort</strong> the cards.</li>
+        <li>Remind students that <strong>recycling rules vary by town</strong>.</li>
+        <li>For this lesson, sort by the <strong>most common classroom-friendly rule of thumb</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>Teacher note:</strong> This is a celebration lesson, not a local recycling-law lesson. If your city handles an item differently, just tell students: “Good scientists check local rules too.”
+  </div>
+
+  <h2>🌱 Warm-up: What does it mean to help Earth?</h2>
+  <div class="step"><strong>Step 1 — Notice (3–5 min):</strong> Show the hero picture. Ask: “What are these kids doing that helps the planet?”</div>
+  <div class="step"><strong>Step 2 — Think (3 min):</strong> Ask: “What happens when things that could be reused or recycled get thrown away?”</div>
+  <div class="step"><strong>Step 3 — Share (3–5 min):</strong> Invite a few quick ideas: save water, pick up litter, recycle paper, reuse bags, walk instead of driving, plant flowers for pollinators.</div>
+
+  <h2>♻️ Mini teach: Three smart sorting choices</h2>
+  <div class="bin-grid">
+    <div class="bin recycle">
+      <h3>♻️ Recycle</h3>
+      <div class="small-note">Items made from paper, cardboard, metal, or some plastics can sometimes become new things again.</div>
+      <span class="item-chip">paper</span>
+      <span class="item-chip">cardboard</span>
+      <span class="item-chip">clean cans</span>
+      <span class="item-chip">clean bottles</span>
+    </div>
+    <div class="bin compost">
+      <h3>🍌 Compost</h3>
+      <div class="small-note">Fruit and plant scraps can break down and help make healthy soil.</div>
+      <span class="item-chip">banana peel</span>
+      <span class="item-chip">apple core</span>
+      <span class="item-chip">plant scraps</span>
+      <span class="item-chip">leaves</span>
+    </div>
+    <div class="bin trash">
+      <h3>🗑️ Trash</h3>
+      <div class="small-note">Some things cannot be recycled or composted in a simple home/classroom system.</div>
+      <span class="item-chip">chip bag</span>
+      <span class="item-chip">broken crayon</span>
+      <span class="item-chip">old sock</span>
+      <span class="item-chip">greasy paper</span>
+    </div>
+  </div>
+
+  <div class="teacher-note">
+    <strong>Helpful script:</strong> “Before we throw something away, we can ask: Can this be used again? Can it be recycled? Can it turn into soil? If not, then it probably goes in the trash.”
+  </div>
+
+  <h2>🧪 Activity: Sort it out!</h2>
+  <div class="step"><strong>Step 1:</strong> Read each item card together.</div>
+  <div class="step"><strong>Step 2:</strong> Students sort it into recycle, compost, or trash.</div>
+  <div class="step"><strong>Step 3:</strong> For any tricky item, ask: “Why did you choose that?”</div>
+  <div class="step"><strong>Step 4:</strong> Wrap up by choosing one Earth Helper promise for the week.</div>
+
+  <div class="page-break"></div>
+
+  <div class="worksheet-shell">
+    <h2 style="margin-top:0;">✂️ Student Worksheet — Earth Day Sort</h2>
+    <div class="name-line">
+      <div>Name: <span class="line"></span></div>
+      <div>Date: <span class="line"></span></div>
+    </div>
+    <p><strong>Directions:</strong> Cut out the cards or point and sort. Put each item in the best bin: <strong>Recycle</strong>, <strong>Compost</strong>, or <strong>Trash</strong>.</p>
+
+    <div class="bin-grid">
+      <div class="bin recycle">
+        <h3>♻️ Recycle</h3>
+        <div class="small-note">Can this material become something new again?</div>
+      </div>
+      <div class="bin compost">
+        <h3>🍎 Compost</h3>
+        <div class="small-note">Can it break down and help make soil?</div>
+      </div>
+      <div class="bin trash">
+        <h3>🗑️ Trash</h3>
+        <div class="small-note">If it does not fit the other two bins, it goes here.</div>
+      </div>
+    </div>
+
+    <div class="cut-box">
+      <strong>Item cards</strong>
+      <div class="item-grid">
+        <div class="item-card"><div class="emoji">📰</div><div>newspaper</div></div>
+        <div class="item-card"><div class="emoji">📦</div><div>cereal box</div></div>
+        <div class="item-card"><div class="emoji">🥫</div><div>aluminum can</div></div>
+        <div class="item-card"><div class="emoji">🧴</div><div>plastic bottle</div></div>
+        <div class="item-card"><div class="emoji">🍌</div><div>banana peel</div></div>
+        <div class="item-card"><div class="emoji">🍎</div><div>apple core</div></div>
+        <div class="item-card"><div class="emoji">🫙</div><div>glass jar</div></div>
+        <div class="item-card"><div class="emoji">🛍️</div><div>paper bag</div></div>
+        <div class="item-card"><div class="emoji">🧦</div><div>old sock</div></div>
+        <div class="item-card"><div class="emoji">🖍️</div><div>broken crayon</div></div>
+        <div class="item-card"><div class="emoji">🍕</div><div>greasy pizza box</div></div>
+        <div class="item-card"><div class="emoji">🥔</div><div>chip bag</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pledge-card">
+    <h2 style="margin-top:0;">💚 My Earth Helper Pledge</h2>
+    <p>I can help the planet in small, real ways. This week I promise to:</p>
+    <div class="pledge-fill"></div>
+    <div class="pledge-fill"></div>
+    <p><strong>Why this helps Earth:</strong></p>
+    <div class="pledge-fill"></div>
+    <div class="pledge-fill"></div>
+    <p style="margin-top:16px;">Signed: ____________________________</p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <div class="answer-key">
+    <h2>👩‍🏫 Parent / Teacher Answer Key</h2>
+    <p><strong>Sorting key for this printable:</strong></p>
+    <ul>
+      <li><strong>Recycle:</strong> newspaper, cereal box, aluminum can, plastic bottle, glass jar, paper bag</li>
+      <li><strong>Compost:</strong> banana peel, apple core</li>
+      <li><strong>Trash:</strong> old sock, broken crayon, greasy pizza box, chip bag</li>
+    </ul>
+
+    <h3>Good discussion questions</h3>
+    <ul>
+      <li>Why is a <strong>greasy</strong> pizza box different from a clean cardboard box?</li>
+      <li>Why is it smart to rinse containers before recycling them?</li>
+      <li>What is one thing at home you could reuse instead of throwing away?</li>
+    </ul>
+
+    <h3>What success looks like</h3>
+    <ul>
+      <li>Student correctly sorts most items.</li>
+      <li>Student can explain at least one choice.</li>
+      <li>Student chooses one realistic Earth Helper action they can actually do.</li>
+    </ul>
+  </div>
+
+  <h2>🌼 Easy extension ideas</h2>
+  <div class="extension-grid">
+    <div class="card">
+      <h3>Neighborhood helper walk</h3>
+      <p>Bring a glove and bag and pick up a few safe pieces of litter with an adult.</p>
+    </div>
+    <div class="card">
+      <h3>Reuse challenge</h3>
+      <p>Find one container at home that can be reused instead of tossed.</p>
+    </div>
+    <div class="card">
+      <h3>Water saver</h3>
+      <p>Turn off the tap while brushing teeth and report back how it felt.</p>
+    </div>
+    <div class="card">
+      <h3>Pollinator kindness</h3>
+      <p>Plant or notice one flower that helps bees or butterflies.</p>
+    </div>
+  </div>
+
+  <div class="footer-note">Made for Little Lab Coats • Free Earth Day printable • Artwork generated with Gemini and lesson assembled for print-friendly home use</div>
+</body>
+</html>
