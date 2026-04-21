@@ -283,9 +283,13 @@
         print-color-adjust: exact;
       }
       h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .unit-wrap-up, .worksheet-panel {
+      .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box, .tip-box, .extension-box, .unit-wrap-up, .worksheet-panel, .strategy-cards, .strategy-card {
         break-inside: avoid;
         page-break-inside: avoid;
+      }
+      .strategy-cards {
+        break-before: auto;
+        page-break-before: auto;
       }
       * {
         -webkit-print-color-adjust: exact;
