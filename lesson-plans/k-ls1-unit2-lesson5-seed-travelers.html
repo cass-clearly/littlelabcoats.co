@@ -179,32 +179,93 @@
       margin-bottom: 16px;
       font-size: 12pt;
     }
-    .matching-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 14px 0;
+    .match-board {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 120px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      margin: 16px 0 18px;
     }
-    .matching-table th {
-      background: #2e7d32;
-      color: white;
-      padding: 10px 14px;
-      font-size: 12pt;
-      text-align: left;
-      border: 2px solid #1b5e20;
-    }
-    .matching-table td {
-      border: 2px solid #a5d6a7;
-      padding: 10px 14px;
+    .match-column-title {
+      margin: 0 0 8px;
       font-size: 11pt;
-      vertical-align: middle;
+      color: #1b5e20;
+      text-align: center;
+      font-weight: bold;
     }
-    .matching-table tr:nth-child(even) td { background: #f1f8e9; }
-    .matching-line {
+    .match-list {
+      display: grid;
+      gap: 10px;
+    }
+    .match-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid #a5d6a7;
+      border-radius: 12px;
+      padding: 10px;
+      background: #fff;
+      min-height: 78px;
+      break-inside: avoid;
+    }
+    .seed-card { background: #f8fff8; }
+    .mechanism-card { background: #f7fbff; }
+    .match-illustration {
+      width: 58px;
+      height: 58px;
+      flex: 0 0 58px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1.5px solid #c8e6c9;
+      overflow: hidden;
+    }
+    .mechanism-card .match-illustration { border-color: #bbdefb; }
+    .match-text {
+      font-size: 10.5pt;
+      line-height: 1.25;
+    }
+    .match-text strong {
+      display: block;
+      color: #1b5e20;
+      margin-bottom: 2px;
+    }
+    .mechanism-card .match-text strong { color: #0d47a1; }
+    .match-lane {
+      min-height: 380px;
+      border: 3px dashed #c8e6c9;
+      border-radius: 16px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #ffffff 0,
+        #ffffff 36px,
+        #eef8ef 36px,
+        #eef8ef 72px
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      text-align: center;
+    }
+    .match-lane span {
       display: inline-block;
-      width: 160px;
-      border-bottom: 2px solid #555;
-      vertical-align: bottom;
-      margin-left: 8px;
+      color: #4f6f52;
+      font-size: 11pt;
+      font-weight: bold;
+      line-height: 1.35;
+    }
+    .mini-note {
+      font-size: 9.5pt;
+      color: #555;
+      margin-top: 3px;
+    }
+    .svg-fit {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
     .drawing-grid {
       display: grid;
@@ -547,44 +608,62 @@
     <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p>
 
     <h2>🔗 Part 1: Match the Seed to Its Travel Method</h2>
-    <p style="font-size:10pt; color:#555; margin-bottom:8px;">Draw a line from each seed to the way it travels. (Hint: some seeds might travel more than one way — pick the best match!)</p>
+    <p style="font-size:10pt; color:#555; margin-bottom:8px;">Draw a line from each seed picture to the travel picture that matches it best. Some seeds can connect to the same travel picture.</p>
 
-    <table class="matching-table">
-      <tr>
-        <th>🌿 Seed / Plant</th>
-        <th>How does it travel?</th>
-      </tr>
-      <tr>
-        <td>🌼 Dandelion puff</td>
-        <td><span class="matching-line"></span></td>
-      </tr>
-      <tr>
-        <td>🍁 Maple seed (helicopter)</td>
-        <td><span class="matching-line"></span></td>
-      </tr>
-      <tr>
-        <td>🌰 Coconut</td>
-        <td><span class="matching-line"></span></td>
-      </tr>
-      <tr>
-        <td>🪢 Sticky burr</td>
-        <td><span class="matching-line"></span></td>
-      </tr>
-      <tr>
-        <td>🍓 Strawberry / berry</td>
-        <td><span class="matching-line"></span></td>
-      </tr>
-      <tr>
-        <td>💥 Touch-me-not seed pod</td>
-        <td><span class="matching-line"></span></td>
-      </tr>
-    </table>
+    <div class="match-board">
+      <div>
+        <p class="match-column-title">Seed pictures</p>
+        <div class="match-list">
+          <div class="match-card seed-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="30" r="8" fill="#8bc34a"/><g stroke="#dce775" stroke-linecap="round" stroke-width="3"><line x1="32" y1="7" x2="32" y2="20"/><line x1="32" y1="40" x2="32" y2="53"/><line x1="9" y1="30" x2="22" y2="30"/><line x1="42" y1="30" x2="55" y2="30"/><line x1="16" y1="14" x2="24" y2="22"/><line x1="40" y1="38" x2="48" y2="46"/><line x1="16" y1="46" x2="24" y2="38"/><line x1="40" y1="22" x2="48" y2="14"/><line x1="22" y1="10" x2="27" y2="21"/><line x1="37" y1="39" x2="42" y2="50"/><line x1="10" y1="22" x2="21" y2="27"/><line x1="43" y1="33" x2="54" y2="38"/></g></svg></div>
+            <div class="match-text"><strong>Dandelion puff</strong><span class="mini-note">Soft fluff helps it drift.</span></div>
+          </div>
+          <div class="match-card seed-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><path d="M12 16c17 2 27 11 39 32-19-1-30-11-39-32Z" fill="#cddc39" stroke="#7cb342" stroke-width="2"/><path d="M18 22c11 8 17 14 24 24" stroke="#558b2f" stroke-width="2.5" stroke-linecap="round"/><circle cx="18" cy="22" r="4" fill="#8d6e63"/></svg></div>
+            <div class="match-text"><strong>Maple seed</strong><span class="mini-note">The wing spins like a helicopter.</span></div>
+          </div>
+          <div class="match-card seed-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="34" rx="18" ry="22" fill="#8d6e63"/><ellipse cx="32" cy="34" rx="11" ry="15" fill="#f5f5dc"/><path d="M24 17c4-5 12-5 16 0" stroke="#4e342e" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div>
+            <div class="match-text"><strong>Coconut</strong><span class="mini-note">A floaty husk carries it.</span></div>
+          </div>
+          <div class="match-card seed-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="15" ry="11" fill="#8d6e63"/><g stroke="#5d4037" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="25" x2="13" y2="20"/><line x1="17" y1="31" x2="9" y2="31"/><line x1="18" y1="38" x2="12" y2="44"/><line x1="46" y1="25" x2="51" y2="20"/><line x1="47" y1="31" x2="55" y2="31"/><line x1="46" y1="38" x2="52" y2="44"/></g></svg></div>
+            <div class="match-text"><strong>Sticky burr</strong><span class="mini-note">Hooks grab onto fur.</span></div>
+          </div>
+          <div class="match-card seed-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 50c-11-8-16-14-16-22a9 9 0 0 1 16-5 9 9 0 0 1 16 5c0 8-5 14-16 22Z" fill="#ef5350"/><circle cx="25" cy="30" r="2" fill="#fff59d"/><circle cx="34" cy="35" r="2" fill="#fff59d"/><circle cx="39" cy="28" r="2" fill="#fff59d"/></svg></div>
+            <div class="match-text"><strong>Berry</strong><span class="mini-note">A juicy fruit invites an animal snack.</span></div>
+          </div>
+          <div class="match-card seed-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><path d="M19 18c8 3 18 3 26 0-3 8-3 20 0 28-8-3-18-3-26 0 3-8 3-20 0-28Z" fill="#81c784" stroke="#388e3c" stroke-width="2"/><circle cx="22" cy="25" r="2.5" fill="#4e342e"/><circle cx="42" cy="31" r="2.5" fill="#4e342e"/><circle cx="27" cy="39" r="2.5" fill="#4e342e"/><path d="M32 15v-6" stroke="#2e7d32" stroke-width="3" stroke-linecap="round"/><path d="M22 18l-8-8M42 18l8-8" stroke="#ef5350" stroke-width="3" stroke-linecap="round"/></svg></div>
+            <div class="match-text"><strong>Touch-me-not pod</strong><span class="mini-note">The pod can pop the seeds out.</span></div>
+          </div>
+        </div>
+      </div>
 
-    <div style="margin: 6px 0 14px 0; display:flex; gap:18px; flex-wrap:wrap; font-size:11pt;">
-      <span>💨 <strong>Wind</strong></span>
-      <span>🌊 <strong>Water</strong></span>
-      <span>🐿️ <strong>Animals</strong></span>
-      <span>💥 <strong>Explosion</strong></span>
+      <div class="match-lane"><span>Draw your lines<br>through this space</span></div>
+
+      <div>
+        <p class="match-column-title">Travel pictures</p>
+        <div class="match-list">
+          <div class="match-card mechanism-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><path d="M9 23c8-6 18-6 28 0" stroke="#64b5f6" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M23 15l14 8-15 5" fill="#64b5f6"/><path d="M15 38c8-5 17-5 26 0" stroke="#90caf9" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M30 31l11 7-13 5" fill="#90caf9"/><circle cx="50" cy="20" r="6" fill="#fff59d"/></svg></div>
+            <div class="match-text"><strong>Wind</strong><span class="mini-note">Air blows the seed away.</span></div>
+          </div>
+          <div class="match-card mechanism-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 39c6-8 12-10 20-4s14 6 20-2 10-8 12-6v20H6Z" fill="#4fc3f7"/><path d="M6 48c8-5 15-5 22 0s15 5 22 0 8-5 8-5" stroke="#0288d1" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M12 23l7 10h-14Z" fill="#8d6e63"/></svg></div>
+            <div class="match-text"><strong>Water</strong><span class="mini-note">The seed floats on waves.</span></div>
+          </div>
+          <div class="match-card mechanism-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="31" cy="36" rx="18" ry="15" fill="#d7ccc8"/><circle cx="45" cy="28" r="10" fill="#d7ccc8"/><circle cx="48" cy="25" r="2" fill="#333"/><path d="M42 36c3 2 6 2 9 0" stroke="#8d6e63" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M16 25c4-8 10-12 18-9" stroke="#8d6e63" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M40 17c2-7 8-10 13-7" stroke="#8d6e63" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M18 39l9-9M24 42l9-9M30 45l9-9" stroke="#6d4c41" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+            <div class="match-text"><strong>Animal fur</strong><span class="mini-note">A seed sticks and rides along.</span></div>
+          </div>
+          <div class="match-card mechanism-card">
+            <div class="match-illustration"><svg class="svg-fit" viewBox="0 0 64 64" aria-hidden="true"><path d="M21 15c6 4 16 4 22 0-2 7-2 18 0 25-6-4-16-4-22 0 2-7 2-18 0-25Z" fill="#a5d6a7" stroke="#388e3c" stroke-width="2"/><path d="M22 17l-9-8M42 17l9-8" stroke="#ef5350" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="43" r="3" fill="#5d4037"/><circle cx="32" cy="49" r="3" fill="#5d4037"/><circle cx="45" cy="42" r="3" fill="#5d4037"/></svg></div>
+            <div class="match-text"><strong>Popping pod</strong><span class="mini-note">The pod bursts and shoots seeds.</span></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <h2>✏️ Part 2: Draw It!</h2>
