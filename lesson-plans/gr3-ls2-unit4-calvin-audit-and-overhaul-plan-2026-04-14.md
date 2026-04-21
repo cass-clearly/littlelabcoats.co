@@ -10,6 +10,12 @@ Scope: continuity, novelty, repetition, knowledge progression, experiment differ
 
 Serena is right again: this unit is not a clean 6-step progression. It reads like six versions of the same claim — **group behavior helps survival** — with small example swaps instead of real knowledge lift. Lessons 2–5 all reuse the same pattern: look at one group behavior, compare group vs alone, fill in a three-column chart, then restate the survival benefit. That makes the middle of the unit flat, and Lesson 5 is especially weak because it overlaps heavily with Grade 1 parent/offspring protection work instead of feeling like a stronger Grade 3 behavior lesson. Calvin judgment: **complete overhaul recommended**.
 
+### Progress note — 2026-04-20
+Implemented in repo after this audit:
+- `lesson-plans/gr3-ls2-unit4-lesson5-parents-babies-and-group-protection.html` was rebuilt in place as a stronger synthesis lesson titled **Match the Behavior to the Survival Challenge**
+- the matching support card `lesson-plans/gr3-ls2-unit4-refcard-lesson5-parents-babies-and-group-protection.html` was rebuilt to match that new lesson job
+- `lesson-plans/gr3-ls2-unit4-quiz.html` and `lesson-plans/gr3-ls2-unit4-lesson6-model-how-group-behavior-helps-survival.html` were updated so Lesson 5's role is now reflected honestly in the unit packaging
+
 ## Lesson-by-lesson findings
 
 ### Lesson 1 — `gr3-ls2-unit4-lesson1-why-animals-sometimes-stick-together.html`
