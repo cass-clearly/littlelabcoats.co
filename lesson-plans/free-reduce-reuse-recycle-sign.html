@@ -27,15 +27,15 @@
       color: var(--ink);
       display: flex;
       justify-content: center;
-      padding: 24px;
+      padding: 32px;
     }
     .page {
       width: 8.5in;
       min-height: 11in;
       background: white;
-      border: 16px solid #dcedc8;
+      border: 12px solid #dcedc8;
       border-radius: 28px;
-      padding: 0.45in;
+      padding: 0.58in 0.62in 0.72in;
       position: relative;
       overflow: hidden;
       box-shadow: 0 12px 30px rgba(0,0,0,0.08);
@@ -50,7 +50,7 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin: 0 0 18px 0;
+      margin: 0 0 20px 0;
       padding: 10px 14px;
       background: var(--sand);
       border: 1.5px solid #ffd6a5;
@@ -71,12 +71,12 @@
       letter-spacing: 0.12em;
       font-size: 10pt;
       color: #5f7f68;
-      margin-top: 6px;
+      margin-top: 10px;
     }
     h1 {
       text-align: center;
       font-size: 34pt;
-      margin: 22px 0 10px;
+      margin: 20px 0 12px;
       color: #1f5f34;
       line-height: 1.1;
     }
@@ -150,7 +150,7 @@
     .recycle { background: linear-gradient(135deg, #e3f2fd, #e8eaf6); }
     .recycle .word { color: #1565c0; }
     .footer-banner {
-      margin-top: 22px;
+      margin-top: 28px;
       border-radius: 22px;
       padding: 18px 20px;
       text-align: center;
@@ -168,7 +168,8 @@
       color: #4f5f67;
     }
     .footer-mini {
-      margin-top: 14px;
+      margin-top: 18px;
+      padding-bottom: 4px;
       text-align: center;
       font-family: 'Lato', Arial, sans-serif;
       font-size: 9.5pt;
@@ -188,17 +189,33 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.16);
     }
     @media print {
-      @page { size: letter portrait; margin: 0.25in; }
+      @page { size: letter portrait; margin: 0.42in; }
       body { background: white; padding: 0; }
       .print-btn { display: none; }
       .page {
-        width: auto;
-        min-height: auto;
+        width: 100%;
+        min-height: calc(11in - 0.84in);
         box-shadow: none;
-        border-radius: 0;
-        border-width: 12px;
+        border-radius: 20px;
+        border-width: 10px;
+        padding: 0.44in 0.48in 0.54in;
         margin: 0;
       }
+      .lesson-branding { margin-bottom: 16px; }
+      .top-note { margin-top: 4px; font-size: 9pt; }
+      h1 { font-size: 31pt; margin: 16px 0 8px; }
+      .subtitle { font-size: 14pt; margin-bottom: 10px; }
+      .subcopy { margin-bottom: 14px; font-size: 10.8pt; line-height: 1.4; }
+      .icon-row { margin: 4px 0 16px; gap: 14px; font-size: 24pt; }
+      .main-stack { gap: 14px; }
+      .word-card { padding: 16px 18px; gap: 14px; }
+      .word-card .emoji { width: 64px; height: 64px; font-size: 30pt; }
+      .word-card .word { font-size: 25pt; margin-bottom: 4px; }
+      .word-card .desc { font-size: 12pt; line-height: 1.28; }
+      .footer-banner { margin-top: 20px; padding: 14px 18px; }
+      .footer-banner .big { font-size: 20pt; margin-bottom: 4px; }
+      .footer-banner .small { font-size: 11pt; }
+      .footer-mini { margin-top: 12px; font-size: 9pt; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
   </style>
