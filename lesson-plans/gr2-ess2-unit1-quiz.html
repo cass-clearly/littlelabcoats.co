@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Detectives &amp; Wild Storms Unit Quiz — Grade 2</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.45in; font-size: 11pt; line-height: 1.45; color: #222; background: #fff; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1e88e5; padding-bottom: 10px; color: #1e88e5; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1e88e5; color: white; padding: 8px 14px; margin: 24px 0 12px; border-radius: 6px; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .question-card { background: #fff; border: 2px solid #dbeeff; border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+    .q-number { font-size: 0.8rem; font-weight: 700; color: #1e88e5; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .q-text { font-size: 1.02rem; font-weight: 600; color: #222; margin-bottom: 14px; line-height: 1.4; }
+    .options-list { list-style: none; padding: 0; margin: 0; }
+    .options-list li { margin-bottom: 8px; }
+    .option-btn { width: 100%; text-align: left; background: #f7fbff; border: 2px solid #dbeeff; border-radius: 8px; padding: 10px 14px; font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; gap: 10px; color: #333; font-family: inherit; }
+    .option-btn.correct, .option-btn.revealed-correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; }
+    .option-btn.wrong { background: #ffebee; border-color: #e53935; color: #c62828; }
+    .option-icon { font-size: 1.1rem; min-width: 22px; text-align: center; }
+    .explanation { display: none; background: #eef7ff; border-left: 4px solid #1e88e5; border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 14px; font-size: 0.9rem; color: #444; line-height: 1.5; }
+    .explanation.show { display: block; }
+    .score-bar { background: #f7fbff; border: 2px solid #dbeeff; border-radius: 10px; padding: 14px 18px; text-align: center; font-size: 1rem; font-weight: 700; color: #0d47a1; margin-bottom: 18px; }
+    .results-section { display: none; background: white; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); padding: 24px 22px; margin: 24px 0; text-align: center; border: 3px solid #1e88e5; }
+    .results-section.show { display: block; }
+    .results-section .score-display { font-size: 2.4rem; font-weight: 800; color: #1e88e5; margin: 8px 0; }
+    .see-score-btn { background: #1e88e5; color: white; border: none; padding: 14px 32px; border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; display: block; margin: 10px auto; }
+    .back-link { display: inline-block; margin-top: 8px; color: #1e88e5; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+    .worksheet-section { margin: 20px 0; }
+    .fill-line { border-bottom: 2px solid #90caf9; min-height: 26px; margin: 8px 0 14px; display: block; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .answer-key h2 { background: #616161; text-align: center; }
+    .page-break { page-break-before: always; margin-top: 20px; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; }
+    .lesson-branding { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 18px 0; padding: 10px 14px; background: #fffaf3; border: 1.5px solid #ffd6a5; border-radius: 12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    @media print { .see-score-btn, .results-section, .score-bar, .llc-paywall-overlay { display:none !important; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  </style>
+</head>
+<body>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+  <h1>🌦️ Weather Detectives &amp; Wild Storms Unit Quiz</h1>
+  <p class="subtitle">Grade 2 Earth Science — Unit 1 Quiz</p>
+  <div class="meta"><span>📚 <strong>Grade:</strong> 2nd Grade</span><span>🌎 <strong>Subject:</strong> Earth Science</span><span>📝 <strong>Format:</strong> Quiz + short response</span></div>
+  <div class="tip-box"><strong>Family tip:</strong> This quiz checks the whole weather unit: tools, cloud clues, severe weather, forecasting, water in the air, and storm engineering. Encourage your child to explain <em>why</em>, not only pick an answer.</div>
+  <div class="score-bar">Score: <span id="scoreDisplay">0</span> / <span id="answeredDisplay">0</span> correct &nbsp;|&nbsp; <span id="totalDisplay">8</span> multiple-choice questions</div>
+  <a href="gr2-ess2-unit1-lesson6-engineer-for-the-storm.html" class="back-link">← Back to Unit Lesson 6</a>
+  <div id="questions-container" style="margin-top:20px;"></div>
+  <button class="see-score-btn" onclick="showResults()">📊 See Your Score</button>
+  <div class="results-section" id="resultsBox"><div style="font-size:2.5rem; margin-bottom:4px;">🏆</div><div class="score-display" id="finalScore">0 / 8</div><div class="encouragement" id="encouragementText">Nice work, meteorologist!</div><a href="gr2-ess2-unit1-lesson1-weather-station-builders.html" class="back-link">↺ Review the unit lessons</a></div>
+
+  <div class="worksheet-section">
+    <h2>✍️ Short Response — Use Evidence</h2>
+    <p>Explain one weather forecast or one storm design choice using evidence from the unit.</p>
+    <p><strong>Prompt:</strong> Name the clue or problem, explain what you predicted or designed, and use one piece of evidence to show why your answer makes sense.</p>
+    <span class="fill-line"></span><span class="fill-line"></span><span class="fill-line"></span>
+  </div>
+
+  <h2>👩‍🏫 Parent/Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li><strong>Use the quiz and short response together:</strong> the multiple-choice questions check recognition, but the short response checks science reasoning.</li>
+      <li><strong>Look for evidence words:</strong> strong responses use words like because, clue, pattern, test, droplets, wind, or redesign.</li>
+      <li><strong>Fast grading tip:</strong> scan for whether the child names a real weather clue or real test result instead of giving a vague opinion.</li>
+    </ul>
+  </div>
+
+  <div class="page-break"><div class="answer-key"><h2>✂️ PARENT ANSWER KEY — Detach before giving worksheet to students</h2><p><strong>Parent note:</strong> Student wording may vary if the weather reasoning is correct.</p><h3>Multiple-Choice Answer Key</h3><ol><li>Tools help scientists collect evidence and compare one day to another</li><li>Dark thick clouds can be a clue that rain or storms may be closer</li><li>Moving floodwater can push people or cars and hide the road</li><li>A forecast is stronger when it uses more than one clue or pattern</li><li>Water vapor cools and condenses into droplets</li><li>The droplets on the plastic came from water in the air, not through the plastic</li><li>Engineers should test Version 1 and Version 2 in the same way so the comparison is fair</li><li>A strong redesign explanation names a failure point and one change that improved the design</li></ol><h3>Short Response — What Success Looks Like</h3><ul><li>Student names a real weather clue or design problem.</li><li>Student explains the forecast or design choice clearly.</li><li>Student supports the answer with a specific clue, pattern, droplet observation, or test result.</li></ul><h3>Short Response — Sample Acceptable Answer</h3><p>“I predicted rain later because the clouds got darker and the wind got stronger. Those clues showed that the weather pattern was changing.”</p></div></div>
+
+  <script>
+    const quizData = [
+      { q: 'Why do meteorologists use tools like rain gauges and windsocks?', opts: ['To make the weather prettier', 'To collect evidence and compare days', 'To stop storms from happening', 'To guess without looking'], a: 1, exp: 'Weather tools help scientists gather clearer evidence so they can compare one day with another.' },
+      { q: 'Which cloud clue could warn that rain or storms are getting closer?', opts: ['Thin clouds disappearing', 'Dark, thick clouds growing taller', 'A clear blue sky all day', 'No wind and no clouds'], a: 1, exp: 'Dark, taller storm clouds are often a clue that wetter or stormier weather may be close.' },
+      { q: 'Why is floodwater dangerous even if it looks shallow?', opts: ['It is always warm', 'It can push people or cars and hide the road', 'It makes clouds disappear', 'It cannot move'], a: 1, exp: 'Floodwater can move fast and hide what is underneath, which makes it dangerous.' },
+      { q: 'What makes a weather forecast stronger?', opts: ['Using more than one clue or pattern', 'Picking your favorite answer', 'Ignoring yesterday’s weather', 'Only saying what you hope'], a: 0, exp: 'A forecast is stronger when it uses multiple clues and patterns instead of one random guess.' },
+      { q: 'What happens when water vapor cools?', opts: ['It turns into dry dust', 'It condenses into droplets', 'It disappears forever', 'It becomes wind'], a: 1, exp: 'Cooling water vapor condenses into droplets, which can help form clouds.' },
+      { q: 'In the water-in-the-air lesson, where did the droplets on the plastic come from?', opts: ['They leaked through the plastic', 'They were painted on', 'They came from water in the air that condensed', 'They came from the table'], a: 2, exp: 'The droplets came from water vapor in the air that cooled and condensed on the surface.' },
+      { q: 'Why should engineers test Version 1 and Version 2 in the same way?', opts: ['So the comparison is fair', 'So one version can cheat', 'So the fan gets tired', 'So the test takes longer'], a: 0, exp: 'Using the same test conditions makes it possible to compare the two designs honestly.' },
+      { q: 'What makes a redesign explanation strong?', opts: ['It says the design is cool', 'It names a failure point and one change that improved it', 'It skips the test results', 'It ignores Version 1'], a: 1, exp: 'A strong redesign explanation tells what failed first, what changed, and how the evidence improved.' }
+    ];
+    let score = 0; let answered = 0;
+    function renderQuiz(){ const container = document.getElementById('questions-container'); quizData.forEach((item, idx) => { const card = document.createElement('div'); card.className = 'question-card'; card.innerHTML = `<div class="q-number">Question ${idx+1}</div><div class="q-text">${item.q}</div>`; const ul = document.createElement('ul'); ul.className = 'options-list'; const exp = document.createElement('div'); exp.className = 'explanation'; exp.textContent = item.exp; item.opts.forEach((opt, optIdx) => { const li = document.createElement('li'); const btn = document.createElement('button'); btn.className = 'option-btn'; btn.innerHTML = `<span class="option-icon">🔹</span><span>${opt}</span>`; li.appendChild(btn); ul.appendChild(li); btn.onclick = () => answerQuestion(idx, optIdx, btn, ul, exp); }); card.appendChild(ul); card.appendChild(exp); container.appendChild(card); }); }
+    function answerQuestion(qIdx, optIdx, btn, ul, exp){ if (ul.dataset.answered === 'true') return; ul.dataset.answered = 'true'; answered++; const correctIdx = quizData[qIdx].a; Array.from(ul.querySelectorAll('.option-btn')).forEach((b, i) => { b.disabled = true; if (i === correctIdx) b.classList.add('revealed-correct'); }); if (optIdx === correctIdx) { btn.classList.remove('revealed-correct'); btn.classList.add('correct'); score++; } else { btn.classList.add('wrong'); } exp.classList.add('show'); document.getElementById('scoreDisplay').textContent = score; document.getElementById('answeredDisplay').textContent = answered; }
+    function showResults(){ const box = document.getElementById('resultsBox'); box.classList.add('show'); document.getElementById('finalScore').textContent = `${score} / ${quizData.length}`; let msg = 'Nice work, meteorologist!'; if (score === quizData.length) msg = 'Perfect score! You used weather evidence like a real scientist.'; else if (score >= 6) msg = 'Great job! You are connecting clues, patterns, and storm design ideas well.'; else if (score >= 4) msg = 'Good work! Review the weather clues and design tests to strengthen your explanations.'; else msg = 'Keep exploring! Go back through the unit and practice using evidence for your ideas.'; document.getElementById('encouragementText').textContent = msg; }
+    renderQuiz();
+  </script>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full quiz.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockQuiz() {
+      var cards = Array.from(document.querySelectorAll('.question-card'));
+      var freePreviewCount = 2;
+      cards.forEach(function(card, index) { if (index >= freePreviewCount) card.style.display = 'none'; });
+      var responseSection = document.querySelector('.worksheet-section');
+      if (responseSection) responseSection.style.display = 'none';
+      var answerKey = document.querySelector('.page-break');
+      if (answerKey) answerKey.style.display = 'none';
+      var seeScoreButton = document.querySelector('.see-score-btn');
+      if (seeScoreButton) seeScoreButton.style.display = 'none';
+      var resultsBox = document.getElementById('resultsBox');
+      if (resultsBox) resultsBox.style.display = 'none';
+      document.body.style.paddingBottom = '220px';
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockQuiz();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

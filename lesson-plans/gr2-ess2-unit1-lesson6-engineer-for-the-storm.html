@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineer for the Storm — Grade 2 Earth Science Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #8e44ad; padding-bottom: 10px; color: #8e44ad; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #f4e6fb; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #d2b4de; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #8e44ad; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #6c3483; border-bottom: 2px solid #d2b4de; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .objective-box, .materials-box, .teacher-note, .answer-key, .extension-box { border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; font-size: 10pt; }
+    .objective-box { background: #f4e6fb; border: 2px solid #d2b4de; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #f4e6fb; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #8e44ad; }
+    .question-box { background: #fdf7ff; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #eef7ff; border-left: 5px solid #4a90e2; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; }
+    .extension-box { background: #f7f0ff; border: 1px solid #d2b4de; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #fbf6ff; border: 1.5px solid #8e44ad; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #6c3483; }
+    .criteria-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+    .criteria-card { border: 2px solid #d2b4de; border-radius: 10px; padding: 12px; background: #fff; }
+    .criteria-card strong { color: #6c3483; display:block; margin-bottom: 6px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-header { background: #8e44ad; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .draw-area { border: 1.5px dashed #d2b4de; border-radius: 8px; min-height: 120px; background: #fdfaff; margin: 8px 0 12px; padding: 8px; }
+    .line { border-bottom: 1.5px solid #d2b4de; min-height: 24px; margin: 8px 0 12px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #8e44ad; color: white; padding: 8px; border: 1px solid #6c3483; }
+    .ws-table td { border: 1px solid #d2b4de; padding: 8px; height: 44px; vertical-align: top; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #8e44ad; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .answer-key, .criteria-card, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <h1>🏗️ Engineer for the Storm</h1>
+  <p class="subtitle">Earth Science — Weather Detectives &amp; Wild Storms | Unit 1, Lesson 6 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 55–65 minutes</span>
+    <span>🌎 <strong>Subject:</strong> Earth Science + Engineering</span>
+    <span>🧪 <strong>Hands-on Hook:</strong> Build and test a mini storm shelter</span>
+  </div>
+
+  <div class="hero-image"><div class="emoji-hero">🌪️🏠💨</div><div class="caption">Scientists learn about storms. Engineers use that information to design safer tools and shelters.</div></div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS-aligned focus:</strong><br>
+    Applying weather evidence to an engineering challenge by planning, building, testing, and improving a storm-resistant design.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will design a small shelter or storm-protection model, test it against wind and rain, and use test evidence to explain how one redesign made the model better.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Weather science is useful because it helps people prepare and design wisely. If engineers know that a storm may bring wind, heavy rain, or both, they can test materials and shapes that protect people, animals, or equipment better.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>This capstone lesson is the payoff of the whole weather unit. Students have learned about weather tools, cloud clues, severe-weather warning signs, forecasting, and water in the air. Now they apply that knowledge. A flat roof might catch more water. A loose wall might fall when the wind blows. A stronger shape or a better cover can improve the design.</p>
+  <p>This goes beyond earlier-grade “build something fun” engineering because the design choices must connect to real storm evidence. That makes the challenge feel like real problem solving, not just crafting.</p>
+
+  <div class="tip-box">
+    <strong>💬 Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">criteria</span>
+      <span class="vocab-chip">constraint</span>
+      <span class="vocab-chip">prototype</span>
+      <span class="vocab-chip">test</span>
+      <span class="vocab-chip">redesign</span>
+      <span class="vocab-chip">evidence</span>
+    </div>
+  </div>
+
+  <h2>🧰 Materials</h2>
+  <div class="materials-box">
+    <ul>
+      <li>Paper, index cards, or cardstock</li>
+      <li>Tape</li>
+      <li>Craft sticks, straws, or pencils</li>
+      <li>Cotton balls, toy animal, or a paper weather station card to protect</li>
+      <li>Small tray</li>
+      <li>Fan, hair dryer on cool, or strong hand fanning</li>
+      <li>Spray bottle or spoonfuls of water</li>
+      <li>Student worksheet page from this lesson</li>
+    </ul>
+  </div>
+
+  <h2>📏 Design Challenge Rules</h2>
+  <div class="criteria-grid">
+    <div class="criteria-card"><strong>Criteria</strong>Your design should protect the object inside from wind and water as well as possible.</div>
+    <div class="criteria-card"><strong>Constraint</strong>Use only the simple materials you have at home and build something small enough to test on a tray.</div>
+    <div class="criteria-card"><strong>Evidence rule</strong>You must change something for Version 2 and explain why that change helped or did not help.</div>
+  </div>
+
+  <h2>🔍 Let’s Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Define the storm problem:</strong> Choose what your shelter protects: a cotton-ball “family,” a toy animal, or a weather station note card. Ask what dangers your design needs to handle — wind, rain, or both.</div>
+  <div class="procedure-step"><strong>Step 2 — Plan Version 1:</strong> Sketch the shape before building. Point to the parts that block wind, cover the top, or hold the structure steady.</div>
+  <div class="procedure-step"><strong>Step 3 — Build the prototype:</strong> Use the materials to build a first version on the tray. Keep it simple enough to improve later.</div>
+  <div class="procedure-step"><strong>Step 4 — Run the storm test:</strong> Blow wind with a fan or by fanning. Then add light rain with a spray bottle or spoon. Watch what fails first: tipping, leaking, flapping, or collapsing.</div>
+  <div class="procedure-step"><strong>Step 5 — Redesign:</strong> Change one or two important features. Maybe add a stronger base, a slanted roof, more tape, or lower walls.</div>
+  <div class="procedure-step"><strong>Step 6 — Test again and defend your answer:</strong> Compare Version 1 and Version 2 under the same storm test. Which one worked better, and what evidence proves it?</div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Why should engineers test a model instead of only saying, “I think this will work”?</strong><span class="discussion-hint">Look for: tests give evidence and can reveal hidden problems.</span></div>
+  <div class="question-box"><strong>What failed first in Version 1, and why does that matter?</strong><span class="discussion-hint">Look for: naming a real failure point like leaking roof, tipping wall, or weak base.</span></div>
+  <div class="question-box"><strong>Why is it smart to test Version 2 in the same way as Version 1?</strong><span class="discussion-hint">Look for: same test makes the comparison fair.</span></div>
+  <div class="question-box"><strong>How did weather science help your design choices?</strong><span class="discussion-hint">Look for: connecting wind, rain, storm clues, or severe weather learning to the engineering decisions.</span></div>
+
+  <h2>🌟 Extension</h2>
+  <div class="extension-box">
+    <p><strong>Extra challenge:</strong> Design a weather-alert tool instead of a shelter, such as a bright signal flag, warning sign, or simple rain cover for a weather station.</p>
+    <p><strong>Gifted extension:</strong> Test three roof shapes or three wall materials and make a small bar graph of which one performed best.</p>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li>This lesson earns its Grade 2 slot because students must <strong>use weather knowledge to justify a design</strong>, not just build something cute.</li>
+      <li>Keep the storm test gentle but fair. A cool hair dryer setting, a small fan, or hand fanning is enough for this age.</li>
+      <li>If the first design fails badly, celebrate it. Engineers learn from failure points.</li>
+      <li>The strongest explanations name one failure point, one change, and one piece of evidence from the second test.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet</h2>
+    <div class="worksheet-header">Engineer for the Storm — Student Worksheet</div>
+    <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+
+    <h3>1️⃣ My Design Plan</h3>
+    <p>I am protecting ________________________________________________.</p>
+    <p>My design must handle _____________________________________________.</p>
+    <div class="draw-area">Sketch Version 1. Label the roof, walls, base, or other important parts.</div>
+
+    <h3>2️⃣ Storm Test Results</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Version</th>
+        <th>What happened in wind?</th>
+        <th>What happened in rain?</th>
+        <th>Biggest failure point</th>
+      </tr>
+      <tr><td>Version 1</td><td></td><td></td><td></td></tr>
+      <tr><td>Version 2</td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>3️⃣ My Redesign</h3>
+    <p>I changed _________________________________________________</p>
+    <div class="line"></div>
+    <p>because Version 1 _________________________________________________</p>
+    <div class="line"></div>
+
+    <h3>4️⃣ My Evidence Claim</h3>
+    <p>Version ______ worked better because _________________________________________________</p>
+    <div class="line"></div>
+    <p>The evidence is _________________________________________________</p>
+    <div class="line"></div>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key — Detach Before Giving Worksheet to Students</h2>
+      <h3>1️⃣ My Design Plan</h3>
+      <p>Accept any reasonable design that clearly aims to protect the chosen object from wind, rain, or both.</p>
+
+      <h3>2️⃣ Storm Test Results</h3>
+      <p>Answers vary. Strong observations describe a real result such as tipping, leaking, blowing over, or staying stable.</p>
+
+      <h3>3️⃣ My Redesign</h3>
+      <p>Look for a specific change tied to a failure point. Example: “I added more tape and a slanted roof because Version 1 leaked and the top bent down.”</p>
+
+      <h3>4️⃣ My Evidence Claim</h3>
+      <p>A strong claim compares the same test conditions across versions and cites one clear piece of evidence. Example: “Version 2 worked better because it did not tip in the fan test. The evidence is that the cotton balls stayed dry and the walls stayed standing.”</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>The child plans, builds, and tests instead of skipping straight to a final claim.</li>
+        <li>The child identifies a real failure point in Version 1.</li>
+        <li>The child connects the redesign to storm evidence and compares the two versions fairly.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

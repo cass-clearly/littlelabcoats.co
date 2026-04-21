@@ -226,16 +226,31 @@ Reason:
 - Matter hardening is valuable, but Grade 2 already has one decent PS1 unit.
 - Additional engineering is justified, but it will be stronger after weather science exists to feed it.
 
-## Concrete build started tonight
+## Concrete build progress
 
-Initial in-repo buildout will start with the top-priority weather unit:
+### Weather unit status as of 2026-04-20
+The top-priority Grade 2 weather arc now exists as a full 6-lesson unit plus support assets:
 - `lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html`
 - `lesson-plans/gr2-ess2-unit1-lesson2-cloud-detectives-and-condensation-clues.html`
 - `lesson-plans/gr2-ess2-unit1-lesson3-severe-weather-case-files.html`
+- `lesson-plans/gr2-ess2-unit1-lesson4-forecast-like-a-meteorologist.html`
+- `lesson-plans/gr2-ess2-unit1-lesson5-water-in-the-air.html`
+- `lesson-plans/gr2-ess2-unit1-lesson6-engineer-for-the-storm.html`
+- `lesson-plans/gr2-ess2-unit1-refcard.html`
+- `lesson-plans/gr2-ess2-unit1-quiz.html`
 
-These three files are meant to establish the non-repetitive tone of the unit immediately:
+The progression now lands more honestly:
 - Lesson 1 = tools + measurement
-- Lesson 2 = clouds + water evidence
+- Lesson 2 = clouds + condensation evidence
 - Lesson 3 = weather events + severe-weather reasoning
+- Lesson 4 = multi-clue forecasting
+- Lesson 5 = evidence-based water-in-air explanation
+- Lesson 6 = storm engineering capstone
 
-That gives Serena an honest status update: the weather expansion is actively being built, the progression is clearer than the current repo state, and the remaining gaps are still life cycles, deeper matter, and a second engineering lane.
+### Next real Grade 2 gaps after weather
+With weather materially stronger, the next true Grade 2 work should stay focused on the non-overlap gaps Calvin identified instead of drifting back into ecology repetition:
+1. `Life Cycles, Growth & Survival`
+2. `Matter in Action`
+3. `Weatherwise Builders`
+
+That gives Serena an honest status update: Grade 2 weather is now a real sellable lane, and the remaining big opportunities are life cycles, deeper matter, and broader engineering variety.

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water in the Air — Grade 2 Earth Science Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #26a69a; padding-bottom: 10px; color: #26a69a; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e0f7fa; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #80deea; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #26a69a; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #00796b; border-bottom: 2px solid #80deea; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .objective-box, .materials-box, .teacher-note, .answer-key, .extension-box { border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; font-size: 10pt; }
+    .objective-box { background: #e0f7fa; border: 2px solid #80deea; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e0f7fa; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #26a69a; }
+    .question-box { background: #f4fffe; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #e8f8ff; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; }
+    .extension-box { background: #eef7ff; border: 1px solid #80deea; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #f4fffe; border: 1.5px solid #26a69a; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #00796b; }
+    .lab-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0; }
+    .lab-card { border: 2px solid #80deea; border-radius: 10px; padding: 12px; background: #fff; }
+    .lab-card strong { color: #00796b; display:block; margin-bottom: 6px; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-header { background: #26a69a; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .draw-area { border: 1.5px dashed #80deea; border-radius: 8px; min-height: 110px; background: #fafefe; margin: 8px 0 12px; padding: 8px; }
+    .line { border-bottom: 1.5px solid #80deea; min-height: 24px; margin: 8px 0 12px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #26a69a; color: white; padding: 8px; border: 1px solid #00796b; }
+    .ws-table td { border: 1px solid #80deea; padding: 8px; height: 44px; vertical-align: top; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #26a69a; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .answer-key, .lab-card, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <h1>💧 Water in the Air</h1>
+  <p class="subtitle">Earth Science — Weather Detectives &amp; Wild Storms | Unit 1, Lesson 5 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 50–60 minutes</span>
+    <span>🌎 <strong>Subject:</strong> Earth Science — Water &amp; Weather</span>
+    <span>🧪 <strong>Hands-on Hook:</strong> Mini water-cycle bag + warm/cold comparison</span>
+  </div>
+
+  <div class="hero-image"><div class="emoji-hero">☀️💧☁️🌧️</div><div class="caption">Water can be hidden in the air, collect as droplets, and return as precipitation.</div></div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS-aligned focus:</strong><br>
+    Building evidence-based explanations for evaporation, condensation, cloud formation, and precipitation.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will observe water changing location and form in a simple model, then explain how invisible water vapor in the air can become visible droplets, clouds, and precipitation.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>Water is not only in puddles, lakes, and rain. Some water is in the air as water vapor, even when we cannot see it. When water warms, some of it can move into the air. When water vapor cools, it can condense into tiny droplets. In the sky, those droplets help make clouds and precipitation.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Kindergarten often introduces the water cycle as a simple circle picture. Grade 2 should go farther by asking: <em>What evidence do we actually see?</em> A sealed bag on a sunny window can show water moving upward and collecting as droplets. A cold lid or plastic wrap with ice can show that water vapor in warm air condenses when it cools. Those are weather clues, not just a memorized diagram.</p>
+  <p>This lesson matters because weather depends on water moving between the ground, the air, clouds, and precipitation. When children can explain where the droplets came from, they are doing real science thinking.</p>
+
+  <div class="tip-box">
+    <strong>💬 Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">water vapor</span>
+      <span class="vocab-chip">evaporation</span>
+      <span class="vocab-chip">condensation</span>
+      <span class="vocab-chip">droplet</span>
+      <span class="vocab-chip">cloud</span>
+      <span class="vocab-chip">precipitation</span>
+    </div>
+  </div>
+
+  <h2>🧰 Materials</h2>
+  <div class="materials-box">
+    <ul>
+      <li>1 zip-top bag</li>
+      <li>Water</li>
+      <li>Blue food coloring (optional)</li>
+      <li>Tape</li>
+      <li>1 clear cup or jar</li>
+      <li>Plastic wrap or a plate/lid</li>
+      <li>Ice cubes</li>
+      <li>Student worksheet page from this lesson</li>
+    </ul>
+  </div>
+
+  <h2>🧪 Two Quick Weather Models</h2>
+  <div class="lab-grid">
+    <div class="lab-card"><strong>Model 1 — Sunny window bag</strong>Put a little water in a zip bag, seal it, and tape it to a sunny window. Watch where the droplets collect later.</div>
+    <div class="lab-card"><strong>Model 2 — Warm water + cold top</strong>Put warm water in a cup, cover it with plastic wrap or a plate, and place ice on top. Watch for droplets underneath.</div>
+  </div>
+
+  <h2>🔍 Let’s Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Start the mystery:</strong> Ask, “If the bag starts with water only at the bottom, why do droplets later appear higher up?” Let the child guess first.</div>
+  <div class="procedure-step"><strong>Step 2 — Build the sunny window bag:</strong> Add a small amount of water to the zip bag. Seal it and tape it to a sunny window. If you use food coloring, remind the child that the dye helps us see the water more clearly.</div>
+  <div class="procedure-step"><strong>Step 3 — Build the warm/cold model:</strong> Pour warm water into a clear cup. Cover the top with plastic wrap or a plate and place ice on top. Watch carefully for droplets collecting underneath the top surface.</div>
+  <div class="procedure-step"><strong>Step 4 — Explain the evidence:</strong> In the bag, some water moved into the air inside the bag as water vapor, then condensed into droplets on the cooler plastic. In the cup model, warm water added vapor to the air and the cold top made that vapor condense.</div>
+  <div class="procedure-step"><strong>Step 5 — Connect to clouds and rain:</strong> Explain that clouds also form when water vapor in the air cools into tiny droplets. If enough droplets join together, precipitation can fall.</div>
+  <div class="procedure-step"><strong>Step 6 — Trace the journey:</strong> Have the child draw arrows showing where the water started, where it moved, and where droplets appeared.</div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Did the droplets leak through the bag or cup cover?</strong><span class="discussion-hint">Look for: no — the water moved as vapor and then condensed back into droplets.</span></div>
+  <div class="question-box"><strong>Why do we call water vapor “invisible water”?</strong><span class="discussion-hint">Look for: it is still water, but we usually cannot see it in the air.</span></div>
+  <div class="question-box"><strong>How is this lesson more than just drawing a water-cycle circle?</strong><span class="discussion-hint">Look for: the child used evidence from a model and explained where the droplets came from.</span></div>
+  <div class="question-box"><strong>What must happen before precipitation can fall?</strong><span class="discussion-hint">Look for: water vapor condenses into droplets or ice in clouds, and enough joins together to fall.</span></div>
+
+  <h2>🌟 Extension</h2>
+  <div class="extension-box">
+    <p><strong>Extra challenge:</strong> Put one water bag in a sunny place and one in a shady place. Which one shows droplets sooner?</p>
+    <p><strong>Family extension:</strong> After a shower, look at the bathroom mirror. Is that another example of condensation? Explain why.</p>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li>This lesson avoids repeating Kindergarten by asking students to <strong>trace the evidence path of the water</strong>, not just label the cycle.</li>
+      <li>Use the words <strong>first</strong> and <strong>next</strong> often. Sequence matters: water moves into the air first, then condenses later.</li>
+      <li>If droplets form slowly, keep the models set up longer and revisit them later in the day.</li>
+      <li>The exact model is less important than the explanation: water did not come through the plastic; it condensed from water vapor.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet</h2>
+    <div class="worksheet-header">Water in the Air — Student Worksheet</div>
+    <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+
+    <h3>1️⃣ What Happened in My Models?</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Model</th>
+        <th>Where did the water start?</th>
+        <th>Where did droplets appear?</th>
+        <th>What process happened?</th>
+      </tr>
+      <tr><td>Sunny bag</td><td></td><td></td><td></td></tr>
+      <tr><td>Warm water + cold top</td><td></td><td></td><td></td></tr>
+    </table>
+
+    <h3>2️⃣ Draw the Water’s Journey</h3>
+    <div class="draw-area">Draw arrows to show: water at the bottom → water vapor in the air → droplets on the surface.</div>
+
+    <h3>3️⃣ Explain It Like a Scientist</h3>
+    <p>The droplets did <strong>not</strong> come through the plastic because ________________________________</p>
+    <div class="line"></div>
+    <p>First _________________________________________________</p>
+    <div class="line"></div>
+    <p>Then _________________________________________________</p>
+    <div class="line"></div>
+
+    <h3>4️⃣ Connect to Weather</h3>
+    <p>Clouds form when _________________________________________________</p>
+    <div class="line"></div>
+    <p>Precipitation can happen when _________________________________________________</p>
+    <div class="line"></div>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key — Detach Before Giving Worksheet to Students</h2>
+      <h3>1️⃣ What Happened in My Models?</h3>
+      <p><strong>Sunny bag:</strong> water started at the bottom; droplets appeared higher on the bag; process = evaporation then condensation.</p>
+      <p><strong>Warm water + cold top:</strong> warm water started in the cup; droplets appeared underneath the cooled top; process = water vapor condensed on the cold surface.</p>
+
+      <h3>2️⃣ Draw the Water’s Journey</h3>
+      <p>Look for arrows showing water moving from the liquid water source into the air and then collecting as droplets.</p>
+
+      <h3>3️⃣ Explain It Like a Scientist</h3>
+      <p>Strong responses include the sequence: first some water became water vapor, then the vapor cooled and condensed into droplets.</p>
+
+      <h3>4️⃣ Connect to Weather</h3>
+      <p><strong>Clouds form when:</strong> water vapor cools and condenses into tiny droplets or ice.</p>
+      <p><strong>Precipitation can happen when:</strong> enough droplets or ice join together and become heavy enough to fall.</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>The child explains where the droplets came from.</li>
+        <li>The child uses the sequence of evaporation first, condensation second.</li>
+        <li>The child connects the model to real weather instead of treating it as an isolated trick.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>

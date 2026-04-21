@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Detectives &amp; Wild Storms Reference Card — Grade 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; background: #eef7ff; color: #0d2012; padding: 24px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+    @media print {
+      @page { size: letter portrait; margin: 0; }
+      body { background: white; padding: 0; min-height: 0; height: 11in; }
+      .no-print { display: none !important; }
+      .page-card { width: 100%; max-width: 100%; box-shadow: none; border-radius: 0; height: 11in; page-break-after: avoid; }
+    }
+    .page-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); width: 100%; max-width: 8.5in; display: flex; flex-direction: column; overflow: hidden; }
+    .header-banner { background: #1976d2; color: white; text-align: center; padding: 28px 24px 20px; flex-shrink: 0; }
+    .header-banner h1 { font-family: 'Playfair Display', serif; font-size: 2.35rem; font-weight: 700; line-height: 1.1; margin-bottom: 10px; }
+    .header-banner .subtitle { font-size: 1.15rem; font-weight: 700; letter-spacing: 2px; color: #d6ecff; text-transform: uppercase; }
+    .grid-section { display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); flex: 1; min-height: 0; }
+    .tile { padding: 24px 22px; border: 2px solid rgba(255,255,255,0.7); display:flex; flex-direction:column; justify-content:center; min-height: 170px; }
+    .tile:nth-child(1) { background:#eef7ff; }
+    .tile:nth-child(2) { background:#f7fbff; }
+    .tile:nth-child(3) { background:#fff9ef; }
+    .tile:nth-child(4) { background:#f3fffd; }
+    .tile:nth-child(5) { background:#f7fcff; }
+    .tile:nth-child(6) { background:#fbf7ff; }
+    .tile-emoji { font-size: 2.2rem; line-height: 1; margin-bottom: 8px; }
+    .tile-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #0d47a1; }
+    .tile-copy { font-size: 0.96rem; line-height: 1.45; color: #24323d; }
+    .remember-strip { background:#fff8e1; border-top: 3px solid #ffd54f; display:grid; grid-template-columns: repeat(3, 1fr); flex-shrink: 0; }
+    .remember-box { padding: 14px 12px; text-align:center; border-right: 2px solid #ffe082; }
+    .remember-box:last-child { border-right: none; }
+    .remember-title { font-size: 0.82rem; font-weight: 900; color: #e65100; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .remember-text { font-size: 0.88rem; font-weight: 700; color: #6d4c41; line-height: 1.35; }
+    .footer { background: #eef7ff; text-align: center; padding: 12px; font-size: 0.85rem; color: #555; font-weight: 700; letter-spacing: 1px; flex-shrink: 0; }
+    .print-btn { margin-top: 20px; padding: 12px 32px; background: #1976d2; color: white; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Lato', sans-serif; font-weight: 700; cursor: pointer; letter-spacing: 1px; }
+    .print-btn:hover { background: #0d47a1; }
+    .lesson-branding { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 18px 0; padding: 10px 14px; background: #fffaf3; border: 1.5px solid #ffd6a5; border-radius: 12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+  </style>
+</head>
+<body>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <div class="page-card">
+    <div class="header-banner">
+      <h1>🌦️ Weather Detectives &amp; Wild Storms</h1>
+      <div class="subtitle">Tools · Clouds · Storms · Forecasts · Water · Design</div>
+    </div>
+
+    <div class="grid-section">
+      <div class="tile"><div class="tile-emoji">📏</div><div class="tile-name">Lesson 1 — Weather Tools</div><div class="tile-copy">Meteorologists use repeated observations. Rain gauges, wind tools, and sky charts help us collect better evidence than memory alone.</div></div>
+      <div class="tile"><div class="tile-emoji">☁️</div><div class="tile-name">Lesson 2 — Cloud Clues</div><div class="tile-copy">Clouds and condensation tell us what water in the air is doing. Puffy, flat, dark, or wispy clouds can give clues about changing weather.</div></div>
+      <div class="tile"><div class="tile-emoji">🌪️</div><div class="tile-name">Lesson 3 — Severe Weather</div><div class="tile-copy">Thunderstorms, tornadoes, floods, and blizzards are not the same. Each has different warning signs, risks, and safe responses.</div></div>
+      <div class="tile"><div class="tile-emoji">🔮</div><div class="tile-name">Lesson 4 — Forecasting</div><div class="tile-copy">A forecast is an evidence-based prediction. Good forecasts compare multiple clues and patterns instead of making a wild guess.</div></div>
+      <div class="tile"><div class="tile-emoji">💧</div><div class="tile-name">Lesson 5 — Water in the Air</div><div class="tile-copy">Water can evaporate into the air, condense into droplets, form clouds, and fall as precipitation. Models help us see that journey.</div></div>
+      <div class="tile"><div class="tile-emoji">🏗️</div><div class="tile-name">Lesson 6 — Storm Engineering</div><div class="tile-copy">Engineers use weather science to design better shelters and tools. Testing and redesign improve a storm-safe model.</div></div>
+    </div>
+
+    <div class="remember-strip">
+      <div class="remember-box"><div class="remember-title">Remember This</div><div class="remember-text">Weather evidence gets stronger when you collect it over time, not just once.</div></div>
+      <div class="remember-box"><div class="remember-title">Remember This</div><div class="remember-text">Clouds, wind, and water clues help explain what weather may happen next.</div></div>
+      <div class="remember-box"><div class="remember-title">Remember This</div><div class="remember-text">Science and engineering work together: learn the storm, then design for it.</div></div>
+    </div>
+
+    <div class="footer">Little Lab Coats 🥼 &nbsp;|&nbsp; Grade 2 Earth Science Unit 1</div>
+  </div>
+
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Print</button>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+  <script>try { localStorage.setItem('llc_access', 'granted'); } catch (e) {}</script>
+</body>
+</html>

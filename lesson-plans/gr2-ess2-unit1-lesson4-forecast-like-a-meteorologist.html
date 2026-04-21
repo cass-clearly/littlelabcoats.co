@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast Like a Meteorologist — Grade 2 Earth Science Unit 1</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.45; color: #222; }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin: 0 0 18px 0; padding: 10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #1e88e5; padding-bottom: 10px; color: #1e88e5; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e3f2fd; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #90caf9; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #1e88e5; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #0d47a1; border-bottom: 2px solid #90caf9; padding-bottom: 4px; margin: 18px 0 8px 0; }
+    ul, ol { margin: 8px 0; padding-left: 25px; }
+    li { margin-bottom: 6px; }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 64pt; line-height: 1.2; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .standards-box, .objective-box, .materials-box, .teacher-note, .answer-key, .extension-box { border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; font-size: 10pt; }
+    .objective-box { background: #e3f2fd; border: 2px solid #90caf9; }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e3f2fd; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #1e88e5; }
+    .question-box { background: #f5fbff; border-left: 5px solid #00B894; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00bcd4; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .teacher-note { background: #f5f5f5; border: 2px dashed #999; font-size: 10pt; color: #555; }
+    .answer-key { background: #f5f5f5; border: 3px dashed #999; }
+    .extension-box { background: #eef7ff; border: 1px solid #90caf9; }
+    .discussion-hint { font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; display: block; }
+    .vocab-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .vocab-chip { background: #f5fbff; border: 1.5px solid #1e88e5; border-radius: 20px; padding: 4px 14px; font-size: 10pt; font-weight: bold; color: #0d47a1; }
+    .case-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+    .case-card { border: 2px solid #90caf9; border-radius: 10px; padding: 12px; background: #fff; }
+    .case-card strong { color: #0d47a1; display:block; margin-bottom: 6px; }
+    .case-card .forecast { margin-top: 8px; background:#f5fbff; border-radius:8px; padding:8px 10px; font-size:10pt; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .worksheet-header { background: #1e88e5; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
+    .draw-area { border: 1.5px dashed #90caf9; border-radius: 8px; min-height: 120px; background: #fafcff; margin: 8px 0 12px; padding: 8px; }
+    .line { border-bottom: 1.5px solid #90caf9; min-height: 24px; margin: 8px 0 12px; }
+    .ws-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+    .ws-table th { background: #1e88e5; color: white; padding: 8px; border: 1px solid #0d47a1; }
+    .ws-table td { border: 1px solid #90caf9; padding: 8px; height: 44px; vertical-align: top; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 20px; right: 20px; background: #1e88e5; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; z-index: 1000; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,0.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: 0.95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    @media print {
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .answer-key, .case-card, .extension-box { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+
+  <h1>🛰️ Forecast Like a Meteorologist</h1>
+  <p class="subtitle">Earth Science — Weather Detectives &amp; Wild Storms | Unit 1, Lesson 4 of 6</p>
+
+  <div class="meta">
+    <span>📚 <strong>Grade:</strong> 2nd Grade</span>
+    <span>⏱️ <strong>Duration:</strong> 50–60 minutes</span>
+    <span>🌎 <strong>Subject:</strong> Earth Science — Weather Forecasting</span>
+    <span>🧪 <strong>Hands-on Hook:</strong> Choose the best forecast from real clues</span>
+  </div>
+
+  <div class="hero-image"><div class="emoji-hero">📋☁️🌬️🔮</div><div class="caption">Meteorologists do not guess wildly. They use today's clues and yesterday's data to make the best prediction they can.</div></div>
+
+  <div class="standards-box">
+    <strong>📋 NGSS-aligned focus:</strong><br>
+    Using weather data, patterns, and evidence to make and defend a short-term forecast.
+  </div>
+
+  <h2>🎯 Learning Objective</h2>
+  <div class="objective-box">
+    <p>Students will study weather clues from several days, choose the most reasonable short-term forecast, and explain why a forecast is stronger when it uses evidence instead of guessing.</p>
+  </div>
+
+  <h2>💡 The Big Idea</h2>
+  <p>A forecast is a careful prediction about what weather may happen next. Good forecasts come from evidence: cloud changes, wind changes, precipitation, and patterns over time. Meteorologists may not be perfect, but they make much better predictions when they compare clues instead of relying only on one quick look out the window.</p>
+
+  <h2>🔬 The Science</h2>
+  <p>Weather often changes in patterns. If clouds are growing darker and thicker, wind is picking up, and rain has been getting closer all day, a meteorologist has evidence that a storm may be coming soon. If the sky has stayed clear for several days and the wind is calm, the next few hours may stay calm too.</p>
+  <p>This is more advanced than Kindergarten weather talk because the child is no longer only naming today's weather. In Grade 2, the child should begin using multiple clues, comparing one day to another, and defending which forecast makes the most sense.</p>
+
+  <div class="tip-box">
+    <strong>💬 Key vocabulary:</strong>
+    <div class="vocab-chips">
+      <span class="vocab-chip">forecast</span>
+      <span class="vocab-chip">pattern</span>
+      <span class="vocab-chip">evidence</span>
+      <span class="vocab-chip">prediction</span>
+      <span class="vocab-chip">trend</span>
+      <span class="vocab-chip">meteorologist</span>
+    </div>
+  </div>
+
+  <h2>🧰 Materials</h2>
+  <div class="materials-box">
+    <ul>
+      <li>3-day weather notes from Lessons 1–3, or use the case cards in this lesson</li>
+      <li>Pencil and crayons</li>
+      <li>Student worksheet page from this lesson</li>
+      <li>Optional: local weather app or TV forecast for comparison at the end</li>
+    </ul>
+  </div>
+
+  <h2>🗂️ Forecast Case Cards</h2>
+  <div class="case-grid">
+    <div class="case-card">
+      <strong>Case A — Stormy clues</strong>
+      <ul>
+        <li>Morning sky: partly cloudy</li>
+        <li>Afternoon sky: darker, taller clouds</li>
+        <li>Wind: calm → breezy</li>
+        <li>Air: warm and sticky</li>
+      </ul>
+      <div class="forecast">Best forecast: a thunderstorm or rain may happen later.</div>
+    </div>
+    <div class="case-card">
+      <strong>Case B — Calm clues</strong>
+      <ul>
+        <li>Sky: clear for two days</li>
+        <li>Wind: light</li>
+        <li>No precipitation</li>
+        <li>Morning and afternoon look similar</li>
+      </ul>
+      <div class="forecast">Best forecast: fair weather will probably continue for now.</div>
+    </div>
+    <div class="case-card">
+      <strong>Case C — Wet and cooling clues</strong>
+      <ul>
+        <li>Gray sky all day</li>
+        <li>Cooler than yesterday</li>
+        <li>Wet ground in the morning</li>
+        <li>Small raindrops begin by noon</li>
+      </ul>
+      <div class="forecast">Best forecast: more rain is likely in the short term.</div>
+    </div>
+  </div>
+
+  <h2>🔍 Let’s Get Started</h2>
+  <div class="procedure-step"><strong>Step 1 — Review the detective tools:</strong> Remind the child that meteorologists use yesterday's and today's weather clues together. Ask, “Why is one clue helpful, but several clues even better?”</div>
+  <div class="procedure-step"><strong>Step 2 — Study the case cards:</strong> Read each weather case card. Pause after each one and ask what clues stand out most.</div>
+  <div class="procedure-step"><strong>Step 3 — Pick the best forecast:</strong> For each case, offer 2–3 forecast choices and choose the one that matches the evidence best.</div>
+  <div class="procedure-step"><strong>Step 4 — Build your own forecast board:</strong> Use your real weather notes or today's sky, wind, and precipitation clues to write a forecast for later today or tomorrow morning.</div>
+  <div class="procedure-step"><strong>Step 5 — Defend the choice:</strong> Make the child say, “I think ___ because I noticed ___.” Push for at least two evidence clues, not just one.</div>
+  <div class="procedure-step"><strong>Step 6 — Compare with a real forecast:</strong> Check a weather app or TV report. Did the forecast match your evidence? Was the meteorologist more exact than you were?</div>
+
+  <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Why is a forecast not the same as a random guess?</strong><span class="discussion-hint">Look for: forecasts use clues, patterns, and evidence from the weather.</span></div>
+  <div class="question-box"><strong>Why is it useful to compare more than one day of weather?</strong><span class="discussion-hint">Look for: it helps us notice trends and changes instead of judging from one moment only.</span></div>
+  <div class="question-box"><strong>If a forecast is wrong, does that mean meteorologists are not using science?</strong><span class="discussion-hint">Look for: no — they still use evidence, but weather can change quickly and predictions are not perfect.</span></div>
+  <div class="question-box"><strong>Which clue would worry you most if you were watching for a storm: clouds, wind, or precipitation? Why?</strong><span class="discussion-hint">Look for: children naming one clue and giving a reason, not just a one-word answer.</span></div>
+
+  <h2>🌟 Extension</h2>
+  <div class="extension-box">
+    <p><strong>Extra challenge:</strong> Make a morning forecast and an afternoon forecast. Did your second forecast change after you collected more evidence?</p>
+    <p><strong>Gifted extension:</strong> Compare your forecast with two different weather sources. Which one explains its forecast with the clearest evidence?</p>
+  </div>
+
+  <h2>👩‍🏫 Parent / Teacher Notes</h2>
+  <div class="teacher-note">
+    <ul>
+      <li>This lesson deliberately moves beyond Kindergarten weather patterns by asking children to <strong>defend a prediction with multiple clues</strong>.</li>
+      <li>Do not worry about being exactly correct. The science goal is reasoning from evidence, not perfect meteorology.</li>
+      <li>If you skipped the earlier weather lessons, the case cards here still let the child practice forecasting honestly.</li>
+      <li>Whenever possible, require the words <strong>because</strong>, <strong>I noticed</strong>, or <strong>the pattern was</strong> in forecast explanations.</li>
+    </ul>
+  </div>
+
+  <div class="page-break">
+    <h2>📝 Student Worksheet</h2>
+    <div class="worksheet-header">Forecast Like a Meteorologist — Student Worksheet</div>
+    <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
+
+    <h3>1️⃣ Match the Forecast to the Clues</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Case</th>
+        <th>Best forecast</th>
+        <th>Two clues that support it</th>
+      </tr>
+      <tr><td>Case A</td><td></td><td></td></tr>
+      <tr><td>Case B</td><td></td><td></td></tr>
+      <tr><td>Case C</td><td></td><td></td></tr>
+    </table>
+
+    <h3>2️⃣ My Own Forecast Board</h3>
+    <table class="ws-table">
+      <tr>
+        <th>Cloud clues</th>
+        <th>Wind clues</th>
+        <th>Precipitation clues</th>
+        <th>My forecast</th>
+      </tr>
+      <tr>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+
+    <h3>3️⃣ My Evidence Sentence</h3>
+    <p>I think the weather will be ____________________________________________</p>
+    <p>because I noticed _________________________________________________</p>
+    <p>and also _________________________________________________.</p>
+
+    <h3>4️⃣ Compare With a Real Forecast</h3>
+    <p>What matched? ________________________________________________</p>
+    <div class="line"></div>
+    <p>What was different? _____________________________________________</p>
+    <div class="line"></div>
+  </div>
+
+  <div class="page-break">
+    <div class="answer-key">
+      <h2>✂️ Parent Answer Key — Detach Before Giving Worksheet to Students</h2>
+      <h3>1️⃣ Match the Forecast to the Clues</h3>
+      <ul>
+        <li><strong>Case A:</strong> likely storm/rain later; clues = darker growing clouds, stronger wind, sticky warm air</li>
+        <li><strong>Case B:</strong> fair weather continues; clues = clear sky for two days, calm wind, no precipitation</li>
+        <li><strong>Case C:</strong> more rain likely; clues = gray sky, cooler air, wet ground, raindrops already starting</li>
+      </ul>
+
+      <h3>2️⃣ My Own Forecast Board</h3>
+      <p>Answers vary by real weather. Strong responses use more than one clue and give a forecast that fits those clues reasonably.</p>
+
+      <h3>3️⃣ My Evidence Sentence</h3>
+      <p>Look for a complete sentence that includes a forecast and at least two clues. Example: “I think it may rain later because I noticed dark clouds and the wind got stronger.”</p>
+
+      <h3>4️⃣ Compare With a Real Forecast</h3>
+      <p>Accept any honest comparison. The important idea is that forecasts can be compared and improved with more evidence.</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>The child uses clues from more than one weather feature.</li>
+        <li>The child can choose a reasonable forecast, not just any forecast.</li>
+        <li>The child explains the prediction with evidence words.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>
+  (function() {
+    var ACCESS_KEY = 'llc_access';
+    function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
+    function lockLesson() {
+      var allH2 = Array.from(document.querySelectorAll('h2'));
+      var lockKeywords = ['materials', 'what you need'];
+      var lockFromH2 = null;
+      for (var i = 0; i < allH2.length; i++) {
+        var text = allH2[i].textContent.toLowerCase().trim();
+        if (lockKeywords.some(function(k) { return text.indexOf(k) !== -1; })) { lockFromH2 = allH2[i]; break; }
+      }
+      if (!lockFromH2) { lockFromH2 = allH2[Math.min(4, allH2.length - 1)]; }
+      if (!lockFromH2) { document.getElementById('llcPaywall').style.display = 'block'; return; }
+      var hiding = false;
+      Array.from(document.body.children).forEach(function(child) {
+        if (child === lockFromH2 || child.contains(lockFromH2)) hiding = true;
+        if (hiding && child.id !== 'llcPaywall') child.style.display = 'none';
+      });
+      document.getElementById('llcPaywall').style.display = 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
+      if (!isUnlocked()) lockLesson();
+    });
+  })();
+  </script>
+
+  <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</div>
+</body>
+</html>
