@@ -572,7 +572,19 @@
       letter-spacing: .02em;
       color: #5A3A16;
     }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}
+.science-deep-dive{margin:14px 0 18px}
+.science-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.science-card{background:#fff;border:1.5px solid rgba(46,125,50,.18);border-radius:12px;padding:12px 14px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.science-card h3{margin-top:0;font-size:11pt}
+.science-visual{background:linear-gradient(180deg,#fcfffb 0%,#f6fbff 100%);border:2px solid #d7ead9;border-radius:14px;padding:12px 14px}
+.science-visual-title{font-size:10pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#24557a;margin-bottom:8px}
+.science-visual-caption{font-size:9.2pt;color:#51646a;margin-top:8px}
+.science-visual svg{width:100%;height:auto;display:block}
+.science-prompt{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fffaf3;border:1.5px solid #ffd6a5;font-size:9.8pt;color:#6d4c41}
+@media print{.science-columns{grid-template-columns:repeat(3,1fr)}.science-deep-dive,.science-card,.science-visual,.science-prompt{break-inside:avoid;page-break-inside:avoid}}
+@media (max-width:700px){.science-columns{grid-template-columns:1fr}}
+</style>
 </head>
 <body data-document-id="doc_rZ2Bl20iHwM"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
@@ -617,24 +629,8 @@
   <p>Every living thing has a <strong>life cycle</strong>, but not every life cycle looks the same. A frog, a butterfly, a bean plant, and a human all move through different stages. Even so, they all share the same big pattern: they begin life, grow, reproduce, and eventually die.</p>
 
   <h2>🔬 The Science</h2>
-  <p>A <strong>life cycle</strong> is the series of stages an organism passes through during its life. Scientists study life cycles because they help explain how living things change over time and how new organisms are produced.</p>
-  <p>Some organisms change dramatically as they grow. A butterfly begins as an egg, then becomes a caterpillar, then a chrysalis, and finally an adult butterfly. A frog begins as eggs, becomes a tadpole, then a froglet, and later an adult frog. Other organisms change more gradually. A bean plant starts as a seed, grows into a seedling, then a young plant, and later a mature plant that produces flowers and seeds. Humans begin as babies and grow through childhood into adulthood.</p>
-  <p>The stages are <strong>unique and diverse</strong>, but there is still a common pattern across life: birth, growth, reproduction, and death. A cycle does <em>not</em> mean the same individual turns back into a baby, egg, or seed. It means adults produce offspring, and a new organism begins the pattern again.</p>
-
-  <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong>
-    <div class="vocab-chips">
-      <span class="vocab-chip">life cycle</span>
-      <span class="vocab-chip">stage</span>
-      <span class="vocab-chip">organism</span>
-      <span class="vocab-chip">reproduction</span>
-      <span class="vocab-chip">offspring</span>
-      <span class="vocab-chip">metamorphosis</span>
-      <span class="vocab-chip">model</span>
-    </div>
-  </div>
-
-  <h2>🖼️ Compare These Life Cycles</h2>
+<div class="science-deep-dive"><div class="science-visual"><div class="science-visual-title">Science Snapshot</div><svg viewBox="0 0 660 190" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6aa84f"/></marker></defs><rect x="250" y="28" rx="16" ry="16" width="160" height="42" fill="#eef7ff" stroke="#7aaad6" stroke-width="2"/><text x="330" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">beginning stage</text><rect x="420" y="85" rx="16" ry="16" width="160" height="42" fill="#fff6e8" stroke="#f0ad4e" stroke-width="2"/><text x="500" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">growing stage</text><rect x="250" y="142" rx="16" ry="16" width="160" height="42" fill="#eef9f1" stroke="#93c47d" stroke-width="2"/><text x="330" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">adult / mature stage</text><rect x="80" y="85" rx="16" ry="16" width="160" height="42" fill="#f8f0ff" stroke="#b39ddb" stroke-width="2"/><text x="160" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">offspring begin again</text><line x1="330" y1="70" x2="445" y2="105" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="465" y1="127" x2="350" y2="160" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="270" y1="160" x2="185" y2="127" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="165" y1="105" x2="280" y2="70" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/></svg><div class="science-visual-caption">Life cycles vary in detail, but they all track how living things grow and make more of their kind.</div></div><div class="science-columns"><div class="science-card"><h3>What is happening?</h3><p>A life cycle is the sequence of stages an organism goes through as it grows, survives, and reproduces. Different organisms look different at each stage, but the big pattern is that living things begin, grow, and eventually make new offspring.</p></div><div class="science-card"><h3>Why it works that way</h3><p>Life cycles matter because they help scientists compare organisms and understand what each stage is for. Some stages are specialized for feeding, moving, dispersing, or reproducing, so the shape and behavior of the organism may change over time.</p></div><div class="science-card"><h3>Look for this in the lesson</h3><p>Students should focus on the repeating pattern, not just memorizing stage names. The science becomes deeper when they explain what changes and what stays part of the same cycle.</p></div></div><div class="science-prompt"><strong>Ask while you read:</strong> How does this organism change across stages, and what big pattern stays the same?</div></div>
+<h2>🖼️ Compare These Life Cycles</h2>
   <p>Read each row from left to right. Notice what changes, and notice what stays the same about the big pattern.</p>
 
   <div class="example-grid">

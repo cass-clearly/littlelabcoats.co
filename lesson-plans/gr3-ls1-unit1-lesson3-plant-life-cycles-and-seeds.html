@@ -242,7 +242,19 @@ li { margin-bottom: 5px; }
       letter-spacing: .02em;
       color: #5A3A16;
     }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}
+.science-deep-dive{margin:14px 0 18px}
+.science-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.science-card{background:#fff;border:1.5px solid rgba(46,125,50,.18);border-radius:12px;padding:12px 14px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.science-card h3{margin-top:0;font-size:11pt}
+.science-visual{background:linear-gradient(180deg,#fcfffb 0%,#f6fbff 100%);border:2px solid #d7ead9;border-radius:14px;padding:12px 14px}
+.science-visual-title{font-size:10pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#24557a;margin-bottom:8px}
+.science-visual-caption{font-size:9.2pt;color:#51646a;margin-top:8px}
+.science-visual svg{width:100%;height:auto;display:block}
+.science-prompt{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fffaf3;border:1.5px solid #ffd6a5;font-size:9.8pt;color:#6d4c41}
+@media print{.science-columns{grid-template-columns:repeat(3,1fr)}.science-deep-dive,.science-card,.science-visual,.science-prompt{break-inside:avoid;page-break-inside:avoid}}
+@media (max-width:700px){.science-columns{grid-template-columns:1fr}}
+</style>
 </head>
 <body data-document-id="doc_XuHBNk2e4eU"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
@@ -275,14 +287,8 @@ li { margin-bottom: 5px; }
   <p>Plants may look different from animals, but they still follow the same big pattern of birth, growth, reproduction, and death. A seed begins life, a seedling grows, a mature plant reproduces by making new seeds, and the cycle can begin again.</p>
 
   <h2>🔬 The Science</h2>
-  <p>A plant life cycle often starts with a <strong>seed</strong>. When conditions are right, the seed begins to grow into a <strong>seedling</strong>. The plant gets larger, makes roots, stems, and leaves, and later produces flowers, fruit, cones, or seed pods. Those structures help the plant make new seeds. New seeds begin the pattern again.</p><div class="card-grid"><div class="mini-card"><span class="big">🫘</span><div class="label">Seed</div><div class="copy">A new plant begins protected inside a seed.</div></div><div class="mini-card"><span class="big">🌱</span><div class="label">Seedling</div><div class="copy">The young plant starts growing roots, stems, and leaves.</div></div><div class="mini-card"><span class="big">🌿</span><div class="label">Mature Plant</div><div class="copy">The plant grows larger and can make flowers or cones.</div></div><div class="mini-card"><span class="big">🌼</span><div class="label">New Seeds</div><div class="copy">Reproduction makes seeds that can begin the pattern again.</div></div></div><p>Different plants may have different-looking stages, but the shared pattern still matters most. Scientists care about the model of what happens over time.</p>
-
-  <div class="tip-box">
-    <strong>💡 Key Vocabulary</strong>
-    <div class="vocab-chips"><span class="vocab-chip">seed</span><span class="vocab-chip">seedling</span><span class="vocab-chip">germinate</span><span class="vocab-chip">mature plant</span><span class="vocab-chip">flower</span><span class="vocab-chip">reproduce</span><span class="vocab-chip">life cycle</span><span class="vocab-chip">model</span></div>
-  </div>
-
-  <h2>Materials</h2>
+<div class="science-deep-dive"><div class="science-visual"><div class="science-visual-title">Science Snapshot</div><svg viewBox="0 0 660 190" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6aa84f"/></marker></defs><rect x="250" y="28" rx="16" ry="16" width="160" height="42" fill="#eef7ff" stroke="#7aaad6" stroke-width="2"/><text x="330" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">seed</text><rect x="420" y="85" rx="16" ry="16" width="160" height="42" fill="#fff6e8" stroke="#f0ad4e" stroke-width="2"/><text x="500" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">seedling</text><rect x="250" y="142" rx="16" ry="16" width="160" height="42" fill="#eef9f1" stroke="#93c47d" stroke-width="2"/><text x="330" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">adult plant</text><rect x="80" y="85" rx="16" ry="16" width="160" height="42" fill="#f8f0ff" stroke="#b39ddb" stroke-width="2"/><text x="160" y="111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#244">flowers / seeds</text><line x1="330" y1="70" x2="445" y2="105" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="465" y1="127" x2="350" y2="160" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="270" y1="160" x2="185" y2="127" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="165" y1="105" x2="280" y2="70" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/></svg><div class="science-visual-caption">A plant life cycle shows how a seed can become a plant that produces new seeds.</div></div><div class="science-columns"><div class="science-card"><h3>What is happening?</h3><p>Plant life cycles include stages such as seed, seedling, adult plant, flower, fruit, and new seeds. The exact timing varies, but the major scientific idea is that plants make offspring through seeds or other reproductive structures.</p></div><div class="science-card"><h3>Why it works that way</h3><p>Seeds protect the embryo and often store food for early growth. Flowers and fruits help with pollination, protection, and dispersal, which increases the chance that the next generation can grow successfully.</p></div><div class="science-card"><h3>Look for this in the lesson</h3><p>Students should connect each plant stage to a job, such as germination, growth, flowering, or seed making. That helps the cycle feel meaningful rather than like a list to memorize.</p></div></div><div class="science-prompt"><strong>Ask while you read:</strong> Which stage in the plant cycle helps begin the next generation, and how?</div></div>
+<h2>Materials</h2>
   <div class="materials-box"><h3>🏠 Household Items to Gather</h3><ul><li>1 dried bean or sunflower seed per child</li><li>Printed lesson pages and worksheet</li><li>Pencils and colored pencils</li><li>Optional: one real flower, seed packet, or bean pod to observe</li></ul><h3>📋 Printables</h3><ul><li>Student Worksheet page from this lesson</li></ul></div>
 
   <h2>Let's Get Started</h2>

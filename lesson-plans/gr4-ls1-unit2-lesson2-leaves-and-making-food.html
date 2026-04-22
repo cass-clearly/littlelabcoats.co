@@ -266,7 +266,19 @@
       letter-spacing: .02em;
       color: #5A3A16;
     }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}
+.science-deep-dive{margin:14px 0 18px}
+.science-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.science-card{background:#fff;border:1.5px solid rgba(46,125,50,.18);border-radius:12px;padding:12px 14px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.science-card h3{margin-top:0;font-size:11pt}
+.science-visual{background:linear-gradient(180deg,#fcfffb 0%,#f6fbff 100%);border:2px solid #d7ead9;border-radius:14px;padding:12px 14px}
+.science-visual-title{font-size:10pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#24557a;margin-bottom:8px}
+.science-visual-caption{font-size:9.2pt;color:#51646a;margin-top:8px}
+.science-visual svg{width:100%;height:auto;display:block}
+.science-prompt{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fffaf3;border:1.5px solid #ffd6a5;font-size:9.8pt;color:#6d4c41}
+@media print{.science-columns{grid-template-columns:repeat(3,1fr)}.science-deep-dive,.science-card,.science-visual,.science-prompt{break-inside:avoid;page-break-inside:avoid}}
+@media (max-width:700px){.science-columns{grid-template-columns:1fr}}
+</style>
 </head>
 <body data-document-id="doc__A5QgFwPUiY"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
@@ -302,9 +314,8 @@
   <p>Leaves are not just decorations. Their structure helps plants capture sunlight and exchange gases so the plant can make food.</p>
   <p>A broad flat leaf can be a strong clue that the plant needs to collect light efficiently. In Grade 4, the key idea is not chemical detail — it is that the structure helps the plant do a life-supporting job.</p>
   <h2>The Science</h2>
-  <p>Leaves often have a broad, thin surface that helps them capture sunlight. The green color comes from chlorophyll, which helps in photosynthesis. Plants use light energy, water, and carbon dioxide to make food. Leaf structure matters because the plant needs a surface that can gather light effectively while supporting the plant’s survival and growth.</p>
-  <div class="tip-box"><strong>Key vocabulary:</strong> leaf, sunlight, photosynthesis, chlorophyll, surface, energy, gas exchange, food</div>
-  <h2>Materials</h2>
+<div class="science-deep-dive"><div class="science-visual"><div class="science-visual-title">Science Snapshot</div><svg viewBox="0 0 660 190" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6aa84f"/></marker></defs><rect x="250" y="68" rx="18" ry="18" width="160" height="52" fill="#ffffff" stroke="#6aa84f" stroke-width="3"/><text x="330" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#244">Leaf as food maker</text><rect x="102" y="40" rx="14" ry="14" width="156" height="42" fill="#eef7ff" stroke="#7aaad6" stroke-width="2"/><text x="180" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5" font-weight="700" fill="#244">light capture</text><line x1="330" y1="94" x2="180" y2="61" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><rect x="412" y="40" rx="14" ry="14" width="156" height="42" fill="#f8f0ff" stroke="#b39ddb" stroke-width="2"/><text x="490" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5" font-weight="700" fill="#244">CO₂ enters</text><line x1="330" y1="94" x2="490" y2="61" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><rect x="102" y="120" rx="14" ry="14" width="156" height="42" fill="#fff6e8" stroke="#f0ad4e" stroke-width="2"/><text x="180" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5" font-weight="700" fill="#244">water arrives in veins</text><line x1="330" y1="94" x2="180" y2="141" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><rect x="412" y="120" rx="14" ry="14" width="156" height="42" fill="#eef9f1" stroke="#93c47d" stroke-width="2"/><text x="490" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5" font-weight="700" fill="#244">sugars move out</text><line x1="330" y1="94" x2="490" y2="141" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/></svg><div class="science-visual-caption">Leaves are food-making structures because they bring together light, air, and water.</div></div><div class="science-columns"><div class="science-card"><h3>What is happening?</h3><p>Leaves are the main structures plants use to capture light and exchange gases. They are where much of photosynthesis happens, allowing plants to make sugars that support growth and repair.</p></div><div class="science-card"><h3>Why it works that way</h3><p>Broad, flat leaves often help capture more light, while tiny openings called stomata allow carbon dioxide to enter. Veins help deliver water to the leaf and carry sugars away to the rest of the plant.</p></div><div class="science-card"><h3>Look for this in the lesson</h3><p>Students should connect leaf shape to function. The strongest explanations mention light capture, gas exchange, and transport together.</p></div></div><div class="science-prompt"><strong>Ask while you read:</strong> What features of a leaf help it gather what it needs to make sugars?</div></div>
+<h2>Materials</h2>
   <div class="materials-box">
     <h3>Gather Before You Start</h3>
     <ul>

@@ -498,7 +498,19 @@
       letter-spacing: .02em;
       color: #5A3A16;
     }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}
+.science-deep-dive{margin:14px 0 18px}
+.science-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.science-card{background:#fff;border:1.5px solid rgba(46,125,50,.18);border-radius:12px;padding:12px 14px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.science-card h3{margin-top:0;font-size:11pt}
+.science-visual{background:linear-gradient(180deg,#fcfffb 0%,#f6fbff 100%);border:2px solid #d7ead9;border-radius:14px;padding:12px 14px}
+.science-visual-title{font-size:10pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#24557a;margin-bottom:8px}
+.science-visual-caption{font-size:9.2pt;color:#51646a;margin-top:8px}
+.science-visual svg{width:100%;height:auto;display:block}
+.science-prompt{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fffaf3;border:1.5px solid #ffd6a5;font-size:9.8pt;color:#6d4c41}
+@media print{.science-columns{grid-template-columns:repeat(3,1fr)}.science-deep-dive,.science-card,.science-visual,.science-prompt{break-inside:avoid;page-break-inside:avoid}}
+@media (max-width:700px){.science-columns{grid-template-columns:1fr}}
+</style>
 </head>
 <body data-document-id="doc_YC4ykGLqCCE"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
@@ -662,28 +674,8 @@
 
   <!-- Reaction Science Cards -->
   <h2>⚗️ The Science Behind the Reactions</h2>
-
-  <div class="reaction-card">
-    <div class="reaction-title">🧪 Baking Soda + Vinegar</div>
-    <div class="reaction-equation">NaHCO₃ + CH₃COOH → CO₂ + H₂O + NaCH₃COO</div>
-    <p><strong>Reactants:</strong> sodium bicarbonate (baking soda) + acetic acid (vinegar)<br>
-    <strong>Products:</strong> carbon dioxide gas + water + sodium acetate<br>
-    The CO₂ gas makes the bubbles. The carbon in CO₂ comes from the bicarbonate in the baking soda — the vinegar's acid (H⁺ ions) drives the decomposition. The reaction is <em>endothermic</em> — it absorbs heat, so the solution cools slightly. You can <em>never</em> get your baking soda back from this reaction!</p>
-  </div>
-
-  <div class="reaction-card">
-    <div class="reaction-title">🥛 Milk + Vinegar</div>
-    <p><strong>What happens:</strong> The acid in vinegar lowers the pH of the milk, causing the casein proteins to denature (change shape permanently) and clump together. The rubbery solid is casein — the same protein used historically to make plastics and glue.<br>
-    This is <em>irreversible</em>. You cannot un-curdle milk, just like you can't un-bake a cake.</p>
-  </div>
-
-  <div class="reaction-card">
-    <div class="reaction-title">🍋 Lemon Juice + Baking Soda</div>
-    <p><strong>What happens:</strong> Same chemistry as baking soda + vinegar. Citric acid in lemon juice reacts with baking soda to produce CO₂ gas. Lemon juice is a weaker acid, so the reaction is gentler — but it's still a chemical reaction producing a new gas.<br>
-    <strong>Products:</strong> carbon dioxide + water + sodium citrate</p>
-  </div>
-
-  <h2>💬 Discussion Questions</h2>
+<div class="science-deep-dive"><div class="science-visual"><div class="science-visual-title">Science Snapshot</div><svg viewBox="0 0 660 180" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="28" rx="16" ry="16" width="220" height="120" fill="#eef7ff" stroke="#7aaad6" stroke-width="2"/><text x="150" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#244">Mixture</text><circle cx="58" cy="73" r="4" fill="#7aaad6"/><text x="72" y="78" font-family="Arial, sans-serif" font-size="13" fill="#355">same substances present</text><circle cx="58" cy="95" r="4" fill="#7aaad6"/><text x="72" y="100" font-family="Arial, sans-serif" font-size="13" fill="#355">can often separate</text><circle cx="58" cy="117" r="4" fill="#7aaad6"/><text x="72" y="122" font-family="Arial, sans-serif" font-size="13" fill="#355">no new product</text><rect x="400" y="28" rx="16" ry="16" width="220" height="120" fill="#fff6e8" stroke="#f0ad4e" stroke-width="2"/><text x="510" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#244">Chemical reaction</text><circle cx="418" cy="73" r="4" fill="#f0ad4e"/><text x="432" y="78" font-family="Arial, sans-serif" font-size="13" fill="#355">atoms rearrange</text><circle cx="418" cy="95" r="4" fill="#f0ad4e"/><text x="432" y="100" font-family="Arial, sans-serif" font-size="13" fill="#355">new products form</text><circle cx="418" cy="117" r="4" fill="#f0ad4e"/><text x="432" y="122" font-family="Arial, sans-serif" font-size="13" fill="#355">new properties appear</text><line x1="290" y1="88" x2="370" y2="88" stroke="#999" stroke-width="3" stroke-dasharray="8 8"/><text x="330" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#666">compare</text></svg><div class="science-visual-caption">Some changes only combine materials, but chemical reactions create products with new properties.</div></div><div class="science-columns"><div class="science-card"><h3>What is happening?</h3><p>A mixture is a physical combination of substances, while a chemical reaction rearranges atoms to make new substances. Reactants are the starting materials, and products are the new substances formed after the reaction.</p></div><div class="science-card"><h3>Why it works that way</h3><p>Students can often spot a reaction by evidence such as gas bubbles, temperature change, color change, smell change, or a solid precipitate. Those clues matter because they suggest the particles were rearranged, not merely stirred together.</p></div><div class="science-card"><h3>Look for this in the lesson</h3><p>Students should compare “mixed but still the same materials” with “new substances formed.” The investigation gets more scientific when they explain which observations count as evidence for each case.</p></div></div><div class="science-prompt"><strong>Ask while you read:</strong> Which observations suggest a new substance formed instead of a simple mixture?</div></div>
+<h2>💬 Discussion Questions</h2>
 
   <div class="question-box">
     <strong>🗣️ Question 1:</strong> "You mixed baking soda and vinegar and got CO₂ gas. Where did the gas come from? Was it in the baking soda, the vinegar, or did it form during the reaction?"

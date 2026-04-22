@@ -242,7 +242,19 @@ li { margin-bottom: 5px; }
       letter-spacing: .02em;
       color: #5A3A16;
     }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}
+.science-deep-dive{margin:14px 0 18px}
+.science-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.science-card{background:#fff;border:1.5px solid rgba(46,125,50,.18);border-radius:12px;padding:12px 14px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.science-card h3{margin-top:0;font-size:11pt}
+.science-visual{background:linear-gradient(180deg,#fcfffb 0%,#f6fbff 100%);border:2px solid #d7ead9;border-radius:14px;padding:12px 14px}
+.science-visual-title{font-size:10pt;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#24557a;margin-bottom:8px}
+.science-visual-caption{font-size:9.2pt;color:#51646a;margin-top:8px}
+.science-visual svg{width:100%;height:auto;display:block}
+.science-prompt{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fffaf3;border:1.5px solid #ffd6a5;font-size:9.8pt;color:#6d4c41}
+@media print{.science-columns{grid-template-columns:repeat(3,1fr)}.science-deep-dive,.science-card,.science-visual,.science-prompt{break-inside:avoid;page-break-inside:avoid}}
+@media (max-width:700px){.science-columns{grid-template-columns:1fr}}
+</style>
 </head>
 <body data-document-id="doc_hq-Sb3Nz9w8"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
@@ -275,14 +287,8 @@ li { margin-bottom: 5px; }
   <p>A scientific model is not just a neat drawing. It is a tool for showing relationships and explaining ideas. In this culminating lesson, students create and explain a life-cycle model that shows the shared pattern and uses evidence from the unit.</p>
 
   <h2>🔬 The Science</h2>
-  <p>By the end of this unit, students should be able to choose an organism, model its stages, and explain how the model shows birth, growth, reproduction, and death. The strongest models are clear, labeled, and connected to evidence from previous lessons.</p><div class="section-callout"><strong>Capstone goal:</strong> build a model that is clear enough for another person to understand the organism’s life cycle and the shared pattern behind it.</div><div class="card-grid three"><div class="mini-card"><span class="big">📝</span><div class="label">Choose</div><div class="copy">Pick an organism and identify its stages.</div></div><div class="mini-card"><span class="big">↪️</span><div class="label">Model</div><div class="copy">Show the stages in order with labels and arrows.</div></div><div class="mini-card"><span class="big">💬</span><div class="label">Explain</div><div class="copy">Use the model as evidence for birth, growth, reproduction, and death.</div></div></div>
-
-  <div class="tip-box">
-    <strong>💡 Key Vocabulary</strong>
-    <div class="vocab-chips"><span class="vocab-chip">model</span><span class="vocab-chip">evidence</span><span class="vocab-chip">explain</span><span class="vocab-chip">organism</span><span class="vocab-chip">stage</span><span class="vocab-chip">reproduction</span><span class="vocab-chip">pattern</span><span class="vocab-chip">claim</span></div>
-  </div>
-
-  <h2>Materials</h2>
+<div class="science-deep-dive"><div class="science-visual"><div class="science-visual-title">Science Snapshot</div><svg viewBox="0 0 660 160" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6aa84f"/></marker></defs><rect x="20" y="28" rx="14" ry="14" width="140" height="84" fill="#eef7ff" stroke="#8ab6d6" stroke-width="2"/><text x="90.0" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#244"><tspan x="90.0" dy="0">stage 1</tspan></text><rect x="180.0" y="28" rx="14" ry="14" width="140" height="84" fill="#f7f4ff" stroke="#b39ddb" stroke-width="2"/><text x="250.0" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#244"><tspan x="250.0" dy="0">stage 2</tspan></text><rect x="340.0" y="28" rx="14" ry="14" width="140" height="84" fill="#fff6e8" stroke="#f6b26b" stroke-width="2"/><text x="410.0" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#244"><tspan x="410.0" dy="0">stage 3</tspan></text><rect x="500.0" y="28" rx="14" ry="14" width="140" height="84" fill="#eef9f1" stroke="#93c47d" stroke-width="2"/><text x="570.0" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#244"><tspan x="570.0" dy="0">stage 4 / cycle repeats</tspan></text><line x1="150.0" y1="70" x2="190.0" y2="70" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="310.0" y1="70" x2="350.0" y2="70" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/><line x1="470.0" y1="70" x2="510.0" y2="70" stroke="#6aa84f" stroke-width="4" marker-end="url(#arr)"/></svg><div class="science-visual-caption">A strong model helps other people understand how the organism’s stages connect in time and purpose.</div></div><div class="science-columns"><div class="science-card"><h3>What is happening?</h3><p>A life-cycle model should show the sequence of stages and explain how each stage contributes to survival or reproduction. Good models simplify reality, but they still keep the key pattern clear.</p></div><div class="science-card"><h3>Why it works that way</h3><p>Scientists use models to communicate ideas that unfold over time. Arrows, labels, and notes about what happens at each stage make the model much more useful than a picture with no explanation.</p></div><div class="science-card"><h3>Look for this in the lesson</h3><p>Students should treat the model as an explanation tool. The model is strongest when it shows both order and function.</p></div></div><div class="science-prompt"><strong>Ask while you read:</strong> Does your model explain what happens at each stage or only show what it looks like?</div></div>
+<h2>Materials</h2>
   <div class="materials-box"><h3>🏠 Household Items to Gather</h3><ul><li>Printed lesson pages and worksheet</li><li>Pencils and colored pencils</li><li>Optional: prior life-cycle notes from Lessons 1–5</li></ul><h3>📋 Printables</h3><ul><li>Student Worksheet page from this lesson</li></ul></div>
 
   <h2>Let's Get Started</h2>
