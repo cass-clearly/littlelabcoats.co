@@ -51,6 +51,16 @@ li { margin-bottom: 5px; }
 .vocab-card { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 10px; text-align: center; font-size: 10pt; }
 .vocab-card .vocab-word { font-weight: bold; color: #e65100; font-size: 12pt; display: block; margin-bottom: 4px; }
 .vocab-card .vocab-def { color: #555; font-size: 9pt; line-height: 1.4; }
+.objective-box { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+.science-deep-dive { margin: 14px 0 18px; }
+.science-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.science-card { background: #fff; border: 1.5px solid rgba(230,81,0,.18); border-radius: 12px; padding: 12px 14px; box-shadow: 0 3px 10px rgba(0,0,0,.04); }
+.science-card h3 { margin-top: 0; }
+.science-visual { background: linear-gradient(180deg,#fffdf9 0%,#fff7ef 100%); border: 2px solid #ffd8b0; border-radius: 14px; padding: 12px 14px; }
+.science-visual-title { font-size: 10pt; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #a04d00; margin-bottom: 8px; }
+.science-visual-caption { font-size: 9.2pt; color: #6b5b4f; margin-top: 8px; }
+.science-visual svg { width: 100%; height: auto; display: block; }
+@media print { .science-columns { grid-template-columns: repeat(3, 1fr); } .science-deep-dive,.science-card,.science-visual { break-inside: avoid; page-break-inside: avoid; } }
 @media print {
   body { padding: 0.25in; font-size: 10pt; }
   h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -112,12 +122,13 @@ li { margin-bottom: 5px; }
   <strong>NGSS Standard:</strong> 2-ESS2-2 — Develop a model to represent the shapes and kinds of land and bodies of water in an area.
 </div>
 
-<h2>&#x1F3AF; Learning Objectives</h2>
-<ul>
-  <li>Name and describe at least 4 common landforms (mountain, valley, plain, island)</li>
-  <li>Use playdough to build models that show the shape of different landforms</li>
-  <li>Compare where on Earth different landforms are found</li>
-</ul>
+<h2>&#x1F3AF; Learning Objective</h2>
+<div class="objective-box">
+  <p>Students will develop a model that shows different landforms and bodies of water, then use that model to describe the shapes they see in an area.</p>
+</div>
+
+<h2>&#x1F4A1; The Big Idea</h2>
+<p>Landforms and bodies of water have different shapes. We can build simple models to show those shapes and describe what an area looks like.</p>
 
 <h2>&#x1F4E6; Materials</h2>
 <div class="materials-box">
@@ -157,45 +168,77 @@ li { margin-bottom: 5px; }
   </div>
 </div>
 
-<h2>&#x1F52C; Background</h2>
-<p>Earth is not flat! The surface has many different shapes called landforms. A mountain is a tall, steep rise of land with a peak at the top. A valley is a low area of land between hills or mountains, often with a river running through it. A plain is a wide, flat area of land. An island is a piece of land completely surrounded by water.</p>
-<p>Landforms are created by powerful forces inside and outside the Earth. Volcanoes push hot rock up to form new mountains. Moving plates of rock under Earth crack and fold the surface into ridges and valleys. Wind and water slowly wear away rock over millions of years, carving out canyons and valleys.</p>
-<p>Maps show us where landforms are found. Scientists who study Earth's surface are called geographers. They make maps that show mountains with triangles, valleys with V shapes, and water with blue color. When you look at a globe, you can see the rough, bumpy shape of continents, islands, and ocean floors.</p>
-
-<h2>&#x1F9EA; Activity: Landform Builder</h2>
+<h2>&#x1F52C; The Science</h2>
+<div class="science-deep-dive">
+  <div class="science-visual">
+    <div class="science-visual-title">Science Snapshot</div>
+    <svg viewBox="0 0 660 190" xmlns="http://www.w3.org/2000/svg">
+      <rect x="32" y="38" width="596" height="112" rx="18" ry="18" fill="#d8ecff" stroke="#90caf9" stroke-width="2"/>
+      <path d="M90 140 L160 70 L220 140 Z" fill="#c97b3d" stroke="#8d5524" stroke-width="2"/>
+      <path d="M250 130 Q310 80 370 130" fill="none" stroke="#8bc34a" stroke-width="20" stroke-linecap="round"/>
+      <rect x="410" y="116" width="140" height="22" rx="10" ry="10" fill="#b2dfdb" stroke="#4db6ac" stroke-width="2"/>
+      <path d="M510 110 Q540 62 575 110 Q546 132 510 110 Z" fill="#c97b3d" stroke="#8d5524" stroke-width="2"/>
+      <text x="160" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#5d4037">mountain</text>
+      <text x="310" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#2e7d32">valley</text>
+      <text x="480" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#00695c">plain</text>
+      <text x="545" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#5d4037">island</text>
+      <text x="560" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#1565c0">water</text>
+    </svg>
+    <div class="science-visual-caption">A model can show the different shapes of land and where water is found around them.</div>
+  </div>
+  <div class="science-columns">
+    <div class="science-card">
+      <h3>What is a landform?</h3>
+      <p>A landform is a natural shape on Earth&rsquo;s surface. Mountains, valleys, plains, and islands all have different shapes that we can see, compare, and model.</p>
+    </div>
+    <div class="science-card">
+      <h3>Why model it?</h3>
+      <p>Models help us show a shape that is too big to bring into the classroom. A playdough model can show tall, flat, low, or surrounded-by-water shapes.</p>
+    </div>
+    <div class="science-card">
+      <h3>How this fits NGSS</h3>
+      <p>This lesson is about building a model of an area with land and water, then using that model to describe the shapes and kinds of Earth features in that area.</p>
+    </div>
+  </div>
+</div>
+<h2>&#x1F9EA; Activity: Build a Landform Area Model</h2>
 <div class="procedure-step">
-  <strong>Step 1:</strong> Look at photos of Earth (a globe, atlas, or the internet) and find one example of each: a mountain, valley, plain, and island. If a globe is not available, discuss what each looks like from memory.
+  <strong>Step 1:</strong> Look at pictures of real places and name the shapes you notice. Ask: <em>Which landform looks tall? Which looks flat? Which is surrounded by water?</em>
 </div>
 <div class="procedure-step">
-  <strong>Step 2:</strong> Set up your workspace with playdough and blue paper (or a bowl of water for the "ocean").
+  <strong>Step 2:</strong> Set up blue paper as your water area and playdough as your land. Tell students they are building <strong>one area model</strong>, not four separate random shapes.
 </div>
 <div class="procedure-step">
-  <strong>Step 3:</strong> Build a mountain: roll playdough into a cone shape, tall and peaked at the top.
+  <strong>Step 3:</strong> Build a mountain and a plain in the same area. Compare the shapes out loud: the mountain is tall and steep, while the plain is wide and flat.
 </div>
 <div class="procedure-step">
-  <strong>Step 4:</strong> Build a valley: make two small hills side by side, then press a low curved channel between them.
+  <strong>Step 4:</strong> Add a valley between raised land or next to a hill. Have students press down the playdough to make a lower area.
 </div>
 <div class="procedure-step">
-  <strong>Step 5:</strong> Build a plain: flatten a piece of playdough into a wide, flat shape.
+  <strong>Step 5:</strong> Add an island in the blue water area. Ask students to check: <em>Is water on every side?</em>
 </div>
 <div class="procedure-step">
-  <strong>Step 6:</strong> Build an island: shape playdough into a mound and place it in the "ocean" (blue bowl or on blue paper surrounded by blue space).
+  <strong>Step 6:</strong> Label each feature with a paper flag or place written labels beside the model.
 </div>
 <div class="procedure-step">
-  <strong>Step 7:</strong> Make small paper flags: cut tiny rectangles, fold them over a toothpick or pencil tip, and label each landform with its name. If that feels too fiddly, just write the labels on scrap paper and place them beside each model.
+  <strong>Step 7:</strong> Use the model to describe the area: <em>Where is the water? Which landform is highest? Which landform is lowest? Which one is surrounded by water?</em>
 </div>
 <div class="procedure-step">
-  <strong>Step 8:</strong> Look at all 4 landforms together. Discuss: Which is tallest? Which is lowest? Which is surrounded by water?
+  <strong>Step 8:</strong> Draw a quick map of your finished model. This helps students connect a 3D model to a simple 2D representation of an area.
 </div>
 
 <h2>&#x1F4AC; Discussion Questions</h2>
 <div class="question-box">
-  <strong>Q1:</strong> Where would you build a city, on a plain or in a valley? Why?
-  <p class="discussion-hint"><strong>Hint:</strong> Plains make the easiest places to build cities because they are flat and wide with lots of room. Many of the world's biggest cities (like Chicago, Denver) are built on plains. Valleys can be good too because rivers often run through them, providing water, but they can flood!</p>
+  <strong>Q1:</strong> Which landform in your model is tallest, and how can you tell?
+  <p class="discussion-hint"><strong>Hint:</strong> Students should use shape words like tall, steep, low, flat, or surrounded by water.</p>
 </div>
 <div class="question-box">
-  <strong>Q2:</strong> What do you think would happen if you poured water at the top of your mountain model?
-  <p class="discussion-hint"><strong>Hint:</strong> The water would run down the sides of the mountain and collect in the low valley below. This is exactly how rivers and streams form in real life: rain falls on mountains and flows downhill into valleys.</p>
+  <strong>Q2:</strong> How did your model show the difference between land and water?
+  <p class="discussion-hint"><strong>Hint:</strong> Students should point to the blue paper or water area and explain which features were landforms.</p>
+</div>
+<div class="question-box">
+  <strong>Q3:</strong> Why is an island different from the other landforms you built?
+  <p class="discussion-hint"><strong>Hint:</strong> An island is land all the way around by water, so its location matters as much as its shape.</p>
 </div>
 
 <div class="page-break"></div>
@@ -204,40 +247,28 @@ li { margin-bottom: 5px; }
 <div class="worksheet-header">Landforms All Around - Student Worksheet</div>
 <div class="name-date">Name: _________________________ &nbsp;&nbsp; Date: _____________</div>
 
-<h3>1. Draw and label 4 landforms</h3>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-  <div>
-    <div class="draw-box" style="min-height: 130px;"></div>
-    <p style="text-align: center;">Label: ___________________</p>
-  </div>
-  <div>
-    <div class="draw-box" style="min-height: 130px;"></div>
-    <p style="text-align: center;">Label: ___________________</p>
-  </div>
-  <div>
-    <div class="draw-box" style="min-height: 130px;"></div>
-    <p style="text-align: center;">Label: ___________________</p>
-  </div>
-  <div>
-    <div class="draw-box" style="min-height: 130px;"></div>
-    <p style="text-align: center;">Label: ___________________</p>
-  </div>
-</div>
+<h3>1. Draw your area model</h3>
+<p>Draw one area that includes at least these features: <strong>mountain, valley, plain, island, and water</strong>. Label each one.</p>
+<div class="draw-box" style="min-height: 190px;"></div>
 
-<h3>2. Fill in the blank</h3>
-<p>A landform that is completely surrounded by water is called a(n) ___________________.</p>
+<h3>2. Match the shape word</h3>
+<p>Write the correct landform name next to each clue.</p>
+<p>tall and steep: ___________________</p>
+<p>low area between higher land: ___________________</p>
+<p>wide and flat: ___________________</p>
+<p>land surrounded by water: ___________________</p>
 
-<h3>3. How did your model show shape?</h3>
-<p>Choose one landform model and explain how its shape helped show what it was.</p>
+<h3>3. Explain your model</h3>
+<p>How did your model show the difference between <strong>land</strong> and <strong>water</strong>?</p>
 <div class="draw-box" style="min-height: 90px;"></div>
 
-<h3>4. Circle the right answer</h3>
-<p>Where would you most likely find a river?</p>
-<p style="margin-left: 20px;">(a) In a valley &nbsp;&nbsp;&nbsp; (b) On a mountain peak &nbsp;&nbsp;&nbsp; (c) In the middle of a plain</p>
+<h3>4. Circle the best answer</h3>
+<p>Which landform is surrounded by water?</p>
+<p style="margin-left: 20px;">(a) mountain &nbsp;&nbsp;&nbsp; (b) island &nbsp;&nbsp;&nbsp; (c) valley</p>
 
-<h3>5. Draw a simple map</h3>
-<p>Draw a map that includes: 1 mountain, 1 valley, and 1 ocean. Color the water blue.</p>
-<div class="draw-box" style="min-height: 180px;"></div>
+<h3>5. Use evidence from your model</h3>
+<p>Which landform in your model was the tallest? ___________________</p>
+<p>Which landform in your model was the flattest? ___________________</p>
 
 <div class="page-break"></div>
 
@@ -246,8 +277,8 @@ li { margin-bottom: 5px; }
   <ul>
     <li><strong>Homemade playdough recipe:</strong> 2 cups flour, 1/2 cup salt, 3/4 cup water, 1 tbsp oil. Add food coloring if desired. It lasts about a week in an airtight bag.</li>
     <li><strong>No playdough?</strong> Use rolled-up paper or pillows to model landforms conceptually.</li>
-    <li><strong>Mastery check:</strong> This lesson is more about vocabulary and mental models than memorization. If a child can describe why a mountain is different from a plain in their own words, that is full mastery.</li>
-    <li><strong>Preview:</strong> Connect to L3 (Water Shapes the Land) by asking: what happens when water hits your mountain? Preview erosion.</li>
+    <li><strong>Mastery check:</strong> Students should be able to use a model to describe the shapes and kinds of land and water in one area, not just name isolated vocabulary words.</li>
+    <li><strong>Preview:</strong> Connect to later lessons by asking how water might move around the landforms in the model.</li>
   </ul>
 </div>
 
@@ -255,10 +286,10 @@ li { margin-bottom: 5px; }
 <div class="answer-key">
   <h3>Worksheet Answers</h3>
   <ol>
-    <li><strong>Draw and label 4 landforms:</strong> Accept any combination of mountain, valley, plain, island, peninsula. Drawings should roughly match the shape (mountain = tall/pointed, valley = low between hills, plain = flat, island = surrounded by water).</li>
-    <li><strong>Fill in the blank:</strong> island</li>
-    <li><strong>Circle the right answer:</strong> (a) In a valley</li>
-    <li><strong>Draw a simple map:</strong> Accept any drawing that includes a triangular or peaked mountain shape, a low area for a valley, and a blue-colored area for the ocean. Labels are a bonus.</li>
+    <li><strong>Draw your area model:</strong> Accept any model that clearly shows multiple landforms and a body of water in one area, with labels that match the shapes.</li>
+    <li><strong>Match the shape word:</strong> mountain, valley, plain, island</li>
+    <li><strong>Circle the best answer:</strong> (b) island</li>
+    <li><strong>Use evidence from your model:</strong> Accept reasonable answers that match the student's own model.</li>
   </ol>
 </div>
 
