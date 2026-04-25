@@ -37,6 +37,10 @@
     .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
     .tool-card { border: 2px solid #90caf9; border-radius: 10px; padding: 12px; background: #fff; }
     .tool-card strong { color: #0d47a1; display: block; margin-bottom: 6px; }
+    .diagram-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0; }
+    .diagram-card { background:#f9fcff; border:2px solid #bbdefb; border-radius:12px; padding:12px; }
+    .diagram-card svg { width:100%; height:auto; display:block; }
+    .diagram-caption { font-size:9.5pt; color:#444; margin-top:8px; line-height:1.35; }
     .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
     .worksheet-header { background: #1565c0; color: white; padding: 8px 14px; border-radius: 6px; font-size: 14pt; font-weight: bold; margin: 0 0 12px 0; text-align: center; }
     .draw-area { border: 1.5px dashed #90caf9; border-radius: 8px; min-height: 120px; background: #fafcff; margin: 8px 0 12px; padding: 8px; }
@@ -115,6 +119,7 @@
       <li>1 strip of paper or lightweight fabric ribbon</li>
       <li>String or tape</li>
       <li>1 pencil or craft stick</li>
+      <li>1 index card or small piece of cardboard for a cloud viewer frame</li>
       <li>Paper and crayons</li>
       <li>Optional: outdoor thermometer</li>
     </ul>
@@ -128,16 +133,22 @@
   <div class="tool-grid">
     <div class="tool-card"><strong>Rain gauge</strong>Use a clear cup. Mark a few simple measurement lines with a ruler so you can tell whether rain collected a little or a lot.</div>
     <div class="tool-card"><strong>Windsock</strong>Tape a paper strip or ribbon to a pencil, stick, or porch rail. Watch whether it hangs down, waves a little, or stretches out strongly.</div>
-    <div class="tool-card"><strong>Sky chart</strong>Look up and record whether the sky is clear, partly cloudy, mostly cloudy, or dark and stormy.</div>
+    <div class="tool-card"><strong>Cloud viewer frame</strong>Cut a simple window into an index card or small piece of cardboard. Hold it up to the sky to focus on one patch of clouds at a time.</div>
+  </div>
+  <div class="diagram-grid">
+    <div class="diagram-card"><strong>1) Rain gauge</strong><svg viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg"><rect x="55" y="20" width="70" height="100" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3"/><line x1="65" y1="95" x2="115" y2="95" stroke="#1565c0" stroke-width="2"/><line x1="65" y1="75" x2="115" y2="75" stroke="#1565c0" stroke-width="2"/><line x1="65" y1="55" x2="115" y2="55" stroke="#1565c0" stroke-width="2"/><text x="33" y="58" font-size="14" fill="#0d47a1">1</text><text x="33" y="78" font-size="14" fill="#0d47a1">2</text><text x="33" y="98" font-size="14" fill="#0d47a1">3</text><path d="M78 108 Q90 90 102 108" fill="#90caf9" opacity="0.8"/></svg><div class="diagram-caption">Mark lines on a clear cup so you can measure how much rain collected.</div></div>
+    <div class="diagram-card"><strong>2) Windsock</strong><svg viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="20" x2="45" y2="128" stroke="#6d4c41" stroke-width="6"/><line x1="45" y1="32" x2="108" y2="32" stroke="#1565c0" stroke-width="4"/><path d="M108 32 C126 38, 136 46, 150 54" stroke="#ef5350" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M108 32 C126 48, 136 58, 148 72" stroke="#ffca28" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M108 32 C124 62, 132 76, 140 90" stroke="#66bb6a" stroke-width="8" fill="none" stroke-linecap="round"/></svg><div class="diagram-caption">Tape ribbons to a stick or rail and watch how much the wind moves them.</div></div>
+    <div class="diagram-card"><strong>3) Cloud viewer frame</strong><svg viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="20" width="120" height="100" rx="10" fill="#ffe082" stroke="#f9a825" stroke-width="5"/><rect x="60" y="45" width="60" height="50" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="3"/><path d="M74 78 Q82 66 92 74 Q96 60 108 67 Q118 69 116 80 Z" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/></svg><div class="diagram-caption">Cut a window in a card so you can study one patch of sky and describe the clouds you see.</div></div>
   </div>
 
   <h2>🔍 Let’s Get Started</h2>
   <div class="procedure-step"><strong>Step 1 — Launch the mystery:</strong> Ask, “If two people both say ‘It’s windy,’ how could a scientist make that more exact?” Explain that today the child becomes a meteorologist.</div>
   <div class="procedure-step"><strong>Step 2 — Make a simple rain gauge:</strong> Use the ruler to mark equal lines on the side of a clear cup or jar. Label them 1, 2, 3, and 4. Place the cup outside in an open spot where it can collect rain safely.</div>
   <div class="procedure-step"><strong>Step 3 — Make a windsock or wind ribbon:</strong> Tape a paper strip or ribbon to a stick, pencil, porch rail, or fence. Observe whether it hangs down, wiggles lightly, or stretches strongly in one direction.</div>
-  <div class="procedure-step"><strong>Step 4 — Record a first observation:</strong> Go outside or look from a safe window. Record cloud cover, wind strength, temperature feel, and whether any precipitation is happening right now.</div>
-  <div class="procedure-step"><strong>Step 5 — Compare evidence types:</strong> Ask which tool helped with wind, which helped with rainfall, and which information still depended on the child’s own careful noticing.</div>
-  <div class="procedure-step"><strong>Step 6 — Start the pattern habit:</strong> Tell the child to repeat the observation at the same time for the next two days. The power comes from doing it more than once.</div>
+  <div class="procedure-step"><strong>Step 4 — Make a cloud viewer frame:</strong> Cut a window into an index card or small piece of cardboard. Hold it up to the sky to focus on one section and decide whether the clouds look clear, partly cloudy, mostly cloudy, or stormy.</div>
+  <div class="procedure-step"><strong>Step 5 — Record a first observation:</strong> Go outside or look from a safe window. Record cloud cover, wind strength, temperature feel, and whether any precipitation is happening right now.</div>
+  <div class="procedure-step"><strong>Step 6 — Compare evidence types:</strong> Ask which tool helped with wind, which helped with rainfall, and which helped with cloud cover.</div>
+  <div class="procedure-step"><strong>Step 7 — Start the pattern habit:</strong> Tell the child to repeat the observation at the same time for the next two days. The power comes from doing it more than once.</div>
 
   <h2>💬 Discussion Questions</h2>
   <div class="question-box"><strong>Why do scientists use tools instead of only saying “It feels rainy” or “It feels windy”?</strong><span class="discussion-hint">Look for: tools help us gather clearer evidence and compare one day to another.</span></div>
@@ -168,12 +179,12 @@
 
     <h3>1️⃣ My Weather Tools</h3>
     <p>I built these tools today:</p>
-    <p>☐ Rain gauge &nbsp;&nbsp; ☐ Windsock / ribbon &nbsp;&nbsp; ☐ Sky chart</p>
+    <p>☐ Rain gauge &nbsp;&nbsp; ☐ Windsock / ribbon &nbsp;&nbsp; ☐ Cloud viewer frame</p>
     <p>The tool that helped me most today was:</p>
     <div class="line"></div>
 
     <h3>2️⃣ Draw Your Weather Station</h3>
-    <div class="draw-area">Draw your tools here. Label the rain gauge, wind tool, and where you observed the sky.</div>
+    <div class="draw-area">Draw your tools here. Label the rain gauge, wind tool, and cloud viewer frame.</div>
 
     <h3>3️⃣ My First Weather Observation</h3>
     <table class="ws-table">
