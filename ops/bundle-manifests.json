@@ -17,6 +17,9 @@
       "gr1-ess1-unit1-bundle",
       "gr1-ets1-unit1-bundle",
       "grade-1-complete"
+    ],
+    "all-grade-2": [
+      "grade-2-complete"
     ]
   },
   "bundles": {
@@ -186,6 +189,15 @@
         "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
         "exports/gr1-ess1-unit1-bundle/gr1-ess1-unit1-six-lesson-bundle.pdf",
         "exports/gr1-ets1-unit1-bundle/gr1-ets1-unit1-six-lesson-bundle.pdf"
+      ]
+    },
+    "grade-2-complete": {
+      "type": "complete",
+      "output": "exports/grade-2-complete/grade-2-complete-science-bundle.pdf",
+      "bundles": [
+        "exports/gr2-ps1-unit1-bundle/gr2-ps1-unit1-six-lesson-bundle.pdf",
+        "exports/gr2-ls2-unit2-bundle/gr2-ls2-unit2-six-lesson-bundle.pdf",
+        "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf"
       ]
     }
   }

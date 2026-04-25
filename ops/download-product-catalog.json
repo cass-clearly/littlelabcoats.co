@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-18",
+  "updatedAt": "2026-04-25",
   "launchModel": {
     "paidProductTypes": [
       "unit-bundle",
@@ -205,9 +205,9 @@
       "fullGrade": {
         "sku": "grade-2-complete",
         "productType": "full-grade-bundle",
-        "bundlePdfStatus": "grade_bundle_pending",
+        "bundlePdfStatus": "grade_bundle_ready",
         "checkoutLinkStatus": "pending",
-        "exportPath": "exports/grade-2-complete/",
+        "exportPath": "exports/grade-2-complete/grade-2-complete-science-bundle.pdf",
         "thankYouProduct": "grade-2-complete",
         "includedUnits": [
           "gr2-ps1-unit1-bundle",
@@ -222,9 +222,9 @@
           "domain": "Physical Science",
           "unitCode": "2-PS1 Unit 1",
           "previewUrl": "/lesson-plans/gr2-ps1-unit1-l1-matter/",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr2-ps1-unit1-bundle/",
+          "exportPath": "exports/gr2-ps1-unit1-bundle/gr2-ps1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr2-ps1-unit1-bundle"
         },
         {
@@ -233,9 +233,9 @@
           "domain": "Life Science",
           "unitCode": "2-LS2 Unit 2",
           "previewUrl": "/lesson-plans/gr2-ls2-unit2-l1-ecosystems/",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr2-ls2-unit2-bundle/",
+          "exportPath": "exports/gr2-ls2-unit2-bundle/gr2-ls2-unit2-six-lesson-bundle.pdf",
           "thankYouProduct": "gr2-ls2-unit2-bundle"
         },
         {
@@ -244,9 +244,9 @@
           "domain": "Earth Science",
           "unitCode": "2-ESS1 Unit 3",
           "previewUrl": "/lesson-plans/gr2-ess1-unit3-l1-landforms/",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr2-ess1-unit3-bundle/",
+          "exportPath": "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf",
           "thankYouProduct": "gr2-ess1-unit3-bundle"
         }
       ]
@@ -411,9 +411,9 @@
           "domain": "Physical Science",
           "unitCode": "5-PS2 Unit 1",
           "previewUrl": "/lesson-plans/gr5-ps2-unit1-l1-balanced-and-unbalanced-forces.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr5-ps2-unit1-bundle/",
+          "exportPath": "exports/gr5-ps2-unit1-bundle/gr5-ps2-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr5-ps2-unit1-bundle"
         },
         {

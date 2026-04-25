@@ -46,6 +46,33 @@
       "status": "live-manual"
     },
     {
+      "slug": "gr2-ess1-unit3-bundle",
+      "displayName": "Grade 2 Earth Science Unit 3 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 2 Earth Science Unit 3 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "gr2-ls2-unit2-bundle",
+      "displayName": "Grade 2 Life Science Unit 2 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr2-ls2-unit2-bundle/gr2-ls2-unit2-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 2 Life Science Unit 2 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "gr2-ps1-unit1-bundle",
+      "displayName": "Grade 2 Physical Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr2-ps1-unit1-bundle/gr2-ps1-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 2 Physical Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
       "slug": "gr3-ps2-unit1-bundle",
       "displayName": "Grade 3 Physical Science Unit 1 bundle",
       "deliveryType": "attachment",
@@ -60,6 +87,15 @@
       "deliveryType": "attachment",
       "assetPath": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
       "draftSubject": "Your Complete Grade 1 Science Bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "grade-2-complete",
+      "displayName": "Complete Grade 2 Science Bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/grade-2-complete/grade-2-complete-science-bundle.pdf",
+      "draftSubject": "Your Complete Grade 2 Science Bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
     },
