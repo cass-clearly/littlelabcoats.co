@@ -31,9 +31,9 @@
       "fullGrade": {
         "sku": "grade-k-complete",
         "productType": "full-grade-bundle",
-        "bundlePdfStatus": "grade_bundle_pending",
+        "bundlePdfStatus": "grade_bundle_ready",
         "checkoutLinkStatus": "pending",
-        "exportPath": "exports/grade-k-complete/",
+        "exportPath": "exports/grade-k-complete/grade-k-complete-science-bundle.pdf",
         "thankYouProduct": "grade-k-complete",
         "includedUnits": [
           "k-ps2-unit1-bundle",
@@ -52,9 +52,9 @@
           "domain": "Physical Science",
           "unitCode": "K-PS2",
           "previewUrl": "/lesson-plans/unit1-lesson1-push-pull-sort.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/k-ps2-unit1-bundle/",
+          "exportPath": "exports/k-ps2-unit1-bundle/k-ps2-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "k-ps2-unit1-bundle"
         },
         {
@@ -63,9 +63,9 @@
           "domain": "Physical Science",
           "unitCode": "K-PS3 Unit 2",
           "previewUrl": "/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html",
-          "bundlePdfStatus": "lesson_pdfs_ready_bundle_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/k-ps3-unit2-final-pdfs/",
+          "exportPath": "exports/k-ps3-unit2-bundle/k-ps3-unit2-six-lesson-bundle.pdf",
           "thankYouProduct": "k-ps3-unit2-bundle"
         },
         {
@@ -96,9 +96,9 @@
           "domain": "Earth Science",
           "unitCode": "K-ESS2 Unit 1",
           "previewUrl": "/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/k-ess2-unit1-bundle/",
+          "exportPath": "exports/k-ess2-unit1-bundle/k-ess2-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "k-ess2-unit1-bundle"
         },
         {
@@ -107,9 +107,9 @@
           "domain": "Earth Science",
           "unitCode": "K-ESS3 Unit 2",
           "previewUrl": "/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/k-ess3-unit2-bundle/",
+          "exportPath": "exports/k-ess3-unit2-bundle/k-ess3-unit2-six-lesson-bundle.pdf",
           "thankYouProduct": "k-ess3-unit2-bundle"
         },
         {
@@ -118,9 +118,9 @@
           "domain": "Engineering",
           "unitCode": "K-ETS1 Unit 1",
           "previewUrl": "/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/k-ets1-unit1-bundle/",
+          "exportPath": "exports/k-ets1-unit1-bundle/k-ets1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "k-ets1-unit1-bundle"
         }
       ]
@@ -130,9 +130,9 @@
       "fullGrade": {
         "sku": "grade-1-complete",
         "productType": "full-grade-bundle",
-        "bundlePdfStatus": "grade_bundle_pending",
+        "bundlePdfStatus": "grade_bundle_ready",
         "checkoutLinkStatus": "pending",
-        "exportPath": "exports/grade-1-complete/",
+        "exportPath": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
         "thankYouProduct": "grade-1-complete",
         "includedUnits": [
           "gr1-ps4-unit1-bundle",
@@ -160,9 +160,9 @@
           "domain": "Life Science",
           "unitCode": "1-LS1 Unit 1",
           "previewUrl": "/lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr1-ls1-unit1-bundle/",
+          "exportPath": "exports/gr1-ls1-unit1-bundle/gr1-ls1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr1-ls1-unit1-bundle"
         },
         {
@@ -171,9 +171,9 @@
           "domain": "Life Science",
           "unitCode": "1-LS3 Unit 2",
           "previewUrl": "/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr1-ls3-unit2-bundle/",
+          "exportPath": "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
           "thankYouProduct": "gr1-ls3-unit2-bundle"
         },
         {
@@ -182,9 +182,9 @@
           "domain": "Earth Science",
           "unitCode": "1-ESS1 Unit 1",
           "previewUrl": "/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr1-ess1-unit1-bundle/",
+          "exportPath": "exports/gr1-ess1-unit1-bundle/gr1-ess1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr1-ess1-unit1-bundle"
         },
         {
@@ -193,9 +193,9 @@
           "domain": "Engineering",
           "unitCode": "1-ETS1 Unit 1",
           "previewUrl": "/lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
+          "bundlePdfStatus": "bundle_pdf_ready",
           "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr1-ets1-unit1-bundle/",
+          "exportPath": "exports/gr1-ets1-unit1-bundle/gr1-ets1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr1-ets1-unit1-bundle"
         }
       ]

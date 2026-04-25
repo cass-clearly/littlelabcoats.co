@@ -1,0 +1,20 @@
+Hi {{customer_name}},
+
+Thank you for your Little Lab Coats purchase.
+
+Attached is your Kindergarten Physical Science Unit 2 bundle PDF.
+
+Included lessons:
+- Lesson 1: Sun Warms Everything
+- Lesson 2: Shadow Science
+- Lesson 3: Dark vs. Light Surfaces
+- Lesson 4: Melting Race
+- Lesson 5: Design a Sun Shelter Plan
+- Lesson 6: Design a Sun Shelter Build
+
+If you have any trouble opening the file, just reply to this email and we’ll help.
+
+Warmly,
+Serena
+Little Lab Coats
+clearlycass10@gmail.com

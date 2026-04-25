@@ -1,0 +1,192 @@
+{
+  "groups": {
+    "all-k": [
+      "k-ps2-unit1-bundle",
+      "k-ps3-unit2-bundle",
+      "k-ls1-unit2-bundle",
+      "k-ls1-unit3-bundle",
+      "k-ess2-unit1-bundle",
+      "k-ess3-unit2-bundle",
+      "k-ets1-unit1-bundle",
+      "grade-k-complete"
+    ],
+    "all-grade-1": [
+      "gr1-ps4-unit1-bundle",
+      "gr1-ls1-unit1-bundle",
+      "gr1-ls3-unit2-bundle",
+      "gr1-ess1-unit1-bundle",
+      "gr1-ets1-unit1-bundle",
+      "grade-1-complete"
+    ]
+  },
+  "bundles": {
+    "k-ps2-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/k-ps2-unit1-bundle/k-ps2-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/unit1-lesson1-push-pull-sort.html",
+        "lesson-plans/unit1-lesson2-ramp-racers.html",
+        "lesson-plans/unit1-lesson3-strong-push-gentle-push.html",
+        "lesson-plans/unit1-lesson4-magnet-magic.html",
+        "lesson-plans/unit1-lesson5-wind-wagon.html",
+        "lesson-plans/unit1-lesson6-marble-run.html"
+      ]
+    },
+    "k-ps3-unit2-bundle": {
+      "type": "unit",
+      "output": "exports/k-ps3-unit2-bundle/k-ps3-unit2-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html",
+        "lesson-plans/k-ps3-unit2-lesson2-shadow-science.html",
+        "lesson-plans/k-ps3-unit2-lesson3-dark-vs-light-surfaces.html",
+        "lesson-plans/k-ps3-unit2-lesson4-melting-race.html",
+        "lesson-plans/k-ps3-unit2-lesson5-design-sun-shelter-plan.html",
+        "lesson-plans/k-ps3-unit2-lesson6-design-sun-shelter-build.html"
+      ]
+    },
+    "k-ls1-unit2-bundle": {
+      "type": "unit",
+      "output": "exports/k-ls1-unit2-bundle/k-ls1-unit2-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html",
+        "lesson-plans/k-ls1-unit2-lesson2-planting-day.html",
+        "lesson-plans/k-ls1-unit2-lesson3-parts-of-a-plant.html",
+        "lesson-plans/k-ls1-unit2-lesson4-sunlight-or-no-sunlight.html",
+        "lesson-plans/k-ls1-unit2-lesson5-seed-travelers.html",
+        "lesson-plans/k-ls1-unit2-lesson6-plant-life-cycle.html"
+      ]
+    },
+    "k-ls1-unit3-bundle": {
+      "type": "unit",
+      "output": "exports/k-ls1-unit3-bundle/k-ls1-unit3-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html",
+        "lesson-plans/k-ls1-unit3-lesson2-whats-for-dinner.html",
+        "lesson-plans/k-ls1-unit3-lesson3-breathing.html",
+        "lesson-plans/k-ls1-unit3-lesson4-how-animals-drink.html",
+        "lesson-plans/k-ls1-unit3-lesson5-building-a-shelter.html",
+        "lesson-plans/k-ls1-unit3-lesson6-when-needs-arent-met.html"
+      ]
+    },
+    "k-ess2-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/k-ess2-unit1-bundle/k-ess2-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html",
+        "lesson-plans/k-ess2-unit1-lesson2-wind.html",
+        "lesson-plans/k-ess2-unit1-lesson3-water-cycle.html",
+        "lesson-plans/k-ess2-unit1-lesson4-four-seasons.html",
+        "lesson-plans/k-ess2-unit1-lesson5-animals-and-weather.html",
+        "lesson-plans/k-ess2-unit1-lesson6-weather-patterns.html"
+      ]
+    },
+    "k-ess3-unit2-bundle": {
+      "type": "unit",
+      "output": "exports/k-ess3-unit2-bundle/k-ess3-unit2-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html",
+        "lesson-plans/k-ess3-unit2-lesson2-water-resource.html",
+        "lesson-plans/k-ess3-unit2-lesson3-soil.html",
+        "lesson-plans/k-ess3-unit2-lesson4-humans-change-earth.html",
+        "lesson-plans/k-ess3-unit2-lesson5-weather-hazards.html",
+        "lesson-plans/k-ess3-unit2-lesson6-being-earths-helper.html"
+      ]
+    },
+    "k-ets1-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/k-ets1-unit1-bundle/k-ets1-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html",
+        "lesson-plans/k-ets1-unit1-lesson2-ask-questions.html",
+        "lesson-plans/k-ets1-unit1-lesson3-draw-your-idea.html",
+        "lesson-plans/k-ets1-unit1-lesson4-build-it.html",
+        "lesson-plans/k-ets1-unit1-lesson5-test-and-improve.html",
+        "lesson-plans/k-ets1-unit1-lesson6-share-your-solution.html"
+      ]
+    },
+    "grade-k-complete": {
+      "type": "complete",
+      "output": "exports/grade-k-complete/grade-k-complete-science-bundle.pdf",
+      "bundles": [
+        "exports/k-ps2-unit1-bundle/k-ps2-unit1-six-lesson-bundle.pdf",
+        "exports/k-ps3-unit2-bundle/k-ps3-unit2-six-lesson-bundle.pdf",
+        "exports/k-ls1-unit2-bundle/k-ls1-unit2-six-lesson-bundle.pdf",
+        "exports/k-ls1-unit3-bundle/k-ls1-unit3-six-lesson-bundle.pdf",
+        "exports/k-ess2-unit1-bundle/k-ess2-unit1-six-lesson-bundle.pdf",
+        "exports/k-ess3-unit2-bundle/k-ess3-unit2-six-lesson-bundle.pdf",
+        "exports/k-ets1-unit1-bundle/k-ets1-unit1-six-lesson-bundle.pdf"
+      ]
+    },
+    "gr1-ps4-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr1-ps4-unit1-bundle/gr1-ps4-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html",
+        "lesson-plans/gr1-ps4-unit1-lesson2-light-travels.html",
+        "lesson-plans/gr1-ps4-unit1-lesson3-mirrors-and-communication.html",
+        "lesson-plans/gr1-ps4-unit1-lesson4-vibrating-strings-and-sound.html",
+        "lesson-plans/gr1-ps4-unit1-lesson5-sound-through-solids-liquids-gases.html",
+        "lesson-plans/gr1-ps4-unit1-lesson6-design-a-sound-sender.html"
+      ]
+    },
+    "gr1-ls1-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr1-ls1-unit1-bundle/gr1-ls1-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr1-ls1-lesson1-animal-structures-biomimicry.html",
+        "lesson-plans/gr1-ls1-unit1-lesson2-plant-parts-functions.html",
+        "lesson-plans/gr1-ls1-unit1-lesson3-animal-protection.html",
+        "lesson-plans/gr1-ls1-unit1-lesson4-plants-attract-pollinators.html",
+        "lesson-plans/gr1-ls1-unit1-lesson5-structures-for-getting-food.html",
+        "lesson-plans/gr1-ls1-unit1-lesson6-structures-for-moving.html"
+      ]
+    },
+    "gr1-ls3-unit2-bundle": {
+      "type": "unit",
+      "output": "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html",
+        "lesson-plans/gr1-ls3-unit2-lesson2-baby-animals-and-needs.html",
+        "lesson-plans/gr1-ls3-unit2-lesson3-parents-protect-offspring.html",
+        "lesson-plans/gr1-ls3-unit2-lesson4-parents-teach-offspring.html",
+        "lesson-plans/gr1-ls3-unit2-lesson5-plant-parenting.html",
+        "lesson-plans/gr1-ls3-unit2-lesson6-patterns-parent-offspring.html"
+      ]
+    },
+    "gr1-ess1-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr1-ess1-unit1-bundle/gr1-ess1-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html",
+        "lesson-plans/gr1-ess1-unit1-lesson2-the-moon.html",
+        "lesson-plans/gr1-ess1-unit1-lesson3-stars.html",
+        "lesson-plans/gr1-ess1-unit1-lesson4-daylight-and-seasons.html",
+        "lesson-plans/gr1-ess1-unit1-lesson5-sky-changes.html",
+        "lesson-plans/gr1-ess1-unit1-lesson6-patterns-in-the-sky.html"
+      ]
+    },
+    "gr1-ets1-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr1-ets1-unit1-bundle/gr1-ets1-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html",
+        "lesson-plans/gr1-ets1-unit1-lesson2-look-at-animal-solutions.html",
+        "lesson-plans/gr1-ets1-unit1-lesson3-plan-a-nature-inspired-tool.html",
+        "lesson-plans/gr1-ets1-unit1-lesson4-build-your-first-model.html",
+        "lesson-plans/gr1-ets1-unit1-lesson5-test-and-improve-your-design.html",
+        "lesson-plans/gr1-ets1-unit1-lesson6-share-your-final-design.html"
+      ]
+    },
+    "grade-1-complete": {
+      "type": "complete",
+      "output": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
+      "bundles": [
+        "exports/gr1-ps4-unit1-bundle/gr1-ps4-unit1-six-lesson-bundle.pdf",
+        "exports/gr1-ls1-unit1-bundle/gr1-ls1-unit1-six-lesson-bundle.pdf",
+        "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
+        "exports/gr1-ess1-unit1-bundle/gr1-ess1-unit1-six-lesson-bundle.pdf",
+        "exports/gr1-ets1-unit1-bundle/gr1-ets1-unit1-six-lesson-bundle.pdf"
+      ]
+    }
+  }
+}

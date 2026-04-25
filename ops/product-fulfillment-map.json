@@ -1,6 +1,42 @@
 {
   "products": [
     {
+      "slug": "gr1-ess1-unit1-bundle",
+      "displayName": "Grade 1 Earth Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr1-ess1-unit1-bundle/gr1-ess1-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 1 Earth Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "gr1-ets1-unit1-bundle",
+      "displayName": "Grade 1 Engineering Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr1-ets1-unit1-bundle/gr1-ets1-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 1 Engineering Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "gr1-ls1-unit1-bundle",
+      "displayName": "Grade 1 Life Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr1-ls1-unit1-bundle/gr1-ls1-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 1 Life Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "gr1-ls3-unit2-bundle",
+      "displayName": "Grade 1 Life Science Unit 2 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 1 Life Science Unit 2 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
       "slug": "gr1-ps4-unit1-bundle",
       "displayName": "Grade 1 Physical Science Unit 1 bundle",
       "deliveryType": "attachment",
@@ -8,6 +44,60 @@
       "draftSubject": "Your Grade 1 Physical Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "live-manual"
+    },
+    {
+      "slug": "gr3-ps2-unit1-bundle",
+      "displayName": "Grade 3 Physical Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Grade 3 Physical Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "grade-1-complete",
+      "displayName": "Complete Grade 1 Science Bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
+      "draftSubject": "Your Complete Grade 1 Science Bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "grade-k-complete",
+      "displayName": "Complete Kindergarten Science Bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/grade-k-complete/grade-k-complete-science-bundle.pdf",
+      "draftSubject": "Your Complete Kindergarten Science Bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "k-ess2-unit1-bundle",
+      "displayName": "Kindergarten Earth Science Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/k-ess2-unit1-bundle/k-ess2-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Earth Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "k-ess3-unit2-bundle",
+      "displayName": "Kindergarten Earth Science Unit 2 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/k-ess3-unit2-bundle/k-ess3-unit2-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Earth Science Unit 2 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "k-ets1-unit1-bundle",
+      "displayName": "Kindergarten Engineering Unit 1 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/k-ets1-unit1-bundle/k-ets1-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Engineering Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
     },
     {
       "slug": "k-ls1-unit2-bundle",
@@ -28,11 +118,20 @@
       "status": "ready-manual"
     },
     {
-      "slug": "gr3-ps2-unit1-bundle",
-      "displayName": "Grade 3 Physical Science Unit 1 bundle",
+      "slug": "k-ps2-unit1-bundle",
+      "displayName": "Kindergarten Physical Science Unit 1 bundle",
       "deliveryType": "attachment",
-      "assetPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
-      "draftSubject": "Your Grade 3 Physical Science Unit 1 bundle is ready",
+      "assetPath": "exports/k-ps2-unit1-bundle/k-ps2-unit1-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Physical Science Unit 1 bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
+      "slug": "k-ps3-unit2-bundle",
+      "displayName": "Kindergarten Physical Science Unit 2 bundle",
+      "deliveryType": "attachment",
+      "assetPath": "exports/k-ps3-unit2-bundle/k-ps3-unit2-six-lesson-bundle.pdf",
+      "draftSubject": "Your Kindergarten Physical Science Unit 2 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
     }
