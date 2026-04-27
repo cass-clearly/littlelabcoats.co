@@ -10,16 +10,18 @@ A lesson batch is only counted as reviewed in this tracker when all of these are
 2. Margaret review artifact exists
 3. Iris final-pass review is recorded after Rachel and Margaret
 4. literal fixes are applied in repo
-5. every lesson/refcard/quiz in scope has required Remarq wiring proof:
+5. every lesson in scope has a generated hero image created with the latest approved image model (Gemini if available; otherwise the latest configured image model)
+6. every lesson/refcard/quiz in scope has required Remarq wiring proof:
    - explicit `data-document-id` in the shipped HTML
    - `feedback-layer.js` present with the matching document ID
    - review-mode route works with `?review=1`
-6. review/status surfaces are updated
-7. batch commit and push are completed
-8. post-publish public verification is recorded
+7. review/status surfaces are updated
+8. batch commit and push are completed
+9. post-publish public verification is recorded
 
 If any item above is still missing, the batch stays in `in progress` or `needs republish`.
 Missing Remarq proof is a hard failure, not a soft warning.
+Missing the required latest-model hero image is also a hard failure.
 
 ## Starting inventory source
 

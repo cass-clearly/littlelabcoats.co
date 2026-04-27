@@ -20,8 +20,9 @@
        - theme-engineering (Engineering/ETS - purple)
     3. Delete sections you don't need (e.g., grade differentiation for K lessons)
     4. Replace the Remarq document-id on BOTH the <body> tag and the script at the bottom
-    5. Confirm the lesson opens in review mode with ?review=1 before calling it review-ready
-    6. Save with descriptive filename: unit#-lesson#-topic.html
+    5. Use a generated hero image for the lesson with the latest approved image model (Gemini if available; otherwise the latest configured image model)
+    6. Confirm the lesson opens in review mode with ?review=1 before calling it review-ready
+    7. Save with descriptive filename: unit#-lesson#-topic.html
     
     HARD GATE — DO NOT SHIP WITHOUT REMARQ:
     A lesson fails review if either of these is missing:
@@ -35,9 +36,11 @@
     ☐ All sections in correct order (see style guide)
     ☐ Student Worksheet has page-break class
     ☐ Answer Key has detach instruction
+    ☐ Hero image generated with the latest approved model (Gemini if available; otherwise latest configured model)
     ☐ Body data-document-id updated with the lesson's real doc id
     ☐ Remarq script updated with the same document-id
     ☐ Review URL works: [lesson-url]?review=1
+  -->
   -->
   
 <style>.lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
