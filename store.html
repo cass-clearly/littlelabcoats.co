@@ -1161,9 +1161,9 @@
           fullGradeSku: 'grade-k-complete',
           fullGradeIncludes: ['Forces & Motion', 'Sunshine & Warmth', 'Super Seeds & Perfect Plants', 'Animal Needs', 'Weather & Seasons', 'Earth & Human Activity', 'Engineering Design'],
           freeLesson: {
-            title: 'Milk Magic',
-            summary: 'A colorful kitchen-science sample lesson for Kindergarten families.',
-            href: '/lesson-plans/k-milk-magic.html'
+            title: 'Ramp Roll Rescue',
+            summary: 'A brand-new standalone K-PS2 unit teaser with ramp tests, pushes, and evidence marks.',
+            href: '/lesson-plans/free-k-ps2-ramp-roll-rescue.html'
           },
           domains: [
             {
@@ -1215,9 +1215,9 @@
           fullGradeSku: 'grade-1-complete',
           fullGradeIncludes: ['Sound & Light', 'Plant & Animal Structures', 'Parents & Offspring', 'Sun, Moon & Stars', 'Engineering Design'],
           freeLesson: {
-            title: 'Celery Rainbow',
-            summary: 'Watch water move through a plant in one bright, memorable sample lesson.',
-            href: '/lesson-plans/free-gr1-celery-rainbow.html'
+            title: 'Cup-String Sound Sender',
+            summary: 'A brand-new standalone 1-PS4 unit teaser connecting sound vibrations to messages.',
+            href: '/lesson-plans/free-gr1-ps4-cup-string-sound-sender.html'
           },
           domains: [
             {
@@ -1576,13 +1576,40 @@
         return renderGradePanel(grade).replace('class="grade-panel"', 'class="grade-panel' + (index === 0 ? ' active' : '') + '"');
       }).join('');
 
-      freeGrid.innerHTML = shopData.map(function (grade) {
+      var correctedKGrade1Samples = [
+        { grade: 'Kindergarten', unit: 'K-PS2 · Forces & Motion', title: 'Ramp Roll Rescue', summary: 'New standalone ramp-and-push teaser for the Forces & Motion unit.', href: '/lesson-plans/free-k-ps2-ramp-roll-rescue.html' },
+        { grade: 'Kindergarten', unit: 'K-PS3 · Sunshine & Warmth', title: 'Sunshine Color Watch', summary: 'New standalone sunlight-warms-surfaces teaser for the Sunshine & Warmth unit.', href: '/lesson-plans/free-k-ps3-sunshine-color-watch.html' },
+        { grade: 'Kindergarten', unit: 'K-LS1 Unit 2 · Plants', title: 'Sprout Needs Detective', summary: 'New standalone plant-needs teaser for the Super Seeds & Perfect Plants unit.', href: '/lesson-plans/free-k-ls1-unit2-sprout-needs-detective.html' },
+        { grade: 'Kindergarten', unit: 'K-LS1 Unit 3 · Animal Needs', title: 'Animal Home Checkup', summary: 'New standalone habitat-needs teaser for the Animal Needs unit.', href: '/lesson-plans/free-k-ls1-unit3-animal-home-checkup.html' },
+        { grade: 'Kindergarten', unit: 'K-ESS2 · Weather & Seasons', title: 'Weather Window Station', summary: 'New standalone weather-observation teaser for the Weather & Seasons unit.', href: '/lesson-plans/free-k-ess2-weather-window-station.html' },
+        { grade: 'Kindergarten', unit: 'K-ESS3 · Earth & Human Activity', title: 'Earth Treasure Sort', summary: 'New standalone Earth-resources teaser for the Earth & Human Activity unit.', href: '/lesson-plans/free-k-ess3-earth-treasure-sort.html' },
+        { grade: 'Kindergarten', unit: 'K-ETS1 · Engineering', title: 'Paper Bridge Rescue', summary: 'New standalone bridge-design teaser for the Engineering unit.', href: '/lesson-plans/free-k-ets1-paper-bridge-rescue.html' },
+        { grade: 'Grade 1', unit: '1-PS4 · Sound & Light', title: 'Cup-String Sound Sender', summary: 'New standalone vibration-and-message teaser for the Sound & Light unit.', href: '/lesson-plans/free-gr1-ps4-cup-string-sound-sender.html' },
+        { grade: 'Grade 1', unit: '1-LS1 · Plant & Animal Structures', title: 'Bird Beak Tool Test', summary: 'New standalone structure-and-function teaser for the Plant & Animal Structures unit.', href: '/lesson-plans/free-gr1-ls1-bird-beak-tool-test.html' },
+        { grade: 'Grade 1', unit: '1-LS3 · Parents & Offspring', title: 'Family Trait Detectives', summary: 'New standalone trait-evidence teaser for the Parents & Offspring unit.', href: '/lesson-plans/free-gr1-ls3-family-trait-detectives.html' },
+        { grade: 'Grade 1', unit: '1-ESS1 · Sun, Moon & Stars', title: 'Shadow Clock Mini Lab', summary: 'New standalone shadow-pattern teaser for the Sun, Moon & Stars unit.', href: '/lesson-plans/free-gr1-ess1-shadow-clock-mini-lab.html' },
+        { grade: 'Grade 1', unit: '1-ETS1 · Engineering', title: 'Pencil Holder Redesign', summary: 'New standalone criteria-test-redesign teaser for the Engineering unit.', href: '/lesson-plans/free-gr1-ets1-pencil-holder-redesign.html' }
+      ];
+
+      var higherGradeFreeSamples = shopData.filter(function (grade) {
+        return grade.id !== 'grade-k' && grade.id !== 'grade-1';
+      }).map(function (grade) {
+        return {
+          grade: grade.label,
+          unit: 'Standalone grade freebie',
+          title: grade.freeLesson.title,
+          summary: grade.freeLesson.summary,
+          href: grade.freeLesson.href
+        };
+      });
+
+      freeGrid.innerHTML = correctedKGrade1Samples.concat(higherGradeFreeSamples).map(function (sample) {
         return [
           '<article class="free-card">',
-            '<div class="free-tag">Free sample • ' + grade.label + '</div>',
-            '<h3>' + grade.freeLesson.title + '</h3>',
-            '<p>' + grade.freeLesson.summary + ' Open it to see more of the lesson format before buying a bundle.</p>',
-            '<a class="btn btn-teal" href="' + reviewAwareUrl(grade.freeLesson.href) + '" target="_blank" rel="noopener">Open free lesson</a>',
+            '<div class="free-tag">Free sample • ' + sample.grade + ' • ' + sample.unit + '</div>',
+            '<h3>' + sample.title + '</h3>',
+            '<p>' + sample.summary + ' Open it to see more of the lesson format before buying a bundle.</p>',
+            '<a class="btn btn-teal" href="' + reviewAwareUrl(sample.href) + '" target="_blank" rel="noopener">Open free lesson</a>',
           '</article>'
         ].join('');
       }).join('');
