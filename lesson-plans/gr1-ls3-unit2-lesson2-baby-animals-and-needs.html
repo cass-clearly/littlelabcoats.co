@@ -175,25 +175,83 @@
     }
     .needs-cards-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin: 14px 0;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 16px 0 18px;
     }
     .needs-card {
-      background: #f6fff6;
-      border: 2px solid #a5d6a7;
-      border-radius: 10px;
-      padding: 12px 14px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #fffef8 0%, #f4fff4 100%);
+      border: 2px solid #b7dfb9;
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      box-shadow: 0 10px 24px rgba(46,125,50,0.10);
     }
-    .needs-card .needs-card-title {
-      font-weight: bold;
+    .needs-card:before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 10px;
+      background: linear-gradient(90deg, #81c784 0%, #ffd54f 50%, #4fc3f7 100%);
+    }
+    .needs-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .needs-card-emoji {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26pt;
+      background: radial-gradient(circle at top, #ffffff 0%, #fff7cf 42%, #e8f5e9 100%);
+      border: 2px solid rgba(46,125,50,0.18);
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.9);
+      flex-shrink: 0;
+    }
+    .needs-card-title {
+      font-weight: 700;
       color: #1b5e20;
-      font-size: 11pt;
-      margin-bottom: 6px;
+      font-size: 13pt;
+      line-height: 1.1;
+      margin: 0;
     }
-    .needs-card ul {
-      margin: 6px 0 0 0;
-      padding-left: 18px;
+    .needs-card-subtitle {
+      font-size: 9pt;
+      color: #5d6b5e;
+      margin-top: 3px;
+    }
+    .needs-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 12px;
+    }
+    .needs-pill {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1.5px solid #c8e6c9;
+      font-size: 9pt;
+      font-weight: 700;
+      color: #24512a;
+    }
+    .needs-help-box {
+      background: rgba(255,255,255,0.78);
+      border: 1.5px dashed #a5d6a7;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 9.6pt;
+      color: #344434;
+    }
+    .needs-help-box strong {
+      color: #1b5e20;
     }
     .worksheet-header {
       background: #1b5e20;
@@ -408,42 +466,32 @@
   </div>
 
   <h2 id="animal-needs-cards">🃏 Animal and Needs Cards</h2>
-  <p>Use these quick cards to talk through what each baby animal needs and how the parent helps.</p>
+  <p>Use these beautiful quick-look cards to talk through what each baby animal needs and how the parent helps.</p>
   <div class="needs-cards-grid">
     <div class="needs-card">
-      <div class="needs-card-title">🐱 Kitten</div>
-      <ul>
-        <li><strong>Needs:</strong> milk or food, water, warmth, safety</li>
-        <li><strong>Parent helps by:</strong> feeding, cleaning, cuddling, protecting</li>
-      </ul>
+      <div class="needs-card-header"><div class="needs-card-emoji">🐱</div><div><div class="needs-card-title">Kitten</div><div class="needs-card-subtitle">A baby cat still needs a lot of help</div></div></div>
+      <div class="needs-pill-row"><span class="needs-pill">🍎 Food</span><span class="needs-pill">💧 Water</span><span class="needs-pill">🔥 Warmth</span><span class="needs-pill">🛡️ Safety</span></div>
+      <div class="needs-help-box"><strong>Parent helps by:</strong> feeding, cleaning, cuddling close, and protecting the kitten.</div>
     </div>
     <div class="needs-card">
-      <div class="needs-card-title">🐶 Puppy</div>
-      <ul>
-        <li><strong>Needs:</strong> milk or food, water, shelter, safety</li>
-        <li><strong>Parent helps by:</strong> feeding, staying close, guarding</li>
-      </ul>
+      <div class="needs-card-header"><div class="needs-card-emoji">🐶</div><div><div class="needs-card-title">Puppy</div><div class="needs-card-subtitle">A baby dog needs care before it can fend for itself</div></div></div>
+      <div class="needs-pill-row"><span class="needs-pill">🍎 Food</span><span class="needs-pill">💧 Water</span><span class="needs-pill">🏠 Shelter</span><span class="needs-pill">🛡️ Safety</span></div>
+      <div class="needs-help-box"><strong>Parent helps by:</strong> feeding, staying close, and guarding the puppy.</div>
     </div>
     <div class="needs-card">
-      <div class="needs-card-title">🐥 Duckling</div>
-      <ul>
-        <li><strong>Needs:</strong> food, water, warmth, safety</li>
-        <li><strong>Parent helps by:</strong> leading to food and water, keeping babies close</li>
-      </ul>
+      <div class="needs-card-header"><div class="needs-card-emoji">🐥</div><div><div class="needs-card-title">Duckling</div><div class="needs-card-subtitle">A duckling follows its parent for help and protection</div></div></div>
+      <div class="needs-pill-row"><span class="needs-pill">🍎 Food</span><span class="needs-pill">💧 Water</span><span class="needs-pill">🔥 Warmth</span><span class="needs-pill">🛡️ Safety</span></div>
+      <div class="needs-help-box"><strong>Parent helps by:</strong> leading babies to food and water and keeping them close.</div>
     </div>
     <div class="needs-card">
-      <div class="needs-card-title">🐸 Tadpole</div>
-      <ul>
-        <li><strong>Needs:</strong> water, food, shelter, safety</li>
-        <li><strong>Parent helps by:</strong> laying eggs in a safer place so babies can grow</li>
-      </ul>
+      <div class="needs-card-header"><div class="needs-card-emoji">🐸</div><div><div class="needs-card-title">Tadpole</div><div class="needs-card-subtitle">A tadpole looks different, but still has basic needs</div></div></div>
+      <div class="needs-pill-row"><span class="needs-pill">💧 Water</span><span class="needs-pill">🍎 Food</span><span class="needs-pill">🏠 Shelter</span><span class="needs-pill">🛡️ Safety</span></div>
+      <div class="needs-help-box"><strong>Parent helps by:</strong> laying eggs in a safer place where the babies can grow.</div>
     </div>
     <div class="needs-card">
-      <div class="needs-card-title">🦋 Caterpillar</div>
-      <ul>
-        <li><strong>Needs:</strong> food, shelter, safety</li>
-        <li><strong>Parent helps by:</strong> laying eggs on the right plant for food</li>
-      </ul>
+      <div class="needs-card-header"><div class="needs-card-emoji">🦋</div><div><div class="needs-card-title">Caterpillar</div><div class="needs-card-subtitle">A butterfly parent sets the baby up to eat and grow</div></div></div>
+      <div class="needs-pill-row"><span class="needs-pill">🍎 Food</span><span class="needs-pill">🏠 Shelter</span><span class="needs-pill">🛡️ Safety</span></div>
+      <div class="needs-help-box"><strong>Parent helps by:</strong> laying eggs on the right plant so the baby has food right away.</div>
     </div>
   </div>
 
