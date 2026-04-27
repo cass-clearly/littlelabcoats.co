@@ -261,7 +261,7 @@
     }
     .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
 </head>
-<body data-document-id="doc_k-ess3-unit2-lesson1-what-earth-gives-us" data-free-sample="true"><div class="llc-free-sample-banner" style="background:#D4F5F3;border:2px solid #4ECDC4;color:#3B1F6B;border-radius:14px;padding:10px 14px;margin:0 0 18px 0;text-align:center;font-family:'Lato',Arial,sans-serif;font-weight:700;">⭐ Free unit sample lesson — open to everyone</div><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+<body data-document-id="doc_k-ess3-unit2-lesson1-what-earth-gives-us"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
 
 <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
 
@@ -521,24 +521,7 @@
   </div>
 
 <!-- Remarq Feedback Layer -->
-<script>(function () {
-  function loadFeedbackLayer() {
-    var script = document.createElement('script');
-    script.src = '/feedback-layer.js?v=20260421';
-    script.dataset.apiUrl = 'https://cassclearly.com';
-    script.dataset.documentId = 'doc_k-ess3-unit2-lesson1-what-earth-gives-us';
-    script.dataset.contentSelector = 'body';
-    document.body.appendChild(script);
-  }
-
-  if (window.location.search.indexOf('review=1') !== -1) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
-    } else {
-      loadFeedbackLayer();
-    }
-  }
-})();</script>
+<script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_k-ess3-unit2-lesson1-what-earth-gives-us" data-content-selector=".lesson-content, body"></script>
 <!-- ═══ PAYWALL SYSTEM ═══ -->
 <style>
   .llc-paywall-overlay {
@@ -601,7 +584,7 @@
   var ACCESS_KEY = 'llc_access';
 
   function isUnlocked() {
-    return (document.body && document.body.dataset.freeSample === 'true') || localStorage.getItem(ACCESS_KEY) === 'granted';
+    return localStorage.getItem(ACCESS_KEY) === 'granted';
   }
 
   function lockLesson() {
