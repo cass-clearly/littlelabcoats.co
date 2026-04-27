@@ -173,6 +173,28 @@
       color: #1b5e20;
       font-size: 10pt;
     }
+    .needs-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 14px 0;
+    }
+    .needs-card {
+      background: #f6fff6;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .needs-card .needs-card-title {
+      font-weight: bold;
+      color: #1b5e20;
+      font-size: 11pt;
+      margin-bottom: 6px;
+    }
+    .needs-card ul {
+      margin: 6px 0 0 0;
+      padding-left: 18px;
+    }
     .worksheet-header {
       background: #1b5e20;
       color: white;
@@ -385,6 +407,46 @@
     🦋 <strong>Fun fact!</strong> The word "metamorphosis" comes from the Greek words for "change" and "form." A caterpillar changes its form to become a butterfly. This is one of the most dramatic changes in the animal kingdom!
   </div>
 
+  <h2>🃏 Animal and Needs Cards</h2>
+  <p>Use these quick cards to talk through what each baby animal needs and how the parent helps.</p>
+  <div class="needs-cards-grid">
+    <div class="needs-card">
+      <div class="needs-card-title">🐱 Kitten</div>
+      <ul>
+        <li><strong>Needs:</strong> milk or food, water, warmth, safety</li>
+        <li><strong>Parent helps by:</strong> feeding, cleaning, cuddling, protecting</li>
+      </ul>
+    </div>
+    <div class="needs-card">
+      <div class="needs-card-title">🐶 Puppy</div>
+      <ul>
+        <li><strong>Needs:</strong> milk or food, water, shelter, safety</li>
+        <li><strong>Parent helps by:</strong> feeding, staying close, guarding</li>
+      </ul>
+    </div>
+    <div class="needs-card">
+      <div class="needs-card-title">🐥 Duckling</div>
+      <ul>
+        <li><strong>Needs:</strong> food, water, warmth, safety</li>
+        <li><strong>Parent helps by:</strong> leading to food and water, keeping babies close</li>
+      </ul>
+    </div>
+    <div class="needs-card">
+      <div class="needs-card-title">🐸 Tadpole</div>
+      <ul>
+        <li><strong>Needs:</strong> water, food, shelter, safety</li>
+        <li><strong>Parent helps by:</strong> laying eggs in a safer place so babies can grow</li>
+      </ul>
+    </div>
+    <div class="needs-card">
+      <div class="needs-card-title">🦋 Caterpillar</div>
+      <ul>
+        <li><strong>Needs:</strong> food, shelter, safety</li>
+        <li><strong>Parent helps by:</strong> laying eggs on the right plant for food</li>
+      </ul>
+    </div>
+  </div>
+
   <h2>🔬 Procedure</h2>
 
   <div class="procedure-step">
@@ -519,7 +581,24 @@
     </div>
   </div>
 
-  <script src="/feedback-layer.js?v=20260421" data-document-id="doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs" data-api-url="https://cassclearly.com" data-content-selector="body"></script>
+  <script>(function () {
+    function loadFeedbackLayer() {
+      var script = document.createElement('script');
+      script.src = '/feedback-layer.js?v=20260421';
+      script.dataset.apiUrl = 'https://cassclearly.com';
+      script.dataset.documentId = 'doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs';
+      script.dataset.contentSelector = 'body';
+      document.body.appendChild(script);
+    }
+
+    if (window.location.search.indexOf('review=1') !== -1) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+      } else {
+        loadFeedbackLayer();
+      }
+    }
+  })();</script>
 <!-- ═══ PAYWALL SYSTEM ═══ -->
 <style>
   .llc-paywall-overlay {
