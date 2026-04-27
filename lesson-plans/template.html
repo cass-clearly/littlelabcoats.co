@@ -19,8 +19,14 @@
        - theme-earth-science (Earth Science - orange)
        - theme-engineering (Engineering/ETS - purple)
     3. Delete sections you don't need (e.g., grade differentiation for K lessons)
-    4. Replace the Remarq document-id at the bottom
-    5. Save with descriptive filename: unit#-lesson#-topic.html
+    4. Replace the Remarq document-id on BOTH the <body> tag and the script at the bottom
+    5. Confirm the lesson opens in review mode with ?review=1 before calling it review-ready
+    6. Save with descriptive filename: unit#-lesson#-topic.html
+    
+    HARD GATE — DO NOT SHIP WITHOUT REMARQ:
+    A lesson fails review if either of these is missing:
+    - explicit data-document-id on <body>
+    - feedback-layer script with the matching data-document-id
     
     VALIDATION CHECKLIST before publishing:
     ☐ Title includes emoji
@@ -29,12 +35,14 @@
     ☐ All sections in correct order (see style guide)
     ☐ Student Worksheet has page-break class
     ☐ Answer Key has detach instruction
-    ☐ Remarq script updated with correct document-id
+    ☐ Body data-document-id updated with the lesson's real doc id
+    ☐ Remarq script updated with the same document-id
+    ☐ Review URL works: [lesson-url]?review=1
   -->
   
 <style>.lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
 </head>
-<body class="theme-physical-35">
+<body class="theme-physical-35" data-document-id="doc_template">
   <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <!-- Change theme class above to match your lesson subject -->
 
@@ -332,7 +340,8 @@
 
   <!-- ═══════════════════════════════════════════════════════════════
        REMARQ FEEDBACK LAYER SCRIPT
-       IMPORTANT: Replace document-id with your lesson's unique ID
+       REQUIRED FOR REVIEW-READY STATUS.
+       IMPORTANT: Replace document-id with your lesson's unique ID and keep it identical to <body data-document-id>
        ═══════════════════════════════════════════════════════════════ -->
   <script 
     src="/feedback-layer.js?v=20260421" 

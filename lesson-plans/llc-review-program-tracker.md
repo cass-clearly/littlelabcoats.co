@@ -1,19 +1,25 @@
 # Little Lab Coats Full-Library Review Program Tracker
 
-Last updated: 2026-04-13
-Purpose: durable batch tracker for running the whole lesson library through the required Rachel + Margaret review -> literal fixes -> republish -> directory/status-update workflow.
+Last updated: 2026-04-26
+Purpose: durable batch tracker for running the whole lesson library through the required Rachel + Margaret -> Iris final pass -> literal fixes -> Remarq verification -> republish -> directory/status-update workflow.
 
 ## Program rules
 
 A lesson batch is only counted as reviewed in this tracker when all of these are true for that batch:
 1. Rachel review artifact exists
 2. Margaret review artifact exists
-3. literal fixes are applied in repo
-4. review/status surfaces are updated
-5. batch commit and push are completed
-6. post-publish public verification is recorded
+3. Iris final-pass review is recorded after Rachel and Margaret
+4. literal fixes are applied in repo
+5. every lesson/refcard/quiz in scope has required Remarq wiring proof:
+   - explicit `data-document-id` in the shipped HTML
+   - `feedback-layer.js` present with the matching document ID
+   - review-mode route works with `?review=1`
+6. review/status surfaces are updated
+7. batch commit and push are completed
+8. post-publish public verification is recorded
 
 If any item above is still missing, the batch stays in `in progress` or `needs republish`.
+Missing Remarq proof is a hard failure, not a soft warning.
 
 ## Starting inventory source
 
@@ -51,7 +57,7 @@ Practical execution order:
 Next required ship step:
 - move to Grade 4 Earth & Space Science review using `gr4-ess2-unit1` as the canonical Grade 4 Earth family for tracker purposes
 - after that, continue into Grade 5 Physical Science or the next highest-value unreviewed unit with coherent live review URLs
-- keep release gating strict: Rachel + Margaret review first, literal fixes second, public verification before counting anything as released
+- keep release gating strict: Rachel + Margaret review first, Iris final pass next, literal fixes second, Remarq verification third, public verification before counting anything as released
 - keep the parallel Calvin continuity/progression lane active; current rubric lives in `lesson-plans/calvin-continuity-progression-rubric.md` and the first active case is `lesson-plans/gr3-ls1-unit1-calvin-audit-and-overhaul-plan-2026-04-14.md`
 
 ## Candidate next batches after current one
@@ -69,4 +75,5 @@ Priority candidates:
 - prefer unit-shaped batches over random lesson-by-lesson hopping unless a blocker forces a surgical pass
 - 2026-04-12 closeout note: the previously active Pollinators + Grade 4 LS1 open-comment set was rechecked and then closed in Remarq after live/source verification; those tracked documents now show `0` open top-level comments across that active set
 - 2026-04-12 continuation note: Grade 5 LS1 Unit 2 had live review-mode coverage and stable document IDs but no current comment-feed artifact, so the batch resumed via direct source/live Rachel + Margaret review notes recorded in `lesson-plans/gr5-life-science-batch-review.md` before literal fixes were applied
+- 2026-04-26 workflow rule: no new lesson gets called review-ready without Remarq proof and an Iris final-pass check recorded after Rachel and Margaret
 - 2026-04-14 Calvin continuity note: Grade 3 LS1 Unit 1 was audited for repetition/progression; Lesson 2 was retired from live sequencing pending rebuild because it duplicated Lesson 1 too closely.
