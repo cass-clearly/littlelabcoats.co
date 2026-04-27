@@ -5,7 +5,7 @@
     updatedAt: '2026-04-18',
     note: 'Drop real checkout URLs into this map as each Little Lab Coats bundle is wired. Empty checkoutUrl means the storefront should keep showing a clean placeholder state.',
     products: {
-      'grade-k-complete': { checkoutUrl: '', status: 'placeholder' },
+      'grade-k-complete': { checkoutUrl: 'https://buy.stripe.com/7sYcN71NBgzI6jOg3Y6g80a', status: 'live' },
       'k-ps2-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/3cI00lgIv97gcIc6to6g804', status: 'live' },
       'k-ps3-unit2-bundle': { checkoutUrl: 'https://buy.stripe.com/8x23cx8bZ1EO5fKdVQ6g805', status: 'live' },
       'k-ls1-unit2-bundle': { checkoutUrl: 'https://buy.stripe.com/9B6bJ3fEr5V48rWbNI6g806', status: 'live' },
