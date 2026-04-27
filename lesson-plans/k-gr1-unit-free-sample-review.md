@@ -123,3 +123,117 @@ Status: comments captured and fixes applied.
 - New standalone K/G1 free sample lane is ready to publish from the corrected free hub, store free section, homepage sampler, and curriculum free-sample cards.
 - Previous canonical-Lesson-1 freebie mappings have been replaced on those public free-sample discovery surfaces.
 - Remaining deployment step: commit, push to `origin/main`, and verify public URLs after GitHub Pages/edge propagation.
+
+---
+
+## 2026-04-27 showcase visual-polish pass
+
+Scope: upgrade the 12 current Kindergarten + Grade 1 standalone free lesson pages plus `free-lessons.html` so the free samples feel like premium product showcases rather than text-heavy handouts.
+
+### Visual audit before changes
+
+- All 12 lesson pages had only the LLC logo plus an emoji-based hero block; no lesson-specific hero images or inline supporting visual diagrams were present.
+- The free hub was clear but plain: cards had text-only lesson summaries and did not visually preview the experience families would get after opening a sample.
+- Public lesson copy still contained internal-ish “teaser / paid-unit / not reused” language that was useful during replacement QA but not warm enough for parent-facing freebies.
+
+### Assets added
+
+Added 24 new hand-authored, lesson-specific SVG visuals under `images/free-lessons/`:
+
+- 12 hero illustrations: one for each K/G1 free lesson.
+- 12 inline science-snapshot diagrams: one for each K/G1 free lesson.
+
+Label/text QA: SVG labels were manually written and parsed after generation; no misspellings or placeholder labels were found in the asset audit. No Gemini/nano-banana provenance claim is made for this pass because the assets are repo-authored SVG illustrations rather than externally generated images.
+
+### Rachel review — science clarity and age fit
+
+Status: comments captured and fixes applied.
+
+1. **Comment:** “Every free lesson needs a meaningful science visual, not decoration. The visual should help the child understand the investigation or evidence move.”
+   **Fix applied:** Added a lesson-specific hero illustration and an inline three-step science snapshot to each of the 12 lesson pages. Examples: Ramp Roll Rescue now shows ramp/distance evidence; Shadow Clock shows two shadow observations; Cup-String Sound Sender shows vibrations moving across the string.
+2. **Comment:** “Kindergarten visuals should support concrete noticing and avoid making the page feel older than K.”
+   **Fix applied:** Kindergarten snapshots use simple observe/sort/build/test language with three visible action cards, not dense diagrams.
+3. **Comment:** “Grade 1 visuals can ask for a little more evidence use, but still need to stay quick and parent-coachable.”
+   **Fix applied:** Grade 1 snapshots explicitly name comparison/evidence moves such as loose vs tight string, beak shape vs food job, shared trait evidence, two-time shadow comparison, and criteria-led redesign.
+
+### Margaret review — showcase / parent-facing polish
+
+Status: comments captured and fixes applied.
+
+1. **Comment:** “The free hub should immediately look more appealing; text-only cards undersell the product.”
+   **Fix applied:** Upgraded `free-lessons.html` with a richer hero, visual preview panel, accurate 7 K / 5 Grade 1 summary cards, and image-led lesson cards using the new hero artwork.
+2. **Comment:** “The public freebies should not sound like internal QA notes.”
+   **Fix applied:** Replaced “standalone teaser / paid-unit / not reused” language on K/G1 public lesson/support pages with parent-facing “free sample focus,” at-home teaching, and evidence-coaching language.
+3. **Comment:** “The premium feel should come from rhythm and clarity, not random decoration.”
+   **Fix applied:** Added only science-linked visuals: hero setup art, inline science snapshot, and concise visual point cards. Existing materials, procedure, worksheet, quiz, Remarq, and store wiring were preserved.
+
+### Calvin continuity/progression review
+
+Status: comments captured and fixes applied.
+
+1. **Comment:** “Do not accidentally change the free-sample lane back into paid-unit lesson reuse.”
+   **Fix applied:** The pass modified only the existing `free-k-*` and `free-gr1-*` standalone sample pages and did not remap any canonical paid-unit pages as freebies.
+2. **Comment:** “Visuals should distinguish each sample and reinforce the domain progression.”
+   **Fix applied:** Each free lesson now has a distinct visual identity tied to its investigation and domain: forces/ramp, sunlight/surface warmth, plant needs, animal needs, weather observations, Earth resources, bridge engineering, sound vibrations, animal structures, inherited traits, shadows, and redesign criteria.
+
+### Iris final QA / render pass
+
+Status: final pass completed after fixes.
+
+1. **Comment:** “Verify every upgraded page references real assets and still renders from the local site root.”
+   **Fix applied:** Local HTTP checks loaded the hub, all 12 lesson pages, and all 24 new SVG asset URLs successfully.
+2. **Comment:** “Run at least one browser render check so the new layout does not just pass static grep.”
+   **Fix applied:** Headless Chrome rendered `free-lessons.html` and a representative lesson page (`free-k-ps2-ramp-roll-rescue.html`) to screenshots without load failures.
+3. **Comment:** “Preserve review-mode wiring.”
+   **Fix applied:** Existing `data-document-id` values and `?review=1` feedback-layer bootstrap code remained in the lesson files; no Stripe/store wiring or unrelated product links were touched.
+
+### Comment-to-change resolution map
+
+- Rachel 1 → added hero + inline supporting visual to all 12 lesson files and verified each file has two `/images/free-lessons/` references.
+- Rachel 2 → kept K visual snapshots simple and concrete; no dense science labels added to K pages.
+- Rachel 3 → added Grade 1 evidence/comparison snapshot language in visual cards.
+- Margaret 1 → upgraded `free-lessons.html` hero and cards with visual previews.
+- Margaret 2 → removed internal/pipeline phrasing from public K/G1 sample/support pages.
+- Margaret 3 → limited visual additions to lesson-specific science/setup diagrams; no random decorative sections added.
+- Calvin 1 → preserved standalone `free-k-*` / `free-gr1-*` lesson lane.
+- Calvin 2 → gave each sample a distinct domain-linked visual identity.
+- Iris 1 → local server/curl verification passed for hub, lessons, and new image assets.
+- Iris 2 → headless Chrome screenshots generated for hub and representative lesson.
+- Iris 3 → review-mode IDs/scripts preserved in source.
+
+### Verification commands from this pass
+
+```bash
+python3 tmp/upgrade_free_visuals.py
+python3 tmp/rebuild_free_diagrams.py
+python3 - <<'PY'
+from pathlib import Path
+import xml.etree.ElementTree as ET
+for p in Path('images/free-lessons').glob('*.svg'):
+    ET.parse(p)
+print('svg parse ok')
+PY
+python3 -m http.server 4177
+curl -fsS http://127.0.0.1:4177/free-lessons.html
+curl -fsS http://127.0.0.1:4177/lesson-plans/<each-upgraded-lesson>.html
+curl -fsS http://127.0.0.1:4177/images/free-lessons/<each-new-svg>.svg
+google-chrome --headless=new --disable-gpu --no-sandbox --window-size=1400,1200 --screenshot=/tmp/free-lessons-hub.png http://127.0.0.1:4177/free-lessons.html
+google-chrome --headless=new --disable-gpu --no-sandbox --window-size=1100,1500 --screenshot=/tmp/free-lesson-sample2.png http://127.0.0.1:4177/lesson-plans/free-k-ps2-ramp-roll-rescue.html
+```
+
+### Current disposition after showcase pass
+
+- Rachel: approved after visual science-support additions.
+- Margaret: approved after hub/card polish and parent-facing copy cleanup.
+- Calvin: approved after confirming standalone free-sample continuity was preserved.
+- Iris: approved after SVG parse, asset existence, local HTTP, and headless browser render checks.
+
+Remaining deployment step for this pass: commit, push to `origin/main`, then verify public `littlelabcoats.co` URLs after GitHub Pages / edge propagation.
+
+Additional Remarq verification completed after the render pass:
+
+```bash
+xargs python3 scripts/remarq_batch_tools.py verify --skip-live < /tmp/kgr1-free-lessons-paths.txt
+```
+
+Result: all 12 upgraded lesson pages returned `OK` with backend status `200`.
