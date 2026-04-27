@@ -1103,8 +1103,9 @@
     <div class="container">
       <div class="section-head">
         <span class="section-label">Free sample lessons</span>
-        <h2>Try a full lesson before you buy.</h2>
-        <p>Open a sample from each grade to preview the lesson flow, visuals, and hands-on style.</p>
+        <h2>Try a full lesson from every K and Grade 1 unit.</h2>
+        <p>Open a complete free sample for each Kindergarten and Grade 1 unit, or use the dedicated free lesson directory for support links and review-mode access.</p>
+        <p style="margin-top:10px;"><a class="btn btn-secondary" href="/free-lessons.html">Open the K + Grade 1 free lesson directory</a></p>
       </div>
       <div class="free-grid" id="freeLessonGrid"></div>
     </div>
@@ -1576,13 +1577,28 @@
         return renderGradePanel(grade).replace('class="grade-panel"', 'class="grade-panel' + (index === 0 ? ' active' : '') + '"');
       }).join('');
 
-      freeGrid.innerHTML = shopData.map(function (grade) {
+      var unitFreeSamples = [
+        { grade: 'Kindergarten', unit: 'K-PS2 · Forces & Motion', title: 'Push & Pull Sort', summary: 'Sort everyday actions into pushes and pulls.', href: '/lesson-plans/unit1-lesson1-push-pull-sort.html' },
+        { grade: 'Kindergarten', unit: 'K-PS3 · Sunshine & Warmth', title: 'The Sun Warms Everything', summary: 'Compare sunny and shady surfaces with touch-safe observations.', href: '/lesson-plans/k-ps3-unit2-lesson1-sun-warms-everything.html' },
+        { grade: 'Kindergarten', unit: 'K-LS1 Unit 2 · Plants', title: 'What’s Inside a Seed?', summary: 'Open soaked seeds and notice the tiny plant parts inside.', href: '/lesson-plans/k-ls1-unit2-lesson1-whats-inside-a-seed.html' },
+        { grade: 'Kindergarten', unit: 'K-LS1 Unit 3 · Animal Needs', title: 'What Do ALL Animals Need?', summary: 'Build a simple animal survival-needs checklist.', href: '/lesson-plans/k-ls1-unit3-lesson1-what-do-animals-need.html' },
+        { grade: 'Kindergarten', unit: 'K-ESS2 · Weather & Seasons', title: 'What Is Weather?', summary: 'Begin a weather-noticing routine with simple observable evidence.', href: '/lesson-plans/k-ess2-unit1-lesson1-what-is-weather.html' },
+        { grade: 'Kindergarten', unit: 'K-ESS3 · Earth & Human Activity', title: 'What Does Earth Give Us?', summary: 'Identify the Earth resources people use every day.', href: '/lesson-plans/k-ess3-unit2-lesson1-what-earth-gives-us.html' },
+        { grade: 'Kindergarten', unit: 'K-ETS1 · Engineering', title: 'What Is a Problem?', summary: 'Name a problem, a user, and what a good solution should do.', href: '/lesson-plans/k-ets1-unit1-lesson1-what-is-a-problem.html' },
+        { grade: 'Grade 1', unit: '1-PS4 · Sound & Light', title: 'Sound Is Vibration', summary: 'Make sounds, feel vibrations, and connect sound to evidence.', href: '/lesson-plans/gr1-ps4-unit1-lesson1-sound-is-vibration.html' },
+        { grade: 'Grade 1', unit: '1-LS1 · Plant & Animal Structures', title: 'Celery Rainbow', summary: 'Use colored water to show how plant stems transport water.', href: '/lesson-plans/free-gr1-celery-rainbow.html' },
+        { grade: 'Grade 1', unit: '1-LS3 · Parents & Offspring', title: 'You Look Like Your Parents', summary: 'Compare parent and offspring traits with simple evidence.', href: '/lesson-plans/gr1-ls3-unit2-lesson1-you-look-like-your-parents.html' },
+        { grade: 'Grade 1', unit: '1-ESS1 · Sun, Moon & Stars', title: 'The Sun — Our Closest Star', summary: 'Start the sky-patterns unit with direct Sun observations.', href: '/lesson-plans/gr1-ess1-unit1-lesson1-the-sun.html' },
+        { grade: 'Grade 1', unit: '1-ETS1 · Engineering', title: 'What Problem Can We Solve?', summary: 'Define an everyday problem and imagine useful solutions.', href: '/lesson-plans/gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html' }
+      ];
+
+      freeGrid.innerHTML = unitFreeSamples.map(function (sample) {
         return [
           '<article class="free-card">',
-            '<div class="free-tag">Free sample • ' + grade.label + '</div>',
-            '<h3>' + grade.freeLesson.title + '</h3>',
-            '<p>' + grade.freeLesson.summary + ' Open it to see more of the lesson format before buying a bundle.</p>',
-            '<a class="btn btn-teal" href="' + reviewAwareUrl(grade.freeLesson.href) + '" target="_blank" rel="noopener">Open free lesson</a>',
+            '<div class="free-tag">Free sample • ' + sample.grade + '</div>',
+            '<h3>' + sample.title + '</h3>',
+            '<p><strong>' + sample.unit + '</strong><br>' + sample.summary + ' Open it to see the complete lesson format before buying a bundle.</p>',
+            '<a class="btn btn-teal" href="' + reviewAwareUrl(sample.href) + '" target="_blank" rel="noopener">Open free lesson</a>',
           '</article>'
         ].join('');
       }).join('');
