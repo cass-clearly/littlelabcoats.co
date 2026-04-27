@@ -7,7 +7,7 @@
     products: {
       'grade-k-complete': { checkoutUrl: '', status: 'placeholder' },
       'k-ps2-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/3cI00lgIv97gcIc6to6g804', status: 'live' },
-      'k-ps3-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'k-ps3-unit2-bundle': { checkoutUrl: 'https://buy.stripe.com/8x23cx8bZ1EO5fKdVQ6g805', status: 'live' },
       'k-ls1-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
       'k-ls1-unit3-bundle': { checkoutUrl: '', status: 'placeholder' },
       'k-ess2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
