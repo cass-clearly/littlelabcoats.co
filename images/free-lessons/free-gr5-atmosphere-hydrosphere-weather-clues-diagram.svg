@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" role="img" aria-labelledby="title desc">
+  <title id="title">Hydrosphere atmosphere weather clue model</title>
+  <desc id="desc">A labeled sequence diagram showing warm water evaporating into air, cooling into droplets, wind moving air, and observations becoming evidence.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0284c7"/></marker>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#fff7ed"/></linearGradient>
+    <linearGradient id="jar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".88"/><stop offset="1" stop-color="#cffafe" stop-opacity=".9"/></linearGradient>
+  </defs>
+  <rect width="1100" height="720" rx="34" fill="url(#bg)"/>
+  <text x="550" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="900" text-anchor="middle" fill="#0f2f45">How a tiny model makes weather clues</text>
+  <g transform="translate(70 126)">
+    <rect width="265" height="460" rx="28" fill="#fff" stroke="#0284c7" stroke-width="5"/>
+    <text x="132" y="52" font-family="Arial, sans-serif" font-size="23" font-weight="800" text-anchor="middle" fill="#0369a1">1. Warm water</text>
+    <rect x="48" y="230" width="170" height="112" rx="20" fill="#22d3ee"/>
+    <path d="M50 258 C90 228,128 284,176 248 C194 235,205 235,218 244 L218 342 L48 342 Z" fill="#67e8f9" opacity=".8"/>
+    <path d="M106 218 C84 174,98 140,128 112" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M162 218 C140 174,154 140,184 112" fill="none" stroke="#0ea5e9" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <text x="132" y="390" font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#334155">Hydrosphere clue:</text>
+    <text x="132" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">liquid water can become</text>
+    <text x="132" y="448" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">invisible water vapor</text>
+  </g>
+  <g transform="translate(418 126)">
+    <rect width="265" height="460" rx="28" fill="#fff" stroke="#7c3aed" stroke-width="5"/>
+    <text x="132" y="52" font-family="Arial, sans-serif" font-size="23" font-weight="800" text-anchor="middle" fill="#6d28d9">2. Cool lid</text>
+    <rect x="48" y="105" width="170" height="42" rx="16" fill="#dbeafe" stroke="#60a5fa" stroke-width="4"/>
+    <g fill="#60a5fa"><circle cx="84" cy="180" r="13"/><circle cx="135" cy="205" r="10"/><circle cx="182" cy="176" r="12"/><circle cx="118" cy="245" r="8"/></g>
+    <g fill="#f8fafc" stroke="#cbd5e1" stroke-width="2">
+      <ellipse cx="115" cy="315" rx="72" ry="31"/><ellipse cx="165" cy="327" rx="58" ry="26"/><ellipse cx="82" cy="335" rx="54" ry="22"/>
+    </g>
+    <text x="132" y="390" font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#334155">Atmosphere clue:</text>
+    <text x="132" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">cooling makes droplets,</text>
+    <text x="132" y="448" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">clouds, fog, or dew</text>
+  </g>
+  <g transform="translate(766 126)">
+    <rect width="265" height="460" rx="28" fill="#fff" stroke="#16a34a" stroke-width="5"/>
+    <text x="132" y="52" font-family="Arial, sans-serif" font-size="23" font-weight="800" text-anchor="middle" fill="#15803d">3. Observe clues</text>
+    <g fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round">
+      <path d="M34 140 C85 110,126 165,178 132 S235 154,246 118"/>
+      <path d="M38 214 C90 184,132 239,184 206 S235 228,248 194"/>
+    </g>
+    <rect x="55" y="270" width="155" height="96" rx="15" fill="#ecfccb" stroke="#84cc16" stroke-width="4"/>
+    <g font-family="Arial, sans-serif" font-size="18" fill="#334155" font-weight="700"><text x="75" y="306">□ droplets</text><text x="75" y="334">□ cloud/fog</text><text x="75" y="362">□ moving air</text></g>
+    <text x="132" y="410" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">Weather is evidence from</text>
+    <text x="132" y="438" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">air + water interactions.</text>
+  </g>
+  <path d="M350 350 H398" stroke="#0284c7" stroke-width="10" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M698 350 H746" stroke="#0284c7" stroke-width="10" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <rect x="188" y="626" width="724" height="54" rx="27" fill="#ffffff" opacity=".86" stroke="#0284c7" stroke-width="3"/>
+  <text x="550" y="661" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#0f2f45" text-anchor="middle">Student model sentence: Warm surface water + cooler air can make weather clues we can observe.</text>
+</svg>
