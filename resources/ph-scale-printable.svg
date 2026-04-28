@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 2550 3300" role="img" aria-labelledby="title desc">
+  <title id="title">Full-color pH scale printable poster</title>
+  <desc id="desc">A parent-friendly pH scale from 0 to 14 with color blocks, acid-neutral-base zones, household examples, and a safety note.</desc>
+  <defs>
+    <linearGradient id="paperBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fffe"/>
+      <stop offset="0.48" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="topWash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6b6b" stop-opacity="0.22"/>
+      <stop offset="0.47" stop-color="#4ecdc4" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#5a3490" stop-opacity="0.20"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#3b1f6b" flood-opacity="0.14"/>
+    </filter>
+    <filter id="tinyShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#3b1f6b" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .display{font-family: Georgia, 'Times New Roman', serif;}
+      .sans{font-family: Arial, Helvetica, sans-serif;}
+      .muted{fill:#5a7a78;}
+      .white{fill:#ffffff;}
+      .label{font-family: Arial, Helvetica, sans-serif; font-weight:700; letter-spacing:.04em;}
+      .small{font-size:34px;}
+      .body{font-size:42px;}
+      .zone{font-size:46px; font-weight:800; letter-spacing:.08em;}
+      .phnum{font-size:64px; font-weight:900;}
+      .example{font-size:30px; font-weight:700;}
+      .tiny{font-size:27px;}
+    </style>
+  </defs>
+
+  <rect width="2550" height="3300" fill="url(#paperBg)"/>
+  <rect x="0" y="0" width="2550" height="520" fill="url(#topWash)"/>
+  <circle cx="242" cy="256" r="126" fill="#d4f5f3" opacity="0.75"/>
+  <circle cx="2318" cy="310" r="148" fill="#ffe8e8" opacity="0.72"/>
+  <circle cx="2104" cy="164" r="64" fill="#fef3c7" opacity="0.72"/>
+
+  <text x="1275" y="190" text-anchor="middle" class="display" font-size="112" font-weight="900">The pH Scale</text>
+  <text x="1275" y="265" text-anchor="middle" class="sans body muted">A full-color guide to acids, neutral water, and bases</text>
+  <text x="1275" y="330" text-anchor="middle" class="sans small muted">Approximate household examples · print in color for best results</text>
+
+  <g transform="translate(160,450)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="2230" height="1810" rx="58" fill="#ffffff" stroke="#c8f0ed" stroke-width="5"/>
+    <g transform="translate(90,105)">
+      <rect x="0" y="0" width="950" height="92" rx="32" fill="#ffe8e8"/>
+      <rect x="1000" y="0" width="210" height="92" rx="32" fill="#d4f5f3"/>
+      <rect x="1260" y="0" width="790" height="92" rx="32" fill="#f3e8ff"/>
+      <text x="475" y="60" text-anchor="middle" class="sans zone" fill="#a32638">ACIDIC</text>
+      <text x="1105" y="60" text-anchor="middle" class="sans zone" fill="#176b62">NEUTRAL</text>
+      <text x="1655" y="60" text-anchor="middle" class="sans zone" fill="#3b1f6b">BASIC / ALKALINE</text>
+    </g>
+
+    <g transform="translate(90,270)">
+      <rect x="0" y="0" width="136.67" height="520" rx="26" fill="#c51f42"/>
+      <rect x="136.67" y="0" width="136.67" height="520" rx="26" fill="#e73242"/>
+      <rect x="273.34" y="0" width="136.67" height="520" rx="26" fill="#f56a33"/>
+      <rect x="410.01" y="0" width="136.67" height="520" rx="26" fill="#fb982e"/>
+      <rect x="546.68" y="0" width="136.67" height="520" rx="26" fill="#f7c948"/>
+      <rect x="683.35" y="0" width="136.67" height="520" rx="26" fill="#d7df3f"/>
+      <rect x="820.02" y="0" width="136.67" height="520" rx="26" fill="#86c950"/>
+      <rect x="956.69" y="0" width="136.67" height="520" rx="26" fill="#34b875"/>
+      <rect x="1093.36" y="0" width="136.67" height="520" rx="26" fill="#2fc7a2"/>
+      <rect x="1230.03" y="0" width="136.67" height="520" rx="26" fill="#2cb9d5"/>
+      <rect x="1366.70" y="0" width="136.67" height="520" rx="26" fill="#2792d0"/>
+      <rect x="1503.37" y="0" width="136.67" height="520" rx="26" fill="#3567c8"/>
+      <rect x="1640.04" y="0" width="136.67" height="520" rx="26" fill="#5644b6"/>
+      <rect x="1776.71" y="0" width="136.67" height="520" rx="26" fill="#7b3fa4"/>
+      <rect x="1913.38" y="0" width="136.67" height="520" rx="26" fill="#9a2f86"/>
+      <g opacity="0.22" stroke="#ffffff" stroke-width="8">
+        <line x1="136.67" y1="0" x2="136.67" y2="520"/><line x1="273.34" y1="0" x2="273.34" y2="520"/><line x1="410.01" y1="0" x2="410.01" y2="520"/><line x1="546.68" y1="0" x2="546.68" y2="520"/><line x1="683.35" y1="0" x2="683.35" y2="520"/><line x1="820.02" y1="0" x2="820.02" y2="520"/><line x1="956.69" y1="0" x2="956.69" y2="520"/><line x1="1093.36" y1="0" x2="1093.36" y2="520"/><line x1="1230.03" y1="0" x2="1230.03" y2="520"/><line x1="1366.70" y1="0" x2="1366.70" y2="520"/><line x1="1503.37" y1="0" x2="1503.37" y2="520"/><line x1="1640.04" y1="0" x2="1640.04" y2="520"/><line x1="1776.71" y1="0" x2="1776.71" y2="520"/><line x1="1913.38" y1="0" x2="1913.38" y2="520"/>
+      </g>
+      <g class="sans phnum white" text-anchor="middle">
+        <text x="68.34" y="112">0</text><text x="205.01" y="112">1</text><text x="341.68" y="112">2</text><text x="478.35" y="112">3</text><text x="615.02" y="112">4</text><text x="751.69" y="112">5</text><text x="888.36" y="112">6</text><text x="1025.03" y="112">7</text><text x="1161.70" y="112">8</text><text x="1298.37" y="112">9</text><text x="1435.04" y="112">10</text><text x="1571.71" y="112">11</text><text x="1708.38" y="112">12</text><text x="1845.05" y="112">13</text><text x="1981.72" y="112">14</text>
+      </g>
+      <g class="sans example white" text-anchor="middle">
+        <text x="68.34" y="360" transform="rotate(-90 68.34 360)">battery acid</text>
+        <text x="205.01" y="360" transform="rotate(-90 205.01 360)">stomach acid</text>
+        <text x="341.68" y="360" transform="rotate(-90 341.68 360)">lemon juice</text>
+        <text x="478.35" y="360" transform="rotate(-90 478.35 360)">vinegar</text>
+        <text x="615.02" y="360" transform="rotate(-90 615.02 360)">tomato juice</text>
+        <text x="751.69" y="360" transform="rotate(-90 751.69 360)">black coffee</text>
+        <text x="888.36" y="360" transform="rotate(-90 888.36 360)">milk</text>
+        <text x="1025.03" y="360" transform="rotate(-90 1025.03 360)">pure water</text>
+        <text x="1161.70" y="360" transform="rotate(-90 1161.70 360)">baking soda</text>
+        <text x="1298.37" y="360" transform="rotate(-90 1298.37 360)">mild soap</text>
+        <text x="1435.04" y="360" transform="rotate(-90 1435.04 360)">detergent</text>
+        <text x="1571.71" y="360" transform="rotate(-90 1571.71 360)">ammonia</text>
+        <text x="1708.38" y="360" transform="rotate(-90 1708.38 360)">soapy cleaner</text>
+        <text x="1845.05" y="360" transform="rotate(-90 1845.05 360)">bleach</text>
+        <text x="1981.72" y="360" transform="rotate(-90 1981.72 360)">drain cleaner</text>
+      </g>
+    </g>
+
+    <g transform="translate(90,860)">
+      <line x1="0" y1="0" x2="2050" y2="0" stroke="#3b1f6b" stroke-width="9" stroke-linecap="round"/>
+      <g class="sans" font-size="36" font-weight="800" fill="#3b1f6b" text-anchor="middle">
+        <text x="0" y="58">0</text><text x="136.67" y="58">1</text><text x="273.34" y="58">2</text><text x="410.01" y="58">3</text><text x="546.68" y="58">4</text><text x="683.35" y="58">5</text><text x="820.02" y="58">6</text><text x="956.69" y="58">7</text><text x="1093.36" y="58">8</text><text x="1230.03" y="58">9</text><text x="1366.70" y="58">10</text><text x="1503.37" y="58">11</text><text x="1640.04" y="58">12</text><text x="1776.71" y="58">13</text><text x="1913.38" y="58">14</text>
+      </g>
+      <g stroke="#3b1f6b" stroke-width="5" stroke-linecap="round"><line x1="0" y1="-20" x2="0" y2="20"/><line x1="136.67" y1="-20" x2="136.67" y2="20"/><line x1="273.34" y1="-20" x2="273.34" y2="20"/><line x1="410.01" y1="-20" x2="410.01" y2="20"/><line x1="546.68" y1="-20" x2="546.68" y2="20"/><line x1="683.35" y1="-20" x2="683.35" y2="20"/><line x1="820.02" y1="-20" x2="820.02" y2="20"/><line x1="956.69" y1="-20" x2="956.69" y2="20"/><line x1="1093.36" y1="-20" x2="1093.36" y2="20"/><line x1="1230.03" y1="-20" x2="1230.03" y2="20"/><line x1="1366.70" y1="-20" x2="1366.70" y2="20"/><line x1="1503.37" y1="-20" x2="1503.37" y2="20"/><line x1="1640.04" y1="-20" x2="1640.04" y2="20"/><line x1="1776.71" y1="-20" x2="1776.71" y2="20"/><line x1="1913.38" y1="-20" x2="1913.38" y2="20"/><line x1="2050" y1="-20" x2="2050" y2="20"/></g>
+    </g>
+
+    <g transform="translate(105,1030)">
+      <rect x="0" y="0" width="620" height="305" rx="34" fill="#fff7f7" stroke="#ffd1d1" stroke-width="4"/>
+      <rect x="715" y="0" width="620" height="305" rx="34" fill="#f4fffe" stroke="#c8f0ed" stroke-width="4"/>
+      <rect x="1430" y="0" width="620" height="305" rx="34" fill="#fbf7ff" stroke="#dac7ff" stroke-width="4"/>
+      <text x="44" y="70" class="sans" font-size="44" font-weight="900" fill="#a32638">Acids: pH 0–6</text>
+      <text x="44" y="132" class="sans body muted">Taste sour in foods like lemons.</text>
+      <text x="44" y="194" class="sans body muted">Strong acids are not safe to touch.</text>
+      <text x="44" y="252" class="sans small muted">Lower number = stronger acid.</text>
+      <text x="759" y="70" class="sans" font-size="44" font-weight="900" fill="#176b62">Neutral: pH 7</text>
+      <text x="759" y="132" class="sans body muted">Pure water is neutral.</text>
+      <text x="759" y="194" class="sans body muted">It is not acidic or basic.</text>
+      <text x="759" y="252" class="sans small muted">A helpful middle point.</text>
+      <text x="1474" y="70" class="sans" font-size="44" font-weight="900" fill="#3b1f6b">Bases: pH 8–14</text>
+      <text x="1474" y="132" class="sans body muted">Often feel slippery in soaps.</text>
+      <text x="1474" y="194" class="sans body muted">Strong bases can burn skin.</text>
+      <text x="1474" y="252" class="sans small muted">Higher number = stronger base.</text>
+    </g>
+
+    <g transform="translate(105,1418)">
+      <rect x="0" y="0" width="2050" height="250" rx="34" fill="#f9fffe" stroke="#c8f0ed" stroke-width="4"/>
+      <text x="52" y="72" class="sans" font-size="45" font-weight="900" fill="#3b1f6b">How to read a pH color test</text>
+      <text x="52" y="132" class="sans body muted">1. Dip a pH strip into the liquid. Wait as directed on the strip package.</text>
+      <text x="52" y="186" class="sans body muted">2. Match the strip color to the chart that came with your strips.</text>
+      <text x="52" y="232" class="sans small muted">Important: pH paper brands use slightly different color charts. Use this poster as a learning guide.</text>
+    </g>
+  </g>
+
+  <g transform="translate(160,2350)">
+    <rect x="0" y="0" width="2230" height="525" rx="54" fill="#3b1f6b" filter="url(#softShadow)"/>
+    <circle cx="126" cy="126" r="62" fill="#4ecdc4" opacity="0.95"/>
+    <text x="126" y="146" text-anchor="middle" class="sans" font-size="70" font-weight="900" fill="#ffffff">!</text>
+    <text x="230" y="104" class="sans" font-size="54" font-weight="900" fill="#ffffff">Family science safety</text>
+    <text x="230" y="170" class="sans body" fill="#ffffff" opacity="0.88">Never taste mystery liquids. An adult should handle vinegar, cleaners, bleach,</text>
+    <text x="230" y="232" class="sans body" fill="#ffffff" opacity="0.88">ammonia, and anything with a warning label.</text>
+    <text x="230" y="294" class="sans body" fill="#ffffff" opacity="0.88">Do not mix household cleaners. Bleach and ammonia should stay far apart.</text>
+    <text x="230" y="356" class="sans body" fill="#ffffff" opacity="0.88">For kid-friendly tests, use water, lemon juice, vinegar, baking soda solution,</text>
+    <text x="230" y="418" class="sans body" fill="#ffffff" opacity="0.88">mild soap solution, or red cabbage indicator.</text>
+    <text x="230" y="490" class="sans small" fill="#d7fff9">Little Lab Coats · hands-on science for homeschool families</text>
+  </g>
+
+  <g transform="translate(160,2995)">
+    <text x="0" y="0" class="sans tiny muted">© 2026 Little Lab Coats. Free for personal/family/classroom use. Please do not resell or redistribute as part of another product.</text>
+    <text x="0" y="54" class="sans tiny muted">Science note: pH values for household materials are approximate and vary by product, concentration, and temperature.</text>
+  </g>
+</svg>
