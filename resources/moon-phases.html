@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moon phases printable — Little Lab Coats</title>
+  <meta name="description" content="A clean moon phase reference with the eight common phases and a simple note about why the Moon appears to change shape." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/site/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="../images/site/apple-touch-icon.png" />
+  <style>
+    :root{--cream:#F9FFFE;--teal:#4ECDC4;--teal-dark:#35B8AF;--teal-pale:#D4F5F3;--coral:#FF6B6B;--navy:#3B1F6B;--muted:#5A7A78;--border:#C8F0ED;--white:#fff;--shadow:0 18px 48px rgba(43,31,107,.14)}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,var(--cream),#f3e8ff);color:var(--navy);font-family:Arial,Helvetica,sans-serif;line-height:1.6}.toolbar{position:sticky;top:0;z-index:10;background:rgba(249,255,254,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(43,31,107,.08)}.toolbar-inner{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-weight:900;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}.brand img{height:44px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 16px;font-weight:900;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:.96rem}.btn-primary{background:var(--coral);color:#fff}.btn-secondary{background:#fff;color:var(--navy);border-color:var(--border)}.shell{max-width:1180px;margin:0 auto;padding:28px 20px 44px}.intro{background:#fff;border:1px solid var(--border);border-radius:24px;padding:22px 24px;margin-bottom:22px;box-shadow:var(--shadow)}.intro h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.08;margin:0 0 8px}.intro p{color:var(--muted);font-size:1.06rem;margin:0;max-width:850px}.intro ul{margin:16px 0 0;color:var(--muted);font-weight:700}.print-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:18px;box-shadow:var(--shadow)}.print-card img{display:block;width:100%;height:auto;border-radius:14px;background:#fff}.note{color:var(--muted);font-size:.94rem;margin:16px 6px 0}.note strong{color:var(--navy)}
+    @media(max-width:720px){.toolbar-inner{align-items:flex-start;flex-direction:column}.actions{width:100%}.btn{flex:1}.shell{padding:20px 12px 32px}.print-card{padding:8px;border-radius:18px}.intro{border-radius:18px}}
+    @media print{body{background:#fff}.toolbar,.intro,.note{display:none!important}.shell{max-width:none;margin:0;padding:0}.print-card{border:0;box-shadow:none;border-radius:0;padding:0}.print-card img{width:100%;border-radius:0}@page{size:letter portrait;margin:.22in}}
+</style>
+  <script>(function(){var host=window.location.hostname;if(host!=='littlelabcoats.co'&&host!=='www.littlelabcoats.co')return;var s=document.createElement('script');s.defer=true;s.dataset.domain='littlelabcoats.co';s.src='https://plausible.io/js/script.js';document.head.appendChild(s);})();</script>
+</head>
+<body>
+  <header class="toolbar">
+    <div class="toolbar-inner">
+      <a class="brand" href="../free-resources.html"><img src="../images/site/llc-logo-serena-approved-2026-04-10.png" alt="Little Lab Coats" />Free Resources</a>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="window.print()">Print this resource</button>
+        <a class="btn btn-secondary" href="moon-phases-printable.pdf" download>Download PDF</a>
+        <a class="btn btn-secondary" href="moon-phases-printable.svg" download>Download SVG</a>
+        <a class="btn btn-secondary" href="../free-resources.html">Back to resources</a>
+      </div>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="intro">
+      <h1>Moon phases printable</h1>
+      <p>A clean moon phase reference with the eight common phases and a simple note about why the Moon appears to change shape.</p>
+      <ul><li>Uses SVG shapes instead of generated text.</li><li>Waxing phases are lit on the right for a Northern Hemisphere view.</li><li>Includes a parent note about reflected sunlight.</li></ul>
+    </section>
+    <section class="print-card" aria-label="Printable moon phases chart with new, waxing, full, and waning moon icons">
+      <img src="moon-phases-printable.svg" alt="Printable moon phases chart with new, waxing, full, and waning moon icons" />
+    </section>
+    <p class="note"><strong>Printing tip:</strong> For a Northern Hemisphere view, waxing moons are lit on the right and waning moons are lit on the left. Local angle can vary near the horizon.</p>
+  </main>
+</body>
+</html>
