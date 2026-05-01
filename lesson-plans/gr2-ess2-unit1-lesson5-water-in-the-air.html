@@ -239,6 +239,7 @@
       document.getElementById('llcPaywall').style.display = 'block';
     }
     document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('review=1') !== -1) { return; }
       if (!isUnlocked()) lockLesson();
     });
   })();
