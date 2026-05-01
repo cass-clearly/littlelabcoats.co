@@ -24,7 +24,8 @@
       'grade-2-complete': { checkoutUrl: '', status: 'placeholder' },
       'gr2-ps1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr2-ls2-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
-      'gr2-ess1-unit3-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr2-ess1-unit3-bundle': { checkoutUrl: 'https://buy.stripe.com/5kQ28tbob3MW6jObNI6g80c', status: 'live' },
+      'gr2-ess2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
 
       'grade-3-complete': { checkoutUrl: '', status: 'placeholder' },
       'gr3-ps2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
@@ -38,6 +39,9 @@
       'grade-4-complete': { checkoutUrl: '', status: 'placeholder' },
       'gr4-ls1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr4-ls1-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr4-ps3-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr4-ess2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr4-ets1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
 
       'grade-5-complete': { checkoutUrl: '', status: 'placeholder' },
       'gr5-ps2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
