@@ -322,7 +322,7 @@
 
 <script>
 (function() {
-  var ACCESS_KEY = 'llc_access';
+  var ACCESS_KEY = 'llc_access_v2_locked';
 
   function isUnlocked() {
     return localStorage.getItem(ACCESS_KEY) === 'granted';
@@ -375,7 +375,6 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     if (window.location.search.indexOf('review=1') !== -1) {
-      try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {}
       return;
     }
     if (!isUnlocked()) {

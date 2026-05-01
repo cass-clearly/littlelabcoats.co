@@ -122,7 +122,7 @@
   <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
   <script>
   (function() {
-    var ACCESS_KEY = 'llc_access';
+    var ACCESS_KEY = 'llc_access_v2_locked';
     function isUnlocked() { return localStorage.getItem(ACCESS_KEY) === 'granted'; }
     function lockLesson() {
       var allH2 = Array.from(document.querySelectorAll('h2'));
@@ -142,7 +142,6 @@
       document.getElementById('llcPaywall').style.display = 'block';
     }
     document.addEventListener('DOMContentLoaded', function() {
-      if (window.location.search.indexOf('review=1') !== -1) { try { localStorage.setItem(ACCESS_KEY, 'granted'); } catch (e) {} return; }
       if (!isUnlocked()) lockLesson();
     });
   })();
