@@ -2,7 +2,7 @@
   'use strict';
 
   window.LLCStoreProductLinks = {
-    updatedAt: '2026-04-18',
+    updatedAt: '2026-05-01',
     note: 'Drop real checkout URLs into this map as each Little Lab Coats bundle is wired. Empty checkoutUrl means the storefront should keep showing a clean placeholder state.',
     products: {
       'grade-k-complete': { checkoutUrl: 'https://buy.stripe.com/7sYcN71NBgzI6jOg3Y6g80a', status: 'live' },
@@ -15,7 +15,7 @@
       'k-ets1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/5kQ8wR3VJ2ISeQkg3Y6g80b', status: 'live' },
 
       'grade-1-complete': { checkoutUrl: '', status: 'placeholder' },
-      'gr1-ps4-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr1-ps4-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/6oUfZj63RerA9w0aJE6g80e', status: 'live' },
       'gr1-ls1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr1-ls3-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr1-ess1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },

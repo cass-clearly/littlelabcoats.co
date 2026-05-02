@@ -39,11 +39,14 @@
     {
       "slug": "gr1-ps4-unit1-bundle",
       "displayName": "Grade 1 Physical Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr1-ps4-unit1-bundle/gr1-ps4-unit1-six-lesson-bundle.pdf",
+      "paymentLinkUrl": "https://buy.stripe.com/6oUfZj63RerA9w0aJE6g80e",
+      "downloadUrl": "https://littlelabcoats.co/gr1-ps4-unit1-download.html",
+      "emailTemplatePath": "ops/gr1-ps4-unit1-welcome-email.txt",
       "draftSubject": "Your Grade 1 Physical Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "live-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr2-ess1-unit3-bundle",
