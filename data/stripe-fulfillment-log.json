@@ -1,5 +1,5 @@
 {
-  "lastRunAt": 1777687240,
+  "lastRunAt": 1777689480,
   "processedSessions": {
     "cs_live_a1fnHF3kg67T6PyXyMI73W0GsRxVnqa20EykMIdZ1LRPthqcqJBG37jGlp": {
       "customerEmail": "serenasalvato1@gmail.com",
@@ -8,7 +8,7 @@
       "dryRun": false,
       "eventId": "evt_1TSQyhRs1078GLsa0euYA3Wv",
       "paymentLinkId": "plink_1TSQgqRs1078GLsaEi2KsqpC",
-      "sentAt": 1777687240,
+      "sentAt": 1777689480,
       "sessionId": "cs_live_a1fnHF3kg67T6PyXyMI73W0GsRxVnqa20EykMIdZ1LRPthqcqJBG37jGlp",
       "slug": "gr2-ess2-unit1-bundle",
       "subject": "Your Grade 2 Weather Detectives & Wild Storms bundle is ready"
