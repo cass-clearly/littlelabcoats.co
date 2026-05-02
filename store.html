@@ -1265,9 +1265,9 @@
           id: 'grade-2',
           label: 'Grade 2',
           short: '2',
-          note: 'A practical Grade 2 science lineup built around matter, ecosystems, and Earth features.',
+          note: 'A practical Grade 2 science lineup across matter, plant and ecosystem life science, weather and Earth features, plus engineering design.',
           fullGradeSku: 'grade-2-complete',
-          fullGradeIncludes: ['Matter & Its Properties', 'Ecosystems', "Earth\'s Features"],
+          fullGradeIncludes: ['Matter & Its Properties', 'Plants, Pollinators & Habitats', 'Ecosystems', 'Weather Detectives & Wild Storms', "Earth\'s Features", 'Bridge Builders'],
           freeLesson: {
             title: 'Salt Dough Fossil Factory',
             summary: 'A free earth-science sample where kids model fossil evidence with their hands.',
@@ -1287,8 +1287,9 @@
               name: 'Life Science',
               className: 'life',
               emoji: '🌱',
-              summary: 'Ecosystems, pollinators, and living relationships.',
+              summary: 'Plant needs, pollinators, habitats, and ecosystems.',
               units: [
+                { sku: 'gr2-ls2-unit1-bundle', title: 'Plants, Pollinators & Habitats', code: '2-LS2', lessons: 6, preview: '/lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html' },
                 { sku: 'gr2-ls2-unit2-bundle', title: 'Ecosystems', code: '2-LS2', lessons: 6, preview: '/lesson-plans/gr2-ls2-unit2-l1-ecosystems/' }
               ]
             },
@@ -1296,9 +1297,19 @@
               name: 'Earth Science',
               className: 'earth',
               emoji: '🌍',
-              summary: 'Landforms, fossils, maps, and surface features.',
+              summary: 'Weather, landforms, fossils, maps, and surface features.',
               units: [
+                { sku: 'gr2-ess2-unit1-bundle', title: 'Weather Detectives & Wild Storms', code: '2-ESS2', lessons: 6, preview: '/lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html' },
                 { sku: 'gr2-ess1-unit3-bundle', title: "Earth's Features", code: '2-ESS1', lessons: 6, preview: '/lesson-plans/gr2-ess1-unit3-l1-landforms/' }
+              ]
+            },
+            {
+              name: 'Engineering',
+              className: 'engineering',
+              emoji: '🛠️',
+              summary: 'Bridge design, building, testing, and improving.',
+              units: [
+                { sku: 'gr2-ets1-unit1-bundle', title: 'Bridge Builders', code: '2-ETS1', lessons: 6, preview: '/lesson-plans/gr2-ets1-unit1-lesson1-define-the-bridge-problem.html' }
               ]
             }
           ]
