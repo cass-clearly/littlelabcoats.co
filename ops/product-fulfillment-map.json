@@ -74,8 +74,10 @@
     {
       "slug": "gr2-ls2-unit2-bundle",
       "displayName": "Grade 2 Life Science Unit 2 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr2-ls2-unit2-bundle/gr2-ls2-unit2-six-lesson-bundle.pdf",
+      "downloadUrl": "https://littlelabcoats.co/gr2-ls2-unit2-download.html",
+      "emailTemplatePath": "ops/gr2-ls2-unit2-welcome-email.txt",
       "draftSubject": "Your Grade 2 Life Science Unit 2 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
@@ -83,8 +85,10 @@
     {
       "slug": "gr2-ps1-unit1-bundle",
       "displayName": "Grade 2 Physical Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr2-ps1-unit1-bundle/gr2-ps1-unit1-six-lesson-bundle.pdf",
+      "downloadUrl": "https://littlelabcoats.co/gr2-ps1-unit1-download.html",
+      "emailTemplatePath": "ops/gr2-ps1-unit1-welcome-email.txt",
       "draftSubject": "Your Grade 2 Physical Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
@@ -110,8 +114,10 @@
     {
       "slug": "grade-2-complete",
       "displayName": "Complete Grade 2 Science Bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/grade-2-complete/grade-2-complete-science-bundle.pdf",
+      "downloadUrl": "https://littlelabcoats.co/grade-2-complete-download.html",
+      "emailTemplatePath": "ops/grade-2-complete-welcome-email.txt",
       "draftSubject": "Your Complete Grade 2 Science Bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
