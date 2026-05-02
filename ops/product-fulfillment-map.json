@@ -47,12 +47,25 @@
     },
     {
       "slug": "gr2-ess1-unit3-bundle",
-      "displayName": "Grade 2 Earth Science Unit 3 bundle",
-      "deliveryType": "attachment",
+      "displayName": "Grade 2 Earth’s Features bundle",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf",
-      "draftSubject": "Your Grade 2 Earth Science Unit 3 bundle is ready",
+      "downloadUrl": "https://littlelabcoats.co/thank-you.html?product=gr2-ess1-unit3-bundle",
+      "emailTemplatePath": "ops/gr2-ess1-unit3-welcome-email.txt",
+      "draftSubject": "Your Grade 2 Earth’s Features bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
+    },
+    {
+      "slug": "gr2-ess2-unit1-bundle",
+      "displayName": "Grade 2 Weather Detectives & Wild Storms bundle",
+      "deliveryType": "hosted_link",
+      "assetPath": "",
+      "downloadUrl": "https://littlelabcoats.co/thank-you.html?product=gr2-ess2-unit1-bundle",
+      "emailTemplatePath": "ops/gr2-ess2-unit1-welcome-email.txt",
+      "draftSubject": "Your Grade 2 Weather Detectives & Wild Storms bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-hosted"
     },
     {
       "slug": "gr2-ls2-unit2-bundle",

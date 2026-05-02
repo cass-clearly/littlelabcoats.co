@@ -212,7 +212,8 @@
         "includedUnits": [
           "gr2-ps1-unit1-bundle",
           "gr2-ls2-unit2-bundle",
-          "gr2-ess1-unit3-bundle"
+          "gr2-ess1-unit3-bundle",
+          "gr2-ess2-unit1-bundle"
         ]
       },
       "units": [
@@ -245,9 +246,20 @@
           "unitCode": "2-ESS1 Unit 3",
           "previewUrl": "/lesson-plans/gr2-ess1-unit3-l1-landforms/",
           "bundlePdfStatus": "bundle_pdf_ready",
-          "checkoutLinkStatus": "pending",
+          "checkoutLinkStatus": "live",
           "exportPath": "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf",
           "thankYouProduct": "gr2-ess1-unit3-bundle"
+        },
+        {
+          "sku": "gr2-ess2-unit1-bundle",
+          "title": "Weather Detectives & Wild Storms",
+          "domain": "Earth Science",
+          "unitCode": "2-ESS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr2-ess2-unit1-lesson1-weather-station-builders.html",
+          "bundlePdfStatus": "hosted_download_ready",
+          "checkoutLinkStatus": "live",
+          "exportPath": "",
+          "thankYouProduct": "gr2-ess2-unit1-bundle"
         }
       ]
     },
@@ -361,7 +373,10 @@
         "thankYouProduct": "grade-4-complete",
         "includedUnits": [
           "gr4-ls1-unit1-bundle",
-          "gr4-ls1-unit2-bundle"
+          "gr4-ls1-unit2-bundle",
+          "gr4-ps3-unit1-bundle",
+          "gr4-ess2-unit1-bundle",
+          "gr4-ets1-unit1-bundle"
         ]
       },
       "units": [
@@ -386,6 +401,39 @@
           "checkoutLinkStatus": "pending",
           "exportPath": "exports/gr4-ls1-unit2-bundle/",
           "thankYouProduct": "gr4-ls1-unit2-bundle"
+        },
+        {
+          "sku": "gr4-ps3-unit1-bundle",
+          "title": "Energy & Motion",
+          "domain": "Physical Science",
+          "unitCode": "4-PS3 Unit 1",
+          "previewUrl": "/lesson-plans/gr4-ps3-unit1-l1-stored-energy-starts-motion.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr4-ps3-unit1-bundle/",
+          "thankYouProduct": "gr4-ps3-unit1-bundle"
+        },
+        {
+          "sku": "gr4-ess2-unit1-bundle",
+          "title": "Shaping Earth’s Surface",
+          "domain": "Earth Science",
+          "unitCode": "4-ESS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr4-ess2-unit1-lesson1-weathering-breaks-rocks.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr4-ess2-unit1-bundle/",
+          "thankYouProduct": "gr4-ess2-unit1-bundle"
+        },
+        {
+          "sku": "gr4-ets1-unit1-bundle",
+          "title": "Disaster-Resistant Design",
+          "domain": "Engineering",
+          "unitCode": "4-ETS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr4-ets1-unit1-lesson1-define-the-storm-shelter-problem.html",
+          "bundlePdfStatus": "bundle_pdf_pending",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "exports/gr4-ets1-unit1-bundle/",
+          "thankYouProduct": "gr4-ets1-unit1-bundle"
         }
       ]
     },
