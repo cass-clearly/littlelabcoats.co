@@ -1,6 +1,17 @@
 {
   "products": [
     {
+      "slug": "garden-detectives-unit-bundle",
+      "displayName": "Garden Detectives Gardening Unit",
+      "deliveryType": "hosted_link",
+      "assetPath": "",
+      "downloadUrl": "https://littlelabcoats.co/gardening-unit-download.html",
+      "emailTemplatePath": "ops/gardening-unit-welcome-email.txt",
+      "draftSubject": "Your Garden Detectives gardening unit is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "ready-manual"
+    },
+    {
       "slug": "gr1-ess1-unit1-bundle",
       "displayName": "Grade 1 Earth Science Unit 1 bundle",
       "deliveryType": "hosted_link",

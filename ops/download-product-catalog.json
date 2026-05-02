@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-25",
+  "updatedAt": "2026-05-02",
   "launchModel": {
     "paidProductTypes": [
       "unit-bundle",
@@ -485,6 +485,23 @@
           "checkoutLinkStatus": "pending",
           "exportPath": "exports/gr5-ess2-unit1-bundle/",
           "thankYouProduct": "gr5-ess2-unit1-bundle"
+        }
+      ]
+    },
+    {
+      "grade": "Standalone Units",
+      "fullGrade": null,
+      "units": [
+        {
+          "sku": "garden-detectives-unit-bundle",
+          "title": "Garden Detectives Gardening Unit",
+          "domain": "Life Science / Gardening",
+          "unitCode": "Mixed-Age Gardening Unit",
+          "previewUrl": "/lesson-plans/free-garden-detectives-soil-seed-sun.html",
+          "bundlePdfStatus": "hosted_download_ready",
+          "checkoutLinkStatus": "pending",
+          "exportPath": "",
+          "thankYouProduct": "garden-detectives-unit-bundle"
         }
       ]
     }

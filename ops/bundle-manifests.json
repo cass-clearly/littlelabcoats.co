@@ -199,6 +199,28 @@
         "exports/gr2-ls2-unit2-bundle/gr2-ls2-unit2-six-lesson-bundle.pdf",
         "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf"
       ]
+    },
+    "garden-detectives-unit-bundle": {
+      "type": "unit",
+      "output": "",
+      "title": "Garden Detectives Gardening Unit",
+      "lessons": [
+        "lesson-plans/free-garden-detectives-soil-seed-sun.html",
+        "lesson-plans/gardening-unit-lesson2-leaf-detective-lab.html",
+        "lesson-plans/gardening-unit-lesson3-plant-parts-on-the-job.html",
+        "lesson-plans/gardening-unit-lesson4-weed-wildflower-wanted-guest.html",
+        "lesson-plans/gardening-unit-lesson5-perennials-annuals-garden-planning.html",
+        "lesson-plans/gardening-unit-lesson6-pollinator-party-wildflower-garden-design.html",
+        "lesson-plans/gardening-unit-refcard.html",
+        "lesson-plans/gardening-unit-quiz.html",
+        "lesson-plans/gardening-unit-observation-pages.html",
+        "lesson-plans/gardening-unit-vocabulary-cards.html",
+        "lesson-plans/gardening-unit-mini-posters.html",
+        "lesson-plans/gardening-unit-garden-journal-cover.html"
+      ],
+      "reviewHub": "lesson-plans/review/gardening-unit-review.html",
+      "downloadPage": "gardening-unit-download.html",
+      "status": "hosted_review_ready"
     }
   }
 }
