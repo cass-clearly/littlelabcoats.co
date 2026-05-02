@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Lab Coats — First 50 Customers Plan</title>
+  <style>
+    :root {
+      --ink: #17324d;
+      --muted: #5e7388;
+      --teal: #1ea7a1;
+      --coral: #f27c63;
+      --gold: #f4c95d;
+      --sky: #eef8fb;
+      --cream: #fffdf8;
+      --line: #d8e6ee;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f6fbfd 0%, #fffaf6 100%);
+      line-height: 1.55;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(30,167,161,.12), rgba(242,124,99,.14));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 18px 50px rgba(23,50,77,.08);
+    }
+    .eyebrow {
+      display: inline-block;
+      background: white;
+      border: 1px solid var(--line);
+      color: var(--teal);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 14px;
+    }
+    h1,h2,h3 { margin: 0 0 12px; line-height: 1.15; }
+    h1 { font-size: clamp(34px, 5vw, 52px); }
+    h2 { font-size: 28px; margin-top: 30px; }
+    h3 { font-size: 20px; }
+    p { margin: 0 0 12px; }
+    .sub {
+      max-width: 760px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(23,50,77,.05);
+    }
+    .accent-teal { border-top: 8px solid var(--teal); }
+    .accent-coral { border-top: 8px solid var(--coral); }
+    .accent-gold { border-top: 8px solid var(--gold); }
+    ul, ol { margin: 12px 0 0 20px; padding: 0; }
+    li { margin: 8px 0; }
+    .banner {
+      background: var(--ink);
+      color: white;
+      padding: 18px 22px;
+      border-radius: 22px;
+      margin-top: 24px;
+      font-weight: 600;
+    }
+    .metric {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .small { color: var(--muted); font-size: 14px; }
+    .funnel {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .step {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+      min-height: 135px;
+    }
+    .step .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      background: var(--sky);
+      color: var(--teal);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .quote {
+      background: #fff;
+      border-left: 6px solid var(--coral);
+      border-radius: 18px;
+      padding: 18px 20px;
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .pill {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .printbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 0 18px;
+    }
+    .printbar button {
+      appearance: none;
+      border: 0;
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(23,50,77,.18);
+    }
+    @media (max-width: 860px) {
+      .grid.two, .grid.three, .funnel { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: white; }
+      .page { max-width: none; padding: 0; }
+      .printbar { display: none; }
+      .hero, .card, .banner, .quote, .step { box-shadow: none; }
+      .hero, .card, .step { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="printbar"><button onclick="window.print()">Print / Save PDF</button></div>
+
+    <section class="hero">
+      <div class="eyebrow">Little Lab Coats Growth Plan</div>
+      <h1>How to Get to Your First 50 Customers</h1>
+      <p class="sub">You do <strong>not</strong> need viral reach first. You need a clean path from social attention → freebie → conversation → purchase, repeated consistently with one or two hero offers.</p>
+      <div class="pill-list">
+        <span class="pill">Daily posting</span>
+        <span class="pill">Free lesson lead magnet</span>
+        <span class="pill">Warm DM follow-up</span>
+        <span class="pill">1–2 hero bundles</span>
+        <span class="pill">Track what converts</span>
+      </div>
+    </section>
+
+    <div class="quote">The goal is not “be everywhere.” The goal is: make it very easy for the right homeschool parent to say yes.</div>
+
+    <section>
+      <h2>1) What to Focus On First</h2>
+      <div class="grid three">
+        <div class="card accent-teal">
+          <h3>One clear freebie</h3>
+          <p>Lead with one irresistible free lesson or mini bundle that solves a real parent problem fast.</p>
+          <ul>
+            <li>Easy win</li>
+            <li>Feels useful immediately</li>
+            <li>Naturally leads into a paid unit</li>
+          </ul>
+        </div>
+        <div class="card accent-coral">
+          <h3>One or two hero offers</h3>
+          <p>Don’t spread your energy across every unit at once. Push the bundles most likely to convert first.</p>
+          <ul>
+            <li>Strongest topic appeal</li>
+            <li>Cleanest preview</li>
+            <li>Easiest “yes” price point</li>
+          </ul>
+        </div>
+        <div class="card accent-gold">
+          <h3>Personal follow-up</h3>
+          <p>Your early sales edge is warmth and specificity. People buy faster when they feel seen.</p>
+          <ul>
+            <li>Ask grade</li>
+            <li>Ask science interest</li>
+            <li>Recommend the right bundle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2) The Funnel You Want</h2>
+      <div class="funnel">
+        <div class="step"><div class="num">1</div><strong>Post</strong><p>Reel, post, carousel, comment, story</p></div>
+        <div class="step"><div class="num">2</div><strong>Freebie CTA</strong><p>“Comment WEATHER” or “DM me for the free lesson”</p></div>
+        <div class="step"><div class="num">3</div><strong>Conversation</strong><p>Ask one or two helpful questions</p></div>
+        <div class="step"><div class="num">4</div><strong>Offer</strong><p>Recommend the matching paid bundle</p></div>
+        <div class="step"><div class="num">5</div><strong>Close + Follow Up</strong><p>Checkout link, delivery, testimonial ask</p></div>
+      </div>
+      <div class="banner">If a post gets attention but does not lead to a DM, email, or checkout, it is not yet doing enough business work.</div>
+    </section>
+
+    <section>
+      <h2>3) Weekly Numbers That Get You There</h2>
+      <div class="grid three">
+        <div class="card"><div class="metric">20–30</div><div>new freebie leads per week</div><div class="small">Comments, DMs, or email captures</div></div>
+        <div class="card"><div class="metric">10–15</div><div>meaningful parent conversations</div><div class="small">Short, personal, warm follow-up</div></div>
+        <div class="card"><div class="metric">2–5</div><div>bundle purchases per week</div><div class="small">This is enough to reach 50 faster than it feels</div></div>
+      </div>
+      <p style="margin-top:14px;">If you convert even a small slice of warm freebie leads each week, 50 customers becomes a process problem, not a miracle problem.</p>
+    </section>
+
+    <section>
+      <h2>4) Daily Rhythm</h2>
+      <div class="grid two">
+        <div class="card accent-teal">
+          <h3>Daily</h3>
+          <ul>
+            <li>Post once on Instagram and/or Facebook</li>
+            <li>Use one clear CTA tied to the freebie or bundle</li>
+            <li>Reply to every relevant comment and DM</li>
+            <li>Start 3–5 warm conversations with interested parents</li>
+            <li>Track who asked for what</li>
+          </ul>
+        </div>
+        <div class="card accent-coral">
+          <h3>Weekly</h3>
+          <ul>
+            <li>Review which post brought the most leads</li>
+            <li>Review which freebie led to the most bundle conversations</li>
+            <li>Review which bundle actually sold</li>
+            <li>Double down on the format/topic that moved people</li>
+            <li>Ask at least 2 happy buyers for a testimonial</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5) What to Say in DMs</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>When someone wants the free lesson</h3>
+          <p><strong>Script:</strong></p>
+          <p>“Absolutely — happy to send it. What grade are your kids in, and do they usually get most excited about animals, weather, space, or hands-on building?”</p>
+          <p class="small">This keeps it personal and gives you the setup for a later recommendation.</p>
+        </div>
+        <div class="card">
+          <h3>When they engage with the freebie</h3>
+          <p><strong>Script:</strong></p>
+          <p>“If your kids liked that one, I think you’d really love the full unit — it keeps the same style but gives you the complete sequence, printables, and extras. Want me to send the link?”</p>
+        </div>
+        <div class="card">
+          <h3>Soft close</h3>
+          <p><strong>Script:</strong></p>
+          <p>“This is the one I’d point you to based on what you said: [bundle]. It’s especially good for [specific reason]. Here’s the link if you want it.”</p>
+        </div>
+        <div class="card">
+          <h3>After purchase</h3>
+          <p><strong>Script:</strong></p>
+          <p>“Thank you so much. I’d love to hear how your kids like it once you’ve tried the first lesson — even one sentence helps me a lot.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6) What to Track</h2>
+      <div class="grid two">
+        <div class="card accent-gold">
+          <h3>Lead tracking</h3>
+          <ul>
+            <li>Name</li>
+            <li>Platform: Instagram or Facebook</li>
+            <li>How they came in: post, reel, story, comment, DM, share</li>
+            <li>Freebie requested</li>
+            <li>Grade / interests</li>
+            <li>Offered product</li>
+            <li>Bought or not yet</li>
+          </ul>
+        </div>
+        <div class="card accent-teal">
+          <h3>Questions to ask weekly</h3>
+          <ul>
+            <li>Which post brought the most real conversations?</li>
+            <li>Which freebie created the most buying intent?</li>
+            <li>Which parents sounded excited but stalled?</li>
+            <li>What objections kept showing up?</li>
+            <li>Which bundle is acting like a true hero product?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7) Best Bet for Your First 50</h2>
+      <div class="card">
+        <ol>
+          <li>Lead with one excellent free lesson parents actually want.</li>
+          <li>Use that free lesson to start warm conversations.</li>
+          <li>Personally recommend the right paid bundle.</li>
+          <li>Keep checkout and fulfillment friction-free.</li>
+          <li>Collect testimonials early and reuse them in posts.</li>
+          <li>Repeat the same funnel until it becomes boring and reliable.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>8) What Not to Do</h2>
+      <div class="grid three">
+        <div class="card"><h3>Don’t chase every product at once</h3><p>Too many offers makes early buyers hesitate.</p></div>
+        <div class="card"><h3>Don’t drop links cold too fast</h3><p>Conversation converts better than link-dumping at this stage.</p></div>
+        <div class="card"><h3>Don’t mistake activity for traction</h3><p>Likes are nice. Conversations and purchases matter more.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>9) Your First 50 Customer Operating Rule</h2>
+      <div class="banner">Every day, create attention. Every day, turn some of that attention into actual conversations. Every week, turn those conversations into purchases and proof.</div>
+    </section>
+  </div>
+</body>
+</html>
