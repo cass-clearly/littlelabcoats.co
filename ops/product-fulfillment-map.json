@@ -3,11 +3,15 @@
     {
       "slug": "gr1-ess1-unit1-bundle",
       "displayName": "Grade 1 Earth Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr1-ess1-unit1-bundle/gr1-ess1-unit1-six-lesson-bundle.pdf",
+      "paymentLinkId": "plink_1TSUhiRs1078GLsajhr0963r",
+      "paymentLinkUrl": "https://buy.stripe.com/aFa14pdwjabk23y7xs6g80g",
+      "downloadUrl": "https://littlelabcoats.co/gr1-ess1-unit1-download.html",
+      "emailTemplatePath": "ops/gr1-ess1-unit1-welcome-email.txt",
       "draftSubject": "Your Grade 1 Earth Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr1-ets1-unit1-bundle",
