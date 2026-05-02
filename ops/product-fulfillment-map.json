@@ -57,7 +57,6 @@
       "displayName": "Grade 1 Life Science Unit 2 bundle",
       "deliveryType": "hosted_link",
       "assetPath": "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
-      "paymentLinkUrl": "https://buy.stripe.com/bJe28tgIv1EOfUo1946g80j",
       "downloadUrl": "https://littlelabcoats.co/gr1-ls3-unit2-download.html",
       "emailTemplatePath": "ops/gr1-ls3-unit2-welcome-email.txt",
       "draftSubject": "Your Grade 1 Parents & Offspring bundle is ready",
@@ -108,22 +107,26 @@
       "displayName": "Grade 2 Life Science Unit 2 bundle",
       "deliveryType": "hosted_link",
       "assetPath": "exports/gr2-ls2-unit2-bundle/gr2-ls2-unit2-six-lesson-bundle.pdf",
+      "paymentLinkId": "plink_1TSVeHRs1078GLsaE6zN3B6F",
+      "paymentLinkUrl": "https://buy.stripe.com/28EbJ38bZ2ISaA42d86g80k",
       "downloadUrl": "https://littlelabcoats.co/gr2-ls2-unit2-download.html",
       "emailTemplatePath": "ops/gr2-ls2-unit2-welcome-email.txt",
-      "draftSubject": "Your Grade 2 Life Science Unit 2 bundle is ready",
+      "draftSubject": "Your Grade 2 Ecosystems bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr2-ps1-unit1-bundle",
       "displayName": "Grade 2 Physical Science Unit 1 bundle",
       "deliveryType": "hosted_link",
       "assetPath": "exports/gr2-ps1-unit1-bundle/gr2-ps1-unit1-six-lesson-bundle.pdf",
+      "paymentLinkId": "plink_1TSVbeRs1078GLsa9S4MEAvp",
+      "paymentLinkUrl": "https://buy.stripe.com/bJe28tgIv1EOfUo1946g80j",
       "downloadUrl": "https://littlelabcoats.co/gr2-ps1-unit1-download.html",
       "emailTemplatePath": "ops/gr2-ps1-unit1-welcome-email.txt",
-      "draftSubject": "Your Grade 2 Physical Science Unit 1 bundle is ready",
+      "draftSubject": "Your Grade 2 Matter & Its Properties bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr3-ps2-unit1-bundle",
