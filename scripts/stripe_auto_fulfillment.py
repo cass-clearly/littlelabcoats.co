@@ -166,9 +166,11 @@ def process_events(secret, product_map, log, dry_run=False, limit=20, replay_ses
             'sentAt': int(time.time()),
             'dryRun': dry_run,
         }
-        log['processedSessions'][session_id] = record
+        if not dry_run:
+            log['processedSessions'][session_id] = record
         sent.append(record)
-    log['lastRunAt'] = int(time.time())
+    if not dry_run:
+        log['lastRunAt'] = int(time.time())
     return sent, skipped
 
 
@@ -193,7 +195,8 @@ def main():
         limit=args.limit,
         replay_session_ids=args.replay_session,
     )
-    save_log(log)
+    if not args.dry_run:
+        save_log(log)
     result = {
         'sentCount': len(sent),
         'sent': sent,
