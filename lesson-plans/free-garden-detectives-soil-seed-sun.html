@@ -194,6 +194,20 @@
     </ul>
   </div>
 
+  <script>(function () {
+    function loadFeedbackLayer() {
+      var script = document.createElement('script');
+      script.src = '/feedback-layer.js?v=20260421';
+      script.dataset.apiUrl = 'https://cassclearly.com';
+      script.dataset.documentId = 'doc_free_garden_detectives';
+      script.dataset.contentSelector = 'body';
+      document.body.appendChild(script);
+    }
+    if (window.location.search.indexOf('review=1') !== -1) {
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true }); }
+      else { loadFeedbackLayer(); }
+    }
+  })();</script>
   <div class="footer">© 2026 Little Lab Coats. Free sample for personal/family use only. Not for resale or redistribution.</div>
 </body>
 </html>
