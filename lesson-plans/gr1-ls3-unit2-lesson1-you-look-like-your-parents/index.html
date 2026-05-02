@@ -3,587 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You Look Like Your Parents — Parents and Offspring Unit, Lesson 1</title>
+  <title>Family Trait Detectives — Parents &amp; Offspring Unit, Lesson 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    :root {
+      --forest:#1f6f4a; --leaf:#37a66b; --mint:#e9f8ee; --sky:#e7f6ff;
+      --teal:#087f8c; --coral:#ff6b6b; --gold:#ffcb5b; --cream:#fffaf0;
+      --grape:#5b3f97; --ink:#25312b; --soft:#f7fbf8;
+    }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.5in;
-      font-size: 11pt;
-      line-height: 1.4;
-      color: #222;
+      font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+      max-width: 8.5in; margin: 0 auto; padding: 0.45in;
+      color: var(--ink); background: white; line-height: 1.45; font-size: 11pt;
     }
-    h1 {
-      text-align: center;
-      font-size: 22pt;
-      margin-bottom: 5px;
-      border-bottom: 3px solid #2e7d32;
-      padding-bottom: 10px;
-      color: #2e7d32;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #555;
-      font-size: 13pt;
-    }
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      background: #e8f5e9;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 10pt;
-      border: 1px solid #a5d6a7;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-    h2 {
-      font-size: 14pt;
-      background: #2e7d32;
-      color: white;
-      padding: 8px 14px;
-      margin: 24px 0 12px 0;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 12pt;
-      color: #1b5e20;
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 4px;
-      margin: 18px 0 8px 0;
-    }
-    ul, ol { margin: 8px 0; padding-left: 25px; }
-    li { margin-bottom: 5px; }
-    .hero-image {
-      text-align: center;
-      margin: 16px 0;
-    }
-    .hero-image .emoji-hero {
-      font-size: 72pt;
-      line-height: 1.2;
-    }
-    .hero-image .caption {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-      margin-top: 4px;
-    }
-    .materials-box {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
-    .procedure-step {
-      background: #e8f5e9;
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border-left: 5px solid #2e7d32;
-    }
-    .procedure-step strong { color: #1b5e20; }
-    .question-box {
-      background: #e8f5e9;
-      border-left: 5px solid #00B894;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .discussion-hint {
-      font-style: italic;
-      color: #555;
-      margin-top: 6px;
-      font-size: 10pt;
-    }
-    .tip-box {
-      background: #e0f7fa;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-    }
-    .standards-box {
-      background: #f3e5f5;
-      border: 1px solid #ce93d8;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .standards-box strong { color: #7b1fa2; }
-    .teacher-note {
-      background: #f5f5f5;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #555;
-    }
-    .teacher-note strong { color: #333; }
-    .vocab-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 12px 0;
-    }
-    .vocab-card {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 10px 12px;
-    }
-    .vocab-card .vocab-word {
-      font-weight: bold;
-      color: #1b5e20;
-      font-size: 12pt;
-    }
-    .vocab-card .vocab-def {
-      font-size: 10pt;
-      color: #333;
-      margin-top: 4px;
-    }
-    .worksheet-header {
-      background: #1b5e20;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 14pt;
-      font-weight: bold;
-      margin: 0 0 12px 0;
-      text-align: center;
-    }
-    .name-date {
-      text-align: center;
-      margin-bottom: 16px;
-      font-size: 12pt;
-    }
-    .ws-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0;
-      font-size: 10pt;
-    }
-    .ws-table th {
-      background: #2e7d32;
-      color: white;
-      padding: 8px 10px;
-      text-align: center;
-      border: 2px dashed #a5d6a7;
-    }
-    .ws-table td {
-      border: 2px dashed #a5d6a7;
-      padding: 10px;
-      text-align: center;
-      min-height: 28px;
-    }
-    .ws-table tr:nth-child(even) td { background: #f1f8e9; }
-    .draw-boxes {
-      display: flex;
-      gap: 14px;
-      margin: 12px 0;
-    }
-    .draw-box-item {
-      flex: 1;
-      border: 3px dashed #2e7d32;
-      border-radius: 8px;
-      min-height: 100px;
-      text-align: center;
-      padding: 8px;
-    }
-    .draw-box-item .draw-label {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-    }
-    .fill-blank {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-      font-size: 12pt;
-    }
-    .blank-line {
-      display: inline-block;
-      border-bottom: 2px solid #1b5e20;
-      min-width: 200px;
-      margin: 0 4px;
-    }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
-    }
-    .print-btn {
-      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
-      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
-      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000; display: flex; align-items: center; gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print {
-      body { padding: 0.25in; font-size: 10pt; }
-      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .vocab-card {
-        break-inside: avoid; page-break-inside: avoid;
-      }
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .print-btn { display: none; }
-    }
-  </style>
-</head>
-<body data-document-id="doc_gr1-ls3-unit2-lesson1-you-look-like-your-parents" data-doc-id="">
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
-
-  <h1>👨‍👩‍👧‍👦🪞👁️ You Look Like Your Parents</h1>
-  <p class="subtitle">Parents and Offspring Unit, Lesson 1</p>
-
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 1st Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science</span>
-    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
-  </div>
-
-  <div class="hero-image">
-    <div class="emoji-hero">👨‍👩‍👧‍👦🪞👁️</div>
-    <div class="caption">Every face in your family tells a story about inherited traits passed down through generations.</div>
-  </div>
-
-  <div class="standards-box">
-    <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
-  </div>
-
-  <h2>🎯 Learning Goals</h2>
-  <ul>
-    <li>Observe that offspring look <strong>similar</strong> but <strong>not identical</strong> to their parents.</li>
-    <li>Identify inherited traits such as eye color, hair color, ear shape, nose shape, and freckles.</li>
-    <li>Understand that traits come from both parents, creating a unique combination in each offspring.</li>
-  </ul>
-
-  <h2>📦 Materials</h2>
-  <div class="materials-box">
-    <h3>🏠 What You Need (Household Only)</h3>
-    <ul>
-      <li>Family photos (or draw faces from memory if photos are unavailable)</li>
-      <li>Paper and crayons</li>
-      <li>A mirror (for the Trait Hunt activity)</li>
-    </ul>
-    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>No materials to buy! Everything you need is already at home.</em></p>
-  </div>
-
-  <h2>📖 Vocabulary</h2>
-  <div class="vocab-grid">
-    <div class="vocab-card">
-      <div class="vocab-word">🔍 Trait</div>
-      <div class="vocab-def">A feature you can observe, like eye color or nose shape.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🐣 Offspring</div>
-      <div class="vocab-def">The child or baby of a parent.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🎁 Inherit</div>
-      <div class="vocab-def">To receive a trait from a parent.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🌈 Variation</div>
-      <div class="vocab-def">Small differences between parents and offspring.</div>
-    </div>
-  </div>
-
-  <h2>📚 Background (Read Aloud to Student)</h2>
-  <p>Have you ever heard someone say, "You have your mother's eyes" or "You look just like your dad"? That is because you inherited traits from both of your parents. A <strong>trait</strong> is any feature of your body that you can observe, such as the color of your eyes, the texture of your hair, the shape of your ears, or whether you have freckles. These traits did not appear by accident. They were passed down to you from your parents, just like a gift.</p>
-
-  <p>Here is the interesting part: you got some traits from your mother and some from your father, which means you are a unique mix of both of them. That is why you might have your mom's eye color but your dad's nose shape. It also means that even brothers and sisters in the same family can look quite different from each other, because each child receives a different combination of traits.</p>
-
-  <p>Scientists call this process <strong>inheritance</strong>. When scientists study how traits are passed down through families, they are studying a field called genetics. For now, the most important idea is this: <strong>offspring look similar to their parents, but they are never exactly the same</strong>. You are wonderfully unique, even though parts of you came straight from the people who love you most!</p>
-
-  <h2>🔬 Procedure</h2>
-
-  <div class="procedure-step">
-    <strong>Step 1 — Gather Materials</strong><br>
-    Set up a mirror where the student can sit comfortably. Have paper, crayons, and any available family photos nearby.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Trait Hunt 🔍</strong><br>
-    Have the student look in the mirror and identify 5 traits: eye color, hair color and texture, ear shape, nose shape, and whether they have freckles. Talk about each one together before writing anything down.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 3 — Fill the Chart</strong><br>
-    On paper (or use the worksheet), draw a simple chart with these columns: <em>Trait / Looks Like Mom / Looks Like Dad / Both / Neither.</em> Fill in one row for each of the 5 traits. It is okay to say "I am not sure" for some.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 4 — Compare with Photos</strong><br>
-    If family photos are available, look at them together and compare the chart entries with what you see in the photos. Do the results match? Did any answers surprise you?
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 5 — Sibling Check (optional)</strong><br>
-    If a sibling is available, observe whether they have the same traits. Note any differences. Discuss: even though you have the same parents, why might you look different?
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 6 — Draw Your Family Faces ✏️</strong><br>
-    Draw a picture of yourself next to a drawing of a parent. Circle the traits you share. Label each circled trait with its name (for example, "brown eyes" or "curly hair").
-  </div>
-
-  <h2>💬 Discussion Questions</h2>
-
-  <div class="question-box">
-    <strong>🗣️ Question 1:</strong> Why do you look similar to your parents but not exactly the same?
-    <p class="discussion-hint">You got some traits from your mom and some from your dad, so you are a unique mix of both. That is why siblings often look different from each other even though they have the same parents. No two combinations are ever perfectly alike!</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 2:</strong> Can you have a trait that neither parent seems to have? (Think about eye color.)
-    <p class="discussion-hint">Yes, this can happen! Traits are passed down in complex ways. Sometimes a trait that was hidden in grandparents can show up in a grandchild. Scientists call these hidden traits "recessive," but for now, just know that sometimes a surprise trait pops up from earlier in the family!</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 3:</strong> What is a trait that you think you got from your mom? From your dad?
-    <p class="discussion-hint">Open-ended. Encourage the student to name specific observable traits like hair color, eye color, or nose shape. There are no wrong answers here as long as the student is observing and thinking.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 4:</strong> If you had a baby sister or brother, would they look exactly like you?
-    <p class="discussion-hint">No! Even siblings get a different mix of traits from the same parents, so they look similar but not identical. That is the beautiful thing about inheritance: every offspring is a one-of-a-kind combination.</p>
-  </div>
-
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="teacher-note">
-    <strong>Running the Trait Hunt:</strong> Sit with your student in front of the mirror and make it playful. Say things like "Let's be detectives and find your traits!" Encourage curiosity rather than demanding "correct" answers. Some traits are hard to assign to one parent.
-    <br><br>
-    <strong>If photos are unavailable:</strong> Draw simple cartoon faces of family members from memory. Even stick figures work! The activity is about observation and discussion, not artistic accuracy.
-    <br><br>
-    <strong>Adoption sensitivity:</strong> If your student is adopted or has a blended family, frame this as "the adults in your family." You can also shift the activity slightly: "Even though you may not have the same biological traits as your parents, you still learn behaviors and habits from them." The lesson on learned behavior (Lesson 4) provides a natural place to explore this further.
-    <br><br>
-    <strong>Simplified dominant vs. recessive traits for Grade 1:</strong> Brown eyes tend to be more common than blue or green eyes because the "instructions" for brown eyes are very strong. Blue or green eyes need two copies of the weaker instructions. You do not need to use the words dominant and recessive yet, just the idea that some traits are more likely to show up than others.
-    <br><br>
-    <strong>Common examples for discussion:</strong> Attached vs. free earlobes, tongue rolling, widow's peak hairline, and dimples are all classic inherited traits that are fun and easy to observe. These make great bonus observations if the student finishes early.
-  </div>
-
-  <!-- ====================== STUDENT WORKSHEET ====================== -->
-  <div class="page-break">
-    <div class="worksheet-header">🪞 Student Worksheet — You Look Like Your Parents</div>
-    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-
-    <h3>My Trait Hunt 🔍</h3>
-    <p style="font-size:10pt; color:#555;">Look in the mirror! For each trait, check the box that matches.</p>
-
-    <table class="ws-table">
-      <thead>
-        <tr>
-          <th>Trait</th>
-          <th>Looks Like Mom</th>
-          <th>Looks Like Dad</th>
-          <th>Both</th>
-          <th>Neither / Not Sure</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>👁️ Eye Color</td>
-          <td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>💇 Hair Color</td>
-          <td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>👂 Ear Shape</td>
-          <td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>👃 Nose Shape</td>
-          <td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td>🌟 Freckles</td>
-          <td></td><td></td><td></td><td></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Draw Your Family Faces ✏️</h3>
-    <p style="font-size:10pt; color:#555;">Draw yourself and your parents in the boxes below. Circle any traits you share!</p>
-    <div class="draw-boxes">
-      <div class="draw-box-item">
-        <div class="draw-label">👤 Me</div>
-        <div style="height: 80px;"></div>
-      </div>
-      <div class="draw-box-item">
-        <div class="draw-label">👤 Parent 1</div>
-        <div style="height: 80px;"></div>
-      </div>
-      <div class="draw-box-item">
-        <div class="draw-label">👤 Parent 2</div>
-        <div style="height: 80px;"></div>
-      </div>
-    </div>
-
-    <div class="fill-blank">
-      One trait I inherited from my parent is <span class="blank-line"></span>.
-    </div>
-
-    <div class="fill-blank">
-      Offspring look <span class="blank-line" style="min-width:140px;"></span> but not <span class="blank-line" style="min-width:140px;"></span> like their parents.
-    </div>
-  </div>
-
-  <script src="/feedback-layer.js?v=20260421" data-document-id="doc_gr1-ls3-unit2-lesson1-you-look-like-your-parents" data-api-url="https://cassclearly.com" data-content-selector="body"></script>
-<!-- ═══ PAYWALL SYSTEM ═══ -->
-<style>
-  .llc-paywall-overlay {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
-    padding: 48px 24px 40px;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
-  }
-  .llc-paywall-inner {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-  .llc-paywall-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #3B1F6B;
-    margin-bottom: 8px;
-  }
-  .llc-paywall-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    color: #5A7A78;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  .llc-paywall-sub strong { color: #3B1F6B; }
-  .llc-btn-subscribe {
-    display: inline-block;
-    background: #FF6B6B;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 18px 0; padding:10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width:44px; height:44px; object-fit:contain; }
+    .lesson-branding-text { font-size:11pt; font-weight:900; letter-spacing:.02em; color:#5A3A16; }
+    .print-btn { position: fixed; top: 18px; right: 18px; background: var(--forest); color:white; border:0; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; box-shadow:0 3px 12px rgba(0,0,0,.18); z-index:50; }
+    h1 { font-family:'Playfair Display', Georgia, serif; text-align:center; font-size:27pt; color:var(--forest); line-height:1.05; margin:6px 0 8px; }
+    .subtitle { text-align:center; font-weight:800; color:var(--teal); margin:0 0 14px; letter-spacing:.02em; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; background:linear-gradient(135deg,var(--mint),#fff); border:2px solid #b7e2c6; padding:10px 12px; border-radius:16px; margin:14px 0 18px; }
+    .meta span { background:white; border:1px solid #d8efdf; padding:6px 10px; border-radius:999px; font-weight:800; font-size:9.5pt; }
+    .hero-card { display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:center; background:linear-gradient(135deg,#fff9df,#e8f8ff 55%,#effaf0); border:3px solid #d6edcc; border-radius:22px; padding:18px; margin:16px 0 20px; overflow:hidden; }
+    .hero-eyebrow { text-transform:uppercase; font-weight:900; letter-spacing:.09em; color:var(--coral); font-size:9pt; }
+    .hero-title { font-family:'Playfair Display', Georgia, serif; font-size:20pt; color:#214d37; margin:4px 0 8px; }
+    .hero-claim { font-size:12.5pt; font-weight:900; color:#233; }
+    .hero-visual { min-height:190px; border-radius:18px; background: radial-gradient(circle at 30% 20%, #fff 0 18%, transparent 19%), linear-gradient(135deg,#bff0d4,#fdf2bc); display:flex; align-items:center; justify-content:center; font-size:55pt; box-shadow: inset 0 0 0 3px rgba(255,255,255,.7); }
+    .hero-visual img { width:100%; height:100%; object-fit:cover; border-radius:18px; display:block; }
+    .hero-caption { font-size:9pt; color:#52645a; font-style:italic; margin-top:6px; text-align:center; }
+    h2 { font-family:'Playfair Display', Georgia, serif; font-size:16pt; color:white; background:linear-gradient(90deg,var(--forest),var(--teal)); padding:9px 14px; border-radius:12px; margin:22px 0 12px; break-after:avoid; }
+    h3 { color:var(--forest); font-size:12.5pt; margin:16px 0 8px; border-bottom:2px solid #b7e2c6; padding-bottom:3px; }
+    ul, ol { margin:8px 0; padding-left:24px; } li { margin:4px 0; }
+    .lesson-job { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0; }
+    .job-card, .materials-box, .teacher-note, .answer-key, .safety-note, .mini-card { border-radius:14px; padding:13px 15px; }
+    .job-card { background:#fff; border:2px solid #b7e2c6; box-shadow:0 2px 0 #dff2e5; }
+    .job-card strong { color:var(--forest); display:block; margin-bottom:4px; }
+    .materials-box { background:#fff8df; border:2px solid #ffd77a; }
+    .safety-note { background:#fff0f0; border:2px solid #ffb7b7; }
+    .teacher-note { background:#f4efff; border:2px dashed #bda7ef; }
+    .answer-key { background:#e8f7ff; border:2px solid #9dd7f2; }
+    .vocab-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .vocab-card { background:var(--mint); border:2px solid #b7e2c6; border-radius:14px; padding:10px 12px; }
+    .vocab-word { font-weight:900; color:var(--forest); font-size:12pt; }
+    .procedure-step { margin:9px 0; padding:12px 14px; border-radius:14px; background:#f6fbf7; border-left:7px solid var(--leaf); }
+    .procedure-step strong { color:var(--forest); }
+    .question-box { background:#fff; border:2px solid #b7e2c6; border-left:7px solid var(--coral); padding:11px 14px; margin:9px 0; border-radius:12px; }
+    .discussion-hint { color:#4c6055; font-size:10pt; margin-top:5px; font-style:italic; }
+    .evidence-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
+    .evidence-pill { background:white; border:2px solid #b7e2c6; border-radius:16px; padding:10px; text-align:center; font-weight:900; min-height:74px; display:flex; flex-direction:column; justify-content:center; }
+    .evidence-pill span { font-size:22pt; display:block; }
+    .page-break { page-break-before:always; margin-top:24px; }
+    .worksheet-header { background:linear-gradient(90deg,var(--forest),var(--leaf)); color:white; padding:10px 14px; border-radius:14px; font-size:15pt; font-weight:900; text-align:center; margin-bottom:12px; }
+    .name-date { text-align:center; font-size:11pt; margin-bottom:14px; }
+    .ws-table { width:100%; border-collapse:collapse; margin:10px 0 14px; font-size:10pt; }
+    .ws-table th { background:var(--forest); color:white; border:2px solid #c6ead1; padding:8px; }
+    .ws-table td { border:2px dashed #a9dcbc; padding:10px; min-height:32px; vertical-align:top; }
+    .ws-table tr:nth-child(even) td { background:#f3fbf5; }
+    .draw-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:10px 0; }
+    .draw-box { border:3px dashed #9ed7b2; border-radius:14px; min-height:120px; padding:8px; background:#fff; }
+    .draw-label { color:#62816c; font-size:9pt; font-weight:800; text-align:center; }
+    .write-lines { background:#fff; border:2px solid #d6e9dd; border-radius:12px; padding:10px 12px; margin:9px 0; }
+    .line { border-bottom:1.8px solid #9ab9a4; height:24px; margin:5px 0; }
+    .word-bank { background:#fff9df; border:2px solid #ffd77a; border-radius:12px; padding:9px 12px; font-weight:900; }
+    .footer-note { text-align:center; padding:24px 16px 16px; font-size:.78rem; color:#999; border-top:1px solid #eee; margin-top:30px; }
+    @media print { body { padding:.25in; font-size:10pt; } .print-btn, .no-print { display:none !important; } .hero-card { grid-template-columns:1fr 1fr; } .procedure-step,.question-box,.teacher-note,.materials-box,.job-card,.vocab-card,.answer-key { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+    @media (max-width:720px) { body { padding:18px; } .hero-card,.lesson-job,.evidence-strip,.vocab-grid,.draw-grid { grid-template-columns:1fr; } h1 { font-size:23pt; } }
 </style>
-
+</head>
+<body data-document-id="doc_gr1-ls3-unit2-lesson1-you-look-like-your-parents" data-doc-id="doc_gr1-ls3-unit2-lesson1-you-look-like-your-parents">
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>🕵️‍♀️🐾🌿 Family Trait Detectives</h1>
+  <p class="subtitle">Grade 1 Life Science · Parents &amp; Offspring Unit · Lesson 1 of 6</p>
+  <div class="meta"><span>📚 Grade 1</span><span>⏱️ 40–50 minutes</span><span>🔬 NGSS 1-LS3-1</span><span>🏠 Household materials</span></div>
+  <div class="hero-card">
+    <div><div class="hero-eyebrow">Family Science File #1</div><div class="hero-title">Notice the core pattern: young plants and animals are like their parents, but not exactly the same.</div><div class="hero-claim">Big idea: Offspring usually share traits with their parents, and each offspring still has its own mix of traits.</div></div>
+    <div><div class="hero-visual" aria-label="Unit visual placeholder pending GPT Image 2 asset">🔍🐱🌻</div><div class="hero-caption">Look for parent-offspring clues: shared traits, differences, and survival supports.</div></div>
+  </div>
+  <div class="lesson-job"><div class="job-card"><strong>Student does</strong> observe · sort · draw · explain</div><div class="job-card"><strong>Evidence focus</strong> shared traits + differences</div><div class="job-card"><strong>Family win</strong> short, visual, printable</div></div>
+  <div class="standards-box mini-card" style="background:#f4efff;border:2px solid #cbb6f2;"><strong>NGSS 1-LS3-1:</strong> Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.</div>
+  <h2>🎯 Learning Objectives</h2><ul><li>Observe parent-offspring pairs and name at least two shared traits.</li><li>Use evidence words: same, similar, different, trait, offspring.</li><li>Make a simple claim: the offspring is like the parent but not exactly the same.</li></ul>
+  <h2>📦 Materials</h2><div class="materials-box"><h3>What You Need</h3><ul><li>Family photos are optional; animal/plant photos from books, packaging, or online images work too</li><li>Mirror</li><li>Paper, crayons, scissors if making cards</li><li>Two different leaves from the same kind of plant if available</li></ul><p><strong>No special kit:</strong> substitute photos, drawings, toys, or household objects freely.</p></div>
+  <h2>🧠 Vocabulary</h2><div class="vocab-grid"><div class="vocab-card"><div class="vocab-word">Trait</div><div>A feature you can see, such as fur color, leaf shape, eyes, stripes, or height.</div></div><div class="vocab-card"><div class="vocab-word">Offspring</div><div>A young plant or animal from a parent plant or animal.</div></div><div class="vocab-card"><div class="vocab-word">Similar</div><div>Alike in some ways.</div></div><div class="vocab-card"><div class="vocab-word">Not identical</div><div>Not exactly the same.</div></div></div>
+  <h2>📚 Parent Read-Aloud Background</h2><p>Scientists do not start by guessing. They start by looking carefully. In this unit, your student becomes a family-pattern detective. The mystery is simple but powerful: why do babies, seedlings, chicks, kittens, and children look like their parents without being perfect copies?</p><p>A trait is a feature you can observe. A kitten may have whiskers, four legs, fur, and pointed ears like an adult cat. It may also be smaller, fluffier, or a different color. A sunflower seedling may have green leaves and a stem like the adult plant, but it is shorter and has no flower yet. The pattern is not “exactly the same.” The Grade 1 science idea is better: like, but not exactly like.</p>
+  <h2>🔬 Activity Procedure</h2><div class="procedure-step"><strong>Step 1 — Open the mystery file</strong><br>Show two parent-offspring pairs: one animal and one plant if possible. Ask, “What clues tell us these go together?”</div><div class="procedure-step"><strong>Step 2 — Make trait cards</strong><br>On small slips of paper, draw or write traits: fur, feathers, leaves, stem, eyes, legs, stripes, spots, height, color, shape.</div><div class="procedure-step"><strong>Step 3 — Sort evidence</strong><br>Place trait cards beside each pair. Put shared traits in the middle and difference traits to the side.</div><div class="procedure-step"><strong>Step 4 — Mirror or photo option</strong><br>If the family wants, repeat with a child and parent photo or a mirror. Keep it gentle: “What features are similar?” not “Who do you look like most?”</div><div class="procedure-step"><strong>Step 5 — Say the science claim</strong><br>Student completes: “The offspring is like the parent because ____. It is not exactly the same because ____.”</div>
+  <h2>💬 Discussion Questions</h2><div class="question-box"><strong>Question 1:</strong> What is one trait the parent and offspring share?<p class="discussion-hint">Accept any observable trait: both have fur, both have leaves, both have four legs, both have a similar body shape.</p></div><div class="question-box"><strong>Question 2:</strong> What is one way the offspring is different?<p class="discussion-hint">Younger, smaller, different color, missing an adult feature, shorter stem, fewer leaves.</p></div><div class="question-box"><strong>Question 3:</strong> Why is “exactly the same” not the best science answer?<p class="discussion-hint">Because offspring share some traits with parents, but each young plant or animal has differences too.</p></div><div class="question-box"><strong>Question 4:</strong> Can we use plant evidence in the same idea?<p class="discussion-hint">Yes. Young plants can share traits with parent plants, such as leaf shape or stem type, but they are not adult-sized copies.</p></div>
+  <h2>👩‍🏫 Parent Notes</h2><div class="teacher-note"><strong>Keep it Grade 1:</strong> The target is observation and evidence, not genetics vocabulary beyond simple inherited traits. If a family situation makes human comparisons sensitive, use animal and plant examples only. The science standard is fully met without personal family photos.</div>
+  <div class="page-break"><div class="worksheet-header">🕵️‍♀️🐾🌿 Student Worksheet — Family Trait Detective File</div><p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p><h3>1) Trait Evidence Table</h3><table class="ws-table"><tr><th>Pair</th><th>Shared trait evidence</th><th>Different trait evidence</th></tr><tr><td>Animal pair</td><td></td><td></td></tr><tr><td>Plant pair</td><td></td><td></td></tr><tr><td>Optional family/photo pair</td><td></td><td></td></tr></table><h3>2) Draw One Pair</h3><div class="draw-grid"><div class="draw-box"><div class="draw-label">Parent</div></div><div class="draw-box"><div class="draw-label">Offspring</div></div></div><div class="write-lines"><strong>Science sentence:</strong> The offspring is like the parent because ____. It is not exactly the same because ____.<div class="line"></div><div class="line"></div></div><div class="answer-key"><strong>Parent answer-key guidance:</strong> Look for one shared trait and one real difference for each pair. Strong answers point to observable evidence, not guesses.</div></div>
+  
+<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
 <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
   <div class="llc-paywall-inner">
     <span class="llc-paywall-emoji">🥼</span>
     <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
-    <p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
+    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
+    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
   </div>
 </div>
-
-<script>
-(function() {
-  var ACCESS_KEY = 'llc_access_v2_locked';
-
-  function isUnlocked() {
-    return localStorage.getItem(ACCESS_KEY) === 'granted';
+<style>
+  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
+  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
+</style>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = '/feedback-layer.js?v=20260421';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = document.body.dataset.documentId;
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
   }
-
-  function lockLesson() {
-    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
-    var allH2 = document.querySelectorAll('h2');
-    var lastGoalsH2 = null;
-
-    // Find the last h2 that matches a "goals/objective" keyword
-    allH2.forEach(function(h2) {
-      var text = h2.textContent.toLowerCase();
-      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
-        lastGoalsH2 = h2;
-      }
-    });
-
-    if (!lastGoalsH2) {
-      // Fallback: hide by class/id keywords
-      var lockSelectors = [
-        '[class*="material"]', '[id*="material"]',
-        '[class*="procedure"]', '[id*="procedure"]',
-        '[class*="discussion"]', '[id*="discussion"]',
-        '[class*="worksheet"]', '[id*="worksheet"]',
-        '[class*="teacher"]', '[id*="teacher"]',
-        '[class*="answer"]', '[id*="answer"]',
-        '[class*="extension"]', '[id*="extension"]',
-        '[class*="question"]', '[id*="question"]',
-        '[class*="page-break"]', '[id*="page-break"]'
-      ];
-      lockSelectors.forEach(function(sel) {
-        document.querySelectorAll(sel).forEach(function(el) {
-          el.style.display = 'none';
-        });
-      });
-      document.getElementById('llcPaywall').style.display = 'block';
-      return;
-    }
-
-    // Walk siblings/cousins after the goals section and hide them
-    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
-    // containing top-level element (or after the next h2 that follows it)
-
-    // Find the next h2 after lastGoalsH2 — everything from there is locked
-    var foundGoals = false;
-    var lockFrom = null;
-    allH2.forEach(function(h2) {
-      if (h2 === lastGoalsH2) { foundGoals = true; return; }
-      if (foundGoals && !lockFrom) { lockFrom = h2; }
-    });
-
-    if (!lockFrom) {
-      // No further h2 found; lock everything after the goals h2 paragraph
-      // Hide siblings that follow lastGoalsH2
-      var sibling = lastGoalsH2.nextElementSibling;
-      while (sibling) {
-        sibling.style.display = 'none';
-        sibling = sibling.nextElementSibling;
-      }
-    } else {
-      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
-      var el = lockFrom;
-      while (el) {
-        el.style.display = 'none';
-        el = el.nextElementSibling;
-      }
-    }
-
-    document.getElementById('llcPaywall').style.display = 'block';
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    else loadFeedbackLayer();
   }
+})();</script>
+<script>(function(){
+  var ACCESS_KEY='llc_access_v2_locked';
+  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
+  function lockLesson(){
+    var h2s=Array.from(document.querySelectorAll('h2'));
+    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
+    if(idx<0) idx=Math.min(2,h2s.length-1);
+    var lockFrom=h2s[idx]; if(!lockFrom) return;
+    var kids=Array.from(document.body.children); var hide=false;
+    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
+    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
+  }
+  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
+})();</script>
+<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
 
-  document.addEventListener('DOMContentLoaded', function() {
-    if (!isUnlocked()) {
-      lockLesson();
-    }
-  });
-})();
-</script>
-<!-- ═══ END PAYWALL ═══ -->
+  <div class="footer-note">© 2026 Little Lab Coats. For personal, non-commercial household use only.</div>
 </body>
 </html>

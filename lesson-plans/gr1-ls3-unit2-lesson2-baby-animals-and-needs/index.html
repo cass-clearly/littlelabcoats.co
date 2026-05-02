@@ -3,639 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby Animals and Their Needs — Parents and Offspring Unit, Lesson 2</title>
+  <title>Baby-to-Adult Growth Gallery — Parents &amp; Offspring Unit, Lesson 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    :root {
+      --forest:#1f6f4a; --leaf:#37a66b; --mint:#e9f8ee; --sky:#e7f6ff;
+      --teal:#087f8c; --coral:#ff6b6b; --gold:#ffcb5b; --cream:#fffaf0;
+      --grape:#5b3f97; --ink:#25312b; --soft:#f7fbf8;
+    }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.5in;
-      font-size: 11pt;
-      line-height: 1.4;
-      color: #222;
+      font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+      max-width: 8.5in; margin: 0 auto; padding: 0.45in;
+      color: var(--ink); background: white; line-height: 1.45; font-size: 11pt;
     }
-    h1 {
-      text-align: center;
-      font-size: 22pt;
-      margin-bottom: 5px;
-      border-bottom: 3px solid #2e7d32;
-      padding-bottom: 10px;
-      color: #2e7d32;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #555;
-      font-size: 13pt;
-    }
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      background: #e8f5e9;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 10pt;
-      border: 1px solid #a5d6a7;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-    h2 {
-      font-size: 14pt;
-      background: #2e7d32;
-      color: white;
-      padding: 8px 14px;
-      margin: 24px 0 12px 0;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 12pt;
-      color: #1b5e20;
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 4px;
-      margin: 18px 0 8px 0;
-    }
-    ul, ol { margin: 8px 0; padding-left: 25px; }
-    li { margin-bottom: 5px; }
-    .hero-image {
-      text-align: center;
-      margin: 16px 0;
-    }
-    .hero-image .emoji-hero {
-      font-size: 72pt;
-      line-height: 1.2;
-    }
-    .hero-image .caption {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-      margin-top: 4px;
-    }
-    .materials-box {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
-    .procedure-step {
-      background: #e8f5e9;
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border-left: 5px solid #2e7d32;
-    }
-    .procedure-step strong { color: #1b5e20; }
-    .question-box {
-      background: #e8f5e9;
-      border-left: 5px solid #00B894;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .discussion-hint {
-      font-style: italic;
-      color: #555;
-      margin-top: 6px;
-      font-size: 10pt;
-    }
-    .tip-box {
-      background: #e0f7fa;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-    }
-    .standards-box {
-      background: #f3e5f5;
-      border: 1px solid #ce93d8;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .standards-box strong { color: #7b1fa2; }
-    .teacher-note {
-      background: #f5f5f5;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #555;
-    }
-    .teacher-note strong { color: #333; }
-    .vocab-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 12px 0;
-    }
-    .vocab-card {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 10px 12px;
-    }
-    .vocab-card .vocab-word {
-      font-weight: bold;
-      color: #1b5e20;
-      font-size: 12pt;
-    }
-    .vocab-card .vocab-def {
-      font-size: 10pt;
-      color: #333;
-      margin-top: 4px;
-    }
-    .animal-pair-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin: 12px 0;
-    }
-    .animal-pair-card {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 10px 12px;
-      text-align: center;
-    }
-    .animal-pair-card .emoji-row {
-      font-size: 28pt;
-      margin-bottom: 4px;
-    }
-    .animal-pair-card .animal-label {
-      font-weight: bold;
-      color: #1b5e20;
-      font-size: 10pt;
-    }
-    .worksheet-header {
-      background: #1b5e20;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 14pt;
-      font-weight: bold;
-      margin: 0 0 12px 0;
-      text-align: center;
-    }
-    .name-date {
-      text-align: center;
-      margin-bottom: 16px;
-      font-size: 12pt;
-    }
-    .ws-pair-row {
-      display: flex;
-      gap: 10px;
-      margin: 8px 0;
-      align-items: center;
-    }
-    .ws-pair-label {
-      font-weight: bold;
-      color: #1b5e20;
-      min-width: 90px;
-      font-size: 10pt;
-    }
-    .ws-draw-box {
-      border: 2px dashed #2e7d32;
-      border-radius: 6px;
-      min-height: 70px;
-      flex: 1;
-      display: flex;
-      align-items: flex-start;
-      padding: 4px 6px;
-    }
-    .ws-draw-box .draw-label {
-      font-size: 8pt;
-      color: #aaa;
-      font-style: italic;
-    }
-    .ws-needs-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .ws-needs-table th {
-      background: #2e7d32;
-      color: white;
-      padding: 7px 10px;
-      text-align: center;
-      border: 2px dashed #a5d6a7;
-    }
-    .ws-needs-table td {
-      border: 2px dashed #a5d6a7;
-      padding: 9px;
-      text-align: center;
-    }
-    .fill-blank {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-      font-size: 12pt;
-    }
-    .blank-line {
-      display: inline-block;
-      border-bottom: 2px solid #1b5e20;
-      min-width: 160px;
-      margin: 0 4px;
-    }
-    .circle-question {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin: 12px 0;
-      font-size: 11pt;
-    }
-    .circle-options {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 8px;
-    }
-    .circle-option {
-      border: 2px solid #2e7d32;
-      border-radius: 20px;
-      padding: 4px 18px;
-      font-size: 12pt;
-      font-weight: bold;
-      color: #1b5e20;
-    }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
-    }
-    .print-btn {
-      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
-      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
-      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000; display: flex; align-items: center; gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print {
-      body { padding: 0.25in; font-size: 10pt; }
-      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
-        break-inside: avoid; page-break-inside: avoid;
-      }
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .print-btn { display: none; }
-    }
-  </style>
-</head>
-<body data-document-id="doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs" data-doc-id="">
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
-
-  <h1>🐣🐾🦆 Baby Animals and Their Needs</h1>
-  <p class="subtitle">Parents and Offspring Unit, Lesson 2</p>
-
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 1st Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science</span>
-    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
-  </div>
-
-  <div class="hero-image">
-    <div class="emoji-hero">🐣🐾🦆</div>
-    <div class="caption">Baby animals need the same things adult animals need. But they often need a lot more help getting them!</div>
-  </div>
-
-  <div class="standards-box">
-    <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
-  </div>
-
-  <h2>🎯 Learning Goals</h2>
-  <ul>
-    <li>Identify that baby animals have the same <strong>basic needs</strong> as adults: food, water, shelter, and safety.</li>
-    <li>Recognize that parents help meet their offspring's needs, especially when babies are young and vulnerable.</li>
-    <li>Observe that some baby animals look very different from their parents (metamorphosis), yet still share the same needs.</li>
-  </ul>
-
-  <h2>📦 Materials</h2>
-  <div class="materials-box">
-    <h3>🏠 What You Need (Household Only)</h3>
-    <ul>
-      <li>Paper and crayons</li>
-      <li>Optional: a nature documentary description from the parent (no screen required)</li>
-    </ul>
-    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All household items. Nothing to purchase.</em></p>
-  </div>
-
-  <h2>📖 Vocabulary</h2>
-  <div class="vocab-grid">
-    <div class="vocab-card">
-      <div class="vocab-word">🍎 Needs</div>
-      <div class="vocab-def">Things a living thing must have to survive (food, water, shelter, safety).</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🐣 Offspring</div>
-      <div class="vocab-def">A baby animal (the young of a parent).</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🐻 Parent</div>
-      <div class="vocab-def">The adult animal that cares for the offspring.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🏠 Shelter</div>
-      <div class="vocab-def">A safe place to live and stay protected.</div>
-    </div>
-  </div>
-
-  <h2>📚 Background (Read Aloud to Student)</h2>
-  <p>Every living animal needs four basic things to survive: <strong>food, water, shelter, and safety</strong>. This is true for adult animals, and it is just as true for baby animals. In fact, baby animals need the same things, but they usually cannot get those things by themselves. That is where parents come in!</p>
-
-  <p>Most baby animals are born or hatched without the ability to find their own food, stay warm, or protect themselves from predators. A newborn kitten cannot hunt for mice. A newly hatched duckling cannot fly away from danger. These babies depend on their parents to meet their needs until they are old enough to care for themselves.</p>
-
-  <p>Here is something interesting: some baby animals look almost nothing like their parents. A tadpole does not look like a frog. A caterpillar does not look like a butterfly. These animals go through an amazing process called <strong>metamorphosis</strong>, where their body completely changes shape as they grow. But even though they look so different, they still have the same basic needs. A tadpole still needs water, food, and safety to survive, just like the frog it will become.</p>
-
-  <div class="tip-box">
-    🦋 <strong>Fun fact!</strong> The word "metamorphosis" comes from the Greek words for "change" and "form." A caterpillar changes its form to become a butterfly. This is one of the most dramatic changes in the animal kingdom!
-  </div>
-
-  <h2>🔬 Procedure</h2>
-
-  <div class="procedure-step">
-    <strong>Step 1 — The Big Four</strong><br>
-    Before starting the drawing activity, discuss the 4 basic needs together: food, water, shelter, and safety. Ask: "Do you need these things? Does a cat? Does a tadpole?" Establish that all animals share these needs.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Baby Animal Match 🎨</strong><br>
-    Fold a piece of paper into 5 sections (fold it like a book and then cut or fold again). In each section, draw the baby animal AND its adult form as a pair:
-    <ul style="margin-top:8px;">
-      <li>🐱 Kitten and Cat</li>
-      <li>🐶 Puppy and Dog</li>
-      <li>🐥 Duckling and Duck</li>
-      <li>🐸 Tadpole and Frog</li>
-      <li>🦋 Caterpillar and Butterfly</li>
-    </ul>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 3 — Label the Needs</strong><br>
-    For each animal pair, write or dictate the answer to two questions: "What does the baby need?" and "How does the parent help meet that need?" Keep answers simple. One or two words per need is fine.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 4 — Circle the Shape-Changers</strong><br>
-    Look at all five pairs. Circle the ones where the baby looks VERY different from the adult. (Tadpole/frog and caterpillar/butterfly should be circled.)
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 5 — The Big Question</strong><br>
-    Discuss together: "Even though a tadpole looks nothing like a frog, does it still have the same needs?" Work toward the answer: yes! The body may look different, but the needs stay the same.
-  </div>
-
-  <h2>💬 Discussion Questions</h2>
-
-  <div class="question-box">
-    <strong>🗣️ Question 1:</strong> Which baby animals look the most different from their parents?
-    <p class="discussion-hint">Tadpoles look nothing like frogs, and caterpillars look nothing like butterflies. These animals go through a big change called metamorphosis. The puppy, kitten, and duckling look much more like their parents right away.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 2:</strong> Why do tadpoles and caterpillars look so different from their parents?
-    <p class="discussion-hint">These animals go through metamorphosis, a process where their body completely changes shape as they grow. A tadpole is built for swimming in water, while the frog it becomes is built for both land and water. The body changes to match a new way of living.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 3:</strong> Do baby animals that look different from their parents still have the same needs?
-    <p class="discussion-hint">Yes! Even though a tadpole looks different from a frog, it still needs water, food, and safety to survive. The shape of the body changes, but the basic needs of any living animal stay the same.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 4:</strong> How do parent animals help their babies survive?
-    <p class="discussion-hint">Parents provide food, warmth, protection from predators, and shelter. Without parental help, many baby animals would not survive long enough to grow up. A duckling stays close to its mother for warmth and protection for weeks before it can fend for itself.</p>
-  </div>
-
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="teacher-note">
-    <strong>Nature documentary clips:</strong> If you have access to nature content (YouTube, library DVDs, or a streaming service), clips of a mother duck with ducklings or a cat nursing kittens make this lesson come alive. However, the lesson works just as well with parent narration and imagination.
-    <br><br>
-    <strong>Explaining metamorphosis simply:</strong> You can say: "Some animals have two completely different bodies during their life. The caterpillar body is for eating and growing. Then it wraps itself in a cocoon and its body completely rebuilds itself into a butterfly body that is built for flying and finding mates. It is like the animal has a first life and a second life."
-    <br><br>
-    <strong>Extension activity:</strong> Help your student draw a lifecycle diagram for the frog (egg, tadpole, froglet, frog) and the butterfly (egg, caterpillar, chrysalis, butterfly). These are excellent visual summaries of metamorphosis and make a great addition to the student's science notebook.
-    <br><br>
-    <strong>The difference between tadpoles and frogs:</strong> Tadpoles breathe through gills (like fish) and live entirely in water. As they develop into froglets and then frogs, they grow legs, lose their tail, and develop lungs. This is complete metamorphosis. Point out that while the BODY changes, the NEED for food, water, and safety never changes.
-  </div>
-
-  <!-- ====================== STUDENT WORKSHEET ====================== -->
-  <div class="page-break">
-    <div class="worksheet-header">🐣 Student Worksheet — Baby Animals and Their Needs</div>
-    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-
-    <h3>Baby Animal Match 🎨</h3>
-    <p style="font-size:10pt; color:#555;">Draw the baby animal and the adult animal in the boxes. Label each one!</p>
-
-    <div style="margin: 8px 0;">
-      <div class="ws-pair-row">
-        <div class="ws-pair-label">🐱 Cat family:</div>
-        <div class="ws-draw-box"><div class="draw-label">Baby (Kitten)</div></div>
-        <div class="ws-draw-box"><div class="draw-label">Adult (Cat)</div></div>
-      </div>
-      <div class="ws-pair-row">
-        <div class="ws-pair-label">🐶 Dog family:</div>
-        <div class="ws-draw-box"><div class="draw-label">Baby (Puppy)</div></div>
-        <div class="ws-draw-box"><div class="draw-label">Adult (Dog)</div></div>
-      </div>
-      <div class="ws-pair-row">
-        <div class="ws-pair-label">🦆 Duck family:</div>
-        <div class="ws-draw-box"><div class="draw-label">Baby (Duckling)</div></div>
-        <div class="ws-draw-box"><div class="draw-label">Adult (Duck)</div></div>
-      </div>
-      <div class="ws-pair-row">
-        <div class="ws-pair-label">🐸 Frog family:</div>
-        <div class="ws-draw-box"><div class="draw-label">Baby (Tadpole)</div></div>
-        <div class="ws-draw-box"><div class="draw-label">Adult (Frog)</div></div>
-      </div>
-      <div class="ws-pair-row">
-        <div class="ws-pair-label">🦋 Butterfly:</div>
-        <div class="ws-draw-box"><div class="draw-label">Baby (Caterpillar)</div></div>
-        <div class="ws-draw-box"><div class="draw-label">Adult (Butterfly)</div></div>
-      </div>
-    </div>
-
-    <h3>Needs Chart</h3>
-    <p style="font-size:10pt; color:#555;">Think about a tadpole. Does it need each of these things? Check Yes or No!</p>
-    <table class="ws-needs-table">
-      <thead>
-        <tr>
-          <th>Basic Need</th>
-          <th>Does the tadpole need this? (Circle: Yes / No)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>🍎 Food</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
-        <tr><td>💧 Water</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
-        <tr><td>🏠 Shelter</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
-        <tr><td>🛡️ Safety</td><td>Yes &nbsp;&nbsp;&nbsp; No</td></tr>
-      </tbody>
-    </table>
-
-    <div class="fill-blank">
-      A baby <span class="blank-line" style="min-width:120px;"></span> needs <span class="blank-line" style="min-width:120px;"></span> to survive.
-    </div>
-
-    <div class="circle-question">
-      <strong>Circle it!</strong> Which animal changes shape the MOST as it grows?<br>
-      <div class="circle-options">
-        <div class="circle-option">cat</div>
-        <div class="circle-option">frog</div>
-        <div class="circle-option">dog</div>
-      </div>
-    </div>
-  </div>
-
-  <script src="/feedback-layer.js?v=20260421" data-document-id="doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs" data-api-url="https://cassclearly.com" data-content-selector="body"></script>
-<!-- ═══ PAYWALL SYSTEM ═══ -->
-<style>
-  .llc-paywall-overlay {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
-    padding: 48px 24px 40px;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
-  }
-  .llc-paywall-inner {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-  .llc-paywall-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #3B1F6B;
-    margin-bottom: 8px;
-  }
-  .llc-paywall-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    color: #5A7A78;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  .llc-paywall-sub strong { color: #3B1F6B; }
-  .llc-btn-subscribe {
-    display: inline-block;
-    background: #FF6B6B;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 18px 0; padding:10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width:44px; height:44px; object-fit:contain; }
+    .lesson-branding-text { font-size:11pt; font-weight:900; letter-spacing:.02em; color:#5A3A16; }
+    .print-btn { position: fixed; top: 18px; right: 18px; background: var(--forest); color:white; border:0; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; box-shadow:0 3px 12px rgba(0,0,0,.18); z-index:50; }
+    h1 { font-family:'Playfair Display', Georgia, serif; text-align:center; font-size:27pt; color:var(--forest); line-height:1.05; margin:6px 0 8px; }
+    .subtitle { text-align:center; font-weight:800; color:var(--teal); margin:0 0 14px; letter-spacing:.02em; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; background:linear-gradient(135deg,var(--mint),#fff); border:2px solid #b7e2c6; padding:10px 12px; border-radius:16px; margin:14px 0 18px; }
+    .meta span { background:white; border:1px solid #d8efdf; padding:6px 10px; border-radius:999px; font-weight:800; font-size:9.5pt; }
+    .hero-card { display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:center; background:linear-gradient(135deg,#fff9df,#e8f8ff 55%,#effaf0); border:3px solid #d6edcc; border-radius:22px; padding:18px; margin:16px 0 20px; overflow:hidden; }
+    .hero-eyebrow { text-transform:uppercase; font-weight:900; letter-spacing:.09em; color:var(--coral); font-size:9pt; }
+    .hero-title { font-family:'Playfair Display', Georgia, serif; font-size:20pt; color:#214d37; margin:4px 0 8px; }
+    .hero-claim { font-size:12.5pt; font-weight:900; color:#233; }
+    .hero-visual { min-height:190px; border-radius:18px; background: radial-gradient(circle at 30% 20%, #fff 0 18%, transparent 19%), linear-gradient(135deg,#bff0d4,#fdf2bc); display:flex; align-items:center; justify-content:center; font-size:55pt; box-shadow: inset 0 0 0 3px rgba(255,255,255,.7); }
+    .hero-visual img { width:100%; height:100%; object-fit:cover; border-radius:18px; display:block; }
+    .hero-caption { font-size:9pt; color:#52645a; font-style:italic; margin-top:6px; text-align:center; }
+    h2 { font-family:'Playfair Display', Georgia, serif; font-size:16pt; color:white; background:linear-gradient(90deg,var(--forest),var(--teal)); padding:9px 14px; border-radius:12px; margin:22px 0 12px; break-after:avoid; }
+    h3 { color:var(--forest); font-size:12.5pt; margin:16px 0 8px; border-bottom:2px solid #b7e2c6; padding-bottom:3px; }
+    ul, ol { margin:8px 0; padding-left:24px; } li { margin:4px 0; }
+    .lesson-job { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0; }
+    .job-card, .materials-box, .teacher-note, .answer-key, .safety-note, .mini-card { border-radius:14px; padding:13px 15px; }
+    .job-card { background:#fff; border:2px solid #b7e2c6; box-shadow:0 2px 0 #dff2e5; }
+    .job-card strong { color:var(--forest); display:block; margin-bottom:4px; }
+    .materials-box { background:#fff8df; border:2px solid #ffd77a; }
+    .safety-note { background:#fff0f0; border:2px solid #ffb7b7; }
+    .teacher-note { background:#f4efff; border:2px dashed #bda7ef; }
+    .answer-key { background:#e8f7ff; border:2px solid #9dd7f2; }
+    .vocab-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .vocab-card { background:var(--mint); border:2px solid #b7e2c6; border-radius:14px; padding:10px 12px; }
+    .vocab-word { font-weight:900; color:var(--forest); font-size:12pt; }
+    .procedure-step { margin:9px 0; padding:12px 14px; border-radius:14px; background:#f6fbf7; border-left:7px solid var(--leaf); }
+    .procedure-step strong { color:var(--forest); }
+    .question-box { background:#fff; border:2px solid #b7e2c6; border-left:7px solid var(--coral); padding:11px 14px; margin:9px 0; border-radius:12px; }
+    .discussion-hint { color:#4c6055; font-size:10pt; margin-top:5px; font-style:italic; }
+    .evidence-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
+    .evidence-pill { background:white; border:2px solid #b7e2c6; border-radius:16px; padding:10px; text-align:center; font-weight:900; min-height:74px; display:flex; flex-direction:column; justify-content:center; }
+    .evidence-pill span { font-size:22pt; display:block; }
+    .page-break { page-break-before:always; margin-top:24px; }
+    .worksheet-header { background:linear-gradient(90deg,var(--forest),var(--leaf)); color:white; padding:10px 14px; border-radius:14px; font-size:15pt; font-weight:900; text-align:center; margin-bottom:12px; }
+    .name-date { text-align:center; font-size:11pt; margin-bottom:14px; }
+    .ws-table { width:100%; border-collapse:collapse; margin:10px 0 14px; font-size:10pt; }
+    .ws-table th { background:var(--forest); color:white; border:2px solid #c6ead1; padding:8px; }
+    .ws-table td { border:2px dashed #a9dcbc; padding:10px; min-height:32px; vertical-align:top; }
+    .ws-table tr:nth-child(even) td { background:#f3fbf5; }
+    .draw-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:10px 0; }
+    .draw-box { border:3px dashed #9ed7b2; border-radius:14px; min-height:120px; padding:8px; background:#fff; }
+    .draw-label { color:#62816c; font-size:9pt; font-weight:800; text-align:center; }
+    .write-lines { background:#fff; border:2px solid #d6e9dd; border-radius:12px; padding:10px 12px; margin:9px 0; }
+    .line { border-bottom:1.8px solid #9ab9a4; height:24px; margin:5px 0; }
+    .word-bank { background:#fff9df; border:2px solid #ffd77a; border-radius:12px; padding:9px 12px; font-weight:900; }
+    .footer-note { text-align:center; padding:24px 16px 16px; font-size:.78rem; color:#999; border-top:1px solid #eee; margin-top:30px; }
+    @media print { body { padding:.25in; font-size:10pt; } .print-btn, .no-print { display:none !important; } .hero-card { grid-template-columns:1fr 1fr; } .procedure-step,.question-box,.teacher-note,.materials-box,.job-card,.vocab-card,.answer-key { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+    @media (max-width:720px) { body { padding:18px; } .hero-card,.lesson-job,.evidence-strip,.vocab-grid,.draw-grid { grid-template-columns:1fr; } h1 { font-size:23pt; } }
 </style>
-
+</head>
+<body data-document-id="doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs" data-doc-id="doc_gr1-ls3-unit2-lesson2-baby-animals-and-needs">
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>🐣🦆🦋 Baby-to-Adult Growth Gallery</h1>
+  <p class="subtitle">Grade 1 Life Science · Parents &amp; Offspring Unit · Lesson 2 of 6</p>
+  <div class="meta"><span>📚 Grade 1</span><span>⏱️ 40–50 minutes</span><span>🔬 NGSS 1-LS3-1</span><span>🏠 Household materials</span></div>
+  <div class="hero-card">
+    <div><div class="hero-eyebrow">Family Science File #2</div><div class="hero-title">Compare several animal offspring to their adults and separate inherited traits from growth changes.</div><div class="hero-claim">Big idea: Young animals often have the same body plan as adults, but their size, color, covering, or body parts may change as they grow.</div></div>
+    <div><div class="hero-visual" aria-label="Unit visual placeholder pending GPT Image 2 asset">🐶🐸🦋</div><div class="hero-caption">Look for parent-offspring clues: shared traits, differences, and survival supports.</div></div>
+  </div>
+  <div class="lesson-job"><div class="job-card"><strong>Student does</strong> observe · sort · draw · explain</div><div class="job-card"><strong>Evidence focus</strong> shared traits + differences</div><div class="job-card"><strong>Family win</strong> short, visual, printable</div></div>
+  <div class="standards-box mini-card" style="background:#f4efff;border:2px solid #cbb6f2;"><strong>NGSS 1-LS3-1:</strong> Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.</div>
+  <h2>🎯 Learning Objectives</h2><ul><li>Match baby animals with adult animals using observable trait evidence.</li><li>Tell the difference between an inherited trait and a growth change.</li><li>Compare a same-shape growth example with a big-change example such as a frog or butterfly.</li></ul>
+  <h2>📦 Materials</h2><div class="materials-box"><h3>What You Need</h3><ul><li>Animal photos/cards from books or printed images</li><li>Paper folded into four boxes</li><li>Crayons or colored pencils</li><li>Optional: toy animals or stuffed animals</li></ul><p><strong>No special kit:</strong> substitute photos, drawings, toys, or household objects freely.</p></div>
+  <h2>🧠 Vocabulary</h2><div class="vocab-grid"><div class="vocab-card"><div class="vocab-word">Adult</div><div>A fully grown plant or animal.</div></div><div class="vocab-card"><div class="vocab-word">Body plan</div><div>The main body parts an animal has.</div></div><div class="vocab-card"><div class="vocab-word">Growth change</div><div>A change that happens as a young organism grows.</div></div><div class="vocab-card"><div class="vocab-word">Evidence</div><div>A clue you can point to and explain.</div></div></div>
+  <h2>📚 Parent Read-Aloud Background</h2><p>Lesson 1 built the big pattern. Lesson 2 makes it stronger by looking across more animals. Some babies are easy to match to adults. A puppy has legs, fur, eyes, and a tail like a dog. A duckling has a beak, wings, and webbed feet like a duck. They are smaller, fuzzier, and not ready to do everything adults do.</p><p>Some animals change dramatically. A tadpole does not look much like an adult frog at first, and a caterpillar looks very different from a butterfly. That does not break the pattern. It gives students a richer version: offspring belong to the same kind of organism, but young stages can look very different from the adult stage.</p>
+  <h2>🔬 Activity Procedure</h2><div class="procedure-step"><strong>Step 1 — Build the gallery</strong><br>Choose four animal families: cat/kitten, duck/duckling, frog/tadpole, butterfly/caterpillar. Draw or place pictures in pairs.</div><div class="procedure-step"><strong>Step 2 — Find match clues</strong><br>For each pair, ask, “What clue tells us these belong together?” For frog and butterfly, use life-stage clues if body traits are very different.</div><div class="procedure-step"><strong>Step 3 — Mark inherited traits</strong><br>Circle traits the young animal already has from its kind: feathers, beak, fur, legs, body shape, or later-stage pattern.</div><div class="procedure-step"><strong>Step 4 — Mark growth changes</strong><br>Star traits that change with growth: size, fuzz to feathers, tail loss in frogs, wings after chrysalis.</div><div class="procedure-step"><strong>Step 5 — Make a gallery label</strong><br>Student writes or dictates one evidence sentence for each pair.</div>
+  <h2>💬 Discussion Questions</h2><div class="question-box"><strong>Question 1:</strong> Which baby animal was easiest to match to its adult? Why?<p class="discussion-hint">Likely kitten/cat or duckling/duck because visible body traits are similar.</p></div><div class="question-box"><strong>Question 2:</strong> Which one changed the most?<p class="discussion-hint">Frog or butterfly examples; tadpole/frog and caterpillar/butterfly show big stage changes.</p></div><div class="question-box"><strong>Question 3:</strong> Does a big change mean the offspring is unrelated to the adult?<p class="discussion-hint">No. It means that organism has life stages. It is still the same kind of animal.</p></div><div class="question-box"><strong>Question 4:</strong> What evidence should a scientist use?<p class="discussion-hint">Observable traits and growth-stage clues, not just guessing from cuteness or size.</p></div>
+  <h2>👩‍🏫 Parent Notes</h2><div class="teacher-note"><strong>Keep it Grade 1:</strong> The target is observation and evidence, not genetics vocabulary beyond simple inherited traits. If a family situation makes human comparisons sensitive, use animal and plant examples only. The science standard is fully met without personal family photos.</div>
+  <div class="page-break"><div class="worksheet-header">🐣🦆🦋 Student Worksheet — Baby-to-Adult Growth Gallery</div><p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p><h3>1) Growth Gallery</h3><table class="ws-table"><tr><th>Animal family</th><th>Clue it belongs together</th><th>What changes as it grows?</th></tr><tr><td>Kitten → cat</td><td></td><td></td></tr><tr><td>Duckling → duck</td><td></td><td></td></tr><tr><td>Tadpole → frog</td><td></td><td></td></tr><tr><td>Caterpillar → butterfly</td><td></td><td></td></tr></table><div class="word-bank">Word bank: smaller · fuzzier · legs · wings · tail · body shape · same kind</div><h3>2) Circle and Explain</h3><p>Which animal changes the most? kitten / duckling / tadpole / caterpillar</p><div class="write-lines"><strong>My evidence:</strong><div class="line"></div><div class="line"></div></div><div class="answer-key"><strong>Parent answer-key guidance:</strong> Accept growth changes such as smaller size, fuzzy covering, tadpole tail/legs/gills, caterpillar to butterfly wings. The strongest answer names the evidence clue.</div></div>
+  
+<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
 <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
   <div class="llc-paywall-inner">
     <span class="llc-paywall-emoji">🥼</span>
     <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
-    <p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
+    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
+    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
   </div>
 </div>
-
-<script>
-(function() {
-  var ACCESS_KEY = 'llc_access_v2_locked';
-
-  function isUnlocked() {
-    return localStorage.getItem(ACCESS_KEY) === 'granted';
+<style>
+  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
+  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
+</style>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = '/feedback-layer.js?v=20260421';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = document.body.dataset.documentId;
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
   }
-
-  function lockLesson() {
-    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
-    var allH2 = document.querySelectorAll('h2');
-    var lastGoalsH2 = null;
-
-    // Find the last h2 that matches a "goals/objective" keyword
-    allH2.forEach(function(h2) {
-      var text = h2.textContent.toLowerCase();
-      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
-        lastGoalsH2 = h2;
-      }
-    });
-
-    if (!lastGoalsH2) {
-      // Fallback: hide by class/id keywords
-      var lockSelectors = [
-        '[class*="material"]', '[id*="material"]',
-        '[class*="procedure"]', '[id*="procedure"]',
-        '[class*="discussion"]', '[id*="discussion"]',
-        '[class*="worksheet"]', '[id*="worksheet"]',
-        '[class*="teacher"]', '[id*="teacher"]',
-        '[class*="answer"]', '[id*="answer"]',
-        '[class*="extension"]', '[id*="extension"]',
-        '[class*="question"]', '[id*="question"]',
-        '[class*="page-break"]', '[id*="page-break"]'
-      ];
-      lockSelectors.forEach(function(sel) {
-        document.querySelectorAll(sel).forEach(function(el) {
-          el.style.display = 'none';
-        });
-      });
-      document.getElementById('llcPaywall').style.display = 'block';
-      return;
-    }
-
-    // Walk siblings/cousins after the goals section and hide them
-    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
-    // containing top-level element (or after the next h2 that follows it)
-
-    // Find the next h2 after lastGoalsH2 — everything from there is locked
-    var foundGoals = false;
-    var lockFrom = null;
-    allH2.forEach(function(h2) {
-      if (h2 === lastGoalsH2) { foundGoals = true; return; }
-      if (foundGoals && !lockFrom) { lockFrom = h2; }
-    });
-
-    if (!lockFrom) {
-      // No further h2 found; lock everything after the goals h2 paragraph
-      // Hide siblings that follow lastGoalsH2
-      var sibling = lastGoalsH2.nextElementSibling;
-      while (sibling) {
-        sibling.style.display = 'none';
-        sibling = sibling.nextElementSibling;
-      }
-    } else {
-      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
-      var el = lockFrom;
-      while (el) {
-        el.style.display = 'none';
-        el = el.nextElementSibling;
-      }
-    }
-
-    document.getElementById('llcPaywall').style.display = 'block';
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    else loadFeedbackLayer();
   }
+})();</script>
+<script>(function(){
+  var ACCESS_KEY='llc_access_v2_locked';
+  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
+  function lockLesson(){
+    var h2s=Array.from(document.querySelectorAll('h2'));
+    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
+    if(idx<0) idx=Math.min(2,h2s.length-1);
+    var lockFrom=h2s[idx]; if(!lockFrom) return;
+    var kids=Array.from(document.body.children); var hide=false;
+    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
+    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
+  }
+  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
+})();</script>
+<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
 
-  document.addEventListener('DOMContentLoaded', function() {
-    if (!isUnlocked()) {
-      lockLesson();
-    }
-  });
-})();
-</script>
-<!-- ═══ END PAYWALL ═══ -->
+  <div class="footer-note">© 2026 Little Lab Coats. For personal, non-commercial household use only.</div>
 </body>
 </html>

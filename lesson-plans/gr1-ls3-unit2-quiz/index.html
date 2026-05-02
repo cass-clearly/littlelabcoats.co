@@ -1,329 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parents &amp; Offspring Quiz — Grade 1, Unit 2</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background: #e8f5e9;
-      color: #222;
-    }
-    .quiz-header {
-      background: linear-gradient(135deg, #2e7d32, #388e3c);
-      color: white;
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 12px rgba(46,125,50,0.3);
-    }
-    .quiz-header h1 { margin: 0 0 8px 0; font-size: 1.8rem; }
-    .quiz-header p { margin: 0; opacity: 0.9; font-size: 1rem; }
-    .score-bar {
-      background: white;
-      border: 3px solid #2e7d32;
-      border-radius: 12px;
-      padding: 12px 20px;
-      text-align: center;
-      margin-bottom: 24px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #2e7d32;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .back-link {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #2e7d32;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .back-link:hover { text-decoration: underline; }
-    .question-card {
-      background: white;
-      border-radius: 14px;
-      padding: 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border: 2px solid #a5d6a7;
-    }
-    .question-text {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: #1b5e20;
-      line-height: 1.4;
-    }
-    .options {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    @media (max-width: 500px) { .options { grid-template-columns: 1fr; } }
-    .option-btn {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 10px;
-      padding: 12px 14px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-align: left;
-      transition: all 0.15s;
-      color: #222;
-      line-height: 1.3;
-    }
-    .option-btn:hover:not(:disabled) {
-      background: #c8e6c9;
-      border-color: #2e7d32;
-    }
-    .option-btn.correct {
-      background: #c8e6c9;
-      border-color: #2e7d32;
-      color: #1b5e20;
-      font-weight: 600;
-    }
-    .option-btn.wrong {
-      background: #ffcdd2;
-      border-color: #c62828;
-      color: #b71c1c;
-    }
-    .option-btn:disabled { cursor: default; }
-    .feedback-box {
-      display: none;
-      margin-top: 14px;
-      padding: 12px 16px;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .feedback-box.correct-fb {
-      background: #e8f5e9;
-      border: 2px solid #66bb6a;
-      color: #1b5e20;
-    }
-    .feedback-box.wrong-fb {
-      background: #fff3e0;
-      border: 2px solid #ffa726;
-      color: #e65100;
-    }
-    .results-panel {
-      display: none;
-      background: white;
-      border-radius: 16px;
-      padding: 32px;
-      text-align: center;
-      margin-top: 24px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      border: 3px solid #2e7d32;
-    }
-    .results-panel h2 { color: #2e7d32; font-size: 1.8rem; margin-bottom: 12px; }
-    .results-score { font-size: 2.5rem; font-weight: bold; color: #1b5e20; }
-    .results-msg { font-size: 1.15rem; margin-top: 16px; color: #333; }
-    .results-emoji { font-size: 3rem; }
-    .retry-btn {
-      background: #2e7d32;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 28px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 20px;
-      font-weight: 600;
-    }
-    .retry-btn:hover { background: #1b5e20; }
-    .q-number {
-      font-size: 0.8rem;
-      color: #a5d6a7;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 4px;
-    }
-  </style>
-</head>
-<body data-document-id="doc_3pA5JoQs6kk">
-
-  <a class="back-link" href="gr1-ls3-unit2-lesson1-you-look-like-your-parents.html">← Back to Lesson 1: You Look Like Your Parents</a>
-
-  <div class="quiz-header">
-    <h1>👨‍👩‍👧 Parents &amp; Offspring Quiz 🐣</h1>
-    <p>Life Science · Unit 2 · Grade 1</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Parents &amp; Offspring Quiz — Grade 1 Unit 2</title><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box} body{font-family:'Lato','Segoe UI',Arial,sans-serif;max-width:850px;margin:0 auto;padding:22px;background:#e9f8ee;color:#233}.lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px}.lesson-branding-text{font-weight:900;color:#5A3A16}.quiz-header{background:linear-gradient(135deg,#1f6f4a,#087f8c);color:white;border-radius:20px;padding:24px;text-align:center;margin-bottom:20px}.quiz-header h1{font-family:'Playfair Display',Georgia,serif;margin:0 0 8px;font-size:2.1rem}.score-bar{background:white;border:3px solid #1f6f4a;border-radius:14px;padding:12px 18px;text-align:center;margin-bottom:18px;font-weight:900;color:#1f6f4a}.question-card{background:white;border:2px solid #b7e2c6;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}.q-number{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#37a66b;font-weight:900}.question-text{font-size:1.1rem;font-weight:900;color:#1f6f4a;margin:5px 0 12px}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.option-btn{background:#f5fbf7;border:2px solid #b7e2c6;border-radius:12px;padding:12px;text-align:left;cursor:pointer;font-size:1rem}.option-btn:hover:not(:disabled){background:#e0f4e7}.option-btn.correct{background:#d8f6e1;border-color:#1f6f4a;font-weight:900}.option-btn.wrong{background:#ffe2e2;border-color:#ff6b6b}.feedback-box{display:none;margin-top:12px;padding:12px;border-radius:12px;background:#fffaf0;border:2px solid #ffcb5b}.results-panel{display:none;background:white;border:3px solid #1f6f4a;border-radius:18px;text-align:center;padding:26px;margin-top:20px}.retry-btn{background:#1f6f4a;color:white;border:0;border-radius:999px;padding:12px 26px;font-weight:900;cursor:pointer}.back-link{display:inline-block;margin-bottom:14px;color:#1f6f4a;font-weight:900;text-decoration:none}@media(max-width:620px){.options{grid-template-columns:1fr}}
+</style></head><body data-document-id="doc_3pA5JoQs6kk" data-doc-id="doc_3pA5JoQs6kk"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div><a class="back-link" href="gr1-ls3-unit2-lesson1-you-look-like-your-parents.html">← Back to Unit Lesson 1</a><div class="quiz-header"><h1>🐾🌱 Parents &amp; Offspring Quiz</h1><p>Grade 1 · Life Science · Unit 2</p></div><div class="score-bar">Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> · Answered: <span id="answeredNum">0</span></div><div id="quizContainer"></div><div class="results-panel" id="resultsPanel"><h2>Quiz Complete! 🎉</h2><div id="resultsScore" style="font-size:2.2rem;font-weight:900;color:#1f6f4a"></div><p id="resultsMsg"></p><button class="retry-btn" onclick="resetQuiz()">Try Again</button></div><script>const questions=[{"q": "A seedling and its parent bean plant both have green leaves, but the seedling is much smaller. What pattern does this show?", "options": ["Young plants are exactly the same as parents", "Young plants are like, but not exactly like, parent plants", "Seeds are not living things", "Only animals have offspring"], "correct": 1, "explanation": "The key LS3 pattern includes plants: young plants can share traits with parent plants and still be different."}, {"q": "Which observation is the best evidence that a kitten is related to an adult cat?", "options": ["It is cute", "It has fur, whiskers, ears, and a cat body shape", "It sleeps a lot", "It fits in a box"], "correct": 1, "explanation": "Observable traits make stronger evidence than opinions."}, {"q": "A duckling is fuzzy and small. An adult duck has smoother feathers and is larger. What changed?", "options": ["The kind of animal", "Growth traits such as size and covering", "The duck became a plant", "Nothing changed"], "correct": 1, "explanation": "Offspring can keep the same animal identity while changing as they grow."}, {"q": "A bird feeds chicks in a nest. Which need is the parent helping meet?", "options": ["Food", "Reading", "Color", "Counting"], "correct": 0, "explanation": "Feeding helps young animals survive and grow."}, {"q": "A penguin keeps a chick warm. Why does that matter?", "options": ["Warmth can help the chick survive", "It changes the chick into a fish", "It teaches spelling", "It makes the chick identical to the parent"], "correct": 0, "explanation": "Many young animals need adult help with warmth and safety."}, {"q": "A young otter watches an adult and practices opening food. What kind of behavior is improving?", "options": ["A learned or practiced behavior", "A body trait like eye color", "A seed coat", "A rock behavior"], "correct": 0, "explanation": "Watching and practice are clues for learned behavior."}, {"q": "Which is a plant offspring?", "options": ["A spoon", "A seed", "A bird nest", "A shadow"], "correct": 1, "explanation": "A seed is a young plant package made by a parent plant."}, {"q": "How can fruit help seeds?", "options": ["It can get animals to carry seeds away", "It teaches seeds to read", "It makes seeds into adults immediately", "It makes all seedlings identical"], "correct": 0, "explanation": "Fruit can help seed dispersal when animals carry or drop seeds."}, {"q": "Which sentence is the strongest science claim?", "options": ["Baby animals are cute", "Offspring are like their parents because they share traits, but they are not exactly the same", "Parents are always bigger", "Plants are random"], "correct": 1, "explanation": "A strong claim names the pattern and uses trait evidence."}, {"q": "For the capstone, which evidence set is strongest?", "options": ["One animal trait, one plant seed trait, one difference, and one survival help", "Only a favorite animal", "Only a drawing with no explanation", "A guess about who is cutest"], "correct": 0, "explanation": "The unit goal is evidence across animals and plants."}];let score=0,answered=0;const total=questions.length;document.getElementById('totalNum').textContent=total;function renderQuiz(){const c=document.getElementById('quizContainer');c.innerHTML='';questions.forEach((q,i)=>{const card=document.createElement('div');card.className='question-card';card.innerHTML='<div class="q-number">Question '+(i+1)+'</div><div class="question-text">'+q.q+'</div><div class="options">'+q.options.map((o,j)=>'<button class="option-btn" onclick="answerQuestion('+i+','+j+',this)">'+o+'</button>').join('')+'</div><div class="feedback-box" id="fb-'+i+'"></div>';c.appendChild(card);})}function answerQuestion(i,choice,btn){const card=btn.closest('.question-card');const buttons=card.querySelectorAll('.option-btn');buttons.forEach(b=>b.disabled=true);const q=questions[i];const fb=document.getElementById('fb-'+i);answered++;if(choice===q.correct){score++;btn.classList.add('correct');fb.innerHTML='✅ '+q.explanation;}else{btn.classList.add('wrong');buttons[q.correct].classList.add('correct');fb.innerHTML='💡 '+q.explanation;}fb.style.display='block';updateScore();if(answered===total)showResults();}function updateScore(){document.getElementById('scoreNum').textContent=score;document.getElementById('answeredNum').textContent=answered;}function showResults(){const p=document.getElementById('resultsPanel');p.style.display='block';document.getElementById('resultsScore').textContent=score+' / '+total;document.getElementById('resultsMsg').textContent=score>=8?'Strong evidence work!':'Review the reference card, then try again.';}function resetQuiz(){score=0;answered=0;updateScore();document.getElementById('resultsPanel').style.display='none';renderQuiz();window.scrollTo(0,0);}renderQuiz();</script>
+<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
+    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
   </div>
-
-  <div class="score-bar" id="scoreBar">
-    Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> &nbsp;|&nbsp; Questions answered: <span id="answeredNum">0</span>
-  </div>
-
-  <div id="quizContainer"></div>
-
-  <div class="results-panel" id="resultsPanel">
-    <div class="results-emoji" id="resultsEmoji"></div>
-    <h2>Quiz Complete! 🎉</h2>
-    <div class="results-score" id="resultsScore"></div>
-    <div class="results-msg" id="resultsMsg"></div>
-    <br>
-    <button class="retry-btn" onclick="resetQuiz()">🔄 Try Again</button>
-  </div>
-
-  <script>
-    const questions = [
-      {
-        q: "🐕 A puppy looks like a dog — not a cat, not a fish. Body features like fur color, body shape, and number of legs that are passed from parents to offspring are called what?",
-        options: ["Learned behaviors", "Inherited traits", "Instincts", "Adaptations"],
-        correct: 1,
-        explanation: "Inherited traits are features passed from parents to offspring! A puppy inherits its fur color, ear shape, and size from its parents. Baby animals always look like their parents — never like a different species."
-      },
-      {
-        q: "🐣 A baby bird just hatched. It cannot fly, it cannot find its own food, and it needs warmth from a parent. Compared to adult birds, baby birds need _____ help from parents.",
-        options: ["Less — babies are born independent", "The same amount — babies and adults need equal help", "More — babies depend on parents for food, warmth, and protection", "No — birds don't take care of their young at all"],
-        correct: 2,
-        explanation: "Baby animals need MORE help! They can't fly yet, can't find food, and can't regulate their own temperature. The pattern across animals is: the younger the animal, the more it needs its parents. As it grows, it gradually becomes independent."
-      },
-      {
-        q: "🐊 A mother alligator carries her newly hatched babies gently IN HER MOUTH to bring them safely to the water, protecting them from predators. What is the purpose of this parent behavior?",
-        options: ["To teach the babies how to swim by watching", "To keep the babies warm enough to grow", "To protect the offspring during their most vulnerable time", "To show the babies which foods are safe to eat"],
-        correct: 2,
-        explanation: "Carrying offspring in her mouth protects the babies when they're tiny and can't defend themselves. The mother's size and strength shields them from predators. Baby alligators even make tiny squeaks so mom knows where they are!"
-      },
-      {
-        q: "🐦 A baby bird knows how to beg for food with open mouth as soon as it hatches — no one taught it. A human child must practice for months before they can walk. What is the DIFFERENCE between these two behaviors?",
-        options: ["Begging is a learned behavior; walking is an instinct", "Begging is an instinct (born knowing); walking requires practice and learning", "Both are instincts — all behaviors are built in at birth", "Both are learned — no behavior is truly built in"],
-        correct: 1,
-        explanation: "Instincts are behaviors animals are BORN knowing — like a baby bird begging for food or a baby crying when hungry. Learned behaviors must be practiced or taught — like walking, riding a bike, or reading. Parents play a huge role in teaching learned behaviors!"
-      },
-      {
-        q: "🐬 Orca (killer whale) pods teach their young SPECIFIC hunting techniques — different pods have completely different methods. Is this hunting skill an instinct or a learned behavior?",
-        options: ["An instinct — all orcas are born knowing exactly how to hunt the same way", "A learned behavior — taught by older orcas, passed down through generations", "Neither — orcas don't need parents to learn hunting", "Both equally — it's built in AND taught at the same time"],
-        correct: 1,
-        explanation: "Orca hunting techniques are LEARNED — passed down through teaching, like culture! Different pods have completely different hunting strategies for different prey. Young orcas learn by watching and practicing with the pod. This is one of the best examples of animal 'culture' in nature."
-      },
-      {
-        q: "🌰 An acorn has a hard outer shell AND a starchy nutrient supply inside. A dandelion seed has a tiny feathery 'parachute.' How are plants 'parenting' their offspring through these seed structures?",
-        options: ["By feeding and protecting the seedling while it grows nearby", "By building protection, food, and travel methods INTO the seed before it leaves", "By staying close to watch over the seedling as it sprouts", "By teaching the seedling which direction to grow"],
-        correct: 1,
-        explanation: "Plants build everything the young plant needs RIGHT INTO the seed! The hard shell = protection. The starch inside = food (nutrients) to grow before it can make its own food. The parachute = a way to travel far from the parent. Plants can't follow their offspring — they prepare everything in advance!"
-      },
-      {
-        q: "🍎 An apple is sweet and delicious. Animals eat it, travel far away, and then the seeds come out in their droppings in a new location. What survival benefit does this give the apple tree's offspring?",
-        options: ["It provides nutrients for the seed to grow on", "It protects the seed from predators with a bitter taste", "It gets the seed carried far away from the parent plant to a new location", "It helps the seed float on water to reach new islands"],
-        correct: 2,
-        explanation: "The sweet fruit gets animals to EAT and CARRY the seeds far away! Seeds that land far from the parent plant have less competition for sunlight, water, and nutrients. The seed coat is even tough enough to survive the trip through an animal's digestive system. You've been a seed disperser every time you ate an apple and dropped the core!"
-      },
-      {
-        q: "🦁 A lion has 2–4 cubs at a time and cares for them intensively for 2 years. An ocean sunfish releases up to 300 million eggs at once, with no parental care at all. What PATTERN does science find in nature?",
-        options: ["Animals with many offspring always care for each one carefully", "Animals with FEW offspring tend to give LOTS of care; animals with MANY offspring tend to give LITTLE or NO care", "Parental care has nothing to do with number of offspring", "Only mammals care for their young — fish never do"],
-        correct: 1,
-        explanation: "This is the 'quality vs. quantity' pattern! Few offspring + lots of care (quality strategy), OR many offspring + little care (quantity strategy). Both work — the lion's cubs survive because of care; the sunfish survives because out of 300 million eggs, some will make it by chance alone!"
-      },
-      {
-        q: "🐥 A duckling follows its mother everywhere for weeks, learning where food is and how to stay safe. What does this PARENTAL BEHAVIOR help the offspring do?",
-        options: ["Nothing — ducklings could figure everything out alone", "Survive by learning skills and knowledge from the parent", "Inherit new traits that make the next generation stronger", "Grow faster by staying in the parent's warmth"],
-        correct: 1,
-        explanation: "Parent behaviors that help offspring survive are incredibly important! By following mom, ducklings learn where to find food, which predators to avoid, and how to navigate. Parent behaviors that successfully raise young get passed on through generations — because those offspring grow up to become successful parents too!"
-      },
-      {
-        q: "🌱 A kangaroo joey is born VERY tiny and undeveloped. It climbs into its mother's pouch and stays there for months as it grows. A frog lays thousands of eggs in a pond and then leaves — the tadpoles survive completely on their own. What do BOTH of these examples show?",
-        options: ["All animals care for their young in exactly the same way", "Parents that provide care always have better survival than those that don't", "Different species have evolved different strategies, but all aim for offspring to survive long enough to reproduce", "Animals with pouches always produce better offspring than animals that lay eggs"],
-        correct: 2,
-        explanation: "Both strategies have the same ultimate goal — offspring survival! The kangaroo uses intensive care for a few young. The frog uses sheer numbers (thousands of eggs). Evolution keeps whatever strategy works well enough for the species to continue. There's no single 'right way' to raise offspring in nature!"
-      }
-    ];
-
-    let score = 0;
-    let answered = 0;
-
-    function buildQuiz() {
-      const container = document.getElementById('quizContainer');
-      container.innerHTML = '';
-      questions.forEach((q, i) => {
-        const card = document.createElement('div');
-        card.className = 'question-card';
-        card.id = `card${i}`;
-        card.innerHTML = `
-          <div class="q-number">Question ${i + 1} of ${questions.length}</div>
-          <div class="question-text">${q.q}</div>
-          <div class="options" id="opts${i}">
-            ${q.options.map((opt, j) => `
-              <button class="option-btn" onclick="answer(${i}, ${j})" id="opt${i}_${j}">${opt}</button>
-            `).join('')}
-          </div>
-          <div class="feedback-box" id="fb${i}"></div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function answer(qIdx, choiceIdx) {
-      const q = questions[qIdx];
-      const optsDiv = document.getElementById(`opts${qIdx}`);
-      const fb = document.getElementById(`fb${qIdx}`);
-      const buttons = optsDiv.querySelectorAll('.option-btn');
-
-      buttons.forEach(b => b.disabled = true);
-
-      if (choiceIdx === q.correct) {
-        buttons[choiceIdx].classList.add('correct');
-        fb.className = 'feedback-box correct-fb';
-        fb.innerHTML = `✅ <strong>Correct!</strong> ${q.explanation}`;
-        score++;
-      } else {
-        buttons[choiceIdx].classList.add('wrong');
-        buttons[q.correct].classList.add('correct');
-        fb.className = 'feedback-box wrong-fb';
-        fb.innerHTML = `❌ <strong>Not quite!</strong> The correct answer is: <strong>${q.options[q.correct]}</strong>. ${q.explanation}`;
-      }
-      fb.style.display = 'block';
-      answered++;
-      updateScore();
-
-      if (answered === questions.length) {
-        setTimeout(showResults, 800);
-      }
-    }
-
-    function updateScore() {
-      document.getElementById('scoreNum').textContent = score;
-      document.getElementById('answeredNum').textContent = answered;
-    }
-
-    function showResults() {
-      document.getElementById('resultsPanel').style.display = 'block';
-      document.getElementById('resultsScore').textContent = `${score} / ${questions.length}`;
-      document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth' });
-
-      const pct = score / questions.length;
-      let emoji, msg;
-      if (pct === 1)       { emoji = '🏆'; msg = "Perfect score! You are a Parents & Offspring CHAMPION! 🌟 You understand inherited traits, parental behaviors, plant seed strategies, instinct vs. learned behavior, and the quality-vs-quantity pattern — incredible!"; }
-      else if (pct >= 0.8) { emoji = '⭐'; msg = "Awesome work! You really understand how parents help offspring survive across the animal and plant kingdoms. Just a couple more to master!"; }
-      else if (pct >= 0.6) { emoji = '😊'; msg = "Good job! You know a lot about parents and offspring. Go back and review the lessons on the topics you missed — you're almost there!"; }
-      else if (pct >= 0.4) { emoji = '🌱'; msg = "Nice try! Review the lessons about inherited traits, instinct vs. learned behavior, and seed dispersal — then give it another shot!"; }
-      else                 { emoji = '💪'; msg = "Keep going! Re-read the lessons carefully. Think about how each type of parent behavior helps offspring survive. You've got this!"; }
-
-      document.getElementById('resultsEmoji').textContent = emoji;
-      document.getElementById('resultsMsg').textContent = msg;
-    }
-
-    function resetQuiz() {
-      score = 0;
-      answered = 0;
-      updateScore();
-      document.getElementById('resultsPanel').style.display = 'none';
-      buildQuiz();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    buildQuiz();
-  </script>
-
-
-  <script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_3pA5JoQs6kk" data-content-selector="body"></script>
-</body>
-</html>
+</div>
+<style>
+  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
+  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
+</style>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = '/feedback-layer.js?v=20260421';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = document.body.dataset.documentId;
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
+  }
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    else loadFeedbackLayer();
+  }
+})();</script>
+<script>(function(){
+  var ACCESS_KEY='llc_access_v2_locked';
+  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
+  function lockLesson(){
+    var h2s=Array.from(document.querySelectorAll('h2'));
+    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
+    if(idx<0) idx=Math.min(2,h2s.length-1);
+    var lockFrom=h2s[idx]; if(!lockFrom) return;
+    var kids=Array.from(document.body.children); var hide=false;
+    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
+    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
+  }
+  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
+})();</script>
+<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
+</body></html>

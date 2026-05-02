@@ -3,603 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How Animal Parents Protect Offspring — Parents and Offspring Unit, Lesson 3</title>
+  <title>Parent Care Survival Stations — Parents &amp; Offspring Unit, Lesson 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    :root {
+      --forest:#1f6f4a; --leaf:#37a66b; --mint:#e9f8ee; --sky:#e7f6ff;
+      --teal:#087f8c; --coral:#ff6b6b; --gold:#ffcb5b; --cream:#fffaf0;
+      --grape:#5b3f97; --ink:#25312b; --soft:#f7fbf8;
+    }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.5in;
-      font-size: 11pt;
-      line-height: 1.4;
-      color: #222;
+      font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+      max-width: 8.5in; margin: 0 auto; padding: 0.45in;
+      color: var(--ink); background: white; line-height: 1.45; font-size: 11pt;
     }
-    h1 {
-      text-align: center;
-      font-size: 22pt;
-      margin-bottom: 5px;
-      border-bottom: 3px solid #2e7d32;
-      padding-bottom: 10px;
-      color: #2e7d32;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #555;
-      font-size: 13pt;
-    }
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      background: #e8f5e9;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 10pt;
-      border: 1px solid #a5d6a7;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-    h2 {
-      font-size: 14pt;
-      background: #2e7d32;
-      color: white;
-      padding: 8px 14px;
-      margin: 24px 0 12px 0;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 12pt;
-      color: #1b5e20;
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 4px;
-      margin: 18px 0 8px 0;
-    }
-    ul, ol { margin: 8px 0; padding-left: 25px; }
-    li { margin-bottom: 5px; }
-    .hero-image {
-      text-align: center;
-      margin: 16px 0;
-    }
-    .hero-image .emoji-hero {
-      font-size: 72pt;
-      line-height: 1.2;
-    }
-    .hero-image .caption {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-      margin-top: 4px;
-    }
-    .materials-box {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
-    .procedure-step {
-      background: #e8f5e9;
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border-left: 5px solid #2e7d32;
-    }
-    .procedure-step strong { color: #1b5e20; }
-    .question-box {
-      background: #e8f5e9;
-      border-left: 5px solid #00B894;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .discussion-hint {
-      font-style: italic;
-      color: #555;
-      margin-top: 6px;
-      font-size: 10pt;
-    }
-    .tip-box {
-      background: #e0f7fa;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-    }
-    .standards-box {
-      background: #f3e5f5;
-      border: 1px solid #ce93d8;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .standards-box strong { color: #7b1fa2; }
-    .teacher-note {
-      background: #f5f5f5;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #555;
-    }
-    .teacher-note strong { color: #333; }
-    .vocab-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 12px 0;
-    }
-    .vocab-card {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 10px 12px;
-    }
-    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 12pt; }
-    .vocab-card .vocab-def { font-size: 10pt; color: #333; margin-top: 4px; }
-    .bodyguard-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin: 12px 0;
-    }
-    .bodyguard-card {
-      background: #fff;
-      border: 2px solid #a5d6a7;
-      border-radius: 10px;
-      padding: 12px;
-    }
-    .bodyguard-card .animal-emoji { font-size: 28pt; }
-    .bodyguard-card .animal-name { font-weight: bold; color: #1b5e20; font-size: 11pt; margin: 4px 0; }
-    .bodyguard-card .protection-desc { font-size: 10pt; color: #333; }
-    .worksheet-header {
-      background: #1b5e20;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 14pt;
-      font-weight: bold;
-      margin: 0 0 12px 0;
-      text-align: center;
-    }
-    .name-date {
-      text-align: center;
-      margin-bottom: 16px;
-      font-size: 12pt;
-    }
-    .ws-bodyguard-card {
-      border: 2px dashed #2e7d32;
-      border-radius: 8px;
-      padding: 10px 12px;
-      margin: 8px 0;
-      min-height: 90px;
-    }
-    .ws-bodyguard-card .card-title {
-      font-weight: bold;
-      color: #1b5e20;
-      font-size: 11pt;
-      margin-bottom: 6px;
-    }
-    .write-line {
-      border-bottom: 1px solid #aaa;
-      min-height: 22px;
-      margin: 4px 0;
-    }
-    .sorting-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin: 10px 0;
-    }
-    .sorting-col {
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 10px;
-    }
-    .sorting-col h3 { text-align: center; }
-    .sorting-blank { border-bottom: 1px solid #aaa; margin: 8px 0; min-height: 22px; }
-    .fill-blank {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-      font-size: 12pt;
-    }
-    .blank-line {
-      display: inline-block;
-      border-bottom: 2px solid #1b5e20;
-      min-width: 160px;
-      margin: 0 4px;
-    }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
-    }
-    .print-btn {
-      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
-      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
-      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000; display: flex; align-items: center; gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print {
-      body { padding: 0.25in; font-size: 10pt; }
-      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
-        break-inside: avoid; page-break-inside: avoid;
-      }
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .print-btn { display: none; }
-    }
-  </style>
-</head>
-<body data-document-id="doc_gr1-ls3-unit2-lesson3-parents-protect-offspring" data-doc-id="">
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
-
-  <h1>🐻🐧🦘 How Animal Parents Protect Offspring</h1>
-  <p class="subtitle">Parents and Offspring Unit, Lesson 3</p>
-
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 1st Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science</span>
-    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
-  </div>
-
-  <div class="hero-image">
-    <div class="emoji-hero">🐻🐧🦘</div>
-    <div class="caption">Every parent animal has its own special way of keeping babies safe. Some carry them, some huddle over them, some guard the nest.</div>
-  </div>
-
-  <div class="standards-box">
-    <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
-  </div>
-
-  <h2>🎯 Learning Goals</h2>
-  <ul>
-    <li>Identify specific behaviors that animal parents use to <strong>protect their young</strong>.</li>
-    <li>Connect parental protection strategies to offspring <strong>survival</strong>.</li>
-    <li>Begin to distinguish between protection behaviors that use the parent's <strong>body</strong> vs. their <strong>actions</strong>.</li>
-  </ul>
-
-  <h2>📦 Materials</h2>
-  <div class="materials-box">
-    <h3>🏠 What You Need (Household Only)</h3>
-    <ul>
-      <li>Paper, pencil, and crayons</li>
-    </ul>
-    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>Everything you need is already at home!</em></p>
-  </div>
-
-  <h2>📖 Vocabulary</h2>
-  <div class="vocab-grid">
-    <div class="vocab-card">
-      <div class="vocab-word">🛡️ Protection</div>
-      <div class="vocab-def">Keeping something safe from harm.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🐾 Behavior</div>
-      <div class="vocab-def">Something a living thing does (an action).</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">💪 Survival</div>
-      <div class="vocab-def">Staying alive.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🦁 Predator</div>
-      <div class="vocab-def">An animal that hunts other animals for food.</div>
-    </div>
-  </div>
-
-  <h2>📚 Background (Read Aloud to Student)</h2>
-  <p>Baby animals face many dangers. They may be too small to run away from predators. They may not know which foods are safe to eat. They may get too cold or too hot without help. This is why <strong>parental protection</strong> is so important. Parent animals that protect their young are more likely to have babies that survive, grow up, and have babies of their own. Over thousands of generations, animals have developed some remarkable ways to keep their young safe.</p>
-
-  <p>Different animals use very different strategies. A mother bear stays close to her cubs and will charge at anything that threatens them. A penguin huddles its chick under warm feathers. A kangaroo carries its joey in a built-in pouch until it is big enough to face the world. An alligator, despite looking fearsome, is actually a devoted parent who carries hatchlings gently in her mouth to bring them to water. Each strategy fits the animal's environment, body, and the dangers it faces.</p>
-
-  <p>The most fascinating thing about these behaviors is that most of them are <strong>instinctive</strong>. The mother bear does not need to be taught to protect her cubs. The penguin does not take a class on how to huddle. These behaviors are built into the animal from birth, passed down through generations just like physical traits are passed down. (In the next lesson, we will explore the difference between instincts and learned behaviors in more detail!)</p>
-
-  <h2>🔬 Procedure</h2>
-
-  <div class="procedure-step">
-    <strong>Step 1 — Opening Question</strong><br>
-    Ask your student: "What do you think would happen to baby animals if no parent ever protected them?" Give time to think and share. There are no wrong answers here. The goal is to build appreciation for why protection matters.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Animal Bodyguard Cards 🃏</strong><br>
-    Create one card for each of 5 animals. Fold or cut paper into 5 sections. Title each card with the animal name and write or draw the parent-baby pair:
-    <ul style="margin-top:8px;">
-      <li>🐻 Bear (mother bear and cubs)</li>
-      <li>🐧 Penguin (parent penguin and chick)</li>
-      <li>🐊 Alligator (mother alligator and hatchlings)</li>
-      <li>🦘 Kangaroo (mother kangaroo and joey)</li>
-      <li>🐦 Bird (parent bird, nest, and chicks)</li>
-    </ul>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 3 — Draw and Describe</strong><br>
-    For each card, draw the parent and baby together. Then write or dictate: "How does this parent protect its baby?"
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 4 — Animal Bodyguard Facts</strong><br>
-    Read each fact aloud together and add it to the correct card:
-    <ul style="margin-top:8px;">
-      <li>🐻 <strong>Bear:</strong> The mother keeps cubs close at all times and will charge at predators to defend them.</li>
-      <li>🐧 <strong>Penguin:</strong> Parent huddles the chick under warm feathers to keep it from freezing. Both parents take turns standing guard.</li>
-      <li>🐊 <strong>Alligator:</strong> The mother carries her hatchlings gently in her mouth to bring them to water safely. She also guards the nest.</li>
-      <li>🦘 <strong>Kangaroo:</strong> The joey lives in the mother's pouch, completely protected, until it is big enough to venture out.</li>
-      <li>🐦 <strong>Bird:</strong> Parents sit on eggs to keep them warm, then feed and shelter chicks in the nest until they can fly.</li>
-    </ul>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 5 — Sort the Cards</strong><br>
-    Look at all 5 cards together. Sort them into two groups:<br>
-    <strong>Uses their BODY to protect</strong> (pouch, feathers, carrying in mouth)<br>
-    <strong>Uses their BEHAVIOR (actions) to protect</strong> (charging, standing guard, sitting on eggs)
-    <br><br>
-    Note: Some animals use both! That is a great discovery to discuss.
-  </div>
-
-  <h2>💬 Discussion Questions</h2>
-
-  <div class="question-box">
-    <strong>🗣️ Question 1:</strong> What would happen to baby animals if parents did not protect them?
-    <p class="discussion-hint">Many babies would not survive. They would be eaten by predators, get too cold, or not find food. Parental protection is one of the most important things that helps offspring survive long enough to grow up and have babies of their own.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 2:</strong> Which animal protection behavior surprised you the most?
-    <p class="discussion-hint">Open-ended. Encourage discussion. The alligator carrying babies in its mouth is often the most surprising, because alligators seem dangerous! Yet she is being an incredibly careful and gentle parent. The kangaroo pouch is also a favorite.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 3:</strong> What do human parents do to protect babies?
-    <p class="discussion-hint">Keep them warm, feed them, hold them close, put them in a safe crib, watch them carefully, take them to the doctor, put car seats in the car. Humans use both body (holding, carrying) and behavior (watching, guarding) just like animals!</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 4:</strong> Do all animals protect their young in the same way?
-    <p class="discussion-hint">No, every species has its own protection strategies based on the dangers they face and the tools their bodies give them. A kangaroo has a pouch. A penguin has warm feathers. A bear has size and strength. Each animal uses what it has.</p>
-  </div>
-
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="teacher-note">
-    <strong>Background facts on each animal:</strong>
-    <ul>
-      <li><strong>Bear:</strong> Mother bears are called sows. They have cubs every 2-3 years. The sow is fiercely protective and will not hesitate to charge much larger animals, including humans, to defend her cubs.</li>
-      <li><strong>Penguin:</strong> Emperor penguins huddle in groups of thousands in Antarctic winter. The father balances the egg on his feet under a warm fold of skin for 65 days in freezing temperatures while the mother hunts for food.</li>
-      <li><strong>Alligator:</strong> American alligator mothers are unusually attentive reptile parents. They guard the nest for about 65 days, then gently carry hatchlings in their mouth (a behavior that looks scary but is actually protective). They stay with offspring for 1-2 years.</li>
-      <li><strong>Kangaroo:</strong> A newborn joey is about the size of a jellybean. It crawls into the pouch immediately after birth and stays there for about 6-8 months, nursing and developing until it is ready to emerge.</li>
-      <li><strong>Bird:</strong> Most songbirds have both parents feeding chicks. Chicks are helpless at birth (called "altricial") and need constant feeding and warmth for weeks before they can leave the nest.</li>
-    </ul>
-    <br>
-    <strong>Extension animals:</strong> You can add wolf (pack protects pups), dolphin (mother stays close, other females help), elephant (whole herd protects calves), or meerkat (assigned "sentry" stands guard while others forage).
-    <br><br>
-    <strong>Instinct preview:</strong> This lesson naturally leads to Lesson 4 on instinct vs. learned behavior. If students ask "Did the mother bear LEARN to protect her cubs?", you can say: "Great question! We will answer that in our next lesson. It is called an instinct."
-  </div>
-
-  <!-- ====================== STUDENT WORKSHEET ====================== -->
-  <div class="page-break">
-    <div class="worksheet-header">🛡️ Student Worksheet — Animal Bodyguard Cards</div>
-    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-
-    <h3>My Bodyguard Cards 🃏</h3>
-    <p style="font-size:10pt; color:#555;">Draw the parent and baby together. Write how the parent protects its baby.</p>
-
-    <div class="ws-bodyguard-card">
-      <div class="card-title">🐻 Bear</div>
-      <div style="display:flex; gap:10px;">
-        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
-        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
-      </div>
-    </div>
-
-    <div class="ws-bodyguard-card">
-      <div class="card-title">🐧 Penguin</div>
-      <div style="display:flex; gap:10px;">
-        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
-        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
-      </div>
-    </div>
-
-    <div class="ws-bodyguard-card">
-      <div class="card-title">🐊 Alligator</div>
-      <div style="display:flex; gap:10px;">
-        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
-        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
-      </div>
-    </div>
-
-    <div class="ws-bodyguard-card">
-      <div class="card-title">🦘 Kangaroo</div>
-      <div style="display:flex; gap:10px;">
-        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
-        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
-      </div>
-    </div>
-
-    <div class="ws-bodyguard-card">
-      <div class="card-title">🐦 Bird</div>
-      <div style="display:flex; gap:10px;">
-        <div style="border:2px dashed #a5d6a7; border-radius:6px; min-height:70px; flex:1; padding:4px;"><span style="font-size:8pt;color:#aaa;font-style:italic;">Draw here</span></div>
-        <div style="flex:1;">How the parent protects:<div class="write-line"></div><div class="write-line"></div></div>
-      </div>
-    </div>
-
-    <h3>Sort the Animals!</h3>
-    <p style="font-size:10pt;color:#555;">Write each animal name in the correct column. (Some animals might fit in both!)</p>
-    <div class="sorting-grid">
-      <div class="sorting-col">
-        <h3>Uses Body to Protect</h3>
-        <div class="sorting-blank"></div>
-        <div class="sorting-blank"></div>
-        <div class="sorting-blank"></div>
-      </div>
-      <div class="sorting-col">
-        <h3>Uses Behavior (Actions) to Protect</h3>
-        <div class="sorting-blank"></div>
-        <div class="sorting-blank"></div>
-        <div class="sorting-blank"></div>
-      </div>
-    </div>
-
-    <div class="fill-blank">
-      The <span class="blank-line" style="min-width:120px;"></span> parent protects its baby by <span class="blank-line" style="min-width:160px;"></span>.
-    </div>
-  </div>
-
-  <script src="/feedback-layer.js?v=20260421" data-document-id="doc_gr1-ls3-unit2-lesson3-parents-protect-offspring" data-api-url="https://cassclearly.com" data-content-selector="body"></script>
-<!-- ═══ PAYWALL SYSTEM ═══ -->
-<style>
-  .llc-paywall-overlay {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
-    padding: 48px 24px 40px;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
-  }
-  .llc-paywall-inner {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-  .llc-paywall-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #3B1F6B;
-    margin-bottom: 8px;
-  }
-  .llc-paywall-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    color: #5A7A78;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  .llc-paywall-sub strong { color: #3B1F6B; }
-  .llc-btn-subscribe {
-    display: inline-block;
-    background: #FF6B6B;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 18px 0; padding:10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width:44px; height:44px; object-fit:contain; }
+    .lesson-branding-text { font-size:11pt; font-weight:900; letter-spacing:.02em; color:#5A3A16; }
+    .print-btn { position: fixed; top: 18px; right: 18px; background: var(--forest); color:white; border:0; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; box-shadow:0 3px 12px rgba(0,0,0,.18); z-index:50; }
+    h1 { font-family:'Playfair Display', Georgia, serif; text-align:center; font-size:27pt; color:var(--forest); line-height:1.05; margin:6px 0 8px; }
+    .subtitle { text-align:center; font-weight:800; color:var(--teal); margin:0 0 14px; letter-spacing:.02em; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; background:linear-gradient(135deg,var(--mint),#fff); border:2px solid #b7e2c6; padding:10px 12px; border-radius:16px; margin:14px 0 18px; }
+    .meta span { background:white; border:1px solid #d8efdf; padding:6px 10px; border-radius:999px; font-weight:800; font-size:9.5pt; }
+    .hero-card { display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:center; background:linear-gradient(135deg,#fff9df,#e8f8ff 55%,#effaf0); border:3px solid #d6edcc; border-radius:22px; padding:18px; margin:16px 0 20px; overflow:hidden; }
+    .hero-eyebrow { text-transform:uppercase; font-weight:900; letter-spacing:.09em; color:var(--coral); font-size:9pt; }
+    .hero-title { font-family:'Playfair Display', Georgia, serif; font-size:20pt; color:#214d37; margin:4px 0 8px; }
+    .hero-claim { font-size:12.5pt; font-weight:900; color:#233; }
+    .hero-visual { min-height:190px; border-radius:18px; background: radial-gradient(circle at 30% 20%, #fff 0 18%, transparent 19%), linear-gradient(135deg,#bff0d4,#fdf2bc); display:flex; align-items:center; justify-content:center; font-size:55pt; box-shadow: inset 0 0 0 3px rgba(255,255,255,.7); }
+    .hero-visual img { width:100%; height:100%; object-fit:cover; border-radius:18px; display:block; }
+    .hero-caption { font-size:9pt; color:#52645a; font-style:italic; margin-top:6px; text-align:center; }
+    h2 { font-family:'Playfair Display', Georgia, serif; font-size:16pt; color:white; background:linear-gradient(90deg,var(--forest),var(--teal)); padding:9px 14px; border-radius:12px; margin:22px 0 12px; break-after:avoid; }
+    h3 { color:var(--forest); font-size:12.5pt; margin:16px 0 8px; border-bottom:2px solid #b7e2c6; padding-bottom:3px; }
+    ul, ol { margin:8px 0; padding-left:24px; } li { margin:4px 0; }
+    .lesson-job { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0; }
+    .job-card, .materials-box, .teacher-note, .answer-key, .safety-note, .mini-card { border-radius:14px; padding:13px 15px; }
+    .job-card { background:#fff; border:2px solid #b7e2c6; box-shadow:0 2px 0 #dff2e5; }
+    .job-card strong { color:var(--forest); display:block; margin-bottom:4px; }
+    .materials-box { background:#fff8df; border:2px solid #ffd77a; }
+    .safety-note { background:#fff0f0; border:2px solid #ffb7b7; }
+    .teacher-note { background:#f4efff; border:2px dashed #bda7ef; }
+    .answer-key { background:#e8f7ff; border:2px solid #9dd7f2; }
+    .vocab-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .vocab-card { background:var(--mint); border:2px solid #b7e2c6; border-radius:14px; padding:10px 12px; }
+    .vocab-word { font-weight:900; color:var(--forest); font-size:12pt; }
+    .procedure-step { margin:9px 0; padding:12px 14px; border-radius:14px; background:#f6fbf7; border-left:7px solid var(--leaf); }
+    .procedure-step strong { color:var(--forest); }
+    .question-box { background:#fff; border:2px solid #b7e2c6; border-left:7px solid var(--coral); padding:11px 14px; margin:9px 0; border-radius:12px; }
+    .discussion-hint { color:#4c6055; font-size:10pt; margin-top:5px; font-style:italic; }
+    .evidence-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
+    .evidence-pill { background:white; border:2px solid #b7e2c6; border-radius:16px; padding:10px; text-align:center; font-weight:900; min-height:74px; display:flex; flex-direction:column; justify-content:center; }
+    .evidence-pill span { font-size:22pt; display:block; }
+    .page-break { page-break-before:always; margin-top:24px; }
+    .worksheet-header { background:linear-gradient(90deg,var(--forest),var(--leaf)); color:white; padding:10px 14px; border-radius:14px; font-size:15pt; font-weight:900; text-align:center; margin-bottom:12px; }
+    .name-date { text-align:center; font-size:11pt; margin-bottom:14px; }
+    .ws-table { width:100%; border-collapse:collapse; margin:10px 0 14px; font-size:10pt; }
+    .ws-table th { background:var(--forest); color:white; border:2px solid #c6ead1; padding:8px; }
+    .ws-table td { border:2px dashed #a9dcbc; padding:10px; min-height:32px; vertical-align:top; }
+    .ws-table tr:nth-child(even) td { background:#f3fbf5; }
+    .draw-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:10px 0; }
+    .draw-box { border:3px dashed #9ed7b2; border-radius:14px; min-height:120px; padding:8px; background:#fff; }
+    .draw-label { color:#62816c; font-size:9pt; font-weight:800; text-align:center; }
+    .write-lines { background:#fff; border:2px solid #d6e9dd; border-radius:12px; padding:10px 12px; margin:9px 0; }
+    .line { border-bottom:1.8px solid #9ab9a4; height:24px; margin:5px 0; }
+    .word-bank { background:#fff9df; border:2px solid #ffd77a; border-radius:12px; padding:9px 12px; font-weight:900; }
+    .footer-note { text-align:center; padding:24px 16px 16px; font-size:.78rem; color:#999; border-top:1px solid #eee; margin-top:30px; }
+    @media print { body { padding:.25in; font-size:10pt; } .print-btn, .no-print { display:none !important; } .hero-card { grid-template-columns:1fr 1fr; } .procedure-step,.question-box,.teacher-note,.materials-box,.job-card,.vocab-card,.answer-key { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+    @media (max-width:720px) { body { padding:18px; } .hero-card,.lesson-job,.evidence-strip,.vocab-grid,.draw-grid { grid-template-columns:1fr; } h1 { font-size:23pt; } }
 </style>
-
+</head>
+<body data-document-id="doc_gr1-ls3-unit2-lesson3-parents-protect-offspring" data-doc-id="doc_gr1-ls3-unit2-lesson3-parents-protect-offspring">
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>🪺🛡️🥣 Parent Care Survival Stations</h1>
+  <p class="subtitle">Grade 1 Life Science · Parents &amp; Offspring Unit · Lesson 3 of 6</p>
+  <div class="meta"><span>📚 Grade 1</span><span>⏱️ 40–50 minutes</span><span>🔬 NGSS 1-LS3-1</span><span>🏠 Household materials</span></div>
+  <div class="hero-card">
+    <div><div class="hero-eyebrow">Family Science File #3</div><div class="hero-title">Explain how adults help offspring survive by meeting needs.</div><div class="hero-claim">Big idea: Many animal parents help offspring survive by giving food, warmth, protection, transport, or shelter.</div></div>
+    <div><div class="hero-visual" aria-label="Unit visual placeholder pending GPT Image 2 asset">🐧🪺🐊</div><div class="hero-caption">Look for parent-offspring clues: shared traits, differences, and survival supports.</div></div>
+  </div>
+  <div class="lesson-job"><div class="job-card"><strong>Student does</strong> observe · sort · draw · explain</div><div class="job-card"><strong>Evidence focus</strong> shared traits + differences</div><div class="job-card"><strong>Family win</strong> short, visual, printable</div></div>
+  <div class="standards-box mini-card" style="background:#f4efff;border:2px solid #cbb6f2;"><strong>NGSS 1-LS3-1:</strong> Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.</div>
+  <h2>🎯 Learning Objectives</h2><ul><li>Name common needs of young animals: food, water, warmth, shelter, and safety.</li><li>Match parent-care behaviors to the need they help meet.</li><li>Use cause-and-effect language: “This helps the offspring survive because…”</li></ul>
+  <h2>📦 Materials</h2><div class="materials-box"><h3>What You Need</h3><ul><li>Towel or blanket</li><li>Small bowl/spoon</li><li>Paper nest materials: scrap paper, cotton balls, leaves, yarn, or tissue</li><li>Toy animal or crumpled-paper “baby animal”</li><li>Crayons</li></ul><p><strong>No special kit:</strong> substitute photos, drawings, toys, or household objects freely.</p></div>
+  <h2>🧠 Vocabulary</h2><div class="vocab-grid"><div class="vocab-card"><div class="vocab-word">Survive</div><div>Stay alive and keep growing.</div></div><div class="vocab-card"><div class="vocab-word">Need</div><div>Something living things must have to live.</div></div><div class="vocab-card"><div class="vocab-word">Protect</div><div>Keep safe from danger.</div></div><div class="vocab-card"><div class="vocab-word">Shelter</div><div>A safe place to rest or grow.</div></div></div>
+  <h2>📚 Parent Read-Aloud Background</h2><p>Offspring are not just small adults. Many young animals cannot find enough food, stay warm, or avoid danger on their own. Animal parents can change the offspring’s chance of survival by caring for them.</p><p>Care is not one single behavior. A bird feeds chicks. A penguin warms a chick. An alligator carries hatchlings to water. A fox guards a den. These are different actions with the same science purpose: helping offspring live long enough to grow.</p>
+  <h2>🔬 Activity Procedure</h2><div class="procedure-step"><strong>Step 1 — Set up four stations</strong><br>Make quick stations labeled by action: feed, warm, protect, shelter. Use objects instead of buying materials.</div><div class="procedure-step"><strong>Step 2 — Act and match</strong><br>Student moves the toy baby animal through each station and says what the parent is doing.</div><div class="procedure-step"><strong>Step 3 — Build a shelter</strong><br>Use paper/towel/scraps to build a nest or den that protects the “baby” from a pretend wind or bump.</div><div class="procedure-step"><strong>Step 4 — Connect action to need</strong><br>For each station, fill the sentence: “The parent ____ so the offspring can ____.”</div><div class="procedure-step"><strong>Step 5 — Choose best evidence</strong><br>Ask: “Which care action would matter most for a baby bird? Which for a baby turtle? Why might answers differ?”</div>
+  <h2>💬 Discussion Questions</h2><div class="question-box"><strong>Question 1:</strong> Why do many babies need more help than adults?<p class="discussion-hint">They are smaller, weaker, still growing, and may not yet find food or protect themselves.</p></div><div class="question-box"><strong>Question 2:</strong> Is parent care only cuddling?<p class="discussion-hint">No. Parent care can be feeding, warming, guarding, carrying, shelter-building, or teaching later.</p></div><div class="question-box"><strong>Question 3:</strong> How does shelter help offspring survive?<p class="discussion-hint">It can hide them, block weather, and keep them close to the parent.</p></div><div class="question-box"><strong>Question 4:</strong> Do all animals give the same amount of care?<p class="discussion-hint">No. This lesson focuses on animals that do care. Other species use many eggs/offspring or other strategies.</p></div>
+  <h2>👩‍🏫 Parent Notes</h2><div class="teacher-note"><strong>Keep it Grade 1:</strong> The target is observation and evidence, not genetics vocabulary beyond simple inherited traits. If a family situation makes human comparisons sensitive, use animal and plant examples only. The science standard is fully met without personal family photos.</div>
+  <div class="page-break"><div class="worksheet-header">🪺🛡️🥣 Student Worksheet — Parent Care Survival Stations</div><p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p><h3>1) Survival Station Match</h3><table class="ws-table"><tr><th>Parent action</th><th>Need it helps</th><th>How it helps survival</th></tr><tr><td>Feeds offspring</td><td></td><td></td></tr><tr><td>Warms offspring</td><td></td><td></td></tr><tr><td>Protects offspring</td><td></td><td></td></tr><tr><td>Builds or uses shelter</td><td></td><td></td></tr></table><h3>2) Design a Safe Place</h3><div class="draw-box"><div class="draw-label">Draw a nest, den, pouch, or safe place for offspring.</div></div><div class="write-lines"><strong>This helps offspring survive because...</strong><div class="line"></div><div class="line"></div></div><div class="answer-key"><strong>Parent answer-key guidance:</strong> Food, warmth, protection, and shelter are all survival supports. Student should connect action to need: “warming helps the baby stay alive because it cannot keep itself warm yet.”</div></div>
+  
+<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
 <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
   <div class="llc-paywall-inner">
     <span class="llc-paywall-emoji">🥼</span>
     <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
-    <p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
+    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
+    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
   </div>
 </div>
-
-<script>
-(function() {
-  var ACCESS_KEY = 'llc_access_v2_locked';
-
-  function isUnlocked() {
-    return localStorage.getItem(ACCESS_KEY) === 'granted';
+<style>
+  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
+  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
+</style>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = '/feedback-layer.js?v=20260421';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = document.body.dataset.documentId;
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
   }
-
-  function lockLesson() {
-    var goalsKeywords = ['learning objective', 'learning goal', 'big idea', 'the big idea'];
-    var allH2 = document.querySelectorAll('h2');
-    var lastGoalsH2 = null;
-
-    // Find the last h2 that matches a "goals/objective" keyword
-    allH2.forEach(function(h2) {
-      var text = h2.textContent.toLowerCase();
-      if (goalsKeywords.some(function(k) { return text.indexOf(k) !== -1; })) {
-        lastGoalsH2 = h2;
-      }
-    });
-
-    if (!lastGoalsH2) {
-      // Fallback: hide by class/id keywords
-      var lockSelectors = [
-        '[class*="material"]', '[id*="material"]',
-        '[class*="procedure"]', '[id*="procedure"]',
-        '[class*="discussion"]', '[id*="discussion"]',
-        '[class*="worksheet"]', '[id*="worksheet"]',
-        '[class*="teacher"]', '[id*="teacher"]',
-        '[class*="answer"]', '[id*="answer"]',
-        '[class*="extension"]', '[id*="extension"]',
-        '[class*="question"]', '[id*="question"]',
-        '[class*="page-break"]', '[id*="page-break"]'
-      ];
-      lockSelectors.forEach(function(sel) {
-        document.querySelectorAll(sel).forEach(function(el) {
-          el.style.display = 'none';
-        });
-      });
-      document.getElementById('llcPaywall').style.display = 'block';
-      return;
-    }
-
-    // Walk siblings/cousins after the goals section and hide them
-    // Strategy: collect all top-level body children; hide everything after lastGoalsH2's
-    // containing top-level element (or after the next h2 that follows it)
-
-    // Find the next h2 after lastGoalsH2 — everything from there is locked
-    var foundGoals = false;
-    var lockFrom = null;
-    allH2.forEach(function(h2) {
-      if (h2 === lastGoalsH2) { foundGoals = true; return; }
-      if (foundGoals && !lockFrom) { lockFrom = h2; }
-    });
-
-    if (!lockFrom) {
-      // No further h2 found; lock everything after the goals h2 paragraph
-      // Hide siblings that follow lastGoalsH2
-      var sibling = lastGoalsH2.nextElementSibling;
-      while (sibling) {
-        sibling.style.display = 'none';
-        sibling = sibling.nextElementSibling;
-      }
-    } else {
-      // Lock from lockFrom h2 onward: hide lockFrom and all following siblings
-      var el = lockFrom;
-      while (el) {
-        el.style.display = 'none';
-        el = el.nextElementSibling;
-      }
-    }
-
-    document.getElementById('llcPaywall').style.display = 'block';
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    else loadFeedbackLayer();
   }
+})();</script>
+<script>(function(){
+  var ACCESS_KEY='llc_access_v2_locked';
+  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
+  function lockLesson(){
+    var h2s=Array.from(document.querySelectorAll('h2'));
+    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
+    if(idx<0) idx=Math.min(2,h2s.length-1);
+    var lockFrom=h2s[idx]; if(!lockFrom) return;
+    var kids=Array.from(document.body.children); var hide=false;
+    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
+    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
+  }
+  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
+})();</script>
+<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
 
-  document.addEventListener('DOMContentLoaded', function() {
-    if (!isUnlocked()) {
-      lockLesson();
-    }
-  });
-})();
-</script>
-<!-- ═══ END PAYWALL ═══ -->
+  <div class="footer-note">© 2026 Little Lab Coats. For personal, non-commercial household use only.</div>
 </body>
 </html>

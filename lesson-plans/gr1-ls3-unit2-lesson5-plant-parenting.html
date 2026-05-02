@@ -3,597 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plant Parenting — Parents and Offspring Unit, Lesson 5</title>
+  <title>Seeds Are Plant Offspring — Parents &amp; Offspring Unit, Lesson 5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
+    :root {
+      --forest:#1f6f4a; --leaf:#37a66b; --mint:#e9f8ee; --sky:#e7f6ff;
+      --teal:#087f8c; --coral:#ff6b6b; --gold:#ffcb5b; --cream:#fffaf0;
+      --grape:#5b3f97; --ink:#25312b; --soft:#f7fbf8;
+    }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.5in;
-      font-size: 11pt;
-      line-height: 1.4;
-      color: #222;
+      font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+      max-width: 8.5in; margin: 0 auto; padding: 0.45in;
+      color: var(--ink); background: white; line-height: 1.45; font-size: 11pt;
     }
-    h1 {
-      text-align: center;
-      font-size: 22pt;
-      margin-bottom: 5px;
-      border-bottom: 3px solid #2e7d32;
-      padding-bottom: 10px;
-      color: #2e7d32;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #555;
-      font-size: 13pt;
-    }
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      background: #e8f5e9;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 10pt;
-      border: 1px solid #a5d6a7;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-    h2 {
-      font-size: 14pt;
-      background: #2e7d32;
-      color: white;
-      padding: 8px 14px;
-      margin: 24px 0 12px 0;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 12pt;
-      color: #1b5e20;
-      border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 4px;
-      margin: 18px 0 8px 0;
-    }
-    ul, ol { margin: 8px 0; padding-left: 25px; }
-    li { margin-bottom: 5px; }
-    .hero-image {
-      text-align: center;
-      margin: 16px 0;
-    }
-    .hero-image .emoji-hero {
-      font-size: 72pt;
-      line-height: 1.2;
-    }
-    .hero-image .caption {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-      margin-top: 4px;
-    }
-    .materials-box {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
-    .procedure-step {
-      background: #e8f5e9;
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border-left: 5px solid #2e7d32;
-    }
-    .procedure-step strong { color: #1b5e20; }
-    .question-box {
-      background: #e8f5e9;
-      border-left: 5px solid #00B894;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .discussion-hint {
-      font-style: italic;
-      color: #555;
-      margin-top: 6px;
-      font-size: 10pt;
-    }
-    .tip-box {
-      background: #e0f7fa;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-    }
-    .standards-box {
-      background: #f3e5f5;
-      border: 1px solid #ce93d8;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .standards-box strong { color: #7b1fa2; }
-    .teacher-note {
-      background: #f5f5f5;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #555;
-    }
-    .teacher-note strong { color: #333; }
-    .vocab-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 12px 0;
-    }
-    .vocab-card {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 10px 12px;
-    }
-    .vocab-card .vocab-word { font-weight: bold; color: #1b5e20; font-size: 12pt; }
-    .vocab-card .vocab-def { font-size: 10pt; color: #333; margin-top: 4px; }
-    .seed-info-box {
-      background: #f1f8e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-    }
-    .seed-info-box h3 { color: #1b5e20; }
-    .worksheet-header {
-      background: #1b5e20;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 14pt;
-      font-weight: bold;
-      margin: 0 0 12px 0;
-      text-align: center;
-    }
-    .name-date {
-      text-align: center;
-      margin-bottom: 16px;
-      font-size: 12pt;
-    }
-    .seed-detective-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 8px;
-      align-items: center;
-      margin: 6px 0;
-      font-size: 10pt;
-    }
-    .seed-detective-row.header {
-      font-weight: bold;
-      color: #1b5e20;
-      background: #e8f5e9;
-      padding: 6px 8px;
-      border-radius: 4px;
-    }
-    .seed-draw-box {
-      border: 2px dashed #2e7d32;
-      border-radius: 6px;
-      min-height: 60px;
-      padding: 4px;
-    }
-    .seed-draw-box .draw-label {
-      font-size: 8pt;
-      color: #aaa;
-      font-style: italic;
-    }
-    .fill-blank {
-      background: #e8f5e9;
-      border: 2px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-      font-size: 12pt;
-    }
-    .blank-line {
-      display: inline-block;
-      border-bottom: 2px solid #1b5e20;
-      min-width: 160px;
-      margin: 0 4px;
-    }
-    .journal-box {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-    }
-    .journal-box h3 { color: #e65100; border-color: #ffcc80; }
-    .journal-write-line {
-      border-bottom: 1px solid #bbb;
-      min-height: 24px;
-      margin: 6px 0;
-    }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
-    }
-    .print-btn {
-      position: fixed; top: 20px; right: 20px; background: #2e7d32; color: white;
-      border: none; padding: 10px 18px; border-radius: 8px; font-size: 0.95rem;
-      font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000; display: flex; align-items: center; gap: 6px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-    @media print {
-      body { padding: 0.25in; font-size: 10pt; }
-      h2 { break-after: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box {
-        break-inside: avoid; page-break-inside: avoid;
-      }
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .print-btn { display: none; }
-    }
-      .lesson-branding {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 0 0 18px 0;
-      padding: 10px 14px;
-      background: #fffaf3;
-      border: 1.5px solid #ffd6a5;
-      border-radius: 12px;
-    }
-    .lesson-branding img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-    }
-    .lesson-branding-text {
-      font-family: 'Lato', Arial, sans-serif;
-      font-size: 11pt;
-      font-weight: 700;
-      letter-spacing: .02em;
-      color: #5A3A16;
-    }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
-</head>
-<body data-document-id="doc_gr1-ls3-unit2-lesson5-plant-parenting" data-doc-id=""><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
-  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
-
-  <h1>🌻🌱🍎 Plant Parenting</h1>
-  <p class="subtitle">Parents and Offspring Unit, Lesson 5</p>
-
-  <div class="meta">
-    <span>📚 <strong>Grade:</strong> 1st Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Life Science</span>
-    <span>📋 <strong>NGSS Standard:</strong> 1-LS3-1</span>
-  </div>
-
-  <div class="hero-image">
-    <div class="emoji-hero">🌻🌱🍎</div>
-    <div class="caption">Every seed holds a tiny recipe for a new plant, passed down from its parent. What will grow from yours?</div>
-  </div>
-
-  <div class="standards-box">
-    <strong>📋 NGSS Standard:</strong><br>
-    <strong>1-LS3-1</strong> — Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.
-  </div>
-
-  <h2>🎯 Learning Objectives</h2>
-  <ul>
-    <li>Recognize that plants also pass traits to offspring through <strong>seeds</strong>.</li>
-    <li>Observe that plant offspring resemble the parent plant in shape, color, and type.</li>
-    <li>Understand that seeds carry <strong>"instructions"</strong> (DNA) for growing a new plant just like the parent.</li>
-  </ul>
-
-  <h2>📦 Materials</h2>
-  <div class="materials-box">
-    <h3>🏠 What You Need (Household Only)</h3>
-    <ul>
-      <li>2-3 different seeds from your kitchen (apple seeds, sunflower seeds from a snack bag, dried beans)</li>
-      <li>Paper plates (one per seed type)</li>
-      <li>Magnifying glass (optional, but fun!)</li>
-      <li>Paper and pencil</li>
-      <li>One small cup or container with soil (for planting one seed at the end)</li>
-    </ul>
-    <p style="font-size:10pt; color:#555; margin-top:8px;">✅ <em>All seeds can come from your kitchen pantry! No purchasing required.</em></p>
-  </div>
-
-  <h2>📖 Vocabulary</h2>
-  <div class="vocab-grid">
-    <div class="vocab-card">
-      <div class="vocab-word">🌰 Seed</div>
-      <div class="vocab-def">A small structure that can grow into a new plant, made by the parent plant.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🔍 Trait</div>
-      <div class="vocab-def">An inherited feature passed from parent plant to offspring plant.</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">📋 Instructions</div>
-      <div class="vocab-def">The information inside a seed that tells it how to grow. Scientists call this DNA. Think of it like a recipe!</div>
-    </div>
-    <div class="vocab-card">
-      <div class="vocab-word">🌻 Parent Plant</div>
-      <div class="vocab-def">The plant that made the seed. The offspring plant will look like it.</div>
-    </div>
-  </div>
-
-  <h2>📚 Background (Read Aloud to Student)</h2>
-  <p>We have been learning that animal offspring look like their parents. But what about plants? Plants do not have babies the way animals do. Instead, they make <strong>seeds</strong>. Every seed is like a tiny package with two things inside: a baby plant (called an embryo) and a set of instructions for how to grow. Those instructions are called <strong>DNA</strong>, but you can think of them as a recipe. Just like a recipe for chocolate chip cookies will always make chocolate chip cookies, a sunflower seed's recipe will always grow a sunflower.</p>
-
-  <p>This is why, when you plant a sunflower seed, you get a sunflower, not a rose. The instructions in the seed are specific to the parent plant. The new plant (the offspring) will have the same traits as its parent: the same leaf shape, the same flower color, the same height, the same type of fruit. Traits are passed from the parent plant to the seed to the new plant, just like they are passed from parent animals to their offspring.</p>
-
-  <p>Here is something wonderful to discover today: if you carefully peel open a dried bean or a large seed, you can actually see the tiny baby plant waiting inside! This tiny plant is called the embryo, and it has everything it needs to start growing. All it needs is water, soil, and sunlight, and those hidden instructions will take over and build a brand new plant.</p>
-
-  <div class="tip-box">
-    🌱 <strong>Try it!</strong> Soak a dried bean in water overnight, then peel it open the next day. You can see the baby plant (embryo) inside with a tiny root and tiny leaf shapes already formed!
-  </div>
-
-  <h2>🔬 Procedure</h2>
-
-  <div class="procedure-step">
-    <strong>Step 1 — Gather and Observe Seeds</strong><br>
-    Collect 2-3 different seeds from your kitchen and place each type on its own paper plate. Look carefully at each seed before touching them. How are they different? Notice size, shape, color, and texture.
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 2 — Seed Detective 🔍</strong><br>
-    For each seed, draw it on the left side of your paper. On the right side, draw the plant you predict will grow from it. Label each drawing with the seed name and plant name.
-    <ul style="margin-top:8px;">
-      <li>🍎 Apple seed grows into... an apple tree!</li>
-      <li>🌻 Sunflower seed grows into... a sunflower!</li>
-      <li>🫘 Dried bean grows into... a bean plant!</li>
-    </ul>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 3 — Could It Grow Into Something Else?</strong><br>
-    Ask together: "If you plant a sunflower seed, could it ever grow into a rose? Why not?" Give the student time to reason through it. Then introduce the instructions idea: the seed only knows how to follow the sunflower recipe!
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 4 — The Instructions Inside</strong><br>
-    Introduce this idea: "Inside every seed is all the information it needs to make a new plant just like its parent. We call these instructions DNA, but you can think of them like a recipe. The seed always follows its own recipe."
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 5 — Seed Investigation (Magnifying Glass)</strong><br>
-    Look at each seed up close with a magnifying glass if available. Compare sizes and textures. Now carefully peel open a dried bean to see the tiny plant inside (the embryo). Look for the tiny root and leaf shapes. This is the baby plant!
-  </div>
-
-  <div class="procedure-step">
-    <strong>Step 6 — Plant Your Seed! 🌱</strong><br>
-    Choose one seed and plant it in a small cup of soil. Water it lightly. Place it in a sunny spot. Record the date and your prediction in the seed journal on your worksheet. Check back in 2 weeks!
-  </div>
-
-  <h2>💬 Discussion Questions</h2>
-
-  <div class="question-box">
-    <strong>🗣️ Question 1:</strong> If you plant a sunflower seed, can you get a rose? Why not?
-    <p class="discussion-hint">No! The instructions inside the sunflower seed only know how to make a sunflower. The seed follows its recipe, and a sunflower recipe only makes sunflowers. It cannot follow a rose recipe because it does not have one!</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 2:</strong> What traits does a baby plant inherit from its parent plant?
-    <p class="discussion-hint">Leaf shape, flower color, height, the type of fruit it makes, the shape of its seeds. Everything about the plant comes from the instructions in the seed. The new plant is programmed to look like its parent before it even starts growing.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 3:</strong> How is a seed like an egg?
-    <p class="discussion-hint">Both contain a baby organism inside, protected by a shell or outer coat. Both have all the starting information and initial nutrition to begin growing. A seed even has a food supply inside (called the cotyledon) to feed the baby plant until it can make its own food from sunlight!</p>
-  </div>
-
-  <div class="question-box">
-    <strong>🗣️ Question 4:</strong> Why might two sunflowers from the same parent plant look slightly different from each other?
-    <p class="discussion-hint">Just like human children from the same parents, plant offspring can have small variations. One might be a little taller, or have slightly different petal colors. This is what makes each living thing unique, and it is a normal part of inheritance.</p>
-  </div>
-
-  <h2>👩‍🏫 Parent/Teacher Notes</h2>
-  <div class="teacher-note">
-    <strong>Sourcing seeds from your pantry:</strong> Apple seeds (from a cut apple), dried kidney or pinto beans from the bag, sunflower seeds from a snack pack (raw, unroasted work best), or even popcorn kernels (a corn variety). Unroasted seeds are much more likely to germinate.
-    <br><br>
-    <strong>If seeds are unavailable:</strong> Have the student draw seeds and parent plants from memory or description. The observation steps can be done imaginatively: "Imagine you are holding a tiny sunflower seed. What do you notice?" The conceptual learning still happens.
-    <br><br>
-    <strong>Caring for the planted seed:</strong> Plant in a sunny window. Water when the top layer of soil feels dry (roughly every 2-3 days for a small cup). Beans sprout within 5-10 days. Sunflower seeds sprout in 7-14 days. Apple seeds take much longer and need cold stratification, so stick to beans and sunflower seeds for this activity.
-    <br><br>
-    <strong>Connecting to DNA for Grade 1:</strong> Use the "recipe" analogy consistently. You do not need to explain the chemistry. The key idea is: the instructions are inside the seed before it even touches soil, and those instructions were put there by the parent plant. That is inheritance.
-    <br><br>
-    <strong>The bean embryo dissection:</strong> Soak a dried bean in water for several hours or overnight before the lesson. When soft, it peels open easily to reveal the embryo inside. This is a genuinely magical moment for young students. Point out the two halves of the bean (cotyledons, the food supply) and the tiny plant tucked between them.
-  </div>
-
-  <!-- ====================== STUDENT WORKSHEET ====================== -->
-  <div class="page-break">
-    <div class="worksheet-header">🌱 Student Worksheet — Plant Parenting</div>
-    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
-
-    <h3>Seed Detective! 🔍</h3>
-    <p style="font-size:10pt; color:#555;">For each seed, draw the seed AND the plant it will grow into. Then write your prediction!</p>
-
-    <div style="margin: 10px 0;">
-      <div class="seed-detective-row header">
-        <div>Seed Name</div>
-        <div>Draw the Seed</div>
-        <div>Draw the Parent Plant</div>
-        <div>What will grow?</div>
-      </div>
-      <div class="seed-detective-row" style="margin-top:8px;">
-        <div>🍎 Apple Seed</div>
-        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
-        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
-        <div class="seed-draw-box"><span class="draw-label">Write/Draw</span></div>
-      </div>
-      <div class="seed-detective-row" style="margin-top:8px;">
-        <div>🌻 Sunflower Seed</div>
-        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
-        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
-        <div class="seed-draw-box"><span class="draw-label">Write/Draw</span></div>
-      </div>
-      <div class="seed-detective-row" style="margin-top:8px;">
-        <div>🫘 Dried Bean</div>
-        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
-        <div class="seed-draw-box"><span class="draw-label">Draw</span></div>
-        <div class="seed-draw-box"><span class="draw-label">Write/Draw</span></div>
-      </div>
-    </div>
-
-    <div class="fill-blank">
-      A <span class="blank-line" style="min-width:120px;"></span> seed will grow into a <span class="blank-line" style="min-width:120px;"></span>.
-    </div>
-    <div class="fill-blank">
-      Seeds carry <span class="blank-line"></span> for making a new plant.
-    </div>
-
-    <div class="journal-box">
-      <h3>🌱 My Planted Seed Journal</h3>
-      <p style="font-size:10pt; color:#555;">Record what happens to your planted seed over the next two weeks!</p>
-      <div style="font-size:10pt; margin-bottom:4px;"><strong>Date planted:</strong> <span style="border-bottom:1px solid #aaa; display:inline-block; min-width:150px;">&nbsp;</span></div>
-      <div style="font-size:10pt; margin-bottom:4px;"><strong>Type of seed:</strong> <span style="border-bottom:1px solid #aaa; display:inline-block; min-width:150px;">&nbsp;</span></div>
-      <div style="font-size:10pt; margin-bottom:8px;"><strong>My prediction (what will happen):</strong></div>
-      <div class="journal-write-line"></div>
-      <div class="journal-write-line"></div>
-      <div style="font-size:10pt; margin:10px 0 4px;"><strong>2 weeks later (date: _____________), what do I see?</strong></div>
-      <div class="journal-write-line"></div>
-      <div class="journal-write-line"></div>
-    </div>
-  </div>
-
-  <script src="/feedback-layer.js?v=20260421" data-document-id="doc_gr1-ls3-unit2-lesson5-plant-parenting" data-api-url="https://cassclearly.com" data-content-selector="body"></script>
-<!-- ═══ PAYWALL SYSTEM ═══ -->
-<style>
-  .llc-paywall-overlay {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.97) 30%, #fff 100%);
-    padding: 48px 24px 40px;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 -8px 40px rgba(59,31,107,0.12);
-  }
-  .llc-paywall-inner {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-  .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-  .llc-paywall-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #3B1F6B;
-    margin-bottom: 8px;
-  }
-  .llc-paywall-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    color: #5A7A78;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  .llc-paywall-sub strong { color: #3B1F6B; }
-  .llc-btn-subscribe {
-    display: inline-block;
-    background: #FF6B6B;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(255,107,107,0.28);
-    transition: background 0.2s, transform 0.15s;
-  }
-  .llc-btn-subscribe:hover { background: #e05555; transform: translateY(-2px); }
+    .lesson-branding { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 18px 0; padding:10px 14px; background:#fffaf3; border:1.5px solid #ffd6a5; border-radius:12px; }
+    .lesson-branding img { width:44px; height:44px; object-fit:contain; }
+    .lesson-branding-text { font-size:11pt; font-weight:900; letter-spacing:.02em; color:#5A3A16; }
+    .print-btn { position: fixed; top: 18px; right: 18px; background: var(--forest); color:white; border:0; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; box-shadow:0 3px 12px rgba(0,0,0,.18); z-index:50; }
+    h1 { font-family:'Playfair Display', Georgia, serif; text-align:center; font-size:27pt; color:var(--forest); line-height:1.05; margin:6px 0 8px; }
+    .subtitle { text-align:center; font-weight:800; color:var(--teal); margin:0 0 14px; letter-spacing:.02em; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; background:linear-gradient(135deg,var(--mint),#fff); border:2px solid #b7e2c6; padding:10px 12px; border-radius:16px; margin:14px 0 18px; }
+    .meta span { background:white; border:1px solid #d8efdf; padding:6px 10px; border-radius:999px; font-weight:800; font-size:9.5pt; }
+    .hero-card { display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; align-items:center; background:linear-gradient(135deg,#fff9df,#e8f8ff 55%,#effaf0); border:3px solid #d6edcc; border-radius:22px; padding:18px; margin:16px 0 20px; overflow:hidden; }
+    .hero-eyebrow { text-transform:uppercase; font-weight:900; letter-spacing:.09em; color:var(--coral); font-size:9pt; }
+    .hero-title { font-family:'Playfair Display', Georgia, serif; font-size:20pt; color:#214d37; margin:4px 0 8px; }
+    .hero-claim { font-size:12.5pt; font-weight:900; color:#233; }
+    .hero-visual { min-height:190px; border-radius:18px; background: radial-gradient(circle at 30% 20%, #fff 0 18%, transparent 19%), linear-gradient(135deg,#bff0d4,#fdf2bc); display:flex; align-items:center; justify-content:center; font-size:55pt; box-shadow: inset 0 0 0 3px rgba(255,255,255,.7); }
+    .hero-visual img { width:100%; height:100%; object-fit:cover; border-radius:18px; display:block; }
+    .hero-caption { font-size:9pt; color:#52645a; font-style:italic; margin-top:6px; text-align:center; }
+    h2 { font-family:'Playfair Display', Georgia, serif; font-size:16pt; color:white; background:linear-gradient(90deg,var(--forest),var(--teal)); padding:9px 14px; border-radius:12px; margin:22px 0 12px; break-after:avoid; }
+    h3 { color:var(--forest); font-size:12.5pt; margin:16px 0 8px; border-bottom:2px solid #b7e2c6; padding-bottom:3px; }
+    ul, ol { margin:8px 0; padding-left:24px; } li { margin:4px 0; }
+    .lesson-job { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0; }
+    .job-card, .materials-box, .teacher-note, .answer-key, .safety-note, .mini-card { border-radius:14px; padding:13px 15px; }
+    .job-card { background:#fff; border:2px solid #b7e2c6; box-shadow:0 2px 0 #dff2e5; }
+    .job-card strong { color:var(--forest); display:block; margin-bottom:4px; }
+    .materials-box { background:#fff8df; border:2px solid #ffd77a; }
+    .safety-note { background:#fff0f0; border:2px solid #ffb7b7; }
+    .teacher-note { background:#f4efff; border:2px dashed #bda7ef; }
+    .answer-key { background:#e8f7ff; border:2px solid #9dd7f2; }
+    .vocab-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .vocab-card { background:var(--mint); border:2px solid #b7e2c6; border-radius:14px; padding:10px 12px; }
+    .vocab-word { font-weight:900; color:var(--forest); font-size:12pt; }
+    .procedure-step { margin:9px 0; padding:12px 14px; border-radius:14px; background:#f6fbf7; border-left:7px solid var(--leaf); }
+    .procedure-step strong { color:var(--forest); }
+    .question-box { background:#fff; border:2px solid #b7e2c6; border-left:7px solid var(--coral); padding:11px 14px; margin:9px 0; border-radius:12px; }
+    .discussion-hint { color:#4c6055; font-size:10pt; margin-top:5px; font-style:italic; }
+    .evidence-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
+    .evidence-pill { background:white; border:2px solid #b7e2c6; border-radius:16px; padding:10px; text-align:center; font-weight:900; min-height:74px; display:flex; flex-direction:column; justify-content:center; }
+    .evidence-pill span { font-size:22pt; display:block; }
+    .page-break { page-break-before:always; margin-top:24px; }
+    .worksheet-header { background:linear-gradient(90deg,var(--forest),var(--leaf)); color:white; padding:10px 14px; border-radius:14px; font-size:15pt; font-weight:900; text-align:center; margin-bottom:12px; }
+    .name-date { text-align:center; font-size:11pt; margin-bottom:14px; }
+    .ws-table { width:100%; border-collapse:collapse; margin:10px 0 14px; font-size:10pt; }
+    .ws-table th { background:var(--forest); color:white; border:2px solid #c6ead1; padding:8px; }
+    .ws-table td { border:2px dashed #a9dcbc; padding:10px; min-height:32px; vertical-align:top; }
+    .ws-table tr:nth-child(even) td { background:#f3fbf5; }
+    .draw-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:10px 0; }
+    .draw-box { border:3px dashed #9ed7b2; border-radius:14px; min-height:120px; padding:8px; background:#fff; }
+    .draw-label { color:#62816c; font-size:9pt; font-weight:800; text-align:center; }
+    .write-lines { background:#fff; border:2px solid #d6e9dd; border-radius:12px; padding:10px 12px; margin:9px 0; }
+    .line { border-bottom:1.8px solid #9ab9a4; height:24px; margin:5px 0; }
+    .word-bank { background:#fff9df; border:2px solid #ffd77a; border-radius:12px; padding:9px 12px; font-weight:900; }
+    .footer-note { text-align:center; padding:24px 16px 16px; font-size:.78rem; color:#999; border-top:1px solid #eee; margin-top:30px; }
+    @media print { body { padding:.25in; font-size:10pt; } .print-btn, .no-print { display:none !important; } .hero-card { grid-template-columns:1fr 1fr; } .procedure-step,.question-box,.teacher-note,.materials-box,.job-card,.vocab-card,.answer-key { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
+    @media (max-width:720px) { body { padding:18px; } .hero-card,.lesson-job,.evidence-strip,.vocab-grid,.draw-grid { grid-template-columns:1fr; } h1 { font-size:23pt; } }
 </style>
-
+</head>
+<body data-document-id="doc_gr1-ls3-unit2-lesson5-plant-parenting" data-doc-id="doc_gr1-ls3-unit2-lesson5-plant-parenting">
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Lesson</button>
+  <h1>🌱🍎🌬️ Seeds Are Plant Offspring</h1>
+  <p class="subtitle">Grade 1 Life Science · Parents &amp; Offspring Unit · Lesson 5 of 6</p>
+  <div class="meta"><span>📚 Grade 1</span><span>⏱️ 40–50 minutes</span><span>🔬 NGSS 1-LS3-1</span><span>🏠 Household materials</span></div>
+  <div class="hero-card">
+    <div><div class="hero-eyebrow">Family Science File #5</div><div class="hero-title">Integrate plants into the same unit arc: seeds are offspring, and parent plants prepare them for survival.</div><div class="hero-claim">Big idea: Plants do not cuddle or teach, but parent plants make seeds with structures that help young plants start life and sometimes travel.</div></div>
+    <div><div class="hero-visual" aria-label="Unit visual placeholder pending GPT Image 2 asset">🌻🌰🍓</div><div class="hero-caption">Look for parent-offspring clues: shared traits, differences, and survival supports.</div></div>
+  </div>
+  <div class="lesson-job"><div class="job-card"><strong>Student does</strong> observe · sort · draw · explain</div><div class="job-card"><strong>Evidence focus</strong> shared traits + differences</div><div class="job-card"><strong>Family win</strong> short, visual, printable</div></div>
+  <div class="standards-box mini-card" style="background:#f4efff;border:2px solid #cbb6f2;"><strong>NGSS 1-LS3-1:</strong> Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.</div>
+  <h2>🎯 Learning Objectives</h2><ul><li>Identify seeds as plant offspring.</li><li>Compare a seed/seedling with its parent plant using traits.</li><li>Explain how seed coats, stored food, fruit, hooks, wings, or fluff can help plant offspring survive.</li></ul>
+  <h2>📦 Materials</h2><div class="materials-box"><h3>What You Need</h3><ul><li>Kitchen seeds: dry bean, apple seed, popcorn kernel, sunflower seed, or any safe seed available</li><li>Fruit with seeds if available</li><li>Paper towel and small cup/bag for optional sprout start</li><li>Magnifying glass optional</li><li>Crayons</li></ul><p><strong>No special kit:</strong> substitute photos, drawings, toys, or household objects freely.</p></div>
+  <h2>🧠 Vocabulary</h2><div class="vocab-grid"><div class="vocab-card"><div class="vocab-word">Seed</div><div>A young plant package made by a parent plant.</div></div><div class="vocab-card"><div class="vocab-word">Seed coat</div><div>The outside covering that protects a seed.</div></div><div class="vocab-card"><div class="vocab-word">Stored food</div><div>Food inside many seeds that helps the young plant start growing.</div></div><div class="vocab-card"><div class="vocab-word">Disperse</div><div>Move away from the parent plant.</div></div></div>
+  <h2>📚 Parent Read-Aloud Background</h2><p>The old weak version of this idea can feel random if plants appear as an afterthought. In this rebuild, plants are the proof that the parent-offspring pattern is bigger than animal babies. A seed is not a rock or a snack to the plant. It is a young plant package from a parent plant.</p><p>Plants cannot follow their offspring, warm them, or teach them where to grow. Instead, parent plants prepare seeds before they leave. Some seeds have hard coats. Some have food inside. Some are inside fruits that animals carry. Some float, stick, spin, or parachute away. The survival job is real, just different from animal care.</p>
+  <h2>🔬 Activity Procedure</h2><div class="procedure-step"><strong>Step 1 — Open a seed investigation</strong><br>Look at two or three seeds. Compare size, shape, color, coat, and whether they came from a fruit, pod, cone, or flower.</div><div class="procedure-step"><strong>Step 2 — Draw seed evidence</strong><br>Student draws one seed large and labels coat, inside food if visible, and travel clue if present.</div><div class="procedure-step"><strong>Step 3 — Parent plant match</strong><br>Ask, “What kind of parent plant could this seed come from?” Use apple/apple tree, bean/bean plant, sunflower/sunflower.</div><div class="procedure-step"><strong>Step 4 — Travel test model</strong><br>Blow gently on paper “seeds,” roll a round seed, or stick a paper seed to a sock. Which travels best?</div><div class="procedure-step"><strong>Step 5 — Plant the unit claim</strong><br>Student says: “A seed is plant offspring. It is like its parent because ____. It is not exactly the same because ____.”</div>
+  <h2>💬 Discussion Questions</h2><div class="question-box"><strong>Question 1:</strong> Why does a plant lesson belong in a parent-offspring unit?<p class="discussion-hint">Because seeds and seedlings are young plants from parent plants, and they show the same like-but-not-identical pattern.</p></div><div class="question-box"><strong>Question 2:</strong> How can a seed coat help survival?<p class="discussion-hint">It protects the young plant package until conditions are better for growing.</p></div><div class="question-box"><strong>Question 3:</strong> Why might a seed need to travel away?<p class="discussion-hint">To find space, light, water, and soil without too much competition from the parent plant.</p></div><div class="question-box"><strong>Question 4:</strong> How is plant “parent help” different from animal care?<p class="discussion-hint">Plants prepare seed structures ahead of time instead of feeding, guarding, or teaching after birth.</p></div>
+  <h2>👩‍🏫 Parent Notes</h2><div class="teacher-note"><strong>Keep it Grade 1:</strong> The target is observation and evidence, not genetics vocabulary beyond simple inherited traits. If a family situation makes human comparisons sensitive, use animal and plant examples only. The science standard is fully met without personal family photos.</div>
+  <div class="page-break"><div class="worksheet-header">🌱🍎🌬️ Student Worksheet — Seed Survival Detective</div><p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p><h3>1) Seed Detective Table</h3><table class="ws-table"><tr><th>Seed</th><th>Parent plant</th><th>Protection clue</th><th>Travel clue</th></tr><tr><td>Apple seed / fruit seed</td><td></td><td></td><td></td></tr><tr><td>Bean / pea / pod seed</td><td></td><td></td><td></td></tr><tr><td>Dandelion / fluffy seed / paper model</td><td></td><td></td><td></td></tr></table><h3>2) Draw a Seed Package</h3><div class="draw-grid"><div class="draw-box"><div class="draw-label">Seed up close</div></div><div class="draw-box"><div class="draw-label">Where it might grow</div></div></div><div class="write-lines"><strong>A seed is plant offspring because...</strong><div class="line"></div><div class="line"></div></div><div class="answer-key"><strong>Parent answer-key guidance:</strong> Seeds count as plant offspring. Good evidence names seed coat/protection, stored food, fruit/animal travel, wind travel, hooks, rolling, or floating.</div></div>
+  
+<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
 <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
   <div class="llc-paywall-inner">
     <span class="llc-paywall-emoji">🥼</span>
     <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
-    <p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
+    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
+    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
   </div>
 </div>
-
-<script>
-(function() {
-  var ACCESS_KEY = 'llc_access_v2_locked';
-
-  function isUnlocked() {
-    return localStorage.getItem(ACCESS_KEY) === 'granted';
+<style>
+  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
+  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
+</style>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = '/feedback-layer.js?v=20260421';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = document.body.dataset.documentId;
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
   }
-
-  function lockLesson() {
-    var allH2 = Array.from(document.querySelectorAll('h2'));
-    var lockKeywords = ['materials', 'gather before you start', 'what you need'];
-
-    // Find first h2 that is NOT a learning goal/objective (i.e., start of real content)
-    var lockFromIndex = -1;
-    for (var i = 0; i < allH2.length; i++) {
-      var text = allH2[i].textContent.toLowerCase();
-      var isGoal = lockKeywords.some(function(k) { return text.indexOf(k) !== -1; });
-      if (!isGoal) {
-        lockFromIndex = i;
-        break;
-      }
-    }
-
-    // Fallback: lock from 3rd h2 if all early ones look like goals
-    if (lockFromIndex === -1 || lockFromIndex === 0) {
-      lockFromIndex = Math.min(2, allH2.length - 1);
-    }
-
-    var lockFromH2 = allH2[lockFromIndex];
-    if (!lockFromH2) {
-      // No h2 at all — fall back to hiding body overflow after 600px
-      document.body.style.overflow = 'hidden';
-      document.body.style.maxHeight = '600px';
-      document.getElementById('llcPaywall').style.display = 'block';
-      return;
-    }
-
-    // Walk body's direct children; hide everything from the child
-    // that IS or CONTAINS lockFromH2 onwards (skip paywall overlay itself)
-    var bodyChildren = Array.from(document.body.children);
-    var hiding = false;
-    bodyChildren.forEach(function(child) {
-      if (child === lockFromH2 || child.contains(lockFromH2)) {
-        hiding = true;
-      }
-      if (hiding && child.id !== 'llcPaywall') {
-        child.style.display = 'none';
-      }
-    });
-
-    document.getElementById('llcPaywall').style.display = 'block';
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    else loadFeedbackLayer();
   }
+})();</script>
+<script>(function(){
+  var ACCESS_KEY='llc_access_v2_locked';
+  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
+  function lockLesson(){
+    var h2s=Array.from(document.querySelectorAll('h2'));
+    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
+    if(idx<0) idx=Math.min(2,h2s.length-1);
+    var lockFrom=h2s[idx]; if(!lockFrom) return;
+    var kids=Array.from(document.body.children); var hide=false;
+    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
+    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
+  }
+  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
+})();</script>
+<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
 
-  document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.search.indexOf('review=1') !== -1) {
-      try {
-      } catch (e) {}
-      return;
-    }
-
-    if (!isUnlocked()) {
-      lockLesson();
-    }
-  });
-})();
-</script>
-<!-- ═══ END PAYWALL ═══ -->
-<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
-  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
-</div>
+  <div class="footer-note">© 2026 Little Lab Coats. For personal, non-commercial household use only.</div>
 </body>
 </html>

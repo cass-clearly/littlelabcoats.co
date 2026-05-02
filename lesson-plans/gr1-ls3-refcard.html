@@ -1,363 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parents & Offspring Reference Card — Grade 1 LS3</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      background: #e8f5e9;
-      color: #0d2012;
-      padding: 24px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* ─── PRINT ─── */
-    @media print {
-      @page { size: letter portrait; margin: 0; }
-      body {
-        background: white;
-        padding: 0;
-        min-height: 0;
-        height: 11in;
-      }
-      .no-print { display: none !important; }
-      .page-card {
-        width: 100%;
-        max-width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-        height: 11in;
-        page-break-after: avoid;
-      }
-      .grid-section {
-        flex: 1;
-        min-height: 0;
-      }
-      .tile {
-        min-height: 0 !important;
-      }
-    }
-
-    /* ─── CARD WRAPPER ─── */
-    .page-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      width: 100%;
-      max-width: 8.5in;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    /* ─── HEADER BANNER ─── */
-    .header-banner {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 28px 24px 22px;
-      flex-shrink: 0;
-    }
-
-    .header-banner h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      margin-bottom: 10px;
-    }
-
-    .header-banner .subtitle {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      color: #a5d6a7;
-      text-transform: uppercase;
-    }
-
-    /* ─── 2×2 GRID ─── */
-    .grid-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      flex: 1;
-      min-height: 0;
-    }
-
-    .tile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 28px;
-      text-align: center;
-      border: 3px solid rgba(255,255,255,0.6);
-      min-height: 280px;
-    }
-
-    .tile-traits   { background: #e8f5e9; }
-    .tile-instinct { background: #fff9c4; }
-    .tile-learned  { background: #F3E8FF; }
-    .tile-survival { background: #fce4ec; }
-
-    .tile-emoji {
-      font-size: 3.5rem;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .tile-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
-
-    .tile-traits   .tile-name { color: #1b5e20; }
-    .tile-instinct .tile-name { color: #f57f17; }
-    .tile-learned  .tile-name { color: #7B2FBE; }
-    .tile-survival .tile-name { color: #880e4f; }
-
-    .tile-bullets {
-      list-style: none;
-      width: 100%;
-    }
-
-    .tile-bullets li {
-      font-size: 1.15rem;
-      font-weight: 700;
-      line-height: 1.4;
-      padding: 5px 0;
-      color: #1a1a1a;
-    }
-
-    .tile-bullets li + li {
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-
-    /* ─── WITHOUT STRIP ─── */
-    .without-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      background: #fff8e1;
-      border-top: 3px solid #ffe082;
-      flex-shrink: 0;
-    }
-
-    .without-tile {
-      padding: 16px 14px;
-      text-align: center;
-      border-right: 2px solid #ffe082;
-    }
-    .without-tile:last-child { border-right: none; }
-
-    .without-emoji { font-size: 1.8rem; margin-bottom: 6px; }
-
-    .without-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #e65100;
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .without-text {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: #5d4037;
-      line-height: 1.35;
-    }
-
-    /* ─── FUN FACTS STRIP ─── */
-    .facts-strip {
-      background: #2e7d32;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      padding: 18px 20px;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .fact-pill {
-      background: rgba(255,255,255,0.18);
-      border: 2px solid rgba(255,255,255,0.5);
-      border-radius: 999px;
-      color: white;
-      font-size: 0.95rem;
-      font-weight: 700;
-      padding: 10px 18px;
-      text-align: center;
-      flex: 1;
-      line-height: 1.3;
-    }
-
-    /* ─── FOOTER ─── */
-    .footer {
-      background: #f1f8e9;
-      text-align: center;
-      padding: 12px;
-      font-size: 0.85rem;
-      color: #555;
-      font-weight: 700;
-      letter-spacing: 1px;
-      flex-shrink: 0;
-    }
-
-    /* ─── PRINT BUTTON ─── */
-    .print-btn {
-      margin-top: 20px;
-      padding: 12px 32px;
-      background: #2e7d32;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-family: 'Lato', sans-serif;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 1px;
-    }
-    .print-btn:hover { background: #1b5e20; }
-      .lesson-branding {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 0 0 18px 0;
-      padding: 10px 14px;
-      background: #fffaf3;
-      border: 1.5px solid #ffd6a5;
-      border-radius: 12px;
-    }
-    .lesson-branding img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-    }
-    .lesson-branding-text {
-      font-family: 'Lato', Arial, sans-serif;
-      font-size: 11pt;
-      font-weight: 700;
-      letter-spacing: .02em;
-      color: #5A3A16;
-    }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
-</head>
-<body data-doc-id="doc_F_q9dYnrRqQ" data-document-id="doc_gr1-ls3-refcard"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
-
-  <div class="page-card">
-
-    <!-- HEADER BANNER -->
-    <div class="header-banner">
-      <h1>👨‍👧 Offspring Look Like Parents</h1>
-      <div class="subtitle">Inherited Traits &nbsp;·&nbsp; Instinct &nbsp;·&nbsp; Learning &nbsp;·&nbsp; Survival</div>
-    </div>
-
-    <!-- 2×2 GRID -->
-    <div class="grid-section">
-
-      <div class="tile tile-traits">
-        <div class="tile-emoji">🧬</div>
-        <div class="tile-name">INHERITED TRAITS</div>
-        <ul class="tile-bullets">
-          <li>Passed from parents</li>
-          <li>Eye color, fur pattern</li>
-          <li>🐯 Tiger cubs have stripes</li>
-          <li>Can't choose your traits</li>
-        </ul>
-      </div>
-
-      <div class="tile tile-instinct">
-        <div class="tile-emoji">🐣</div>
-        <div class="tile-name">INSTINCT</div>
-        <ul class="tile-bullets">
-          <li>Born knowing how</li>
-          <li>🐢 Baby turtles find ocean</li>
-          <li>🐦 Birds know to fly south</li>
-          <li>No one teaches instinct</li>
-        </ul>
-      </div>
-
-      <div class="tile tile-learned">
-        <div class="tile-emoji">🎓</div>
-        <div class="tile-name">LEARNED BEHAVIOR</div>
-        <ul class="tile-bullets">
-          <li>Taught by parents</li>
-          <li>🐻 Bear cub learns to fish</li>
-          <li>🦁 Lion cub learns to hunt</li>
-          <li>Humans teach language</li>
-        </ul>
-      </div>
-
-      <div class="tile tile-survival">
-        <div class="tile-emoji">🛡️</div>
-        <div class="tile-name">OFFSPRING SURVIVAL</div>
-        <ul class="tile-bullets">
-          <li>Parents protect young</li>
-          <li>🐊 Croc carries babies in mouth</li>
-          <li>🐧 Penguins keep eggs warm</li>
-          <li>More care = better survival</li>
-        </ul>
-      </div>
-
-    </div><!-- /grid -->
-
-    <!-- WITHOUT STRIP -->
-    <div class="without-strip">
-      <div class="without-tile">
-        <div class="without-emoji">⚠️</div>
-        <div class="without-title">No Inherited Traits</div>
-        <div class="without-text">Offspring look random</div>
-      </div>
-      <div class="without-tile">
-        <div class="without-emoji">⚠️</div>
-        <div class="without-title">No Instincts</div>
-        <div class="without-text">Can't survive alone</div>
-      </div>
-      <div class="without-tile">
-        <div class="without-emoji">⚠️</div>
-        <div class="without-title">No Parental Teaching</div>
-        <div class="without-text">Miss survival skills</div>
-      </div>
-      <div class="without-tile">
-        <div class="without-emoji">⚠️</div>
-        <div class="without-title">No Protection</div>
-        <div class="without-text">Young don't survive</div>
-      </div>
-    </div>
-
-    <!-- FUN FACTS STRIP -->
-    <div class="facts-strip">
-      <div class="fact-pill">🐨 Koala joeys live in pouch 6 months</div>
-      <div class="fact-pill">🦅 Eagle parents teach flying by pushing</div>
-      <div class="fact-pill">🐋 Orca whales teach hunting techniques</div>
-      <div class="fact-pill">🌱 Apple seeds grow into apple trees — always!</div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">Little Lab Coats 🥼</div>
-
-  </div><!-- /page-card -->
-
-  <button class="print-btn no-print" onclick="window.print()">🖨️ Print</button>
-
-  <script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_gr1-ls3-refcard" data-content-selector="body"></script>
-<div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
-  © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Parents &amp; Offspring Reference Card — Grade 1 LS3</title><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box} body{font-family:'Lato','Segoe UI',Arial,sans-serif;background:#e9f8ee;margin:0;padding:24px;color:#1f3026}.lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 18px;max-width:8.5in;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-weight:900;color:#5A3A16}.page-card{max-width:8.5in;margin:0 auto;background:white;border-radius:22px;box-shadow:0 6px 26px rgba(0,0,0,.14);overflow:hidden}.header{background:linear-gradient(135deg,#1f6f4a,#087f8c);color:white;text-align:center;padding:26px 22px}.header h1{font-family:'Playfair Display',Georgia,serif;font-size:2.45rem;margin:0 0 6px}.header p{margin:0;font-weight:900;color:#d8f6e1;letter-spacing:.08em;text-transform:uppercase}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0}.tile{padding:24px;border:2px solid rgba(255,255,255,.8);min-height:210px}.tile h2{font-family:'Playfair Display',Georgia,serif;margin:0 0 10px;font-size:1.45rem}.tile ul{margin:0;padding-left:20px;font-weight:800;line-height:1.5}.a{background:#e9f8ee}.b{background:#fff5ce}.c{background:#e8f7ff}.d{background:#f4efff}.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#fffaf0;border-top:3px solid #ffcb5b}.strip div{padding:16px;text-align:center;font-weight:900;border-right:2px solid #ffdf8d}.strip div:last-child{border-right:0}.footer{background:#1f6f4a;color:white;text-align:center;padding:14px;font-weight:900}.print-btn{display:block;margin:18px auto 0;padding:12px 28px;background:#1f6f4a;color:white;border:0;border-radius:999px;font-weight:900;cursor:pointer}@media print{@page{size:letter portrait;margin:0}body{background:white;padding:0}.lesson-branding,.print-btn{display:none}.page-card{box-shadow:none;border-radius:0;min-height:11in}.tile{break-inside:avoid}.grid{grid-template-columns:1fr 1fr}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}@media(max-width:720px){.grid,.strip{grid-template-columns:1fr}.header h1{font-size:2rem}}
+</style></head><body data-document-id="doc_gr1-ls3-refcard" data-doc-id="doc_gr1-ls3-refcard"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div><main class="page-card"><section class="header"><h1>🐾🌱 Parents &amp; Offspring</h1><p>Grade 1 LS3 Quick Reference</p></section><section class="grid"><div class="tile a"><h2>1. Like, Not Copies</h2><ul><li>Offspring share traits with parents.</li><li>They are similar, not identical.</li><li>Use evidence you can see.</li></ul></div><div class="tile b"><h2>2. Growth Changes</h2><ul><li>Young animals may be smaller or fuzzier.</li><li>Some change body form as they grow.</li><li>Adult traits can appear later.</li></ul></div><div class="tile c"><h2>3. Animal Parent Care</h2><ul><li>Parents may feed, warm, carry, guard, or shelter young.</li><li>Some young learn by watching and practicing.</li><li>Care helps offspring survive.</li></ul></div><div class="tile d"><h2>4. Plant Offspring</h2><ul><li>Seeds are young plant packages.</li><li>Seed coats, stored food, fruit, fluff, hooks, or wings help survival.</li><li>Seedlings are like parent plants, but not adult copies.</li></ul></div></section><section class="strip"><div>Claim: Young plants and animals are like their parents.</div><div>Evidence: Name shared traits and differences.</div><div>Reasoning: Traits, care, and seed structures help survival.</div></section><section class="footer">NGSS 1-LS3-1 · Little Lab Coats · Parent-Offspring Evidence Words: trait · offspring · similar · different · survive</section></main><button class="print-btn" onclick="window.print()">🖨️ Print Reference Card</button>
+<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
+<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
+  <div class="llc-paywall-inner">
+    <span class="llc-paywall-emoji">🥼</span>
+    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
+    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
+    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
+  </div>
 </div>
-</body>
-</html>
+<style>
+  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
+  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
+</style>
+<script>(function () {
+  function loadFeedbackLayer() {
+    var script = document.createElement('script');
+    script.src = '/feedback-layer.js?v=20260421';
+    script.dataset.apiUrl = 'https://cassclearly.com';
+    script.dataset.documentId = document.body.dataset.documentId;
+    script.dataset.contentSelector = 'body';
+    document.body.appendChild(script);
+  }
+  if (window.location.search.indexOf('review=1') !== -1) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadFeedbackLayer, { once: true });
+    else loadFeedbackLayer();
+  }
+})();</script>
+<script>(function(){
+  var ACCESS_KEY='llc_access_v2_locked';
+  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
+  function lockLesson(){
+    var h2s=Array.from(document.querySelectorAll('h2'));
+    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
+    if(idx<0) idx=Math.min(2,h2s.length-1);
+    var lockFrom=h2s[idx]; if(!lockFrom) return;
+    var kids=Array.from(document.body.children); var hide=false;
+    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
+    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
+  }
+  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
+})();</script>
+<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
+</body></html>
