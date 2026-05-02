@@ -27,6 +27,19 @@
       "status": "live-hosted"
     },
     {
+      "slug": "grade-1-complete",
+      "displayName": "Complete Grade 1 Science Bundle",
+      "deliveryType": "hosted_link",
+      "assetPath": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
+      "paymentLinkId": "plink_1TSV1sRs1078GLsazlr2Ki8G",
+      "paymentLinkUrl": "https://buy.stripe.com/aFadRb0Jx6Z89w0cRM6g80i",
+      "downloadUrl": "https://littlelabcoats.co/grade-1-complete-download.html",
+      "emailTemplatePath": "ops/grade-1-complete-welcome-email.txt",
+      "draftSubject": "Your Complete Grade 1 Science Bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-hosted"
+    },
+    {
       "slug": "gr1-ls1-unit1-bundle",
       "displayName": "Grade 1 Life Science Unit 1 bundle",
       "deliveryType": "hosted_link",
@@ -115,15 +128,6 @@
       "deliveryType": "attachment",
       "assetPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
       "draftSubject": "Your Grade 3 Physical Science Unit 1 bundle is ready",
-      "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
-    },
-    {
-      "slug": "grade-1-complete",
-      "displayName": "Complete Grade 1 Science Bundle",
-      "deliveryType": "attachment",
-      "assetPath": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
-      "draftSubject": "Your Complete Grade 1 Science Bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
     },
