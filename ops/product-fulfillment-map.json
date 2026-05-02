@@ -21,11 +21,15 @@
     {
       "slug": "gr1-ls1-unit1-bundle",
       "displayName": "Grade 1 Life Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr1-ls1-unit1-bundle/gr1-ls1-unit1-six-lesson-bundle.pdf",
+      "paymentLinkId": "plink_1TSUZ5Rs1078GLsarPZri3mo",
+      "paymentLinkUrl": "https://buy.stripe.com/dRmfZj77VgzI7nS4lg6g80f",
+      "downloadUrl": "https://littlelabcoats.co/gr1-ls1-unit1-download.html",
+      "emailTemplatePath": "ops/gr1-ls1-unit1-welcome-email.txt",
       "draftSubject": "Your Grade 1 Life Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr1-ls3-unit2-bundle",
