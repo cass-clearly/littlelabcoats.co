@@ -16,11 +16,15 @@
     {
       "slug": "gr1-ets1-unit1-bundle",
       "displayName": "Grade 1 Engineering Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr1-ets1-unit1-bundle/gr1-ets1-unit1-six-lesson-bundle.pdf",
+      "paymentLinkId": "plink_1TSUrERs1078GLsapA65s1o2",
+      "paymentLinkUrl": "https://buy.stripe.com/00wbJ32RFerAcIcdVQ6g80h",
+      "downloadUrl": "https://littlelabcoats.co/gr1-ets1-unit1-download.html",
+      "emailTemplatePath": "ops/gr1-ets1-unit1-welcome-email.txt",
       "draftSubject": "Your Grade 1 Engineering Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr1-ls1-unit1-bundle",

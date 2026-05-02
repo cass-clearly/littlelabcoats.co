@@ -19,7 +19,7 @@
       'gr1-ls1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/dRmfZj77VgzI7nS4lg6g80f', status: 'live' },
       'gr1-ls3-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr1-ess1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/aFa14pdwjabk23y7xs6g80g', status: 'live' },
-      'gr1-ets1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr1-ets1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/00wbJ32RFerAcIcdVQ6g80h', status: 'live' },
 
       'grade-2-complete': { checkoutUrl: '', status: 'placeholder' },
       'gr2-ps1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },

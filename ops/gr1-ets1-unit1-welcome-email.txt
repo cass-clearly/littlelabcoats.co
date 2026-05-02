@@ -1,0 +1,23 @@
+Hi {{customer_name}},
+
+Thank you for your Little Lab Coats purchase.
+
+Your Grade 1 Engineering Design bundle is ready here:
+https://littlelabcoats.co/gr1-ets1-unit1-download.html
+
+Included in this bundle:
+- Lesson 1: What Problem Can We Solve?
+- Lesson 2: Look at Animal Solutions
+- Lesson 3: Plan a Nature-Inspired Tool
+- Lesson 4: Build Your First Model
+- Lesson 5: Test and Improve Your Design
+- Lesson 6: Share Your Final Design
+- Unit quiz
+- Reference card
+
+If you have any trouble opening the links, just reply to this email and we’ll help.
+
+Warmly,
+Serena
+Little Lab Coats
+clearlycass10@gmail.com
