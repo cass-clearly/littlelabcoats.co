@@ -55,9 +55,12 @@
     {
       "slug": "gr1-ls3-unit2-bundle",
       "displayName": "Grade 1 Life Science Unit 2 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr1-ls3-unit2-bundle/gr1-ls3-unit2-six-lesson-bundle.pdf",
-      "draftSubject": "Your Grade 1 Life Science Unit 2 bundle is ready",
+      "paymentLinkUrl": "https://buy.stripe.com/bJe28tgIv1EOfUo1946g80j",
+      "downloadUrl": "https://littlelabcoats.co/gr1-ls3-unit2-download.html",
+      "emailTemplatePath": "ops/gr1-ls3-unit2-welcome-email.txt",
+      "draftSubject": "Your Grade 1 Parents & Offspring bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "ready-manual"
     },
