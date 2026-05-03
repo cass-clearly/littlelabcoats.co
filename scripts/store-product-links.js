@@ -21,6 +21,8 @@
       'gr1-ess1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/aFa14pdwjabk23y7xs6g80g', status: 'live' },
       'gr1-ets1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/00wbJ32RFerAcIcdVQ6g80h', status: 'live' },
 
+      'garden-detectives-unit-bundle': { checkoutUrl: 'https://buy.stripe.com/dRm28t8bZ1EO7nSg3Y6g80l', status: 'live' },
+
       'grade-2-complete': { checkoutUrl: '', status: 'placeholder' },
       'gr2-ps1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/bJe28tgIv1EOfUo1946g80j', status: 'live' },
       'gr2-ls2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },

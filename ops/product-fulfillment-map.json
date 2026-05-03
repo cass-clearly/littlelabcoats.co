@@ -5,11 +5,13 @@
       "displayName": "Garden Detectives Gardening Unit",
       "deliveryType": "hosted_link",
       "assetPath": "",
+      "paymentLinkId": "plink_1TSnkGRs1078GLsanzTLkash",
+      "paymentLinkUrl": "https://buy.stripe.com/dRm28t8bZ1EO7nSg3Y6g80l",
       "downloadUrl": "https://littlelabcoats.co/gardening-unit-download.html",
       "emailTemplatePath": "ops/gardening-unit-welcome-email.txt",
       "draftSubject": "Your Garden Detectives gardening unit is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "gr1-ess1-unit1-bundle",
