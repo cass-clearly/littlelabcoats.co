@@ -2085,6 +2085,176 @@
         top: 1px;
       }
 
+      /* Featured Weekly Unit */
+      .weekly-feature {
+        background: linear-gradient(135deg, #fffdf8 0%, #f2fbf2 100%);
+        border: 2px solid #cfe8c8;
+        border-radius: 28px;
+        box-shadow: 0 18px 42px rgba(46,125,50,.10);
+        padding: 34px 36px;
+        margin-bottom: 38px;
+        position: relative;
+        overflow: hidden;
+      }
+      .weekly-feature-label {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        background: #ff7f50;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+      .weekly-feature-top {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+        gap: 26px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .weekly-feature-kicker {
+        display: inline-block;
+        margin-bottom: 10px;
+        background: #e9f7ec;
+        color: #1b5e20;
+        border: 1px solid #bfe3c2;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.77rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .weekly-feature h3 {
+        margin: 0 0 10px;
+        border: 0;
+        padding: 0;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+        color: var(--navy);
+      }
+      .weekly-feature p {
+        margin: 0 0 12px;
+        color: var(--navy);
+      }
+      .weekly-feature-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px 0 18px;
+      }
+      .weekly-feature-badge {
+        background: #fff;
+        border: 1px solid #d9e9d4;
+        border-radius: 999px;
+        padding: 7px 12px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #295c2d;
+      }
+      .weekly-feature-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+      }
+      .weekly-feature-buy,
+      .weekly-feature-preview {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        border-radius: 999px;
+        padding: 0 22px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.92rem;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform .15s, background .18s, color .18s;
+      }
+      .weekly-feature-buy {
+        background: var(--coral);
+        color: #fff;
+        box-shadow: var(--shadow-sm);
+      }
+      .weekly-feature-buy:hover { background: var(--coral-light); transform: translateY(-1px); }
+      .weekly-feature-preview {
+        background: #fff;
+        color: var(--navy);
+        border: 1.5px solid #d5e3df;
+      }
+      .weekly-feature-preview:hover { background: #f9f9f6; transform: translateY(-1px); }
+      .weekly-feature-image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .weekly-feature-image-grid figure {
+        margin: 0;
+        background: #fff;
+        border: 1px solid #dcebd8;
+        border-radius: 18px;
+        padding: 10px;
+        box-shadow: 0 8px 22px rgba(35,49,58,.07);
+      }
+      .weekly-feature-image-grid img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        background: #f5f8f4;
+      }
+      .weekly-feature-image-grid figcaption {
+        margin-top: 8px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.76rem;
+        font-weight: 700;
+        color: #48624b;
+        text-align: center;
+      }
+      .weekly-feature-excerpts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 10px;
+      }
+      .weekly-feature-excerpt {
+        background: #fff;
+        border: 1px solid #dcebd8;
+        border-radius: 18px;
+        padding: 18px 18px 16px;
+      }
+      .weekly-feature-excerpt span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.73rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #55735a;
+      }
+      .weekly-feature-excerpt h4 {
+        margin: 0 0 8px;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.06rem;
+        color: var(--navy);
+      }
+      .weekly-feature-excerpt p {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
       /* Featured Lesson Preview */
       .featured-preview {
         background: var(--cream);
@@ -2232,7 +2402,11 @@
       .curriculum-cta a:hover { background: var(--navy-light); transform: translateY(-2px); }
 
       @media (max-width: 700px) {
-        .featured-grid { grid-template-columns: 1fr; }
+        .weekly-feature { padding: 28px 20px; }
+        .weekly-feature-top,
+        .weekly-feature-excerpts,
+        .weekly-feature-image-grid,
+        .featured-grid,
         .domain-columns { grid-template-columns: 1fr; }
         .featured-preview { padding: 28px 20px; }
         .grade-tabs { justify-content: flex-start; }
@@ -2694,6 +2868,62 @@
 
         </div>
       </div><!-- /grade-5 -->
+
+      <!-- ── Featured Weekly Unit ── -->
+      <div class="weekly-feature">
+        <span class="weekly-feature-label">Featured unit of the week</span>
+        <div class="weekly-feature-top">
+          <div>
+            <span class="weekly-feature-kicker">🌱 Mixed-grade household favorite</span>
+            <h3>Garden Detectives Gardening Unit</h3>
+            <p>A beefed-out, mixed-grade gardening unit designed for families teaching multiple ages together. It blends hands-on science, nature study, and gentle planning work without feeling like a stack of worksheets.</p>
+            <div class="weekly-feature-badges">
+              <span class="weekly-feature-badge">6 core lessons + bonus printables</span>
+              <span class="weekly-feature-badge">Built for mixed-grade households</span>
+              <span class="weekly-feature-badge">Instant digital download</span>
+            </div>
+            <div class="weekly-feature-actions">
+              <a href="https://buy.stripe.com/dRm28t8bZ1EO7nSg3Y6g80l" class="weekly-feature-buy">🛒 Buy Now</a>
+              <a href="/lesson-plans/free-garden-detectives-soil-seed-sun.html" target="_blank" class="weekly-feature-preview">🔎 See the free sample lesson</a>
+            </div>
+          </div>
+          <div class="weekly-feature-image-grid">
+            <figure>
+              <img src="/images/gardening/gardening-weed-wildflower-photo-cards.png" alt="Preview of weed, wildflower, and wanted guest photo cards">
+              <figcaption>Photo sorting cards</figcaption>
+            </figure>
+            <figure>
+              <img src="/images/gardening/gardening-annual-perennial-plant-cards.png" alt="Preview of annual and perennial plant cards">
+              <figcaption>Printable plant cards</figcaption>
+            </figure>
+            <figure>
+              <img src="/images/gardening/gardening-tree-leaf-guide-art.png" alt="Preview of the leaf identification guide">
+              <figcaption>Leaf detective guide</figcaption>
+            </figure>
+            <figure>
+              <img src="/images/gardening/gardening-competition-diagram.png" alt="Preview of plant competition diagram">
+              <figcaption>Visual science anchors</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="weekly-feature-excerpts">
+          <article class="weekly-feature-excerpt">
+            <span>Lesson 2 excerpt</span>
+            <h4>Leaf Detective Lab</h4>
+            <p>Kids head outside to collect leaves, then compare shape, edges, veins, and texture clues like real garden detectives instead of just memorizing facts.</p>
+          </article>
+          <article class="weekly-feature-excerpt">
+            <span>Lesson 5 excerpt</span>
+            <h4>Perennials, Annuals &amp; Garden Planning</h4>
+            <p>Children learn why some plants come back year after year while others are one-season fireworks, then design a beginner-friendly garden bed.</p>
+          </article>
+          <article class="weekly-feature-excerpt">
+            <span>Lesson 6 excerpt</span>
+            <h4>Pollinator Party</h4>
+            <p>The unit ends with a joyful design challenge where learners build a mini wildflower garden plan that welcomes bees, butterflies, and other helpers.</p>
+          </article>
+        </div>
+      </div>
 
       <!-- ── Featured Lesson Preview ── -->
       <div class="featured-preview">
