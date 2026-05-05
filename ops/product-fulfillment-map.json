@@ -116,6 +116,19 @@
       "status": "live-hosted"
     },
     {
+      "slug": "gr2-ls2-unit1-bundle",
+      "displayName": "Grade 2 Plants, Pollinators & Habitats bundle",
+      "deliveryType": "hosted_link",
+      "assetPath": "",
+      "paymentLinkId": "plink_1TTsHERs1078GLsaUuGKgyDU",
+      "paymentLinkUrl": "https://buy.stripe.com/7sY3cx2RF1EOfUo0506g80n",
+      "downloadUrl": "https://littlelabcoats.co/gr2-ls2-unit1-download.html",
+      "emailTemplatePath": "ops/gr2-ls2-unit1-welcome-email.txt",
+      "draftSubject": "Your Grade 2 Plants, Pollinators & Habitats bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-hosted"
+    },
+    {
       "slug": "gr2-ls2-unit2-bundle",
       "displayName": "Grade 2 Life Science Unit 2 bundle",
       "deliveryType": "hosted_link",

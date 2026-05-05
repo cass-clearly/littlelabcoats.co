@@ -229,6 +229,17 @@
           "thankYouProduct": "gr2-ps1-unit1-bundle"
         },
         {
+          "sku": "gr2-ls2-unit1-bundle",
+          "title": "Plants, Pollinators & Habitats",
+          "domain": "Life Science",
+          "unitCode": "2-LS2 Unit 1",
+          "previewUrl": "/lesson-plans/gr2-ls2-unit1-lesson1-what-do-plants-need.html",
+          "bundlePdfStatus": "hosted_download_ready",
+          "checkoutLinkStatus": "live",
+          "exportPath": "",
+          "thankYouProduct": "gr2-ls2-unit1-bundle"
+        },
+        {
           "sku": "gr2-ls2-unit2-bundle",
           "title": "Ecosystems",
           "domain": "Life Science",

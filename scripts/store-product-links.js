@@ -25,7 +25,7 @@
 
       'grade-2-complete': { checkoutUrl: 'https://buy.stripe.com/00w6oJak7cjsgYsbNI6g80m', status: 'live' },
       'gr2-ps1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/bJe28tgIv1EOfUo1946g80j', status: 'live' },
-      'gr2-ls2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr2-ls2-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/7sY3cx2RF1EOfUo0506g80n', status: 'live' },
       'gr2-ls2-unit2-bundle': { checkoutUrl: 'https://buy.stripe.com/28EbJ38bZ2ISaA42d86g80k', status: 'live' },
       'gr2-ess1-unit3-bundle': { checkoutUrl: 'https://buy.stripe.com/5kQ28tbob3MW6jObNI6g80c', status: 'live' },
       'gr2-ess2-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/14AfZj8bZ83c23y4lg6g80d', status: 'live' },
