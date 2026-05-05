@@ -211,9 +211,11 @@
         "thankYouProduct": "grade-2-complete",
         "includedUnits": [
           "gr2-ps1-unit1-bundle",
+          "gr2-ls2-unit1-bundle",
           "gr2-ls2-unit2-bundle",
           "gr2-ess1-unit3-bundle",
-          "gr2-ess2-unit1-bundle"
+          "gr2-ess2-unit1-bundle",
+          "gr2-ets1-unit1-bundle"
         ]
       },
       "units": [
@@ -271,6 +273,17 @@
           "checkoutLinkStatus": "live",
           "exportPath": "",
           "thankYouProduct": "gr2-ess2-unit1-bundle"
+        },
+        {
+          "sku": "gr2-ets1-unit1-bundle",
+          "title": "Bridge Builders",
+          "domain": "Engineering",
+          "unitCode": "2-ETS1 Unit 1",
+          "previewUrl": "/lesson-plans/gr2-ets1-unit1-lesson1-define-the-bridge-problem.html",
+          "bundlePdfStatus": "hosted_download_ready",
+          "checkoutLinkStatus": "live",
+          "exportPath": "",
+          "thankYouProduct": "gr2-ets1-unit1-bundle"
         }
       ]
     },
