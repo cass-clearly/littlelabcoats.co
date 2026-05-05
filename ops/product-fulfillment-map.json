@@ -155,11 +155,13 @@
       "displayName": "Complete Grade 2 Science Bundle",
       "deliveryType": "hosted_link",
       "assetPath": "exports/grade-2-complete/grade-2-complete-science-bundle.pdf",
+      "paymentLinkId": "plink_1TTs7jRs1078GLsaJB3vhYRB",
+      "paymentLinkUrl": "https://buy.stripe.com/00w6oJak7cjsgYsbNI6g80m",
       "downloadUrl": "https://littlelabcoats.co/grade-2-complete-download.html",
       "emailTemplatePath": "ops/grade-2-complete-welcome-email.txt",
       "draftSubject": "Your Complete Grade 2 Science Bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "grade-k-complete",

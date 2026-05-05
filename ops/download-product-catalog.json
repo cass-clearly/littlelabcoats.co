@@ -206,7 +206,7 @@
         "sku": "grade-2-complete",
         "productType": "full-grade-bundle",
         "bundlePdfStatus": "grade_bundle_ready",
-        "checkoutLinkStatus": "pending",
+        "checkoutLinkStatus": "live",
         "exportPath": "exports/grade-2-complete/grade-2-complete-science-bundle.pdf",
         "thankYouProduct": "grade-2-complete",
         "includedUnits": [
