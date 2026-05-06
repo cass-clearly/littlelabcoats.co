@@ -316,12 +316,9 @@
       font-weight: 600;
     }
 
-    /* ─── Domain tabs pattern ─── */
+    /* ─── Domain layout pattern ─── */
     .domain-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 0 0 24px;
+      display: none;
     }
     .domain-tab {
       display: inline-flex;
@@ -365,10 +362,14 @@
     }
 
     .domain-panel {
-      display: none;
+      display: block;
+      margin-bottom: 24px;
     }
     .domain-panel.active {
       display: block;
+    }
+    .domain-panel:empty {
+      display: none;
     }
     .domain-group.search-hidden,
     .domain-panel.search-hidden {
