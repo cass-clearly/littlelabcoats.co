@@ -192,11 +192,15 @@
     {
       "slug": "grade-k-complete",
       "displayName": "Complete Kindergarten Science Bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/grade-k-complete/grade-k-complete-science-bundle.pdf",
+      "paymentLinkId": "plink_1TQyOARs1078GLsa738Lj9Nh",
+      "paymentLinkUrl": "https://buy.stripe.com/7sYcN71NBgzI6jOg3Y6g80a",
+      "downloadUrl": "https://littlelabcoats.co/grade-k-complete-download.html",
+      "emailTemplatePath": "ops/grade-k-complete-welcome-email.txt",
       "draftSubject": "Your Complete Kindergarten Science Bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted"
     },
     {
       "slug": "k-ess2-unit1-bundle",
