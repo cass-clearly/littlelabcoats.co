@@ -6,152 +6,308 @@
   <title>5 STEM Activities for Kindergarten</title>
   <style>
     :root {
-      --bg: #f8fbf5;
+      --bg: #f6fbf3;
       --card: #fffefb;
-      --ink: #2f3b2d;
-      --muted: #5f6f5d;
-      --green: #456d42;
-      --accent: #7acb9f;
-      --soft: #e2f5ea;
+      --ink: #243127;
+      --muted: #546556;
+      --green: #3f6f4d;
+      --sage: #dff3e8;
+      --gold: #fff4d8;
+      --peach: #ffe6d8;
+      --sky: #e4f3ff;
+      --lavender: #efe7ff;
+      --rose: #ffe8ef;
     }
     * { box-sizing: border-box; }
-    body {
+    html, body {
       margin: 0;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
       font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(180deg, #edf6e8 0%, #f8fbf5 100%);
+      background: linear-gradient(180deg, #eef8ec 0%, #f8fbf5 100%);
       color: var(--ink);
     }
     .frame {
       width: 1080px;
-      min-height: 1350px;
-      margin: 0 auto;
-      padding: 52px;
+      height: 1350px;
+      padding: 28px;
     }
     .card {
+      height: 100%;
       background: var(--card);
-      border-radius: 34px;
+      border-radius: 36px;
+      padding: 24px 26px 18px;
+      border: 1px solid #e6efe4;
+      box-shadow: 0 25px 80px rgba(74, 110, 56, 0.14);
       overflow: hidden;
-      box-shadow: 0 25px 80px rgba(74, 110, 56, 0.15);
-      border: 1px solid #e5eddf;
     }
-    .hero img {
-      display: block;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-    }
-    .content { padding: 32px 36px 36px; }
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 15px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--green);
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
       margin-bottom: 14px;
     }
+    .eyebrow,
+    .save-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-family: Lato, Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    .eyebrow {
+      padding: 9px 14px;
+      background: var(--sage);
+      color: var(--green);
+      font-size: 18px;
+    }
+    .save-pill {
+      padding: 9px 15px;
+      background: #7acb9f;
+      color: #21412b;
+      font-size: 17px;
+    }
     h1 {
-      margin: 0 0 10px;
-      font-size: 54px;
-      line-height: 1.04;
-      color: #375e34;
+      margin: 0 0 8px;
+      font-size: 48px;
+      line-height: 1.02;
+      color: #335d3d;
     }
     .sub {
-      margin: 0 0 22px;
-      font-size: 26px;
-      line-height: 1.4;
+      margin: 0 0 14px;
+      font-size: 23px;
+      line-height: 1.3;
+      color: var(--muted);
+    }
+    .intro {
+      background: linear-gradient(135deg, #fbfff8, #f4fbf7);
+      border: 2px solid #e2efe3;
+      border-radius: 22px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }
+    .intro strong {
+      color: #305a3b;
+      font-size: 20px;
+    }
+    .intro p {
+      margin: 6px 0 0;
+      font-size: 18px;
+      line-height: 1.35;
       color: var(--muted);
     }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 18px;
+      gap: 12px;
     }
-    .box {
-      background: #fbfff8;
-      border: 2px solid #e4eee0;
-      border-radius: 24px;
-      padding: 18px 20px 20px;
-      min-height: 210px;
+    .activity {
+      border-radius: 22px;
+      padding: 13px 14px;
+      border: 2px solid rgba(0,0,0,0.06);
+      min-height: 195px;
     }
-    .box h2 {
-      margin: 0 0 10px;
-      font-size: 24px;
-      color: #587627;
+    .activity:nth-child(1) { background: var(--gold); }
+    .activity:nth-child(2) { background: var(--sky); }
+    .activity:nth-child(3) { background: var(--peach); }
+    .activity:nth-child(4) { background: var(--lavender); }
+    .activity:nth-child(5) { background: var(--rose); grid-column: span 2; min-height: 165px; }
+    .activity-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.88);
+      display: grid;
+      place-items: center;
+      font: 900 21px Lato, Arial, sans-serif;
+      color: #2c4e34;
+      flex: 0 0 auto;
+    }
+    .activity h2 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.08;
+      color: #2f4732;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+      font-family: Lato, Arial, sans-serif;
+    }
+    .meta span {
+      background: rgba(255,255,255,0.85);
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #40604b;
+    }
+    .label {
+      margin: 7px 0 3px;
+      font: 900 12px Lato, Arial, sans-serif;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      color: #48614e;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.28;
+      margin: 0;
     }
     ul {
       margin: 0;
-      padding-left: 26px;
+      padding-left: 18px;
     }
-    li {
-      font-size: 26px;
-      line-height: 1.34;
-      margin: 0 0 4px;
-    }
+    li { margin-bottom: 2px; }
     .footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      margin-top: 8px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 10px;
+      margin-top: 12px;
     }
-    .tagline {
-      max-width: 700px;
-      font-size: 23px;
+    .footer-box {
+      border-radius: 20px;
+      padding: 12px 14px;
+      background: #fbfff8;
+      border: 2px solid #e2efe3;
+    }
+    .footer-box h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+      color: #456d42;
+      font-family: Lato, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .footer-box p {
+      font-size: 16px;
       line-height: 1.28;
-      color: var(--green);
-      font-weight: 700;
+      color: var(--muted);
     }
-    .cta {
-      background: var(--accent);
-      color: #4d3a00;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 21px;
-      font-weight: 700;
+    .brandline {
+      margin-top: 9px;
       text-align: center;
+      color: #5c735f;
+      font: 700 15px Lato, Arial, sans-serif;
     }
   </style>
 </head>
 <body>
   <div class="frame">
     <div class="card">
-      <div class="hero"><img src="../images/kindergarten-5-stem-activities.png" alt="5 STEM Activities for Kindergarten" /></div>
-      <div class="content">
+      <div class="topbar">
         <div class="eyebrow">Little Lab Coats • Kindergarten STEM</div>
-        <h1>5 STEM Activities for Kindergarten</h1>
-        <p class="sub">Gentle, hands-on ideas that build noticing, testing, comparing, and talking — without making home science feel overwhelming.</p>
-        <div class="grid">
-          <div class="box">
-            <h2>Try these</h2>
-            <ul>
-              <li>ramp roll rescue</li>
-<li>sink or float bowl</li>
-<li>magnet hunt</li>
-<li>leaf detective walk</li>
-<li>paper bridge rescue</li>
-            </ul>
+        <div class="save-pill">Save this post ✴️</div>
+      </div>
+
+      <h1>5 STEM Activities for Kindergarten</h1>
+      <p class="sub">Low-prep, hands-on science ideas with actual directions a parent can use right away.</p>
+
+      <div class="intro">
+        <strong>Grab-and-go format.</strong>
+        <p>Each activity tells you what to grab, what to do, and what your child gets to notice or test.</p>
+      </div>
+
+      <div class="grid">
+        <section class="activity">
+          <div class="activity-head">
+            <div class="num">1</div>
+            <h2>Ramp Roll Rescue</h2>
           </div>
-          <div class="box">
-            <h2>Why they work</h2>
-            <ul>
-              <li>easy setup</li>
-<li>real observation</li>
-<li>great language-building</li>
-<li>perfect for curious beginners</li>
-            </ul>
+          <div class="meta">
+            <span>books + cardboard + toy car</span>
+            <span>compare speed</span>
           </div>
+          <div class="label">Do this</div>
+          <p>Build a low ramp and a steep ramp. Roll the same car down both and compare what happens.</p>
+          <div class="label">Ask</div>
+          <ul><li>Which ramp is faster?</li><li>Which one goes farther?</li></ul>
+        </section>
+
+        <section class="activity">
+          <div class="activity-head">
+            <div class="num">2</div>
+            <h2>Sink or Float Bowl</h2>
+          </div>
+          <div class="meta">
+            <span>bowl of water + 6 objects</span>
+            <span>predict and test</span>
+          </div>
+          <div class="label">Do this</div>
+          <p>Gather small objects, predict first, then test each one in water.</p>
+          <div class="label">Ask</div>
+          <ul><li>What surprised you?</li><li>Did every heavy item sink?</li></ul>
+        </section>
+
+        <section class="activity">
+          <div class="activity-head">
+            <div class="num">3</div>
+            <h2>Magnet Hunt</h2>
+          </div>
+          <div class="meta">
+            <span>magnet + household items</span>
+            <span>sort evidence</span>
+          </div>
+          <div class="label">Do this</div>
+          <p>Test items around the house and sort them into <strong>sticks</strong> and <strong>does not stick</strong>.</p>
+          <div class="label">Ask</div>
+          <ul><li>What do the sticking items have in common?</li></ul>
+        </section>
+
+        <section class="activity">
+          <div class="activity-head">
+            <div class="num">4</div>
+            <h2>Leaf Detective Walk</h2>
+          </div>
+          <div class="meta">
+            <span>3 leaves + outdoor space</span>
+            <span>observe and compare</span>
+          </div>
+          <div class="label">Do this</div>
+          <p>Collect three leaves and compare size, color, shape, and texture.</p>
+          <div class="label">Ask</div>
+          <ul><li>Which is biggest?</li><li>Which feels smoothest?</li></ul>
+        </section>
+
+        <section class="activity">
+          <div class="activity-head">
+            <div class="num">5</div>
+            <h2>Paper Bridge Rescue</h2>
+          </div>
+          <div class="meta">
+            <span>paper + 2 cups + pennies/books</span>
+            <span>build and improve</span>
+          </div>
+          <div class="label">Do this</div>
+          <p>Test a flat sheet between two cups, then fold or roll it and test again. Which design holds more weight?</p>
+          <div class="label">Ask</div>
+          <ul><li>What changed?</li><li>How did the new shape help?</li></ul>
+        </section>
+      </div>
+
+      <div class="footer">
+        <div class="footer-box">
+          <h3>Parent tip</h3>
+          <p>You do not need all five. Pick one, keep it short, and let the conversation be the win.</p>
         </div>
-        <div class="footer">
-          <div class="tagline">Kindergarten science can stay simple and beautiful</div>
-          <div class="cta">Save for later</div>
+        <div class="footer-box">
+          <h3>Caption angle</h3>
+          <p>“Save this for five easy STEM ideas you can do at home with simple supplies.”</p>
         </div>
       </div>
+
+      <div class="brandline">Low prep. Hands-on. Actually doable. — Little Lab Coats</div>
     </div>
   </div>
 </body>

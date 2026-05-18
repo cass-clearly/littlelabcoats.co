@@ -35,11 +35,13 @@ Mark the shadow, come back later, and suddenly your child is spotting patterns i
 Simple. Beautiful. Memorable.
 
 ### 4) 5 STEM Activities for Kindergarten
-If you are doing kindergarten science at home, you do not need a giant plan.
+Kindergarten science does not need to be complicated to be meaningful.
 
-You need a few gentle activities that invite your child to notice, compare, test, and talk.
+These five STEM ideas are low-prep, hands-on, and simple enough to do with everyday supplies at home.
 
-These are five of my favorite low-pressure STEM ideas to keep in your back pocket.
+I also made this one actually useful: each activity gives you a quick idea of what to grab, what to do, and what to talk about with your child.
+
+Save this for an easy science day. ✴️
 
 ### 5) 3 Easy Hands-On Experiments for First Grade
 If first grade science has been feeling harder to plan than it should, start here.
