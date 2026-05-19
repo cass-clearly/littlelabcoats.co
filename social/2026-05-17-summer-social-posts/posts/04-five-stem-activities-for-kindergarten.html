@@ -36,37 +36,45 @@
       height: 100%;
       background: var(--cream);
       border-radius: 36px;
-      padding: 20px 22px 16px;
+      padding: 20px 22px 18px;
       border: 1px solid #e6efe4;
       box-shadow: 0 25px 80px rgba(74, 110, 56, 0.14);
       overflow: hidden;
     }
     .topbar {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 260px;
       align-items: center;
       gap: 12px;
       margin-bottom: 8px;
     }
     .eyebrow, .save-pill {
-      display: inline-flex;
-      align-items: center;
       border-radius: 999px;
       font-family: Lato, Arial, sans-serif;
       font-weight: 800;
       letter-spacing: 0.02em;
     }
     .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
       padding: 8px 13px;
       background: var(--sage);
       color: var(--green);
       font-size: 17px;
     }
     .save-pill {
-      padding: 8px 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 10px 14px;
       background: #7acb9f;
       color: #21412b;
-      font-size: 16px;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.08);
     }
     h1 {
       margin: 0 0 6px;
@@ -198,7 +206,7 @@
     li { margin-bottom: 2px; }
     .footer {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1fr 0.94fr;
       gap: 8px;
       margin-top: 8px;
     }
@@ -221,12 +229,6 @@
       line-height: 1.16;
       color: var(--muted);
     }
-    .brandline {
-      margin-top: 6px;
-      text-align: center;
-      color: #5c735f;
-      font: 700 14px Lato, Arial, sans-serif;
-    }
   </style>
 </head>
 <body>
@@ -234,7 +236,7 @@
     <div class="card">
       <div class="topbar">
         <div class="eyebrow">Little Lab Coats • Fun at-Home STEM</div>
-        <div class="save-pill">Save this post ✴️</div>
+        <a class="save-pill" href="#save">Save this post for later ✴️</a>
       </div>
 
       <h1>5 STEM Activities for Kindergarten</h1>
@@ -242,7 +244,7 @@
 
       <div class="hero">
         <div class="hero-image">
-          <img src="../images/kindergarten-5-stem-activities-gpt2-hero.png" alt="Playful collage of five kindergarten STEM activities including ramps, sink or float, magnets, leaf exploring, and paper bridge building." />
+          <img src="../images/kindergarten-5-stem-activities-gpt2-hero.png" alt="Playful collage of five kindergarten STEM activities including pom-pom tube maze play, sink or float, magnets, leaf exploring, and a balloon rocket race." />
         </div>
         <div class="hero-note">
           <strong>Why this version works</strong>
@@ -258,12 +260,12 @@
 
       <div class="grid">
         <section class="activity">
-          <div class="activity-head"><div class="num">1</div><h2>Toy Car Ramp Race</h2></div>
-          <div class="meta"><span>books + cardboard + car</span><span>5–10 min</span></div>
+          <div class="activity-head"><div class="num">1</div><h2>Pom-Pom Tube Drop</h2></div>
+          <div class="meta"><span>toilet paper tubes + tape + pom-poms</span><span>10 min</span></div>
           <div class="label">Do</div>
-          <p>Build a low ramp and a steep ramp. Race the same car down both.</p>
+          <p>Tape cardboard tubes to a wall or big box and drop pom-poms through to build a little maze.</p>
           <div class="label">Watch for</div>
-          <ul><li>faster vs. slower</li><li>farther vs. shorter</li></ul>
+          <ul><li>fast vs. slow paths</li><li>which turns work best</li></ul>
         </section>
 
         <section class="activity">
@@ -294,27 +296,25 @@
         </section>
 
         <section class="activity">
-          <div class="activity-head"><div class="num">5</div><h2>Paper Bridge Teddy Rescue</h2></div>
-          <div class="meta"><span>paper + cups + pennies/toy</span><span>build + test</span></div>
+          <div class="activity-head"><div class="num">5</div><h2>Balloon Rocket Race</h2></div>
+          <div class="meta"><span>string + straw + tape + balloon</span><span>big kid wow</span></div>
           <div class="label">Do</div>
-          <p>Lay paper flat between two cups, then fold or roll it and test which version can rescue the teddy.</p>
+          <p>Thread string through a straw, tape a balloon to it, blow it up, and let it zoom across the room.</p>
           <div class="label">Watch for</div>
-          <ul><li>what changed</li><li>which shape got stronger</li></ul>
+          <ul><li>which balloon goes farther</li><li>how air makes it move</li></ul>
         </section>
       </div>
 
       <div class="footer">
         <div class="footer-box">
-          <h3>Caption angle</h3>
-          <p>Save this for five easy STEM ideas you can actually do at home with simple supplies.</p>
+          <h3>Caption</h3>
+          <p>Save this for the next time you need an easy, fun activity for your kindergartener that keeps little hands busy and curious.</p>
         </div>
         <div class="footer-box">
           <h3>Best use</h3>
           <p>Great for a saveable post, printable handout, or easy parent resource.</p>
         </div>
       </div>
-
-      <div class="brandline">Fun first. Learning still happens. — Little Lab Coats</div>
     </div>
   </div>
 </body>

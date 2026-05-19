@@ -39,7 +39,7 @@ If you want kindergarten STEM to feel fun instead of fussy, start here.
 
 These five ideas are playful, low-prep, and easy to pull off with simple supplies at home.
 
-Think toy car races, treasure tubs, magnet hunts, leaf detective walks, and a paper bridge rescue challenge.
+Think pom-pom tube drops, treasure tubs, magnet hunts, leaf detective walks, and a balloon rocket race.
 
 Save this for the next time you need an easy win that keeps little hands busy and curious. ✴️
 
