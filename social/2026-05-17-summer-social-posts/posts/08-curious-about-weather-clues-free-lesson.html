@@ -6,10 +6,14 @@
   <title>Celery Experiment Free Lesson</title>
   <style>
     :root {
-      --green: #97c93d;
-      --dark: #111111;
-      --cream: rgba(255, 252, 246, 0.94);
-      --white: #ffffff;
+      --sage: #b8d39b;
+      --soft-sage: #e7f2dd;
+      --sky: #e8f3fb;
+      --peach: #fbe9de;
+      --cream: rgba(255, 252, 247, 0.92);
+      --ink: #1f2321;
+      --muted: #536257;
+      --white: #fffefb;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -17,16 +21,16 @@
       width: 1080px;
       height: 1350px;
       overflow: hidden;
-      font-family: "Avenir Next", "Trebuchet MS", Arial, sans-serif;
-      background: #f6f3ec;
+      font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      background: #f4f1eb;
     }
     .poster {
       position: relative;
       width: 1080px;
       height: 1350px;
       overflow: hidden;
-      background: #f6f3ec;
-      transform: scale(0.92);
+      background: linear-gradient(180deg, #fbf8f3 0%, #f3efe8 100%);
+      transform: scale(0.94);
       transform-origin: top left;
     }
     .hero {
@@ -36,114 +40,135 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      filter: saturate(0.88) brightness(1.03);
     }
     .fade {
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.68) 0%, rgba(255,255,255,0.24) 26%, rgba(255,255,255,0) 46%),
-        linear-gradient(0deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.16) 26%, rgba(255,255,255,0) 50%);
+        linear-gradient(180deg, rgba(255,252,247,0.92) 0%, rgba(255,252,247,0.48) 22%, rgba(255,252,247,0.12) 42%, rgba(255,252,247,0.04) 58%),
+        linear-gradient(0deg, rgba(251,248,243,0.98) 0%, rgba(251,248,243,0.78) 16%, rgba(251,248,243,0.28) 34%, rgba(251,248,243,0.02) 54%),
+        radial-gradient(circle at 16% 18%, rgba(232,243,251,0.92) 0%, rgba(232,243,251,0) 25%),
+        radial-gradient(circle at 88% 16%, rgba(251,233,222,0.78) 0%, rgba(251,233,222,0) 22%);
     }
-    .subtitle {
+    .doodle {
       position: absolute;
-      top: 44px;
-      left: 58px;
-      right: 58px;
-      font-size: 30px;
-      line-height: 1.05;
-      color: #3a2b2b;
-      font-weight: 800;
+      width: 84px;
+      height: 84px;
+      color: #111;
+      opacity: 0.92;
+    }
+    .doodle svg { width: 100%; height: 100%; display: block; }
+    .doodle.left { top: 26px; left: 28px; }
+    .doodle.right { top: 38px; right: 36px; width: 70px; height: 70px; }
+
+    .eyebrow {
+      position: absolute;
+      top: 58px;
+      left: 86px;
+      right: 86px;
+      text-align: center;
+      font-size: 28px;
+      line-height: 1.1;
+      color: #4e5e52;
+      font-weight: 700;
       letter-spacing: -0.01em;
     }
     .title {
       position: absolute;
-      top: 82px;
-      left: 50px;
-      right: 48px;
-      color: var(--green);
+      top: 104px;
+      left: 62px;
+      right: 62px;
+      text-align: center;
+      color: var(--sage);
       font-weight: 900;
       text-transform: uppercase;
       line-height: 0.88;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.05em;
       text-shadow:
-        -4px -4px 0 var(--dark),
-         4px -4px 0 var(--dark),
-        -4px  4px 0 var(--dark),
-         4px  4px 0 var(--dark),
-         0px  6px 0 var(--dark),
-         0px 10px 22px rgba(0,0,0,0.18);
+        -3px -3px 0 #111,
+         3px -3px 0 #111,
+        -3px  3px 0 #111,
+         3px  3px 0 #111,
+         0px  5px 0 #111,
+         0px 10px 18px rgba(0,0,0,0.12);
     }
-    .title .line1 { display: block; font-size: 112px; }
-    .title .line2 { display: block; font-size: 94px; margin-top: 6px; }
+    .title .line1 { display: block; font-size: 116px; }
+    .title .line2 { display: block; font-size: 96px; margin-top: 6px; }
 
-    .badge {
+    .save-pill {
       position: absolute;
-      top: 304px;
-      left: 58px;
-      display: inline-block;
-      background: rgba(255,255,255,0.92);
-      color: #2b5c31;
+      top: 316px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.84);
+      border: 1px solid rgba(188, 210, 169, 0.55);
+      color: #42624e;
       border-radius: 999px;
-      padding: 10px 18px;
+      padding: 12px 22px;
       font-size: 22px;
       font-weight: 800;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      white-space: nowrap;
     }
 
     .bottom-card {
       position: absolute;
-      left: 36px;
-      right: 36px;
-      bottom: 36px;
+      left: 52px;
+      right: 52px;
+      bottom: 54px;
       background: var(--cream);
-      border-radius: 30px;
-      padding: 14px 16px 14px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-      display: grid;
-      gap: 10px;
-      align-items: stretch;
+      border: 1.5px solid rgba(221, 232, 214, 0.9);
+      border-radius: 34px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 18px 42px rgba(86, 101, 82, 0.12);
+      backdrop-filter: blur(6px);
     }
-    .blurb h2 {
+    .bottom-card h2 {
       margin: 0 0 8px;
-      font-size: 32px;
+      font-size: 34px;
       line-height: 0.96;
-      color: #2d4f2f;
+      color: #355640;
       letter-spacing: -0.03em;
     }
-    .blurb p {
-      margin: 0;
-      font-size: 19px;
-      line-height: 1.14;
-      color: #252525;
+    .bottom-card .lede {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.18;
+      color: #263128;
       font-weight: 500;
+      max-width: 950px;
     }
-    .cta-row {
+    .info-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 12px;
     }
-    .pill, .cta {
-      border-radius: 22px;
-      padding: 12px 14px;
-      background: rgba(255,255,255,0.96);
+    .info-box {
+      border-radius: 24px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(219, 229, 214, 0.95);
+      min-height: 104px;
     }
-    .pill strong, .cta strong {
+    .info-box.alt {
+      background: linear-gradient(135deg, var(--soft-sage), #eef7e7);
+    }
+    .info-box strong {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
+      color: #486551;
       font-size: 14px;
-      color: #3a5e32;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
+      font-weight: 900;
     }
-    .pill span, .cta span {
+    .info-box span {
       display: block;
-      font-size: 16px;
+      color: var(--ink);
+      font-size: 17px;
       line-height: 1.1;
-      color: #171717;
       font-weight: 700;
-    }
-    .cta {
-      background: #dff4d0;
     }
   </style>
 </head>
@@ -152,26 +177,46 @@
     <img class="hero" src="../images/celery-free-lesson-hero.png" alt="A bright celery base regrowing in a clear bowl of water." />
     <div class="fade"></div>
 
-    <div class="subtitle">Curious how plants drink water?</div>
+    <div class="doodle left">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g fill="currentColor">
+          <ellipse cx="25" cy="20" rx="12" ry="26" transform="rotate(-40 25 20)"/>
+          <ellipse cx="62" cy="20" rx="12" ry="26" transform="rotate(35 62 20)"/>
+          <ellipse cx="46" cy="47" rx="13" ry="30"/>
+          <rect x="44" y="40" width="6" height="58" rx="3"/>
+        </g>
+      </svg>
+    </div>
+    <div class="doodle right">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g fill="currentColor">
+          <ellipse cx="50" cy="20" rx="12" ry="24"/>
+          <ellipse cx="76" cy="33" rx="12" ry="24" transform="rotate(52 76 33)"/>
+          <ellipse cx="80" cy="62" rx="12" ry="24" transform="rotate(104 80 62)"/>
+          <ellipse cx="50" cy="78" rx="12" ry="24" transform="rotate(180 50 78)"/>
+          <circle cx="50" cy="50" r="14"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="eyebrow">Curious how plants drink water?</div>
     <div class="title">
       <span class="line1">Celery</span>
       <span class="line2">Experiment</span>
     </div>
-    <div class="badge">Free lesson ✴️</div>
+    <div class="save-pill">Free lesson ✴️</div>
 
     <div class="bottom-card">
-      <div class="blurb">
-        <h2>Grab this free celery lesson</h2>
-        <p>Kids set up celery in colored water, slice the stem open, and get real evidence that plants move water through tiny tubes.</p>
-      </div>
-      <div class="cta-row">
-        <div class="pill">
+      <h2>Grab this free celery lesson</h2>
+      <p class="lede">Kids set up celery in colored water, slice the stem open, and get real evidence that plants move water through tiny tubes.</p>
+      <div class="info-row">
+        <div class="info-box">
           <strong>What they do</strong>
           <span>Watch the color climb and see the hidden path inside the stem.</span>
         </div>
-        <div class="cta">
+        <div class="info-box alt">
           <strong>Why parents like it</strong>
-          <span>Simple supplies, pretty payoff, and actually feels science-y.</span>
+          <span>Simple supplies, pretty payoff, and still feels genuinely science-y.</span>
         </div>
       </div>
     </div>
