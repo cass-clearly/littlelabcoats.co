@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Lab Coats — Summer Social Post Reference</title>
+  <style>
+    :root {
+      --bg: #f5faf3;
+      --card: #fffefb;
+      --ink: #243127;
+      --muted: #5d6b5e;
+      --green: #416b47;
+      --border: #e3ecdf;
+      --shadow: 0 18px 50px rgba(65, 107, 71, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #edf7e9 0%, var(--bg) 100%);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 56px;
+    }
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #e6f4e7;
+      color: var(--green);
+      font: 800 14px/1 Lato, Arial, sans-serif;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1;
+      color: #355d3d;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.35;
+      color: var(--muted);
+      max-width: 900px;
+    }
+    .section-title {
+      margin: 30px 0 14px;
+      font-size: 28px;
+      color: #355d3d;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(65, 107, 71, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid #e8eee4;
+      background: #fff;
+    }
+    .card h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.08;
+      color: #355d3d;
+    }
+    .card p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.32;
+      color: var(--muted);
+      flex: 1;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: 800 14px/1 Lato, Arial, sans-serif;
+    }
+    .btn-primary {
+      background: #3f6f4d;
+      color: #fff;
+    }
+    .btn-secondary {
+      background: #eef6ee;
+      color: #355d3d;
+      border: 1px solid #dce8dc;
+    }
+    .lesson-list {
+      display: grid;
+      gap: 12px;
+    }
+    .lesson-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 16px 18px;
+      box-shadow: 0 10px 24px rgba(65, 107, 71, 0.06);
+    }
+    .lesson-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 20px;
+      color: #355d3d;
+    }
+    .lesson-item a {
+      color: #2f5f84;
+      text-decoration: none;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Little Lab Coats • Reference Hub</div>
+      <h1>Summer Social Post Reference</h1>
+      <p>This is the one place to grab the current post-ready graphics, open the editable source files, and jump to the Grade 5 lesson assets without digging back through chat.</p>
+    </div>
+
+    <h2 class="section-title">Social posts</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../04-five-stem-activities-for-kindergarten.png" alt="Kindergarten STEM post preview" />
+        <h2>Kindergarten STEM</h2>
+        <p>Playful infographic-style post with five fun STEM ideas for kindergarteners.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="../04-five-stem-activities-for-kindergarten.png">Open PNG</a>
+          <a class="btn btn-secondary" href="../posts/04-five-stem-activities-for-kindergarten.html">Edit HTML</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../06-household-science-supplies.png" alt="Science supplies post preview" />
+        <h2>Science supplies</h2>
+        <p>Shareable static post for useful science basics to keep around the house.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="../06-household-science-supplies.png">Open PNG</a>
+          <a class="btn btn-secondary" href="../posts/06-household-science-supplies.html">Edit HTML</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../07-top-10-homeschool-science-tips.png" alt="Homeschool science tips post preview" />
+        <h2>Homeschool science tips</h2>
+        <p>Practical advice post built to feel saveable instead of lecture-y.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="../07-top-10-homeschool-science-tips.png">Open PNG</a>
+          <a class="btn btn-secondary" href="../posts/07-top-10-homeschool-science-tips.html">Edit HTML</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../08-curious-about-weather-clues-free-lesson.png" alt="Weather clues teaser preview" />
+        <h2>Free lesson teaser</h2>
+        <p>Lesson-snippet post pointing parents to the free weather clues lesson.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="../08-curious-about-weather-clues-free-lesson.png">Open PNG</a>
+          <a class="btn btn-secondary" href="../posts/08-curious-about-weather-clues-free-lesson.html">Edit HTML</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../09-summer-stem-ages-9-12.png" alt="Summer STEM ages 9 to 12 preview" />
+        <h2>Summer STEM ages 9–12</h2>
+        <p>Six summer experiments for older kids with a stronger 9–12 feel.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="../09-summer-stem-ages-9-12.png">Open PNG</a>
+          <a class="btn btn-secondary" href="../posts/09-summer-stem-ages-9-12.html">Edit HTML</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../10-summer-series-opinion-post.png" alt="Summer series opinion post preview" />
+        <h2>Summer series opinion post</h2>
+        <p>Parent-feedback post testing interest in a short paid summer mini-unit.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="../10-summer-series-opinion-post.png">Open PNG</a>
+          <a class="btn btn-secondary" href="../posts/10-summer-series-opinion-post.html">Edit HTML</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Grade 5 lesson assets</h2>
+    <div class="lesson-list">
+      <div class="lesson-item">
+        <strong>Bread mold lesson</strong>
+        <a href="../../../../lesson-plans/free-gr5-bread-mold-terrarium.html">Open lesson</a>
+      </div>
+      <div class="lesson-item">
+        <strong>Bread mold reference card</strong>
+        <a href="../../../../lesson-plans/free-gr5-bread-mold-terrarium-refcard.html">Open ref card</a>
+      </div>
+      <div class="lesson-item">
+        <strong>Bread mold quiz</strong>
+        <a href="../../../../lesson-plans/free-gr5-bread-mold-terrarium-quiz.html">Open quiz</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
