@@ -35,13 +35,13 @@ Mark the shadow, come back later, and suddenly your child is spotting patterns i
 Simple. Beautiful. Memorable.
 
 ### 4) 5 STEM Activities for Kindergarten
-Kindergarten science does not need to be complicated to be meaningful.
+If you want kindergarten STEM to feel fun instead of fussy, start here.
 
-These five STEM ideas are low-prep, hands-on, and simple enough to do with everyday supplies at home.
+These five ideas are playful, low-prep, and easy to pull off with simple supplies at home.
 
-I also made this one actually useful: each activity gives you a quick idea of what to grab, what to do, and what to talk about with your child.
+Think toy car races, treasure tubs, magnet hunts, leaf detective walks, and a paper bridge rescue challenge.
 
-Save this for an easy science day. ✴️
+Save this for the next time you need an easy win that keeps little hands busy and curious. ✴️
 
 ### 5) 3 Easy Hands-On Experiments for First Grade
 If first grade science has been feeling harder to plan than it should, start here.
