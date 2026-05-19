@@ -78,15 +78,44 @@
     }
     h1 {
       margin: 0 0 6px;
-      font-size: 44px;
-      line-height: 1.02;
+      font-size: 46px;
+      line-height: 0.98;
       color: #335d3d;
+    }
+    .title-pop {
+      display: block;
+      color: #ff8a5b;
+      font-size: 52px;
+      line-height: 0.94;
     }
     .sub {
       margin: 0 0 10px;
-      font-size: 19px;
-      line-height: 1.24;
+      font-size: 18px;
+      line-height: 1.22;
       color: var(--muted);
+    }
+    .title-row {
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 10px;
+    }
+    .burst {
+      align-self: center;
+      justify-self: end;
+      width: 132px;
+      height: 132px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #ffd66b, #ff9b71);
+      color: #6d3a10;
+      font: 900 21px/1.05 Lato, Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      transform: rotate(7deg);
+      box-shadow: 0 12px 26px rgba(255, 155, 113, 0.28);
+      padding: 12px;
     }
     .hero {
       display: grid;
@@ -239,8 +268,13 @@
         <a class="save-pill" href="#save">Save this post for later ✴️</a>
       </div>
 
-      <h1>5 STEM Activities for Kindergarten</h1>
-      <p class="sub">More play, less worksheet energy — five easy ideas that keep little ones busy, curious, and learning.</p>
+      <div class="title-row">
+        <div>
+          <h1><span class="title-pop">5 STEM Play Ideas</span>Kindergarteners Will Actually Want to Do</h1>
+          <p class="sub">More play, less worksheet energy — five easy ideas that keep little ones busy, curious, and learning.</p>
+        </div>
+        <div class="burst">easy<br>save-worthy<br>ideas</div>
+      </div>
 
       <div class="hero">
         <div class="hero-image">
@@ -307,8 +341,8 @@
 
       <div class="footer">
         <div class="footer-box">
-          <h3>Caption</h3>
-          <p>Save this for the next time you need an easy, fun activity for your kindergartener that keeps little hands busy and curious.</p>
+          <h3>Post hook</h3>
+          <p>Save this for the next time you need an easy win: five playful kindergarten STEM ideas that feel more like fun than school.</p>
         </div>
         <div class="footer-box">
           <h3>Best use</h3>

@@ -41,7 +41,9 @@ These five ideas are playful, low-prep, and easy to pull off with simple supplie
 
 Think pom-pom tube drops, treasure tubs, magnet hunts, leaf detective walks, and a balloon rocket race.
 
-Save this for the next time you need an easy win that keeps little hands busy and curious. ✴️
+Save this for the next time you need an easy win that keeps little hands busy and curious.
+
+Five STEM play ideas kindergarteners will actually want to do. ✴️
 
 ### 5) 3 Easy Hands-On Experiments for First Grade
 If first grade science has been feeling harder to plan than it should, start here.
