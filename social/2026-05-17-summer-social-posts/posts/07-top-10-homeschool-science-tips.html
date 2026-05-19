@@ -6,69 +6,195 @@
   <title>Homeschool Science Tips That Actually Help</title>
   <style>
     :root {
-      --ink:#2d322d; --muted:#5d655d; --green:#446b42; --cream:#fffefb; --rose:#fde8f0; --sage:#e7f3e4; --gold:#fff4dd;
+      --bg: #f8fbf5;
+      --card: #fffefb;
+      --ink: #2f3b2d;
+      --muted: #5f6f5d;
+      --green: #456d42;
+      --accent: #f08aa5;
+      --soft: #fde8f0;
+      --lavender: #f4efff;
+      --sage: #edf7e8;
+      --gold: #fff4dd;
     }
-    * { box-sizing:border-box; }
-    html, body { margin:0; width:1080px; height:1350px; overflow:hidden; font-family:Georgia,"Times New Roman",serif; background:linear-gradient(180deg,#edf7e9 0%,#f9fbf6 100%); color:var(--ink); }
-    .frame { width:1080px; height:1350px; padding:24px; zoom:.96; transform-origin: top left; }
-    .card { height:100%; background:var(--cream); border-radius:38px; padding:22px; border:1px solid #e6ecdf; box-shadow:0 22px 70px rgba(74,110,56,.14); display:flex; flex-direction:column; }
-    .topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
-    .eyebrow, .save { font:800 18px Lato,Arial,sans-serif; border-radius:999px; }
-    .eyebrow { background:var(--rose); color:var(--green); padding:9px 14px; }
-    .save { background:#f08aa5; color:#5f1330; padding:12px 18px; }
-    h1 { margin:0 0 8px; font-size:46px; line-height:.98; color:#335d3d; }
-    .sub { margin:0 0 14px; font-size:22px; line-height:1.24; color:var(--muted); }
-    .hook { background:linear-gradient(135deg,#fff9fb,#fff1f5); border:2px solid #f5d9e3; border-radius:24px; padding:14px 16px; margin-bottom:14px; }
-    .hook strong { display:block; font-size:22px; color:#8b2f58; margin-bottom:4px; }
-    .hook p { margin:0; font-size:17px; line-height:1.26; color:var(--muted); }
-    .tips { display:grid; grid-template-columns:1fr 1fr; gap:12px; flex:1; align-content:stretch; }
-    .tip { border-radius:22px; padding:12px 13px; border:2px solid rgba(0,0,0,.06); background:#fbfff8; min-height:90px; }
-    .tip:nth-child(odd) { background:var(--sage); }
-    .tip:nth-child(even) { background:var(--gold); }
-    .tip h2 { margin:0 0 4px; font-size:19px; color:#36543a; }
-    .tip p { margin:0; font-size:15px; line-height:1.2; color:var(--muted); }
-    .footer { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
-    .footer-box { border-radius:22px; padding:12px 14px; background:#fbfff8; border:2px solid #e2ece1; }
-    .footer-box h3 { margin:0 0 6px; font:900 15px Lato,Arial,sans-serif; color:#456d42; letter-spacing:.06em; text-transform:uppercase; }
-    .footer-box p { margin:0; font-size:16px; line-height:1.24; color:var(--muted); }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #edf6e8 0%, #f8fbf5 100%);
+      color: var(--ink);
+    }
+    .frame {
+      width: 1080px;
+      min-height: 1350px;
+      margin: 0 auto;
+      padding: 46px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px rgba(74, 110, 56, 0.15);
+      border: 1px solid #e5eddf;
+    }
+    .hero {
+      position: relative;
+      height: 430px;
+      overflow: hidden;
+    }
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 38%;
+      filter: saturate(1.04) contrast(1.02);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 30%, rgba(255,254,251,0.18) 100%);
+      pointer-events: none;
+    }
+    .content { padding: 28px 32px 30px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--green);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 46px;
+      line-height: 1.02;
+      color: #375e34;
+    }
+    .sub {
+      margin: 0 0 18px;
+      font-size: 23px;
+      line-height: 1.3;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .box {
+      background: #fbfff8;
+      border: 2px solid #e4eee0;
+      border-radius: 24px;
+      padding: 16px 18px 18px;
+      min-height: 158px;
+    }
+    .box.pink { background: #fff9fb; border-color: #f3dce5; }
+    .box.gold { background: #fffaf0; border-color: #f0e3bf; }
+    .box.sage { background: #f7fcf4; border-color: #e0ecda; }
+    .box.lavender { background: #faf8ff; border-color: #e7def8; }
+    .box h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: #587627;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .box p {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.2;
+      color: var(--muted);
+    }
+    ul {
+      margin: 0;
+      padding-left: 24px;
+    }
+    li {
+      font-size: 20px;
+      line-height: 1.24;
+      margin: 0 0 2px;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 6px;
+    }
+    .tagline {
+      max-width: 720px;
+      font-size: 21px;
+      line-height: 1.24;
+      color: var(--green);
+      font-weight: 700;
+    }
+    .cta {
+      background: var(--accent);
+      color: #5f1330;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
   <div class="frame">
     <div class="card">
-      <div class="topbar">
+      <div class="hero"><img src="../images/top-10-homeschool-science-tips.png" alt="Homeschool science family table" /></div>
+      <div class="content">
         <div class="eyebrow">Little Lab Coats • Homeschool Science</div>
-        <div class="save">Save this when science feels hard ✴️</div>
-      </div>
-      <h1>10 Homeschool Science Tips That Actually Help</h1>
-      <p class="sub">Not a lecture. Not “do more.” Just the practical stuff that makes science easier to start and easier to keep doing.</p>
-
-      <div class="hook">
-        <strong>Here’s the real secret:</strong>
-        <p>Most homeschool science gets better when you make it simpler, shorter, and more repeatable — not more impressive.</p>
-      </div>
-
-      <div class="tips">
-        <div class="tip"><h2>1. Keep it shorter than you think</h2><p>You do not need an hour. Fifteen good minutes can absolutely count.</p></div>
-        <div class="tip"><h2>2. Repeat favorites</h2><p>Kids learn a lot by doing the same experiment again with one small change.</p></div>
-        <div class="tip"><h2>3. Use what you already have</h2><p>Kitchen stuff, tape, cups, leaves, ice, and paper go a long way.</p></div>
-        <div class="tip"><h2>4. Let prediction come first</h2><p>A simple “what do you think will happen?” changes everything.</p></div>
-        <div class="tip"><h2>5. Go outside whenever possible</h2><p>Nature observation counts. Shadows, bugs, puddles, clouds, leaves — it all counts.</p></div>
-        <div class="tip"><h2>6. Do not over-explain</h2><p>Let them notice first. You can name the science after the curiosity shows up.</p></div>
-        <div class="tip"><h2>7. Keep a tiny science basket</h2><p>A few ready supplies makes it much easier to say yes in the moment.</p></div>
-        <div class="tip"><h2>8. Mess is not failure</h2><p>If it bubbled, collapsed, spilled, or surprised you, there is probably still science there.</p></div>
-        <div class="tip"><h2>9. End while it is still fun</h2><p>You do not have to push until they are done. Leave some curiosity for next time.</p></div>
-        <div class="tip"><h2>10. Count conversation as learning</h2><p>If your child compared, wondered, described, or noticed, science happened.</p></div>
-      </div>
-
-      <div class="footer">
-        <div class="footer-box">
-          <h3>Why this helps</h3>
-          <p>If homeschool science has been feeling heavier than it should, save this. These are the tips that actually make it easier.</p>
+        <h1>10 Homeschool Science Tips That Actually Help</h1>
+        <p class="sub">Not a lecture. Just the practical little shifts that make science easier to start, easier to repeat, and a lot less heavy.</p>
+        <div class="grid">
+          <div class="box pink">
+            <h2>Start smaller</h2>
+            <p>You do not need a big perfect lesson for science to count.</p>
+            <ul>
+              <li>keep it shorter than you think</li>
+              <li>use what you already have</li>
+              <li>keep a tiny science basket</li>
+            </ul>
+          </div>
+          <div class="box gold">
+            <h2>Let curiosity lead</h2>
+            <p>The best science moments usually start with noticing and wondering.</p>
+            <ul>
+              <li>let prediction come first</li>
+              <li>do not over-explain too early</li>
+              <li>count conversation as learning</li>
+            </ul>
+          </div>
+          <div class="box sage">
+            <h2>Make room for real life</h2>
+            <p>Nature, repetition, and a little mess all still count as science.</p>
+            <ul>
+              <li>repeat favorites</li>
+              <li>go outside whenever possible</li>
+              <li>mess is not failure</li>
+            </ul>
+          </div>
+          <div class="box lavender">
+            <h2>Protect the fun</h2>
+            <p>You are building long-term curiosity, not performing a perfect lab.</p>
+            <ul>
+              <li>end while it is still fun</li>
+              <li>skip the giant prep list</li>
+              <li>leave some wonder for next time</li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-box">
-          <h3>What to cut</h3>
-          <p>Skip the guilt, the giant prep list, and the pressure to make every science day look magical.</p>
+        <div class="footer">
+          <div class="tagline">Simple, flexible, and made for actual homeschool days — the kind parents save because it helps.</div>
+          <div class="cta">Save this ✴️</div>
         </div>
       </div>
     </div>
