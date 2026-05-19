@@ -52,21 +52,46 @@ These three hands-on ideas are simple to set up, easy to repeat, and actually gi
 
 Low prep. High curiosity. My favorite combination.
 
-### 6) Useful Items to Keep Around the House for Science
-You really do not need fancy science supplies to do meaningful science at home.
+### 6) Keep These Science Supplies on Hand
+You do not need a giant science closet.
 
-A few simple things like tape, toilet roll tubes, food coloring, droppers, paper plates, and measuring cups can carry so many experiments.
+You just need a few reliable basics that make it easy to say yes when your kids want to try something.
 
-This is the kind of post I wish I had when I first started.
+Think droppers, measuring cups, tape, food coloring, baking soda, magnifying glasses, and paper plates.
 
-### 7) Top 10 Tips for Homeschool Science
-If homeschool science feels like one more thing to figure out, here is the gentle reminder:
+Save this so you can build a tiny grab-and-go science stash without overthinking it.
 
-It does not have to be perfect to be powerful.
+### 7) 10 Homeschool Science Tips That Actually Help
+If homeschool science has been feeling heavier than it should, save this.
 
-A short lesson, a simple material, one good question, and a child who is curious already gets you a long way.
+Not because you need to do more — because you probably need to make it simpler.
 
-Save this if you need science to feel more doable.
+Shorter lessons. Better questions. Less pressure. More repeatable wins.
+
+This is the practical version, not the guilt version.
+
+### 8) Curious About Weather Clues?
+Curious about weather clues?
+
+Grab this free lesson and explore condensation, clouds, and mini weather systems with your littles.
+
+It is hands-on, surprisingly exciting, and gives kids real evidence to talk about instead of just memorizing vocabulary.
+
+### 9) Ways to Keep Your Kiddos Entertained Over the Summer
+If you are anything like our family, summer break is amazing… until everyone starts needing a little structure again.
+
+These six STEM ideas for ages 9–12 keep things fun, interesting, and just organized enough to save your sanity.
+
+Think magic color chemistry, baking science, crystal growing, invisible ink, and nature investigations.
+
+### 10) Would Anyone Want a Short Summer STEM Series?
+I am thinking about making a 4-week / 4-lesson summer mini-unit for families who want something light, fun, and structured — but not full curriculum mode.
+
+Would that be useful for your family?
+
+If yes, what topic would your kids be most excited about?
+Would you want household-materials only, or something a little more special?
+Would $20 feel like a yes?
 
 ## More post ideas like this
 1. 5 rainy-day science activities with household supplies

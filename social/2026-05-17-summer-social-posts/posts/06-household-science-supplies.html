@@ -3,154 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Useful Items to Keep Around the House for Science</title>
+  <title>Keep These Science Supplies on Hand</title>
   <style>
     :root {
-      --bg: #f8fbf5;
-      --card: #fffefb;
-      --ink: #2f3b2d;
-      --muted: #5f6f5d;
-      --green: #456d42;
-      --accent: #f2b36d;
-      --soft: #fcebd9;
+      --ink: #2c3328;
+      --muted: #5b6756;
+      --green: #446b42;
+      --cream: #fffefb;
+      --sand: #fff3df;
+      --sage: #e7f3e4;
+      --peach: #ffe7d7;
+      --sky: #e8f4ff;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
+    html, body {
+      margin: 0; width: 1080px; height: 1350px; overflow: hidden;
       font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(180deg, #edf6e8 0%, #f8fbf5 100%);
-      color: var(--ink);
+      background: linear-gradient(180deg, #edf7e9 0%, #f9fbf6 100%); color: var(--ink);
     }
-    .frame {
-      width: 1080px;
-      min-height: 1350px;
-      margin: 0 auto;
-      padding: 52px;
-    }
+    .frame { width: 1080px; height: 1350px; padding: 30px; }
     .card {
-      background: var(--card);
-      border-radius: 34px;
-      overflow: hidden;
-      box-shadow: 0 25px 80px rgba(74, 110, 56, 0.15);
-      border: 1px solid #e5eddf;
+      height: 100%; background: var(--cream); border-radius: 38px; padding: 28px;
+      border: 1px solid #e6ecdf; box-shadow: 0 22px 70px rgba(74,110,56,.14);
     }
-    .hero img {
-      display: block;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
+    .topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:12px; }
+    .eyebrow, .save { font: 800 18px Lato, Arial, sans-serif; border-radius:999px; }
+    .eyebrow { background: var(--sage); color: var(--green); padding: 9px 14px; }
+    .save { background: #f2b36d; color: #5b3700; padding: 12px 18px; }
+    h1 { margin: 0 0 8px; font-size: 52px; line-height: .98; color: #335d3d; }
+    .sub { margin: 0 0 16px; font-size: 24px; line-height: 1.28; color: var(--muted); }
+    .hook {
+      background: linear-gradient(135deg, #fffaf1, #fff4df); border: 2px solid #f5ddb7; border-radius: 24px;
+      padding: 16px 18px; margin-bottom: 16px;
     }
-    .content { padding: 32px 36px 36px; }
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 15px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--green);
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-bottom: 14px;
+    .hook strong { display:block; font-size: 23px; color:#8b5a11; margin-bottom: 4px; }
+    .hook p { margin:0; font-size:18px; line-height:1.32; color:var(--muted); }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .box { border-radius: 24px; padding: 18px; border: 2px solid rgba(0,0,0,.06); }
+    .box.one { background: var(--sand); }
+    .box.two { background: var(--sky); }
+    .box.three { background: var(--peach); }
+    .box.four { background: var(--sage); }
+    .box h2 { margin:0 0 10px; font-size: 24px; color:#36543a; }
+    .chip-row { display:flex; flex-wrap:wrap; gap:8px; margin: 0 0 12px; }
+    .chip {
+      background: rgba(255,255,255,.84); border-radius:999px; padding: 7px 11px;
+      font: 800 15px Lato, Arial, sans-serif; color:#45624c;
     }
-    h1 {
-      margin: 0 0 10px;
-      font-size: 54px;
-      line-height: 1.04;
-      color: #375e34;
-    }
-    .sub {
-      margin: 0 0 22px;
-      font-size: 26px;
-      line-height: 1.4;
-      color: var(--muted);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-    .box {
-      background: #fbfff8;
-      border: 2px solid #e4eee0;
-      border-radius: 24px;
-      padding: 18px 20px 20px;
-      min-height: 210px;
-    }
-    .box h2 {
-      margin: 0 0 10px;
-      font-size: 24px;
-      color: #587627;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    ul {
-      margin: 0;
-      padding-left: 26px;
-    }
-    li {
-      font-size: 26px;
-      line-height: 1.34;
-      margin: 0 0 4px;
-    }
+    .box p, .box li { font-size: 18px; line-height: 1.28; margin: 0; }
+    .box ul { margin: 8px 0 0; padding-left: 20px; }
+    .box li { margin-bottom: 4px; }
     .footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      margin-top: 8px;
+      display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:16px;
     }
-    .tagline {
-      max-width: 700px;
-      font-size: 23px;
-      line-height: 1.28;
-      color: var(--green);
-      font-weight: 700;
+    .footer-box {
+      border-radius: 22px; padding: 14px 16px; background:#fbfff8; border:2px solid #e2ece1;
     }
-    .cta {
-      background: var(--accent);
-      color: #4d3a00;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 21px;
-      font-weight: 700;
-      text-align: center;
-    }
+    .footer-box h3 { margin:0 0 6px; font: 900 15px Lato, Arial, sans-serif; color:#456d42; letter-spacing:.06em; text-transform:uppercase; }
+    .footer-box p { margin:0; font-size:17px; line-height:1.28; color:var(--muted); }
   </style>
 </head>
 <body>
   <div class="frame">
     <div class="card">
-      <div class="hero"><img src="../images/science-supplies-around-the-house.png" alt="Useful Items to Keep Around the House for Science" /></div>
-      <div class="content">
+      <div class="topbar">
         <div class="eyebrow">Little Lab Coats • Science at Home</div>
-        <h1>Useful Items to Keep Around the House for Science</h1>
-        <p class="sub">You do not need fancy supplies. A small stash of everyday materials can carry weeks of meaningful science play.</p>
-        <div class="grid">
-          <div class="box">
-            <h2>Keep these handy</h2>
-            <ul>
-              <li>tape</li>
-<li>toilet roll tubes</li>
-<li>baking soda + vinegar</li>
-<li>food coloring</li>
-<li>paper plates</li>
-            </ul>
+        <div class="save">Save this supply list ✴️</div>
+      </div>
+      <h1>Keep These Science Supplies on Hand</h1>
+      <p class="sub">Not because you need a giant science closet — just because these few things make it ridiculously easier to say “yes” to a fun experiment.</p>
+
+      <div class="hook">
+        <strong>This is the real starter kit.</strong>
+        <p>If you have these around the house, you can pull off a surprising amount of science without panic-buying weird supplies at 9pm.</p>
+      </div>
+
+      <div class="grid">
+        <div class="box one">
+          <h2>For mixing + observing</h2>
+          <div class="chip-row">
+            <span class="chip">droppers</span><span class="chip">measuring cups</span><span class="chip">food coloring</span>
           </div>
-          <div class="box">
-            <h2>Also useful</h2>
-            <ul>
-              <li>string</li>
-<li>craft sticks</li>
-<li>droppers</li>
-<li>magnifying glass</li>
-<li>measuring cups</li>
-            </ul>
-          </div>
+          <p>These three do a lot of heavy lifting for color mixing, careful pouring, and simple chemistry play.</p>
         </div>
-        <div class="footer">
-          <div class="tagline">Practical, parent-helpful, and easy to share</div>
-          <div class="cta">Household science kit</div>
+
+        <div class="box two">
+          <h2>For building challenges</h2>
+          <div class="chip-row">
+            <span class="chip">tape</span><span class="chip">craft sticks</span><span class="chip">paper plates</span>
+          </div>
+          <p>Perfect for bridges, ramps, towers, marble runs, and all the “can we make it stronger?” experiments.</p>
+        </div>
+
+        <div class="box three">
+          <h2>For fizz + reaction fun</h2>
+          <div class="chip-row">
+            <span class="chip">baking soda</span><span class="chip">vinegar</span><span class="chip">small trays</span>
+          </div>
+          <p>Classic for a reason. Fast setup, big payoff, and great for prediction talk.</p>
+        </div>
+
+        <div class="box four">
+          <h2>For nature and noticing</h2>
+          <div class="chip-row">
+            <span class="chip">magnifying glass</span><span class="chip">string</span><span class="chip">toilet roll tubes</span>
+          </div>
+          <p>Great for bug hunts, leaf walks, homemade binoculars, and little observation games outside.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-box">
+          <h3>Why this matters</h3>
+          <p>The easier it is to start, the more likely science actually happens on a normal Tuesday.</p>
+        </div>
+        <div class="footer-box">
+          <h3>Post hook</h3>
+          <p>You do not need fancy science supplies. You just need a few reliable basics that make experiments feel easy.</p>
         </div>
       </div>
     </div>
