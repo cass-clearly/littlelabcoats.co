@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Household Science Supplies Worth Keeping Around</title>
+  <title>Useful Household Items for Homeschool Science</title>
   <style>
     :root {
-      --bg: #dfe5fb;
-      --panel: rgba(255,255,255,0.38);
-      --green: #2f8a22;
-      --ink: #0f1113;
-      --white: #f8fbff;
+      --sage: #dff1e5;
+      --peach: #ffe5d9;
+      --sky: #e5f2ff;
+      --gold: #fff3d8;
+      --lav: #efe7ff;
+      --mint: #e8f6ec;
+      --rose: #ffe6ef;
+      --ink: #253127;
+      --muted: #556457;
+      --green: #3f6f4d;
+      --panel: #fffefb;
+      --line: #e2ece3;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -18,228 +25,198 @@
       width: 1080px;
       height: 1350px;
       overflow: hidden;
-      font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-      background: var(--bg);
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #f3faf1 0%, #eef7ec 100%);
       color: var(--ink);
     }
     .frame {
       width: 1080px;
       height: 1350px;
-      padding: 24px 30px 28px;
+      padding: 30px;
+    }
+    .card {
+      height: 100%;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      box-shadow: 0 22px 70px rgba(74,110,56,.12);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .hero {
+      padding: 28px 34px 22px;
+      background: linear-gradient(180deg, #f9fff8 0%, #f5fbf4 100%);
+      border-bottom: 1px solid #e7efe6;
       position: relative;
     }
-    .deco {
-      position: absolute;
-      width: 84px;
-      height: 84px;
-      color: #111;
-    }
-    .deco svg { width: 100%; height: 100%; display: block; }
-    .deco.leaf-left { top: -6px; left: -6px; }
-    .deco.flower-right { top: 14px; right: 18px; width: 72px; height: 72px; }
-
-    .title {
-      text-align: center;
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--sage);
       color: var(--green);
-      font-weight: 900;
+      font: 800 16px/1 Lato, Arial, sans-serif;
+      letter-spacing: .04em;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 54px;
+      line-height: .96;
+      color: #345d3e;
       letter-spacing: -0.03em;
-      line-height: 0.95;
-      font-size: 72px;
-      margin: 8px 60px 10px;
+      max-width: 760px;
+    }
+    .sub {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1.24;
+      color: var(--muted);
+      max-width: 760px;
     }
     .save {
-      width: fit-content;
-      margin: 0 auto 18px;
-      background: rgba(255,255,255,0.7);
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      background: #f3b874;
+      color: #5b3700;
       border-radius: 999px;
-      padding: 10px 18px;
-      color: #35543e;
-      font-size: 20px;
-      font-weight: 800;
+      padding: 12px 18px;
+      font: 800 18px/1 Lato, Arial, sans-serif;
+      box-shadow: 0 10px 20px rgba(243,184,116,.18);
     }
-
-    .grid-top,
-    .grid-bottom {
+    .rows {
       display: grid;
-      gap: 18px;
+      grid-template-rows: repeat(5, 1fr);
     }
-    .grid-top { grid-template-columns: repeat(3, 1fr); margin-bottom: 18px; }
-    .grid-bottom { grid-template-columns: repeat(2, 1fr); }
-
-    .card {
-      background: var(--panel);
-      min-height: 410px;
-      padding: 20px 20px 18px;
+    .row {
       display: grid;
-      grid-template-columns: 96px 1fr;
-      gap: 12px;
-      align-items: center;
+      grid-template-columns: 300px 146px 1fr;
+      align-items: stretch;
+      min-height: 0;
+      border-top: 1px solid #edf3ed;
     }
-    .grid-bottom .card { min-height: 360px; }
-
-    .icon {
-      width: 96px;
-      height: 220px;
+    .row:first-child { border-top: 0; }
+    .label {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 18px 22px;
+      text-align: center;
+      color: #fffefb;
+      font-family: "Avenir Next", Arial, sans-serif;
+      font-size: 22px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
-    .grid-bottom .icon { height: 190px; width: 130px; }
+    .icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-left: 1px solid #edf1eb;
+      border-right: 1px solid #edf1eb;
+    }
+    .icon {
+      width: 92px;
+      height: 92px;
+      border-radius: 999px;
+      background: #fffefb;
+      border: 5px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+    }
     .icon svg {
-      width: 100%;
-      height: 100%;
+      width: 58px;
+      height: 58px;
       display: block;
     }
-    .content h2 {
-      margin: 0 0 10px;
-      color: var(--green);
-      font-size: 35px;
-      line-height: 0.98;
-      font-weight: 900;
-      letter-spacing: -0.03em;
+    .desc {
+      display: flex;
+      align-items: center;
+      padding: 18px 24px;
+      font-size: 20px;
+      line-height: 1.25;
+      color: #334036;
+      background: #fffefb;
     }
-    .content p {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1.22;
-      color: #131518;
-      font-weight: 500;
+    .row-1 .label { background: #7ab992; }
+    .row-1 .icon, .row-1 .icon-wrap { color: #7ab992; }
+    .row-2 .label { background: #f3a88b; }
+    .row-2 .icon, .row-2 .icon-wrap { color: #f3a88b; }
+    .row-3 .label { background: #7fb6ec; }
+    .row-3 .icon, .row-3 .icon-wrap { color: #7fb6ec; }
+    .row-4 .label { background: #f0c66c; }
+    .row-4 .icon, .row-4 .icon-wrap { color: #f0c66c; }
+    .row-5 .label { background: #b397e6; }
+    .row-5 .icon, .row-5 .icon-wrap { color: #b397e6; }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      background: #fbfdf9;
+      border-top: 1px solid #e7efe6;
+      color: #4f6153;
+      font: 800 18px/1 Lato, Arial, sans-serif;
     }
-    .content .small {
-      font-size: 26px;
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f3b874, #7ab992);
     }
   </style>
 </head>
 <body>
   <div class="frame">
-    <div class="deco leaf-left">
-      <svg viewBox="0 0 100 100" aria-hidden="true">
-        <g fill="currentColor">
-          <ellipse cx="25" cy="20" rx="12" ry="26" transform="rotate(-40 25 20)"/>
-          <ellipse cx="62" cy="20" rx="12" ry="26" transform="rotate(35 62 20)"/>
-          <ellipse cx="46" cy="47" rx="13" ry="30"/>
-          <rect x="44" y="40" width="6" height="58" rx="3"/>
-        </g>
-      </svg>
-    </div>
-    <div class="deco flower-right">
-      <svg viewBox="0 0 100 100" aria-hidden="true">
-        <g fill="currentColor">
-          <ellipse cx="50" cy="20" rx="12" ry="24"/>
-          <ellipse cx="76" cy="33" rx="12" ry="24" transform="rotate(52 76 33)"/>
-          <ellipse cx="80" cy="62" rx="12" ry="24" transform="rotate(104 80 62)"/>
-          <ellipse cx="50" cy="78" rx="12" ry="24" transform="rotate(180 50 78)"/>
-          <ellipse cx="23" cy="62" rx="12" ry="24" transform="rotate(256 23 62)"/>
-          <ellipse cx="24" cy="33" rx="12" ry="24" transform="rotate(308 24 33)"/>
-          <circle cx="50" cy="50" r="14"/>
-        </g>
-      </svg>
-    </div>
+    <div class="card">
+      <div class="hero">
+        <div class="eyebrow">Little Lab Coats • Science at Home</div>
+        <div class="save">Save this list ✴️</div>
+        <h1>Useful Household Items for Homeschool Science</h1>
+        <p class="sub">You do not need a giant science closet. Just a few reliable basics that make hands-on science way easier to pull off at home.</p>
+      </div>
 
-    <div class="title">Household Science<br>Supplies Worth Keeping</div>
-    <div class="save">Save this for your at-home science stash ✴️</div>
-
-    <div class="grid-top">
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 120 220" aria-hidden="true">
-            <g fill="#000">
-              <rect x="46" y="18" width="28" height="54" rx="10"/>
-              <rect x="50" y="68" width="20" height="102" rx="8"/>
-              <path d="M60 166 C74 184, 82 196, 82 206 C82 213, 72 218, 60 218 C48 218, 38 213, 38 206 C38 196, 46 184, 60 166Z"/>
-              <circle cx="48" cy="150" r="4"/>
-              <circle cx="72" cy="138" r="4"/>
-            </g>
-          </svg>
+      <div class="rows">
+        <div class="row row-1">
+          <div class="label">Droppers + food coloring</div>
+          <div class="icon-wrap"><div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 10h4v14h-4z" fill="currentColor"/><path d="M32 24v18"/><path d="M32 42c6 8 10 12 10 16a10 10 0 1 1-20 0c0-4 4-8 10-16Z" fill="currentColor"/></svg></div></div>
+          <div class="desc">Perfect for color mixing, careful pouring, rainbow water, and the kind of simple chemistry play that gives you a fast wow factor.</div>
         </div>
-        <div class="content">
-          <h2>Droppers</h2>
-          <p>Perfect for color mixing, careful pouring, and all the tiny chemistry moves kids weirdly love.</p>
+
+        <div class="row row-2">
+          <div class="label">Tape + craft sticks</div>
+          <div class="icon-wrap"><div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M18 14 46 50"/><path d="M46 14 18 50"/><rect x="10" y="10" width="12" height="12" rx="3" fill="currentColor" stroke="none"/><rect x="42" y="42" width="12" height="12" rx="3" fill="currentColor" stroke="none"/></svg></div></div>
+          <div class="desc">Great for bridges, towers, ramps, marble runs, and all the little engineering challenges where kids want to test what is stronger.</div>
+        </div>
+
+        <div class="row row-3">
+          <div class="label">Measuring cups</div>
+          <div class="icon-wrap"><div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"><path d="M14 18h28v32H14z"/><path d="M42 24h8c4 0 6 2 6 6v8c0 4-2 6-6 6h-8"/><path d="M22 28h12"/><path d="M22 36h12"/><path d="M22 44h12"/></svg></div></div>
+          <div class="desc">Useful for baking science, water tests, dissolving experiments, and any activity where comparing amounts actually matters.</div>
+        </div>
+
+        <div class="row row-4">
+          <div class="label">Baking soda + vinegar</div>
+          <div class="icon-wrap"><div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 44h28l-6-22H24z"/><path d="M32 12v10"/><path d="M26 12h12"/><path d="M22 50h20"/><circle cx="46" cy="20" r="4" fill="currentColor" stroke="none"/><circle cx="52" cy="28" r="3" fill="currentColor" stroke="none"/></svg></div></div>
+          <div class="desc">Still one of the easiest ways to get an exciting reaction with almost no prep — great for prediction talk and quick wins on busy days.</div>
+        </div>
+
+        <div class="row row-5">
+          <div class="label">Magnifying glass + nature finds</div>
+          <div class="icon-wrap"><div class="icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="28" r="14"/><path d="M38 38l14 14"/><path d="M16 50c6-6 10-10 16-10"/></svg></div></div>
+          <div class="desc">Perfect for bug hunts, leaves, seed pods, bark, and all the outdoor noticing that quietly turns into real science without feeling forced.</div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 120 220" aria-hidden="true">
-            <g fill="#000" stroke="#000" stroke-width="6" stroke-linejoin="round">
-              <path d="M22 176 H98 V196 H22 Z" fill="#000"/>
-              <path d="M28 52 H92 V176 H28 Z" fill="none"/>
-              <path d="M92 78 H104 V164 H92" fill="none"/>
-              <line x1="40" y1="78" x2="72" y2="78"/>
-              <line x1="40" y1="104" x2="72" y2="104"/>
-              <line x1="40" y1="130" x2="72" y2="130"/>
-              <line x1="40" y1="156" x2="72" y2="156"/>
-            </g>
-          </svg>
-        </div>
-        <div class="content">
-          <h2>Measuring Cups</h2>
-          <p>Use these for baking science, water tests, slime, and any experiment where amounts actually matter.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 120 220" aria-hidden="true">
-            <g fill="#000">
-              <circle cx="50" cy="60" r="28"/>
-              <circle cx="50" cy="60" r="14" fill="#dfe5fb"/>
-              <rect x="72" y="48" width="22" height="22" rx="3"/>
-              <rect x="24" y="126" width="20" height="72" rx="4" transform="rotate(-12 34 162)"/>
-              <rect x="48" y="118" width="20" height="80" rx="4" transform="rotate(8 58 158)"/>
-              <rect x="70" y="126" width="20" height="72" rx="4" transform="rotate(-10 80 162)"/>
-            </g>
-          </svg>
-        </div>
-        <div class="content">
-          <h2>Tape + Craft Sticks</h2>
-          <p>Great for bridges, towers, ramps, and all the “can we make this stronger?” engineering challenges.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-bottom">
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 140 200" aria-hidden="true">
-            <g fill="#000" stroke="#000" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-              <path d="M24 150 C34 106, 48 82, 66 74 C84 82, 98 106, 108 150 Z" fill="none"/>
-              <line x1="66" y1="74" x2="66" y2="28"/>
-              <line x1="48" y1="28" x2="84" y2="28"/>
-              <rect x="28" y="150" width="76" height="28" fill="#000" stroke="none" rx="4"/>
-              <path d="M98 128 C112 122, 120 122, 128 130 C116 136, 110 142, 106 152" fill="#000" stroke="none"/>
-            </g>
-          </svg>
-        </div>
-        <div class="content">
-          <h2>Baking Soda + Vinegar</h2>
-          <p class="small">Keep these around for fast, fizzy reactions that make science feel exciting in about ten seconds.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 140 200" aria-hidden="true">
-            <g fill="#000" stroke="#000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="60" cy="74" r="34" fill="none"/>
-              <line x1="84" y1="100" x2="124" y2="142"/>
-              <line x1="112" y1="130" x2="129" y2="148"/>
-              <line x1="26" y1="74" x2="94" y2="74"/>
-              <line x1="60" y1="40" x2="60" y2="108"/>
-            </g>
-            <g fill="#000">
-              <rect x="22" y="150" width="24" height="34" rx="4"/>
-              <path d="M34 140 C20 126, 18 112, 28 104 C44 116, 52 132, 50 146"/>
-              <rect x="66" y="152" width="38" height="26" rx="4"/>
-              <path d="M84 152 C76 136, 78 120, 88 110 C98 122, 100 138, 96 152"/>
-            </g>
-          </svg>
-        </div>
-        <div class="content">
-          <h2>Magnifying Glass</h2>
-          <p>Perfect for bug hunts, leaf walks, and the kind of outdoor noticing that turns into science without forcing it.</p>
-        </div>
-      </div>
+      <div class="brand"><span class="brand-dot"></span> Little Lab Coats</div>
     </div>
   </div>
 </body>
