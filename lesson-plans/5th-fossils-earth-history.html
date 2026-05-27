@@ -3,690 +3,348 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fossils: Reading the Pages of Earth's History</title>
+  <link rel="canonical" href="https://littlelabcoats.co/lesson-plans/5th-fossils-earth-history.html">
+  <title>Fossil Forensics: Rebuild a Lost World | Little Lab Coats</title>
   <style>
     * { box-sizing: border-box; }
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.5in;
-      font-size: 11pt;
-      line-height: 1.4;
-      color: #222;
-    }
-    h1 {
-      text-align: center;
-      font-size: 22pt;
-      margin-bottom: 5px;
-      border-bottom: 3px solid #00B894;
-      padding-bottom: 10px;
-      color: #00B894;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: #555;
-      font-size: 13pt;
-    }
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      background: #e0f5f0;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 10pt;
-      border: 1px solid #80cbc4;
-    }
-    h2 {
-      font-size: 14pt;
-      background: #00B894;
-      color: white;
-      padding: 8px 14px;
-      margin: 24px 0 12px 0;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 12pt;
-      color: #007a62;
-      border-bottom: 2px solid #80cbc4;
-      padding-bottom: 4px;
-      margin: 18px 0 8px 0;
-    }
+    body { font-family: Georgia, 'Times New Roman', serif; max-width: 8.5in; margin: 0 auto; padding: 0.5in; font-size: 11pt; line-height: 1.4; color: #222; background: #fff; }
+    h1 { text-align: center; font-size: 22pt; margin-bottom: 5px; border-bottom: 3px solid #00897b; padding-bottom: 10px; color: #00897b; }
+    .subtitle { text-align: center; font-style: italic; margin-bottom: 20px; color: #555; font-size: 13pt; }
+    .meta { display: flex; justify-content: space-between; background: #e0f2f1; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; font-size: 10pt; border: 1px solid #80cbc4; flex-wrap: wrap; gap: 5px; }
+    h2 { font-size: 14pt; background: #00897b; color: white; padding: 8px 14px; margin: 24px 0 12px 0; border-radius: 6px; }
+    h3 { font-size: 12pt; color: #00695c; border-bottom: 2px solid #80cbc4; padding-bottom: 4px; margin: 18px 0 8px 0; }
     ul, ol { margin: 8px 0; padding-left: 25px; }
     li { margin-bottom: 5px; }
-    .hero-image {
-      text-align: center;
-      margin: 16px 0;
-    }
-    .hero-image img {
-      max-width: 100%;
-      max-height: 320px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    .hero-image .caption {
-      font-size: 9pt;
-      color: #777;
-      font-style: italic;
-      margin-top: 4px;
-    }
-    .materials-box {
-      background: #fff8e1;
-      border: 2px solid #ffcc80;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
-    .two-column {
-      display: flex;
-      gap: 20px;
-    }
-    .two-column > div { flex: 1; }
-    .procedure-step {
-      background: #e0f5f0;
-      padding: 10px 15px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border-left: 5px solid #00B894;
-    }
-    .procedure-step strong { color: #007a62; }
-    .fossil-card {
-      display: inline-block;
-      background: #e8f5e9;
-      border: 1px solid #a5d6a7;
-      border-radius: 8px;
-      padding: 8px 12px;
-      margin: 4px;
-      text-align: center;
-      font-size: 10pt;
-      min-width: 120px;
-      vertical-align: top;
-    }
-    .fossil-card .emoji { font-size: 20pt; display: block; margin-bottom: 4px; }
-    .fossil-card .name { font-weight: bold; color: #2e7d32; }
-    .fossil-card .desc { font-style: italic; color: #555; font-size: 9pt; }
-    .organism-card {
-      display: inline-block;
-      background: #fce4ec;
-      border: 1px solid #f48fb1;
-      border-radius: 8px;
-      padding: 8px 12px;
-      margin: 4px;
-      text-align: center;
-      font-size: 10pt;
-      min-width: 100px;
-    }
-    .organism-card .emoji { font-size: 18pt; display: block; margin-bottom: 2px; }
-    .organism-card .name { font-weight: bold; color: #c2185b; }
-    .organism-card .item { font-size: 9pt; color: #555; }
-    .question-box {
-      background: #F3E8FF;
-      border-left: 5px solid #2196f3;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-    }
-    .discussion-hint {
-      font-style: italic;
-      color: #00897b;
-      margin-left: 16px;
-      margin-top: 4px;
-      font-size: 10pt;
-    }
-    .instructor-voice {
-      background: #e0f7fa;
-      border-left: 5px solid #00acc1;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-      font-style: italic;
-      color: #006064;
-    }
-    .extension-box {
-      background: #e8eaf6;
-      border: 1px solid #9fa8da;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-    }
-    .teacher-note {
-      background: #f5f5f5;
-      border: 2px dashed #999;
-      border-radius: 8px;
-      padding: 15px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #555;
-    }
-    .teacher-note strong { color: #333; }
-    .tip-box {
-      background: #e0f7fa;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      margin: 10px 0;
-      border-radius: 0 6px 6px 0;
-      font-size: 10pt;
-    }
-    .standards-box {
-      background: #f3e5f5;
-      border: 1px solid #ce93d8;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 10px 0;
-      font-size: 10pt;
-    }
-    .standards-box strong { color: #7b1fa2; }
-    .hook-box {
-      background: #fff3e0;
-      border: 2px solid #ffb74d;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin: 12px 0;
-    }
+    .hero-image { text-align: center; margin: 16px 0; }
+    .emoji-hero { font-size: 66pt; line-height: 1.15; }
+    .caption { font-size: 9pt; color: #777; font-style: italic; margin-top: 4px; }
+    .lesson-branding { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 0 18px 0; padding: 10px 14px; background: #fffaf3; border: 1.5px solid #ffd6a5; border-radius: 12px; }
+    .lesson-branding img { width: 44px; height: 44px; object-fit: contain; }
+    .lesson-branding-text { font-family: 'Lato', Arial, sans-serif; font-size: 11pt; font-weight: 700; letter-spacing: .02em; color: #5A3A16; }
+    .standards-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 14px 18px; margin: 10px 0; font-size: 10pt; }
+    .objective-box { background: #e0f2f1; border: 2px solid #80cbc4; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .hook-box { background: #fff3e0; border: 2px solid #ffb74d; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
     .hook-box h3 { color: #e65100; border-color: #ffb74d; }
-    /* Data tables */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-    }
-    .data-table th, .data-table td {
-      border: 2px solid #333;
-      padding: 10px 8px;
-      text-align: center;
-      font-size: 11pt;
-    }
-    .data-table th {
-      background: #b2dfdb;
-      font-weight: bold;
-      color: #004d40;
-    }
-    .data-table td { min-height: 40px; height: 40px; }
-    .data-table td:first-child { text-align: left; font-weight: bold; background: #e0f5f0; }
-    .sketch-box {
-      border: 2px solid #bbb;
-      border-radius: 8px;
-      min-height: 160px;
-      background: #fafafa;
-      margin: 8px 0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 8px;
-    }
-    .sketch-label {
-      font-size: 9pt;
-      color: #888;
-      font-style: italic;
-    }
-    .notes-lines p {
-      border-bottom: 1px solid #bbb;
-      height: 32px;
-      margin: 0;
-    }
-    .name-date {
-      text-align: center;
-      margin-bottom: 16px;
-      font-size: 12pt;
-    }
-    .answer-key {
-      background: #f5f5f5;
-      border: 3px dashed #999;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px 0;
-      font-size: 10pt;
-      color: #444;
-    }
-    .answer-key h2 {
-      background: #757575;
-      font-size: 13pt;
-      text-align: center;
-    }
-    .answer-key .expected {
-      background: white;
-      border-left: 4px solid #00B894;
-      padding: 8px 14px;
-      margin: 8px 0;
-      border-radius: 0 6px 6px 0;
-    }
+    .materials-box { background: #fff8e1; border: 2px solid #ffcc80; padding: 14px 18px; border-radius: 8px; margin: 10px 0; }
+    .materials-box h3 { color: #e65100; border-color: #ffcc80; }
+    .procedure-step { background: #e0f2f1; padding: 10px 15px; margin: 8px 0; border-radius: 6px; border-left: 5px solid #00897b; }
+    .procedure-step strong { color: #00695c; }
+    .question-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+    .discussion-hint { display: block; font-style: italic; color: #555; font-size: 10pt; margin-top: 4px; }
+    .tip-box { background: #e0f7fa; border-left: 5px solid #00acc1; padding: 10px 15px; margin: 10px 0; border-radius: 0 6px 6px 0; font-size: 10pt; }
+    .extension-box { background: #e8eaf6; border: 1px solid #9fa8da; border-radius: 8px; padding: 14px 18px; margin: 10px 0; }
+    .teacher-note, .answer-key { background: #f5f5f5; border: 2px dashed #999; border-radius: 8px; padding: 15px; margin: 20px 0; font-size: 10pt; color: #555; }
+    .answer-key { border-width: 3px; padding: 20px; }
+    .science-grid, .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .science-card, .clue-card { background: white; border: 1.5px solid #b2dfdb; border-radius: 12px; padding: 12px 14px; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+    .science-card h3, .clue-card h3 { margin-top: 0; }
+    .clue-card { background: linear-gradient(180deg,#ffffff 0%,#f4fffd 100%); break-inside: avoid; border: 2px solid #80cbc4; position: relative; overflow: hidden; }
+    .clue-card:before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: linear-gradient(90deg,#00897b,#ffb74d,#80cbc4); }
+    .clue-badge { display: inline-block; font-size: 9pt; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #00695c; background: #e0f2f1; border: 1px solid #80cbc4; border-radius: 999px; padding: 4px 9px; margin-bottom: 8px; }
+    .clue-emoji { font-size: 22pt; margin-right: 4px; }
+    .image-card-sheet { margin: 12px 0 18px; background: #fffaf3; border: 2px solid #ffd6a5; border-radius: 14px; padding: 12px; box-shadow: 0 3px 14px rgba(0,0,0,.06); break-inside: avoid; page-break-inside: avoid; }
+    .image-card-sheet img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #e6d3bd; }
+    .image-card-caption { font-size: 9.5pt; color: #6d4c41; font-style: italic; margin-top: 8px; text-align: center; }
+    .core-strip { background: linear-gradient(180deg, #5d4037 0%, #8d6e63 24%, #c8b39b 24%, #c8b39b 49%, #9ccc65 49%, #9ccc65 74%, #d7ccc8 74%, #d7ccc8 100%); border: 3px solid #6d4c41; border-radius: 12px; padding: 16px 18px; color: #222; margin: 14px 0; }
+    .layer-label { background: rgba(255,255,255,.85); border-radius: 8px; padding: 8px 10px; margin: 8px 0; font-size: 10pt; }
+    .data-table, .compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10pt; table-layout: fixed; }
+    .data-table th, .compare-table th { background: #00897b; color: white; padding: 8px 10px; border: 1.5px solid #00695c; text-align: left; }
+    .data-table td, .compare-table td { border: 1.5px solid #80cbc4; padding: 10px; vertical-align: top; height: 44px; }
+    .data-table tr:nth-child(even) td, .compare-table tr:nth-child(even) td { background: #fffaf3; }
+    .worksheet-section { margin: 20px 0; break-inside: avoid; page-break-inside: avoid; }
+    .name-date { text-align: center; margin-bottom: 16px; font-size: 12pt; }
+    .line-block p { border-bottom: 1.5px solid #bbb; height: 30px; margin: 0 0 10px 0; }
+    .draw-area { border: 1.5px dashed #bbb; border-radius: 6px; min-height: 110px; background: #fafafa; margin-top: 8px; }
+    .page-break { page-break-before: always; break-before: page; }
+    .print-btn { position: fixed; top: 16px; left: 16px; background: #00897b; color: #fff; border: none; padding: 11px 18px; border-radius: 8px; font-size: .95rem; font-weight: 700; cursor: pointer; z-index: 2147483647; box-shadow: 0 3px 12px rgba(0,0,0,.18); pointer-events: auto; }
+    .print-panel { background: #fffaf3; border: 2px solid #ffd6a5; border-radius: 12px; padding: 12px 14px; margin: 12px 0 18px; text-align: center; }
+    .print-panel button, .print-panel a { display: inline-block; background: #00897b; color: #fff; border: 0; padding: 11px 18px; border-radius: 8px; font-size: .95rem; font-weight: 700; text-decoration: none; cursor: pointer; margin: 4px 6px; }
+    .print-panel .hint { font-size: 9.5pt; color: #6d4c41; margin-top: 6px; }
+    .llc-paywall-overlay { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.97) 30%, #fff 100%); padding: 48px 24px 40px; text-align: center; z-index: 1000; box-shadow: 0 -8px 40px rgba(59,31,107,.12); }
+    .llc-paywall-inner { max-width: 520px; margin: 0 auto; }
+    .llc-paywall-emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+    .llc-paywall-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #3B1F6B; margin-bottom: 8px; }
+    .llc-paywall-sub { font-family: 'Lato', sans-serif; font-size: .95rem; color: #5A7A78; margin-bottom: 20px; line-height: 1.5; }
+    .llc-btn-subscribe { display: inline-block; background: #FF6B6B; color: #fff; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
     @media print {
-      body { padding: 0.25in; font-size: 10pt; }
-      h2 {
-        break-after: avoid;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      h3 { break-after: avoid; }
-      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .hook-box, .instructor-voice {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-      .print-btn {
-        display: none !important;
-      }
-      * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      .hero-image img { max-height: 250px; }
+      @page { margin: .4in; }
+      body { max-width: none; padding: .35in; font-size: 10.5pt; line-height: 1.35; }
+      h1, h2, h3 { break-after: avoid; }
+      .procedure-step, .question-box, .teacher-note, .materials-box, .tip-box, .extension-box, .answer-key, .standards-box, .objective-box, .worksheet-section, .data-table, .compare-table, .clue-card, .science-card { break-inside: avoid; page-break-inside: avoid; }
+      .print-btn, .print-panel, .llc-paywall-overlay { display: none !important; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
-    .page-break {
-      page-break-before: always;
-      margin-top: 20px;
+    @media (max-width: 700px) {
+      .science-grid, .card-grid { grid-template-columns: 1fr; }
     }
-  
-    .print-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #2e7d32;
-      color: #fff;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      z-index: 1000;
-    }
-    .lesson-branding {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 0 0 18px 0;
-      padding: 10px 14px;
-      background: #fffaf3;
-      border: 1.5px solid #ffd6a5;
-      border-radius: 12px;
-    }
-    .lesson-branding img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-    }
-    .lesson-branding-text {
-      font-family: 'Lato', Arial, sans-serif;
-      font-size: 11pt;
-      font-weight: 700;
-      letter-spacing: .02em;
-      color: #5A3A16;
-    }
-    .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+  </style>
 </head>
-<body data-document-id="doc_5aOa0_-avyw"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
-  <button class="print-btn" type="button" onclick="window.focus(); window.print();">🖨️ Print Lesson</button>
+<body data-document-id="doc_5aOa0_-avyw">
+  <button class="print-btn" id="printLessonButton" type="button" aria-label="Print this lesson" onclick="window.print(); return false;">🖨️ Print Lesson</button>
+  <div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
 
-
-  <h1>🪨 Fossils: Reading the Pages of Earth's History 🪨</h1>
-  <p class="subtitle">A Cast &amp; Mold Investigation — What Did Earth Leave Behind?</p>
+  <h1>🦴 Fossil Forensics: Rebuild a Lost World 🦕</h1>
+  <p class="subtitle">Grade 5 Earth Science | Mystery Lab Lesson on Fossils, Rock Layers, and Ancient Environments</p>
 
   <div class="meta">
     <span>📚 <strong>Grade:</strong> 5th Grade</span>
-    <span>⏱️ <strong>Duration:</strong> 45 minutes</span>
-    <span>🔬 <strong>Subject:</strong> Earth &amp; Space Science</span>
-    <span>🧰 <strong>Kit Lesson:</strong> No</span>
+    <span>⏱️ <strong>Duration:</strong> 50–65 minutes</span>
+    <span>🔬 <strong>Subject:</strong> Earth Science — Fossils & Earth History</span>
+  </div>
+
+  <div class="print-panel">
+    <button type="button" onclick="window.print(); return false;">🖨️ Print / Save as PDF</button>
+    <a href="javascript:window.print();">Open print dialog</a>
+    <div class="hint">If the floating button is blocked by review tools, use this in-page print button.</div>
+  </div>
+
+  <div class="hero-image">
+    <div class="emoji-hero">🗂️🦴🌊🌿</div>
+    <div class="caption">Students act like real paleontologists: read clues, compare rock layers, and defend a theory about a vanished world.</div>
   </div>
 
   <div class="standards-box">
-    <strong>📋 NGSS Standard:</strong><br>
-    <strong>4-ESS1-1</strong> — Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.<br>
-    <em>Also addresses:</em> <strong>ESS1.C</strong> (The History of Planet Earth) · <strong>ETS1.B</strong> (Developing Possible Solutions — designing the best "organism" to fossilize)<br>
-    <em>Crosscutting Concepts:</em> Patterns · Cause and Effect
+    <strong>📋 Best-fit NGSS connection:</strong><br>
+    <strong>4-ESS1-1</strong> — Identify evidence from rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.<br><br>
+    <strong>Why it still fits Grade 5:</strong> the reasoning demand here is upper-elementary strong — students build an evidence-based reconstruction instead of just naming fossil types.
   </div>
 
   <h2>🎯 Learning Objective</h2>
-  <p>Students will act like paleontologists, create and compare fossil evidence, and use patterns in their models and real-world examples to explain what fossils reveal about ancient organisms and changing environments.</p>
+  <div class="objective-box">
+    <p>Students will analyze fossil and sediment clues from different rock layers, infer what an ancient environment was like, and support a claim about how that environment changed over time.</p>
+  </div>
 
+  <h2>💡 The Big Idea</h2>
+  <p>Fossils are not random objects trapped in rock. They are evidence. When scientists compare fossils with the rock layers around them, they can reconstruct what a place used to be like long before humans were there.</p>
 
-  <h2>🎯 The Big Idea</h2>
-  <p>Fossils are not just old bones — they are Earth’s plot twists. A fish fossil on a mountain means that mountain used to be underwater. Tropical plant fossils in Antarctica mean Antarctica was once warm. A single footprint can prove an animal ran across wet mud millions of years before humans existed. In this lesson, students become fossil detectives, read a case file of fossil clues, compare older and newer rock layers, and discover how fossils let scientists reconstruct vanished worlds.</p>
+  <div class="hook-box">
+    <h3>🪝 Opening wow hook</h3>
+    <p>Tell your student: <em>"A shark tooth is found in a dry desert. Nearby, there is a fern print, ripple marks, and a dinosaur track. That should not make sense... unless this place used to be a completely different world."</em></p>
+    <p>Today your student is solving an Earth-history cold case.</p>
+  </div>
+
+  <h2>🔬 The Science</h2>
+  <div class="science-grid">
+    <div class="science-card">
+      <h3>What fossils can tell us</h3>
+      <p>Fossils can reveal what kinds of organisms lived in an area and what the environment may have been like — ocean, shoreline, swamp, forest, or dry land.</p>
+    </div>
+    <div class="science-card">
+      <h3>Why rock layers matter</h3>
+      <p>Lower layers are usually older than higher layers. If the fossils change from one layer to another, that is evidence the environment changed over time too.</p>
+    </div>
+    <div class="science-card">
+      <h3>What counts as good evidence</h3>
+      <p>One fossil can suggest an idea, but several clues together make a stronger claim. Real paleontologists look for patterns, not guesses.</p>
+    </div>
+    <div class="science-card">
+      <h3>What students should actually do</h3>
+      <p>Sort clues, connect fossils to environments, compare lower and higher layers, and defend a story about the ancient landscape using evidence.</p>
+    </div>
+  </div>
 
   <div class="tip-box">
-    💡 <strong>Key vocabulary:</strong> fossil, mold fossil, cast fossil, trace fossil, amber, compression fossil, fossilization, mineral replacement, index fossil, body fossil, sediment, paleontologist
+    <strong>Vocabulary to use like a scientist:</strong> fossil, sediment, rock layer, evidence, paleontologist, ancient environment, infer, marine, shoreline, trace fossil, body fossil, imprint fossil
   </div>
 
+  <h2>🦴 Fossil Types Mini-Sort</h2>
   <div class="hook-box">
-    <h3>🤯 Quick Wow Facts</h3>
+    <h3>Sort by fossil type first</h3>
+    <p>Before students solve the full mystery, introduce three fossil types: <strong>body fossils</strong> (actual remains like teeth, shells, or wood turned to stone), <strong>imprint fossils</strong> (a pressed shape or print left behind), and <strong>trace fossils</strong> (evidence of what an organism did, like footprints).</p>
+    <p>Have students place each clue card into one of those three groups. This gives them a fast understanding check before they begin building the rock-layer story.</p>
+  </div>
+  <div class="science-grid">
+    <div class="science-card">
+      <h3>Body fossils</h3>
+      <p>These are preserved parts of an organism, such as teeth, shells, trilobites, or petrified wood.</p>
+    </div>
+    <div class="science-card">
+      <h3>Imprint fossils</h3>
+      <p>These are marks or impressions left in sediment, like a fern print pressed into mud.</p>
+    </div>
+    <div class="science-card">
+      <h3>Trace fossils</h3>
+      <p>These show what an organism did rather than its body, such as walking, burrowing, or moving through soft ground.</p>
+    </div>
+    <div class="science-card">
+      <h3>Quick card-group answer check</h3>
+      <p><strong>Body fossils:</strong> shark tooth, shell fossil, trilobite, petrified wood<br><strong>Imprint fossils:</strong> fern print<br><strong>Trace fossils:</strong> dinosaur footprint, ripple marks, dry cracks</p>
+    </div>
+  </div>
+
+  <h2>📦 Materials</h2>
+  <div class="materials-box">
+    <h3>🏠 Household Items to Gather</h3>
     <ul>
-      <li><strong>A whale fossil was found in the desert</strong> — proof that some dry land was once underwater.</li>
-      <li><strong>Scientists have found tropical plant fossils in Antarctica</strong> — evidence that the continent used to be much warmer.</li>
-      <li><strong>Sometimes a footprint is more revealing than a bone</strong> — it can show speed, movement, and behavior.</li>
-      <li><strong>Most living things never become fossils at all</strong> — so every fossil is a rare surviving message from deep time.</li>
+      <li>Scissors</li>
+      <li>Worksheet and clue cards from this lesson</li>
+      <li>Pencil or colored pencils</li>
+      <li>Tape or glue stick</li>
+      <li>Optional: index cards or construction paper to stack into a “core sample” strip</li>
+    </ul>
+    <h3>📋 Printables in This Lesson</h3>
+    <ul>
+      <li>Student fossil case file worksheet</li>
+      <li>Printable clue-card set</li>
     </ul>
   </div>
 
-  <!-- ====================== BACKGROUND SCIENCE ====================== -->
-  <h2>🔬 Background Science <span style="font-size:10pt; font-weight:normal;">(for Parent/Teacher)</span></h2>
+  <h2>🧪 Fossil Forensics Lab</h2>
+  <div class="procedure-step"><strong>Step 1 — Launch the cold case (5 min)</strong><br>Read the hook aloud. Ask students what kind of place they would expect a shark tooth to come from and why it would be weird in a desert.</div>
+  <div class="procedure-step"><strong>Step 2 — Sort by fossil type first (5–8 min)</strong><br>Introduce body fossils, imprint fossils, and trace fossils. Students group the clue cards into those three categories and explain why each card belongs there.</div>
+  <div class="procedure-step"><strong>Step 3 — Re-sort by environment clues (10 min)</strong><br>Students sort the same clues into groups that seem to belong together: water clues, land clues, plant clues, track clues, warm/wet clues, or drying-out clues.</div>
+  <div class="procedure-step"><strong>Step 4 — Build the rock-layer story (10 min)</strong><br>Tell students which clues came from lower layers and which came from higher layers. They compare the older world to the newer world and look for change over time.</div>
+  <div class="procedure-step"><strong>Step 5 — Make a museum claim (10–15 min)</strong><br>Students write a final explanation for a pretend museum exhibit label: What was this place like long ago, and how do we know?</div>
+  <div class="procedure-step"><strong>Step 6 — Defend the theory (5–10 min)</strong><br>Students read their claim aloud and point to at least three pieces of evidence that support it.</div>
 
-  <h3>What Is a Fossil?</h3>
-  <p>A fossil is the preserved remains, impression, or evidence of an organism that lived in the geologic past — usually more than 10,000 years ago. But the most exciting part is not the age alone. Fossils are evidence. They are the clues scientists use to answer giant questions: What lived here? What was this place like long ago? Was it wet, dry, warm, cold, shallow ocean, swamp, or forest? Fossils form in sedimentary rock layers when an organism or its activity is buried and preserved over immense spans of time. Because fossilization is rare and the record is incomplete, every fossil is like finding one surviving page from a book that is mostly missing.</p>
-
-  <h3>Types of Fossils</h3>
-  <div style="text-align: center; margin: 10px 0;">
-    <div class="fossil-card">
-      <span class="emoji">🐚</span>
-      <span class="name">Mold Fossil</span>
-      <span class="desc">Hollow impression left in rock after organism decays. Shows shape &amp; texture.</span>
-    </div>
-    <div class="fossil-card">
-      <span class="emoji">🗿</span>
-      <span class="name">Cast Fossil</span>
-      <span class="desc">Minerals fill a mold → 3D replica of original organism. Shows volume &amp; detail.</span>
-    </div>
-    <div class="fossil-card">
-      <span class="emoji">🦕</span>
-      <span class="name">Trace Fossil</span>
-      <span class="desc">Evidence of activity: footprints, burrows, eggs, droppings. Shows behavior.</span>
-    </div>
-    <div class="fossil-card">
-      <span class="emoji">🌿</span>
-      <span class="name">Compression Fossil</span>
-      <span class="desc">Flat, pressed impression of soft organism (leaves, fish). Shows fine detail.</span>
-    </div>
-    <div class="fossil-card">
-      <span class="emoji">🍯</span>
-      <span class="name">Amber Fossil</span>
-      <span class="desc">Organism trapped in tree resin that hardened over millions of years. Best soft-tissue preservation.</span>
-    </div>
+  <div class="core-strip">
+    <div class="layer-label"><strong>Higher / newer layer:</strong> fern print, petrified wood, dinosaur footprint, dry cracks</div>
+    <div class="layer-label"><strong>Lower / older layer:</strong> shark tooth, shell fossil, trilobite, ripple marks</div>
+    <div class="layer-label"><strong>Scientist move:</strong> compare the layers directly instead of describing only one clue at a time.</div>
   </div>
 
-  <h3>How Fossilization Happens</h3>
-  <ol>
-    <li><strong>Death &amp; Quick Burial:</strong> An organism dies and is rapidly covered by sediment (mud, sand, ash). Without quick burial, scavengers and decomposers destroy the remains.</li>
-    <li><strong>Soft Tissue Decays:</strong> Over time, soft parts (skin, organs, fur) break down. Hard parts — shells, bones, teeth — remain.</li>
-    <li><strong>Mineral Replacement:</strong> Groundwater seeps through the sediment, slowly replacing the organic material with dissolved minerals. The organism literally turns to stone (a process called permineralization).</li>
-    <li><strong>Rock Formation:</strong> Layers of sediment compact and harden into sedimentary rock around the fossil. This takes thousands to millions of years.</li>
-    <li><strong>Erosion &amp; Discovery:</strong> Eventually, erosion wears away overlying rock layers, exposing the fossil for a lucky paleontologist — or a curious student — to find.</li>
-  </ol>
-
-  <h3>Why Are Fossils Rare?</h3>
-  <p>The vast majority of organisms that ever lived left no fossil record at all. Usually, bodies are eaten, scavenged, crushed, rotted, dissolved, or scattered long before they can be preserved. For fossilization to succeed, conditions must be just right: rapid burial before decay begins, the right chemical environment, and long stretches of time without the evidence being destroyed. Soft-bodied animals like jellyfish and worms almost never fossilize. Hard shells, bones, and teeth fossilize far more readily. That rarity is exactly what makes fossils so thrilling: each one is a survivor.</p>
-
-  <h3>What Fossils Tell Us</h3>
-  <ul>
-    <li><strong>Ancient environments:</strong> Coral fossils in a desert tell us that area was once a shallow ocean.</li>
-    <li><strong>Climate change:</strong> Tropical plant fossils in Antarctica show the continent was once warm.</li>
-    <li><strong>Evolution:</strong> Sequences of fossils reveal how species changed over time.</li>
-    <li><strong>Extinction events:</strong> Abrupt disappearances in the fossil record mark mass extinctions.</li>
-    <li><strong>Index fossils</strong> are fossils of organisms that lived only during a specific, well-defined time period — useful for dating rock layers.</li>
-  </ul>
-
-  <div class="instructor-voice">
-    🎙️ <strong>Instructor Note:</strong> Famous examples to reference: <em>trilobites</em> (hard-shelled marine arthropods, 250–500 million years old), <em>ammonites</em> (coiled mollusks), <em>leaf compression fossils</em> (pressed flat in shale), <em>dinosaur footprints</em> (trace fossils), and <em>insects in amber</em> (Baltic amber specimens with 40–50 million year old insects). The Burgess Shale in Canada is one of the most remarkable fossil sites ever found — it preserved soft-bodied Cambrian animals (540 million years ago) in extraordinary detail.
+  <h2>🃏 Printable Fossil Clue Cards</h2>
+  <p>Print these two illustrated clue-card sheets, cut them apart, and use the evidence descriptions below as the case-file captions.</p>
+  <div class="image-card-sheet">
+    <img src="../images/lesson-cards/gr5-fossil-clue-cards-water-set.png" alt="Illustrated fossil clue cards showing a shark tooth fossil, shell fossil, trilobite fossil, and ripple marks in sedimentary rock">
+    <div class="image-card-caption">Water-world clue set: shark tooth, shell fossil, trilobite, and ripple marks.</div>
+  </div>
+  <div class="image-card-sheet">
+    <img src="../images/lesson-cards/gr5-fossil-clue-cards-land-set.png" alt="Illustrated fossil clue cards showing a fern fossil imprint, dinosaur footprint trace fossil, petrified wood, and dried mud cracks">
+    <div class="image-card-caption">Land-and-shoreline clue set: fern print, dinosaur footprint, petrified wood, and dry cracks.</div>
+  </div>
+  <div class="card-grid">
+    <div class="clue-card"><div class="clue-badge">Clue 1</div><h3><span class="clue-emoji">🦈</span>Shark tooth</h3><p>A sharp tooth from a marine predator. This clue strongly points to ocean or coastal water.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 2</div><h3><span class="clue-emoji">🐚</span>Shell fossil</h3><p>A shell from a water-dwelling animal. This often suggests shallow water or shoreline conditions.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 3</div><h3><span class="clue-emoji">🪲</span>Trilobite</h3><p>An ancient marine animal fossil. This is a strong clue for an older sea environment.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 4</div><h3><span class="clue-emoji">〰️</span>Ripple marks</h3><p>Wavy patterns left behind in sediment by moving water or waves.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 5</div><h3><span class="clue-emoji">🌿</span>Fern print</h3><p>A plant impression. This suggests a land area where plants were growing, often moist or swampy.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 6</div><h3><span class="clue-emoji">🦖</span>Dinosaur footprint</h3><p>A trace fossil showing a land animal stepped in soft sediment that later hardened.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 7</div><h3><span class="clue-emoji">🪵</span>Petrified wood</h3><p>Wood that turned to stone over a very long time. This suggests trees or woody plants once grew there.</p></div>
+    <div class="clue-card"><div class="clue-badge">Clue 8</div><h3><span class="clue-emoji">☀️</span>Dry cracks</h3><p>Cracks in mud that dried out after being wet. This suggests exposed sediment, not deep water.</p></div>
   </div>
 
-  <!-- ====================== LESSON FLOW ====================== -->
-  <h2>🚀 Lesson Flow</h2>
-
-  <div class="hook-box">
-    <h3>🪝 Hook (5 minutes)</h3>
-    <p>Start like a mystery instead of a definition. Say:</p>
-    <p style="margin-left:16px; font-style: italic;">"Imagine you are hiking in a blazing-hot desert. You crack open a rock — and inside is a seashell. Later you climb a mountain and find a fish fossil. What on Earth happened here?"</p>
-    <p>Let students guess wildly first. Then add a second challenge:</p>
-    <p style="margin-left:16px; font-style: italic;">"Now imagine you want a scientist 50 million years from now to know you existed. What evidence would actually survive? A sneaker? A sandwich? A tooth? A footprint?"</p>
-    <p>Hold up a coin, a leaf, a shell, and a cotton ball. Ask: <em>Which one would leave the best fossil evidence — and why?</em></p>
-    <p>Then pivot:</p>
-    <p style="margin-left:16px; font-style: italic;">"Earth has been collecting clues like this for hundreds of millions of years. Fossils are the evidence file. Today, you're going to become the paleontologist who reads it."</p>
-    <div class="discussion-hint">The goal is wonder first, then explanation. Let students make surprising predictions before the science starts.</div>
-  </div>
-
-  <div class="procedure-step">
-    <strong>Background Science (7–10 min):</strong> Use the Background Science section above to walk through types of fossils and how fossilization happens. Keep the tone detective-like rather than textbook-like. Point to the fossil type cards and ask: "Which fossil type would tell you the most about movement? Which would preserve tiny details best? Which would be the rarest to find?" Then quiz your student: "If a dinosaur ran through mud and the mud hardened — what type of fossil is that?" (Trace fossil.) "If a bug got trapped in sticky tree resin?" (Amber.)
-  </div>
-
-  <div class="instructor-voice">
-    🎙️ <strong>Setup tip:</strong> Before the lesson, gather your "organisms" (see materials below) and flatten or lightly roll clay into palm-sized discs. Having 4–5 discs ready per student avoids delays mid-activity.
-  </div>
-
-  <!-- ====================== MATERIALS ====================== -->
-  <h2>📦 What You'll Need</h2>
-<div class="materials-box">
-  <h3>🧰 Household Materials</h3>
-  <ul>
-    <li>Printed fossil clue cards from this lesson</li>
-    <li>Student worksheet and pencil</li>
-    <li>Scissors, if you want to cut the clue cards apart</li>
-    <li><em>Optional:</em> clipboard or hard surface for card sorting</li>
-  </ul>
-
-  <h3>📄 Provided Printables in This Lesson</h3>
-  <ul>
-    <li>Fossil clue cards set</li>
-    <li>Case-file worksheet</li>
-    <li>Answer key</li>
-  </ul>
-</div>
-
-<h2>🔬 Fossil Mystery Lab: Rebuild a Lost World (20–25 min)</h2>
-<p><strong>Mission:</strong> Your student is a paleontologist with a case file full of fossil clues from one mystery landscape. The job is to sort the evidence, notice patterns, and build a claim about what this place was like long ago.</p>
-
-<div class="hook-box">
-  <h3>🪝 Hook (5 minutes)</h3>
-  <p>Say: <em>"A scientist finds a shark tooth in the middle of a dry desert, a fern print in a rock layer nearby, and ripple marks that look like moving water. Is this evidence random, or is Earth trying to tell a story?"</em></p>
-  <p>Let students guess first. Then explain that fossils are not just objects, they are clues in a giant cold-case mystery. Today they will read the clues and rebuild the ancient world they came from.</p>
-</div>
-
-<div class="procedure-step">
-  <strong>Step 1 — Meet the clue cards:</strong><br>
-  Hand out the fossil clue cards below. Read each one aloud and make sure students understand the organism or evidence shown. Do <em>not</em> give the answer yet.
-</div>
-
-<div class="procedure-step">
-  <strong>Step 2 — Sort the evidence:</strong><br>
-  Ask students to sort the cards into groups that seem to belong together. They might group them by water clues, land clues, plant clues, animal clues, warm-climate clues, or movement clues. There is more than one sensible way to sort at first.
-</div>
-
-<div class="procedure-step">
-  <strong>Step 3 — Read the pattern:</strong><br>
-  Students fill in the worksheet table and answer: Which clues suggest water? Which suggest land plants? Which suggest a shallow sea, swamp, riverbank, or dry land? Which clues seem to belong in the same environment?
-</div>
-
-<div class="procedure-step">
-  <strong>Step 4 — Compare lower and higher layers:</strong><br>
-  Tell students that the trilobite, shell, ripple marks, and shark tooth were found in <strong>lower rock layers</strong>, while the fern print, dinosaur footprint, and petrified wood were found in <strong>higher rock layers</strong>. Ask: what changed over time? Students should compare the older lower layers with the newer higher layers and explain how the environment shifted.
-</div>
-
-<div class="procedure-step">
-  <strong>Step 5 — Make the case:</strong><br>
-  Students write a final claim using evidence from at least three clue cards. Their claim should explain what the place may have been like long ago and how it changed over time.
-</div>
-
-<div class="instructor-voice">
-  🎙️ <strong>Teaching move:</strong> Push for evidence language. Instead of accepting "it was water," ask "Which clue card makes you think that?" and "What does that clue suggest about the environment?"
-</div>
-
-<h2>🃏 Fossil Clue Cards</h2>
-<p>Cut these apart if you want physical cards, or keep them on the page and point to them during the investigation.</p>
-
-<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 14px 0;">
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">🦈</span>
-    <span class="name">Clue Card 1: Shark Tooth</span>
-    <div class="desc">A sharp fossil tooth from a shark was found in the rock. Sharks live in salt water.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">🐚</span>
-    <span class="name">Clue Card 2: Shell Fossil</span>
-    <div class="desc">A shell fossil with ridges was found in the same lower layer. Many shell animals live in shallow ocean water.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">🪲</span>
-    <span class="name">Clue Card 3: Trilobite</span>
-    <div class="desc">A trilobite fossil was found in the rock. Trilobites were marine animals that lived in ancient seas.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">〰️</span>
-    <span class="name">Clue Card 4: Ripple Marks</span>
-    <div class="desc">The rock surface has wavy ripple marks, like moving water once pushed across soft sediment.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">🌿</span>
-    <span class="name">Clue Card 5: Fern Print</span>
-    <div class="desc">A leaf-like fern print was found in a higher layer. Ferns grow on land in moist environments.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">🦕</span>
-    <span class="name">Clue Card 6: Dinosaur Footprint</span>
-    <div class="desc">A three-toed footprint was pressed into mud that later hardened into rock. This is a trace fossil showing land movement.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">🪵</span>
-    <span class="name">Clue Card 7: Petrified Wood</span>
-    <div class="desc">A fossilized piece of wood was found in an upper layer. Wood suggests trees or large plants once grew nearby.</div>
-  </div>
-  <div class="fossil-card" style="display:block; min-width:0; text-align:left; padding:14px;">
-    <span class="emoji">☀️</span>
-    <span class="name">Clue Card 8: Dry Cracks</span>
-    <div class="desc">One layer shows mud cracks. That means wet sediment dried out after being exposed to air.</div>
-  </div>
-</div>
-
-<h2>📅 Fossil Timeline Connection (5–8 min)</h2>
-<p>After solving the clue-card case, connect the mystery to deep time. Ask students to place these events in order from oldest to newest: trilobites, first fish, first land plants, dinosaurs, and humans. The goal is to feel how much of Earth's story happened before humans ever appeared.</p>
-
-<div class="tip-box">
-  💡 <strong>Why this matters:</strong> Fossils are strongest when students use them as evidence, not decoration. The clue cards turn the lesson into an actual reasoning task instead of a list of facts.
-</div>
-
-<!-- ====================== DISCUSSION QUESTIONS ====================== -->
   <h2>💬 Discussion Questions</h2>
+  <div class="question-box"><strong>Which clue is strongest evidence for water?</strong><span class="discussion-hint">Students may choose shark tooth, shell fossil, trilobite, or ripple marks, but they should explain why.</span></div>
+  <div class="question-box"><strong>Why is one clue usually not enough by itself?</strong><span class="discussion-hint">Because several clues together make a stronger, less guessy explanation.</span></div>
+  <div class="question-box"><strong>What do the higher layers suggest changed?</strong><span class="discussion-hint">The environment likely became more exposed land with plants and animals moving across it.</span></div>
 
-  <div class="question-box">
-    <strong>1. Why do you think most organisms never become fossils?</strong>
-    <p class="discussion-hint">→ Look for: they need to be buried quickly before decomposing — most organisms are eaten by scavengers or broken down by bacteria before sediment can cover them. Soft-bodied animals (jellyfish, worms) rarely have hard parts that survive long enough to leave an impression. Even many organisms with hard parts never end up in the right place at the right time.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>2. What does finding a coral fossil in the middle of a desert tell us about Earth's history?</strong>
-    <p class="discussion-hint">→ They might say: the desert used to be underwater — specifically a shallow ocean where corals lived. The environment changed dramatically over millions of years. Oceans can move, dry up, or be lifted into mountains by tectonic forces. This is one of the most powerful things fossils can tell us: places change, and sometimes the evidence sounds almost impossible until geology explains it.</p>
-  </div>
-
-  <div class="question-box">
-    <strong>3. What does comparing lower and higher rock layers help scientists figure out?</strong>
-    <p class="discussion-hint">→ Look for: lower layers are older and higher layers are newer. Comparing them helps scientists figure out how an environment changed over time, such as moving from shallow sea to exposed land with plants and animals.</p>
-  </div>
-
-  <!-- ====================== EXTENSIONS ====================== -->
   <h2>🚀 Extensions</h2>
   <div class="extension-box">
-    <ul>
-      <li>🌍 <strong>Burgess Shale:</strong> Research this remarkable site in British Columbia, Canada. It preserved soft-bodied Cambrian animals 508 million years ago in extraordinary detail — including creatures with no living relatives. Why is this so unusual, and why did these fossils completely change what scientists thought early animal life looked like?</li>
-      <li>🏔️ <strong>Fossil in a Mountain:</strong> If you find a marine fossil on a mountainside, what does that tell you? Research the Himalayan ammonites (<em>shaligrams</em>) found at high altitude and explain how ocean evidence can end up near the sky.</li>
-      <li>🦟 <strong>Amber Exploration:</strong> Search for images of Cretaceous amber specimens. What kinds of organisms are found? What does this tell us about forests from 100 million years ago? Why does amber sometimes preserve tiny details that ordinary fossils lose?</li>
-      <li>🔗 <strong>Rock Cycle Connection:</strong> How does the rock cycle connect to fossil formation? Why are fossils found in sedimentary rock but almost never in igneous or metamorphic rock?</li>
-      <li>🃏 <strong>Make Your Own Case File:</strong> Invite students to invent one extra clue card and explain where it would fit in the sequence of environmental change.</li>
-    </ul>
+    <p><strong>Museum designer extension:</strong> Have students turn their final claim into a 3-sentence exhibit label titled <em>"Before This Was a Desert"</em> or <em>"The Lost Shoreline Case"</em>.</p>
+    <p><strong>Advanced extension:</strong> Ask which clue would be weakest alone but strongest when combined with another clue.</p>
   </div>
 
-  <!-- ====================== PARENT/TEACHER NOTES ====================== -->
   <h2>👩‍🏫 Parent/Teacher Notes</h2>
   <div class="teacher-note">
     <ul>
-      <li><strong>Printing tip:</strong> Print the clue-card section and cut it apart before the lesson if you want a true hands-on sorting activity.</li>
-      <li><strong>Evidence over guessing:</strong> Keep asking, “Which clue card supports that idea?” so students build claims from evidence instead of vibes.</li>
-      <li><strong>Layer comparison matters:</strong> Push students to compare the lower and higher layers directly. That is where the environmental-change reasoning happens.</li>
-      <li><strong>Common misconception:</strong> Students often think fossilization is a fast process. Emphasize: real mineral replacement takes <em>thousands to millions of years</em>. Our clay model is a useful analogy, but the real process is driven by chemistry over geological time.</li>
-      <li><strong>Lean into the wow:</strong> This lesson works best when it feels like a mystery investigation. Use lines like: "That rock should not have a seashell in it... unless this place used to be an ocean." The science is stronger when wonder comes first.</li>
-      <li><strong>Good enough answers:</strong> Students do not need the exact same environment label. “Shallow sea,” “shoreline,” or “coastal water” can all be acceptable if the evidence matches.</li>
-      <li><strong>Cross-grade connection:</strong> This lesson pairs naturally with rock layers, sedimentary rocks, and Earth-history units because students are using patterns in fossils to explain change over time.</li>
-      <li><strong>Extend with Burgess Shale:</strong> The Burgess Shale (British Columbia, Canada) is one of the world's most important fossil sites — it preserved 508-million-year-old soft-bodied creatures in extraordinary detail because of unusually rapid burial in an oxygen-poor environment. A quick image search shows jaw-dropping specimens that defy the "fossils are rare" expectation.</li>
-      <li><strong>For advanced students:</strong> Ask which clue card would be strongest if found alone, and which clue becomes most powerful when combined with others. This helps students think like real paleontologists.</li>
+      <li><strong>This is the wow move:</strong> do not present it as a worksheet first. Present it as a mystery case file.</li>
+      <li><strong>Keep asking:</strong> “Which clue supports that?” Evidence talk matters more than the exact environment label.</li>
+      <li><strong>Best misconception to catch:</strong> students may think fossils are only bones. Trace fossils, shell fossils, plant impressions, and sediment clues matter too.</li>
+      <li><strong>Another misconception:</strong> students may describe the site as one unchanged place. Push them to compare <em>older lower layers</em> with <em>newer higher layers</em>.</li>
+      <li><strong>If your child is advanced:</strong> ask whether the place likely changed suddenly or gradually, and what kinds of events could change a coastline into a land environment.</li>
     </ul>
   </div>
 
-  <!-- ====================== STUDENT WORKSHEET ====================== -->
   <div class="page-break">
+    <h2>🗂️ Student Fossil Case File</h2>
+    <div class="worksheet-section">
+      <div class="name-date">Name: ________________________ &nbsp;&nbsp;&nbsp; Date: ________________________</div>
 
-    <h1>🪨 Fossils — Student Case File 🪨</h1>
-    <p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp;&nbsp; Date: ________________</p>
+      <h3>1️⃣ Group the fossils by type</h3>
+      <table class="data-table">
+        <tr>
+          <th>Fossil type</th>
+          <th>Cards that belong in this group</th>
+          <th>Why?</th>
+        </tr>
+        <tr><td>Body fossils</td><td></td><td></td></tr>
+        <tr><td>Imprint fossils</td><td></td><td></td></tr>
+        <tr><td>Trace fossils</td><td></td><td></td></tr>
+      </table>
 
-    <h3>🗂️ Part 1: Sort the Evidence</h3>
-    <p>Look at the fossil clue cards. For each one, decide what kind of environment it suggests.</p>
+      <h3>2️⃣ Sort the evidence by environment clues</h3>
+      <table class="data-table">
+        <tr>
+          <th>Clue</th>
+          <th>What does it show?</th>
+          <th>What environment might it suggest?</th>
+        </tr>
+        <tr><td>Shark tooth</td><td></td><td></td></tr>
+        <tr><td>Shell fossil</td><td></td><td></td></tr>
+        <tr><td>Trilobite</td><td></td><td></td></tr>
+        <tr><td>Ripple marks</td><td></td><td></td></tr>
+        <tr><td>Fern print</td><td></td><td></td></tr>
+        <tr><td>Dinosaur footprint</td><td></td><td></td></tr>
+        <tr><td>Petrified wood</td><td></td><td></td></tr>
+        <tr><td>Dry cracks</td><td></td><td></td></tr>
+      </table>
 
-    <table class="data-table">
-      <tr>
-        <th>Clue Card</th>
-        <th>What does it show?</th>
-        <th>What environment does it suggest?</th>
-      </tr>
-      <tr><td>Shark tooth</td><td></td><td></td></tr>
-      <tr><td>Shell fossil</td><td></td><td></td></tr>
-      <tr><td>Trilobite</td><td></td><td></td></tr>
-      <tr><td>Ripple marks</td><td></td><td></td></tr>
-      <tr><td>Fern print</td><td></td><td></td></tr>
-      <tr><td>Dinosaur footprint</td><td></td><td></td></tr>
-      <tr><td>Petrified wood</td><td></td><td></td></tr>
-      <tr><td>Dry cracks</td><td></td><td></td></tr>
-    </table>
+      <h3>3️⃣ Compare the layers</h3>
+      <p><strong>Lower / older layer:</strong> shark tooth, shell fossil, trilobite, ripple marks</p>
+      <p><strong>Higher / newer layer:</strong> fern print, dinosaur footprint, petrified wood, dry cracks</p>
+      <div class="question-box"><strong>What does the lower layer suggest about the older environment?</strong><div class="line-block"><p></p><p></p><p></p></div></div>
+      <div class="question-box"><strong>What does the higher layer suggest about the newer environment?</strong><div class="line-block"><p></p><p></p><p></p></div></div>
+      <div class="question-box"><strong>What changed over time?</strong><div class="line-block"><p></p><p></p><p></p></div></div>
 
-    <h3>📚 Part 2: Lower Layers vs. Higher Layers</h3>
-    <p><strong>Lower layers:</strong> shark tooth, shell fossil, trilobite, ripple marks</p>
-    <p><strong>Higher layers:</strong> fern print, dinosaur footprint, petrified wood, dry cracks</p>
+      <h3>4️⃣ Draw the ancient world</h3>
+      <p>Sketch what you think the place looked like during the older layer and what it looked like later.</p>
+      <div class="draw-area"></div>
 
-    <div class="question-box">
-      <strong>What do the lower layers suggest about the older environment?</strong>
-      <div class="notes-lines">
-        <p></p><p></p><p></p>
-      </div>
+      <h3>5️⃣ Final museum claim</h3>
+      <p>Write a claim that explains what this place may have once been like and how it changed. Use at least <strong>three</strong> pieces of evidence.</p>
+      <div class="line-block"><p></p><p></p><p></p><p></p></div>
     </div>
+  </div>
 
-    <div class="question-box">
-      <strong>What do the higher layers suggest about the newer environment?</strong>
-      <div class="notes-lines">
-        <p></p><p></p><p></p>
-      </div>
-    </div>
-
-    <div class="question-box">
-      <strong>What changed over time?</strong>
-      <div class="notes-lines">
-        <p></p><p></p><p></p>
-      </div>
-    </div>
-
-    <h3>📝 Part 3: Final Claim</h3>
-    <p>Write a claim that explains what this place may have been like long ago and how it changed over time. Use evidence from at least <strong>three</strong> clue cards.</p>
-    <div class="question-box">
-      <strong>Sentence starter:</strong> This place may have once been __________ because __________. Later, it seems to have changed into __________ because __________.
-      <div class="notes-lines">
-        <p></p><p></p><p></p><p></p>
-      </div>
-    </div>
-
+  <div class="page-break">
     <div class="answer-key">
-      <h2>🔑 PARENT ANSWER KEY — Detach Before Giving to Student</h2>
+      <h2>🔑 PARENT ANSWER KEY — Detach before giving worksheet to students</h2>
 
-      <div class="expected">
-        <strong>Part 1 — Likely clue-card interpretations:</strong><br>
-        Shark tooth, shell fossil, trilobite, and ripple marks all suggest water, especially a shallow ocean or shoreline. Fern print and petrified wood suggest land plants. Dinosaur footprint suggests land movement on soft mud. Dry cracks suggest wet sediment that later dried in air.
-      </div>
+      <h3>1️⃣ Likely fossil-type groupings</h3>
+      <p><strong>Body fossils:</strong> shark tooth, shell fossil, trilobite, petrified wood. <strong>Imprint fossils:</strong> fern print. <strong>Trace fossils:</strong> dinosaur footprint, ripple marks, dry cracks.</p>
 
-      <div class="expected">
-        <strong>Part 2 — Lower layers vs. higher layers:</strong><br>
-        Lower layers suggest an older watery environment, likely a shallow sea or shoreline, because they include marine fossils and water-shaped sediment clues. Higher layers suggest a newer land or swampy shoreline environment with plants, exposed mud, and land animals.
-      </div>
+      <h3>2️⃣ Likely clue interpretations</h3>
+      <p>Shark tooth, shell fossil, trilobite, and ripple marks all point strongly toward water, especially a shallow sea or shoreline. Fern print and petrified wood point to land plants. Dinosaur footprint points to land movement across soft sediment. Dry cracks suggest wet mud that later dried in air.</p>
 
-      <div class="expected">
-        <strong>Part 3 — What changed over time:</strong><br>
-        Students should notice that the older lower layers point to more water, while the newer higher layers point to more exposed land with plants and animals moving across it. A strong response compares lower and higher layers directly, instead of describing only one layer.
-      </div>
+      <h3>3️⃣ Lower vs. higher layers</h3>
+      <p><strong>Lower / older layer:</strong> best interpreted as a watery environment such as a shallow sea, shoreline, or coastal zone because it includes marine fossils and water-made sediment clues.</p>
+      <p><strong>Higher / newer layer:</strong> best interpreted as a more exposed land environment with plants and animals, possibly swampy land or muddy shoreline that dried at times.</p>
 
-      <div class="expected">
-        <strong>Sample acceptable final claim:</strong><br>
-        This place may have once been a shallow sea or shoreline because the lower layers contain a shark tooth, shell fossil, trilobite, and ripple marks. Later, it seems to have changed into a wetter land area or swampy place because the higher layers contain a fern print, petrified wood, and a dinosaur footprint. The dry cracks suggest some muddy areas were later exposed to air and dried out.
-      </div>
+      <h3>4️⃣ What a strong final claim sounds like</h3>
+      <p>Students should compare the two layers directly, not just list clues. A strong response explains that the area seems to have changed from a more marine/watery place into a more exposed land environment over time.</p>
 
-      <div class="expected">
-        <strong>What success looks like:</strong><br>
-        Student uses at least three clue cards as evidence. Student compares lower and higher layers. Student explains an environmental change over time, not just a list of fossil names.
-      </div>
+      <h3>Sample acceptable answer</h3>
+      <p>“This place may have once been a shallow sea or shoreline because the lower layer has a shark tooth, shell fossil, trilobite, and ripple marks. Later, it seems to have changed into a land area with plants and animals because the higher layer has a fern print, petrified wood, dinosaur footprint, and dry cracks. That means the environment changed over time from more water to more exposed land.”</p>
+
+      <h3>✅ What success looks like</h3>
+      <ul>
+        <li>Student uses at least three pieces of evidence.</li>
+        <li>Student connects clues to environment, not just names the fossils.</li>
+        <li>Student compares older and newer layers.</li>
+        <li>Student makes a real claim instead of a random guess.</li>
+      </ul>
     </div>
-<footer class="llc-footer" style="text-align:center;padding:24px 16px 16px;font-family:'Lato',sans-serif;font-size:.78rem;color:#999;border-top:1px solid #eee;margin-top:32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</footer><script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_5aOa0_-avyw" data-content-selector="body"></script></body>
+  </div>
+
+  <script>
+    (function(){
+      function printLesson(event){
+        if(event){ event.preventDefault(); event.stopPropagation(); }
+        try { window.focus(); } catch(e) {}
+        window.print();
+        return false;
+      }
+      document.addEventListener('click', function(event){
+        var button = event.target && event.target.closest ? event.target.closest('#printLessonButton') : null;
+        if(button){ printLesson(event); }
+      }, true);
+      window.llcPrintLesson = printLesson;
+    })();
+  </script>
+  <script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_5aOa0_-avyw" data-content-selector="body"></script>
+  <div class="llc-paywall-overlay" id="llcPaywall" style="display:none;"><div class="llc-paywall-inner"><span class="llc-paywall-emoji">🥼</span><div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div><p class="llc-paywall-sub">You're seeing a preview. Full-library access is not live yet. For now, browse the live store products and free sample lessons while the larger subscription offer stays in Coming Soon.<br><strong>Live now: free samples + Kitchen Chemistry.</strong></p><a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a></div></div>
+  <script>(function(){var ACCESS_KEY='llc_access_v2_locked';function isUnlocked(){return localStorage.getItem(ACCESS_KEY)==='granted';}function lockLesson(){var allH2=Array.from(document.querySelectorAll('h2'));var objectiveKeywords=['learning objective','learning objectives'];var objectiveH2=null;var lockFromH2=null;for(var i=0;i<allH2.length;i++){var text=allH2[i].textContent.toLowerCase().trim();if(!objectiveH2&&objectiveKeywords.some(function(k){return text.indexOf(k)!==-1;})) objectiveH2=allH2[i];}if(objectiveH2){var objectiveIndex=allH2.indexOf(objectiveH2);lockFromH2=allH2[objectiveIndex+1]||null;}if(!lockFromH2){lockFromH2=allH2[Math.min(4,allH2.length-1)]||null;}if(!lockFromH2){document.body.style.overflow='hidden';document.body.style.maxHeight='600px';document.getElementById('llcPaywall').style.display='block';return;}var hiding=false;Array.from(document.body.children).forEach(function(child){if(child===lockFromH2||child.contains(lockFromH2)) hiding=true;if(hiding&&child.id!=='llcPaywall') child.style.display='none';});document.getElementById('llcPaywall').style.display='block';}document.addEventListener('DOMContentLoaded',function(){if(window.location.search.indexOf('review=1')!==-1){return;}if(!isUnlocked())lockLesson();});})();</script>
+  <footer class="llc-footer" style="text-align:center;padding:24px 16px 16px;font-family:'Lato',sans-serif;font-size:.78rem;color:#999;border-top:1px solid #eee;margin-top:32px;">© 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.</footer>
+</body>
 </html>
