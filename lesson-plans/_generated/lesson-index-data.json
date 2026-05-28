@@ -768,10 +768,10 @@
       "sourcePattern": "free-sample"
     },
     {
-      "slug": "free-k-summer-wow-series",
-      "sourcePath": "lesson-plans/free-k-summer-wow-series.html",
-      "canonicalUrl": "/lesson-plans/free-k-summer-wow-series.html",
-      "reviewUrl": "/lesson-plans/free-k-summer-wow-series.html?review=1",
+      "slug": "k-summer-wow-series",
+      "sourcePath": "lesson-plans/k-summer-wow-series.html",
+      "canonicalUrl": "/lesson-plans/k-summer-wow-series.html",
+      "reviewUrl": "/lesson-plans/k-summer-wow-series.html?review=1",
       "title": "K Summer Wow Series | Little Lab Coats",
       "displayTitle": "K Summer Wow Series",
       "gradeKey": "k",
@@ -5830,10 +5830,10 @@
           "sourcePattern": "free-sample"
         },
         {
-          "slug": "free-k-summer-wow-series",
-          "sourcePath": "lesson-plans/free-k-summer-wow-series.html",
-          "canonicalUrl": "/lesson-plans/free-k-summer-wow-series.html",
-          "reviewUrl": "/lesson-plans/free-k-summer-wow-series.html?review=1",
+          "slug": "k-summer-wow-series",
+          "sourcePath": "lesson-plans/k-summer-wow-series.html",
+          "canonicalUrl": "/lesson-plans/k-summer-wow-series.html",
+          "reviewUrl": "/lesson-plans/k-summer-wow-series.html?review=1",
           "title": "K Summer Wow Series | Little Lab Coats",
           "displayTitle": "K Summer Wow Series",
           "gradeKey": "k",
