@@ -1788,6 +1788,12 @@
         gap: 14px;
         margin-top: 24px;
       }
+      .summer-wow-cta-note {
+        width: 100%;
+        margin: -2px 0 0;
+        font-size: 0.96rem;
+        color: var(--text-muted);
+      }
       .summer-wow-carousel {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1858,16 +1864,16 @@
         #summer-wow-showcase {
           padding: 56px 0;
         }
+        .summer-wow-cta .btn {
+          width: 100%;
+          justify-content: center;
+        }
         .summer-wow-carousel {
-          display: grid;
-          grid-auto-flow: column;
-          grid-auto-columns: minmax(78%, 1fr);
-          overflow-x: auto;
-          padding-bottom: 10px;
-          scroll-snap-type: x mandatory;
+          grid-template-columns: 1fr;
+          gap: 18px;
         }
         .summer-wow-card {
-          scroll-snap-align: start;
+          scroll-snap-align: unset;
         }
       }
     </style>
@@ -1876,16 +1882,17 @@
         <div class="summer-wow-copy">
           <span class="section-label">New summer showcase</span>
           <h2 class="section-title">Kindergarten Summer Wow Series</h2>
-          <p class="section-sub">Four bright, high-payoff summer science lessons designed to get a fast “whoa” from little kids: fizzing ice rescue, walking water rainbows, dancing corn, and a foam-flying elephant toothpaste finale.</p>
+          <p class="section-sub">Need an easy yes for summer? This is your grab-and-go set of colorful, low-prep science surprises — the kind that gets an instant “again!” without turning your kitchen into a full production.</p>
           <div class="summer-wow-cta">
-            <a href="https://buy.stripe.com/dRm3cx63R1EO9w04lg6g80p" class="btn btn-primary">Buy the full 4-week series — $20</a>
-            <a href="lesson-plans/k-summer-wow-series.html" class="btn btn-teal">See what’s included</a>
-            <a href="lesson-plans/k-summer-wow-series.html?review=1" class="btn btn-secondary">Review the hub</a>
+            <a href="https://buy.stripe.com/dRm3cx63R1EO9w04lg6g80p" class="btn btn-primary">Grab all 4 Summer Wow lessons — $20</a>
+            <a href="lesson-plans/k-summer-wow-series.html" class="btn btn-teal">See everything included</a>
+            <a href="lesson-plans/k-summer-wow-series.html?review=1" class="btn btn-secondary">Preview the series hub</a>
+            <p class="summer-wow-cta-note">Includes full lesson pages, printable student sheets, and answer keys.</p>
           </div>
         </div>
         <div class="summer-wow-note">
-          <h3>Made for easy summer wins</h3>
-          <p>Low prep. Big visuals. Household supplies. The kind of science set you can point people to immediately when they ask for something fun to do this week.</p>
+          <h3>Tiny prep. Big reactions.</h3>
+          <p>Think bright color changes, fizzing treasures, dancing kernels, and a foamy grand finale — all with household supplies and zero overthinking required.</p>
         </div>
       </div>
 
@@ -1893,36 +1900,36 @@
         <a class="summer-wow-card" href="lesson-plans/free-k-summer-wow-fizzy-ice-rescue.html">
           <img src="images/site/summer-wow/fizzy-ice-rescue.png" alt="Fizzy Ice Rescue showcase image">
           <div class="summer-wow-card-copy">
-            <span class="summer-wow-kicker">Lesson 1</span>
+            <span class="summer-wow-kicker">Lesson 1 of 4</span>
             <h3>Fizzy Ice Rescue</h3>
-            <p>Rainbow fizz, hidden treasures, and instant bubbling payoff.</p>
+            <p>Colorful ice, hidden treasures, and big bubbly payoff from the very first minute.</p>
             <span class="summer-wow-link">Open lesson preview →</span>
           </div>
         </a>
         <a class="summer-wow-card" href="lesson-plans/free-k-summer-wow-rainbow-walking-water.html">
           <img src="images/site/summer-wow/rainbow-walking-water.png" alt="Rainbow Walking Water showcase image">
           <div class="summer-wow-card-copy">
-            <span class="summer-wow-kicker">Lesson 2</span>
+            <span class="summer-wow-kicker">Lesson 2 of 4</span>
             <h3>Rainbow Walking Water</h3>
-            <p>Slow-motion color magic that feels like the cups are doing it by themselves.</p>
+            <p>Slow-moving color magic that feels like the rainbow is building itself.</p>
             <span class="summer-wow-link">Open lesson preview →</span>
           </div>
         </a>
         <a class="summer-wow-card" href="lesson-plans/free-k-summer-wow-magic-dancing-corn.html">
           <img src="images/site/summer-wow/magic-dancing-corn.png" alt="Magic Dancing Corn showcase image">
           <div class="summer-wow-card-copy">
-            <span class="summer-wow-kicker">Lesson 3</span>
+            <span class="summer-wow-kicker">Lesson 3 of 4</span>
             <h3>Magic Dancing Corn</h3>
-            <p>Comedic bubble-powered movement that gets kids narrating every bounce.</p>
+            <p>Bouncy, bubbly corn chaos that gets kids laughing and narrating every jump.</p>
             <span class="summer-wow-link">Open lesson preview →</span>
           </div>
         </a>
         <a class="summer-wow-card" href="lesson-plans/free-k-summer-wow-elephant-toothpaste.html">
           <img src="images/site/summer-wow/elephant-toothpaste-finale.png" alt="Elephant Toothpaste Finale showcase image">
           <div class="summer-wow-card-copy">
-            <span class="summer-wow-kicker">Lesson 4</span>
+            <span class="summer-wow-kicker">Lesson 4 of 4</span>
             <h3>Elephant Toothpaste Finale</h3>
-            <p>A giant foamy finish that makes the whole series feel event-worthy.</p>
+            <p>A giant foamy eruption for the grand finale — dramatic, memorable, and wildly satisfying.</p>
             <span class="summer-wow-link">Open lesson preview →</span>
           </div>
         </a>
