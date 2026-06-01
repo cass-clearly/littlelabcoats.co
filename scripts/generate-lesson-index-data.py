@@ -29,6 +29,15 @@ EXCLUDED_NAME_SUBSTRINGS = {
 
 EXCLUDED_SLUGS = {
     "gr4-ls1-unit1-l1-food-webs",
+    # Grade 4 ESS1 Unit 1 is a legacy duplicate of the canonical
+    # gr4-ess2-unit1 earth-processes lane. Keep files in repo, but do not
+    # reinforce the duplicate family on generated discovery/review surfaces.
+    "gr4-ess1-unit1-lesson1-weathering-starts-landform-change",
+    "gr4-ess1-unit1-lesson2-erosion-moves-sediment",
+    "gr4-ess1-unit1-lesson3-deposition-builds-new-landforms",
+    "gr4-ess1-unit1-lesson4-maps-and-models-show-earth-surface-change",
+    "gr4-ess1-unit1-lesson5-patterns-of-water-wind-ice-and-vegetation",
+    "gr4-ess1-unit1-lesson6-explain-and-protect-a-changing-streambank",
     "how-to-save-and-print",
     "index",
     "landing-page",
@@ -75,6 +84,19 @@ LEGACY_SLUG_METADATA_OVERRIDES = {
         "domainLabel": DOMAIN_LABELS["ess"],
         "bucket": "5-ess",
         "sourcePattern": "legacy-grade-slug-domain-override",
+    },
+}
+
+SLUG_METADATA_OVERRIDES = {
+    "bird-beak-buffet": {
+        "gradeKey": "3",
+        "gradeLabel": GRADE_LABELS["3"],
+        "domainKey": "ls",
+        "domainLabel": DOMAIN_LABELS["ls"],
+        "unitNumber": None,
+        "lessonNumber": 1,
+        "bucket": "3-ls",
+        "sourcePattern": "standalone-grade-domain-override",
     },
 }
 
@@ -341,6 +363,9 @@ def main() -> None:
         slug = path.stem
         title = read_title(path)
         metadata = parse_metadata(slug)
+        override = SLUG_METADATA_OVERRIDES.get(slug)
+        if override:
+            metadata.update(override)
         display_title = clean_display_title(title, slug)
         entry = {
             "slug": slug,

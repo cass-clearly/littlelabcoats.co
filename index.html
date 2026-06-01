@@ -1450,6 +1450,7 @@
     }
 
     .lesson-card {
+      display: block;
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
@@ -3554,27 +3555,27 @@
   <script>
   (function() {
     const lessons = [
-      { title: "Push & Pull Sort", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Sort everyday objects by push and pull. Hands-on sorting activity." },
-      { title: "Ramp Racers", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Explore how ramp height affects how far objects roll." },
-      { title: "Strong & Gentle Push", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Investigate how the strength of a push changes motion." },
-      { title: "Magnet Magic", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Discover which materials magnets attract and repel." },
-      { title: "Wind Wagon", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Build a wind-powered wagon and test different sail designs." },
-      { title: "Marble Run", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Design and build marble runs to explore forces and motion." },
-      { title: "Sound Is Vibration", grade: "Grade 1", subject: "Physical Science", unit: "Grade 1 Sound & Light", desc: "Explore how sound starts with vibrations you can see and feel." },
-      { title: "Plant Parts & Functions", grade: "Grade 1", subject: "Life Science", unit: "Grade 1 Plant & Animal Structures", desc: "Learn what roots, stems, leaves, and flowers do for a plant." },
-      { title: "The Sun", grade: "Grade 1", subject: "Earth & Space Science", unit: "Grade 1 Sun, Moon & Stars", desc: "Investigate our closest star and how it lights and warms Earth." },
-      { title: "What Do Plants Need?", grade: "Grade 2", subject: "Life Science", unit: "Grade 2 Ecosystems", desc: "Investigate the sunlight, water, and air plants need to grow." },
-      { title: "Habitats", grade: "Grade 2", subject: "Life Science", unit: "Grade 2 Ecosystems", desc: "Compare habitats and discover how living things get what they need." },
-      { title: "Mystery Powders", grade: "Grade 2", subject: "Physical Science", unit: "Grade 2 Matter", desc: "Observe and compare powders to learn about properties of matter." },
-      { title: "Bird Beak Buffet", grade: "Grade 3", subject: "Life Science", unit: "Standalone", desc: "Model bird beak adaptations using household tools to pick up different 'foods'." },
-      { title: "Plant Life Cycles and Seeds", grade: "Grade 3", subject: "Life Science", unit: "Grade 3 Life Cycles", desc: "Explore how plants grow, reproduce, and begin again from seeds." },
-      { title: "Weather Patterns Over Time", grade: "Grade 3", subject: "Earth Science", unit: "Grade 3 Weather & Climate", desc: "Track weather patterns and look for changes over time." },
-      { title: "Thermal Energy Ice Cream", grade: "3rd & 5th", subject: "Physical Science", unit: "Standalone", desc: "Make ice cream while learning about thermal energy transfer and states of matter." },
-      { title: "Balanced & Unbalanced Forces", grade: "5th", subject: "Forces & Motion", unit: "Standalone", desc: "Investigate Newton's Laws through friction experiments with household items." },
-      { title: "The Coral Kingdom", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Explore coral reef ecosystems, symbiosis, and ocean food webs." },
-      { title: "Sharks Built to Hunt", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Study shark anatomy, taxonomy, and adaptations for hunting." },
-      { title: "Into the Abyss", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Discover deep sea creatures, bioluminescence, and hydrothermal vents." },
-      { title: "Ocean in Motion", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Investigate waves, currents, tides, and thermohaline circulation." }
+      { title: "Push & Pull Sort", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Sort everyday objects by push and pull. Hands-on sorting activity.", href: "/curriculum.html" },
+      { title: "Ramp Racers", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Explore how ramp height affects how far objects roll.", href: "/curriculum.html" },
+      { title: "Strong & Gentle Push", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Investigate how the strength of a push changes motion.", href: "/curriculum.html" },
+      { title: "Magnet Magic", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Discover which materials magnets attract and repel.", href: "/curriculum.html" },
+      { title: "Wind Wagon", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Build a wind-powered wagon and test different sail designs.", href: "/curriculum.html" },
+      { title: "Marble Run", grade: "K", subject: "Forces & Motion", unit: "Kindergarten Forces Unit", desc: "Design and build marble runs to explore forces and motion.", href: "/curriculum.html" },
+      { title: "Sound Is Vibration", grade: "Grade 1", subject: "Physical Science", unit: "Grade 1 Sound & Light", desc: "Explore how sound starts with vibrations you can see and feel.", href: "/curriculum.html" },
+      { title: "Plant Parts & Functions", grade: "Grade 1", subject: "Life Science", unit: "Grade 1 Plant & Animal Structures", desc: "Learn what roots, stems, leaves, and flowers do for a plant.", href: "/curriculum.html" },
+      { title: "The Sun", grade: "Grade 1", subject: "Earth & Space Science", unit: "Grade 1 Sun, Moon & Stars", desc: "Investigate our closest star and how it lights and warms Earth.", href: "/curriculum.html" },
+      { title: "What Do Plants Need?", grade: "Grade 2", subject: "Life Science", unit: "Grade 2 Ecosystems", desc: "Investigate the sunlight, water, and air plants need to grow.", href: "/curriculum.html" },
+      { title: "Habitats", grade: "Grade 2", subject: "Life Science", unit: "Grade 2 Ecosystems", desc: "Compare habitats and discover how living things get what they need.", href: "/curriculum.html" },
+      { title: "Mystery Powders", grade: "Grade 2", subject: "Physical Science", unit: "Grade 2 Matter", desc: "Observe and compare powders to learn about properties of matter.", href: "/curriculum.html" },
+      { title: "Bird Beak Buffet", grade: "Grade 3", subject: "Life Science", unit: "Standalone", desc: "Model bird beak adaptations using household tools to pick up different 'foods'.", href: "/lesson-plans/bird-beak-buffet.html" },
+      { title: "Plant Life Cycles and Seeds", grade: "Grade 3", subject: "Life Science", unit: "Grade 3 Life Cycles", desc: "Explore how plants grow, reproduce, and begin again from seeds.", href: "/lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html" },
+      { title: "Weather Patterns Over Time", grade: "Grade 3", subject: "Earth Science", unit: "Grade 3 Weather & Climate", desc: "Track weather patterns and look for changes over time.", href: "/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html" },
+      { title: "Thermal Energy Ice Cream", grade: "3rd & 5th", subject: "Physical Science", unit: "Standalone", desc: "Make ice cream while learning about thermal energy transfer and states of matter.", href: "/curriculum.html" },
+      { title: "Balanced & Unbalanced Forces", grade: "5th", subject: "Forces & Motion", unit: "Standalone", desc: "Investigate Newton's Laws through friction experiments with household items.", href: "/lesson-plans/gr5-ps2-unit1-l1-balanced-and-unbalanced-forces.html" },
+      { title: "The Coral Kingdom", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Explore coral reef ecosystems, symbiosis, and ocean food webs.", href: "/curriculum.html" },
+      { title: "Sharks Built to Hunt", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Study shark anatomy, taxonomy, and adaptations for hunting.", href: "/curriculum.html" },
+      { title: "Into the Abyss", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Discover deep sea creatures, bioluminescence, and hydrothermal vents.", href: "/curriculum.html" },
+      { title: "Ocean in Motion", grade: "3rd-5th", subject: "Ocean Science", unit: "Ocean Explorers (Special)", desc: "Investigate waves, currents, tides, and thermohaline circulation.", href: "/curriculum.html" }
     ];
 
     const grid = document.getElementById('lessonsGrid');
@@ -3648,7 +3649,8 @@
       } else {
         grid.innerHTML = list.map(function(l) {
           var special = l.unit.indexOf('Special') !== -1;
-          return '<div class="lesson-card">' +
+          var href = l.href || '/curriculum.html';
+          return '<a class="lesson-card" href="' + href + '">' +
             '<div class="lesson-card-header">' +
               '<span class="lesson-grade-badge ' + gradeClass(l.grade) + '">' + l.grade + '</span>' +
               (special ? '<span class="lesson-special-badge">✨ Special Unit</span>' : '') +
@@ -3657,7 +3659,7 @@
             '<div class="lesson-subject">' + l.subject + '</div>' +
             '<p class="lesson-desc">' + l.desc + '</p>' +
             '<div class="lesson-unit">📁 ' + l.unit + '</div>' +
-          '</div>';
+          '</a>';
         }).join('');
       }
       var q = input.value.trim();
