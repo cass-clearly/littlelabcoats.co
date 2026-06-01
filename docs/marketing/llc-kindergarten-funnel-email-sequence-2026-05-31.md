@@ -106,7 +106,7 @@ And often, it’s better than enough.
 
 If you enjoyed the free sample and want a fuller next step, the best place to continue is the **Kindergarten Forces & Motion** bundle.
 
-**[Insert product/store link]**
+**https://littlelabcoats.co/kindergarten-forces-motion-bundle.html**
 
 Warmly,
 Serena
@@ -138,7 +138,7 @@ It is a good fit if you want:
 - something more complete than random one-off activities
 
 You can browse it here:
-**[Insert product/store link]**
+**https://littlelabcoats.co/kindergarten-forces-motion-bundle.html**
 
 Warmly,
 Serena
@@ -165,10 +165,10 @@ If you’d rather start somewhere else, Little Lab Coats also includes kindergar
 - engineering design
 
 You can browse the kindergarten collection here:
-**[Insert store link]**
+**https://littlelabcoats.co/store.html#grade-k**
 
 And if you’d like to keep trying free samples first, you can browse those here:
-**[Insert free lessons link]**
+**https://littlelabcoats.co/free-lessons.html#kindergarten**
 
 Warmly,
 Serena
