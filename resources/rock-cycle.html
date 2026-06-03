@@ -4,15 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rock cycle printable — Little Lab Coats</title>
-  <meta name="description" content="A parent-friendly rock cycle chart showing how igneous, sedimentary, and metamorphic rocks can change over time." />
+  <meta name="description" content="A prettier, parent-friendly rock cycle guide with kid-friendly visuals, rock family explanations, and a printable poster." />
   <link rel="icon" type="image/png" sizes="32x32" href="../images/site/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="../images/site/apple-touch-icon.png" />
   <style>
-    :root{--cream:#F9FFFE;--teal:#4ECDC4;--teal-dark:#35B8AF;--teal-pale:#D4F5F3;--coral:#FF6B6B;--navy:#3B1F6B;--muted:#5A7A78;--border:#C8F0ED;--white:#fff;--shadow:0 18px 48px rgba(43,31,107,.14)}
-    *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,var(--cream),#f3e8ff);color:var(--navy);font-family:Arial,Helvetica,sans-serif;line-height:1.6}.toolbar{position:sticky;top:0;z-index:10;background:rgba(249,255,254,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(43,31,107,.08)}.toolbar-inner{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-weight:900;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}.brand img{height:44px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:11px 16px;font-weight:900;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:.96rem}.btn-primary{background:var(--coral);color:#fff}.btn-secondary{background:#fff;color:var(--navy);border-color:var(--border)}.shell{max-width:1180px;margin:0 auto;padding:28px 20px 44px}.intro{background:#fff;border:1px solid var(--border);border-radius:24px;padding:22px 24px;margin-bottom:22px;box-shadow:var(--shadow)}.intro h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.08;margin:0 0 8px}.intro p{color:var(--muted);font-size:1.06rem;margin:0;max-width:850px}.intro ul{margin:16px 0 0;color:var(--muted);font-weight:700}.print-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:18px;box-shadow:var(--shadow)}.print-card img{display:block;width:100%;height:auto;border-radius:14px;background:#fff}.note{color:var(--muted);font-size:.94rem;margin:16px 6px 0}.note strong{color:var(--navy)}
-    @media(max-width:720px){.toolbar-inner{align-items:flex-start;flex-direction:column}.actions{width:100%}.btn{flex:1}.shell{padding:20px 12px 32px}.print-card{padding:8px;border-radius:18px}.intro{border-radius:18px}}
-    @media print{body{background:#fff}.toolbar,.intro,.note{display:none!important}.shell{max-width:none;margin:0;padding:0}.print-card{border:0;box-shadow:none;border-radius:0;padding:0}.print-card img{width:100%;border-radius:0}@page{size:letter portrait;margin:.22in}}
-</style>
+    :root{
+      --cream:#fffdf9;--paper:#ffffff;--navy:#3B1F6B;--plum:#6f49a8;--lav:#f4ecff;--teal:#4ECDC4;--teal-soft:#def7f5;--coral:#FF6B6B;--gold:#f5c76f;--sand:#fff1da;--muted:#5A7A78;--border:#e7dff7;--shadow:0 24px 60px rgba(59,31,107,.12)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:radial-gradient(circle at top left,#fff6f3 0,#fffdf9 38%,#f5efff 100%);line-height:1.6}
+    img{max-width:100%;display:block}
+    .toolbar{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(111,73,168,.12)}
+    .toolbar-inner,.shell{max-width:1180px;margin:0 auto;padding:0 20px}
+    .toolbar-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--navy);text-decoration:none;font-weight:900}.brand img{height:42px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:.96rem;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--coral);color:#fff;box-shadow:0 10px 24px rgba(255,107,107,.24)}.btn-secondary{background:#fff;color:var(--navy);border-color:#eadffb}.btn-ghost{background:rgba(255,255,255,.72);color:var(--navy);border-color:rgba(111,73,168,.12)}
+    .shell{padding-top:28px;padding-bottom:56px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch;margin-bottom:24px}.hero-copy,.hero-art,.panel,.mini-panel{background:rgba(255,255,255,.88);border:1px solid rgba(111,73,168,.12);box-shadow:var(--shadow);border-radius:28px}.hero-copy{padding:28px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--lav);color:var(--plum);font-size:.84rem;font-weight:900;letter-spacing:.02em;text-transform:uppercase}.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.3rem,5vw,4rem);line-height:1.02;margin:14px 0 14px}.hero p.lead{font-size:1.08rem;color:var(--muted);margin:0 0 18px;max-width:58ch}.fact-list{display:grid;gap:12px;margin:18px 0 24px}.fact{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#fff,#fff9f1);border:1px solid #f2e4c2;border-radius:18px;padding:14px 15px}.fact-bullet{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--teal),#8be0da);font-size:1.1rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-art{padding:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#fff,#faf3ff)}.hero-art img{border-radius:20px}
+    .section{margin-top:24px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:14px}.section-title h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.6rem,3vw,2.3rem);margin:0}.section-title p{margin:0;color:var(--muted);max-width:56ch}
+    .poster-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.panel{padding:20px}.poster-frame{padding:14px;background:linear-gradient(180deg,#fff,#fcf9ff);border:1px solid var(--border);border-radius:24px}.poster-frame img{border-radius:18px;background:#fff;width:100%}
+    .chip-row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:var(--teal-soft);color:var(--navy);font-weight:800;font-size:.92rem}.chip .arrow{color:var(--plum)}
+    .mini-panel{padding:18px;background:linear-gradient(180deg,#fff,#fff8ee)}.mini-panel h3,.panel h3{margin:0 0 10px;font-size:1.08rem}.mini-panel p,.panel p,.panel li{color:var(--muted)}.mini-panel ul{margin:0;padding-left:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid rgba(111,73,168,.11);border-radius:22px;padding:18px;box-shadow:0 14px 36px rgba(59,31,107,.08)}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}.swatch{width:56px;height:56px;border-radius:18px;margin-bottom:14px;display:grid;place-items:center;font-size:1.35rem;font-weight:900}.swatch-1{background:#ffe8de;color:#b8563f}.swatch-2{background:#edf8dd;color:#64833c}.swatch-3{background:#eee5ff;color:#6f49a8}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.callout{background:linear-gradient(135deg,#fff,#f7fffe);border:1px solid rgba(78,205,196,.26);border-radius:24px;padding:20px}.callout strong{color:var(--navy)}
+    .footer-note{margin-top:24px;padding:18px 20px;border-radius:20px;background:#fff;border:1px solid rgba(111,73,168,.1);color:var(--muted);box-shadow:0 12px 30px rgba(59,31,107,.06)}
+    .print-only{display:none}
+    @media (max-width:920px){.hero,.poster-layout,.grid-3,.split{grid-template-columns:1fr}.toolbar-inner{padding-top:12px;padding-bottom:12px}.actions{width:100%}.btn{flex:1}.hero-copy{padding:22px}}
+    @media (max-width:640px){.toolbar-inner,.shell{padding-left:12px;padding-right:12px}.hero h1{font-size:2.4rem}.fact{padding:12px}.panel,.mini-panel,.hero-copy,.hero-art,.card,.callout{border-radius:20px}}
+    @media print{
+      body{background:#fff}
+      .toolbar,.hero,.section-title,.poster-notes,.family-grid,.support-grid,.footer-note,.screen-only{display:none !important}
+      .shell{max-width:none;margin:0;padding:0}
+      .section,.poster-layout,.panel,.poster-frame{margin:0;padding:0;border:0;box-shadow:none;background:#fff;border-radius:0}
+      .poster-layout{display:block}
+      .poster-frame img{width:100%;border-radius:0}
+      .print-only{display:block}
+      @page{size:letter portrait;margin:.22in}
+    }
+  </style>
   <script>(function(){var host=window.location.hostname;if(host!=='littlelabcoats.co'&&host!=='www.littlelabcoats.co')return;var s=document.createElement('script');s.defer=true;s.dataset.domain='littlelabcoats.co';s.src='https://plausible.io/js/script.js';document.head.appendChild(s);})();</script>
   <script src="/free-access-gate.js?v=20260428"></script>
 </head>
@@ -21,23 +50,100 @@
     <div class="toolbar-inner">
       <a class="brand" href="../free-resources.html"><img src="../images/site/llc-logo-serena-approved-2026-04-10.png" alt="Little Lab Coats" />Free Resources</a>
       <div class="actions">
-        <button class="btn btn-primary" type="button" onclick="window.print()">Print this resource</button>
+        <button class="btn btn-primary" type="button" onclick="window.print()">Print poster</button>
         <a class="btn btn-secondary" href="rock-cycle-printable.pdf" download>Download PDF</a>
         <a class="btn btn-secondary" href="rock-cycle-printable.svg" download>Download SVG</a>
-        <a class="btn btn-secondary" href="../free-resources.html">Back to resources</a>
+        <a class="btn btn-ghost" href="../free-resources.html">Back to resources</a>
       </div>
     </div>
   </header>
+
   <main class="shell">
-    <section class="intro">
-      <h1>Rock cycle printable</h1>
-      <p>A parent-friendly rock cycle chart showing how igneous, sedimentary, and metamorphic rocks can change over time.</p>
-      <ul><li>Arrows name the processes that change rocks.</li><li>Includes weathering, erosion, heat, pressure, melting, and cooling.</li><li>Designed as a clean reference for notebooks or wall display.</li></ul>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Grade 5 Earth science · free visual</span>
+        <h1>The rock cycle, but actually pretty</h1>
+        <p class="lead">This version explains the rock cycle like a real science guide instead of a sad worksheet. Kids can see how rocks melt, cool, weather, compact, and change under heat and pressure without pretending every rock follows one perfect loop.</p>
+        <div class="fact-list">
+          <div class="fact"><div class="fact-bullet">🌋</div><div><strong>Igneous rock</strong> forms when melted rock cools and hardens.</div></div>
+          <div class="fact"><div class="fact-bullet">🏜️</div><div><strong>Sedimentary rock</strong> forms when bits of rock pile up in layers and get compacted together.</div></div>
+          <div class="fact"><div class="fact-bullet">🪨</div><div><strong>Metamorphic rock</strong> forms when existing rock changes under heat and pressure.</div></div>
+        </div>
+        <div class="hero-actions screen-only">
+          <a class="btn btn-primary" href="#poster">Jump to printable</a>
+          <a class="btn btn-secondary" href="#families">Meet the rock families</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="../images/resources/gr5-rock-cycle-resource-hero-gpt2.png" alt="Watercolor-style rock cycle landscape with a volcano, magma chamber, river stones, layered sediment cliffs, and metamorphic bands" />
+      </div>
     </section>
-    <section class="print-card" aria-label="Printable rock cycle diagram with magma, igneous, sedimentary, and metamorphic rock arrows">
-      <img src="rock-cycle-printable.svg" alt="Printable rock cycle diagram with magma, igneous, sedimentary, and metamorphic rock arrows" />
+
+    <section class="section" id="poster">
+      <div class="section-title">
+        <h2>See the cycle in motion</h2>
+        <p>This is the clean printable poster view families can use for notebooks, wall display, or quick review before the lesson.</p>
+      </div>
+      <div class="poster-layout">
+        <div class="panel">
+          <div class="poster-frame">
+            <img src="../images/lesson-cards/gr5-rock-cycle-diagram-gpt2.png" alt="Kid-friendly watercolor rock cycle diagram showing magma, cooling, weathering and erosion, compaction, and heat and pressure" />
+          </div>
+          <div class="chip-row poster-notes">
+            <span class="chip"><span class="arrow">→</span> cooling makes igneous rock</span>
+            <span class="chip"><span class="arrow">→</span> weathering + erosion make sediment</span>
+            <span class="chip"><span class="arrow">→</span> compaction builds sedimentary rock</span>
+            <span class="chip"><span class="arrow">→</span> heat + pressure make metamorphic rock</span>
+            <span class="chip"><span class="arrow">→</span> melting returns rock to magma</span>
+          </div>
+        </div>
+        <div class="mini-panel">
+          <h3>Family note</h3>
+          <p>The big misconception to kill here: the rock cycle is <strong>not</strong> a tidy circle where every rock visits every stage in order.</p>
+          <ul>
+            <li>Any rock can weather into sediment.</li>
+            <li>Burial can add heat and pressure without melting.</li>
+            <li>Melting only happens in some conditions.</li>
+            <li>Geologic change can take a very, very long time.</li>
+          </ul>
+          <p><strong>Best use:</strong> Print the poster, then ask kids to trace one possible pathway for a single rock.</p>
+        </div>
+      </div>
     </section>
-    <p class="note"><strong>Printing tip:</strong> The rock cycle can take millions of years. The arrows show possible pathways, not a single fixed order every rock must follow.</p>
+
+    <section class="section" id="families">
+      <div class="section-title">
+        <h2>Meet the rock families</h2>
+        <p>These visuals make it easier to talk about what rocks look like and what clues help kids sort them.</p>
+      </div>
+      <div class="panel family-grid">
+        <div class="poster-frame" style="margin-bottom:18px;">
+          <img src="../images/lesson-cards/gr5-earth-material-classification-cards-gpt2.png" alt="Rock and mineral classification cards showing several different Earth materials with textures and layers" />
+        </div>
+        <div class="grid-3">
+          <div class="card"><div class="swatch swatch-1">🌋</div><h3>Igneous clues</h3><p>Look for crystals, bubbles, or a glassy surface. These rocks formed from cooled magma or lava.</p></div>
+          <div class="card"><div class="swatch swatch-2">🧱</div><h3>Sedimentary clues</h3><p>Look for layers, grains, or pieces pressed together. These rocks are built from sediments over time.</p></div>
+          <div class="card"><div class="swatch swatch-3">🌊</div><h3>Metamorphic clues</h3><p>Look for bands, squiggles, or flattened minerals. These rocks changed because of heat and pressure.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support-grid">
+      <div class="split">
+        <div class="callout">
+          <h3>How to teach it fast</h3>
+          <p><strong>Step 1:</strong> Start with the three rock families.</p>
+          <p><strong>Step 2:</strong> Ask what could break, bury, squeeze, melt, or cool a rock.</p>
+          <p><strong>Step 3:</strong> Trace one rock’s story instead of forcing the whole chart at once.</p>
+        </div>
+        <div class="callout">
+          <h3>What kids usually get wrong</h3>
+          <p>They often think the cycle is one fixed loop or that metamorphic rock means “melted rock.” It doesn’t. Metamorphic rock changes <strong>without fully melting</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">Printing tip: use the PDF if you want the clean classroom handout. Use this page when you want the prettier explanation version with extra support for parents.</p>
   </main>
 </body>
 </html>
