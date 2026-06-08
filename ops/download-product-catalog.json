@@ -292,9 +292,9 @@
       "fullGrade": {
         "sku": "grade-3-complete",
         "productType": "full-grade-bundle",
-        "bundlePdfStatus": "grade_bundle_pending",
-        "checkoutLinkStatus": "pending",
-        "exportPath": "exports/grade-3-complete/",
+        "bundlePdfStatus": "grade_bundle_ready",
+        "checkoutLinkStatus": "ready",
+        "exportPath": "exports/grade-3-complete/grade-3-complete-science-bundle.pdf",
         "thankYouProduct": "grade-3-complete",
         "includedUnits": [
           "gr3-ps2-unit1-bundle",
@@ -324,9 +324,9 @@
           "domain": "Life Science",
           "unitCode": "3-LS1 Unit 1",
           "previewUrl": "/lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
-          "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr3-ls1-unit1-bundle/",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "ready",
+          "exportPath": "exports/gr3-ls1-unit1-bundle/gr3-ls1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ls1-unit1-bundle"
         },
         {

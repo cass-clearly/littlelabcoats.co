@@ -170,6 +170,19 @@
       "status": "live-hosted"
     },
     {
+      "slug": "grade-3-complete",
+      "displayName": "Complete Grade 3 Science Bundle",
+      "deliveryType": "hosted_link",
+      "assetPath": "exports/grade-3-complete/grade-3-complete-science-bundle.pdf",
+      "paymentLinkId": "plink_1Tg7fmRs1078GLsaHhG8af8b",
+      "paymentLinkUrl": "https://buy.stripe.com/28EaEZ8bZerA23ydVQ6g80y",
+      "downloadUrl": "https://littlelabcoats.co/grade-3-complete-download.html",
+      "emailTemplatePath": "ops/grade-3-complete-welcome-email.txt",
+      "draftSubject": "Your Complete Grade 3 Science Bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-hosted"
+    },
+    {
       "slug": "gr3-ps2-unit1-bundle",
       "displayName": "Grade 3 Physical Science Unit 1 bundle",
       "deliveryType": "hosted_link",
@@ -181,6 +194,19 @@
       "paymentLinkUrl": "https://buy.stripe.com/9B6eVf1NB2IS7nS2d86g80r",
       "downloadUrl": "https://littlelabcoats.co/gr3-ps2-unit1-download.html",
       "emailTemplatePath": "ops/gr3-ps2-unit1-welcome-email.txt"
+    },
+    {
+      "slug": "gr3-ls1-unit1-bundle",
+      "displayName": "Grade 3 Life Cycles bundle",
+      "deliveryType": "hosted_link",
+      "assetPath": "exports/gr3-ls1-unit1-bundle/gr3-ls1-unit1-six-lesson-bundle.pdf",
+      "paymentLinkId": "plink_1Tg7fjRs1078GLsaxrBIjoa5",
+      "paymentLinkUrl": "https://buy.stripe.com/dRm14p63RdnweQk9FA6g80s",
+      "downloadUrl": "https://littlelabcoats.co/gr3-ls1-unit1-download.html",
+      "emailTemplatePath": "ops/gr3-ls1-unit1-welcome-email.txt",
+      "draftSubject": "Your Grade 3 Life Cycles bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-hosted"
     },
     {
       "slug": "gr3-ls3-unit2-bundle",
