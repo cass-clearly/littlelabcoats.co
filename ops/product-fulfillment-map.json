@@ -74,7 +74,9 @@
       "emailTemplatePath": "ops/gr1-ls3-unit2-welcome-email.txt",
       "draftSubject": "Your Grade 1 Parents & Offspring bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1Tg7TGRs1078GLsamt0sk9dV",
+      "paymentLinkUrl": "https://buy.stripe.com/3cI00l2RFcjsbE84lg6g80q"
     },
     {
       "slug": "gr1-ps4-unit1-bundle",
@@ -91,14 +93,14 @@
     },
     {
       "slug": "gr2-ess1-unit3-bundle",
-      "displayName": "Grade 2 Earth’s Features bundle",
+      "displayName": "Grade 2 Earth\u2019s Features bundle",
       "deliveryType": "hosted_link",
       "assetPath": "exports/gr2-ess1-unit3-bundle/gr2-ess1-unit3-six-lesson-bundle.pdf",
       "paymentLinkId": "plink_1TSQNxRs1078GLsal1mZZIBB",
       "paymentLinkUrl": "https://buy.stripe.com/5kQ28tbob3MW6jObNI6g80c",
       "downloadUrl": "https://littlelabcoats.co/gr2-ess1-unit3-download.html",
       "emailTemplatePath": "ops/gr2-ess1-unit3-welcome-email.txt",
-      "draftSubject": "Your Grade 2 Earth’s Features bundle is ready",
+      "draftSubject": "Your Grade 2 Earth\u2019s Features bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
       "status": "live-hosted"
     },
@@ -170,11 +172,15 @@
     {
       "slug": "gr3-ps2-unit1-bundle",
       "displayName": "Grade 3 Physical Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
       "draftSubject": "Your Grade 3 Physical Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1Tg7THRs1078GLsaJ80Fo39T",
+      "paymentLinkUrl": "https://buy.stripe.com/9B6eVf1NB2IS7nS2d86g80r",
+      "downloadUrl": "https://littlelabcoats.co/gr3-ps2-unit1-download.html",
+      "emailTemplatePath": "ops/gr3-ps2-unit1-welcome-email.txt"
     },
     {
       "slug": "grade-2-complete",
@@ -205,65 +211,93 @@
     {
       "slug": "k-ess2-unit1-bundle",
       "displayName": "Kindergarten Earth Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ess2-unit1-bundle/k-ess2-unit1-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Earth Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQyFyRs1078GLsaByczCnos",
+      "paymentLinkUrl": "https://buy.stripe.com/bJe28tcsf6Z88rWcRM6g808",
+      "downloadUrl": "https://littlelabcoats.co/k-ess2-unit1-download.html",
+      "emailTemplatePath": "ops/k-ess2-unit1-welcome-email.txt"
     },
     {
       "slug": "k-ess3-unit2-bundle",
       "displayName": "Kindergarten Earth Science Unit 2 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ess3-unit2-bundle/k-ess3-unit2-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Earth Science Unit 2 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQyJ7Rs1078GLsa13CqoYVk",
+      "paymentLinkUrl": "https://buy.stripe.com/dRm7sNdwj5V45fKg3Y6g809",
+      "downloadUrl": "https://littlelabcoats.co/k-ess3-unit2-download.html",
+      "emailTemplatePath": "ops/k-ess3-unit2-welcome-email.txt"
     },
     {
       "slug": "k-ets1-unit1-bundle",
       "displayName": "Kindergarten Engineering Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ets1-unit1-bundle/k-ets1-unit1-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Engineering Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQyjDRs1078GLsa0CzT7794",
+      "paymentLinkUrl": "https://buy.stripe.com/5kQ8wR3VJ2ISeQkg3Y6g80b",
+      "downloadUrl": "https://littlelabcoats.co/k-ets1-unit1-download.html",
+      "emailTemplatePath": "ops/k-ets1-unit1-welcome-email.txt"
     },
     {
       "slug": "k-ls1-unit2-bundle",
       "displayName": "Kindergarten Life Science Unit 2 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ls1-unit2-bundle/k-ls1-unit2-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Life Science Unit 2 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQxdLRs1078GLsaTAWBfOwS",
+      "paymentLinkUrl": "https://buy.stripe.com/9B6bJ3fEr5V48rWbNI6g806",
+      "downloadUrl": "https://littlelabcoats.co/k-ls1-unit2-download.html",
+      "emailTemplatePath": "ops/k-ls1-unit2-welcome-email.txt"
     },
     {
       "slug": "k-ls1-unit3-bundle",
       "displayName": "Kindergarten Life Science Unit 3 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ls1-unit3-bundle/k-ls1-unit3-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Life Science Unit 3 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQxnSRs1078GLsaTc5dA0Sh",
+      "paymentLinkUrl": "https://buy.stripe.com/14A28teAnabkeQk7xs6g807",
+      "downloadUrl": "https://littlelabcoats.co/k-ls1-unit3-download.html",
+      "emailTemplatePath": "ops/k-ls1-unit3-welcome-email.txt"
     },
     {
       "slug": "k-ps2-unit1-bundle",
       "displayName": "Kindergarten Physical Science Unit 1 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ps2-unit1-bundle/k-ps2-unit1-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Physical Science Unit 1 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQwD1Rs1078GLsa49ZsYNpj",
+      "paymentLinkUrl": "https://buy.stripe.com/3cI00lgIv97gcIc6to6g804",
+      "downloadUrl": "https://littlelabcoats.co/k-ps2-unit1-download.html",
+      "emailTemplatePath": "ops/k-ps2-unit1-welcome-email.txt"
     },
     {
       "slug": "k-ps3-unit2-bundle",
       "displayName": "Kindergarten Physical Science Unit 2 bundle",
-      "deliveryType": "attachment",
+      "deliveryType": "hosted_link",
       "assetPath": "exports/k-ps3-unit2-bundle/k-ps3-unit2-six-lesson-bundle.pdf",
       "draftSubject": "Your Kindergarten Physical Science Unit 2 bundle is ready",
       "supportEmail": "clearlycass10@gmail.com",
-      "status": "ready-manual"
+      "status": "live-hosted",
+      "paymentLinkId": "plink_1TQwSKRs1078GLsaCcFVduS9",
+      "paymentLinkUrl": "https://buy.stripe.com/8x23cx8bZ1EO5fKdVQ6g805",
+      "downloadUrl": "https://littlelabcoats.co/k-ps3-unit2-download.html",
+      "emailTemplatePath": "ops/k-ps3-unit2-welcome-email.txt"
     }
   ]
 }

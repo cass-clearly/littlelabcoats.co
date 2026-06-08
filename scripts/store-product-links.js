@@ -2,7 +2,7 @@
   'use strict';
 
   window.LLCStoreProductLinks = {
-    updatedAt: '2026-05-05',
+    updatedAt: '2026-06-08',
     note: 'Drop real checkout URLs into this map as each Little Lab Coats bundle is wired. Empty checkoutUrl means the storefront should keep showing a clean placeholder state.',
     products: {
       'grade-k-complete': { checkoutUrl: 'https://buy.stripe.com/7sYcN71NBgzI6jOg3Y6g80a', status: 'live' },
@@ -17,7 +17,7 @@
       'grade-1-complete': { checkoutUrl: 'https://buy.stripe.com/aFadRb0Jx6Z89w0cRM6g80i', status: 'live' },
       'gr1-ps4-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/6oUfZj63RerA9w0aJE6g80e', status: 'live' },
       'gr1-ls1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/dRmfZj77VgzI7nS4lg6g80f', status: 'live' },
-      'gr1-ls3-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr1-ls3-unit2-bundle': { checkoutUrl: 'https://buy.stripe.com/3cI00l2RFcjsbE84lg6g80q', status: 'live' },
       'gr1-ess1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/aFa14pdwjabk23y7xs6g80g', status: 'live' },
       'gr1-ets1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/00wbJ32RFerAcIcdVQ6g80h', status: 'live' },
 
@@ -32,7 +32,7 @@
       'gr2-ets1-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/eVq7sN77Vabk4bG1946g80o', status: 'live' },
 
       'grade-3-complete': { checkoutUrl: '', status: 'placeholder' },
-      'gr3-ps2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
+      'gr3-ps2-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/9B6eVf1NB2IS7nS2d86g80r', status: 'live' },
       'gr3-ls1-unit1-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr3-ls3-unit2-bundle': { checkoutUrl: '', status: 'placeholder' },
       'gr3-ls4-unit3-bundle': { checkoutUrl: '', status: 'placeholder' },

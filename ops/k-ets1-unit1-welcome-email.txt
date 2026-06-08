@@ -2,16 +2,16 @@ Hi {{customer_name}},
 
 Thank you for your Little Lab Coats purchase.
 
-Your Kindergarten Animal Needs bundle is ready here:
-https://littlelabcoats.co/k-ls1-unit3-download.html
+Your Kindergarten Engineering Design bundle is ready here:
+https://littlelabcoats.co/k-ets1-unit1-download.html
 
 Included in this bundle:
-- Ls1 What Do Animals Need
-- Ls1 What'S For Dinner
-- Ls1 Breathing
-- Ls1 How Animals Drink
-- Ls1 Building A Shelter
-- Ls1 When Needs Arent Met
+- Ets1 What Is A Problem
+- Ets1 Ask Questions
+- Ets1 Draw Your Idea
+- Ets1 Build It
+- Ets1 Test And Improve
+- Ets1 Share Your Solution
 - Bundle PDF
 
 If you have any trouble opening the file, just reply to this email and we’ll help.
