@@ -20,6 +20,16 @@
     ],
     "all-grade-2": [
       "grade-2-complete"
+    ],
+    "all-grade-3": [
+      "gr3-ps2-unit1-bundle",
+      "gr3-ls1-unit1-bundle",
+      "gr3-ls3-unit2-bundle",
+      "gr3-ls4-unit3-bundle",
+      "gr3-ls2-unit4-bundle",
+      "gr3-ess2-unit1-bundle",
+      "gr3-ets1-unit1-bundle",
+      "grade-3-complete"
     ]
   },
   "bundles": {
@@ -221,6 +231,91 @@
       "reviewHub": "lesson-plans/review/gardening-unit-review.html",
       "downloadPage": "gardening-unit-download.html",
       "status": "hosted_review_ready"
+    },
+    "gr3-ls1-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr3-ls1-unit1-bundle/gr3-ls1-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr3-ls1-unit1-lesson1-what-is-a-life-cycle.html",
+        "lesson-plans/gr3-ls1-unit1-lesson2-different-life-cycles-same-big-pattern.html",
+        "lesson-plans/gr3-ls1-unit1-lesson3-plant-life-cycles-and-seeds.html",
+        "lesson-plans/gr3-ls1-unit1-lesson4-animal-life-cycles-and-metamorphosis.html",
+        "lesson-plans/gr3-ls1-unit1-lesson5-comparing-life-cycle-patterns.html",
+        "lesson-plans/gr3-ls1-unit1-lesson6-model-and-explain-a-life-cycle.html"
+      ]
+    },
+    "gr3-ls3-unit2-bundle": {
+      "type": "unit",
+      "output": "exports/gr3-ls3-unit2-bundle/gr3-ls3-unit2-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr3-ls3-unit2-lesson1-inherited-traits-all-around-us.html",
+        "lesson-plans/gr3-ls3-unit2-lesson2-plant-traits-from-parent-plants.html",
+        "lesson-plans/gr3-ls3-unit2-lesson3-animal-traits-from-parent-animals.html",
+        "lesson-plans/gr3-ls3-unit2-lesson4-variation-within-a-similar-group.html",
+        "lesson-plans/gr3-ls3-unit2-lesson5-trait-data-detective.html",
+        "lesson-plans/gr3-ls3-unit2-lesson6-make-the-inheritance-case.html"
+      ]
+    },
+    "gr3-ls4-unit3-bundle": {
+      "type": "unit",
+      "output": "exports/gr3-ls4-unit3-bundle/gr3-ls4-unit3-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr3-ls4-unit3-lesson1-variation-can-help-survival.html",
+        "lesson-plans/gr3-ls4-unit3-lesson2-camouflage-and-staying-hidden.html",
+        "lesson-plans/gr3-ls4-unit3-lesson3-beaks-mouths-and-getting-food.html",
+        "lesson-plans/gr3-ls4-unit3-lesson4-movement-traits-in-different-places.html",
+        "lesson-plans/gr3-ls4-unit3-lesson5-traits-that-help-find-mates-or-reproduce.html",
+        "lesson-plans/gr3-ls4-unit3-lesson6-construct-an-explanation-from-evidence.html"
+      ]
+    },
+    "gr3-ls2-unit4-bundle": {
+      "type": "unit",
+      "output": "exports/gr3-ls2-unit4-bundle/gr3-ls2-unit4-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr3-ls2-unit4-lesson1-why-animals-sometimes-stick-together.html",
+        "lesson-plans/gr3-ls2-unit4-lesson2-lookout-calls-and-warning-signals.html",
+        "lesson-plans/gr3-ls2-unit4-lesson3-schooling-flocking-and-moving-together.html",
+        "lesson-plans/gr3-ls2-unit4-lesson4-working-together-to-find-food.html",
+        "lesson-plans/gr3-ls2-unit4-lesson5-parents-babies-and-group-protection.html",
+        "lesson-plans/gr3-ls2-unit4-lesson6-model-how-group-behavior-helps-survival.html"
+      ]
+    },
+    "gr3-ess2-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr3-ess2-unit1-bundle/gr3-ess2-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html",
+        "lesson-plans/gr3-ess2-unit1-lesson2-climate-regions-and-conditions.html",
+        "lesson-plans/gr3-ess2-unit1-lesson3-reading-weather-data.html",
+        "lesson-plans/gr3-ess2-unit1-lesson4-weather-hazards-and-impacts.html",
+        "lesson-plans/gr3-ess2-unit1-lesson5-designing-for-local-weather.html",
+        "lesson-plans/gr3-ess2-unit1-lesson6-reducing-weather-related-hazards.html"
+      ]
+    },
+    "gr3-ets1-unit1-bundle": {
+      "type": "unit",
+      "output": "exports/gr3-ets1-unit1-bundle/gr3-ets1-unit1-six-lesson-bundle.pdf",
+      "lessons": [
+        "lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html",
+        "lesson-plans/gr3-ets1-unit1-lesson2-researching-constraints-and-materials.html",
+        "lesson-plans/gr3-ets1-unit1-lesson3-planning-a-solution.html",
+        "lesson-plans/gr3-ets1-unit1-lesson4-building-and-testing-a-prototype.html",
+        "lesson-plans/gr3-ets1-unit1-lesson5-improving-the-design.html",
+        "lesson-plans/gr3-ets1-unit1-lesson6-share-and-defend-your-solution.html"
+      ]
+    },
+    "grade-3-complete": {
+      "type": "complete",
+      "output": "exports/grade-3-complete/grade-3-complete-science-bundle.pdf",
+      "bundles": [
+        "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
+        "exports/gr3-ls1-unit1-bundle/gr3-ls1-unit1-six-lesson-bundle.pdf",
+        "exports/gr3-ls3-unit2-bundle/gr3-ls3-unit2-six-lesson-bundle.pdf",
+        "exports/gr3-ls4-unit3-bundle/gr3-ls4-unit3-six-lesson-bundle.pdf",
+        "exports/gr3-ls2-unit4-bundle/gr3-ls2-unit4-six-lesson-bundle.pdf",
+        "exports/gr3-ess2-unit1-bundle/gr3-ess2-unit1-six-lesson-bundle.pdf",
+        "exports/gr3-ets1-unit1-bundle/gr3-ets1-unit1-six-lesson-bundle.pdf"
+      ]
     }
   }
 }

@@ -314,7 +314,7 @@
           "unitCode": "3-PS2 Unit 1",
           "previewUrl": "/lesson-plans/gr3-ps2-unit1-lesson1-balanced-and-unbalanced-forces.html",
           "bundlePdfStatus": "bundle_pdf_ready",
-          "checkoutLinkStatus": "pending",
+          "checkoutLinkStatus": "ready",
           "exportPath": "exports/gr3-ps2-unit1-bundle/gr3-ps2-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ps2-unit1-bundle"
         },
@@ -335,9 +335,9 @@
           "domain": "Life Science",
           "unitCode": "3-LS3 Unit 2",
           "previewUrl": "/lesson-plans/gr3-ls3-unit2-lesson1-inherited-traits-all-around-us.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
-          "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr3-ls3-unit2-bundle/",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "ready",
+          "exportPath": "exports/gr3-ls3-unit2-bundle/gr3-ls3-unit2-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ls3-unit2-bundle"
         },
         {
@@ -346,9 +346,9 @@
           "domain": "Life Science",
           "unitCode": "3-LS4 Unit 3",
           "previewUrl": "/lesson-plans/gr3-ls4-unit3-lesson1-variation-can-help-survival.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
-          "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr3-ls4-unit3-bundle/",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "ready",
+          "exportPath": "exports/gr3-ls4-unit3-bundle/gr3-ls4-unit3-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ls4-unit3-bundle"
         },
         {
@@ -357,9 +357,9 @@
           "domain": "Life Science",
           "unitCode": "3-LS2 Unit 4",
           "previewUrl": "/lesson-plans/gr3-ls2-unit4-lesson1-why-animals-sometimes-stick-together.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
-          "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr3-ls2-unit4-bundle/",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "ready",
+          "exportPath": "exports/gr3-ls2-unit4-bundle/gr3-ls2-unit4-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ls2-unit4-bundle"
         },
         {
@@ -368,9 +368,9 @@
           "domain": "Earth Science",
           "unitCode": "3-ESS2 Unit 1",
           "previewUrl": "/lesson-plans/gr3-ess2-unit1-lesson1-weather-patterns-over-time.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
-          "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr3-ess2-unit1-bundle/",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "ready",
+          "exportPath": "exports/gr3-ess2-unit1-bundle/gr3-ess2-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ess2-unit1-bundle"
         },
         {
@@ -379,9 +379,9 @@
           "domain": "Engineering",
           "unitCode": "3-ETS1 Unit 1",
           "previewUrl": "/lesson-plans/gr3-ets1-unit1-lesson1-defining-the-problem.html",
-          "bundlePdfStatus": "bundle_pdf_pending",
-          "checkoutLinkStatus": "pending",
-          "exportPath": "exports/gr3-ets1-unit1-bundle/",
+          "bundlePdfStatus": "bundle_pdf_ready",
+          "checkoutLinkStatus": "ready",
+          "exportPath": "exports/gr3-ets1-unit1-bundle/gr3-ets1-unit1-six-lesson-bundle.pdf",
           "thankYouProduct": "gr3-ets1-unit1-bundle"
         }
       ]
@@ -439,7 +439,7 @@
         },
         {
           "sku": "gr4-ess2-unit1-bundle",
-          "title": "Shaping Earth’s Surface",
+          "title": "Shaping Earth\u2019s Surface",
           "domain": "Earth Science",
           "unitCode": "4-ESS2 Unit 1",
           "previewUrl": "/lesson-plans/gr4-ess2-unit1-lesson1-weathering-breaks-rocks.html",
