@@ -79,6 +79,29 @@
     .hero-copy p {
       margin: 0 0 10px;
     }
+    .hero-photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .hero-photo-stage {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #c8e6c9;
+      border-radius: 10px;
+      background: #fff;
+      text-align: center;
+      font: 700 9pt/1.25 Arial, sans-serif;
+      color: #1b5e20;
+    }
+    .hero-photo-stage img {
+      display: block;
+      width: 100%;
+      height: 105px;
+      object-fit: cover;
+    }
+    .hero-photo-stage span { display: block; padding: 6px 4px; overflow-wrap: anywhere; }
     .hero-pattern {
       display: flex;
       align-items: center;
@@ -418,6 +441,8 @@
       text-align: center;
       min-height: 150px;
       background: #fff;
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
     .cutout-organism {
       font-size: 8.5pt;
@@ -534,6 +559,7 @@
       .hero-art {
         justify-self: center;
       }
+      .hero-photo-strip,
       .sort-grid,
       .cutout-grid,
       .model-purpose-grid {
@@ -601,7 +627,13 @@
   <div class="hero-image">
     <div class="hero-copy">
       <div class="hero-kicker">One big pattern</div>
-      <p><strong>Life cycles can look very different, but they all show the same science idea.</strong> A living thing begins life, grows and changes, becomes an adult that can reproduce, and eventually dies.</p>
+      <p><strong>Watch one bean plant change through four visible stages.</strong> The images show the correct order from the beginning stage to a mature plant that can make new beans.</p>
+      <div class="hero-photo-strip" aria-label="Bean plant life cycle in correct order">
+        <div class="hero-photo-stage"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seed.jpg" alt="A bean at the beginning of its life cycle"><span>1. Bean</span></div>
+        <div class="hero-photo-stage"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seedling.jpg" alt="A bean seedling with its first leaves"><span>2. Seedling</span></div>
+        <div class="hero-photo-stage"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-young-plant.jpg" alt="A young bean sapling with more leaves"><span>3. Sapling</span></div>
+        <div class="hero-photo-stage"><img src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-mature-plant.jpg" alt="A mature bean plant with flowers and pods"><span>4. Mature plant</span></div>
+      </div>
       <div class="hero-pattern" aria-label="Shared life cycle pattern">
         <span class="hero-step">Birth</span>
         <span class="hero-arrow" aria-hidden="true">→</span>
@@ -700,7 +732,7 @@
         <div class="stage-sequence">
           <div class="stage-shot">
             <img class="stage-photo" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seed.jpg" alt="Bean seed beginning to sprout.">
-            <span class="stage-shot-label">Seed</span>
+            <span class="stage-shot-label">Bean</span>
           </div>
           <div class="stage-arrow" aria-hidden="true">→</div>
           <div class="stage-shot">
@@ -710,7 +742,7 @@
           <div class="stage-arrow" aria-hidden="true">→</div>
           <div class="stage-shot">
             <img class="stage-photo" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-young-plant.jpg" alt="Young bean plant growing taller.">
-            <span class="stage-shot-label">Young plant</span>
+            <span class="stage-shot-label">Sapling</span>
           </div>
           <div class="stage-arrow" aria-hidden="true">→</div>
           <div class="stage-shot">
@@ -808,8 +840,8 @@
   </div>
 
   <div class="procedure-step">
-    <strong>Step 4 — Turn the Ordered Stages into a Life Cycle Model (12–15 min)</strong><br>
-    Choose one organism and use the Student Worksheet to turn the sorted stages into a model. Students should draw or glue the stages in order, add arrows, and label where they see <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong>. The goal is not just to show the order — it is to use the model as evidence that this organism follows the same big pattern as other living things.
+    <strong>Step 4 — Build an Explanatory Model (12–15 min)</strong><br>
+    Put the ordered cards aside. On the Student Worksheet, draw a <strong>new circular model</strong> for one organism. Add a small caption at every connection that explains what changes, such as “hatches and begins eating” or “grows legs and loses its tail.” Mark the adult stage where reproduction begins a <strong>new organism's</strong> cycle, and add “eventual death” beside the original organism's path. This model has a different purpose from card sequencing: it explains the changes and shows why the pattern repeats across generations.
   </div>
 
   <div class="procedure-step">
@@ -896,7 +928,7 @@
 
     <div class="worksheet-section">
       <h3>2️⃣ Build Your Life Cycle Model</h3>
-      <p style="font-size:10pt;">Now use the same organism to build a <strong>model</strong>. Add arrows and label where you see <strong>birth</strong>, <strong>growth</strong>, <strong>reproduction</strong>, and <strong>death</strong>. Your model should show more than the order — it should help explain the big pattern.</p>
+      <p style="font-size:10pt;">Put the cards aside and draw a <strong>new circular model</strong>. At each connection, explain what changes. Mark where the adult reproduces and starts a new organism's cycle. Add “eventual death” to the original organism's path. The purpose is to explain <em>how and why the cycle continues</em>, not to repeat the card order.</p>
       <div class="draw-area tall"></div>
     </div>
 
@@ -949,25 +981,25 @@
         <div class="cutout-organism">Butterfly</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-egg.jpg" alt="Butterfly egg on a leaf.">
         <div class="cutout-title">Egg</div>
-        <div class="cutout-copy">The butterfly begins life inside an egg on a leaf.</div>
+        <div class="cutout-copy">Stage 1: The butterfly begins life inside an egg on a leaf.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-caterpillar.jpg" alt="Butterfly caterpillar on a leaf.">
-        <div class="cutout-title">Caterpillar</div>
-        <div class="cutout-copy">The young insect eats and grows quickly.</div>
+        <div class="cutout-title">Caterpillar / Larva</div>
+        <div class="cutout-copy">Stage 2: The larva eats and grows quickly.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-chrysalis.jpg" alt="Butterfly chrysalis hanging from a twig.">
-        <div class="cutout-title">Chrysalis</div>
-        <div class="cutout-copy">The body changes inside the chrysalis.</div>
+        <div class="cutout-title">Chrysalis / Pupa</div>
+        <div class="cutout-copy">Stage 3: The long, hanging chrysalis protects the pupa while its body changes.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Butterfly</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-butterfly-life-cycle-adult-butterfly.jpg" alt="Adult butterfly on a flower.">
         <div class="cutout-title">Adult Butterfly</div>
-        <div class="cutout-copy">The adult can reproduce and start the cycle again.</div>
+        <div class="cutout-copy">Stage 4: The adult can reproduce and lay eggs.</div>
       </div>
     </div>
 
@@ -977,25 +1009,25 @@
         <div class="cutout-organism">Frog</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-eggs.jpg" alt="Frog eggs in water.">
         <div class="cutout-title">Eggs</div>
-        <div class="cutout-copy">A frog starts life in eggs laid in water.</div>
+        <div class="cutout-copy">Stage 1: A frog starts life in eggs laid in water.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
         <img class="cutout-thumb tadpole-thumb-inner" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-tadpole.jpg" alt="Tadpole swimming in water.">
         <div class="cutout-title">Tadpole</div>
-        <div class="cutout-copy">The tadpole lives in water and uses a tail to swim.</div>
+        <div class="cutout-copy">Stage 2: The tadpole lives in water and uses a tail to swim.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-froglet.jpg" alt="Froglet with legs and a tail.">
         <div class="cutout-title">Froglet</div>
-        <div class="cutout-copy">Legs appear while the tail gets smaller.</div>
+        <div class="cutout-copy">Stage 3: Legs appear while the tail gets smaller.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Frog</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-frog-life-cycle-adult-frog.jpg" alt="Adult frog on a lily pad.">
         <div class="cutout-title">Adult Frog</div>
-        <div class="cutout-copy">The adult frog can reproduce and lay new eggs.</div>
+        <div class="cutout-copy">Stage 4: The adult frog can reproduce and lay new eggs.</div>
       </div>
     </div>
   </div>
@@ -1008,26 +1040,26 @@
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seed.jpg" alt="Bean seed beginning to sprout.">
-        <div class="cutout-title">Seed</div>
-        <div class="cutout-copy">A new bean plant begins as a seed.</div>
+        <div class="cutout-title">Bean</div>
+        <div class="cutout-copy">Stage 1: A new bean plant begins inside a bean.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-seedling.jpg" alt="Bean seedling with first leaves.">
         <div class="cutout-title">Seedling</div>
-        <div class="cutout-copy">The seed opens and a tiny seedling begins to grow.</div>
+        <div class="cutout-copy">Stage 2: The bean opens and a tiny seedling grows its first leaves.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-young-plant.jpg" alt="Young bean plant growing taller.">
-        <div class="cutout-title">Young Plant</div>
-        <div class="cutout-copy">Leaves and stems grow larger over time.</div>
+        <div class="cutout-title">Sapling</div>
+        <div class="cutout-copy">Stage 3: The young plant grows a taller stem and more leaves.</div>
       </div>
       <div class="cutout-card">
         <div class="cutout-organism">Bean Plant</div>
         <img class="cutout-thumb" src="/images/lesson-heroes/gr3-ls1-unit1-l1-bean-life-cycle-mature-plant.jpg" alt="Mature bean plant with flowers and bean pods.">
         <div class="cutout-title">Mature Plant</div>
-        <div class="cutout-copy">The mature plant makes flowers and seeds for the next generation.</div>
+        <div class="cutout-copy">Stage 4: The mature plant makes flowers and new beans.</div>
       </div>
     </div>
   </div>
@@ -1040,7 +1072,7 @@
       <ul>
         <li><strong>Butterfly:</strong> egg → caterpillar → chrysalis → adult butterfly</li>
         <li><strong>Frog:</strong> eggs → tadpole → froglet → adult frog</li>
-        <li><strong>Bean plant:</strong> seed → seedling → young plant → mature plant with flowers or seeds</li>
+        <li><strong>Bean plant:</strong> bean → seedling → sapling → mature plant with flowers and new beans</li>
         <li><strong>Human:</strong> baby → child → adult → adults have offspring, and a new baby begins the cycle again</li>
       </ul>
       <p style="font-size:10pt; color:#555; font-style:italic;">Accept equivalent stage labels if the order is scientifically reasonable and the student shows the life cycle as a sequence.</p>
