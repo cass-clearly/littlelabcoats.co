@@ -1145,7 +1145,7 @@
     </div>
   </footer>
 
-  <script src="scripts/store-product-links.js?v=20260502b"></script>
+  <script src="scripts/store-product-links.js?v=20260725-grade3-off"></script>
   <script>
     (function () {
       var SUPPORT_EMAIL = 'clearlycass10@gmail.com';
@@ -1319,8 +1319,9 @@
           id: 'grade-3',
           label: 'Grade 3',
           short: '3',
-          note: 'Grade 3 now spans physical, life, earth, and engineering paths, with multiple complete unit lines families can preview while final bundle packaging is finished.',
+          note: 'Individual Grade 3 unit bundles are available now. Full bundle coming soon.',
           fullGradeSku: 'grade-3-complete',
+          fullGradeComingSoon: true,
           fullGradeIncludes: ['Forces & Motion', 'Life Cycles', 'Traits & Inheritance', 'Traits for Survival', 'Group Behavior & Survival', 'Weather & Climate', 'Engineering Design'],
           freeLesson: {
             title: 'Egg Drop Kitchen Challenge',
@@ -1554,20 +1555,24 @@
               '<div class="grade-complete">',
                 '<div class="grade-complete-copy">',
                   '<h4>Full-grade bundle</h4>',
-                  '<p>Get every current bundle for ' + grade.label + ' in one easy download.</p>',
+                  '<p>' + (grade.fullGradeComingSoon ? 'Full bundle coming soon.' : 'Get every current bundle for ' + grade.label + ' in one easy download.') + '</p>',
                   '<div class="grade-includes">' + grade.fullGradeIncludes.map(function (item) {
                     return '<span>• ' + item + '</span>';
                   }).join('') + '</div>',
                   '',
                 '</div>',
                 '<div class="grade-complete-actions">',
-                  '<div class="price-badge">First 50 customers</div>',
-                  '<div class="price-stack">',
-                    '<div class="price-main">$' + GRADE_PRICE.launch + '</div>',
-                    '<div class="price-sub">afterwards $' + GRADE_PRICE.standard + ' for the full grade bundle</div>',
-                  '</div>',
-                  buildPrimaryAction(grade.fullGradeSku, grade.label + ' full-grade bundle'),
-                  '<div class="bundle-note">One complete digital download with the full set of current units for this grade.</div>',
+                  grade.fullGradeComingSoon
+                    ? '<div class="bundle-note"><strong>Full bundle coming soon.</strong> Individual unit bundles are available now.</div>'
+                    : [
+                        '<div class="price-badge">First 50 customers</div>',
+                        '<div class="price-stack">',
+                          '<div class="price-main">$' + GRADE_PRICE.launch + '</div>',
+                          '<div class="price-sub">afterwards $' + GRADE_PRICE.standard + ' for the full grade bundle</div>',
+                        '</div>',
+                        buildPrimaryAction(grade.fullGradeSku, grade.label + ' full-grade bundle'),
+                        '<div class="bundle-note">One complete digital download with the full set of current units for this grade.</div>'
+                      ].join(''),
                 '</div>',
               '</div>',
             '</div>',
