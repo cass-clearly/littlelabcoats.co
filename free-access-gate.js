@@ -77,13 +77,19 @@
     return null;
   }
 
+  function runOriginalPrint() {
+    if (!originalPrint) return;
+    try { window.focus(); } catch (e) {}
+    originalPrint();
+  }
+
   function runPendingAction() {
     if (!pendingAction) return;
     var action = pendingAction;
     pendingAction = null;
 
     if (action.type === 'print') {
-      if (originalPrint) originalPrint();
+      runOriginalPrint();
       return;
     }
 
@@ -221,7 +227,7 @@
   if (window.print) {
     window.print = function () {
       if (shouldBypassGate()) {
-        return originalPrint && originalPrint();
+        return runOriginalPrint();
       }
       promptForAction({ type: 'print' });
     };
