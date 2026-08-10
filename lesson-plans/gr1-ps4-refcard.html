@@ -20,20 +20,21 @@
     }
 
     @media print {
-      @page { size: letter portrait; margin: 0; }
+      @page { size: letter portrait; margin: 0.4in; }
+      html, body { width: auto; max-width: none; margin: 0; }
       body {
         background: white;
         padding: 0;
         min-height: 0;
-        height: 11in;
+        height: auto;
       }
-      .no-print { display: none !important; }
+      .no-print, .lesson-branding { display: none !important; }
       .page-card {
         width: 100%;
         max-width: 100%;
         box-shadow: none;
         border-radius: 0;
-        height: 11in;
+        height: 10.2in;
         page-break-after: avoid;
       }
       .grid-section {
@@ -42,7 +43,10 @@
       }
       .tile {
         min-height: 0 !important;
+        padding: 20px 18px;
       }
+      img, svg { max-width: 100%; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
 
     .page-card {
