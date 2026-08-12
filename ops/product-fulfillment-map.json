@@ -53,6 +53,19 @@
       "status": "live-hosted"
     },
     {
+      "slug": "grade-1-complete-balance-payment",
+      "displayName": "Complete Grade 1 Science Bundle — balance payment",
+      "deliveryType": "hosted_link",
+      "assetPath": "exports/grade-1-complete/grade-1-complete-science-bundle.pdf",
+      "paymentLinkId": "plink_1U3izIRs1078GLsa2in6LSl8",
+      "paymentLinkUrl": "https://buy.stripe.com/6oU00lak73MW23y3hc6g80z",
+      "downloadUrl": "https://littlelabcoats.co/grade-1-complete-download.html",
+      "emailTemplatePath": "ops/grade-1-complete-welcome-email.txt",
+      "draftSubject": "Your Complete Grade 1 Science Bundle is ready",
+      "supportEmail": "clearlycass10@gmail.com",
+      "status": "live-hosted"
+    },
+    {
       "slug": "gr1-ls1-unit1-bundle",
       "displayName": "Grade 1 Life Science Unit 1 bundle",
       "deliveryType": "hosted_link",
