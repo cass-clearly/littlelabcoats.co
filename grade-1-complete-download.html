@@ -181,6 +181,16 @@
       h1, .intro, .access-panel h2, .access-copy { overflow-wrap: anywhere; }
     }
   </style>
+  <script>
+    (function () {
+      try {
+        localStorage.setItem('llc_access_v2_locked', 'granted');
+        localStorage.setItem('llc_access', 'granted');
+      } catch (error) {
+        console.warn('Little Lab Coats access handoff storage failed.', error);
+      }
+    }());
+  </script>
 </head>
 <body>
   <main>
