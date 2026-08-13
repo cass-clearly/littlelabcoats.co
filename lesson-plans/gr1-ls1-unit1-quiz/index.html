@@ -148,8 +148,21 @@
       margin-bottom: 4px;
     }
   </style>
+<style id="llc-grade1-print-cleanup">
+@media print {
+  @page { size: letter portrait; margin: 0.4in; }
+  html, body { width: auto !important; max-width: none !important; }
+  body { margin: 0 auto !important; background: #fff !important; overflow-wrap: anywhere; }
+  img, svg, table, .page, .page-card { max-width: 100% !important; }
+  .page, .page-card { height: auto !important; min-height: 0 !important; page-break-after: avoid !important; }
+  .print-btn, .no-print, .back-link, .lesson-branding, .llc-paywall-overlay, .llc-print-fallback-overlay, .footer-note,
+  body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
+  .page-break { margin-top: 0 !important; padding-top: 0.18in !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
 </head>
-<body data-document-id="doc_-XmCzjBRMRI">
+<body>
 
   <a class="back-link" href="gr1-ls1-lesson1-animal-structures-biomimicry.html">← Back to Lesson 1: Animal Structures &amp; Biomimicry</a>
 
@@ -322,8 +335,5 @@
 
     buildQuiz();
   </script>
-
-
-  <script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_-XmCzjBRMRI" data-content-selector="body"></script>
-</body>
+<script src="/lesson-plans/mobile-print-helper.js?v=20260812a"></script></body>
 </html>

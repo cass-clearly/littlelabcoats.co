@@ -33,8 +33,21 @@
     .retry-btn { background: #7B2FBE; color: white; border: none; border-radius: 10px; padding: 12px 28px; font-size: 1rem; cursor: pointer; margin-top: 20px; font-weight: 600; }
     .q-number { font-size: 0.8rem; color: #90caf9; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
   .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+<style id="llc-grade1-print-cleanup">
+@media print {
+  @page { size: letter portrait; margin: 0.4in; }
+  html, body { width: auto !important; max-width: none !important; }
+  body { margin: 0 auto !important; background: #fff !important; overflow-wrap: anywhere; }
+  img, svg, table, .page, .page-card { max-width: 100% !important; }
+  .page, .page-card { height: auto !important; min-height: 0 !important; page-break-after: avoid !important; }
+  .print-btn, .no-print, .back-link, .lesson-branding, .llc-paywall-overlay, .llc-print-fallback-overlay, .footer-note,
+  body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
+  .page-break { margin-top: 0 !important; padding-top: 0.18in !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
 </head>
-<body data-document-id="doc_gr1_ets1_unit1_quiz">
+<body>
   <a class="back-link" href="gr1-ets1-unit1-lesson1-what-problem-can-we-solve.html">← Back to Lesson 1: What Problem Can We Solve?</a>
   <div class="quiz-header"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div><h1>🛠️ Engineering Design Quiz 🌿</h1><p>Engineering · Unit 1 · Grade 1</p></div>
   <div class="score-bar" id="scoreBar">Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> &nbsp;|&nbsp; Questions answered: <span id="answeredNum">0</span></div>
@@ -122,6 +135,5 @@
     function resetQuiz() { score = 0; answered = 0; document.getElementById('scoreNum').textContent = '0'; document.getElementById('answeredNum').textContent = '0'; document.getElementById('resultsPanel').style.display = 'none'; renderQuiz(); }
     renderQuiz();
   </script>
-  <script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_gr1_ets1_unit1_quiz" data-content-selector="body"></script>
-</body>
+<script src="/lesson-plans/mobile-print-helper.js?v=20260812a"></script></body>
 </html>

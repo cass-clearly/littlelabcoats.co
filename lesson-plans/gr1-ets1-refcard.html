@@ -10,9 +10,9 @@
     body { font-family: 'Lato', sans-serif; background: #F3E8FF; color: #0a1929; padding: 24px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
     @media print {
       @page { size: letter portrait; margin: 0; }
-      body { background: white; padding: 0; min-height: 0; height: 11in; }
-      .no-print { display: none !important; }
-      .page-card { width: 100%; max-width: 100%; box-shadow: none; border-radius: 0; height: 11in; page-break-after: avoid; }
+      body { background: white; padding: 0; min-height: 0; height: 10.75in; }
+      .no-print, .lesson-branding, body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
+      .page-card { width: 100%; max-width: 100%; box-shadow: none; border-radius: 0; height: 10.75in; page-break-after: avoid; }
       .grid-section { flex: 1; min-height: 0; }
       .tile { min-height: 0 !important; }
     }
@@ -64,7 +64,7 @@
     }
     .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
 </head>
-<body data-document-id="doc_gr1_ets1_refcard"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+<body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
   <div class="page-card">
     <div class="header-banner">
       <h1>🛠️ Engineering Design</h1>
@@ -84,6 +84,5 @@
     <div class="footer">NATURE-INSPIRED TOOLS • GRADE 1 ENGINEERING • LITTLE LAB COATS</div>
   </div>
   <button class="print-btn no-print" onclick="window.print()">🖨️ Print Reference Card</button>
-  <script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_gr1_ets1_refcard" data-content-selector="body"></script>
-</body>
+<script src="/lesson-plans/mobile-print-helper.js?v=20260812a"></script></body>
 </html>
