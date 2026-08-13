@@ -256,6 +256,36 @@
       color: #5A3A16;
     }
     .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
+
+
+<style id="llc-grade1-print-integrity">
+@media print {
+  @page { size: letter portrait; margin: 0.4in; }
+  html, body { width: auto !important; max-width: none !important; }
+  body { margin: 0 !important; padding: 0 !important; background: #fff !important; overflow-wrap: anywhere; }
+  img, picture, figure, svg, canvas, video,
+  .hero-image, .image-box, .image-card, .illustration, .diagram, .diagram-box,
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box,
+  .tip-box, .extension-box, .key-concept-box, .safety-box, .standards-box,
+  .activity-body, .ba-card, .rb-card, .tile, .card, .box, .quiz-question,
+  .question-card, .matching-card, .data-table, .compare-grid, .worksheet-section,
+  .worksheet-header, .draw-box, .design-box, .ak-box, .food-card,
+  [class*="-box"], [class$="-card"],
+  .page-card, .page {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  img, picture, figure, svg, canvas, video, table { max-width: 100% !important; height: auto !important; }
+  table { break-inside: auto !important; page-break-inside: auto !important; }
+  tr, th, td { break-inside: avoid !important; page-break-inside: avoid !important; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid !important; page-break-after: avoid !important; }
+  p, li { orphans: 3; widows: 3; }
+  .print-btn, .no-print, .back-link, .lesson-branding, .llc-print-fallback-overlay,
+  .footer-note, body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
+  .page-break { margin-top: 0 !important; padding-top: 0.18in !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
 </head>
 <body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
 

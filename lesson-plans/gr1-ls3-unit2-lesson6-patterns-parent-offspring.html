@@ -70,15 +70,32 @@
     @media print { body { padding:.25in; font-size:10pt; } .print-btn, .no-print { display:none !important; } .hero-card { grid-template-columns:1fr 1fr; } .procedure-step,.question-box,.teacher-note,.materials-box,.job-card,.vocab-card,.answer-key { break-inside:avoid; page-break-inside:avoid; } * { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }
     @media (max-width:720px) { body { padding:18px; } .hero-card,.lesson-job,.evidence-strip,.vocab-grid,.draw-grid { grid-template-columns:1fr; } h1 { font-size:23pt; } }
 </style>
-<style id="llc-grade1-print-cleanup">
+
+
+<style id="llc-grade1-print-integrity">
 @media print {
   @page { size: letter portrait; margin: 0.4in; }
   html, body { width: auto !important; max-width: none !important; }
   body { margin: 0 !important; padding: 0 !important; background: #fff !important; overflow-wrap: anywhere; }
-  img, svg, table, .page, .page-card { max-width: 100% !important; }
-  .page, .page-card { height: auto !important; min-height: 0 !important; page-break-after: avoid !important; }
-  .print-btn, .no-print, .back-link, .lesson-branding, .llc-paywall-overlay, .llc-print-fallback-overlay, .footer-note,
-  body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
+  img, picture, figure, svg, canvas, video,
+  .hero-image, .image-box, .image-card, .illustration, .diagram, .diagram-box,
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box,
+  .tip-box, .extension-box, .key-concept-box, .safety-box, .standards-box,
+  .activity-body, .ba-card, .rb-card, .tile, .card, .box, .quiz-question,
+  .question-card, .matching-card, .data-table, .compare-grid, .worksheet-section,
+  .worksheet-header, .draw-box, .design-box, .ak-box, .food-card,
+  [class*="-box"], [class$="-card"],
+  .page-card, .page {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  img, picture, figure, svg, canvas, video, table { max-width: 100% !important; height: auto !important; }
+  table { break-inside: auto !important; page-break-inside: auto !important; }
+  tr, th, td { break-inside: avoid !important; page-break-inside: avoid !important; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid !important; page-break-after: avoid !important; }
+  p, li { orphans: 3; widows: 3; }
+  .print-btn, .no-print, .back-link, .lesson-branding, .llc-print-fallback-overlay,
+  .footer-note, body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
   .page-break { margin-top: 0 !important; padding-top: 0.18in !important; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
@@ -104,35 +121,7 @@
   <h2>💬 Discussion Questions</h2><div class="question-box"><strong>Question 1:</strong> What is the unit’s biggest science pattern?<p class="discussion-hint">Young plants and animals are like, but not exactly like, their parents.</p></div><div class="question-box"><strong>Question 2:</strong> What evidence did you use for an animal?<p class="discussion-hint">Shared trait plus a difference, or a parent-care/learning behavior that helps survival.</p></div><div class="question-box"><strong>Question 3:</strong> What evidence did you use for a plant?<p class="discussion-hint">A seed/seedling trait plus a seed structure such as coat, stored food, fruit, fluff, hooks, or wings.</p></div><div class="question-box"><strong>Question 4:</strong> What would make an explanation stronger?<p class="discussion-hint">Pointing to observable traits and explaining how care/structures help survival.</p></div>
   <h2>👩‍🏫 Parent Notes</h2><div class="teacher-note"><strong>Keep it Grade 1:</strong> The target is observation and evidence, not genetics vocabulary beyond simple inherited traits. If a family situation makes human comparisons sensitive, use animal and plant examples only. The science standard is fully met without personal family photos.</div>
   <div class="page-break"><div class="worksheet-header">🧩🔬📖 Student Worksheet — My Evidence Case Poster</div><p class="name-date">Name: ________________________________ &nbsp;&nbsp;&nbsp; Date: ________________</p><h3>1) My Evidence Cards</h3><table class="ws-table"><tr><th>Evidence card</th><th>My observation</th></tr><tr><td>Shared trait</td><td></td></tr><tr><td>Not exactly the same</td><td></td></tr><tr><td>Survival help</td><td></td></tr><tr><td>Plant evidence</td><td></td></tr></table><h3>2) Evidence Case Poster</h3><div class="draw-box" style="min-height:220px;"><div class="draw-label">Draw one animal case and one plant case. Add arrows to your evidence.</div></div><div class="write-lines"><strong>My claim:</strong> Young plants and animals are like, but not exactly like, their parents.<div class="line"></div><strong>My evidence:</strong><div class="line"></div><div class="line"></div><strong>My reasoning:</strong><div class="line"></div></div><div class="answer-key"><strong>Parent answer-key guidance:</strong> Capstone is successful when it includes animal evidence, plant evidence, a shared trait, a difference, and one survival support explanation.</div></div>
-  
-<!-- ═══ REVIEW MODE + PREVIEW LOCK ═══ -->
-<div class="llc-paywall-overlay" id="llcPaywall" style="display:none;">
-  <div class="llc-paywall-inner">
-    <span class="llc-paywall-emoji">🥼</span>
-    <div class="llc-paywall-title">This is a preview. Unlock the full lesson.</div>
-    <p class="llc-paywall-sub">You're seeing the unit preview. Full lesson materials unlock with the Little Lab Coats unit bundle.</p>
-    <a href="/store.html#live-now" class="llc-btn-subscribe">See Live Products &amp; Free Samples</a>
-  </div>
-</div>
-<style>
-  .llc-paywall-overlay{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0),rgba(255,255,255,.98) 30%,#fff);padding:48px 24px 40px;text-align:center;z-index:1000;box-shadow:0 -8px 40px rgba(59,31,107,.12)}
-  .llc-paywall-inner{max-width:520px;margin:0 auto}.llc-paywall-emoji{font-size:2.2rem;display:block;margin-bottom:8px}.llc-paywall-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:700;color:#3B1F6B;margin-bottom:8px}.llc-paywall-sub{font-size:.95rem;color:#5A7A78;margin-bottom:20px;line-height:1.5}.llc-btn-subscribe{display:inline-block;background:#FF6B6B;color:#fff;font-weight:900;font-size:1rem;padding:14px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 16px rgba(255,107,107,.28)}
-</style>
-<script>(function(){
-  var ACCESS_KEY='llc_access_v2_locked';
-  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
-  function lockLesson(){
-    var h2s=Array.from(document.querySelectorAll('h2'));
-    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
-    if(idx<0) idx=Math.min(2,h2s.length-1);
-    var lockFrom=h2s[idx]; if(!lockFrom) return;
-    var kids=Array.from(document.body.children); var hide=false;
-    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
-    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
-  }
-  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
-})();</script>
-<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
+
 
   <div class="footer-note">© 2026 Little Lab Coats. For personal, non-commercial household use only.</div>
 <script src="/lesson-plans/mobile-print-helper.js?v=20260812a"></script></body>

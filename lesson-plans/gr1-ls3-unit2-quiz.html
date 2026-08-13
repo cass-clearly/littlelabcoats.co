@@ -1,32 +1,35 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Parents &amp; Offspring Quiz — Grade 1 Unit 2</title><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"><style>
 *{box-sizing:border-box} body{font-family:'Lato','Segoe UI',Arial,sans-serif;max-width:850px;margin:0 auto;padding:22px;background:#e9f8ee;color:#233}.lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px}.lesson-branding-text{font-weight:900;color:#5A3A16}.quiz-header{background:linear-gradient(135deg,#1f6f4a,#087f8c);color:white;border-radius:20px;padding:24px;text-align:center;margin-bottom:20px}.quiz-header h1{font-family:'Playfair Display',Georgia,serif;margin:0 0 8px;font-size:2.1rem}.score-bar{background:white;border:3px solid #1f6f4a;border-radius:14px;padding:12px 18px;text-align:center;margin-bottom:18px;font-weight:900;color:#1f6f4a}.question-card{background:white;border:2px solid #b7e2c6;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}.q-number{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#37a66b;font-weight:900}.question-text{font-size:1.1rem;font-weight:900;color:#1f6f4a;margin:5px 0 12px}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.option-btn{background:#f5fbf7;border:2px solid #b7e2c6;border-radius:12px;padding:12px;text-align:left;cursor:pointer;font-size:1rem}.option-btn:hover:not(:disabled){background:#e0f4e7}.option-btn.correct{background:#d8f6e1;border-color:#1f6f4a;font-weight:900}.option-btn.wrong{background:#ffe2e2;border-color:#ff6b6b}.feedback-box{display:none;margin-top:12px;padding:12px;border-radius:12px;background:#fffaf0;border:2px solid #ffcb5b}.results-panel{display:none;background:white;border:3px solid #1f6f4a;border-radius:18px;text-align:center;padding:26px;margin-top:20px}.retry-btn{background:#1f6f4a;color:white;border:0;border-radius:999px;padding:12px 26px;font-weight:900;cursor:pointer}.back-link{display:inline-block;margin-bottom:14px;color:#1f6f4a;font-weight:900;text-decoration:none}@media(max-width:620px){.options{grid-template-columns:1fr}}
-</style><style id="llc-grade1-print-cleanup">
+</style>
+
+
+<style id="llc-grade1-print-integrity">
 @media print {
   @page { size: letter portrait; margin: 0.4in; }
   html, body { width: auto !important; max-width: none !important; }
   body { margin: 0 !important; padding: 0 !important; background: #fff !important; overflow-wrap: anywhere; }
-  img, svg, table, .page, .page-card { max-width: 100% !important; }
-  .page, .page-card { height: auto !important; min-height: 0 !important; page-break-after: avoid !important; }
-  .print-btn, .no-print, .back-link, .lesson-branding, .llc-paywall-overlay, .llc-print-fallback-overlay, .footer-note,
-  body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
+  img, picture, figure, svg, canvas, video,
+  .hero-image, .image-box, .image-card, .illustration, .diagram, .diagram-box,
+  .procedure-step, .question-box, .teacher-note, .answer-key, .materials-box,
+  .tip-box, .extension-box, .key-concept-box, .safety-box, .standards-box,
+  .activity-body, .ba-card, .rb-card, .tile, .card, .box, .quiz-question,
+  .question-card, .matching-card, .data-table, .compare-grid, .worksheet-section,
+  .worksheet-header, .draw-box, .design-box, .ak-box, .food-card,
+  [class*="-box"], [class$="-card"],
+  .page-card, .page {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  img, picture, figure, svg, canvas, video, table { max-width: 100% !important; height: auto !important; }
+  table { break-inside: auto !important; page-break-inside: auto !important; }
+  tr, th, td { break-inside: avoid !important; page-break-inside: avoid !important; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid !important; page-break-after: avoid !important; }
+  p, li { orphans: 3; widows: 3; }
+  .print-btn, .no-print, .back-link, .lesson-branding, .llc-print-fallback-overlay,
+  .footer-note, body > div[style*="border-top: 1px solid #eee"] { display: none !important; }
   .page-break { margin-top: 0 !important; padding-top: 0.18in !important; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
 </head><body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div><a class="back-link" href="gr1-ls3-unit2-lesson1-you-look-like-your-parents.html">← Back to Unit Lesson 1</a><div class="quiz-header"><h1>🐾🌱 Parents &amp; Offspring Quiz</h1><p>Grade 1 · Life Science · Unit 2</p></div><div class="score-bar">Score: <span id="scoreNum">0</span> / <span id="totalNum">10</span> · Answered: <span id="answeredNum">0</span></div><div id="quizContainer"></div><div class="results-panel" id="resultsPanel"><h2>Quiz Complete! 🎉</h2><div id="resultsScore" style="font-size:2.2rem;font-weight:900;color:#1f6f4a"></div><p id="resultsMsg"></p><button class="retry-btn" onclick="resetQuiz()">Try Again</button></div>
-<script>(function(){
-  var ACCESS_KEY='llc_access_v2_locked';
-  function unlocked(){ try { return localStorage.getItem(ACCESS_KEY)==='granted'; } catch(e){ return false; } }
-  function lockLesson(){
-    var h2s=Array.from(document.querySelectorAll('h2'));
-    var idx=h2s.findIndex(function(h){ return h.textContent.toLowerCase().indexOf('materials')!==-1; });
-    if(idx<0) idx=Math.min(2,h2s.length-1);
-    var lockFrom=h2s[idx]; if(!lockFrom) return;
-    var kids=Array.from(document.body.children); var hide=false;
-    kids.forEach(function(child){ if(child===lockFrom || child.contains(lockFrom)) hide=true; if(hide && child.id!=='llcPaywall' && !child.matches('script,style')) child.style.display='none'; });
-    var wall=document.getElementById('llcPaywall'); if(wall) wall.style.display='block';
-  }
-  document.addEventListener('DOMContentLoaded',function(){ if(window.location.search.indexOf('review=1')!==-1) return; if(!unlocked()) lockLesson(); });
-})();</script>
-<!-- ═══ END REVIEW MODE + PREVIEW LOCK ═══ -->
 <script src="/lesson-plans/mobile-print-helper.js?v=20260812a"></script></body></html>
