@@ -330,6 +330,24 @@
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
+      /* Keep the three worksheet columns inside the printable area. */
+      .page-break > table {
+        table-layout: fixed;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .page-break > table td {
+        overflow-wrap: anywhere;
+      }
+      .page-break .shoe-track {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .page-break .shoe-track .shoe {
+        width: 22px;
+        height: 20px;
+        line-height: 18px;
+      }
     }
     .page-break {
       page-break-before: always;
