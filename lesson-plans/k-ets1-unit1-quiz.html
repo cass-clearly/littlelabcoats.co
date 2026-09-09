@@ -100,7 +100,7 @@
     }
     .option-btn:disabled { cursor: default; }
 
-    .feedback-box {
+    .answer-box {
       display: none;
       margin-top: 14px;
       padding: 12px 16px;
@@ -108,19 +108,19 @@
       font-size: 0.98rem;
       line-height: 1.5;
     }
-    .feedback-box.correct {
+    .answer-box.correct {
       display: block;
       background: #e8f5e9;
       border-left: 5px solid #2e7d32;
       color: #1b5e20;
     }
-    .feedback-box.wrong {
+    .answer-box.wrong {
       display: block;
       background: #f3e5f5;
       border-left: 5px solid #6a1b9a;
       color: #333;
     }
-    .feedback-box .fb-label {
+    .answer-box .fb-label {
       font-weight: bold;
       font-size: 1.05rem;
       margin-bottom: 4px;
@@ -194,7 +194,7 @@
     }
     .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
 </head>
-<body data-document-id="doc_N0ZUEWGktYU"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+<body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
 
 <div class="quiz-header">
   <h1>🔧 Engineering Design Quiz</h1>
@@ -220,7 +220,7 @@
       <button class="option-btn" onclick="answer(1, this, false)">C) People wanted something colorful in their home</button>
       <button class="option-btn" onclick="answer(1, this, false)">D) People wanted to be taller</button>
     </div>
-    <div class="feedback-box" id="fb1"></div>
+    <div class="answer-box" id="fb1"></div>
   </div>
 
   <!-- Q2 -->
@@ -234,7 +234,7 @@
       <button class="option-btn" onclick="answer(2, this, false)">C) The fence is the wrong color</button>
       <button class="option-btn" onclick="answer(2, this, false)">D) The dog doesn't like the yard</button>
     </div>
-    <div class="feedback-box" id="fb2"></div>
+    <div class="answer-box" id="fb2"></div>
   </div>
 
   <!-- Q3 -->
@@ -248,7 +248,7 @@
       <button class="option-btn" onclick="answer(3, this, true)">C) The more you understand the problem, the better your solution will be</button>
       <button class="option-btn" onclick="answer(3, this, false)">D) Questions slow everything down</button>
     </div>
-    <div class="feedback-box" id="fb3"></div>
+    <div class="answer-box" id="fb3"></div>
   </div>
 
   <!-- Q4 -->
@@ -262,7 +262,7 @@
       <button class="option-btn" onclick="answer(4, this, true)">C) Gathering information — learning real facts before you design</button>
       <button class="option-btn" onclick="answer(4, this, false)">D) Building the first version</button>
     </div>
-    <div class="feedback-box" id="fb4"></div>
+    <div class="answer-box" id="fb4"></div>
   </div>
 
   <!-- Q5 -->
@@ -276,7 +276,7 @@
       <button class="option-btn" onclick="answer(5, this, false)">C) A test</button>
       <button class="option-btn" onclick="answer(5, this, false)">D) A result</button>
     </div>
-    <div class="feedback-box" id="fb5"></div>
+    <div class="answer-box" id="fb5"></div>
   </div>
 
   <!-- Q6 -->
@@ -290,7 +290,7 @@
       <button class="option-btn" onclick="answer(6, this, true)">C) Labels explain what each part does so others can understand your plan — and so YOU remember it when you build</button>
       <button class="option-btn" onclick="answer(6, this, false)">D) You have to label everything or it doesn't count</button>
     </div>
-    <div class="feedback-box" id="fb6"></div>
+    <div class="answer-box" id="fb6"></div>
   </div>
 
   <!-- Q7 -->
@@ -304,7 +304,7 @@
       <button class="option-btn" onclick="answer(7, this, true)">C) No! The differences between your drawing and your built bridge are the most interesting part — they teach you how materials really work</button>
       <button class="option-btn" onclick="answer(7, this, false)">D) Yes — you should always match your drawing exactly</button>
     </div>
-    <div class="feedback-box" id="fb7"></div>
+    <div class="answer-box" id="fb7"></div>
   </div>
 
   <!-- Q8 -->
@@ -318,7 +318,7 @@
       <button class="option-btn" onclick="answer(8, this, true)">C) "Great — now I know what doesn't work! I can use this to make Version 2 better."</button>
       <button class="option-btn" onclick="answer(8, this, false)">D) "The test was unfair."</button>
     </div>
-    <div class="feedback-box" id="fb8"></div>
+    <div class="answer-box" id="fb8"></div>
   </div>
 
   <!-- Q9 -->
@@ -332,7 +332,7 @@
       <button class="option-btn" onclick="answer(9, this, true)">C) Iteration — Design → Build → Test → Improve → Repeat!</button>
       <button class="option-btn" onclick="answer(9, this, false)">D) Guessing</button>
     </div>
-    <div class="feedback-box" id="fb9"></div>
+    <div class="answer-box" id="fb9"></div>
   </div>
 
   <!-- Q10 -->
@@ -346,7 +346,7 @@
       <button class="option-btn" onclick="answer(10, this, true)">C) Present and share their work — explain the problem, the design, the test results, and what they learned</button>
       <button class="option-btn" onclick="answer(10, this, false)">D) Build three more exactly the same</button>
     </div>
-    <div class="feedback-box" id="fb10"></div>
+    <div class="answer-box" id="fb10"></div>
   </div>
 
   <!-- Results -->
@@ -365,7 +365,7 @@
   let answered = 0;
   let correct = 0;
 
-  const feedbacks = {
+  const answerBank = {
     1: {
       right: "✅ Yes! Every invention starts with a problem. The chair solved the problem of needing a comfortable way to rest. Engineers are professional problem-solvers!",
       wrong: "The correct answer is B. Every object around us was invented because someone had a problem. A chair was invented because people needed a comfortable way to rest — that's the problem it solves!"
@@ -387,8 +387,8 @@
       wrong: "The correct answer is B. Engineers call their design drawing a blueprint or sketch. Before the Golden Gate Bridge was built, engineers spent years drawing and planning on paper first!"
     },
     6: {
-      right: "✅ Perfect! Labels tell you and others what each part of your design does. In a design review, you explain your labeled drawing so others can spot problems before you build — saving time and materials!",
-      wrong: "The correct answer is C. Labels explain what each part does. This helps you remember your plan when you build, and lets others understand your design — just like real engineering design reviews!"
+      right: "✅ Perfect! Labels tell you and others what each part of your design does. In a design walkthrough, you explain your labeled drawing so others can spot problems before you build — saving time and materials!",
+      wrong: "The correct answer is C. Labels explain what each part does. This helps you remember your plan when you build, and lets others understand your design — just like real engineering design walkthroughs!"
     },
     7: {
       right: "✅ Exactly! Engineers know that the first built version almost never looks exactly like the drawing. That's completely normal! The differences teach you things you couldn't learn any other way.",
@@ -412,8 +412,8 @@
     { min: 9, emoji: "🏆", message: "Master Engineer! You understand the full design process — problem, questions, sketch, build, test, improve, and share. You're ready to build anything!" },
     { min: 7, emoji: "🌟", message: "Excellent Engineer! You really understand how engineers think and solve problems. Keep building and designing!" },
     { min: 5, emoji: "🔧", message: "Good work, Engineer! You're learning the design process. Keep asking questions and trying again!" },
-    { min: 3, emoji: "📐", message: "Nice effort! Go back and review the lessons — then come back and try again. Real engineers never stop learning!" },
-    { min: 0, emoji: "🛠️", message: "Every engineer starts somewhere! Review the lessons and try again — you've got this!" }
+    { min: 3, emoji: "📐", message: "Nice effort! Go back and revisit the lessons — then come back and try again. Real engineers never stop learning!" },
+    { min: 0, emoji: "🛠️", message: "Every engineer starts somewhere! Revisit the lessons and try again — you've got this!" }
   ];
 
   function answer(qNum, btn, isCorrect) {
@@ -433,7 +433,7 @@
       });
     }
 
-    const data = feedbacks[qNum];
+    const data = answerBank[qNum];
     if (isCorrect) {
       card.classList.add('answered-correct');
       fb.classList.add('correct');
@@ -481,8 +481,6 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
-
-<script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_N0ZUEWGktYU" data-content-selector="body"></script>
 <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
   © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
 </div>

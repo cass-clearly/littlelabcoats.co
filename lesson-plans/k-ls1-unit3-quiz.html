@@ -100,7 +100,7 @@
     }
     .option-btn:disabled { cursor: default; }
 
-    .feedback-box {
+    .answer-box {
       display: none;
       margin-top: 14px;
       padding: 12px 16px;
@@ -108,19 +108,19 @@
       font-size: 0.98rem;
       line-height: 1.5;
     }
-    .feedback-box.correct {
+    .answer-box.correct {
       display: block;
       background: #e8f5e9;
       border-left: 5px solid #2e7d32;
       color: #1b5e20;
     }
-    .feedback-box.wrong {
+    .answer-box.wrong {
       display: block;
       background: #fff3e0;
       border-left: 5px solid #ef6c00;
       color: #333;
     }
-    .feedback-box .fb-label {
+    .answer-box .fb-label {
       font-weight: bold;
       font-size: 1.05rem;
       margin-bottom: 4px;
@@ -183,7 +183,7 @@
     }
     .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
 </head>
-<body data-document-id="doc_f4XF_jaAIKM"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+<body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
 
 <div class="quiz-header">
   <h1>🧪 Test Your Knowledge — Animal Needs</h1>
@@ -209,7 +209,7 @@
       <button class="option-btn" onclick="answer(1, this, false)">C) A warm sweater</button>
       <button class="option-btn" onclick="answer(1, this, false)">D) Sunlight</button>
     </div>
-    <div class="feedback-box" id="fb1"></div>
+    <div class="answer-box" id="fb1"></div>
   </div>
 
   <!-- Q2 -->
@@ -223,7 +223,7 @@
       <button class="option-btn" onclick="answer(2, this, false)">C) Fish don't need to breathe</button>
       <button class="option-btn" onclick="answer(2, this, false)">D) Carbon dioxide</button>
     </div>
-    <div class="feedback-box" id="fb2"></div>
+    <div class="answer-box" id="fb2"></div>
   </div>
 
   <!-- Q3 -->
@@ -237,7 +237,7 @@
       <button class="option-btn" onclick="answer(3, this, false)">C) To sleep only</button>
       <button class="option-btn" onclick="answer(3, this, false)">D) Animals don't need shelter</button>
     </div>
-    <div class="feedback-box" id="fb3"></div>
+    <div class="answer-box" id="fb3"></div>
   </div>
 
   <!-- Q4 -->
@@ -251,7 +251,7 @@
       <button class="option-btn" onclick="answer(4, this, true)">C) Yes — it is a living thing that finds ways to get water</button>
       <button class="option-btn" onclick="answer(4, this, false)">D) Only sometimes</button>
     </div>
-    <div class="feedback-box" id="fb4"></div>
+    <div class="answer-box" id="fb4"></div>
   </div>
 
   <!-- Q5 -->
@@ -265,7 +265,7 @@
       <button class="option-btn" onclick="answer(5, this, false)">C) Bears don't need food</button>
       <button class="option-btn" onclick="answer(5, this, false)">D) Winter food tastes bad</button>
     </div>
-    <div class="feedback-box" id="fb5"></div>
+    <div class="answer-box" id="fb5"></div>
   </div>
 
   <!-- Q6 -->
@@ -279,7 +279,7 @@
       <button class="option-btn" onclick="answer(6, this, false)">C) The fish would clean the water itself</button>
       <button class="option-btn" onclick="answer(6, this, false)">D) The fish would just move to a cleaner spot</button>
     </div>
-    <div class="feedback-box" id="fb6"></div>
+    <div class="answer-box" id="fb6"></div>
   </div>
 
   <!-- Q7 -->
@@ -293,7 +293,7 @@
       <button class="option-btn" onclick="answer(7, this, false)">C) Nothing — it can take care of itself</button>
       <button class="option-btn" onclick="answer(7, this, false)">D) Only water</button>
     </div>
-    <div class="feedback-box" id="fb7"></div>
+    <div class="answer-box" id="fb7"></div>
   </div>
 
   <!-- Q8 -->
@@ -307,7 +307,7 @@
       <button class="option-btn" onclick="answer(8, this, true)">C) It will turn yellow and die without sunlight</button>
       <button class="option-btn" onclick="answer(8, this, false)">D) It will sleep and wake up when the light comes back</button>
     </div>
-    <div class="feedback-box" id="fb8"></div>
+    <div class="answer-box" id="fb8"></div>
   </div>
 
   <!-- Q9 -->
@@ -321,7 +321,7 @@
       <button class="option-btn" onclick="answer(9, this, true)">C) Food</button>
       <button class="option-btn" onclick="answer(9, this, false)">D) Air</button>
     </div>
-    <div class="feedback-box" id="fb9"></div>
+    <div class="answer-box" id="fb9"></div>
   </div>
 
   <!-- Q10 -->
@@ -335,7 +335,7 @@
       <button class="option-btn" onclick="answer(10, this, false)">C) The animals would be happy with more space</button>
       <button class="option-btn" onclick="answer(10, this, false)">D) Only birds would be affected</button>
     </div>
-    <div class="feedback-box" id="fb10"></div>
+    <div class="answer-box" id="fb10"></div>
   </div>
 
   <!-- Results -->
@@ -378,7 +378,7 @@
       btn.classList.add('correct');
       card.classList.add('answered-correct');
       correct++;
-      fb.className = 'feedback-box correct';
+      fb.className = 'answer-box correct';
       fb.innerHTML = '<div class="fb-label">✅ That\'s right!</div>' + explanations[qNum];
     } else {
       btn.classList.add('wrong');
@@ -387,7 +387,7 @@
       allBtns.forEach(b => {
         if (b.onclick.toString().includes('true')) b.classList.add('correct');
       });
-      fb.className = 'feedback-box wrong';
+      fb.className = 'answer-box wrong';
       fb.innerHTML = '<div class="fb-label">❌ Not quite — keep going!</div>' + explanations[qNum];
     }
 
@@ -429,7 +429,6 @@
     location.reload();
   }
 </script>
-<script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_f4XF_jaAIKM" data-content-selector="body"></script>
 <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
   © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
 </div>

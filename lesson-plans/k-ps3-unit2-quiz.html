@@ -138,7 +138,7 @@
       border-color: #4caf50;
       color: #1b5e20;
     }
-    .feedback-box {
+    .answer-box {
       margin-top: 14px;
       padding: 14px 16px;
       border-radius: 12px;
@@ -146,19 +146,19 @@
       line-height: 1.45;
       display: none;
     }
-    .feedback-box.correct {
+    .answer-box.correct {
       background: #e8f5e9;
       border: 2px solid #4caf50;
       color: #1b5e20;
       display: block;
     }
-    .feedback-box.wrong {
+    .answer-box.wrong {
       background: #fff8e1;
       border: 2px solid #ffc107;
       color: #5d4037;
       display: block;
     }
-    .feedback-icon {
+    .answer-icon {
       font-size: 1.4rem;
       margin-right: 6px;
     }
@@ -246,7 +246,7 @@
     }
     .lesson-branding{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 18px 0;padding:10px 14px;background:#fffaf3;border:1.5px solid #ffd6a5;border-radius:12px}.lesson-branding img{width:44px;height:44px;object-fit:contain}.lesson-branding-text{font-family:'Lato',Arial,sans-serif;font-size:11pt;font-weight:700;letter-spacing:.02em;color:#5A3A16}</style>
 </head>
-<body data-document-id="doc_dPkrxQpp0mg"><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
+<body><div class="lesson-branding"><img src="/images/site/llc-logo-serena-approved-400.png" alt="Little Lab Coats logo"><div class="lesson-branding-text">Little Lab Coats</div></div>
 
 <div class="quiz-wrapper">
 
@@ -276,7 +276,7 @@
       <button class="option-btn" onclick="answer(1, this, true)">🖤 The black (dark) paper</button>
       <button class="option-btn" onclick="answer(1, this, false)">🤷 They feel exactly the same</button>
     </div>
-    <div class="feedback-box" id="fb-1"></div>
+    <div class="answer-box" id="fb-1"></div>
   </div>
 
   <!-- Q2 -->
@@ -288,7 +288,7 @@
       <button class="option-btn" onclick="answer(2, this, false)">📐 Long!</button>
       <button class="option-btn" onclick="answer(2, this, false)">🤷 Shadows disappear at noon</button>
     </div>
-    <div class="feedback-box" id="fb-2"></div>
+    <div class="answer-box" id="fb-2"></div>
   </div>
 
   <!-- Q3 -->
@@ -300,7 +300,7 @@
       <button class="option-btn" onclick="answer(3, this, true)">❄️ It is cooler — the sun's rays are spread out</button>
       <button class="option-btn" onclick="answer(3, this, false)">😎 Shadows have nothing to do with warmth</button>
     </div>
-    <div class="feedback-box" id="fb-3"></div>
+    <div class="answer-box" id="fb-3"></div>
   </div>
 
   <!-- Q4 -->
@@ -312,7 +312,7 @@
       <button class="option-btn" onclick="answer(4, this, false)">🏜️ Light sand</button>
       <button class="option-btn" onclick="answer(4, this, false)">💧 Water</button>
     </div>
-    <div class="feedback-box" id="fb-4"></div>
+    <div class="answer-box" id="fb-4"></div>
   </div>
 
   <!-- Q5 -->
@@ -324,7 +324,7 @@
       <button class="option-btn" onclick="answer(5, this, false)">🤍 The one on the white plate</button>
       <button class="option-btn" onclick="answer(5, this, false)">🤷 They melt at the exact same time</button>
     </div>
-    <div class="feedback-box" id="fb-5"></div>
+    <div class="answer-box" id="fb-5"></div>
   </div>
 
   <!-- Q6 -->
@@ -336,7 +336,7 @@
       <button class="option-btn" onclick="answer(6, this, false)">🌳 The one in the shade</button>
       <button class="option-btn" onclick="answer(6, this, false)">🤷 Shade and sun don't matter for ice</button>
     </div>
-    <div class="feedback-box" id="fb-6"></div>
+    <div class="answer-box" id="fb-6"></div>
   </div>
 
   <!-- Q7 -->
@@ -348,7 +348,7 @@
       <button class="option-btn" onclick="answer(7, this, true)">🤍 White or shiny silver (foil) — it reflects the sun!</button>
       <button class="option-btn" onclick="answer(7, this, false)">🟤 Brown — same as dirt</button>
     </div>
-    <div class="feedback-box" id="fb-7"></div>
+    <div class="answer-box" id="fb-7"></div>
   </div>
 
   <!-- Q8 -->
@@ -360,7 +360,7 @@
       <button class="option-btn" onclick="answer(8, this, true)">☁️ The sun's energy is used to evaporate the water, so less heat builds up in the cloth</button>
       <button class="option-btn" onclick="answer(8, this, false)">🌬️ Wet cloth blows away the sun</button>
     </div>
-    <div class="feedback-box" id="fb-8"></div>
+    <div class="answer-box" id="fb-8"></div>
   </div>
 
   <!-- Q9 -->
@@ -372,7 +372,7 @@
       <button class="option-btn" onclick="answer(9, this, false)">😴 Do nothing — it is good enough</button>
       <button class="option-btn" onclick="answer(9, this, true)">🔄 Improve the design and test it again! (That is called iterating!)</button>
     </div>
-    <div class="feedback-box" id="fb-9"></div>
+    <div class="answer-box" id="fb-9"></div>
   </div>
 
   <!-- Q10 -->
@@ -384,7 +384,7 @@
       <button class="option-btn" onclick="answer(10, this, false)">🖤 The house with the black roof — dark is stronger!</button>
       <button class="option-btn" onclick="answer(10, this, false)">🤷 The roof color doesn't matter at all</button>
     </div>
-    <div class="feedback-box" id="fb-10"></div>
+    <div class="answer-box" id="fb-10"></div>
   </div>
 
   <!-- Results -->
@@ -429,14 +429,14 @@
     if (isCorrect) {
       btn.classList.add('correct');
       card.classList.add('answered-correct');
-      fb.className = 'feedback-box correct';
-      fb.innerHTML = '<span class="feedback-icon">✅</span>' + explanations[qNum].correct;
+      fb.className = 'answer-box correct';
+      fb.innerHTML = '<span class="answer-icon">✅</span>' + explanations[qNum].correct;
       score++;
     } else {
       btn.classList.add('wrong');
       card.classList.add('answered-wrong');
-      fb.className = 'feedback-box wrong';
-      fb.innerHTML = '<span class="feedback-icon">❌</span>' + explanations[qNum].wrong;
+      fb.className = 'answer-box wrong';
+      fb.innerHTML = '<span class="answer-icon">❌</span>' + explanations[qNum].wrong;
       // Reveal correct answer
       allBtns.forEach(b => {
         if (b !== btn) {
@@ -498,7 +498,7 @@
       const card = document.getElementById('qcard-' + i);
       card.className = 'question-card';
       const fb = document.getElementById('fb-' + i);
-      fb.className = 'feedback-box';
+      fb.className = 'answer-box';
       fb.innerHTML = '';
       const btns = card.querySelectorAll('.option-btn');
       btns.forEach(b => {
@@ -510,8 +510,6 @@
   }
 </script>
 
-<!-- Remarq Feedback Layer -->
-<script src="/feedback-layer.js?v=20260421" data-api-url="https://cassclearly.com" data-document-id="doc_dPkrxQpp0mg" data-content-selector="body"></script>
 <div style="text-align:center; padding: 24px 16px 16px; font-family: 'Lato', sans-serif; font-size: 0.78rem; color: #999; border-top: 1px solid #eee; margin-top: 32px;">
   © 2026 Little Lab Coats. For personal, non-commercial use only. Unauthorized reproduction, redistribution, or resale is prohibited. Printed copies are for use within your immediate household only.
 </div>
