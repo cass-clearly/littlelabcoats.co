@@ -973,6 +973,7 @@
     <div class="hero-inner">
       <div class="hero-copy">
         <h1>Pick your grade. Pick your domain. Pick your unit.</h1>
+        <p role="status"><strong>New purchases are unavailable.</strong> Existing customers can continue to use their download links. Free resources remain available.</p>
         <p>Browse the Little Lab Coats bundle lineup, preview real lessons, and choose the science bundle that fits your family best.</p>
         <p class="hero-subline"><strong>Unit bundles:</strong> $18 for the first 50 customers, afterwards $22. <strong>Full-grade bundles:</strong> $99 for the first 50 customers, afterwards $129.</p>
         <div class="hero-actions">
@@ -1145,7 +1146,7 @@
     </div>
   </footer>
 
-  <script src="scripts/store-product-links.js?v=20260725-grade3-off"></script>
+  <script src="scripts/store-product-links.js?v=20261108-checkout-retired"></script>
   <script>
     (function () {
       var SUPPORT_EMAIL = 'clearlycass10@gmail.com';
@@ -1490,11 +1491,7 @@
       }
 
       function buildPrimaryAction(sku, title) {
-        var entry = getLinkEntry(sku);
-        if (entry.checkoutUrl) {
-          return '<a class="btn btn-primary" href="' + entry.checkoutUrl + '">Buy now — instant PDF download</a>';
-        }
-        return '<a class="btn btn-primary" href="' + buildLaunchAccessUrl(title) + '">Email us about this bundle</a>';
+        return '<span class="btn btn-primary" aria-disabled="true">Purchases unavailable</span>';
       }
 
       function renderUnitCard(unit) {
