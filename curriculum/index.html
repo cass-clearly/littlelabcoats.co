@@ -1890,6 +1890,12 @@
       activeSearchInput.addEventListener('input', updateSearch);
     }
     updateSearch();
+    document.querySelectorAll('a[href*="review=1"]').forEach(link => {
+      const url = new URL(link.href, window.location.origin);
+      url.searchParams.delete('review');
+      url.searchParams.delete('v');
+      link.href = url.pathname + url.search + url.hash;
+    });
   </script>
 </body>
 </html>
