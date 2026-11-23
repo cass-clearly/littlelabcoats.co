@@ -2,9 +2,9 @@
   'use strict';
 
   window.LLCStoreProductLinks = {
-    updatedAt: '2026-11-08',
-    checkoutEnabled: false,
-    note: 'Purchases are disabled by owner request. Historical URLs are retained below, but runtime checkout URLs are cleared. Do not re-enable purchases without owner approval.',
+    updatedAt: '2026-11-22',
+    checkoutEnabled: true,
+    note: 'Verified Stripe checkout URLs for currently published Little Lab Coats products.',
     products: {
       'grade-k-complete': { checkoutUrl: 'https://buy.stripe.com/7sYcN71NBgzI6jOg3Y6g80a', status: 'live' },
       'k-ps2-unit1-bundle': { checkoutUrl: 'https://buy.stripe.com/3cI00lgIv97gcIc6to6g804', status: 'live' },
@@ -54,8 +54,4 @@
       'gr5-ess2-unit1-bundle': { checkoutUrl: '', status: 'placeholder' }
     }
   };
-  Object.keys(window.LLCStoreProductLinks.products).forEach(function (sku) {
-    window.LLCStoreProductLinks.products[sku].checkoutUrl = '';
-    window.LLCStoreProductLinks.products[sku].status = 'unavailable';
-  });
 })(window);
